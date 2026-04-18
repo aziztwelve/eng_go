@@ -400,6 +400,83 @@ curl http://localhost:8081/api/v1/profile/languages \
 - **Panic Recovery**: сервер не падает при панике
 - **Rate Limiting**: планируется (в конфиге)
 
+## Admin Endpoints (требуется admin роль)
+
+Admin endpoints защищены двумя middleware:
+1. **AuthMiddleware** - проверка JWT токена
+2. **AdminOnlyMiddleware** - проверка роли `admin`
+
+### Admin Info
+
+**GET /api/v1/admin/me**
+Получить информацию о текущем admin пользователе.
+
+Headers:
+```
+Authorization: Bearer <admin_token>
+```
+
+Response:
+```json
+{
+  "user_id": "11111111-1111-1111-1111-111111111111",
+  "role": "admin"
+}
+```
+
+### User Management
+
+**GET /api/v1/admin/users**
+Список всех пользователей.
+
+Headers:
+```
+Authorization: Bearer <admin_token>
+```
+
+Response:
+```json
+{
+  "users": [
+    {
+      "id": "uuid",
+      "email": "user@test.com",
+      "full_name": "User Name",
+      "role": "student",
+      "created_at": "2026-01-15T00:00:00Z",
+      "updated_at": "2026-01-15T00:00:00Z"
+    }
+  ],
+  "total": 10
+}
+```
+
+**GET /api/v1/admin/users/:id**
+Получить пользователя по ID.
+
+**PUT /api/v1/admin/users/:id**
+Обновить пользователя.
+
+Request:
+```json
+{
+  "full_name": "New Name",
+  "role": "instructor"
+}
+```
+
+**DELETE /api/v1/admin/users/:id**
+Удалить пользователя.
+
+Response:
+```json
+{
+  "message": "User deleted successfully"
+}
+```
+
+**Подробнее:** [ADMIN_API.md](../ADMIN_API.md)
+
 ## Зависимости
 
 - `github.com/gin-gonic/gin` - HTTP фреймворк

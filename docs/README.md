@@ -99,6 +99,34 @@ GET /videos/{video_id}/url
 GET /videos/{video_id}
 ```
 
+#### Admin (требует admin роль)
+
+```bash
+# Получить информацию о текущем admin
+GET /admin/me
+Authorization: Bearer <admin_access_token>
+
+# Список всех пользователей
+GET /admin/users
+Authorization: Bearer <admin_access_token>
+
+# Получить пользователя
+GET /admin/users/{id}
+Authorization: Bearer <admin_access_token>
+
+# Обновить пользователя
+PUT /admin/users/{id}
+Authorization: Bearer <admin_access_token>
+{
+  "full_name": "New Name",
+  "role": "instructor"
+}
+
+# Удалить пользователя
+DELETE /admin/users/{id}
+Authorization: Bearer <admin_access_token>
+```
+
 **Подробнее:**
 - [PROGRESS_API.md](./PROGRESS_API.md) — API прогресса
 - [API_AUTH_ME.md](./API_AUTH_ME.md) — эндпоинт /auth/me
@@ -147,16 +175,20 @@ videos (id, title, storage_key, bucket_name, status, ...)
 - [x] Видео сервис с MinIO
 - [x] Signed URLs для безопасного доступа к видео
 - [x] API Gateway (HTTP REST)
+- [x] Admin панель (role-based access control)
+- [x] Admin: управление пользователями (list, get, update, delete)
 - [x] Тестовые данные (9 пользователей, 7 курсов, 8 видео)
 
 ### В разработке 🚧
 
+- [ ] Admin: управление курсами
+- [ ] Admin: управление видео
+- [ ] Admin: аналитика и отчеты
 - [ ] Квизы и проверка ответов
 - [ ] Сертификаты о прохождении
 - [ ] Поиск по курсам
 - [ ] Рейтинги и отзывы
 - [ ] Уведомления
-- [ ] Admin панель
 
 **Подробнее:** [FEATURES.md](./FEATURES.md)
 
