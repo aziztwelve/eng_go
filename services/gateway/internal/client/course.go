@@ -81,6 +81,26 @@ func (c *CourseClient) GetCourseProgress(ctx context.Context, req *coursev1.GetC
 	return c.client.GetCourseProgress(ctx, req)
 }
 
+// CreateCourse создает новый курс
+func (c *CourseClient) CreateCourse(ctx context.Context, req *coursev1.CreateCourseRequest) (*coursev1.CreateCourseResponse, error) {
+	return c.client.CreateCourse(ctx, req)
+}
+
+// UpdateCourse обновляет курс
+func (c *CourseClient) UpdateCourse(ctx context.Context, req *coursev1.UpdateCourseRequest) (*coursev1.UpdateCourseResponse, error) {
+	return c.client.UpdateCourse(ctx, req)
+}
+
+// DeleteCourse удаляет курс
+func (c *CourseClient) DeleteCourse(ctx context.Context, req *coursev1.DeleteCourseRequest) (*coursev1.DeleteCourseResponse, error) {
+	return c.client.DeleteCourse(ctx, req)
+}
+
+// PublishCourse публикует курс
+func (c *CourseClient) PublishCourse(ctx context.Context, req *coursev1.PublishCourseRequest) (*coursev1.PublishCourseResponse, error) {
+	return c.client.PublishCourse(ctx, req)
+}
+
 // Close закрывает соединение
 func (c *CourseClient) Close() error {
 	return c.conn.Close()
