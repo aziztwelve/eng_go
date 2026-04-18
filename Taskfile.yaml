@@ -257,6 +257,74 @@ tasks:
       - task: run-all-bg
       - echo "🔄 Все сервисы перезапущены"
 
+  # === Binary Build & Run ===
+
+  build-all:
+    desc: "Собрать все сервисы в бинарники"
+    cmds:
+      - |
+        echo "🔨 Собираем все сервисы..."
+        mkdir -p bin
+        echo "  📦 Auth Service..."
+        (cd services/auth-service && go build -o ../../bin/auth-service cmd/main.go)
+        echo "  📦 User Service..."
+        (cd services/user-service && go build -o ../../bin/user-service cmd/main.go)
+        echo "  📦 Course Service..."
+        (cd services/course-service && go build -o ../../bin/course-service cmd/main.go)
+        echo "  📦 Video Service..."
+        (cd services/video-service && go build -o ../../bin/video-service cmd/main.go)
+        echo "  📦 Gateway..."
+        (cd services/gateway && go build -o ../../bin/gateway cmd/main.go)
+        echo "✅ Все сервисы собраны в ./bin/"
+
+  run-bin-all:
+    desc: "Запустить все сервисы из бинарников"
+    cmds:
+      - |
+        echo "🚀 Запускаем сервисы из бинарников..."
+        mkdir -p logs
+        
+        # Auth Service
+        cd services/auth-service
+        export $(cat ../../deploy/env/auth.env | grep -v '^#' | xargs)
+        nohup ../../bin/auth-service > ../../logs/auth.log 2>&1 &
+        echo "  ✅ Auth Service (PID: $!)"        
+        # User Service
+        cd ../user-service
+        export $(cat ../../deploy/env/user.env | grep -v '^#' | xargs)
+        nohup ../../bin/user-service > ../../logs/user.log 2>&1 &
+        echo "  ✅ User Service (PID: $!)"
+        
+        # Course Service
+        cd ../course-service
+        export $(cat ../../deploy/env/course.env | grep -v '^#' | xargs)
+        nohup ../../bin/course-service > ../../logs/course.log 2>&1 &
+        echo "  ✅ Course Service (PID: $!)"
+        
+        # Video Service
+        cd ../video-service
+        export $(cat ../../deploy/env/video.env | grep -v '^#' | xargs)
+        nohup ../../bin/video-service > ../../logs/video.log 2>&1 &
+        echo "  ✅ Video Service (PID: $!)"
+        
+        # Gateway
+        cd ../gateway
+        export $(cat ../../deploy/env/gateway.env | grep -v '^#' | xargs)
+        nohup ../../bin/gateway > ../../logs/gateway.log 2>&1 &
+        echo "  ✅ Gateway (PID: $!)"
+        
+        echo "📊 Логи доступны в ./logs/"
+        echo "🛑 Для остановки: task stop-all"
+
+  build-and-run:
+    desc: "Собрать и запустить все сервисы"
+    cmds:
+      - task: stop-all
+      - task: build-all
+      - sleep 2
+      - task: run-bin-all
+      - echo "🎉 Все сервисы собраны и запущены!"
+
   # === Linting & Formatting ===
   
   install-golangci-lint:
