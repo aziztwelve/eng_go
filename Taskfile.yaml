@@ -160,32 +160,90 @@ tasks:
   run-auth:
     desc: "Запустить Auth Service локально"
     dir: services/auth-service
+    dotenv: ['../../deploy/env/auth.env']
     cmds:
       - go run cmd/main.go
 
   run-user:
     desc: "Запустить User Service локально"
     dir: services/user-service
+    dotenv: ['../../deploy/env/user.env']
     cmds:
       - go run cmd/main.go
 
   run-course:
     desc: "Запустить Course Service локально"
     dir: services/course-service
+    dotenv: ['../../deploy/env/course.env']
     cmds:
       - go run cmd/main.go
 
   run-video:
     desc: "Запустить Video Service локально"
     dir: services/video-service
+    dotenv: ['../../deploy/env/video.env']
     cmds:
       - go run cmd/main.go
 
   run-gateway:
     desc: "Запустить API Gateway локально"
     dir: services/gateway
+    dotenv: ['../../deploy/env/gateway.env']
     cmds:
       - go run cmd/main.go
+
+  run-all-bg:
+    desc: "Запустить все сервисы в фоне"
+    cmds:
+      - |
+        echo "🚀 Запускаем сервисы в фоне..."
+        mkdir -p logs
+        
+        # Auth Service
+        cd services/auth-service
+        export $(cat ../../deploy/env/auth.env | grep -v '^#' | xargs)
+        nohup go run cmd/main.go > ../../logs/auth.log 2>&1 &
+        AUTH_PID=$!
+        echo "  ✅ Auth Service (PID: $AUTH_PID)"
+        
+        # User Service
+        cd ../user-service
+        export $(cat ../../deploy/env/user.env | grep -v '^#' | xargs)
+        nohup go run cmd/main.go > ../../logs/user.log 2>&1 &
+        USER_PID=$!
+        echo "  ✅ User Service (PID: $USER_PID)"
+        
+        # Course Service
+        cd ../course-service
+        export $(cat ../../deploy/env/course.env | grep -v '^#' | xargs)
+        nohup go run cmd/main.go > ../../logs/course.log 2>&1 &
+        COURSE_PID=$!
+        echo "  ✅ Course Service (PID: $COURSE_PID)"
+        
+        # Video Service
+        cd ../video-service
+        export $(cat ../../deploy/env/video.env | grep -v '^#' | xargs)
+        nohup go run cmd/main.go > ../../logs/video.log 2>&1 &
+        VIDEO_PID=$!
+        echo "  ✅ Video Service (PID: $VIDEO_PID)"
+        
+        # Gateway
+        cd ../gateway
+        export $(cat ../../deploy/env/gateway.env | grep -v '^#' | xargs)
+        nohup go run cmd/main.go > ../../logs/gateway.log 2>&1 &
+        GATEWAY_PID=$!
+        echo "  ✅ Gateway (PID: $GATEWAY_PID)"
+        
+        echo "📊 Логи доступны в ./logs/"
+        echo "🛑 Для остановки: pkill -f 'go run cmd/main.go'"
+
+  stop-all:
+    desc: "Остановить все запущенные сервисы"
+    cmds:
+      - |
+        echo "🛑 Останавливаем все сервисы..."
+        pkill -f 'go run cmd/main.go' || echo "Нет запущенных сервисов"
+        echo "✅ Все сервисы остановлены"
 
   # === Linting & Formatting ===
   
@@ -324,12 +382,27 @@ tasks:
         done
         echo "✅ Миграции Course Service применены"
 
+  migrate-up-video:
+    desc: "Применить миграции для Video Service"
+    cmds:
+      - |
+        echo "📦 Применение миграций для Video Service..."
+        cd services/video-service/migrations
+        for file in *.up.sql; do
+          if [ -f "$file" ]; then
+            echo "  Применяем $file"
+            PGPASSWORD=change_me_in_production psql -h localhost -U admin -d elearning -f "$file"
+          fi
+        done
+        echo "✅ Миграции Video Service применены"
+
   migrate-up-all:
     desc: "Применить все миграции"
     cmds:
       - task: migrate-up-auth
       - task: migrate-up-user
       - task: migrate-up-course
+      - task: migrate-up-video
 
   # === Database Seeding ===
   
@@ -360,3 +433,44 @@ tasks:
       - |
         echo "🌱 Заполнение данных для Course Service..."
         ./bin/seed.sh course
+
+  # === Git Commands ===
+  
+  git:status:
+    desc: "Показать статус git"
+    cmds:
+      - git status
+
+  git:add:
+    desc: "Добавить все изменения в git"
+    cmds:
+      - git add .
+      - git status
+
+  git:commit:
+    desc: "Коммит с сообщением (использование: task git:commit MSG='your message')"
+    cmds:
+      - |
+        if [ -z "{{.MSG}}" ]; then
+          echo "❌ Укажите сообщение коммита: task git:commit MSG='your message'"
+          exit 1
+        fi
+        git commit -m "{{.MSG}}"
+
+  git:push:
+    desc: "Пуш в удаленный репозиторий"
+    cmds:
+      - git push
+
+  git:pull:
+    desc: "Получить изменения из удаленного репозитория"
+    cmds:
+      - git pull
+
+  git:save:
+    desc: "Быстрый коммит и пуш (использование: task git:save MSG='your message')"
+    cmds:
+      - task: git:add
+      - task: git:commit
+        vars: {MSG: '{{.MSG}}'}
+      - task: git:push
