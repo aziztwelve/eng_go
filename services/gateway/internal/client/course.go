@@ -101,6 +101,21 @@ func (c *CourseClient) PublishCourse(ctx context.Context, req *coursev1.PublishC
 	return c.client.PublishCourse(ctx, req)
 }
 
+// CreateModule создает новый модуль
+func (c *CourseClient) CreateModule(ctx context.Context, req *coursev1.CreateModuleRequest) (*coursev1.CreateModuleResponse, error) {
+	return c.client.CreateModule(ctx, req)
+}
+
+// UpdateModule обновляет модуль
+func (c *CourseClient) UpdateModule(ctx context.Context, req *coursev1.UpdateModuleRequest) (*coursev1.UpdateModuleResponse, error) {
+	return c.client.UpdateModule(ctx, req)
+}
+
+// DeleteModule удаляет модуль
+func (c *CourseClient) DeleteModule(ctx context.Context, req *coursev1.DeleteModuleRequest) (*coursev1.DeleteModuleResponse, error) {
+	return c.client.DeleteModule(ctx, req)
+}
+
 // Close закрывает соединение
 func (c *CourseClient) Close() error {
 	return c.conn.Close()
