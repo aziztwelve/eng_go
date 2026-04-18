@@ -43,10 +43,11 @@ type CourseRepository interface {
 
 // ListFilters содержит параметры фильтрации для списка курсов
 type ListFilters struct {
-	Language *string
-	Level    *string
-	MinPrice *float64
-	MaxPrice *float64
-	Limit    int
-	Offset   int
+	Language           *string
+	Level              *string
+	MinPrice           *float64
+	MaxPrice           *float64
+	Limit              int
+	Offset             int
+	IncludeUnpublished bool // For admin: show all courses including drafts
 }

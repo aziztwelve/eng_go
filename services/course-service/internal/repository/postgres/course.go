@@ -134,8 +134,10 @@ func (r *courseRepository) List(ctx context.Context, filters repository.ListFilt
 		argPos++
 	}
 
-	// Только опубликованные курсы
-	conditions = append(conditions, "is_published = true")
+	// Только опубликованные курсы (если не указано иное для админки)
+	if !filters.IncludeUnpublished {
+		conditions = append(conditions, "is_published = true")
+	}
 
 	whereClause := ""
 	if len(conditions) > 0 {

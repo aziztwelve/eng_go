@@ -161,6 +161,7 @@ message ListCoursesRequest {
   google.protobuf.DoubleValue max_price = 4;
   int32 limit = 5;
   int32 offset = 6;
+  bool include_unpublished = 7; // For admin: show all courses including drafts
 }
 
 // ListCoursesResponse содержит список курсов

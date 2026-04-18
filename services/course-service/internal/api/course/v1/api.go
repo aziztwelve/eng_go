@@ -32,8 +32,9 @@ func NewAPI(courseService service.CourseService, enrollmentService service.Enrol
 // ListCourses получает список курсов с фильтрацией
 func (a *api) ListCourses(ctx context.Context, req *coursev1.ListCoursesRequest) (*coursev1.ListCoursesResponse, error) {
 	filters := repository.ListFilters{
-		Limit:  int(req.Limit),
-		Offset: int(req.Offset),
+		Limit:              int(req.Limit),
+		Offset:             int(req.Offset),
+		IncludeUnpublished: req.IncludeUnpublished,
 	}
 
 	if req.Language != nil {

@@ -27,7 +27,11 @@ func NewAdminCourseRealHandler(courseClient *client.CourseClient) *AdminCourseRe
 
 // ListCourses возвращает список всех курсов
 func (h *AdminCourseRealHandler) ListCourses(c *gin.Context) {
-	resp, err := h.courseClient.ListCourses(c.Request.Context(), &coursev1.ListCoursesRequest{})
+	resp, err := h.courseClient.ListCourses(c.Request.Context(), &coursev1.ListCoursesRequest{
+		Limit:              100,
+		Offset:             0,
+		IncludeUnpublished: true, // Show all courses including drafts for admin
+	})
 	if err != nil {
 		st, _ := status.FromError(err)
 		c.JSON(http.StatusInternalServerError, gin.H{
