@@ -242,8 +242,20 @@ tasks:
     cmds:
       - |
         echo "🛑 Останавливаем все сервисы..."
-        pkill -f 'go run cmd/main.go' || echo "Нет запущенных сервисов"
+        pkill -9 -f 'go run cmd/main.go' || echo "Нет go run процессов"
+        pkill -9 -f '/main$' || echo "Нет скомпилированных процессов"
         echo "✅ Все сервисы остановлены"
+
+  restart-all:
+    desc: "Перезапускаем все сервисы"
+    cmds:
+      - task: stop-all
+      - |
+        echo "🧹 Очищаем Go cache..."
+        go clean -cache
+      - sleep 2
+      - task: run-all-bg
+      - echo "🔄 Все сервисы перезапущены"
 
   # === Linting & Formatting ===
   
