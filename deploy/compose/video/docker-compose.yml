@@ -7,6 +7,7 @@ services:
       MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minioadmin}
       MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin}
       MINIO_SERVER_URL: http://204.168.248.33:9000
+      MINIO_BROWSER_REDIRECT_URL: http://204.168.248.33:9001
     
     command: server /data --console-address ":9001"
     

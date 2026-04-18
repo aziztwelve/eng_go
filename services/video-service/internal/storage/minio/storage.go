@@ -3,6 +3,7 @@ package minio
 import (
 	"context"
 	"io"
+	"strings"
 	"time"
 
 	"github.com/minio/minio-go/v7"
@@ -13,8 +14,9 @@ import (
 )
 
 type minioStorage struct {
-	client *minio.Client
-	bucket string
+	client   *minio.Client
+	bucket   string
+	endpoint string
 }
 
 // Config конфигурация MinIO
@@ -39,8 +41,9 @@ func NewMinioStorage(cfg Config) (storage.Storage, error) {
 	}
 
 	return &minioStorage{
-		client: client,
-		bucket: cfg.Bucket,
+		client:   client,
+		bucket:   cfg.Bucket,
+		endpoint: cfg.Endpoint,
 	}, nil
 }
 
@@ -49,7 +52,12 @@ func (s *minioStorage) GeneratePresignedURL(ctx context.Context, objectKey strin
 	if err != nil {
 		return "", errors.Wrap(err, "failed to generate presigned URL")
 	}
-	return url.String(), nil
+	
+	// Replace localhost with actual endpoint for external access
+	urlStr := url.String()
+	urlStr = strings.Replace(urlStr, "localhost:9000", s.endpoint, 1)
+	
+	return urlStr, nil
 }
 
 func (s *minioStorage) UploadVideo(ctx context.Context, objectKey string, reader io.Reader, size int64, contentType string) error {
