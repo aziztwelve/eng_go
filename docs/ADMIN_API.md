@@ -1,54 +1,27 @@
 # Admin API Documentation
 
-Admin панель для управления платформой E-Learning.
+## Overview
+Admin API provides endpoints for managing users, courses, and videos. All endpoints require admin authentication.
 
-## Аутентификация
-
-Admin endpoints требуют:
-1. Валидный JWT токен в заголовке `Authorization: Bearer <token>`
-2. Роль `admin` в токене
-
-### Получить admin токен
-
-```bash
-POST /api/v1/auth/login
-Content-Type: application/json
-
-{
-  "email": "admin@test.com",
-  "password": "password123"
-}
-```
-
-**Response:**
-```json
-{
-  "access_token": "eyJhbGc...",
-  "refresh_token": "eyJhbGc...",
-  "expires_at": "2026-04-18T16:00:00Z"
-}
-```
-
-Токен содержит `role: "admin"` в payload.
+## Authentication
+All admin endpoints require:
+- `Authorization: Bearer <token>` header
+- User must have `admin` role
 
 ## Endpoints
 
 ### Admin Info
+**GET** `/api/v1/admin/me`
 
-#### GET /api/v1/admin/me
-
-Получить информацию о текущем admin пользователе.
-
-**Headers:**
-```
-Authorization: Bearer <admin_token>
-```
+Returns current admin user information.
 
 **Response:**
 ```json
 {
-  "user_id": "11111111-1111-1111-1111-111111111111",
-  "role": "admin"
+  "id": "uuid",
+  "email": "admin@example.com",
+  "role": "admin",
+  "created_at": "2026-04-18T10:00:00Z"
 }
 ```
 
@@ -57,365 +30,248 @@ Authorization: Bearer <admin_token>
 ## User Management
 
 ### List Users
+**GET** `/api/v1/admin/users`
 
-#### GET /api/v1/admin/users
-
-Получить список всех пользователей платформы.
-
-**Headers:**
-```
-Authorization: Bearer <admin_token>
-```
+Returns list of all users.
 
 **Response:**
 ```json
 {
   "users": [
     {
-      "id": "11111111-1111-1111-1111-111111111111",
-      "email": "admin@test.com",
-      "full_name": "Admin User",
-      "role": "admin",
-      "created_at": "2026-01-15T00:00:00Z",
-      "updated_at": "2026-01-15T00:00:00Z"
-    },
-    {
-      "id": "22222222-2222-2222-2222-222222222222",
-      "email": "instructor1@test.com",
-      "full_name": "John Instructor",
-      "role": "instructor",
-      "created_at": "2026-02-20T00:00:00Z",
-      "updated_at": "2026-02-20T00:00:00Z"
+      "id": "uuid",
+      "email": "user@example.com",
+      "role": "student",
+      "created_at": "2026-04-18T10:00:00Z"
     }
   ],
-  "total": 2
+  "total": 10
 }
 ```
-
-**Example:**
-```bash
-curl -H "Authorization: Bearer $ADMIN_TOKEN" \
-  http://localhost:8080/api/v1/admin/users
-```
-
----
 
 ### Get User
+**GET** `/api/v1/admin/users/:id`
 
-#### GET /api/v1/admin/users/:id
-
-Получить информацию о конкретном пользователе.
-
-**Headers:**
-```
-Authorization: Bearer <admin_token>
-```
-
-**Path Parameters:**
-- `id` (string, required) - User ID
-
-**Response:**
-```json
-{
-  "id": "33333333-3333-3333-3333-333333333333",
-  "email": "student1@test.com",
-  "full_name": "Alice Student",
-  "role": "student",
-  "created_at": "2026-03-10T00:00:00Z",
-  "updated_at": "2026-03-10T00:00:00Z"
-}
-```
-
-**Example:**
-```bash
-curl -H "Authorization: Bearer $ADMIN_TOKEN" \
-  http://localhost:8080/api/v1/admin/users/33333333-3333-3333-3333-333333333333
-```
-
----
+Returns user details by ID.
 
 ### Update User
+**PUT** `/api/v1/admin/users/:id`
 
-#### PUT /api/v1/admin/users/:id
+Updates user information.
 
-Обновить информацию о пользователе.
-
-**Headers:**
-```
-Authorization: Bearer <admin_token>
-Content-Type: application/json
-```
-
-**Path Parameters:**
-- `id` (string, required) - User ID
-
-**Request Body:**
+**Request:**
 ```json
 {
-  "full_name": "Updated Name",
+  "email": "newemail@example.com",
   "role": "instructor"
 }
 ```
 
-**Fields:**
-- `full_name` (string, required) - Полное имя пользователя
-- `role` (string, required) - Роль: `student`, `instructor`, или `admin`
+### Delete User
+**DELETE** `/api/v1/admin/users/:id`
+
+Deletes user by ID.
+
+---
+
+## Course Management
+
+### List Courses
+**GET** `/api/v1/admin/courses`
+
+Returns list of all courses (including unpublished).
+
+**Query Parameters:**
+- `limit` (optional): Number of courses per page (default: 100)
+- `offset` (optional): Pagination offset (default: 0)
 
 **Response:**
 ```json
 {
-  "id": "33333333-3333-3333-3333-333333333333",
-  "email": "student1@test.com",
-  "full_name": "Updated Name",
-  "role": "instructor",
-  "created_at": "2026-03-10T00:00:00Z",
-  "updated_at": "2026-04-18T15:30:00Z"
+  "courses": [
+    {
+      "id": "uuid",
+      "title": "English A1",
+      "description": "Beginner English course",
+      "level": "A1",
+      "language": "en",
+      "status": "published",
+      "created_at": "2026-04-18T10:00:00Z",
+      "updated_at": "2026-04-18T10:00:00Z"
+    }
+  ],
+  "total": 11
 }
 ```
 
-**Example:**
-```bash
-curl -X PUT \
-  -H "Authorization: Bearer $ADMIN_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{"full_name":"New Name","role":"instructor"}' \
-  http://localhost:8080/api/v1/admin/users/33333333-3333-3333-3333-333333333333
+**Note:** Currently shows only published courses (5 out of 11). Fix pending to show all courses including drafts.
+
+### Get Course
+**GET** `/api/v1/admin/courses/:id`
+
+Returns course details with modules, lessons, and steps.
+
+### Create Course
+**POST** `/api/v1/admin/courses`
+
+Creates a new course.
+
+**Request:**
+```json
+{
+  "title": "English A1",
+  "description": "Beginner English course",
+  "level": "A1",
+  "language": "en"
+}
+```
+
+**Levels:** A1, A2, B1, B2, C1, C2 (CEFR standard)
+
+**Response:**
+```json
+{
+  "id": "uuid",
+  "title": "English A1",
+  "description": "Beginner English course",
+  "level": "A1",
+  "language": "en",
+  "status": "draft",
+  "created_at": "2026-04-18T10:00:00Z",
+  "updated_at": "2026-04-18T10:00:00Z"
+}
+```
+
+### Update Course
+**PUT** `/api/v1/admin/courses/:id`
+
+Updates course information.
+
+### Delete Course
+**DELETE** `/api/v1/admin/courses/:id`
+
+Deletes course by ID.
+
+### Publish Course
+**PUT** `/api/v1/admin/courses/:id/publish`
+
+Publishes or unpublishes a course.
+
+**Request:**
+```json
+{
+  "is_published": true
+}
 ```
 
 ---
 
-### Delete User
+## Video Management
 
-#### DELETE /api/v1/admin/users/:id
+### List Videos
+**GET** `/api/v1/admin/videos`
 
-Удалить пользователя из системы.
-
-**Headers:**
-```
-Authorization: Bearer <admin_token>
-```
-
-**Path Parameters:**
-- `id` (string, required) - User ID
+Returns list of all videos.
 
 **Response:**
 ```json
 {
-  "message": "User deleted successfully"
+  "videos": [
+    {
+      "id": "uuid",
+      "title": "Lesson 1",
+      "duration": 300,
+      "size": 10485760,
+      "url": "https://minio.example.com/videos/...",
+      "created_at": "2026-04-18T10:00:00Z"
+    }
+  ],
+  "total": 5
 }
 ```
 
-**Example:**
-```bash
-curl -X DELETE \
-  -H "Authorization: Bearer $ADMIN_TOKEN" \
-  http://localhost:8080/api/v1/admin/users/33333333-3333-3333-3333-333333333333
+### Get Video
+**GET** `/api/v1/admin/videos/:id`
+
+Returns video details by ID.
+
+### Upload Video
+**POST** `/api/v1/admin/videos/upload`
+
+Uploads a new video file.
+
+**Request:** `multipart/form-data`
+- `file`: Video file (required)
+- `title`: Video title (required)
+
+**Response:**
+```json
+{
+  "id": "uuid",
+  "title": "Lesson 1",
+  "duration": 300,
+  "size": 10485760,
+  "url": "https://minio.example.com/videos/...",
+  "created_at": "2026-04-18T10:00:00Z"
+}
 ```
+
+**Implementation:**
+- Gateway accepts multipart/form-data
+- Streams file to video-service via gRPC (64KB chunks)
+- Video-service uploads to MinIO and saves metadata to PostgreSQL
+
+### Update Video
+**PUT** `/api/v1/admin/videos/:id`
+
+Updates video metadata.
+
+### Delete Video
+**DELETE** `/api/v1/admin/videos/:id`
+
+Deletes video by ID.
+
+### Get Video Usage
+**GET** `/api/v1/admin/videos/:id/usage`
+
+Returns list of courses/lessons using this video.
 
 ---
 
 ## Error Responses
 
-### 401 Unauthorized
-
-Отсутствует или невалидный токен.
+All endpoints return standard error format:
 
 ```json
 {
-  "error": "Missing authorization header"
+  "error": "Error message"
 }
 ```
 
-```json
-{
-  "error": "Invalid token"
-}
-```
-
-### 403 Forbidden
-
-Пользователь не имеет роли admin.
-
-```json
-{
-  "error": "Access denied. Admin role required"
-}
-```
-
-### 404 Not Found
-
-Пользователь не найден.
-
-```json
-{
-  "error": "User not found"
-}
-```
-
-### 400 Bad Request
-
-Невалидные данные в запросе.
-
-```json
-{
-  "error": "Invalid request body"
-}
-```
+**Status Codes:**
+- `200` - Success
+- `400` - Bad Request
+- `401` - Unauthorized
+- `403` - Forbidden (not admin)
+- `404` - Not Found
+- `500` - Internal Server Error
 
 ---
 
-## Middleware Chain
+## Notes
 
-Admin endpoints защищены двумя middleware:
+### Course Levels
+Use CEFR standard levels:
+- **A1** - Beginner
+- **A2** - Elementary
+- **B1** - Intermediate
+- **B2** - Upper Intermediate
+- **C1** - Advanced
+- **C2** - Proficiency
 
-1. **AuthMiddleware** - проверяет JWT токен
-2. **AdminOnlyMiddleware** - проверяет роль `admin`
+### Course Status
+- **draft** - Not visible to students
+- **published** - Visible to students
 
-```
-Request → AuthMiddleware → AdminOnlyMiddleware → Handler
-```
-
----
-
-## Security
-
-### Role-Based Access Control (RBAC)
-
-Система использует три роли:
-- `student` - обычный пользователь
-- `instructor` - преподаватель
-- `admin` - администратор
-
-Только пользователи с ролью `admin` могут получить доступ к `/api/v1/admin/*` endpoints.
-
-### Token Validation
-
-JWT токен проверяется через Auth Service:
-1. Gateway извлекает токен из заголовка
-2. Отправляет запрос в Auth Service для валидации
-3. Auth Service проверяет подпись и срок действия
-4. Возвращает `user_id` и `role`
-5. Gateway добавляет их в контекст запроса
-
-### Audit Logging
-
-Все admin действия логируются в Gateway:
-```
-INFO: HTTP request | method: PUT | path: /api/v1/admin/users/123 | status: 200
-```
-
----
-
-## Testing
-
-### Get Admin Token
-
-```bash
-# Login as admin
-ADMIN_TOKEN=$(curl -s -X POST http://localhost:8080/api/v1/auth/login \
-  -H "Content-Type: application/json" \
-  -d '{"email":"admin@test.com","password":"password123"}' \
-  | grep -o '"access_token":"[^"]*"' | cut -d'"' -f4)
-
-echo $ADMIN_TOKEN
-```
-
-### Test Admin Access
-
-```bash
-# Get admin info
-curl -H "Authorization: Bearer $ADMIN_TOKEN" \
-  http://localhost:8080/api/v1/admin/me
-
-# List users
-curl -H "Authorization: Bearer $ADMIN_TOKEN" \
-  http://localhost:8080/api/v1/admin/users
-```
-
-### Test Non-Admin Access
-
-```bash
-# Login as student
-STUDENT_TOKEN=$(curl -s -X POST http://localhost:8080/api/v1/auth/login \
-  -H "Content-Type: application/json" \
-  -d '{"email":"student1@test.com","password":"password123"}' \
-  | grep -o '"access_token":"[^"]*"' | cut -d'"' -f4)
-
-# Try to access admin endpoint (should fail with 403)
-curl -H "Authorization: Bearer $STUDENT_TOKEN" \
-  http://localhost:8080/api/v1/admin/users
-```
-
-Expected response:
-```json
-{
-  "error": "Access denied. Admin role required"
-}
-```
-
----
-
-## Implementation Status
-
-### ✅ Implemented
-
-- [x] Admin authentication (role-based)
-- [x] Admin middleware (AuthMiddleware + AdminOnlyMiddleware)
-- [x] GET /admin/me
-- [x] GET /admin/users (list)
-- [x] GET /admin/users/:id (get)
-- [x] PUT /admin/users/:id (update)
-- [x] DELETE /admin/users/:id (delete)
-
-### 🚧 Coming Soon
-
-- [ ] POST /admin/users (create user)
-- [ ] GET /admin/courses (course management)
-- [ ] GET /admin/videos (video management)
-- [ ] GET /admin/analytics (analytics dashboard)
-- [ ] Pagination for list endpoints
-- [ ] Filtering and search
-- [ ] Bulk operations
-
----
-
-## Frontend Integration
-
-Admin панель доступна по адресу: `http://localhost:3000/admin`
-
-### Login Flow
-
-1. User navigates to `/admin`
-2. Middleware redirects to `/admin/login`
-3. User enters admin credentials
-4. Frontend validates token has `role: "admin"`
-5. Token stored in cookies
-6. Redirect to `/admin` dashboard
-
-### API Client Example
-
-```typescript
-// lib/admin-api.ts
-const API_BASE_URL = 'http://localhost:8080/api/v1';
-
-async function listUsers() {
-  const token = getCookie('auth_token');
-  
-  const response = await fetch(`${API_BASE_URL}/admin/users`, {
-    headers: {
-      'Authorization': `Bearer ${token}`,
-    },
-  });
-  
-  return response.json();
-}
-```
-
----
-
-## Related Documentation
-
-- [Gateway Service](./services/gateway.md)
-- [Auth Service](./services/auth-service.md)
-- [User Service](./services/user-service.md)
-- [Main README](./README.md)
+### Known Issues
+- List Courses endpoint currently filters by `is_published = true`, showing only 5 published courses instead of all 11. Fix pending to add `ListAllCourses` method for admin panel.

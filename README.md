@@ -141,6 +141,7 @@ task migrate-up-all   # Применить все миграции
 # Сервисы
 task run-all-bg       # Запустить все сервисы в фоне
 task stop-all         # Остановить все сервисы
+task restart-all      # Перезапустить все сервисы (stop + clean cache + run)
 task run-auth         # Запустить Auth Service
 task run-gateway      # Запустить Gateway
 
