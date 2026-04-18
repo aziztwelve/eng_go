@@ -1,325 +1,273 @@
-# E-Learning Platform
+# 🎓 E-Learning Platform
 
-Микросервисная платформа для онлайн-обучения, построенная на Go с использованием Clean Architecture.
+Микросервисная платформа для онлайн-обучения на Go с Clean Architecture, gRPC и MinIO для видео.
+
+## 🚀 Quick Start
+
+**[→ START.md](./START.md)** — пошаговая инструкция запуска
 
 ## 📚 Документация
 
-**[Полная документация →](./docs/README.md)**
+**[→ docs/](./docs/)** — полная документация
 
-- [Auth Service](./docs/services/auth-service.md)
-- [User Service](./docs/services/user-service.md)
-- [Course Service](./docs/services/course-service.md) ✅ NEW
-- [API Gateway](./docs/services/gateway.md)
+- [Auth Service](./docs/services/auth-service.md) — аутентификация и JWT
+- [User Service](./docs/services/user-service.md) — профили пользователей
+- [Course Service](./docs/services/course-service.md) — курсы, модули, уроки
+- [Video Service](./docs/services/video-service.md) — хранение и стриминг видео
+- [API Gateway](./docs/services/gateway.md) — HTTP REST API
 
-## Архитектура
+## 🏗️ Архитектура
 
-- **Platform** - общие утилиты (logger, postgres, closer, grpc/health)
-- **Shared** - proto контракты для всех сервисов
-- **Services** - микросервисы:
-  - ✅ Auth Service (50051) - аутентификация и авторизация
-  - ✅ User Service (50052) - управление профилями
-  - ✅ Course Service (50053) - каталог курсов и контент (NEW)
-  - ✅ API Gateway (8081) - единая точка входа
-
-## Требования
-
-- Go 1.24+
-- Docker & Docker Compose
-- Task (taskfile.dev)
-
-## Быстрый старт
-
-### 1. Клонирование и настройка
-
-```bash
-cd elearning
-
-# Создать .env файл из шаблона
-cp deploy/env/.env.template deploy/env/.env
-
-# Отредактировать переменные окружения (опционально)
-vim deploy/env/.env
+```
+┌─────────────────────────────────────────────────────────┐
+│                     API Gateway (8080)                   │
+│                    HTTP REST API                         │
+└────────────┬────────────┬────────────┬──────────────────┘
+             │            │            │            │
+    ┌────────▼───┐  ┌────▼────┐  ┌───▼─────┐  ┌──▼──────┐
+    │   Auth     │  │  User   │  │ Course  │  │  Video  │
+    │  Service   │  │ Service │  │ Service │  │ Service │
+    │  :50051    │  │ :50052  │  │ :50053  │  │ :50054  │
+    └─────┬──────┘  └────┬────┘  └────┬────┘  └────┬─────┘
+          │              │            │             │
+          └──────────────┴────────────┴─────────────┘
+                         │                    │
+                  ┌──────▼──────┐      ┌─────▼─────┐
+                  │  PostgreSQL │      │   MinIO   │
+                  │    :5432    │      │   :9000   │
+                  └─────────────┘      └───────────┘
 ```
 
-### 2. Генерация proto файлов
+### Сервисы
 
-```bash
-# Установить buf и сгенерировать Go код из proto
-task proto:gen
-```
-
-### 3. Генерация конфигураций для сервисов
-
-```bash
-# Генерирует .env файлы для каждого сервиса из шаблонов
-task env:generate
-```
-
-### 4. Запуск инфраструктуры
-
-```bash
-# Поднять PostgreSQL
-task up-core
-
-# Проверить статус
-docker ps
-```
-
-### 5. Применение миграций
-
-```bash
-# Auth Service
-PGPASSWORD=auth_pass psql -h localhost -p 5432 -U auth_user -d elearning \
-  -c "SET search_path TO auth;" \
-  -f services/auth-service/migrations/001_create_users_table.sql
-
-# User Service
-PGPASSWORD=user_pass psql -h localhost -p 5432 -U user_user -d elearning \
-  -c "SET search_path TO users;" \
-  -f services/user-service/migrations/001_create_profiles_table.sql
-```
-
-### 6. Запуск сервисов
-
-```bash
-# В отдельных терминалах:
-
-# Терминал 1: Auth Service
-task run-auth
-
-# Терминал 2: User Service
-task run-user
-
-# Терминал 3: API Gateway
-cd services/gateway && go run cmd/main.go
-
-# Course Service (в разработке)
-# task run-course
-```
-
-## Доступные команды
+- **Auth Service** (gRPC :50051) — регистрация, логин, JWT токены
+- **User Service** (gRPC :50052) — профили, роли (admin/instructor/student)
+- **Course Service** (gRPC :50053) — курсы, модули, уроки, шаги, прогресс
+- **Video Service** (gRPC :50054) — загрузка, хранение, signed URLs для видео
+- **API Gateway** (HTTP :8080) — REST API, роутинг к gRPC сервисам
 
 ### Инфраструктура
 
-```bash
-task up-core          # Поднять PostgreSQL
-task down-core        # Остановить PostgreSQL
-task logs-core        # Показать логи PostgreSQL
-task up-all           # Поднять всю инфраструктуру
-task down-all         # Остановить всю инфраструктуру
-```
+- **PostgreSQL** — основная БД (схемы: auth, users, courses, videos)
+- **MinIO** — S3-совместимое хранилище для видео файлов
 
-### Разработка
-
-```bash
-task proto:gen        # Генерация Go кода из proto
-task proto:lint       # Линтинг proto файлов
-task env:generate     # Генерация .env для сервисов
-task format           # Форматирование кода
-task lint             # Линтинг кода
-task test             # Запуск тестов
-task deps:update      # Обновление зависимостей
-```
-
-### Запуск сервисов
-
-```bash
-task run-auth         # Запустить Auth Service
-task run-user         # Запустить User Service
-task run-course       # Запустить Course Service
-task run-gateway      # Запустить API Gateway
-```
-
-## Структура проекта
+### Структура проекта
 
 ```
-elearning/
-├── platform/              # Общие утилиты
+eng_go/
+├── platform/          # Общие утилиты
 │   └── pkg/
-│       ├── closer/        # Graceful shutdown
-│       ├── logger/        # Zap logger wrapper
-│       ├── postgres/      # pgx connection pool
-│       └── grpc/health/   # Health check service
+│       ├── closer/    # Graceful shutdown
+│       ├── grpc/      # gRPC health checks
+│       ├── logger/    # Zap logger
+│       └── postgres/  # PostgreSQL pool
 │
-├── shared/                # Proto контракты
-│   ├── proto/
-│   │   ├── auth/v1/
-│   │   ├── user/v1/
-│   │   └── course/v1/
-│   └── pkg/proto/         # Сгенерированный Go код
+├── shared/            # Proto контракты
+│   ├── proto/         # .proto файлы
+│   └── pkg/proto/     # Сгенерированный Go код
 │
-├── services/
-│   ├── auth-service/      # Сервис аутентификации
-│   │   ├── cmd/
-│   │   ├── internal/
-│   │   │   ├── app/       # Инициализация приложения
-│   │   │   ├── config/    # Конфигурация
-│   │   │   ├── model/     # Доменные модели
-│   │   │   ├── service/   # Бизнес-логика
-│   │   │   ├── repository/# Доступ к данным
-│   │   │   ├── converter/ # Конвертеры
-│   │   │   └── api/       # gRPC API
-│   │   └── migrations/
-│   │
-│   ├── user-service/      # Сервис пользователей
-│   ├── course-service/    # Сервис курсов
-│   └── gateway/           # API Gateway
+├── services/          # Микросервисы
+│   ├── auth-service/
+│   ├── user-service/
+│   ├── course-service/
+│   ├── video-service/
+│   └── gateway/
 │
-├── deploy/
-│   ├── env/               # Конфигурации
-│   │   ├── .env           # Единый файл конфигурации
-│   │   ├── *.env.template # Шаблоны для сервисов
-│   │   └── generate-env.sh
-│   │
-│   └── compose/
-│       ├── core/          # PostgreSQL
-│       ├── auth/          # Auth Service (опционально)
-│       ├── user/
-│       ├── course/
-│       └── gateway/
-│
-├── Taskfile.yaml          # Автоматизация задач
-├── go.work                # Go workspace
-└── README.md
+└── deploy/            # Деплой конфиги
+    ├── compose/       # Docker Compose
+    └── env/           # Environment файлы
 ```
 
-## Тестирование
+## 🛠️ Технологии
 
-### Через API Gateway (HTTP)
+- **Go 1.24** — основной язык
+- **gRPC** — межсервисная коммуникация
+- **Protocol Buffers** — сериализация данных
+- **PostgreSQL 16** — реляционная БД
+- **MinIO** — объектное хранилище (S3-compatible)
+- **Docker Compose** — оркестрация контейнеров
+- **Task** — task runner (Makefile альтернатива)
+- **Zap** — структурированное логирование
+- **Gin** — HTTP роутер для Gateway
+
+## 📦 Установка
+
+### Требования
+
+- Go 1.24+
+- Docker & Docker Compose
+- Task (`brew install go-task/tap/go-task` или [taskfile.dev](https://taskfile.dev))
+
+### Быстрый старт
 
 ```bash
-# 1. Регистрация
-curl -X POST http://localhost:8081/api/v1/auth/register \
-  -H "Content-Type: application/json" \
-  -d '{"email":"test@example.com","password":"password123","username":"testuser"}'
+# 1. Клонировать репозиторий
+git clone https://github.com/aziztwelve/eng_go.git
+cd eng_go
 
-# 2. Вход
-TOKEN=$(curl -X POST http://localhost:8081/api/v1/auth/login \
-  -H "Content-Type: application/json" \
-  -d '{"email":"test@example.com","password":"password123"}' \
-  | jq -r '.access_token')
+# 2. Сгенерировать env файлы
+task env:generate
 
-# 3. Получить профиль
-curl http://localhost:8081/api/v1/profile \
-  -H "Authorization: Bearer $TOKEN"
+# 3. Запустить инфраструктуру
+task up-all
 
-# 4. Обновить профиль
-curl -X PUT http://localhost:8081/api/v1/profile \
-  -H "Authorization: Bearer $TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{"first_name":"John","last_name":"Doe","native_lang":"en","target_lang":"ru"}'
+# 4. Применить миграции
+task migrate-up-all
+
+# 5. Заполнить тестовыми данными
+# (см. START.md для подробностей)
+
+# 6. Запустить все сервисы
+task run-all-bg
+
+# 7. Проверить
+curl http://localhost:8080/health
 ```
 
-### Через grpcurl (прямые gRPC вызовы)
+**Подробная инструкция:** [START.md](./START.md)
+
+## 🎯 Основные команды
 
 ```bash
-# Auth Service - Регистрация
-./bin/grpcurl -plaintext -d '{
-  "email": "test@example.com",
-  "password": "password123",
-  "username": "testuser"
-}' localhost:50051 auth.v1.AuthService/Register
+# Инфраструктура
+task up-core          # Запустить PostgreSQL
+task up-video         # Запустить MinIO
+task up-all           # Запустить всё
+task down-all         # Остановить всё
 
-# Auth Service - Вход
-./bin/grpcurl -plaintext -d '{
-  "email": "test@example.com",
-  "password": "password123"
-}' localhost:50051 auth.v1.AuthService/Login
+# Миграции
+task migrate-up-all   # Применить все миграции
 
-# User Service - Получить профиль
-./bin/grpcurl -plaintext -d '{
-  "user_id": "YOUR_USER_UUID"
-}' localhost:50052 user.v1.UserService/GetProfile
+# Сервисы
+task run-all-bg       # Запустить все сервисы в фоне
+task stop-all         # Остановить все сервисы
+task run-auth         # Запустить Auth Service
+task run-gateway      # Запустить Gateway
+
+# Разработка
+task proto:gen        # Сгенерировать proto
+task format           # Форматировать код
+task lint             # Запустить линтер
+
+# Git
+task git:status       # Git status
+task git:save MSG='...' # Add + commit + push
 ```
 
-## Конфигурация
+## 🧪 Тестовые данные
 
-Все переменные окружения находятся в `deploy/env/.env`. Основные параметры:
+После seeding доступны:
 
-### PostgreSQL
-- `POSTGRES_HOST` - хост БД (default: postgres)
-- `POSTGRES_PORT` - порт БД (default: 5432)
-- `POSTGRES_DB` - имя БД (default: elearning)
-- `POSTGRES_USER` - пользователь (default: admin)
-- `POSTGRES_PASSWORD` - пароль
+**Пользователи:**
+- Admin: `admin@test.com` / `password123`
+- Instructor: `instructor1@test.com` / `password123`
+- Student: `student1@test.com` / `password123`
 
-### Auth Service
-- `AUTH_GRPC_PORT` - порт gRPC (default: 50051)
-- `AUTH_JWT_SECRET` - секрет для JWT
-- `AUTH_JWT_ACCESS_TTL` - время жизни access token (default: 15m)
-- `AUTH_JWT_REFRESH_TTL` - время жизни refresh token (default: 168h)
+**Курсы:**
+- 7 курсов (English, Spanish, German)
+- 17 модулей
+- 30 уроков
+- 33 шага (текст, видео, квизы)
 
-## Разработка
+**Видео:**
+- 8 тестовых видео в MinIO
 
-### Добавление нового сервиса
+## 📡 API Примеры
 
-1. Создать proto контракт в `shared/proto/{service}/v1/`
+### Регистрация
+
+```bash
+curl -X POST http://localhost:8080/api/v1/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "test@example.com",
+    "password": "password123",
+    "full_name": "Test User"
+  }'
+```
+
+### Логин
+
+```bash
+curl -X POST http://localhost:8080/api/v1/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "student1@test.com",
+    "password": "password123"
+  }'
+```
+
+### Получить курсы
+
+```bash
+curl http://localhost:8080/api/v1/courses
+```
+
+### Получить видео URL
+
+```bash
+curl http://localhost:8080/api/v1/videos/10000001-0000-0000-0000-000000000001/url
+```
+
+## 🔧 Разработка
+
+### Добавить новый сервис
+
+1. Создать proto контракт в `shared/proto/`
 2. Сгенерировать код: `task proto:gen`
-3. Создать структуру сервиса в `services/{service}/`
-4. Добавить шаблон конфигурации в `deploy/env/{service}.env.template`
-5. Обновить `SERVICES` в `Taskfile.yaml`
-6. Создать миграции в `services/{service}/migrations/`
+3. Создать сервис в `services/new-service/`
+4. Добавить в Gateway client и handler
+5. Обновить docker-compose и env
 
-### Clean Architecture
+### Структура сервиса
 
-Каждый сервис следует принципам Clean Architecture:
-
-1. **Domain Layer** (`internal/model/`) - бизнес-сущности
-2. **Service Layer** (`internal/service/`) - бизнес-логика
-3. **Repository Layer** (`internal/repository/`) - доступ к данным
-4. **API Layer** (`internal/api/`) - gRPC handlers
-5. **Converters** - преобразование между слоями
-
-Зависимости направлены внутрь: API → Service → Repository → Domain
-
-## Troubleshooting
-
-### Proto генерация не работает
-
-```bash
-# Установить buf вручную
-task install-buf
-task proto:install-plugins
+```
+services/my-service/
+├── cmd/
+│   └── main.go           # Entry point
+├── internal/
+│   ├── api/              # gRPC handlers
+│   ├── app/              # Application setup
+│   ├── config/           # Configuration
+│   ├── converter/        # DTO converters
+│   ├── model/            # Domain models
+│   ├── repository/       # Data access
+│   └── service/          # Business logic
+├── migrations/           # SQL migrations
+└── seeds/                # Test data
 ```
 
-### Ошибка подключения к PostgreSQL
+## 📊 Мониторинг
 
 ```bash
-# Проверить статус контейнера
-docker ps
+# Проверить все порты
+ss -tlnp | grep -E ':(50051|50052|50053|50054|8080|5432|9000)'
 
-# Проверить логи
-task logs-core
+# Логи сервисов
+tail -f logs/*.log
 
-# Пересоздать контейнер
-task down-core
-task up-core
+# Логи Docker
+docker compose -f deploy/compose/core/docker-compose.yml logs -f
 ```
 
-### LSP ошибки в IDE
+## 🤝 Contributing
 
-```bash
-# Обновить зависимости
-task deps:update
+1. Fork репозиторий
+2. Создать feature branch (`git checkout -b feature/amazing`)
+3. Commit изменения (`git commit -m 'Add amazing feature'`)
+4. Push в branch (`git push origin feature/amazing`)
+5. Открыть Pull Request
 
-# Синхронизировать workspace
-go work sync
-```
+## 📝 License
 
-## Roadmap
+MIT License - см. [LICENSE](LICENSE)
 
-- [x] Platform модуль
-- [x] Shared proto контракты
-- [x] Auth Service
-- [x] User Service
-- [x] API Gateway (базовая версия)
-- [ ] Course Service
-- [ ] Order Service
-- [ ] Payment Service
-- [ ] Progress Service
-- [ ] Video Service
-- [ ] Notification Service
+## 👥 Authors
 
-## Лицензия
+- [@aziztwelve](https://github.com/aziztwelve)
 
-MIT
+## 🔗 Links
+
+- [Documentation](./docs/)
+- [Quick Start](./START.md)
+- [API Reference](./docs/api/)

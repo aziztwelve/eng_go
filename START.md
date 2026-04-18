@@ -1,89 +1,162 @@
-# 🚀 Запуск платформы E-Learning
+# 🚀 Quick Start Guide
 
-## Быстрый старт
+## Prerequisites
 
-### 1. Запустить PostgreSQL
+- Go 1.24+
+- Docker & Docker Compose
+- Task (task runner)
+
+## 1. Clone & Setup
+
 ```bash
-cd elearning
-task up-core
+git clone https://github.com/aziztwelve/eng_go.git
+cd eng_go
 ```
 
-### 2. Применить миграции
+## 2. Generate Environment Files
+
+```bash
+task env:generate
+```
+
+## 3. Start Infrastructure
+
+```bash
+# Start PostgreSQL
+task up-core
+
+# Start MinIO (for video storage)
+task up-video
+
+# Or start everything at once
+task up-all
+```
+
+## 4. Run Database Migrations
+
 ```bash
 task migrate-up-all
 ```
 
-### 3. Запустить сервисы (в 4 терминалах)
+## 5. Seed Test Data
 
-**Терминал 1 - Auth Service:**
 ```bash
-cd elearning
+# Seed users, courses, and videos
+cd services/auth-service && PGPASSWORD=change_me_in_production psql -h localhost -U admin -d elearning -f seeds/001_users.sql
+cd ../user-service && PGPASSWORD=change_me_in_production psql -h localhost -U admin -d elearning -f seeds/001_profiles.sql
+cd ../course-service && for f in seeds/*.sql; do PGPASSWORD=change_me_in_production psql -h localhost -U admin -d elearning -f "$f"; done
+cd ../video-service && PGPASSWORD=change_me_in_production psql -h localhost -U admin -d elearning -f seeds/001_videos.sql
+cd ../..
+```
+
+## 6. Start Services
+
+```bash
+# Start all services in background
+task run-all-bg
+
+# Or start individually
 task run-auth
-```
-
-**Терминал 2 - User Service:**
-```bash
-cd elearning
 task run-user
-```
-
-**Терминал 3 - Course Service:**
-```bash
-cd elearning
 task run-course
-```
-
-**Терминал 4 - API Gateway:**
-```bash
-cd elearning
+task run-video
 task run-gateway
 ```
 
-## Проверка работы
+## 7. Verify Services
 
 ```bash
-# API Gateway
-curl http://localhost:8081/health
+# Check health
+curl http://localhost:8080/health
 
-# gRPC сервисы
-grpcurl -plaintext localhost:50051 list  # Auth
-grpcurl -plaintext localhost:50052 list  # User
-grpcurl -plaintext localhost:50053 list  # Course
+# Check all ports
+ss -tlnp | grep -E ':(50051|50052|50053|50054|8080)'
 ```
 
-## Порты
-
-- Auth Service: :50051
-- User Service: :50052
-- Course Service: :50053
-- API Gateway: :8081
-- PostgreSQL: :5432
-
-## Остановка
+## 8. Test API
 
 ```bash
-task down-core  # Остановить PostgreSQL
-# Ctrl+C в каждом терминале
+# Register user
+curl -X POST http://localhost:8080/api/v1/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{"email":"test@example.com","password":"password123","full_name":"Test User"}'
+
+# Get video URL
+curl http://localhost:8080/api/v1/videos/10000001-0000-0000-0000-000000000001/url
 ```
 
-## Доступные команды
+## Services & Ports
+
+- **Auth Service**: `localhost:50051` (gRPC)
+- **User Service**: `localhost:50052` (gRPC)
+- **Course Service**: `localhost:50053` (gRPC)
+- **Video Service**: `localhost:50054` (gRPC)
+- **API Gateway**: `localhost:8080` (HTTP)
+- **PostgreSQL**: `localhost:5432`
+- **MinIO**: `localhost:9000` (API), `localhost:9001` (Console)
+
+## Stop Services
 
 ```bash
-# Запуск инфраструктуры
-task up-core              # Запустить PostgreSQL
-task down-core            # Остановить PostgreSQL
+# Stop all services
+task stop-all
 
-# Миграции
-task migrate-up-all       # Применить все миграции
-task migrate-up-auth      # Применить миграции Auth Service
-task migrate-up-user      # Применить миграции User Service
-task migrate-up-course    # Применить миграции Course Service
-
-# Запуск сервисов
-task run-auth             # Запустить Auth Service
-task run-user             # Запустить User Service
-task run-course           # Запустить Course Service
-task run-gateway          # Запустить API Gateway
+# Stop infrastructure
+task down-all
 ```
 
-Готово! 🎉
+## Useful Commands
+
+```bash
+# View logs
+tail -f logs/*.log
+
+# Git operations
+task git:status
+task git:save MSG='your commit message'
+
+# Format code
+task format
+
+# Run linter
+task lint
+```
+
+## Test Credentials
+
+**Admin:**
+- Email: `admin@test.com`
+- Password: `password123`
+
+**Instructor:**
+- Email: `instructor1@test.com`
+- Password: `password123`
+
+**Student:**
+- Email: `student1@test.com`
+- Password: `password123`
+
+## Troubleshooting
+
+**Services won't start:**
+```bash
+# Check if ports are free
+ss -tlnp | grep -E ':(50051|50052|50053|50054|8080)'
+
+# Kill old processes
+pkill -f 'go run cmd/main.go'
+```
+
+**Database connection failed:**
+```bash
+# Restart PostgreSQL
+task down-core
+task up-core
+```
+
+**MinIO not accessible:**
+```bash
+# Restart MinIO
+task down-video
+task up-video
+```
