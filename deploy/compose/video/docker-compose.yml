@@ -1,0 +1,53 @@
+services:
+  minio:
+    image: minio/minio:latest
+    container_name: elearning-minio
+    
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin}
+    
+    command: server /data --console-address ":9001"
+    
+    ports:
+      - "${MINIO_API_PORT:-9000}:9000"      # S3 API
+      - "${MINIO_CONSOLE_PORT:-9001}:9001"  # Web Console
+    
+    volumes:
+      - minio_data:/data
+    
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    
+    restart: unless-stopped
+    
+    networks:
+      - elearning-net
+
+  # MinIO Client для создания bucket при старте
+  minio-init:
+    image: minio/mc:latest
+    container_name: elearning-minio-init
+    depends_on:
+      - minio
+    entrypoint: >
+      /bin/sh -c "
+      sleep 5;
+      /usr/bin/mc alias set myminio http://minio:9000 minioadmin minioadmin;
+      /usr/bin/mc mb myminio/videos --ignore-existing;
+      /usr/bin/mc anonymous set download myminio/videos;
+      exit 0;
+      "
+    networks:
+      - elearning-net
+
+volumes:
+  minio_data:
+
+networks:
+  elearning-net:
+    name: elearning-net
+    external: true

@@ -1,0 +1,87 @@
+syntax = "proto3";
+
+package auth.v1;
+
+option go_package = "github.com/elearning/shared/pkg/proto/auth/v1;authv1";
+
+import "google/protobuf/timestamp.proto";
+
+// AuthService предоставляет методы для аутентификации и авторизации
+service AuthService {
+  // Register регистрирует нового пользователя
+  rpc Register(RegisterRequest) returns (RegisterResponse);
+  
+  // Login выполняет вход пользователя
+  rpc Login(LoginRequest) returns (LoginResponse);
+  
+  // ValidateToken проверяет валидность токена
+  rpc ValidateToken(ValidateTokenRequest) returns (ValidateTokenResponse);
+  
+  // RefreshToken обновляет access token
+  rpc RefreshToken(RefreshTokenRequest) returns (RefreshTokenResponse);
+  
+  // GetUserInfo получает информацию о пользователе по ID
+  rpc GetUserInfo(GetUserInfoRequest) returns (GetUserInfoResponse);
+}
+
+// RegisterRequest содержит данные для регистрации
+message RegisterRequest {
+  string email = 1;
+  string password = 2;
+  string username = 3;
+}
+
+// RegisterResponse содержит результат регистрации
+message RegisterResponse {
+  string user_id = 1;
+}
+
+// LoginRequest содержит данные для входа
+message LoginRequest {
+  string email = 1;
+  string password = 2;
+}
+
+// LoginResponse содержит токены доступа
+message LoginResponse {
+  string access_token = 1;
+  string refresh_token = 2;
+  google.protobuf.Timestamp expires_at = 3;
+}
+
+// ValidateTokenRequest содержит токен для проверки
+message ValidateTokenRequest {
+  string token = 1;
+}
+
+// ValidateTokenResponse содержит результат проверки токена
+message ValidateTokenResponse {
+  bool valid = 1;
+  string user_id = 2;
+  string role = 3;
+}
+
+// RefreshTokenRequest содержит refresh token
+message RefreshTokenRequest {
+  string refresh_token = 1;
+}
+
+// RefreshTokenResponse содержит новый access token
+message RefreshTokenResponse {
+  string access_token = 1;
+  google.protobuf.Timestamp expires_at = 2;
+}
+
+// GetUserInfoRequest содержит ID пользователя
+message GetUserInfoRequest {
+  string user_id = 1;
+}
+
+// GetUserInfoResponse содержит информацию о пользователе
+message GetUserInfoResponse {
+  string id = 1;
+  string email = 2;
+  string username = 3;
+  string role = 4;
+  google.protobuf.Timestamp created_at = 5;
+}

@@ -1,0 +1,75 @@
+syntax = "proto3";
+
+package user.v1;
+
+option go_package = "github.com/elearning/shared/pkg/proto/user/v1;userv1";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+
+// UserService предоставляет методы для управления профилями пользователей
+service UserService {
+  // GetProfile получает профиль пользователя
+  rpc GetProfile(GetProfileRequest) returns (GetProfileResponse);
+  
+  // UpdateProfile обновляет профиль пользователя
+  rpc UpdateProfile(UpdateProfileRequest) returns (UpdateProfileResponse);
+  
+  // GetUserLanguages получает языковые настройки пользователя
+  rpc GetUserLanguages(GetUserLanguagesRequest) returns (GetUserLanguagesResponse);
+}
+
+// Profile представляет профиль пользователя
+message Profile {
+  string id = 1;
+  string user_id = 2;
+  google.protobuf.StringValue first_name = 3;
+  google.protobuf.StringValue last_name = 4;
+  google.protobuf.StringValue native_lang = 5;
+  google.protobuf.StringValue target_lang = 6;
+  google.protobuf.StringValue bio = 7;
+  google.protobuf.StringValue avatar_url = 8;
+  google.protobuf.StringValue date_of_birth = 9;
+  google.protobuf.StringValue timezone = 10;
+  google.protobuf.Timestamp created_at = 11;
+  google.protobuf.Timestamp updated_at = 12;
+}
+
+// GetProfileRequest содержит ID пользователя
+message GetProfileRequest {
+  string user_id = 1;
+}
+
+// GetProfileResponse содержит профиль пользователя
+message GetProfileResponse {
+  Profile profile = 1;
+}
+
+// UpdateProfileRequest содержит данные для обновления профиля
+message UpdateProfileRequest {
+  string user_id = 1;
+  google.protobuf.StringValue first_name = 2;
+  google.protobuf.StringValue last_name = 3;
+  google.protobuf.StringValue native_lang = 4;
+  google.protobuf.StringValue target_lang = 5;
+  google.protobuf.StringValue bio = 6;
+  google.protobuf.StringValue avatar_url = 7;
+  google.protobuf.StringValue date_of_birth = 8;
+  google.protobuf.StringValue timezone = 9;
+}
+
+// UpdateProfileResponse содержит обновленный профиль
+message UpdateProfileResponse {
+  Profile profile = 1;
+}
+
+// GetUserLanguagesRequest содержит ID пользователя
+message GetUserLanguagesRequest {
+  string user_id = 1;
+}
+
+// GetUserLanguagesResponse содержит языковые настройки
+message GetUserLanguagesResponse {
+  string native_lang = 1;
+  string target_lang = 2;
+}

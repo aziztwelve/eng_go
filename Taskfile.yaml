@@ -1,0 +1,362 @@
+version: '3'
+
+vars:
+  GO_VERSION: '1.24'
+  GOLANGCI_LINT_VERSION: 'v2.1.5'
+  GCI_VERSION: 'v0.13.6'
+  GOFUMPT_VERSION: 'v0.8.0'
+  BUF_VERSION: '1.53.0'
+  PROTOC_GEN_GO_VERSION: 'v1.36.6'
+  PROTOC_GEN_GO_GRPC_VERSION: 'v1.5.1'
+  GRPCURL_VERSION: 'v1.9.3'
+  ENVSUBST_VERSION: 'v1.4.3'
+
+  BIN_DIR: '{{.ROOT_DIR}}/bin'
+  GOLANGCI_LINT: '{{.BIN_DIR}}/golangci-lint'
+  GCI: '{{.BIN_DIR}}/gci'
+  GOFUMPT: '{{.BIN_DIR}}/gofumpt'
+  BUF: '{{.BIN_DIR}}/buf'
+  PROTOC_GEN_GO: '{{.BIN_DIR}}/protoc-gen-go'
+  PROTOC_GEN_GO_GRPC: '{{.BIN_DIR}}/protoc-gen-go-grpc'
+  GRPCURL: '{{.BIN_DIR}}/grpcurl'
+  ENVSUBST: '{{.BIN_DIR}}/envsubst'
+  ENVDIR: '{{.ROOT_DIR}}/deploy/env'
+
+  MODULES: platform shared services/auth-service services/user-service services/course-service services/video-service services/gateway
+  SERVICES: auth,user,course,video,gateway
+
+tasks:
+  # === Environment Management ===
+  
+  env:install-envsubst:
+    desc: "Установить envsubst"
+    cmds:
+      - |
+        mkdir -p {{.BIN_DIR}}
+        [ -f {{.ENVSUBST}} ] || {
+          echo "📦 Устанавливаем envsubst {{.ENVSUBST_VERSION}}..."
+          GOBIN={{.BIN_DIR}} go install github.com/a8m/envsubst/cmd/envsubst@{{.ENVSUBST_VERSION}}
+        }
+    status:
+      - test -x {{.ENVSUBST}}
+  
+  env:generate:
+    desc: "Генерировать .env файлы для всех сервисов"
+    deps: [env:install-envsubst]
+    cmds:
+      - |
+        ENV_FILE="{{.ENVDIR}}/.env"
+        TEMPLATE_FILE="{{.ENVDIR}}/.env.template"
+        
+        if [ ! -f "$ENV_FILE" ]; then
+          echo "🔄 Создаем .env из шаблона..."
+          cp "$TEMPLATE_FILE" "$ENV_FILE"
+          echo "✅ Создан $ENV_FILE"
+        fi
+        
+        chmod +x "{{.ENVDIR}}/generate-env.sh"
+        export SERVICES="{{.SERVICES}}"
+        ENV_SUBST={{.ENVSUBST}} "{{.ENVDIR}}/generate-env.sh"
+
+  # === Docker Compose ===
+  
+  up-core:
+    desc: "Поднять core инфраструктуру (PostgreSQL)"
+    dir: deploy/compose/core
+    cmds:
+      - echo "🚀 Поднимаем core инфраструктуру..."
+      - docker compose --env-file ../../env/.env up -d
+  
+  down-core:
+    desc: "Остановить core инфраструктуру"
+    dir: deploy/compose/core
+    cmds:
+      - echo "🛑 Останавливаем core инфраструктуру..."
+      - docker compose down --volumes
+  
+  logs-core:
+    desc: "Показать логи core инфраструктуры"
+    dir: deploy/compose/core
+    cmds:
+      - docker compose logs -f
+
+  up-video:
+    desc: "Поднять Video инфраструктуру (MinIO)"
+    dir: deploy/compose/video
+    cmds:
+      - echo "🚀 Поднимаем Video инфраструктуру (MinIO)..."
+      - docker compose --env-file ../../env/.env up -d
+  
+  down-video:
+    desc: "Остановить Video инфраструктуру"
+    dir: deploy/compose/video
+    cmds:
+      - echo "🛑 Останавливаем Video инфраструктуру..."
+      - docker compose down --volumes
+  
+  logs-video:
+    desc: "Показать логи Video инфраструктуры"
+    dir: deploy/compose/video
+    cmds:
+      - docker compose logs -f
+
+  up-all:
+    desc: "Поднять всю инфраструктуру"
+    cmds:
+      - task: up-core
+      - task: up-video
+      - task: env:generate
+  
+  down-all:
+    desc: "Остановить всю инфраструктуру"
+    cmds:
+      - task: down-core
+      - task: down-video
+
+  # === Proto Generation ===
+  
+  install-buf:
+    desc: "Устанавливает Buf в каталог bin"
+    cmds:
+      - |
+        mkdir -p {{.BIN_DIR}}
+        [ -f {{.BUF}} ] || {
+          echo '📦 Устанавливаем buf {{.BUF_VERSION}}...'
+          GOBIN={{.BIN_DIR}} go install github.com/bufbuild/buf/cmd/buf@v{{.BUF_VERSION}}
+        }
+    status:
+      - test -x {{.BUF}}
+
+  proto:install-plugins:
+    desc: "Устанавливает protoc плагины в каталог bin"
+    cmds:
+      - |
+        mkdir -p {{.BIN_DIR}}
+        [ -f {{.PROTOC_GEN_GO}} ] || {
+          echo '📦 Installing protoc-gen-go...'
+          GOBIN={{.BIN_DIR}} go install google.golang.org/protobuf/cmd/protoc-gen-go@{{.PROTOC_GEN_GO_VERSION}}
+        }
+        [ -f {{.PROTOC_GEN_GO_GRPC}} ] || {
+          echo '📦 Installing protoc-gen-go-grpc...'
+          GOBIN={{.BIN_DIR}} go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@{{.PROTOC_GEN_GO_GRPC_VERSION}}
+        }
+
+  proto:lint:
+    deps: [install-buf, proto:install-plugins]
+    desc: Проверка .proto-файлов на соответствие стилю
+    dir: shared
+    cmds:
+      - '{{.BUF}} lint'
+
+  proto:gen:
+    deps: [install-buf, proto:install-plugins]
+    desc: Генерация Go-кода из .proto
+    dir: shared
+    cmds:
+      - '{{.BUF}} generate'
+
+  # === Development ===
+  
+  run-auth:
+    desc: "Запустить Auth Service локально"
+    dir: services/auth-service
+    cmds:
+      - go run cmd/main.go
+
+  run-user:
+    desc: "Запустить User Service локально"
+    dir: services/user-service
+    cmds:
+      - go run cmd/main.go
+
+  run-course:
+    desc: "Запустить Course Service локально"
+    dir: services/course-service
+    cmds:
+      - go run cmd/main.go
+
+  run-video:
+    desc: "Запустить Video Service локально"
+    dir: services/video-service
+    cmds:
+      - go run cmd/main.go
+
+  run-gateway:
+    desc: "Запустить API Gateway локально"
+    dir: services/gateway
+    cmds:
+      - go run cmd/main.go
+
+  # === Linting & Formatting ===
+  
+  install-golangci-lint:
+    desc: "Устанавливает golangci-lint в каталог bin"
+    cmds:
+      - |
+        mkdir -p {{.BIN_DIR}}
+        [ -f {{.GOLANGCI_LINT}} ] || {
+          echo "📦 Устанавливаем golangci-lint {{.GOLANGCI_LINT_VERSION}}..."
+          GOBIN={{.BIN_DIR}} go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@{{.GOLANGCI_LINT_VERSION}}
+        }
+    status:
+      - test -x {{.GOLANGCI_LINT}}
+
+  install-formatters:
+    desc: "Устанавливает форматтеры gci и gofumpt в ./bin"
+    cmds:
+      - |
+        mkdir -p {{.BIN_DIR}}
+        [ -f {{.GOFUMPT}} ] || {
+          echo '📦 Устанавливаем gofumpt {{.GOFUMPT_VERSION}}...'
+          GOBIN={{.BIN_DIR}} go install mvdan.cc/gofumpt@{{.GOFUMPT_VERSION}}
+        }
+        [ -f {{.GCI}} ] || {
+          echo '📦 Устанавливаем gci {{.GCI_VERSION}}...'
+          GOBIN={{.BIN_DIR}} go install github.com/daixiang0/gci@{{.GCI_VERSION}}
+        }
+    status:
+      - test -x {{.GOFUMPT}}
+      - test -x {{.GCI}}
+
+  format:
+    desc: "Форматирует весь проект gofumpt + gci"
+    deps: [install-formatters]
+    cmds:
+      - |
+        echo "🧼 Форматируем через gofumpt ..."
+        find . -type f -name '*.go' ! -path '*/vendor/*' ! -path '*/bin/*' -exec {{.GOFUMPT}} -extra -w {} +
+      - |
+        echo "🎯 Сортируем импорты через gci ..."
+        find . -type f -name '*.go' ! -path '*/vendor/*' ! -path '*/bin/*' -exec {{.GCI}} write -s standard -s default {} +
+
+  lint:
+    desc: "Запускает golangci-lint для всех модулей"
+    deps: [install-golangci-lint]
+    cmds:
+      - |
+        set -e
+        ERR=0
+        echo "🔍 Линтим все модули ..."
+        for mod in {{.MODULES}}; do
+          if [ -d "$mod" ]; then
+            echo "🔍 Линтим $mod module"
+            {{.GOLANGCI_LINT}} run $mod/... --config=.golangci.yml || ERR=1
+          fi
+        done
+        exit $ERR
+
+  deps:update:
+    desc: "Обновление зависимостей в go.mod во всех модулях"
+    cmds:
+      - |
+        echo "🔄 Обновление зависимостей в go.work"
+        go work sync
+        echo "🔄 Обновление зависимостей в go.mod во всех модулях"
+        for mod in {{.MODULES}}; do
+          if [ -d "$mod" ]; then
+            echo "🔄 Обновление зависимостей в $mod"
+            (cd "$mod" && go mod tidy) || exit 1
+          fi
+        done
+
+  # === Testing ===
+  
+  test:
+    desc: "Запустить тесты для всех сервисов"
+    cmds:
+      - go test ./services/... -v -race -coverprofile=coverage.out
+
+  # === gRPC Testing ===
+  
+  grpcurl:install:
+    desc: "Устанавливает grpcurl в каталог bin"
+    cmds:
+      - |
+        mkdir -p {{.BIN_DIR}}
+        [ -f {{.GRPCURL}} ] || {
+          echo '📦 Устанавливаем grpcurl {{.GRPCURL_VERSION}}...'
+          GOBIN={{.BIN_DIR}} go install github.com/fullstorydev/grpcurl/cmd/grpcurl@{{.GRPCURL_VERSION}}
+        }
+    status:
+      - test -x {{.GRPCURL}}
+
+  # === Database Migrations ===
+  
+  migrate-up-auth:
+    desc: "Применить миграции для Auth Service"
+    cmds:
+      - |
+        echo "📦 Применение миграций для Auth Service..."
+        cd services/auth-service/migrations
+        for file in *.sql; do
+          if [ -f "$file" ]; then
+            echo "  Применяем $file"
+            PGPASSWORD=change_me_in_production psql -h localhost -U admin -d elearning -f "$file"
+          fi
+        done
+        echo "✅ Миграции Auth Service применены"
+
+  migrate-up-user:
+    desc: "Применить миграции для User Service"
+    cmds:
+      - |
+        echo "📦 Применение миграций для User Service..."
+        cd services/user-service/migrations
+        for file in *.sql; do
+          if [ -f "$file" ]; then
+            echo "  Применяем $file"
+            PGPASSWORD=change_me_in_production psql -h localhost -U admin -d elearning -f "$file"
+          fi
+        done
+        echo "✅ Миграции User Service применены"
+
+  migrate-up-course:
+    desc: "Применить миграции для Course Service"
+    cmds:
+      - |
+        echo "📦 Применение миграций для Course Service..."
+        cd services/course-service/migrations
+        for file in *.up.sql; do
+          if [ -f "$file" ]; then
+            echo "  Применяем $file"
+            PGPASSWORD=change_me_in_production psql -h localhost -U admin -d elearning -f "$file"
+          fi
+        done
+        echo "✅ Миграции Course Service применены"
+
+  migrate-up-all:
+    desc: "Применить все миграции"
+    cmds:
+      - task: migrate-up-auth
+      - task: migrate-up-user
+      - task: migrate-up-course
+
+  # === Database Seeding ===
+  
+  seed:
+    desc: "Заполнить БД тестовыми данными для всех сервисов"
+    cmds:
+      - |
+        echo "🌱 Заполнение БД тестовыми данными..."
+        ./bin/seed.sh
+  
+  seed-auth:
+    desc: "Заполнить БД тестовыми данными для Auth Service"
+    cmds:
+      - |
+        echo "🌱 Заполнение данных для Auth Service..."
+        ./bin/seed.sh auth
+  
+  seed-user:
+    desc: "Заполнить БД тестовыми данными для User Service"
+    cmds:
+      - |
+        echo "🌱 Заполнение данных для User Service..."
+        ./bin/seed.sh user
+  
+  seed-course:
+    desc: "Заполнить БД тестовыми данными для Course Service"
+    cmds:
+      - |
+        echo "🌱 Заполнение данных для Course Service..."
+        ./bin/seed.sh course

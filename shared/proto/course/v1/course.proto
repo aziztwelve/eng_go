@@ -1,0 +1,475 @@
+syntax = "proto3";
+
+package course.v1;
+
+option go_package = "github.com/elearning/shared/pkg/proto/course/v1;coursev1";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+
+// CourseService предоставляет методы для управления курсами
+service CourseService {
+  // Student endpoints
+  // ListCourses получает список курсов с фильтрацией
+  rpc ListCourses(ListCoursesRequest) returns (ListCoursesResponse);
+  
+  // GetCourse получает детальную информацию о курсе
+  rpc GetCourse(GetCourseRequest) returns (GetCourseResponse);
+  
+  // GetLesson получает информацию об уроке
+  rpc GetLesson(GetLessonRequest) returns (GetLessonResponse);
+  
+  // GetStepContent получает содержимое шага
+  rpc GetStepContent(GetStepContentRequest) returns (GetStepContentResponse);
+  
+  // EnrollUser записывает пользователя на курс
+  rpc EnrollUser(EnrollUserRequest) returns (EnrollUserResponse);
+  
+  // CheckAccess проверяет доступ пользователя к курсу
+  rpc CheckAccess(CheckAccessRequest) returns (CheckAccessResponse);
+  
+  // Admin endpoints
+  // CreateCourse создает новый курс
+  rpc CreateCourse(CreateCourseRequest) returns (CreateCourseResponse);
+  
+  // UpdateCourse обновляет курс
+  rpc UpdateCourse(UpdateCourseRequest) returns (UpdateCourseResponse);
+  
+  // DeleteCourse удаляет курс
+  rpc DeleteCourse(DeleteCourseRequest) returns (DeleteCourseResponse);
+  
+  // PublishCourse публикует/снимает с публикации курс
+  rpc PublishCourse(PublishCourseRequest) returns (PublishCourseResponse);
+  
+  // CreateModule создает новый модуль
+  rpc CreateModule(CreateModuleRequest) returns (CreateModuleResponse);
+  
+  // UpdateModule обновляет модуль
+  rpc UpdateModule(UpdateModuleRequest) returns (UpdateModuleResponse);
+  
+  // DeleteModule удаляет модуль
+  rpc DeleteModule(DeleteModuleRequest) returns (DeleteModuleResponse);
+  
+  // CreateLesson создает новый урок
+  rpc CreateLesson(CreateLessonRequest) returns (CreateLessonResponse);
+  
+  // UpdateLesson обновляет урок
+  rpc UpdateLesson(UpdateLessonRequest) returns (UpdateLessonResponse);
+  
+  // DeleteLesson удаляет урок
+  rpc DeleteLesson(DeleteLessonRequest) returns (DeleteLessonResponse);
+  
+  // CreateStep создает новый шаг
+  rpc CreateStep(CreateStepRequest) returns (CreateStepResponse);
+  
+  // UpdateStep обновляет шаг
+  rpc UpdateStep(UpdateStepRequest) returns (UpdateStepResponse);
+  
+  // DeleteStep удаляет шаг
+  rpc DeleteStep(DeleteStepRequest) returns (DeleteStepResponse);
+  
+  // Progress tracking
+  // MarkStepComplete отмечает шаг как завершенный
+  rpc MarkStepComplete(MarkStepCompleteRequest) returns (MarkStepCompleteResponse);
+  
+  // GetStepProgress получает прогресс по шагу
+  rpc GetStepProgress(GetStepProgressRequest) returns (GetStepProgressResponse);
+  
+  // GetLessonProgress получает прогресс по уроку
+  rpc GetLessonProgress(GetLessonProgressRequest) returns (GetLessonProgressResponse);
+  
+  // GetCourseProgress получает прогресс по курсу
+  rpc GetCourseProgress(GetCourseProgressRequest) returns (GetCourseProgressResponse);
+}
+
+// Course представляет курс
+message Course {
+  string id = 1;
+  string title = 2;
+  string description = 3;
+  double price = 4;
+  string instructor_id = 5;
+  string level = 6;
+  string language = 7;
+  string thumbnail_url = 8;
+  bool is_published = 9;
+  google.protobuf.Timestamp created_at = 10;
+  google.protobuf.Timestamp updated_at = 11;
+}
+
+// Module представляет модуль курса
+message Module {
+  string id = 1;
+  string course_id = 2;
+  string title = 3;
+  string description = 4;
+  int32 order_index = 5;
+  google.protobuf.Timestamp created_at = 6;
+  google.protobuf.Timestamp updated_at = 7;
+}
+
+// Lesson представляет урок
+message Lesson {
+  string id = 1;
+  string module_id = 2;
+  string title = 3;
+  string description = 4;
+  int32 order_index = 5;
+  google.protobuf.Timestamp created_at = 6;
+  google.protobuf.Timestamp updated_at = 7;
+}
+
+// Step представляет атомарную единицу контента
+message Step {
+  string id = 1;
+  string lesson_id = 2;
+  string type = 3; // video, text, quiz, task, brain_game, ai_writing
+  string title = 4;
+  string content = 5; // JSON string
+  int32 order_index = 6;
+  google.protobuf.Timestamp created_at = 7;
+  google.protobuf.Timestamp updated_at = 8;
+}
+
+// Enrollment представляет запись на курс
+message Enrollment {
+  string id = 1;
+  string user_id = 2;
+  string course_id = 3;
+  string status = 4;
+  google.protobuf.Timestamp enrolled_at = 5;
+  google.protobuf.Timestamp access_until = 6;
+}
+
+// ModuleWithLessons содержит модуль с уроками
+message ModuleWithLessons {
+  Module module = 1;
+  repeated LessonWithSteps lessons = 2;
+}
+
+// LessonWithSteps содержит урок с шагами
+message LessonWithSteps {
+  Lesson lesson = 1;
+  repeated Step steps = 2;
+}
+
+// ListCoursesRequest содержит параметры фильтрации
+message ListCoursesRequest {
+  google.protobuf.StringValue language = 1;
+  google.protobuf.StringValue level = 2;
+  google.protobuf.DoubleValue min_price = 3;
+  google.protobuf.DoubleValue max_price = 4;
+  int32 limit = 5;
+  int32 offset = 6;
+}
+
+// ListCoursesResponse содержит список курсов
+message ListCoursesResponse {
+  repeated Course courses = 1;
+  int32 total = 2;
+}
+
+// GetCourseRequest содержит ID курса
+message GetCourseRequest {
+  string course_id = 1;
+}
+
+// GetCourseResponse содержит курс с модулями
+message GetCourseResponse {
+  Course course = 1;
+  repeated ModuleWithLessons modules = 2;
+}
+
+// GetLessonRequest содержит ID урока
+message GetLessonRequest {
+  string lesson_id = 1;
+}
+
+// GetLessonResponse содержит урок
+message GetLessonResponse {
+  Lesson lesson = 1;
+  repeated Step steps = 2;
+}
+
+// GetStepContentRequest содержит данные для получения шага
+message GetStepContentRequest {
+  string step_id = 1;
+  string user_id = 2;
+}
+
+// GetStepContentResponse содержит шаг с дополнительными данными
+message GetStepContentResponse {
+  Step step = 1;
+  string video_url = 2; // Заполняется если type=video
+}
+
+// EnrollUserRequest содержит данные для записи на курс
+message EnrollUserRequest {
+  string user_id = 1;
+  string course_id = 2;
+}
+
+// EnrollUserResponse содержит информацию о записи
+message EnrollUserResponse {
+  Enrollment enrollment = 1;
+}
+
+// CheckAccessRequest содержит данные для проверки доступа
+message CheckAccessRequest {
+  string user_id = 1;
+  string course_id = 2;
+}
+
+// CheckAccessResponse содержит результат проверки
+message CheckAccessResponse {
+  bool has_access = 1;
+}
+
+// Admin endpoints messages
+
+// CreateCourseRequest содержит данные для создания курса
+message CreateCourseRequest {
+  string title = 1;
+  string description = 2;
+  double price = 3;
+  string instructor_id = 4;
+  string level = 5;
+  string language = 6;
+  string thumbnail_url = 7;
+}
+
+// CreateCourseResponse содержит созданный курс
+message CreateCourseResponse {
+  Course course = 1;
+}
+
+// UpdateCourseRequest содержит данные для обновления курса
+message UpdateCourseRequest {
+  string course_id = 1;
+  google.protobuf.StringValue title = 2;
+  google.protobuf.StringValue description = 3;
+  google.protobuf.DoubleValue price = 4;
+  google.protobuf.StringValue level = 5;
+  google.protobuf.StringValue language = 6;
+  google.protobuf.StringValue thumbnail_url = 7;
+}
+
+// UpdateCourseResponse содержит обновленный курс
+message UpdateCourseResponse {
+  Course course = 1;
+}
+
+// DeleteCourseRequest содержит ID курса для удаления
+message DeleteCourseRequest {
+  string course_id = 1;
+}
+
+// DeleteCourseResponse содержит результат удаления
+message DeleteCourseResponse {
+  bool success = 1;
+}
+
+// PublishCourseRequest содержит данные для публикации курса
+message PublishCourseRequest {
+  string course_id = 1;
+  bool is_published = 2;
+}
+
+// PublishCourseResponse содержит обновленный курс
+message PublishCourseResponse {
+  Course course = 1;
+}
+
+// CreateModuleRequest содержит данные для создания модуля
+message CreateModuleRequest {
+  string course_id = 1;
+  string title = 2;
+  string description = 3;
+  int32 order_index = 4;
+}
+
+// CreateModuleResponse содержит созданный модуль
+message CreateModuleResponse {
+  Module module = 1;
+}
+
+// UpdateModuleRequest содержит данные для обновления модуля
+message UpdateModuleRequest {
+  string module_id = 1;
+  google.protobuf.StringValue title = 2;
+  google.protobuf.StringValue description = 3;
+  google.protobuf.Int32Value order_index = 4;
+}
+
+// UpdateModuleResponse содержит обновленный модуль
+message UpdateModuleResponse {
+  Module module = 1;
+}
+
+// DeleteModuleRequest содержит ID модуля для удаления
+message DeleteModuleRequest {
+  string module_id = 1;
+}
+
+// DeleteModuleResponse содержит результат удаления
+message DeleteModuleResponse {
+  bool success = 1;
+}
+
+// CreateLessonRequest содержит данные для создания урока
+message CreateLessonRequest {
+  string module_id = 1;
+  string title = 2;
+  string description = 3;
+  int32 order_index = 4;
+}
+
+// CreateLessonResponse содержит созданный урок
+message CreateLessonResponse {
+  Lesson lesson = 1;
+}
+
+// UpdateLessonRequest содержит данные для обновления урока
+message UpdateLessonRequest {
+  string lesson_id = 1;
+  google.protobuf.StringValue title = 2;
+  google.protobuf.StringValue description = 3;
+  google.protobuf.Int32Value order_index = 4;
+}
+
+// UpdateLessonResponse содержит обновленный урок
+message UpdateLessonResponse {
+  Lesson lesson = 1;
+}
+
+// DeleteLessonRequest содержит ID урока для удаления
+message DeleteLessonRequest {
+  string lesson_id = 1;
+}
+
+// DeleteLessonResponse содержит результат удаления
+message DeleteLessonResponse {
+  bool success = 1;
+}
+
+// CreateStepRequest содержит данные для создания шага
+message CreateStepRequest {
+  string lesson_id = 1;
+  string type = 2;
+  string title = 3;
+  string content = 4; // JSON string
+  int32 order_index = 5;
+}
+
+// CreateStepResponse содержит созданный шаг
+message CreateStepResponse {
+  Step step = 1;
+}
+
+// UpdateStepRequest содержит данные для обновления шага
+message UpdateStepRequest {
+  string step_id = 1;
+  google.protobuf.StringValue type = 2;
+  google.protobuf.StringValue title = 3;
+  google.protobuf.StringValue content = 4;
+  google.protobuf.Int32Value order_index = 5;
+}
+
+// UpdateStepResponse содержит обновленный шаг
+message UpdateStepResponse {
+  Step step = 1;
+}
+
+// DeleteStepRequest содержит ID шага для удаления
+message DeleteStepRequest {
+  string step_id = 1;
+}
+
+// DeleteStepResponse содержит результат удаления
+message DeleteStepResponse {
+  bool success = 1;
+}
+
+// Progress tracking messages
+
+// StepProgress представляет прогресс по шагу
+message StepProgress {
+  string id = 1;
+  string user_id = 2;
+  string step_id = 3;
+  string lesson_id = 4;
+  bool completed = 5;
+  google.protobuf.Timestamp completed_at = 6;
+  int32 time_spent_seconds = 7;
+  int32 attempts = 8;
+  double score = 9;
+  google.protobuf.Timestamp created_at = 10;
+  google.protobuf.Timestamp updated_at = 11;
+}
+
+// LessonProgress представляет прогресс по уроку
+message LessonProgress {
+  string id = 1;
+  string user_id = 2;
+  string lesson_id = 3;
+  string course_id = 4;
+  int32 total_steps = 5;
+  int32 completed_steps = 6;
+  double progress_percentage = 7;
+  google.protobuf.Timestamp started_at = 8;
+  google.protobuf.Timestamp last_activity_at = 9;
+  google.protobuf.Timestamp completed_at = 10;
+}
+
+// MarkStepCompleteRequest содержит данные для отметки шага как завершенного
+message MarkStepCompleteRequest {
+  string user_id = 1;
+  string step_id = 2;
+  int32 time_spent_seconds = 3;
+  google.protobuf.Int32Value attempts = 4;
+  google.protobuf.DoubleValue score = 5;
+}
+
+// MarkStepCompleteResponse содержит результат отметки шага
+message MarkStepCompleteResponse {
+  StepProgress step_progress = 1;
+  LessonProgress lesson_progress = 2;
+}
+
+// GetStepProgressRequest содержит данные для получения прогресса по шагу
+message GetStepProgressRequest {
+  string user_id = 1;
+  string step_id = 2;
+}
+
+// GetStepProgressResponse содержит прогресс по шагу
+message GetStepProgressResponse {
+  StepProgress progress = 1;
+  bool exists = 2;
+}
+
+// GetLessonProgressRequest содержит данные для получения прогресса по уроку
+message GetLessonProgressRequest {
+  string user_id = 1;
+  string lesson_id = 2;
+}
+
+// GetLessonProgressResponse содержит прогресс по уроку
+message GetLessonProgressResponse {
+  LessonProgress progress = 1;
+  repeated StepProgress step_progresses = 2;
+}
+
+// GetCourseProgressRequest содержит данные для получения прогресса по курсу
+message GetCourseProgressRequest {
+  string user_id = 1;
+  string course_id = 2;
+}
+
+// GetCourseProgressResponse содержит прогресс по курсу
+message GetCourseProgressResponse {
+  repeated LessonProgress lesson_progresses = 1;
+  int32 total_lessons = 2;
+  int32 completed_lessons = 3;
+  double overall_progress_percentage = 4;
+}

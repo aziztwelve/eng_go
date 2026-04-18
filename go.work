@@ -1,0 +1,11 @@
+go 1.25.0
+
+use (
+	./platform
+	./services/auth-service
+	./services/course-service
+	./services/gateway
+	./services/user-service
+	./services/video-service
+	./shared
+)
