@@ -84,7 +84,7 @@ func (a *App) initRouter(ctx context.Context) error {
 	adminHandler := handler.NewAdminHandler()
 	adminUserHandler := handler.NewAdminUserHandler()
 	adminCourseHandler := handler.NewAdminCourseHandler()
-	adminVideoHandler := handler.NewAdminVideoHandler()
+	adminVideoHandler := handler.NewAdminVideoHandler(a.diContainer.VideoClient(ctx))
 	authMiddleware := middleware.NewAuthMiddleware(a.diContainer.AuthClient(ctx))
 	adminMiddleware := middleware.NewAdminOnlyMiddleware()
 

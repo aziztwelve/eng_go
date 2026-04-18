@@ -1,18 +1,27 @@
 package handler
 
 import (
+	"io"
 	"net/http"
+	"time"
 
 	"github.com/gin-gonic/gin"
+
+	"github.com/elearning/gateway/internal/client"
 	"github.com/elearning/gateway/internal/dto"
+	videov1 "github.com/elearning/shared/pkg/proto/video/v1"
 )
 
 // AdminVideoHandler обработчик для управления видео
-type AdminVideoHandler struct{}
+type AdminVideoHandler struct{
+	videoClient client.VideoClient
+}
 
 // NewAdminVideoHandler создает новый экземпляр Admin Video handler
-func NewAdminVideoHandler() *AdminVideoHandler {
-	return &AdminVideoHandler{}
+func NewAdminVideoHandler(videoClient client.VideoClient) *AdminVideoHandler {
+	return &AdminVideoHandler{
+		videoClient: videoClient,
+	}
 }
 
 // ListVideos возвращает список всех видео (mock)
@@ -144,22 +153,86 @@ func (h *AdminVideoHandler) UploadVideo(c *gin.Context) {
 		return
 	}
 
-	// TODO: Upload to video-service via gRPC
-	// For now, just return mock response with file info
+	// Read file content
+	fileData, err := io.ReadAll(file)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"error": "Failed to read file",
+		})
+		return
+	}
 
-	// Mock response
-	video := dto.VideoResponse{
-		ID:              "new-video-id",
+	// Create gRPC stream
+	stream, err := h.videoClient.UploadVideo(c.Request.Context())
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"error": "Failed to create upload stream",
+		})
+		return
+	}
+
+	// Send metadata first
+	metadata := &videov1.VideoMetadata{
 		Title:           title,
 		Description:     description,
-		StorageKey:      "videos/" + header.Filename,
+		ContentType:     header.Header.Get("Content-Type"),
+		SizeBytes:       header.Size,
+		DurationSeconds: 0,
+	}
+
+	if err := stream.Send(&videov1.UploadVideoRequest{
+		Data: &videov1.UploadVideoRequest_Metadata{
+			Metadata: metadata,
+		},
+	}); err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"error": "Failed to send metadata",
+		})
+		return
+	}
+
+	// Send file data in chunks
+	chunkSize := 64 * 1024 // 64KB chunks
+	for i := 0; i < len(fileData); i += chunkSize {
+		end := i + chunkSize
+		if end > len(fileData) {
+			end = len(fileData)
+		}
+
+		if err := stream.Send(&videov1.UploadVideoRequest{
+			Data: &videov1.UploadVideoRequest_Chunk{
+				Chunk: fileData[i:end],
+			},
+		}); err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{
+				"error": "Failed to send chunk",
+			})
+			return
+		}
+	}
+
+	// Close stream and get response
+	resp, err := stream.CloseAndRecv()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"error": "Failed to complete upload",
+		})
+		return
+	}
+
+	// Return response
+	video := dto.VideoResponse{
+		ID:              resp.VideoId,
+		Title:           title,
+		Description:     description,
+		StorageKey:      "videos/" + resp.VideoId + ".mp4",
 		BucketName:      "videos",
 		ContentType:     header.Header.Get("Content-Type"),
 		SizeBytes:       header.Size,
 		DurationSeconds: 0,
-		Status:          "processing",
-		CreatedAt:       "2026-04-18T16:12:00Z",
-		UpdatedAt:       "2026-04-18T16:12:00Z",
+		Status:          "active",
+		CreatedAt:       time.Now().Format(time.RFC3339),
+		UpdatedAt:       time.Now().Format(time.RFC3339),
 	}
 
 	c.JSON(http.StatusCreated, video)
