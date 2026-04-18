@@ -8,19 +8,19 @@ type videoEnvConfig struct {
 	SignedURLExpiresSeconds int `env:"SIGNED_URL_EXPIRES_SECONDS" envDefault:"7200"`
 }
 
-type videoConfig struct {
+type VideoConfig struct {
 	raw videoEnvConfig
 }
 
-func NewVideoConfig() (*videoConfig, error) {
+func NewVideoConfig() (*VideoConfig, error) {
 	var raw videoEnvConfig
 	if err := env.Parse(&raw); err != nil {
 		return nil, err
 	}
 
-	return &videoConfig{raw: raw}, nil
+	return &VideoConfig{raw: raw}, nil
 }
 
-func (cfg *videoConfig) SignedURLExpiresSeconds() int {
+func (cfg *VideoConfig) SignedURLExpiresSeconds() int {
 	return cfg.raw.SignedURLExpiresSeconds
 }

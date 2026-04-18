@@ -13,39 +13,39 @@ type postgresEnvConfig struct {
 	Password string `env:"POSTGRES_PASSWORD,required"`
 }
 
-type postgresConfig struct {
+type PostgresConfig struct {
 	raw postgresEnvConfig
 }
 
-func NewPostgresConfig() (*postgresConfig, error) {
+func NewPostgresConfig() (*PostgresConfig, error) {
 	var raw postgresEnvConfig
 	if err := env.Parse(&raw); err != nil {
 		return nil, err
 	}
 
-	return &postgresConfig{raw: raw}, nil
+	return &PostgresConfig{raw: raw}, nil
 }
 
-func (cfg *postgresConfig) Host() string {
+func (cfg *PostgresConfig) Host() string {
 	return cfg.raw.Host
 }
 
-func (cfg *postgresConfig) Port() string {
+func (cfg *PostgresConfig) Port() string {
 	return cfg.raw.Port
 }
 
-func (cfg *postgresConfig) Database() string {
+func (cfg *PostgresConfig) Database() string {
 	return cfg.raw.Database
 }
 
-func (cfg *postgresConfig) Schema() string {
+func (cfg *PostgresConfig) Schema() string {
 	return cfg.raw.Schema
 }
 
-func (cfg *postgresConfig) User() string {
+func (cfg *PostgresConfig) User() string {
 	return cfg.raw.User
 }
 
-func (cfg *postgresConfig) Password() string {
+func (cfg *PostgresConfig) Password() string {
 	return cfg.raw.Password
 }

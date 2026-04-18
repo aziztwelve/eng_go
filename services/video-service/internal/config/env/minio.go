@@ -13,39 +13,39 @@ type minioEnvConfig struct {
 	Bucket    string `env:"MINIO_BUCKET,required"`
 }
 
-type minioConfig struct {
+type MinioConfig struct {
 	raw minioEnvConfig
 }
 
-func NewMinioConfig() (*minioConfig, error) {
+func NewMinioConfig() (*MinioConfig, error) {
 	var raw minioEnvConfig
 	if err := env.Parse(&raw); err != nil {
 		return nil, err
 	}
 
-	return &minioConfig{raw: raw}, nil
+	return &MinioConfig{raw: raw}, nil
 }
 
-func (cfg *minioConfig) Endpoint() string {
+func (cfg *MinioConfig) Endpoint() string {
 	return cfg.raw.Endpoint
 }
 
-func (cfg *minioConfig) AccessKey() string {
+func (cfg *MinioConfig) AccessKey() string {
 	return cfg.raw.AccessKey
 }
 
-func (cfg *minioConfig) SecretKey() string {
+func (cfg *MinioConfig) SecretKey() string {
 	return cfg.raw.SecretKey
 }
 
-func (cfg *minioConfig) UseSSL() bool {
+func (cfg *MinioConfig) UseSSL() bool {
 	return cfg.raw.UseSSL
 }
 
-func (cfg *minioConfig) Region() string {
+func (cfg *MinioConfig) Region() string {
 	return cfg.raw.Region
 }
 
-func (cfg *minioConfig) Bucket() string {
+func (cfg *MinioConfig) Bucket() string {
 	return cfg.raw.Bucket
 }

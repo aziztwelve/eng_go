@@ -11,19 +11,19 @@ type grpcEnvConfig struct {
 	Port string `env:"GRPC_PORT,required"`
 }
 
-type grpcConfig struct {
+type GRPCConfig struct {
 	raw grpcEnvConfig
 }
 
-func NewGRPCConfig() (*grpcConfig, error) {
+func NewGRPCConfig() (*GRPCConfig, error) {
 	var raw grpcEnvConfig
 	if err := env.Parse(&raw); err != nil {
 		return nil, err
 	}
 
-	return &grpcConfig{raw: raw}, nil
+	return &GRPCConfig{raw: raw}, nil
 }
 
-func (cfg *grpcConfig) Address() string {
+func (cfg *GRPCConfig) Address() string {
 	return net.JoinHostPort(cfg.raw.Host, cfg.raw.Port)
 }

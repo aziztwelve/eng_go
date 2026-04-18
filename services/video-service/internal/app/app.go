@@ -92,13 +92,13 @@ func (a *App) initGRPCServer(ctx context.Context) error {
 	reflection.Register(a.grpcServer)
 
 	videov1.RegisterVideoServiceServer(a.grpcServer, a.diContainer.VideoAPI(ctx))
-	health.RegisterHealthServer(a.grpcServer)
+	health.RegisterService(a.grpcServer)
 
 	return nil
 }
 
-func (a *App) runGRPCServer(_ context.Context) error {
-	logger.Infof("Starting gRPC server on %s", a.listener.Addr().String())
+func (a *App) runGRPCServer(ctx context.Context) error {
+	logger.Info(ctx, fmt.Sprintf("Starting gRPC server on %s", a.listener.Addr().String()))
 
 	return a.grpcServer.Serve(a.listener)
 }
@@ -109,7 +109,7 @@ func (a *App) Close() error {
 		a.grpcServer.GracefulStop()
 	}
 
-	if err := closer.Close(); err != nil {
+	if err := closer.CloseAll(context.Background()); err != nil {
 		return fmt.Errorf("failed to close resources: %w", err)
 	}
 

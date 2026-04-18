@@ -9,23 +9,23 @@ type loggerEnvConfig struct {
 	AsJson bool   `env:"LOGGER_AS_JSON" envDefault:"false"`
 }
 
-type loggerConfig struct {
+type LoggerConfig struct {
 	raw loggerEnvConfig
 }
 
-func NewLoggerConfig() (*loggerConfig, error) {
+func NewLoggerConfig() (*LoggerConfig, error) {
 	var raw loggerEnvConfig
 	if err := env.Parse(&raw); err != nil {
 		return nil, err
 	}
 
-	return &loggerConfig{raw: raw}, nil
+	return &LoggerConfig{raw: raw}, nil
 }
 
-func (cfg *loggerConfig) Level() string {
+func (cfg *LoggerConfig) Level() string {
 	return cfg.raw.Level
 }
 
-func (cfg *loggerConfig) AsJson() bool {
+func (cfg *LoggerConfig) AsJson() bool {
 	return cfg.raw.AsJson
 }
