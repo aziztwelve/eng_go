@@ -83,6 +83,7 @@ func (a *App) initRouter(ctx context.Context) error {
 	videoHandler := handler.NewVideoHandler(a.diContainer.VideoClient(ctx))
 	adminHandler := handler.NewAdminHandler()
 	adminUserHandler := handler.NewAdminUserHandler()
+	adminCourseHandler := handler.NewAdminCourseHandler()
 	authMiddleware := middleware.NewAuthMiddleware(a.diContainer.AuthClient(ctx))
 	adminMiddleware := middleware.NewAdminOnlyMiddleware()
 
@@ -137,6 +138,17 @@ func (a *App) initRouter(ctx context.Context) error {
 				users.GET("/:id", adminUserHandler.GetUser)
 				users.PUT("/:id", adminUserHandler.UpdateUser)
 				users.DELETE("/:id", adminUserHandler.DeleteUser)
+			}
+
+			// Course management
+			courses := admin.Group("/courses")
+			{
+				courses.GET("", adminCourseHandler.ListCourses)
+				courses.GET("/:id", adminCourseHandler.GetCourse)
+				courses.POST("", adminCourseHandler.CreateCourse)
+				courses.PUT("/:id", adminCourseHandler.UpdateCourse)
+				courses.DELETE("/:id", adminCourseHandler.DeleteCourse)
+				courses.PUT("/:id/publish", adminCourseHandler.PublishCourse)
 			}
 		}
 	}
