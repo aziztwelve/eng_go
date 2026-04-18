@@ -81,7 +81,9 @@ func (a *App) initRouter(ctx context.Context) error {
 	authHandler := handler.NewAuthHandler(a.diContainer.AuthClient(ctx), a.diContainer.UserClient(ctx))
 	courseHandler := handler.NewCourseHandler(a.diContainer.CourseClient(ctx))
 	videoHandler := handler.NewVideoHandler(a.diContainer.VideoClient(ctx))
+	adminHandler := handler.NewAdminHandler()
 	authMiddleware := middleware.NewAuthMiddleware(a.diContainer.AuthClient(ctx))
+	adminMiddleware := middleware.NewAdminOnlyMiddleware()
 
 	v1 := r.Group("/api/v1")
 	{
@@ -118,6 +120,15 @@ func (a *App) initRouter(ctx context.Context) error {
 				progress.GET("/lessons/:lessonId", courseHandler.GetLessonProgress)
 				progress.GET("/courses/:courseId", courseHandler.GetCourseProgress)
 			}
+		}
+
+		// Admin endpoints
+		admin := v1.Group("/admin")
+		admin.Use(authMiddleware.Handle())
+		admin.Use(adminMiddleware.Handle())
+		{
+			admin.GET("/me", adminHandler.GetCurrentUser)
+			// TODO: Add more admin endpoints (users, courses, videos management)
 		}
 	}
 
