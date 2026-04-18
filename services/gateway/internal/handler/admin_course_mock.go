@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"github.com/google/uuid"
 	"github.com/elearning/gateway/internal/dto"
 )
 
@@ -86,9 +87,12 @@ func (h *AdminCourseHandler) CreateCourse(c *gin.Context) {
 		return
 	}
 
+	// Generate unique ID
+	courseID := uuid.New().String()
+
 	// Mock response
 	course := dto.CourseResponse{
-		ID:          "new-course-id",
+		ID:          courseID,
 		Title:       req.Title,
 		Description: req.Description,
 		Level:       req.Level,
