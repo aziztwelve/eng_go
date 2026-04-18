@@ -82,6 +82,7 @@ func (a *App) initRouter(ctx context.Context) error {
 	courseHandler := handler.NewCourseHandler(a.diContainer.CourseClient(ctx))
 	videoHandler := handler.NewVideoHandler(a.diContainer.VideoClient(ctx))
 	adminHandler := handler.NewAdminHandler()
+	adminUserHandler := handler.NewAdminUserHandler()
 	authMiddleware := middleware.NewAuthMiddleware(a.diContainer.AuthClient(ctx))
 	adminMiddleware := middleware.NewAdminOnlyMiddleware()
 
@@ -128,7 +129,15 @@ func (a *App) initRouter(ctx context.Context) error {
 		admin.Use(adminMiddleware.Handle())
 		{
 			admin.GET("/me", adminHandler.GetCurrentUser)
-			// TODO: Add more admin endpoints (users, courses, videos management)
+
+			// User management
+			users := admin.Group("/users")
+			{
+				users.GET("", adminUserHandler.ListUsers)
+				users.GET("/:id", adminUserHandler.GetUser)
+				users.PUT("/:id", adminUserHandler.UpdateUser)
+				users.DELETE("/:id", adminUserHandler.DeleteUser)
+			}
 		}
 	}
 

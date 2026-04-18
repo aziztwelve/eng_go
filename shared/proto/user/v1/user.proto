@@ -17,6 +17,19 @@ service UserService {
   
   // GetUserLanguages получает языковые настройки пользователя
   rpc GetUserLanguages(GetUserLanguagesRequest) returns (GetUserLanguagesResponse);
+
+  // Admin methods
+  // ListUsers возвращает список всех пользователей (admin only)
+  rpc ListUsers(ListUsersRequest) returns (ListUsersResponse);
+  
+  // GetUser получает информацию о пользователе по ID (admin only)
+  rpc GetUser(GetUserRequest) returns (GetUserResponse);
+  
+  // UpdateUser обновляет информацию о пользователе (admin only)
+  rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse);
+  
+  // DeleteUser удаляет пользователя (admin only)
+  rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse);
 }
 
 // Profile представляет профиль пользователя
@@ -72,4 +85,54 @@ message GetUserLanguagesRequest {
 message GetUserLanguagesResponse {
   string native_lang = 1;
   string target_lang = 2;
+}
+
+// User представляет пользователя системы
+message User {
+  string id = 1;
+  string email = 2;
+  string full_name = 3;
+  string role = 4;
+  google.protobuf.Timestamp created_at = 5;
+  google.protobuf.Timestamp updated_at = 6;
+}
+
+// ListUsersRequest запрос на получение списка пользователей
+message ListUsersRequest {}
+
+// ListUsersResponse ответ со списком пользователей
+message ListUsersResponse {
+  repeated User users = 1;
+}
+
+// GetUserRequest запрос на получение пользователя
+message GetUserRequest {
+  string user_id = 1;
+}
+
+// GetUserResponse ответ с информацией о пользователе
+message GetUserResponse {
+  User user = 1;
+}
+
+// UpdateUserRequest запрос на обновление пользователя
+message UpdateUserRequest {
+  string user_id = 1;
+  string full_name = 2;
+  string role = 3;
+}
+
+// UpdateUserResponse ответ с обновленным пользователем
+message UpdateUserResponse {
+  User user = 1;
+}
+
+// DeleteUserRequest запрос на удаление пользователя
+message DeleteUserRequest {
+  string user_id = 1;
+}
+
+// DeleteUserResponse ответ на удаление пользователя
+message DeleteUserResponse {
+  bool success = 1;
 }
