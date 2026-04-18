@@ -90,6 +90,19 @@ func (h *AdminCourseRealHandler) GetCourse(c *gin.Context) {
 		courseStatus = "published"
 	}
 
+	// Convert modules from proto to DTO
+	modules := make([]dto.ModuleResponse, 0, len(resp.Modules))
+	for _, mwl := range resp.Modules {
+		m := mwl.Module
+		modules = append(modules, dto.ModuleResponse{
+			ID:          m.Id,
+			Title:       m.Title,
+			Description: m.Description,
+			OrderIndex:  m.OrderIndex,
+			Lessons:     []dto.LessonResponse{}, // TODO: convert lessons
+		})
+	}
+
 	course := dto.CourseDetailResponse{
 		ID:          resp.Course.Id,
 		Title:       resp.Course.Title,
@@ -99,7 +112,7 @@ func (h *AdminCourseRealHandler) GetCourse(c *gin.Context) {
 		Status:      courseStatus,
 		CreatedAt:   resp.Course.CreatedAt.AsTime().Format("2006-01-02T15:04:05Z07:00"),
 		UpdatedAt:   resp.Course.UpdatedAt.AsTime().Format("2006-01-02T15:04:05Z07:00"),
-		Modules:     []dto.ModuleResponse{},
+		Modules:     modules,
 	}
 
 	c.JSON(http.StatusOK, course)
