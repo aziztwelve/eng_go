@@ -84,6 +84,7 @@ func (a *App) initRouter(ctx context.Context) error {
 	adminHandler := handler.NewAdminHandler()
 	adminUserHandler := handler.NewAdminUserHandler()
 	adminCourseHandler := handler.NewAdminCourseHandler()
+	adminVideoHandler := handler.NewAdminVideoHandler()
 	authMiddleware := middleware.NewAuthMiddleware(a.diContainer.AuthClient(ctx))
 	adminMiddleware := middleware.NewAdminOnlyMiddleware()
 
@@ -149,6 +150,17 @@ func (a *App) initRouter(ctx context.Context) error {
 				courses.PUT("/:id", adminCourseHandler.UpdateCourse)
 				courses.DELETE("/:id", adminCourseHandler.DeleteCourse)
 				courses.PUT("/:id/publish", adminCourseHandler.PublishCourse)
+			}
+
+			// Video management
+			videos := admin.Group("/videos")
+			{
+				videos.GET("", adminVideoHandler.ListVideos)
+				videos.GET("/:id", adminVideoHandler.GetVideo)
+				videos.POST("/upload", adminVideoHandler.UploadVideo)
+				videos.PUT("/:id", adminVideoHandler.UpdateVideo)
+				videos.DELETE("/:id", adminVideoHandler.DeleteVideo)
+				videos.GET("/:id/usage", adminVideoHandler.GetVideoUsage)
 			}
 		}
 	}
