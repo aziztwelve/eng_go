@@ -112,10 +112,11 @@ func (h *AdminCourseRealHandler) CreateCourse(c *gin.Context) {
 	}
 
 	resp, err := h.courseClient.CreateCourse(c.Request.Context(), &coursev1.CreateCourseRequest{
-		Title:       req.Title,
-		Description: req.Description,
-		Level:       req.Level,
-		Language:    req.Language,
+		Title:        req.Title,
+		Description:  req.Description,
+		Level:        req.Level,
+		Language:     req.Language,
+		InstructorId: "11111111-1111-1111-1111-111111111111", // Admin user ID from seed
 	})
 	if err != nil {
 		st, _ := status.FromError(err)
