@@ -116,6 +116,21 @@ func (c *CourseClient) DeleteModule(ctx context.Context, req *coursev1.DeleteMod
 	return c.client.DeleteModule(ctx, req)
 }
 
+// CreateLesson создает новый урок
+func (c *CourseClient) CreateLesson(ctx context.Context, req *coursev1.CreateLessonRequest) (*coursev1.CreateLessonResponse, error) {
+	return c.client.CreateLesson(ctx, req)
+}
+
+// UpdateLesson обновляет урок
+func (c *CourseClient) UpdateLesson(ctx context.Context, req *coursev1.UpdateLessonRequest) (*coursev1.UpdateLessonResponse, error) {
+	return c.client.UpdateLesson(ctx, req)
+}
+
+// DeleteLesson удаляет урок
+func (c *CourseClient) DeleteLesson(ctx context.Context, req *coursev1.DeleteLessonRequest) (*coursev1.DeleteLessonResponse, error) {
+	return c.client.DeleteLesson(ctx, req)
+}
+
 // Close закрывает соединение
 func (c *CourseClient) Close() error {
 	return c.conn.Close()

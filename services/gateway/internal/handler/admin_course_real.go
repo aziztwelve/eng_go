@@ -94,12 +94,26 @@ func (h *AdminCourseRealHandler) GetCourse(c *gin.Context) {
 	modules := make([]dto.ModuleResponse, 0, len(resp.Modules))
 	for _, mwl := range resp.Modules {
 		m := mwl.Module
+		
+		// Convert lessons
+		lessons := make([]dto.LessonResponse, 0, len(mwl.Lessons))
+		for _, lwl := range mwl.Lessons {
+			l := lwl.Lesson
+			lessons = append(lessons, dto.LessonResponse{
+				ID:          l.Id,
+				Title:       l.Title,
+				Description: l.Description,
+				OrderIndex:  l.OrderIndex,
+				Steps:       []dto.StepResponse{}, // TODO: convert steps
+			})
+		}
+		
 		modules = append(modules, dto.ModuleResponse{
 			ID:          m.Id,
 			Title:       m.Title,
 			Description: m.Description,
 			OrderIndex:  m.OrderIndex,
-			Lessons:     []dto.LessonResponse{}, // TODO: convert lessons
+			Lessons:     lessons,
 		})
 	}
 

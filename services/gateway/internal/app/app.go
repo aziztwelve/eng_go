@@ -85,6 +85,7 @@ func (a *App) initRouter(ctx context.Context) error {
 	adminUserHandler := handler.NewAdminUserHandler()
 	adminCourseHandler := handler.NewAdminCourseRealHandler(a.diContainer.CourseClient(ctx))
 	adminModuleHandler := handler.NewAdminModuleHandler(a.diContainer.CourseClient(ctx))
+	adminLessonHandler := handler.NewAdminLessonHandler(a.diContainer.CourseClient(ctx))
 	adminVideoHandler := handler.NewAdminVideoHandler(a.diContainer.VideoClient(ctx))
 	authMiddleware := middleware.NewAuthMiddleware(a.diContainer.AuthClient(ctx))
 	adminMiddleware := middleware.NewAdminOnlyMiddleware()
@@ -156,6 +157,11 @@ func (a *App) initRouter(ctx context.Context) error {
 				courses.POST("/:courseId/modules", adminModuleHandler.CreateModule)
 				courses.PUT("/modules/:moduleId", adminModuleHandler.UpdateModule)
 				courses.DELETE("/modules/:moduleId", adminModuleHandler.DeleteModule)
+
+				// Lesson routes
+				courses.POST("/modules/:moduleId/lessons", adminLessonHandler.CreateLesson)
+				courses.PUT("/lessons/:lessonId", adminLessonHandler.UpdateLesson)
+				courses.DELETE("/lessons/:lessonId", adminLessonHandler.DeleteLesson)
 			}
 
 			// Video management
