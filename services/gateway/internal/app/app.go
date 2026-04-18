@@ -80,6 +80,7 @@ func (a *App) initRouter(ctx context.Context) error {
 
 	authHandler := handler.NewAuthHandler(a.diContainer.AuthClient(ctx), a.diContainer.UserClient(ctx))
 	courseHandler := handler.NewCourseHandler(a.diContainer.CourseClient(ctx))
+	videoHandler := handler.NewVideoHandler(a.diContainer.VideoClient(ctx))
 	authMiddleware := middleware.NewAuthMiddleware(a.diContainer.AuthClient(ctx))
 
 	v1 := r.Group("/api/v1")
@@ -96,6 +97,12 @@ func (a *App) initRouter(ctx context.Context) error {
 		{
 			courses.GET("", courseHandler.ListCourses)
 			courses.GET("/:id", courseHandler.GetCourse)
+		}
+
+		videos := v1.Group("/videos")
+		{
+			videos.GET("/:video_id", videoHandler.GetVideoMetadata)
+			videos.GET("/:video_id/url", videoHandler.GetVideoURL)
 		}
 
 		protected := v1.Group("")

@@ -12,6 +12,7 @@ type diContainer struct {
 	authClient   *client.AuthClient
 	userClient   *client.UserClient
 	courseClient *client.CourseClient
+	videoClient  client.VideoClient
 }
 
 func NewDiContainer() *diContainer {
@@ -64,4 +65,20 @@ func (d *diContainer) CourseClient(ctx context.Context) *client.CourseClient {
 		d.courseClient = c
 	}
 	return d.courseClient
+}
+
+func (d *diContainer) VideoClient(ctx context.Context) client.VideoClient {
+	if d.videoClient == nil {
+		c, err := client.NewVideoClient(config.AppConfig().Services.VideoServiceAddr())
+		if err != nil {
+			panic(err)
+		}
+
+		closer.AddNamed("Video gRPC client", func(ctx context.Context) error {
+			return c.Close()
+		})
+
+		d.videoClient = c
+	}
+	return d.videoClient
 }

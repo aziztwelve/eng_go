@@ -11,19 +11,19 @@ type httpEnvConfig struct {
 	Port string `env:"HTTP_PORT,required"`
 }
 
-type httpConfig struct {
+type HttpConfig struct {
 	raw httpEnvConfig
 }
 
-func NewHTTPConfig() (*httpConfig, error) {
+func NewHTTPConfig() (*HttpConfig, error) {
 	var raw httpEnvConfig
 	if err := env.Parse(&raw); err != nil {
 		return nil, err
 	}
 
-	return &httpConfig{raw: raw}, nil
+	return &HttpConfig{raw: raw}, nil
 }
 
-func (cfg *httpConfig) Address() string {
+func (cfg *HttpConfig) Address() string {
 	return net.JoinHostPort(cfg.raw.Host, cfg.raw.Port)
 }
