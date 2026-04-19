@@ -135,7 +135,7 @@ func (a *api) ListVideos(ctx context.Context, req *videov1.ListVideosRequest) (*
 		pageSize = 20
 	}
 
-	videos, total, err := a.videoService.ListVideos(ctx, page, pageSize, req.Status)
+	videos, total, err := a.videoService.ListVideos(ctx, page, pageSize, req.Status, req.Search)
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to list videos: %v", err)
 	}

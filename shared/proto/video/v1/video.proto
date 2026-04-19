@@ -72,6 +72,7 @@ message ListVideosRequest {
   int32 page = 1;
   int32 page_size = 2;
   string status = 3; // active, processing, deleted
+  string search = 4; // Search by title or description
 }
 
 message ListVideosResponse {

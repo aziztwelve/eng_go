@@ -103,7 +103,7 @@ func (s *VideoService) GetVideoMetadata(ctx context.Context, videoID string) (*m
 }
 
 // ListVideos получает список видео
-func (s *VideoService) ListVideos(ctx context.Context, page, pageSize int, status string) ([]*model.Video, int, error) {
+func (s *VideoService) ListVideos(ctx context.Context, page, pageSize int, status, search string) ([]*model.Video, int, error) {
 	if page < 1 {
 		page = 1
 	}
@@ -111,7 +111,7 @@ func (s *VideoService) ListVideos(ctx context.Context, page, pageSize int, statu
 		pageSize = 20
 	}
 
-	videos, total, err := s.repo.List(ctx, page, pageSize, status)
+	videos, total, err := s.repo.List(ctx, page, pageSize, status, search)
 	if err != nil {
 		return nil, 0, errors.Wrap(err, "failed to list videos")
 	}

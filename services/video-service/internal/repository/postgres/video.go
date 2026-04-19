@@ -3,6 +3,7 @@ package postgres
 import (
 	"context"
 	"fmt"
+	"strings"
 
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
@@ -69,29 +70,50 @@ func (r *videoRepository) GetByID(ctx context.Context, id string) (*model.Video,
 	return video, nil
 }
 
-func (r *videoRepository) List(ctx context.Context, page, pageSize int, status string) ([]*model.Video, int, error) {
+func (r *videoRepository) List(ctx context.Context, page, pageSize int, status, search string) ([]*model.Video, int, error) {
 	offset := (page - 1) * pageSize
 
-	// Построение WHERE условия
+	// Построение WHERE условия и аргументов
 	whereClause := "WHERE deleted_at IS NULL"
-	args := []interface{}{pageSize, offset}
-	argPos := 3
+	var countArgs []interface{}
+	var filterArgs []interface{}
+	filterArgPos := 3 // $1 и $2 зарезервированы для LIMIT и OFFSET
 
 	if status != "" {
-		whereClause += fmt.Sprintf(" AND status = $%d", argPos)
-		args = append(args, status)
-		argPos++
+		whereClause += fmt.Sprintf(" AND status = $%d", filterArgPos)
+		countArgs = append(countArgs, status)
+		filterArgs = append(filterArgs, status)
+		filterArgPos++
 	}
 
-	// Получение общего количества
+	if search != "" {
+		whereClause += fmt.Sprintf(" AND (title ILIKE $%d OR description ILIKE $%d)", filterArgPos, filterArgPos)
+		countArgs = append(countArgs, "%"+search+"%")
+		filterArgs = append(filterArgs, "%"+search+"%")
+		filterArgPos++
+	}
+
+	// Получение общего количества (только фильтры, без LIMIT/OFFSET)
 	countQuery := fmt.Sprintf("SELECT COUNT(*) FROM videos %s", whereClause)
+	// Для count query нужно перенумеровать параметры с $1
+	countQueryRenumbered := whereClause
+	if status != "" {
+		countQueryRenumbered = strings.Replace(countQueryRenumbered, "$3", "$1", 1)
+		if search != "" {
+			countQueryRenumbered = strings.Replace(countQueryRenumbered, "$4", "$2", -1)
+		}
+	} else if search != "" {
+		countQueryRenumbered = strings.Replace(countQueryRenumbered, "$3", "$1", -1)
+	}
+	countQuery = fmt.Sprintf("SELECT COUNT(*) FROM videos %s", countQueryRenumbered)
+	
 	var total int
-	err := r.pool.QueryRow(ctx, countQuery, args[2:]...).Scan(&total)
+	err := r.pool.QueryRow(ctx, countQuery, countArgs...).Scan(&total)
 	if err != nil {
 		return nil, 0, errors.Wrap(err, "failed to count videos")
 	}
 
-	// Получение списка
+	// Получение списка (параметры: $1=limit, $2=offset, $3+=filters)
 	query := fmt.Sprintf(`
 		SELECT id, title, description, storage_key, bucket_name, content_type, size_bytes,
 		       duration_seconds, resolution, thumbnail_url, status, uploaded_by,
@@ -102,7 +124,10 @@ func (r *videoRepository) List(ctx context.Context, page, pageSize int, status s
 		LIMIT $1 OFFSET $2
 	`, whereClause)
 
-	rows, err := r.pool.Query(ctx, query, args...)
+	// Собираем все аргументы: LIMIT, OFFSET, затем фильтры
+	queryArgs := append([]interface{}{pageSize, offset}, filterArgs...)
+
+	rows, err := r.pool.Query(ctx, query, queryArgs...)
 	if err != nil {
 		return nil, 0, errors.Wrap(err, "failed to list videos")
 	}

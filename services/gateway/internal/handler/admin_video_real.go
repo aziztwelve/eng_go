@@ -26,9 +26,37 @@ func NewAdminVideoRealHandler(videoClient client.VideoClient) *AdminVideoRealHan
 	}
 }
 
-// ListVideos возвращает список всех видео
+// ListVideos возвращает список всех видео с пагинацией и фильтрами
 func (h *AdminVideoRealHandler) ListVideos(c *gin.Context) {
-	resp, err := h.videoClient.ListVideos(c.Request.Context(), &videov1.ListVideosRequest{})
+	// Parse query parameters
+	var params struct {
+		Page   int32  `form:"page" binding:"omitempty,min=1"`
+		Limit  int32  `form:"limit" binding:"omitempty,min=1,max=100"`
+		Search string `form:"search"`
+		Status string `form:"status" binding:"omitempty,oneof=active processing deleted"`
+	}
+
+	if err := c.ShouldBindQuery(&params); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"error": "Invalid query parameters",
+		})
+		return
+	}
+
+	// Set defaults
+	if params.Page == 0 {
+		params.Page = 1
+	}
+	if params.Limit == 0 {
+		params.Limit = 10
+	}
+
+	resp, err := h.videoClient.ListVideos(c.Request.Context(), &videov1.ListVideosRequest{
+		Page:     params.Page,
+		PageSize: params.Limit,
+		Status:   params.Status,
+		Search:   params.Search,
+	})
 	if err != nil {
 		st, _ := status.FromError(err)
 		c.JSON(http.StatusInternalServerError, gin.H{
@@ -53,9 +81,20 @@ func (h *AdminVideoRealHandler) ListVideos(c *gin.Context) {
 		})
 	}
 
+	// Calculate total pages
+	totalPages := int32(0)
+	if params.Limit > 0 {
+		totalPages = (resp.Total + params.Limit - 1) / params.Limit
+	}
+
 	c.JSON(http.StatusOK, gin.H{
 		"videos": videos,
-		"total":  len(videos),
+		"pagination": gin.H{
+			"total":       resp.Total,
+			"page":        params.Page,
+			"limit":       params.Limit,
+			"total_pages": totalPages,
+		},
 	})
 }
 
