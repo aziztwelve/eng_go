@@ -15,7 +15,7 @@ func (r *repository) Create(ctx context.Context, user model.User) error {
 	repoUser := repoConverter.ToRepoUser(user)
 
 	query := `
-		INSERT INTO users (id, email, username, password_hash, role, created_at)
+		INSERT INTO public.users (id, email, username, password_hash, role, created_at)
 		VALUES ($1, $2, $3, $4, $5, $6)
 	`
 
@@ -40,7 +40,7 @@ func (r *repository) Create(ctx context.Context, user model.User) error {
 func (r *repository) GetByEmail(ctx context.Context, email string) (model.User, error) {
 	query := `
 		SELECT id, email, username, password_hash, role, created_at
-		FROM users
+		FROM public.users
 		WHERE email = $1
 	`
 
@@ -67,7 +67,7 @@ func (r *repository) GetByEmail(ctx context.Context, email string) (model.User, 
 func (r *repository) GetByID(ctx context.Context, id string) (model.User, error) {
 	query := `
 		SELECT id, email, username, password_hash, role, created_at
-		FROM users
+		FROM public.users
 		WHERE id = $1
 	`
 

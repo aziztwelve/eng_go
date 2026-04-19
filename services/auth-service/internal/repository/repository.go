@@ -11,4 +11,9 @@ type AuthRepository interface {
 	Create(ctx context.Context, user model.User) error
 	GetByEmail(ctx context.Context, email string) (model.User, error)
 	GetByID(ctx context.Context, id string) (model.User, error)
+	
+	// Admin methods
+	ListUsers(ctx context.Context) ([]model.User, error)
+	UpdateUserRole(ctx context.Context, userID, role string) (model.User, error)
+	DeleteUser(ctx context.Context, userID string) error
 }

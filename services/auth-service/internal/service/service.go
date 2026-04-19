@@ -13,4 +13,9 @@ type AuthService interface {
 	ValidateToken(ctx context.Context, token string) (string, string, error)
 	RefreshToken(ctx context.Context, refreshToken string) (string, error)
 	GetUserByID(ctx context.Context, userID string) (*model.User, error)
+	
+	// Admin methods
+	ListUsers(ctx context.Context) ([]model.User, error)
+	UpdateUserRole(ctx context.Context, userID, role string) (model.User, error)
+	DeleteUser(ctx context.Context, userID string) error
 }

@@ -65,3 +65,18 @@ func (c *AuthClient) GetUserInfo(ctx context.Context, req *authv1.GetUserInfoReq
 func (c *AuthClient) Close() error {
 	return c.conn.Close()
 }
+
+// ListUsers возвращает список всех пользователей (admin)
+func (c *AuthClient) ListUsers(ctx context.Context, req *authv1.ListUsersRequest) (*authv1.ListUsersResponse, error) {
+	return c.client.ListUsers(ctx, req)
+}
+
+// UpdateUserRole обновляет роль пользователя (admin)
+func (c *AuthClient) UpdateUserRole(ctx context.Context, req *authv1.UpdateUserRoleRequest) (*authv1.UpdateUserRoleResponse, error) {
+	return c.client.UpdateUserRole(ctx, req)
+}
+
+// DeleteUser удаляет пользователя (admin)
+func (c *AuthClient) DeleteUser(ctx context.Context, req *authv1.DeleteUserRequest) (*authv1.DeleteUserResponse, error) {
+	return c.client.DeleteUser(ctx, req)
+}

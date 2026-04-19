@@ -82,7 +82,7 @@ func (a *App) initRouter(ctx context.Context) error {
 	courseHandler := handler.NewCourseHandler(a.diContainer.CourseClient(ctx))
 	videoHandler := handler.NewVideoHandler(a.diContainer.VideoClient(ctx))
 	adminHandler := handler.NewAdminHandler()
-	adminUserHandler := handler.NewAdminUserHandler()
+	adminUserHandler := handler.NewAdminUserRealHandler(a.diContainer.AuthClient(ctx), a.diContainer.UserClient(ctx))
 	adminCourseHandler := handler.NewAdminCourseRealHandler(a.diContainer.CourseClient(ctx))
 	adminModuleHandler := handler.NewAdminModuleHandler(a.diContainer.CourseClient(ctx))
 	adminLessonHandler := handler.NewAdminLessonHandler(a.diContainer.CourseClient(ctx))

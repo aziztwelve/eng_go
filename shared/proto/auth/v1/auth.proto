@@ -22,6 +22,15 @@ service AuthService {
   
   // GetUserInfo получает информацию о пользователе по ID
   rpc GetUserInfo(GetUserInfoRequest) returns (GetUserInfoResponse);
+  
+  // ListUsers возвращает список всех пользователей (admin)
+  rpc ListUsers(ListUsersRequest) returns (ListUsersResponse);
+  
+  // UpdateUserRole обновляет роль пользователя (admin)
+  rpc UpdateUserRole(UpdateUserRoleRequest) returns (UpdateUserRoleResponse);
+  
+  // DeleteUser удаляет пользователя (admin)
+  rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse);
 }
 
 // RegisterRequest содержит данные для регистрации
@@ -85,3 +94,39 @@ message GetUserInfoResponse {
   string role = 4;
   google.protobuf.Timestamp created_at = 5;
 }
+
+// ListUsersRequest запрос на получение списка пользователей
+message ListUsersRequest {}
+
+// ListUsersResponse ответ со списком пользователей
+message ListUsersResponse {
+  repeated UserInfo users = 1;
+}
+
+// UserInfo информация о пользователе
+message UserInfo {
+  string id = 1;
+  string email = 2;
+  string username = 3;
+  string role = 4;
+  google.protobuf.Timestamp created_at = 5;
+}
+
+// UpdateUserRoleRequest запрос на обновление роли пользователя
+message UpdateUserRoleRequest {
+  string user_id = 1;
+  string role = 2;
+}
+
+// UpdateUserRoleResponse ответ с обновленным пользователем
+message UpdateUserRoleResponse {
+  UserInfo user = 1;
+}
+
+// DeleteUserRequest запрос на удаление пользователя
+message DeleteUserRequest {
+  string user_id = 1;
+}
+
+// DeleteUserResponse ответ об удалении пользователя
+message DeleteUserResponse {}
