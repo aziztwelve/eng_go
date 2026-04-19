@@ -271,7 +271,8 @@ func (h *AdminCourseRealHandler) PublishCourse(c *gin.Context) {
 	courseID := c.Param("id")
 
 	resp, err := h.courseClient.PublishCourse(c.Request.Context(), &coursev1.PublishCourseRequest{
-		CourseId: courseID,
+		CourseId:    courseID,
+		IsPublished: true,
 	})
 	if err != nil {
 		st, _ := status.FromError(err)
