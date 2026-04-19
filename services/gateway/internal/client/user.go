@@ -51,6 +51,26 @@ func (c *UserClient) GetUserLanguages(ctx context.Context, req *userv1.GetUserLa
 	return c.client.GetUserLanguages(ctx, req)
 }
 
+// ListUsers возвращает список пользователей (admin)
+func (c *UserClient) ListUsers(ctx context.Context, req *userv1.ListUsersRequest) (*userv1.ListUsersResponse, error) {
+	return c.client.ListUsers(ctx, req)
+}
+
+// GetUser возвращает пользователя по ID (admin)
+func (c *UserClient) GetUser(ctx context.Context, req *userv1.GetUserRequest) (*userv1.GetUserResponse, error) {
+	return c.client.GetUser(ctx, req)
+}
+
+// UpdateUser обновляет пользователя (admin)
+func (c *UserClient) UpdateUser(ctx context.Context, req *userv1.UpdateUserRequest) (*userv1.UpdateUserResponse, error) {
+	return c.client.UpdateUser(ctx, req)
+}
+
+// DeleteUser удаляет пользователя (admin)
+func (c *UserClient) DeleteUser(ctx context.Context, req *userv1.DeleteUserRequest) (*userv1.DeleteUserResponse, error) {
+	return c.client.DeleteUser(ctx, req)
+}
+
 // Close закрывает соединение
 func (c *UserClient) Close() error {
 	return c.conn.Close()

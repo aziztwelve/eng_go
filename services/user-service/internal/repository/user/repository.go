@@ -141,3 +141,110 @@ func toNullString(s *string) sql.NullString {
 	}
 	return sql.NullString{String: *s, Valid: true}
 }
+
+// ListUsers возвращает список всех пользователей (admin)
+func (r *repo) ListUsers(ctx context.Context) ([]*model.User, error) {
+	query := `
+		SELECT id, email, full_name, role, created_at, updated_at
+		FROM users
+		ORDER BY created_at DESC
+	`
+
+	rows, err := r.pool.Query(ctx, query)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var users []*model.User
+	for rows.Next() {
+		user := &model.User{}
+		err := rows.Scan(
+			&user.ID,
+			&user.Email,
+			&user.FullName,
+			&user.Role,
+			&user.CreatedAt,
+			&user.UpdatedAt,
+		)
+		if err != nil {
+			return nil, err
+		}
+		users = append(users, user)
+	}
+
+	return users, rows.Err()
+}
+
+// GetUser возвращает пользователя по ID (admin)
+func (r *repo) GetUser(ctx context.Context, userID string) (*model.User, error) {
+	query := `
+		SELECT id, email, full_name, role, created_at, updated_at
+		FROM users
+		WHERE id = $1
+	`
+
+	user := &model.User{}
+	err := r.pool.QueryRow(ctx, query, userID).Scan(
+		&user.ID,
+		&user.Email,
+		&user.FullName,
+		&user.Role,
+		&user.CreatedAt,
+		&user.UpdatedAt,
+	)
+
+	if err != nil {
+		if errors.Is(err, pgx.ErrNoRows) {
+			return nil, sql.ErrNoRows
+		}
+		return nil, err
+	}
+
+	return user, nil
+}
+
+// UpdateUser обновляет пользователя (admin)
+func (r *repo) UpdateUser(ctx context.Context, userID string, fullName, role string) (*model.User, error) {
+	query := `
+		UPDATE users
+		SET full_name = $2, role = $3, updated_at = NOW()
+		WHERE id = $1
+		RETURNING id, email, full_name, role, created_at, updated_at
+	`
+
+	user := &model.User{}
+	err := r.pool.QueryRow(ctx, query, userID, fullName, role).Scan(
+		&user.ID,
+		&user.Email,
+		&user.FullName,
+		&user.Role,
+		&user.CreatedAt,
+		&user.UpdatedAt,
+	)
+
+	if err != nil {
+		if errors.Is(err, pgx.ErrNoRows) {
+			return nil, sql.ErrNoRows
+		}
+		return nil, err
+	}
+
+	return user, nil
+}
+
+// DeleteUser удаляет пользователя (admin)
+func (r *repo) DeleteUser(ctx context.Context, userID string) error {
+	query := `DELETE FROM users WHERE id = $1`
+
+	result, err := r.pool.Exec(ctx, query, userID)
+	if err != nil {
+		return err
+	}
+
+	if result.RowsAffected() == 0 {
+		return sql.ErrNoRows
+	}
+
+	return nil
+}
