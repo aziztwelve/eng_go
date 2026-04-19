@@ -82,6 +82,11 @@ func (a *App) initRouter(ctx context.Context) error {
 	courseHandler := handler.NewCourseHandler(a.diContainer.CourseClient(ctx))
 	videoHandler := handler.NewVideoHandler(a.diContainer.VideoClient(ctx))
 	adminHandler := handler.NewAdminHandler()
+	adminStatsHandler := handler.NewAdminStatsHandler(
+		a.diContainer.AuthClient(ctx),
+		a.diContainer.CourseClient(ctx),
+		a.diContainer.VideoClient(ctx),
+	)
 	adminUserHandler := handler.NewAdminUserRealHandler(a.diContainer.AuthClient(ctx), a.diContainer.UserClient(ctx))
 	adminCourseHandler := handler.NewAdminCourseRealHandler(a.diContainer.CourseClient(ctx))
 	adminModuleHandler := handler.NewAdminModuleHandler(a.diContainer.CourseClient(ctx))
@@ -134,6 +139,7 @@ func (a *App) initRouter(ctx context.Context) error {
 		admin.Use(adminMiddleware.Handle())
 		{
 			admin.GET("/me", adminHandler.GetCurrentUser)
+			admin.GET("/stats", adminStatsHandler.GetStats)
 
 			// User management
 			users := admin.Group("/users")
