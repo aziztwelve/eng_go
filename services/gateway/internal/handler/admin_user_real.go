@@ -29,10 +29,41 @@ func NewAdminUserRealHandler(authClient *client.AuthClient, userClient *client.U
 	}
 }
 
-// ListUsers возвращает список всех пользователей
+// ListUsers возвращает список всех пользователей с пагинацией и фильтрами
 func (h *AdminUserRealHandler) ListUsers(c *gin.Context) {
+	// Parse query parameters
+	var params struct {
+		Page   int32  `form:"page" binding:"omitempty,min=1"`
+		Limit  int32  `form:"limit" binding:"omitempty,min=1,max=100"`
+		Search string `form:"search"`
+		Role   string `form:"role" binding:"omitempty,oneof=admin instructor student"`
+	}
+
+	if err := c.ShouldBindQuery(&params); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"error": "Invalid query parameters",
+		})
+		return
+	}
+
+	// Set defaults
+	if params.Page == 0 {
+		params.Page = 1
+	}
+	if params.Limit == 0 {
+		params.Limit = 10
+	}
+
+	// Calculate offset
+	offset := (params.Page - 1) * params.Limit
+
 	// Получаем список пользователей из auth-service
-	authResp, err := h.authClient.ListUsers(c.Request.Context(), &authv1.ListUsersRequest{})
+	authResp, err := h.authClient.ListUsers(c.Request.Context(), &authv1.ListUsersRequest{
+		Limit:  params.Limit,
+		Offset: offset,
+		Search: params.Search,
+		Role:   params.Role,
+	})
 	if err != nil {
 		st, _ := status.FromError(err)
 		c.JSON(http.StatusInternalServerError, gin.H{
@@ -72,9 +103,20 @@ func (h *AdminUserRealHandler) ListUsers(c *gin.Context) {
 		})
 	}
 
+	// Calculate total pages
+	totalPages := int32(0)
+	if params.Limit > 0 {
+		totalPages = (authResp.Total + params.Limit - 1) / params.Limit
+	}
+
 	c.JSON(http.StatusOK, gin.H{
 		"users": users,
-		"total": len(users),
+		"pagination": gin.H{
+			"total":       authResp.Total,
+			"page":        params.Page,
+			"limit":       params.Limit,
+			"total_pages": totalPages,
+		},
 	})
 }
 

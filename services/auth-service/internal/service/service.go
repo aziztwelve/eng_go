@@ -15,7 +15,7 @@ type AuthService interface {
 	GetUserByID(ctx context.Context, userID string) (*model.User, error)
 	
 	// Admin methods
-	ListUsers(ctx context.Context) ([]model.User, error)
+	ListUsers(ctx context.Context, limit, offset int32, search, role string) ([]model.User, int32, error)
 	UpdateUserRole(ctx context.Context, userID, role string) (model.User, error)
 	DeleteUser(ctx context.Context, userID string) error
 }

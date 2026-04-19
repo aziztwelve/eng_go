@@ -96,11 +96,17 @@ message GetUserInfoResponse {
 }
 
 // ListUsersRequest запрос на получение списка пользователей
-message ListUsersRequest {}
+message ListUsersRequest {
+  int32 limit = 1;
+  int32 offset = 2;
+  string search = 3; // Search by email or full_name
+  string role = 4; // Filter by role: "admin", "instructor", "student"
+}
 
 // ListUsersResponse ответ со списком пользователей
 message ListUsersResponse {
   repeated UserInfo users = 1;
+  int32 total = 2;
 }
 
 // UserInfo информация о пользователе

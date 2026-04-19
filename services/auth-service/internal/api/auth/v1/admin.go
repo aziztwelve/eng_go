@@ -12,7 +12,13 @@ import (
 
 // ListUsers возвращает список всех пользователей (admin)
 func (a *api) ListUsers(ctx context.Context, req *authv1.ListUsersRequest) (*authv1.ListUsersResponse, error) {
-	users, err := a.authService.ListUsers(ctx)
+	// Set defaults
+	limit := req.Limit
+	if limit == 0 {
+		limit = 20
+	}
+
+	users, total, err := a.authService.ListUsers(ctx, limit, req.Offset, req.Search, req.Role)
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to list users: %v", err)
 	}
@@ -30,6 +36,7 @@ func (a *api) ListUsers(ctx context.Context, req *authv1.ListUsersRequest) (*aut
 
 	return &authv1.ListUsersResponse{
 		Users: protoUsers,
+		Total: total,
 	}, nil
 }
 
