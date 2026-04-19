@@ -35,6 +35,8 @@ func (a *api) ListCourses(ctx context.Context, req *coursev1.ListCoursesRequest)
 		Limit:              int(req.Limit),
 		Offset:             int(req.Offset),
 		IncludeUnpublished: req.IncludeUnpublished,
+		Search:             req.Search,
+		Status:             req.Status,
 	}
 
 	if req.Language != nil {

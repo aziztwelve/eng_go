@@ -134,8 +134,22 @@ func (r *courseRepository) List(ctx context.Context, filters repository.ListFilt
 		argPos++
 	}
 
-	// Только опубликованные курсы (если не указано иное для админки)
-	if !filters.IncludeUnpublished {
+	// Search filter
+	if filters.Search != "" {
+		conditions = append(conditions, fmt.Sprintf("(title ILIKE $%d OR description ILIKE $%d)", argPos, argPos))
+		args = append(args, "%"+filters.Search+"%")
+		argPos++
+	}
+
+	// Status filter
+	if filters.Status != "" {
+		if filters.Status == "published" {
+			conditions = append(conditions, "is_published = true")
+		} else if filters.Status == "draft" {
+			conditions = append(conditions, "is_published = false")
+		}
+	} else if !filters.IncludeUnpublished {
+		// Только опубликованные курсы (если не указано иное для админки)
 		conditions = append(conditions, "is_published = true")
 	}
 

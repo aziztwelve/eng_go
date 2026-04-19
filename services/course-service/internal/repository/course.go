@@ -49,5 +49,7 @@ type ListFilters struct {
 	MaxPrice           *float64
 	Limit              int
 	Offset             int
-	IncludeUnpublished bool // For admin: show all courses including drafts
+	IncludeUnpublished bool   // For admin: show all courses including drafts
+	Search             string // Search by title or description
+	Status             string // Filter by status: "draft" or "published"
 }

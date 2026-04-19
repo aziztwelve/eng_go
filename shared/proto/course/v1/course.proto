@@ -162,6 +162,8 @@ message ListCoursesRequest {
   int32 limit = 5;
   int32 offset = 6;
   bool include_unpublished = 7; // For admin: show all courses including drafts
+  string search = 8; // Search by title or description
+  string status = 9; // Filter by status: "draft" or "published"
 }
 
 // ListCoursesResponse содержит список курсов
