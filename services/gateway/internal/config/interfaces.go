@@ -24,4 +24,5 @@ type ServicesConfig interface {
 	UserServiceAddr() string
 	CourseServiceAddr() string
 	VideoServiceAddr() string
+	QuizServiceAddr() string
 }

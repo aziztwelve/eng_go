@@ -9,6 +9,7 @@ type servicesEnvConfig struct {
 	UserServiceAddr   string `env:"USER_SERVICE_ADDR,required"`
 	CourseServiceAddr string `env:"COURSE_SERVICE_ADDR,required"`
 	VideoServiceAddr  string `env:"VIDEO_SERVICE_ADDR,required"`
+	QuizServiceAddr   string `env:"QUIZ_SERVICE_ADDR,required"`
 }
 
 type ServicesConfig struct {
@@ -38,4 +39,8 @@ func (cfg *ServicesConfig) CourseServiceAddr() string {
 
 func (cfg *ServicesConfig) VideoServiceAddr() string {
 	return cfg.raw.VideoServiceAddr
+}
+
+func (cfg *ServicesConfig) QuizServiceAddr() string {
+	return cfg.raw.QuizServiceAddr
 }

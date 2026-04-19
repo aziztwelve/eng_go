@@ -13,6 +13,7 @@ type diContainer struct {
 	userClient   *client.UserClient
 	courseClient *client.CourseClient
 	videoClient  client.VideoClient
+	quizClient   *client.QuizClient
 }
 
 func NewDiContainer() *diContainer {
@@ -81,4 +82,20 @@ func (d *diContainer) VideoClient(ctx context.Context) client.VideoClient {
 		d.videoClient = c
 	}
 	return d.videoClient
+}
+
+func (d *diContainer) QuizClient(ctx context.Context) *client.QuizClient {
+	if d.quizClient == nil {
+		c, err := client.NewQuizClient(config.AppConfig().Services.QuizServiceAddr())
+		if err != nil {
+			panic(err)
+		}
+
+		closer.AddNamed("Quiz gRPC client", func(ctx context.Context) error {
+			return c.Close()
+		})
+
+		d.quizClient = c
+	}
+	return d.quizClient
 }

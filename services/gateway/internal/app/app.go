@@ -81,6 +81,7 @@ func (a *App) initRouter(ctx context.Context) error {
 	authHandler := handler.NewAuthHandler(a.diContainer.AuthClient(ctx), a.diContainer.UserClient(ctx))
 	courseHandler := handler.NewCourseHandler(a.diContainer.CourseClient(ctx))
 	videoHandler := handler.NewVideoHandler(a.diContainer.VideoClient(ctx))
+	quizHandler := handler.NewQuizHandler(a.diContainer.QuizClient(ctx))
 	adminHandler := handler.NewAdminHandler()
 	adminStatsHandler := handler.NewAdminStatsHandler(
 		a.diContainer.AuthClient(ctx),
@@ -131,6 +132,13 @@ func (a *App) initRouter(ctx context.Context) error {
 				progress.GET("/lessons/:lessonId", courseHandler.GetLessonProgress)
 				progress.GET("/courses/:courseId", courseHandler.GetCourseProgress)
 			}
+
+			// Quiz attempts (student)
+			protected.POST("/quizzes/:id/attempts", quizHandler.StartQuizAttempt)
+			protected.GET("/quizzes/:id/attempts/my", quizHandler.GetUserAttempts)
+			protected.POST("/attempts/:attemptId/answers", quizHandler.SubmitAnswer)
+			protected.POST("/attempts/:attemptId/complete", quizHandler.CompleteQuizAttempt)
+			protected.GET("/attempts/:attemptId", quizHandler.GetAttempt)
 		}
 
 		// Admin endpoints
@@ -186,6 +194,21 @@ func (a *App) initRouter(ctx context.Context) error {
 				videos.DELETE("/:id", adminVideoHandler.DeleteVideo)
 				videos.GET("/:id/usage", adminVideoHandler.GetVideoUsage)
 			}
+
+			// Quiz management
+			quizzes := admin.Group("/quizzes")
+			{
+				quizzes.GET("", quizHandler.ListQuizzes)
+				quizzes.GET("/:id", quizHandler.GetQuiz)
+				quizzes.POST("", quizHandler.CreateQuiz)
+				quizzes.PUT("/:id", quizHandler.UpdateQuiz)
+				quizzes.DELETE("/:id", quizHandler.DeleteQuiz)
+				quizzes.POST("/:id/questions", quizHandler.AddQuestion)
+			}
+
+			// Quiz questions
+			admin.PUT("/questions/:id", quizHandler.UpdateQuestion)
+			admin.DELETE("/questions/:id", quizHandler.DeleteQuestion)
 		}
 	}
 
