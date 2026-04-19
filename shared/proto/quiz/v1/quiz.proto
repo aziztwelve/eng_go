@@ -1,0 +1,276 @@
+syntax = "proto3";
+
+package quiz.v1;
+
+option go_package = "github.com/elearning/shared/proto/quiz/v1;quizv1";
+
+import "google/protobuf/timestamp.proto";
+
+// QuizService управляет квизами и тестами
+service QuizService {
+  // Quiz management
+  rpc CreateQuiz(CreateQuizRequest) returns (CreateQuizResponse);
+  rpc GetQuiz(GetQuizRequest) returns (GetQuizResponse);
+  rpc UpdateQuiz(UpdateQuizRequest) returns (UpdateQuizResponse);
+  rpc DeleteQuiz(DeleteQuizRequest) returns (DeleteQuizResponse);
+  rpc ListQuizzes(ListQuizzesRequest) returns (ListQuizzesResponse);
+  rpc GetQuizzesByLesson(GetQuizzesByLessonRequest) returns (GetQuizzesByLessonResponse);
+
+  // Question management
+  rpc AddQuestion(AddQuestionRequest) returns (AddQuestionResponse);
+  rpc UpdateQuestion(UpdateQuestionRequest) returns (UpdateQuestionResponse);
+  rpc DeleteQuestion(DeleteQuestionRequest) returns (DeleteQuestionResponse);
+
+  // Quiz attempts
+  rpc StartQuizAttempt(StartQuizAttemptRequest) returns (StartQuizAttemptResponse);
+  rpc SubmitAnswer(SubmitAnswerRequest) returns (SubmitAnswerResponse);
+  rpc CompleteQuizAttempt(CompleteQuizAttemptRequest) returns (CompleteQuizAttemptResponse);
+  rpc GetAttempt(GetAttemptRequest) returns (GetAttemptResponse);
+  rpc GetUserAttempts(GetUserAttemptsRequest) returns (GetUserAttemptsResponse);
+}
+
+// Quiz messages
+message Quiz {
+  string id = 1;
+  string lesson_id = 2;
+  string title = 3;
+  string description = 4;
+  optional int32 time_limit_minutes = 5;
+  int32 max_attempts = 6;
+  double passing_score_percentage = 7;
+  bool shuffle_questions = 8;
+  bool show_correct_answers = 9;
+  bool is_required = 10;
+  google.protobuf.Timestamp created_at = 11;
+  google.protobuf.Timestamp updated_at = 12;
+}
+
+message QuizQuestion {
+  string id = 1;
+  string quiz_id = 2;
+  string question_type = 3; // multiple_choice, multiple_select, true_false, text_input
+  string question_text = 4;
+  string explanation = 5;
+  int32 points = 6;
+  int32 order_index = 7;
+  google.protobuf.Timestamp created_at = 8;
+  google.protobuf.Timestamp updated_at = 9;
+}
+
+message QuizAnswer {
+  string id = 1;
+  string question_id = 2;
+  string answer_text = 3;
+  bool is_correct = 4;
+  int32 order_index = 5;
+  google.protobuf.Timestamp created_at = 6;
+}
+
+message QuestionWithAnswers {
+  QuizQuestion question = 1;
+  repeated QuizAnswer answers = 2;
+}
+
+message QuizWithQuestions {
+  Quiz quiz = 1;
+  repeated QuestionWithAnswers questions = 2;
+}
+
+message QuizAttempt {
+  string id = 1;
+  string quiz_id = 2;
+  string user_id = 3;
+  int32 attempt_number = 4;
+  google.protobuf.Timestamp started_at = 5;
+  optional google.protobuf.Timestamp completed_at = 6;
+  optional double score_percentage = 7;
+  optional int32 total_points = 8;
+  optional int32 earned_points = 9;
+  bool is_passed = 10;
+  optional int32 time_spent_seconds = 11;
+  google.protobuf.Timestamp created_at = 12;
+  google.protobuf.Timestamp updated_at = 13;
+}
+
+message QuizAttemptAnswer {
+  string id = 1;
+  string attempt_id = 2;
+  string question_id = 3;
+  repeated string selected_answer_ids = 4;
+  optional string text_answer = 5;
+  optional bool is_correct = 6;
+  int32 points_earned = 7;
+  google.protobuf.Timestamp created_at = 8;
+}
+
+message AttemptWithAnswers {
+  QuizAttempt attempt = 1;
+  repeated QuizAttemptAnswer answers = 2;
+}
+
+// Request/Response messages
+
+// CreateQuiz
+message CreateQuizRequest {
+  string lesson_id = 1;
+  string title = 2;
+  string description = 3;
+  optional int32 time_limit_minutes = 4;
+  int32 max_attempts = 5;
+  double passing_score_percentage = 6;
+  bool shuffle_questions = 7;
+  bool show_correct_answers = 8;
+  bool is_required = 9;
+}
+
+message CreateQuizResponse {
+  Quiz quiz = 1;
+}
+
+// GetQuiz
+message GetQuizRequest {
+  string quiz_id = 1;
+}
+
+message GetQuizResponse {
+  QuizWithQuestions quiz = 1;
+}
+
+// UpdateQuiz
+message UpdateQuizRequest {
+  string id = 1;
+  string title = 2;
+  string description = 3;
+  optional int32 time_limit_minutes = 4;
+  int32 max_attempts = 5;
+  double passing_score_percentage = 6;
+  bool shuffle_questions = 7;
+  bool show_correct_answers = 8;
+  bool is_required = 9;
+}
+
+message UpdateQuizResponse {
+  Quiz quiz = 1;
+}
+
+// DeleteQuiz
+message DeleteQuizRequest {
+  string quiz_id = 1;
+}
+
+message DeleteQuizResponse {
+  bool success = 1;
+}
+
+// ListQuizzes
+message ListQuizzesRequest {
+  int32 limit = 1;
+  int32 offset = 2;
+}
+
+message ListQuizzesResponse {
+  repeated Quiz quizzes = 1;
+}
+
+// GetQuizzesByLesson
+message GetQuizzesByLessonRequest {
+  string lesson_id = 1;
+}
+
+message GetQuizzesByLessonResponse {
+  repeated Quiz quizzes = 1;
+}
+
+// AddQuestion
+message AddQuestionRequest {
+  string quiz_id = 1;
+  string question_type = 2;
+  string question_text = 3;
+  string explanation = 4;
+  int32 points = 5;
+  int32 order_index = 6;
+  repeated AddAnswerRequest answers = 7;
+}
+
+message AddAnswerRequest {
+  string answer_text = 1;
+  bool is_correct = 2;
+  int32 order_index = 3;
+}
+
+message AddQuestionResponse {
+  QuizQuestion question = 1;
+}
+
+// UpdateQuestion
+message UpdateQuestionRequest {
+  string id = 1;
+  string question_type = 2;
+  string question_text = 3;
+  string explanation = 4;
+  int32 points = 5;
+  int32 order_index = 6;
+}
+
+message UpdateQuestionResponse {
+  QuizQuestion question = 1;
+}
+
+// DeleteQuestion
+message DeleteQuestionRequest {
+  string question_id = 1;
+}
+
+message DeleteQuestionResponse {
+  bool success = 1;
+}
+
+// StartQuizAttempt
+message StartQuizAttemptRequest {
+  string quiz_id = 1;
+  string user_id = 2;
+}
+
+message StartQuizAttemptResponse {
+  QuizAttempt attempt = 1;
+}
+
+// SubmitAnswer
+message SubmitAnswerRequest {
+  string attempt_id = 1;
+  string question_id = 2;
+  repeated string selected_answer_ids = 3;
+  optional string text_answer = 4;
+}
+
+message SubmitAnswerResponse {
+  QuizAttemptAnswer answer = 1;
+}
+
+// CompleteQuizAttempt
+message CompleteQuizAttemptRequest {
+  string attempt_id = 1;
+}
+
+message CompleteQuizAttemptResponse {
+  QuizAttempt attempt = 1;
+}
+
+// GetAttempt
+message GetAttemptRequest {
+  string attempt_id = 1;
+}
+
+message GetAttemptResponse {
+  AttemptWithAnswers attempt = 1;
+}
+
+// GetUserAttempts
+message GetUserAttemptsRequest {
+  string user_id = 1;
+  string quiz_id = 2;
+}
+
+message GetUserAttemptsResponse {
+  repeated QuizAttempt attempts = 1;
+}
