@@ -131,6 +131,21 @@ func (c *CourseClient) DeleteLesson(ctx context.Context, req *coursev1.DeleteLes
 	return c.client.DeleteLesson(ctx, req)
 }
 
+// CreateStep создает новый шаг
+func (c *CourseClient) CreateStep(ctx context.Context, req *coursev1.CreateStepRequest) (*coursev1.CreateStepResponse, error) {
+	return c.client.CreateStep(ctx, req)
+}
+
+// UpdateStep обновляет шаг
+func (c *CourseClient) UpdateStep(ctx context.Context, req *coursev1.UpdateStepRequest) (*coursev1.UpdateStepResponse, error) {
+	return c.client.UpdateStep(ctx, req)
+}
+
+// DeleteStep удаляет шаг
+func (c *CourseClient) DeleteStep(ctx context.Context, req *coursev1.DeleteStepRequest) (*coursev1.DeleteStepResponse, error) {
+	return c.client.DeleteStep(ctx, req)
+}
+
 // Close закрывает соединение
 func (c *CourseClient) Close() error {
 	return c.conn.Close()
