@@ -152,6 +152,7 @@ type AddQuestionRequest struct {
 	QuestionType string
 	QuestionText string
 	Explanation  string
+	ImageURL     *string
 	Points       int
 	OrderIndex   int
 	Answers      []AddAnswerRequest
@@ -172,6 +173,7 @@ func (s *service) AddQuestion(ctx context.Context, req *AddQuestionRequest) (*mo
 		QuestionType: req.QuestionType,
 		QuestionText: req.QuestionText,
 		Explanation:  req.Explanation,
+		ImageURL:     req.ImageURL,
 		Points:       req.Points,
 		OrderIndex:   req.OrderIndex,
 	}
@@ -207,6 +209,7 @@ type UpdateQuestionRequest struct {
 	QuestionType string
 	QuestionText string
 	Explanation  string
+	ImageURL     *string
 	Points       int
 	OrderIndex   int
 }
@@ -220,6 +223,7 @@ func (s *service) UpdateQuestion(ctx context.Context, req *UpdateQuestionRequest
 	existing.QuestionType = req.QuestionType
 	existing.QuestionText = req.QuestionText
 	existing.Explanation = req.Explanation
+	existing.ImageURL = req.ImageURL
 	existing.Points = req.Points
 	existing.OrderIndex = req.OrderIndex
 

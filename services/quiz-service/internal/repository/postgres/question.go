@@ -23,21 +23,21 @@ func (r *questionRepository) Create(ctx context.Context, question *model.QuizQue
 	query := `
 		INSERT INTO quiz_questions (
 			id, quiz_id, question_type, question_text, explanation,
-			points, order_index
-		) VALUES ($1, $2, $3, $4, $5, $6, $7)
+			image_url, points, order_index
+		) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
 		RETURNING created_at, updated_at
 	`
 
 	return r.db.QueryRow(ctx, query,
 		question.ID, question.QuizID, question.QuestionType, question.QuestionText,
-		question.Explanation, question.Points, question.OrderIndex,
+		question.Explanation, question.ImageURL, question.Points, question.OrderIndex,
 	).Scan(&question.CreatedAt, &question.UpdatedAt)
 }
 
 func (r *questionRepository) GetByID(ctx context.Context, id string) (*model.QuizQuestion, error) {
 	query := `
 		SELECT id, quiz_id, question_type, question_text, explanation,
-			points, order_index, created_at, updated_at
+			image_url, points, order_index, created_at, updated_at
 		FROM quiz_questions
 		WHERE id = $1
 	`
@@ -45,7 +45,7 @@ func (r *questionRepository) GetByID(ctx context.Context, id string) (*model.Qui
 	question := &model.QuizQuestion{}
 	err := r.db.QueryRow(ctx, query, id).Scan(
 		&question.ID, &question.QuizID, &question.QuestionType, &question.QuestionText,
-		&question.Explanation, &question.Points, &question.OrderIndex,
+		&question.Explanation, &question.ImageURL, &question.Points, &question.OrderIndex,
 		&question.CreatedAt, &question.UpdatedAt,
 	)
 	if err != nil {
@@ -58,7 +58,7 @@ func (r *questionRepository) GetByID(ctx context.Context, id string) (*model.Qui
 func (r *questionRepository) GetByQuizID(ctx context.Context, quizID string) ([]*model.QuizQuestion, error) {
 	query := `
 		SELECT id, quiz_id, question_type, question_text, explanation,
-			points, order_index, created_at, updated_at
+			image_url, points, order_index, created_at, updated_at
 		FROM quiz_questions
 		WHERE quiz_id = $1
 		ORDER BY order_index ASC
@@ -75,7 +75,7 @@ func (r *questionRepository) GetByQuizID(ctx context.Context, quizID string) ([]
 		question := &model.QuizQuestion{}
 		err := rows.Scan(
 			&question.ID, &question.QuizID, &question.QuestionType, &question.QuestionText,
-			&question.Explanation, &question.Points, &question.OrderIndex,
+			&question.Explanation, &question.ImageURL, &question.Points, &question.OrderIndex,
 			&question.CreatedAt, &question.UpdatedAt,
 		)
 		if err != nil {
@@ -91,14 +91,14 @@ func (r *questionRepository) Update(ctx context.Context, question *model.QuizQue
 	query := `
 		UPDATE quiz_questions
 		SET question_type = $2, question_text = $3, explanation = $4,
-			points = $5, order_index = $6, updated_at = NOW()
+			image_url = $5, points = $6, order_index = $7, updated_at = NOW()
 		WHERE id = $1
 		RETURNING updated_at
 	`
 
 	return r.db.QueryRow(ctx, query,
 		question.ID, question.QuestionType, question.QuestionText,
-		question.Explanation, question.Points, question.OrderIndex,
+		question.Explanation, question.ImageURL, question.Points, question.OrderIndex,
 	).Scan(&question.UpdatedAt)
 }
 

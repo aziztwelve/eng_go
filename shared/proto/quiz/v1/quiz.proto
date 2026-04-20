@@ -51,10 +51,11 @@ message QuizQuestion {
   string question_type = 3; // multiple_choice, multiple_select, true_false, text_input
   string question_text = 4;
   string explanation = 5;
-  int32 points = 6;
-  int32 order_index = 7;
-  google.protobuf.Timestamp created_at = 8;
-  google.protobuf.Timestamp updated_at = 9;
+  optional string image_url = 6; // URL изображения для вопроса
+  int32 points = 7;
+  int32 order_index = 8;
+  google.protobuf.Timestamp created_at = 9;
+  google.protobuf.Timestamp updated_at = 10;
 }
 
 message QuizAnswer {
@@ -187,9 +188,10 @@ message AddQuestionRequest {
   string question_type = 2;
   string question_text = 3;
   string explanation = 4;
-  int32 points = 5;
-  int32 order_index = 6;
-  repeated AddAnswerRequest answers = 7;
+  optional string image_url = 5;
+  int32 points = 6;
+  int32 order_index = 7;
+  repeated AddAnswerRequest answers = 8;
 }
 
 message AddAnswerRequest {
@@ -208,8 +210,9 @@ message UpdateQuestionRequest {
   string question_type = 2;
   string question_text = 3;
   string explanation = 4;
-  int32 points = 5;
-  int32 order_index = 6;
+  optional string image_url = 5;
+  int32 points = 6;
+  int32 order_index = 7;
 }
 
 message UpdateQuestionResponse {

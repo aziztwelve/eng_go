@@ -25,6 +25,7 @@ type QuizQuestion struct {
 	QuestionType string    `json:"question_type"` // multiple_choice, multiple_select, true_false, text_input, matching
 	QuestionText string    `json:"question_text"`
 	Explanation  string    `json:"explanation"`
+	ImageURL     *string   `json:"image_url,omitempty"` // URL изображения для вопроса
 	Points       int       `json:"points"`
 	OrderIndex   int       `json:"order_index"`
 	CreatedAt    time.Time `json:"created_at"`

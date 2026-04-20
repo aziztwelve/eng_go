@@ -148,11 +148,17 @@ func (a *API) AddQuestion(ctx context.Context, req *quizv1.AddQuestionRequest) (
 		}
 	}
 
+	var imageURL *string
+	if req.ImageUrl != nil {
+		imageURL = req.ImageUrl
+	}
+
 	question, err := a.quizService.AddQuestion(ctx, &quiz.AddQuestionRequest{
 		QuizID:       req.QuizId,
 		QuestionType: req.QuestionType,
 		QuestionText: req.QuestionText,
 		Explanation:  req.Explanation,
+		ImageURL:     imageURL,
 		Points:       int(req.Points),
 		OrderIndex:   int(req.OrderIndex),
 		Answers:      answers,
@@ -168,11 +174,17 @@ func (a *API) AddQuestion(ctx context.Context, req *quizv1.AddQuestionRequest) (
 
 // UpdateQuestion обновляет вопрос
 func (a *API) UpdateQuestion(ctx context.Context, req *quizv1.UpdateQuestionRequest) (*quizv1.UpdateQuestionResponse, error) {
+	var imageURL *string
+	if req.ImageUrl != nil {
+		imageURL = req.ImageUrl
+	}
+
 	question, err := a.quizService.UpdateQuestion(ctx, &quiz.UpdateQuestionRequest{
 		ID:           req.Id,
 		QuestionType: req.QuestionType,
 		QuestionText: req.QuestionText,
 		Explanation:  req.Explanation,
+		ImageURL:     imageURL,
 		Points:       int(req.Points),
 		OrderIndex:   int(req.OrderIndex),
 	})
@@ -307,6 +319,7 @@ func modelQuestionToProto(q *model.QuizQuestion) *quizv1.QuizQuestion {
 		QuestionType: q.QuestionType,
 		QuestionText: q.QuestionText,
 		Explanation:  q.Explanation,
+		ImageUrl:     q.ImageURL,
 		Points:       int32(q.Points),
 		OrderIndex:   int32(q.OrderIndex),
 		CreatedAt:    timestamppb.New(q.CreatedAt),

@@ -198,6 +198,7 @@ func (h *QuizHandler) AddQuestion(c *gin.Context) {
 		QuestionType: req.QuestionType,
 		QuestionText: req.QuestionText,
 		Explanation:  req.Explanation,
+		ImageUrl:     req.ImageURL,
 		Points:       int32(req.Points),
 		OrderIndex:   int32(req.OrderIndex),
 		Answers:      answers,
@@ -226,6 +227,7 @@ func (h *QuizHandler) UpdateQuestion(c *gin.Context) {
 		QuestionType: req.QuestionType,
 		QuestionText: req.QuestionText,
 		Explanation:  req.Explanation,
+		ImageUrl:     req.ImageURL,
 		Points:       int32(req.Points),
 		OrderIndex:   int32(req.OrderIndex),
 	})
@@ -377,12 +379,18 @@ func protoQuizToDTO(q *quizv1.Quiz) dto.QuizDTO {
 }
 
 func protoQuestionToDTO(q *quizv1.QuizQuestion) dto.QuizQuestionDTO {
+	var imageURL *string
+	if q.ImageUrl != nil {
+		imageURL = q.ImageUrl
+	}
+
 	return dto.QuizQuestionDTO{
 		ID:           q.Id,
 		QuizID:       q.QuizId,
 		QuestionType: q.QuestionType,
 		QuestionText: q.QuestionText,
 		Explanation:  q.Explanation,
+		ImageURL:     imageURL,
 		Points:       int(q.Points),
 		OrderIndex:   int(q.OrderIndex),
 		CreatedAt:    q.CreatedAt.AsTime().Format("2006-01-02T15:04:05Z07:00"),

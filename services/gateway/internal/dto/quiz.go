@@ -18,15 +18,16 @@ type QuizDTO struct {
 }
 
 type QuizQuestionDTO struct {
-	ID           string `json:"id"`
-	QuizID       string `json:"quiz_id"`
-	QuestionType string `json:"question_type"`
-	QuestionText string `json:"question_text"`
-	Explanation  string `json:"explanation"`
-	Points       int    `json:"points"`
-	OrderIndex   int    `json:"order_index"`
-	CreatedAt    string `json:"created_at"`
-	UpdatedAt    string `json:"updated_at"`
+	ID           string  `json:"id"`
+	QuizID       string  `json:"quiz_id"`
+	QuestionType string  `json:"question_type"`
+	QuestionText string  `json:"question_text"`
+	Explanation  string  `json:"explanation"`
+	ImageURL     *string `json:"image_url,omitempty"`
+	Points       int     `json:"points"`
+	OrderIndex   int     `json:"order_index"`
+	CreatedAt    string  `json:"created_at"`
+	UpdatedAt    string  `json:"updated_at"`
 }
 
 type QuizAnswerDTO struct {
@@ -110,6 +111,7 @@ type AddQuestionRequest struct {
 	QuestionType string              `json:"question_type" binding:"required"`
 	QuestionText string              `json:"question_text" binding:"required"`
 	Explanation  string              `json:"explanation"`
+	ImageURL     *string             `json:"image_url"`
 	Points       int                 `json:"points" binding:"required,min=1"`
 	OrderIndex   int                 `json:"order_index" binding:"required,min=1"`
 	Answers      []AddAnswerRequest  `json:"answers" binding:"required,min=1"`
@@ -122,11 +124,12 @@ type AddAnswerRequest struct {
 }
 
 type UpdateQuestionRequest struct {
-	QuestionType string `json:"question_type" binding:"required"`
-	QuestionText string `json:"question_text" binding:"required"`
-	Explanation  string `json:"explanation"`
-	Points       int    `json:"points" binding:"required,min=1"`
-	OrderIndex   int    `json:"order_index" binding:"required,min=1"`
+	QuestionType string  `json:"question_type" binding:"required"`
+	QuestionText string  `json:"question_text" binding:"required"`
+	Explanation  string  `json:"explanation"`
+	ImageURL     *string `json:"image_url"`
+	Points       int     `json:"points" binding:"required,min=1"`
+	OrderIndex   int     `json:"order_index" binding:"required,min=1"`
 }
 
 type StartQuizAttemptRequest struct {
