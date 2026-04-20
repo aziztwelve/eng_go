@@ -16,15 +16,17 @@ type CourseResponse struct {
 
 // CourseDetailResponse DTO для детальной информации о курсе
 type CourseDetailResponse struct {
-	ID          string           `json:"id"`
-	Title       string           `json:"title"`
-	Description string           `json:"description"`
-	Level       string           `json:"level"`
-	Language    string           `json:"language"`
-	Status      string           `json:"status"`
-	Modules     []ModuleResponse `json:"modules"`
-	CreatedAt   string           `json:"created_at"`
-	UpdatedAt   string           `json:"updated_at"`
+	ID           string           `json:"id"`
+	Title        string           `json:"title"`
+	Description  string           `json:"description"`
+	Level        string           `json:"level"`
+	Language     string           `json:"language"`
+	Status       string           `json:"status"`
+	Price        float64          `json:"price,omitempty"`
+	InstructorID string           `json:"instructor_id,omitempty"`
+	Modules      []ModuleResponse `json:"modules"`
+	CreatedAt    string           `json:"created_at"`
+	UpdatedAt    string           `json:"updated_at"`
 }
 
 // ModuleResponse DTO для модуля
@@ -49,6 +51,7 @@ type LessonResponse struct {
 type StepResponse struct {
 	ID         string `json:"id"`
 	Type       string `json:"type"`
+	Title      string `json:"title"`
 	Content    string `json:"content"`
 	OrderIndex int32  `json:"order_index"`
 }

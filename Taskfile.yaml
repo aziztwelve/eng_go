@@ -273,6 +273,8 @@ tasks:
         (cd services/course-service && go build -o ../../bin/course-service cmd/main.go)
         echo "  📦 Video Service..."
         (cd services/video-service && go build -o ../../bin/video-service cmd/main.go)
+        echo "  📦 Quiz Service..."
+        (cd services/quiz-service && go build -o ../../bin/quiz-service cmd/main/main.go)
         echo "  📦 Gateway..."
         (cd services/gateway && go build -o ../../bin/gateway cmd/main.go)
         echo "✅ Все сервисы собраны в ./bin/"
@@ -306,6 +308,12 @@ tasks:
         export $(cat ../../deploy/env/video.env | grep -v '^#' | xargs)
         nohup ../../bin/video-service > ../../logs/video.log 2>&1 &
         echo "  ✅ Video Service (PID: $!)"
+        
+        # Quiz Service
+        cd ../quiz-service
+        export $(cat ../../deploy/env/quiz.env | grep -v '^#' | xargs)
+        nohup ../../bin/quiz-service > ../../logs/quiz.log 2>&1 &
+        echo "  ✅ Quiz Service (PID: $!)"
         
         # Gateway
         cd ../gateway

@@ -84,16 +84,49 @@ func (h *CourseHandler) GetCourse(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, dto.CourseResponse{
-		ID:           resp.Course.Id,
-		Title:        resp.Course.Title,
-		Description:  resp.Course.Description,
-		Price:        resp.Course.Price,
+	// Маппим модули с уроками и шагами
+	modules := make([]dto.ModuleResponse, 0, len(resp.Modules))
+	for _, moduleWithLessons := range resp.Modules {
+		lessons := make([]dto.LessonResponse, 0, len(moduleWithLessons.Lessons))
+		for _, lessonWithSteps := range moduleWithLessons.Lessons {
+			steps := make([]dto.StepResponse, 0, len(lessonWithSteps.Steps))
+			for _, step := range lessonWithSteps.Steps {
+				steps = append(steps, dto.StepResponse{
+					ID:         step.Id,
+					Type:       step.Type,
+					Title:      step.Title,
+					Content:    step.Content,
+					OrderIndex: step.OrderIndex,
+				})
+			}
+			lessons = append(lessons, dto.LessonResponse{
+				ID:          lessonWithSteps.Lesson.Id,
+				Title:       lessonWithSteps.Lesson.Title,
+				Description: lessonWithSteps.Lesson.Description,
+				OrderIndex:  lessonWithSteps.Lesson.OrderIndex,
+				Steps:       steps,
+			})
+		}
+		modules = append(modules, dto.ModuleResponse{
+			ID:          moduleWithLessons.Module.Id,
+			Title:       moduleWithLessons.Module.Title,
+			Description: moduleWithLessons.Module.Description,
+			OrderIndex:  moduleWithLessons.Module.OrderIndex,
+			Lessons:     lessons,
+		})
+	}
+
+	c.JSON(http.StatusOK, dto.CourseDetailResponse{
+		ID:          resp.Course.Id,
+		Title:       resp.Course.Title,
+		Description: resp.Course.Description,
+		Level:       resp.Course.Level,
+		Language:    resp.Course.Language,
+		Price:       resp.Course.Price,
 		InstructorID: resp.Course.InstructorId,
-		Level:        resp.Course.Level,
-		Language:     resp.Course.Language,
-		CreatedAt:    resp.Course.CreatedAt.AsTime().Format("2006-01-02T15:04:05Z"),
-		UpdatedAt:    resp.Course.UpdatedAt.AsTime().Format("2006-01-02T15:04:05Z"),
+		CreatedAt:   resp.Course.CreatedAt.AsTime().Format("2006-01-02T15:04:05Z"),
+		UpdatedAt:   resp.Course.UpdatedAt.AsTime().Format("2006-01-02T15:04:05Z"),
+		Modules:     modules,
 	})
 }
 
