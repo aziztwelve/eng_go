@@ -68,12 +68,13 @@ func (d *diContainer) VideoRepository(ctx context.Context) repository.VideoRepos
 func (d *diContainer) Storage(ctx context.Context) storage.Storage {
 	if d.storage == nil {
 		cfg := minioStorage.Config{
-			Endpoint:  config.AppConfig().Minio.Endpoint(),
-			AccessKey: config.AppConfig().Minio.AccessKey(),
-			SecretKey: config.AppConfig().Minio.SecretKey(),
-			UseSSL:    config.AppConfig().Minio.UseSSL(),
-			Region:    config.AppConfig().Minio.Region(),
-			Bucket:    config.AppConfig().Minio.Bucket(),
+			Endpoint:       config.AppConfig().Minio.Endpoint(),
+			PublicEndpoint: config.AppConfig().Minio.PublicEndpoint(),
+			AccessKey:      config.AppConfig().Minio.AccessKey(),
+			SecretKey:      config.AppConfig().Minio.SecretKey(),
+			UseSSL:         config.AppConfig().Minio.UseSSL(),
+			Region:         config.AppConfig().Minio.Region(),
+			Bucket:         config.AppConfig().Minio.Bucket(),
 		}
 
 		stor, err := minioStorage.NewMinioStorage(cfg)

@@ -34,7 +34,7 @@ func NewVideoService(
 	}
 }
 
-// GetVideoURL получает signed URL для видео
+// GetVideoURL получает URL для видео
 func (s *VideoService) GetVideoURL(ctx context.Context, videoID, userID string) (string, int, error) {
 	// 1. Получить метаданные из БД
 	video, err := s.repo.GetByID(ctx, videoID)
@@ -47,20 +47,18 @@ func (s *VideoService) GetVideoURL(ctx context.Context, videoID, userID string) 
 		return "", 0, errors.New("video is not available")
 	}
 
-	// 3. Генерировать signed URL
-	signedURL, err := s.storage.GeneratePresignedURL(ctx, video.StorageKey, s.urlExpiresIn)
-	if err != nil {
-		return "", 0, errors.Wrap(err, "failed to generate signed URL")
-	}
+	// 3. Получить публичный URL (bucket уже публичный, signed URL не нужен)
+	publicURL := s.storage.GetPublicURL(video.StorageKey)
 
-	return signedURL, int(s.urlExpiresIn.Seconds()), nil
+	return publicURL, int(s.urlExpiresIn.Seconds()), nil
 }
 
 // UploadVideo загружает видео
 func (s *VideoService) UploadVideo(ctx context.Context, metadata *model.VideoMetadata, data io.Reader) (string, error) {
 	// 1. Генерировать ID и storage key
 	videoID := uuid.New().String()
-	storageKey := fmt.Sprintf("videos/%s.mp4", videoID)
+	// Убираем префикс videos/ так как bucket уже называется videos
+	storageKey := fmt.Sprintf("%s.mp4", videoID)
 
 	// 2. Загрузить в MinIO
 	err := s.storage.UploadVideo(ctx, storageKey, data, metadata.SizeBytes, metadata.ContentType)

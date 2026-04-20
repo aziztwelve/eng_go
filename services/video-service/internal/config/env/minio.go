@@ -5,12 +5,13 @@ import (
 )
 
 type minioEnvConfig struct {
-	Endpoint  string `env:"MINIO_ENDPOINT,required"`
-	AccessKey string `env:"MINIO_ACCESS_KEY,required"`
-	SecretKey string `env:"MINIO_SECRET_KEY,required"`
-	UseSSL    bool   `env:"MINIO_USE_SSL" envDefault:"false"`
-	Region    string `env:"MINIO_REGION"`
-	Bucket    string `env:"MINIO_BUCKET,required"`
+	Endpoint       string `env:"MINIO_ENDPOINT,required"`
+	PublicEndpoint string `env:"MINIO_PUBLIC_ENDPOINT"` // Для генерации публичных URL
+	AccessKey      string `env:"MINIO_ACCESS_KEY,required"`
+	SecretKey      string `env:"MINIO_SECRET_KEY,required"`
+	UseSSL         bool   `env:"MINIO_USE_SSL" envDefault:"false"`
+	Region         string `env:"MINIO_REGION"`
+	Bucket         string `env:"MINIO_BUCKET,required"`
 }
 
 type MinioConfig struct {
@@ -28,6 +29,13 @@ func NewMinioConfig() (*MinioConfig, error) {
 
 func (cfg *MinioConfig) Endpoint() string {
 	return cfg.raw.Endpoint
+}
+
+func (cfg *MinioConfig) PublicEndpoint() string {
+	if cfg.raw.PublicEndpoint != "" {
+		return cfg.raw.PublicEndpoint
+	}
+	return cfg.raw.Endpoint // Fallback к Endpoint если PublicEndpoint не указан
 }
 
 func (cfg *MinioConfig) AccessKey() string {

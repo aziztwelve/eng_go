@@ -11,6 +11,9 @@ type Storage interface {
 	// GeneratePresignedURL генерирует временный URL для доступа к видео
 	GeneratePresignedURL(ctx context.Context, objectKey string, expiresIn time.Duration) (string, error)
 
+	// GetPublicURL возвращает публичный URL для видео (без подписи)
+	GetPublicURL(objectKey string) string
+
 	// UploadVideo загружает видео в хранилище
 	UploadVideo(ctx context.Context, objectKey string, reader io.Reader, size int64, contentType string) error
 
