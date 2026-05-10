@@ -239,12 +239,13 @@ func (h *AdminVideoRealHandler) UploadVideo(c *gin.Context) {
 	}
 
 	// Send metadata first
+	duration := mp4Duration(fileData)
 	metadata := &videov1.VideoMetadata{
 		Title:           title,
 		Description:     description,
 		ContentType:     header.Header.Get("Content-Type"),
 		SizeBytes:       header.Size,
-		DurationSeconds: 0,
+		DurationSeconds: duration,
 	}
 
 	if err := stream.Send(&videov1.UploadVideoRequest{
@@ -296,7 +297,7 @@ func (h *AdminVideoRealHandler) UploadVideo(c *gin.Context) {
 		BucketName:      "videos",
 		ContentType:     header.Header.Get("Content-Type"),
 		SizeBytes:       header.Size,
-		DurationSeconds: 0,
+		DurationSeconds: duration,
 		Status:          "active",
 		CreatedAt:       time.Now().Format(time.RFC3339),
 		UpdatedAt:       time.Now().Format(time.RFC3339),
