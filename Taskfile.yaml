@@ -185,6 +185,13 @@ tasks:
     cmds:
       - go run cmd/main.go
 
+  run-quiz:
+    desc: "Запустить Quiz Service локально"
+    dir: services/quiz-service
+    dotenv: ['../../deploy/env/quiz.env']
+    cmds:
+      - go run cmd/main/main.go
+
   run-gateway:
     desc: "Запустить API Gateway локально"
     dir: services/gateway
@@ -198,44 +205,43 @@ tasks:
       - |
         echo "🚀 Запускаем сервисы в фоне..."
         mkdir -p logs
-        
-        # Auth Service
-        cd services/auth-service
-        export $(cat ../../deploy/env/auth.env | grep -v '^#' | xargs)
-        nohup go run cmd/main.go > ../../logs/auth.log 2>&1 &
-        AUTH_PID=$!
-        echo "  ✅ Auth Service (PID: $AUTH_PID)"
-        
-        # User Service
-        cd ../user-service
-        export $(cat ../../deploy/env/user.env | grep -v '^#' | xargs)
-        nohup go run cmd/main.go > ../../logs/user.log 2>&1 &
-        USER_PID=$!
-        echo "  ✅ User Service (PID: $USER_PID)"
-        
-        # Course Service
-        cd ../course-service
-        export $(cat ../../deploy/env/course.env | grep -v '^#' | xargs)
-        nohup go run cmd/main.go > ../../logs/course.log 2>&1 &
-        COURSE_PID=$!
-        echo "  ✅ Course Service (PID: $COURSE_PID)"
-        
-        # Video Service
-        cd ../video-service
-        export $(cat ../../deploy/env/video.env | grep -v '^#' | xargs)
-        nohup go run cmd/main.go > ../../logs/video.log 2>&1 &
-        VIDEO_PID=$!
-        echo "  ✅ Video Service (PID: $VIDEO_PID)"
-        
-        # Gateway
-        cd ../gateway
-        export $(cat ../../deploy/env/gateway.env | grep -v '^#' | xargs)
-        nohup go run cmd/main.go > ../../logs/gateway.log 2>&1 &
-        GATEWAY_PID=$!
-        echo "  ✅ Gateway (PID: $GATEWAY_PID)"
-        
+
+        ROOT_DIR="$(pwd)"
+
+        # setsid отделяет процесс в новую сессию — он переживёт завершение
+        # текущего task-блока (важно для последнего сервиса — gateway, у
+        # которого нет хвоста других команд для «оторваться»).
+        start_svc() {
+          local name="$1" dir="$2" envf="$3" entry="$4" log="$5"
+          (
+            cd "$ROOT_DIR/services/$dir"
+            set -a
+            . "$ROOT_DIR/deploy/env/$envf"
+            set +a
+            setsid bash -c "exec go run $entry" \
+              > "$ROOT_DIR/logs/$log" 2>&1 < /dev/null &
+          )
+          echo "  ✅ $name"
+        }
+
+        start_svc "Auth Service"   auth-service    auth.env    cmd/main.go      auth.log
+        start_svc "User Service"   user-service    user.env    cmd/main.go      user.log
+        start_svc "Course Service" course-service  course.env  cmd/main.go      course.log
+        start_svc "Video Service"  video-service   video.env   cmd/main.go      video.log
+        # Gateway требует Quiz gRPC client — запускаем quiz до gateway.
+        start_svc "Quiz Service"   quiz-service    quiz.env    cmd/main/main.go quiz.log
+
+        # Дать backend-сервисам пару секунд подняться, чтобы gateway не падал
+        # на ретраях gRPC-клиентов при старте.
+        sleep 3
+
+        start_svc "Gateway"        gateway         gateway.env cmd/main.go      gateway.log
+
+        # Подождать, пока gateway успеет fork+setsid и оторвётся от task-shell.
+        sleep 1
+
         echo "📊 Логи доступны в ./logs/"
-        echo "🛑 Для остановки: pkill -f 'go run cmd/main.go'"
+        echo "🛑 Для остановки: task stop-all"
 
   stop-all:
     desc: "Остановить все запущенные сервисы"

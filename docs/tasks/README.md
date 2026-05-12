@@ -94,15 +94,15 @@ gamification.AddXP() ← вызывается одинаково
 
 ## 🗺️ Фазы развития
 
-| # | Фаза | Срок | Сложность | Зависимости |
-|---|------|------|-----------|-------------|
-| 0 | [Standalone-контент](./phase-0-standalone-content.md) | 3-5 дней | Низкая | — |
-| 1 | [Геймификация](./phase-1-gamification.md) | 1-2 нед | Средняя | Phase 0 |
-| 2 | [Новые форматы шагов](./phase-2-step-formats.md) | 2-3 нед | Высокая | Phase 1 |
-| 3 | [Адаптивное обучение](./phase-3-adaptive-learning.md) | 2 нед | Высокая | Phase 1, 2 |
-| 4 | [Социальное (Leagues)](./phase-4-social.md) | 1-2 нед | Средняя | Phase 1 |
-| 5 | [AI интеграция](./phase-5-ai-integration.md) | 2-3 нед | Высокая | Phase 2 |
-| 6 | [Монетизация](./phase-6-monetization.md) | 2 нед | Средняя | Phase 1, 4 |
+| # | Фаза | Срок | Сложность | Зависимости | Статус |
+|---|------|------|-----------|-------------|--------|
+| 0 | [Standalone-контент](./phase-0-standalone-content.md) ([log](./PHASE_0_PROGRESS.md)) | 3-5 дней | Низкая | — | ✅ Done |
+| 1 | [Геймификация](./phase-1-gamification.md) | 1-2 нед | Средняя | Phase 0 | 📝 Planning |
+| 2 | [Новые форматы шагов](./phase-2-step-formats.md) | 2-3 нед | Высокая | Phase 1 | 📝 Planning |
+| 3 | [Адаптивное обучение](./phase-3-adaptive-learning.md) | 2 нед | Высокая | Phase 1, 2 | 📝 Planning |
+| 4 | [Социальное (Leagues)](./phase-4-social.md) | 1-2 нед | Средняя | Phase 1 | 📝 Planning |
+| 5 | [AI интеграция](./phase-5-ai-integration.md) | 2-3 нед | Высокая | Phase 2 | 📝 Planning |
+| 6 | [Монетизация](./phase-6-monetization.md) | 2 нед | Средняя | Phase 1, 4 | 📝 Planning |
 
 **Общий срок:** ~3 месяца до полного MVP
 

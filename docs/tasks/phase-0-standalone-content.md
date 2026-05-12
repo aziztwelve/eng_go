@@ -3,7 +3,7 @@
 **Срок:** 3-5 дней  
 **Сложность:** Низкая  
 **Зависимости:** —  
-**Статус:** 📝 Planning
+**Статус:** ✅ Done (см. [PHASE_0_PROGRESS.md](./PHASE_0_PROGRESS.md))
 
 ---
 
@@ -313,79 +313,84 @@ GET    /api/v1/progress/standalone            — прогресс по standalo
 ## 💾 Бэкенд задачи
 
 ### 0.1 Миграции
-- [ ] Сделать `module_id` nullable в `courses.lessons`
-- [ ] Создать таблицу `courses.learning_tracks`
-- [ ] Создать таблицу `courses.track_lessons`
-- [ ] Расширить `courses.user_step_progress` полями `source_type`, `source_id`
+- [x] Сделать `module_id` nullable в `courses.lessons`
+- [x] Создать таблицу `courses.learning_tracks`
+- [x] Создать таблицу `courses.track_lessons`
+- [x] Расширить `courses.step_progress` полями `source_type`, `source_id`
+      (фактически в `courses.step_progress`, не `user_step_progress`)
 
 ### 0.2 Course Service: расширение
 
 #### Модели:
-- [ ] `model/track.go` — Track структура
-- [ ] Обновить `model/lesson.go`: `ModuleID *UUID` (pointer для nullable)
+- [x] `model/track.go` — Track структура
+- [x] Обновить `model/lesson.go`: `ModuleID *string` (pointer для nullable)
+- [x] `model/progress.go`: `LessonProgress.CourseID *string`
 
 #### Repositories:
-- [ ] `repository/track_repo.go`:
-  - [ ] `Create(track)`
-  - [ ] `Update(track)`
-  - [ ] `Delete(id)`
-  - [ ] `GetByID(id)`
-  - [ ] `List(filters)`
-  - [ ] `AddLesson(trackID, lessonID, orderIndex)`
-  - [ ] `RemoveLesson(trackID, lessonID)`
-  - [ ] `GetLessons(trackID)` — отсортировано
-- [ ] Расширить `repository/lesson_repo.go`:
-  - [ ] `CreateStandalone(lesson)` — без module_id
-  - [ ] `ListStandalone(filters)` — где module_id IS NULL
-  - [ ] `IsStandalone(lessonID)` — helper
+- [x] `repository/postgres/track.go`:
+  - [x] `Create(track)`
+  - [x] `Update(track)`
+  - [x] `Delete(id)`
+  - [x] `GetByID(id)` / `GetByCode(code)`
+  - [x] `List(filters)`
+  - [x] `AddLesson(trackID, lessonID, orderIndex)`
+  - [x] `RemoveLesson(trackID, lessonID)`
+  - [x] `GetLessons(trackID)` — отсортировано
+- [x] Расширить `repository/postgres/lesson.go`:
+  - [x] `CreateStandalone(lesson)` — без module_id (через Create + module_id IS NULL)
+  - [x] `ListStandalone(filters)` — где module_id IS NULL
+  - [x] standalone-aware queries в `progress.go`
 
 #### Services:
-- [ ] `service/track_service.go`:
-  - [ ] CRUD методы
-  - [ ] `GetTracksWithLessons(filters)`
-- [ ] Обновить `service/lesson_service.go`:
-  - [ ] `Create(lesson, options)` — поддерживать standalone
-  - [ ] `CanAccess(userID, lessonID)` — учесть standalone
-- [ ] Обновить `service/progress_service.go`:
-  - [ ] При записи progress — определить source
-  - [ ] `GetProgressByTrack(userID, trackID)`
-  - [ ] `GetStandaloneProgress(userID)`
+- [x] `service/track.go`:
+  - [x] CRUD методы
+  - [x] `GetTracksWithLessons(filters)`
+- [x] Обновить `service/lesson.go`:
+  - [x] `Create(lesson, options)` — поддерживать standalone
+  - [x] `CanAccess(userID, lessonID)` — учесть standalone (via `MarkStepComplete`)
+- [x] Обновить `service/progress.go`:
+  - [x] При записи progress — определить source (`module_id IS NULL` → `standalone`)
+- [ ] `GetProgressByTrack(userID, trackID)` — отложено, по треку прогресс
+      пока считается на клиенте через lesson_progress
+- [ ] `GetStandaloneProgress(userID)` — отложено, не нужен для UI Phase 0
 
 #### gRPC API:
-- [ ] Добавить методы для Track в proto
-- [ ] Сгенерировать код
-- [ ] Имплементация handlers
+- [x] Добавить методы для Track в proto
+- [x] Сгенерировать код
+- [x] Имплементация handlers
 
 ### 0.3 Gateway: новые endpoints
-- [ ] `GET /api/v1/tracks` — список
-- [ ] `GET /api/v1/tracks/:id`
-- [ ] `GET /api/v1/tracks/:id/lessons`
-- [ ] `POST /api/v1/tracks` (admin)
-- [ ] `PUT /api/v1/tracks/:id` (admin)
-- [ ] `DELETE /api/v1/tracks/:id` (admin)
-- [ ] `POST /api/v1/lessons` — теперь с опциональным module_id
-- [ ] `GET /api/v1/lessons/standalone`
+- [x] `GET /api/v1/tracks` — список
+- [x] `GET /api/v1/tracks/:id` (UUID **или** `code`)
+- [x] `GET /api/v1/tracks/:id?include_lessons=true`
+- [x] `POST /api/v1/admin/tracks` (admin)
+- [x] `PUT  /api/v1/admin/tracks/:id` (admin)
+- [x] `DELETE /api/v1/admin/tracks/:id` (admin)
+- [x] `PUT  /api/v1/admin/tracks/:id/publish` (admin)
+- [x] `POST/DELETE/PUT /api/v1/admin/tracks/:id/lessons[...]` (admin)
+- [x] `POST /api/v1/admin/courses/modules/:moduleId/lessons` уже без course/module
+      coupling в логике; standalone-уроки создаются через track-add (см. ниже)
+- [x] `GET  /api/v1/lessons/:id` — публичный универсальный read (course-bound + standalone)
+- [ ] `GET /api/v1/lessons/standalone` — **не делали** (заменено `useDailyLesson` +
+      `/tracks?track_type=daily`)
 
 ### 0.4 Seed данные
-- [ ] Создать 2-3 example tracks:
-  - "Daily English" (track_type: 'daily')
-  - "Travel Stories" (track_type: 'stories')  
-  - "Quick Grammar Tips" (track_type: 'thematic')
-- [ ] Добавить 5-10 standalone lessons в каждый трек
+- [x] `seeds/006_tracks.sql`: 3 трека (Daily English / Stories / Podcast)
+- [x] 6 standalone lessons + по text-step’у на каждый
 
 ### 0.5 Подготовка к Phase 1 (gamification)
-- [ ] Определить event'ы, которые будет слушать gamification:
-  - `step.completed` (с source_type, source_id)
-  - `lesson.completed`
-  - `quiz.failed` (для hearts)
-- [ ] Hooks в Course Service — где вызывать gamification client (заготовить методы, не реализуя пока сам сервис)
+- [x] Определить event'ы:
+  - [x] `step.completed` (с `source_type`, `source_id`)
+  - [x] `lesson.completed`
+  - [ ] `quiz.failed` (для hearts) — относится к Phase 1, тут только заглушка
+- [x] Hooks в Course Service:
+      `internal/client/gamification/{client,noop}.go` + вызовы из
+      `progress.MarkStepComplete`. Подмена noop → gRPC-клиент = одна строка в DI.
 
 ### 0.6 Тесты
-- [ ] Lesson создаётся без module
-- [ ] Standalone Lesson доступен без enrollment
-- [ ] Track CRUD работает
-- [ ] Lesson можно добавить в trackи в course одновременно
-- [ ] Progress правильно определяет source_type
+- [ ] Unit/integration тесты — по решению user’а на этом этапе не вводили
+- [x] E2E smoke: `scripts/e2e_phase0.sh` (login → tracks → standalone lesson →
+      complete step → проверка `step_progress.source_type='standalone'`)
 
 ---
 
@@ -394,38 +399,46 @@ GET    /api/v1/progress/standalone            — прогресс по standalo
 ### Admin Panel (`eng_next2`):
 
 #### Новые страницы:
-- [ ] `/admin/tracks` — список треков
-- [ ] `/admin/tracks/new` — создать
-- [ ] `/admin/tracks/:id` — редактирование (с lessons управлением)
+- [x] `/admin/tracks` — список треков
+- [x] `/admin/tracks/new` — создать
+- [x] `/admin/tracks/[id]` — редактирование (с управлением lessons)
 
 #### Расширение:
-- [ ] `/admin/lessons/new` — toggle "Standalone" / "В курсе"
-- [ ] При standalone — multi-select треков
-- [ ] `/admin/courses/:id` — пометки рядом с lessons (если в нескольких треках)
+- [x] Add-lesson UI делается прямо в `/admin/tracks/[id]` (выбор существующего
+      урока + reorder); отдельной страницы `/admin/lessons/new`
+      со standalone-toggle решили не вводить — стандартный course-flow
+      остался без изменений
+- [ ] `/admin/courses/:id` — пометки рядом с lessons если урок есть в треках
+      (cosmetic, отложено в Phase 1)
 
 #### Компоненты:
-- [ ] `TrackList.tsx`
-- [ ] `TrackForm.tsx`
-- [ ] `TrackLessonManager.tsx` — drag&drop сортировка lessons в треке
-- [ ] `LessonTypeBadge.tsx` — Course/Track/Standalone
+- [x] `components/admin/Sidebar.tsx` — пункт «Tracks»
+- [x] Track list/edit-формы — встроены в `app/admin/tracks/*` (без выноса в отдельные компоненты)
+- [x] `components/tracks/LessonTypeBadge.tsx` — Course/Track/Standalone
+      (web-версия; mobile-аналог `components/tracks/lesson-type-badge.tsx`)
 
 ### User-facing (`eng_next2` + `eng_mob`):
 
 #### Главная страница:
-- [ ] Расширить с секциями: Daily Lesson, Tracks, Courses
-- [ ] Компонент `DailyLessonCard.tsx`
-- [ ] Компонент `TrackCard.tsx`
-- [ ] Компонент `TrackLessonsList.tsx`
+- [x] Web (`app/page.tsx`): секции Daily Lesson + Tracks (Hero и featured-курсы — как было)
+- [x] Mobile (`(tabs)/index.tsx`): секции Daily / Tracks / Courses
+- [x] Web компонент `DailyLessonCard.tsx`
+- [x] Web компоненты `TrackCard.tsx`, `TrackLessonsList.tsx`
+- [x] Mobile компоненты `tracks/track-card.tsx`, `tracks/track-lessons-list.tsx`,
+      `tracks/daily-lesson-card.tsx`, `tracks/lesson-type-badge.tsx`
 
 #### Routing:
-- [ ] `/tracks` — список треков
-- [ ] `/tracks/:id` — детали трека + lessons
-- [ ] `/lessons/:id` — универсальный view (для любого lesson, в курсе или нет)
+- [x] Web: `/tracks` — список треков (поиск + фильтр по типу)
+- [x] Web: `/tracks/[id]` — детали (id или code) + lessons
+- [x] Web: `/lessons/[id]` — универсальный view (course-bound + standalone)
+- [x] Mobile: `(tabs)/tracks/index.tsx` + `(tabs)/tracks/[id].tsx`
+- [x] Mobile: `learn/[lessonId].tsx` уже универсален (без changes)
 
 #### Hooks:
-- [ ] `use-tracks.ts`
-- [ ] `use-track.ts`
-- [ ] `use-track-lessons.ts`
+- [x] Web: `hooks/use-tracks.ts` (`useTracks`, `useTrack`)
+- [x] Web: `hooks/use-daily-lesson.ts`
+- [x] Mobile: `hooks/use-tracks.ts` + `hooks/use-daily-lesson.ts`
+- [x] Mobile: `lib/api-client.ts` — namespaces `TracksApi`, `LessonsApi`
 
 ---
 

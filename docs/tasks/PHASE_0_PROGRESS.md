@@ -4,7 +4,8 @@
 > Обновляется по мере закрытия задач. См. [README.md](./README.md)
 > и [phase-0-standalone-content.md](./phase-0-standalone-content.md).
 
-**Дата последнего обновления:** 2026-05-12
+**Дата последнего обновления:** 2026-05-12  
+**Статус:** ✅ **Done**
 
 ---
 
@@ -74,17 +75,44 @@
   - `lib/i18n.tsx` — `common.tracks`, `common.daily`, `common.explore_tracks`,
     `common.standalone` (ru + en).
 
----
+### Mobile (`eng_mob`)
 
-## 🚧 Осталось (todo)
+- **API client + типы:**
+  - `lib/api-client.ts` — namespaces `TracksApi` (list/get) и `LessonsApi`
+    (get/completeStep) поверх существующего `ApiClient`.
+  - `types/api.ts` — `Track`, `TrackType`, `TrackWithLessons`,
+    `ListTracksResponse`, `TrackFilters`, `LessonDetails.is_standalone`.
+- **Hooks:** `hooks/use-tracks.ts` (`useTracks`, `useTrack`) и
+  `hooks/use-daily-lesson.ts` — точные RN-аналоги web-версии.
+- **Screens (новый таб «Tracks» + новый Home):**
+  - `app/(tabs)/index.tsx` — главный экран после логина с секциями
+    Daily Lesson / Tracks / Courses. После `useAuth.login` редиректим на
+    `/(tabs)` (раньше уходили на `/(tabs)/courses`).
+  - `app/(tabs)/tracks/index.tsx` — каталог треков, поиск + фильтр
+    по типу (daily/stories/podcast/thematic).
+  - `app/(tabs)/tracks/[id].tsx` — детали трека (UUID **или** code) +
+    список уроков. Тап по уроку → `/learn/[lessonId]`.
+  - `app/learn/[lessonId].tsx` уже был универсальным (использует
+    `/lessons/:id`) — изменений не потребовалось.
+- **Components `components/tracks/`:**
+  `track-card.tsx`, `track-lessons-list.tsx`, `daily-lesson-card.tsx`,
+  `lesson-type-badge.tsx`. Стиль — NativeWind, карточки в духе остальных
+  экранов (`bg-card border-4 border-border rounded-3xl`, `bg-primary` CTA).
+- **Tabs layout:** `app/(tabs)/_layout.tsx` обновлён — теперь Home / Tracks /
+  Courses / Profile. Корневой `_layout.tsx` (NativeTabs Home/Explore) и
+  welcome-экран `app/index.tsx` не трогали — это auth-gate.
+- **Typecheck:** `npx tsc --noEmit` зелёный.
 
-| # | Задача | Статус |
-|---|--------|--------|
-| 10 | E2E-скрипт `scripts/e2e_phase0.sh` (login → list tracks → standalone lesson → complete step → проверка `source_type`) | в работе |
-| 11 | Mobile: расширить `eng_mob/src/lib/api-client.ts` методами Tracks/Lessons | pending |
-| 12 | Mobile: новый таб `(tabs)/tracks` + экраны `index/[id]` + универсальный `learn/[lessonId]` + RN-компоненты | pending |
-| 13 | Mobile: главный экран `(tabs)/index.tsx` с Daily/Tracks/Courses-секциями | pending |
-| 14 | Docs: проставить `[x]` на закрытых пунктах в `phase-0-standalone-content.md`, обновить `README.md` Phase 0 (status), `DONE.md` | pending |
+### E2E
+
+- **`scripts/e2e_phase0.sh`** — bash-скрипт под существующий gateway
+  (`localhost:8081`). Делает register → login → `GET /tracks` →
+  `GET /tracks/daily-english?include_lessons=true` →
+  `GET /lessons/:id` (проверка `is_standalone=true`) →
+  `POST /progress/steps/:id/complete` → psql-проверка
+  `step_progress.source_type='standalone'` и
+  `lesson_progress.course_id IS NULL`. Зависит от `seeds/006_tracks.sql`
+  и применённой миграции `000008`.
 
 ---
 
