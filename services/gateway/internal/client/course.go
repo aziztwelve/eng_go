@@ -146,6 +146,58 @@ func (c *CourseClient) DeleteStep(ctx context.Context, req *coursev1.DeleteStepR
 	return c.client.DeleteStep(ctx, req)
 }
 
+// === Learning Tracks (Phase 0) ===
+
+// ListTracks возвращает страницу треков
+func (c *CourseClient) ListTracks(ctx context.Context, req *coursev1.ListTracksRequest) (*coursev1.ListTracksResponse, error) {
+	return c.client.ListTracks(ctx, req)
+}
+
+// GetTrack возвращает трек по ID
+func (c *CourseClient) GetTrack(ctx context.Context, req *coursev1.GetTrackRequest) (*coursev1.GetTrackResponse, error) {
+	return c.client.GetTrack(ctx, req)
+}
+
+// GetTrackByCode возвращает трек по уникальному коду
+func (c *CourseClient) GetTrackByCode(ctx context.Context, req *coursev1.GetTrackByCodeRequest) (*coursev1.GetTrackResponse, error) {
+	return c.client.GetTrackByCode(ctx, req)
+}
+
+// CreateTrack создаёт новый трек
+func (c *CourseClient) CreateTrack(ctx context.Context, req *coursev1.CreateTrackRequest) (*coursev1.CreateTrackResponse, error) {
+	return c.client.CreateTrack(ctx, req)
+}
+
+// UpdateTrack обновляет трек
+func (c *CourseClient) UpdateTrack(ctx context.Context, req *coursev1.UpdateTrackRequest) (*coursev1.UpdateTrackResponse, error) {
+	return c.client.UpdateTrack(ctx, req)
+}
+
+// DeleteTrack удаляет трек
+func (c *CourseClient) DeleteTrack(ctx context.Context, req *coursev1.DeleteTrackRequest) (*coursev1.DeleteTrackResponse, error) {
+	return c.client.DeleteTrack(ctx, req)
+}
+
+// PublishTrack меняет статус публикации
+func (c *CourseClient) PublishTrack(ctx context.Context, req *coursev1.PublishTrackRequest) (*coursev1.PublishTrackResponse, error) {
+	return c.client.PublishTrack(ctx, req)
+}
+
+// AddLessonToTrack привязывает урок к треку
+func (c *CourseClient) AddLessonToTrack(ctx context.Context, req *coursev1.AddLessonToTrackRequest) (*coursev1.AddLessonToTrackResponse, error) {
+	return c.client.AddLessonToTrack(ctx, req)
+}
+
+// RemoveLessonFromTrack отвязывает урок
+func (c *CourseClient) RemoveLessonFromTrack(ctx context.Context, req *coursev1.RemoveLessonFromTrackRequest) (*coursev1.RemoveLessonFromTrackResponse, error) {
+	return c.client.RemoveLessonFromTrack(ctx, req)
+}
+
+// ReorderTrackLessons изменяет порядок уроков
+func (c *CourseClient) ReorderTrackLessons(ctx context.Context, req *coursev1.ReorderTrackLessonsRequest) (*coursev1.ReorderTrackLessonsResponse, error) {
+	return c.client.ReorderTrackLessons(ctx, req)
+}
+
 // Close закрывает соединение
 func (c *CourseClient) Close() error {
 	return c.conn.Close()

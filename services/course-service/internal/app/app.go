@@ -69,15 +69,17 @@ func New(ctx context.Context) (*App, error) {
 	courseRepo := postgresrepo.NewCourseRepository(pool)
 	enrollmentRepo := postgresrepo.NewEnrollmentRepository(pool)
 	progressRepo := postgresrepo.NewProgressRepository(pool)
+	trackRepo := postgresrepo.NewTrackRepository(pool)
 
 	// Инициализация сервисов
 	videoClient := service.NewMockVideoClient()
 	courseService := service.NewCourseService(courseRepo, videoClient)
 	enrollmentService := service.NewEnrollmentService(enrollmentRepo)
 	progressService := service.NewProgressService(progressRepo, courseRepo, enrollmentRepo)
+	trackService := service.NewTrackService(trackRepo)
 
 	// Инициализация gRPC API
-	courseAPI := v1.NewAPI(courseService, enrollmentService, progressService)
+	courseAPI := v1.NewAPI(courseService, enrollmentService, progressService, trackService)
 
 	// Создание gRPC сервера
 	grpcServer := grpc.NewServer()

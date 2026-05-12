@@ -80,6 +80,37 @@ service CourseService {
   
   // GetCourseProgress получает прогресс по курсу
   rpc GetCourseProgress(GetCourseProgressRequest) returns (GetCourseProgressResponse);
+
+  // === Learning Tracks (Phase 0 — standalone content) ===
+  // ListTracks возвращает страницу треков
+  rpc ListTracks(ListTracksRequest) returns (ListTracksResponse);
+
+  // GetTrack возвращает трек по ID
+  rpc GetTrack(GetTrackRequest) returns (GetTrackResponse);
+
+  // GetTrackByCode возвращает трек по уникальному коду (для frontend deeplinks)
+  rpc GetTrackByCode(GetTrackByCodeRequest) returns (GetTrackResponse);
+
+  // CreateTrack создаёт новый трек
+  rpc CreateTrack(CreateTrackRequest) returns (CreateTrackResponse);
+
+  // UpdateTrack обновляет трек
+  rpc UpdateTrack(UpdateTrackRequest) returns (UpdateTrackResponse);
+
+  // DeleteTrack удаляет трек (lessons остаются, связи каскадно)
+  rpc DeleteTrack(DeleteTrackRequest) returns (DeleteTrackResponse);
+
+  // PublishTrack публикует/снимает с публикации
+  rpc PublishTrack(PublishTrackRequest) returns (PublishTrackResponse);
+
+  // AddLessonToTrack привязывает урок (включая standalone) к треку
+  rpc AddLessonToTrack(AddLessonToTrackRequest) returns (AddLessonToTrackResponse);
+
+  // RemoveLessonFromTrack отвязывает урок от трека
+  rpc RemoveLessonFromTrack(RemoveLessonFromTrackRequest) returns (RemoveLessonFromTrackResponse);
+
+  // ReorderTrackLessons атомарно переустанавливает порядок уроков в треке
+  rpc ReorderTrackLessons(ReorderTrackLessonsRequest) returns (ReorderTrackLessonsResponse);
 }
 
 // Course представляет курс
@@ -475,4 +506,135 @@ message GetCourseProgressResponse {
   int32 total_lessons = 2;
   int32 completed_lessons = 3;
   double overall_progress_percentage = 4;
+}
+
+// === Learning Tracks (Phase 0) ===
+
+// Track — тематический трек для standalone уроков
+message Track {
+  string id = 1;
+  string code = 2;
+  string title = 3;
+  string description = 4;
+  string icon_url = 5;
+  string language = 6;
+  string level = 7;
+  string track_type = 8; // thematic | daily | stories | podcast
+  bool is_published = 9;
+  int32 sort_order = 10;
+  string created_by = 11;
+  google.protobuf.Timestamp created_at = 12;
+  google.protobuf.Timestamp updated_at = 13;
+}
+
+// TrackWithLessons — трек со списком уроков (в порядке order_index в track_lessons)
+message TrackWithLessons {
+  Track track = 1;
+  repeated Lesson lessons = 2;
+}
+
+message ListTracksRequest {
+  google.protobuf.StringValue language = 1;
+  google.protobuf.StringValue level = 2;
+  google.protobuf.StringValue track_type = 3;
+  string search = 4;
+  bool include_unpublished = 5;
+  int32 limit = 6;
+  int32 offset = 7;
+}
+
+message ListTracksResponse {
+  repeated Track tracks = 1;
+  int32 total = 2;
+}
+
+message GetTrackRequest {
+  string track_id = 1;
+  bool include_lessons = 2; // если true — возвращает уроки в порядке трека
+}
+
+message GetTrackByCodeRequest {
+  string code = 1;
+  bool include_lessons = 2;
+}
+
+message GetTrackResponse {
+  Track track = 1;
+  repeated Lesson lessons = 2; // пусто, если include_lessons=false
+}
+
+message CreateTrackRequest {
+  string code = 1;
+  string title = 2;
+  string description = 3;
+  string icon_url = 4;
+  string language = 5;
+  string level = 6;
+  string track_type = 7;
+  int32 sort_order = 8;
+  string created_by = 9;
+}
+
+message CreateTrackResponse {
+  Track track = 1;
+}
+
+message UpdateTrackRequest {
+  string track_id = 1;
+  google.protobuf.StringValue title = 2;
+  google.protobuf.StringValue description = 3;
+  google.protobuf.StringValue icon_url = 4;
+  google.protobuf.StringValue language = 5;
+  google.protobuf.StringValue level = 6;
+  google.protobuf.StringValue track_type = 7;
+  google.protobuf.Int32Value sort_order = 8;
+}
+
+message UpdateTrackResponse {
+  Track track = 1;
+}
+
+message DeleteTrackRequest {
+  string track_id = 1;
+}
+
+message DeleteTrackResponse {
+  bool success = 1;
+}
+
+message PublishTrackRequest {
+  string track_id = 1;
+  bool is_published = 2;
+}
+
+message PublishTrackResponse {
+  Track track = 1;
+}
+
+message AddLessonToTrackRequest {
+  string track_id = 1;
+  string lesson_id = 2;
+  int32 order_index = 3;
+}
+
+message AddLessonToTrackResponse {
+  bool success = 1;
+}
+
+message RemoveLessonFromTrackRequest {
+  string track_id = 1;
+  string lesson_id = 2;
+}
+
+message RemoveLessonFromTrackResponse {
+  bool success = 1;
+}
+
+message ReorderTrackLessonsRequest {
+  string track_id = 1;
+  repeated string lesson_ids = 2; // новый порядок
+}
+
+message ReorderTrackLessonsResponse {
+  bool success = 1;
 }

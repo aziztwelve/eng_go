@@ -238,6 +238,156 @@ Returns list of courses/lessons using this video.
 
 ---
 
+## Learning Tracks (Phase 0 — standalone content)
+
+**Learning tracks** группируют standalone-уроки (с `module_id = NULL`) в тематические подборки:
+`Daily English`, `Short Stories`, `Podcast Bites` и т.п. Уроки могут быть привязаны как к курсу
+(через модуль), так и к одному или нескольким трекам — связь many-to-many.
+
+### Public endpoints (auth не требуется для GET списка/чтения)
+
+#### List Tracks
+**GET** `/api/v1/tracks`
+
+Query params: `language`, `level`, `track_type`, `search`, `limit` (default 20), `offset`.
+Только `is_published = true`.
+
+**Response:**
+```json
+{
+  "tracks": [
+    {
+      "id": "uuid",
+      "code": "daily-english",
+      "title": "Daily English",
+      "description": "...",
+      "icon_url": "https://...",
+      "language": "en",
+      "level": "A2",
+      "track_type": "daily",
+      "is_published": true,
+      "sort_order": 1,
+      "created_by": "",
+      "created_at": { "seconds": 1778567185, "nanos": 0 },
+      "updated_at": { "seconds": 1778567185, "nanos": 0 }
+    }
+  ],
+  "total": 3
+}
+```
+
+#### Get Track
+**GET** `/api/v1/tracks/:idOrCode?include_lessons=true`
+
+`:idOrCode` — UUID или `code` (например `daily-english`). Определяется эвристически.
+При `include_lessons=true` возвращается упорядоченный список уроков.
+
+**Response:**
+```json
+{
+  "id": "uuid",
+  "code": "daily-english",
+  "title": "Daily English",
+  "...": "...",
+  "lessons": [
+    {
+      "id": "lesson-uuid",
+      "module_id": "",
+      "title": "Daily English: Greetings at the Office",
+      "description": "...",
+      "order_index": 0
+    }
+  ]
+}
+```
+`module_id: ""` означает standalone-урок (не привязан к курсу).
+
+---
+
+### Admin endpoints (require `admin` role)
+
+#### Admin List Tracks
+**GET** `/api/v1/admin/tracks`
+
+Query params: те же, что у public, но включает неопубликованные.
+
+#### Create Track
+**POST** `/api/v1/admin/tracks`
+
+**Request:**
+```json
+{
+  "code": "daily-english",
+  "title": "Daily English",
+  "description": "Short 5-min lessons",
+  "icon_url": "https://...",
+  "language": "en",
+  "level": "A2",
+  "track_type": "daily",
+  "sort_order": 1
+}
+```
+`code` — уникальный slug (kebab-case), validation на backend требует non-empty code и title.
+`created_by` заполняется автоматически из JWT (user_id).
+
+#### Update Track
+**PUT** `/api/v1/admin/tracks/:id`
+
+Partial update — передайте только изменяемые поля. `code` меняется только через БД.
+
+```json
+{ "title": "New title", "is_published": true }
+```
+
+#### Delete Track
+**DELETE** `/api/v1/admin/tracks/:id`
+
+Удаляет трек. Уроки остаются нетронутыми; связи (`track_lessons`) каскадно удаляются.
+
+#### Publish Track
+**PUT** `/api/v1/admin/tracks/:id/publish`
+
+```json
+{ "is_published": true }
+```
+
+#### Add Lesson to Track
+**POST** `/api/v1/admin/tracks/:id/lessons`
+
+Привязывает любой урок (standalone или module-bound) к треку.
+
+```json
+{ "lesson_id": "lesson-uuid", "order_index": 0 }
+```
+
+На конфликт `(track_id, lesson_id)` делает `ON CONFLICT DO UPDATE order_index`.
+
+#### Remove Lesson from Track
+**DELETE** `/api/v1/admin/tracks/:id/lessons/:lessonId`
+
+#### Reorder Track Lessons
+**PUT** `/api/v1/admin/tracks/:id/lessons/reorder`
+
+Атомарно (транзакция) переустанавливает `order_index` по порядку в массиве.
+
+```json
+{ "lesson_ids": ["uuid1", "uuid2", "uuid3"] }
+```
+
+### Track Types
+- `thematic` — универсальная группировка
+- `daily` — Daily English и похожие короткие форматы
+- `stories` — Short Stories
+- `podcast` — Podcast Bites
+
+### Standalone Lessons
+Backward-compatible изменение: `lessons.module_id` теперь NULLABLE. Уроки без `module_id` —
+"standalone" и доступны только через треки или прямой запрос по UUID.
+На уровне Go-модели `Lesson.ModuleID == ""` означает standalone (NULL в БД).
+См. миграцию `000008_standalone_content.up.sql`.
+
+---
+
 ## Error Responses
 
 All endpoints return standard error format:

@@ -2,6 +2,7 @@ package postgres
 
 import (
 	"context"
+	"database/sql"
 	"fmt"
 	"strings"
 
@@ -11,6 +12,14 @@ import (
 	"github.com/elearning/course-service/internal/model"
 	"github.com/elearning/course-service/internal/repository"
 )
+
+// nullStringPtr возвращает *string или nil для пустой строки (для NULL в БД).
+func nullStringPtr(s string) interface{} {
+	if s == "" {
+		return nil
+	}
+	return s
+}
 
 type courseRepository struct {
 	pool *pgxpool.Pool
@@ -321,7 +330,7 @@ func (r *courseRepository) ListModulesByCourseID(ctx context.Context, courseID s
 	return modules, nil
 }
 
-// CreateLesson создает новый урок
+// CreateLesson создает новый урок. ModuleID == "" сохраняется как NULL (standalone lesson).
 func (r *courseRepository) CreateLesson(ctx context.Context, lesson *model.Lesson) error {
 	lesson.ID = uuid.New().String()
 
@@ -333,14 +342,14 @@ func (r *courseRepository) CreateLesson(ctx context.Context, lesson *model.Lesso
 
 	return r.pool.QueryRow(ctx, query,
 		lesson.ID,
-		lesson.ModuleID,
+		nullStringPtr(lesson.ModuleID),
 		lesson.Title,
 		lesson.Description,
 		lesson.OrderIndex,
 	).Scan(&lesson.CreatedAt, &lesson.UpdatedAt)
 }
 
-// GetLessonByID получает урок по ID
+// GetLessonByID получает урок по ID. NULL module_id возвращается как пустая строка.
 func (r *courseRepository) GetLessonByID(ctx context.Context, id string) (*model.Lesson, error) {
 	query := `
 		SELECT id, module_id, title, description, order_index, created_at, updated_at
@@ -349,9 +358,10 @@ func (r *courseRepository) GetLessonByID(ctx context.Context, id string) (*model
 	`
 
 	lesson := &model.Lesson{}
+	var moduleID sql.NullString
 	err := r.pool.QueryRow(ctx, query, id).Scan(
 		&lesson.ID,
-		&lesson.ModuleID,
+		&moduleID,
 		&lesson.Title,
 		&lesson.Description,
 		&lesson.OrderIndex,
@@ -363,6 +373,7 @@ func (r *courseRepository) GetLessonByID(ctx context.Context, id string) (*model
 		return nil, err
 	}
 
+	lesson.ModuleID = moduleID.String
 	return lesson, nil
 }
 
@@ -408,9 +419,10 @@ func (r *courseRepository) ListLessonsByModuleID(ctx context.Context, moduleID s
 	var lessons []*model.Lesson
 	for rows.Next() {
 		lesson := &model.Lesson{}
+		var moduleID sql.NullString
 		err := rows.Scan(
 			&lesson.ID,
-			&lesson.ModuleID,
+			&moduleID,
 			&lesson.Title,
 			&lesson.Description,
 			&lesson.OrderIndex,
@@ -420,6 +432,7 @@ func (r *courseRepository) ListLessonsByModuleID(ctx context.Context, moduleID s
 		if err != nil {
 			return nil, err
 		}
+		lesson.ModuleID = moduleID.String
 		lessons = append(lessons, lesson)
 	}
 

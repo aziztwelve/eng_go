@@ -99,6 +99,30 @@ GET /videos/{video_id}/url
 GET /videos/{video_id}
 ```
 
+#### Learning Tracks (Phase 0 — standalone content)
+
+Тематические подборки standalone-уроков (Daily English, Stories, Podcast).
+Подробнее: [ADMIN_API.md → Learning Tracks](./ADMIN_API.md#learning-tracks-phase-0--standalone-content).
+
+```bash
+# Список треков (публичный)
+GET /tracks?track_type=daily&language=en
+
+# Трек по UUID или code, опционально с уроками
+GET /tracks/daily-english?include_lessons=true
+
+# Admin: создать / обновить / удалить трек
+POST   /admin/tracks
+PUT    /admin/tracks/{id}
+DELETE /admin/tracks/{id}
+PUT    /admin/tracks/{id}/publish
+
+# Admin: управление уроками внутри трека
+POST   /admin/tracks/{id}/lessons              # привязать урок по UUID
+DELETE /admin/tracks/{id}/lessons/{lessonId}    # отвязать
+PUT    /admin/tracks/{id}/lessons/reorder       # атомарный reorder
+```
+
 #### Admin (требует admin роль)
 
 ```bash

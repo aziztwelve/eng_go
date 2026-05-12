@@ -18,14 +18,21 @@ type api struct {
 	courseService     service.CourseService
 	enrollmentService service.EnrollmentService
 	progressService   service.ProgressService
+	trackService      service.TrackService
 }
 
 // NewAPI создает новый экземпляр API
-func NewAPI(courseService service.CourseService, enrollmentService service.EnrollmentService, progressService service.ProgressService) *api {
+func NewAPI(
+	courseService service.CourseService,
+	enrollmentService service.EnrollmentService,
+	progressService service.ProgressService,
+	trackService service.TrackService,
+) *api {
 	return &api{
 		courseService:     courseService,
 		enrollmentService: enrollmentService,
 		progressService:   progressService,
+		trackService:      trackService,
 	}
 }
 

@@ -94,6 +94,7 @@ func (a *App) initRouter(ctx context.Context) error {
 	adminLessonHandler := handler.NewAdminLessonHandler(a.diContainer.CourseClient(ctx))
 	adminStepHandler := handler.NewAdminStepHandler(a.diContainer.CourseClient(ctx))
 	adminVideoHandler := handler.NewAdminVideoRealHandler(a.diContainer.VideoClient(ctx))
+	trackHandler := handler.NewTrackHandler(a.diContainer.CourseClient(ctx))
 	authMiddleware := middleware.NewAuthMiddleware(a.diContainer.AuthClient(ctx))
 	adminMiddleware := middleware.NewAdminOnlyMiddleware()
 
@@ -111,6 +112,12 @@ func (a *App) initRouter(ctx context.Context) error {
 		{
 			courses.GET("", courseHandler.ListCourses)
 			courses.GET("/:id", courseHandler.GetCourse)
+		}
+
+		tracks := v1.Group("/tracks")
+		{
+			tracks.GET("", trackHandler.ListTracks)
+			tracks.GET("/:id", trackHandler.GetTrack)
 		}
 
 		videos := v1.Group("/videos")
@@ -182,6 +189,19 @@ func (a *App) initRouter(ctx context.Context) error {
 				courses.POST("/lessons/:lessonId/steps", adminStepHandler.CreateStep)
 				courses.PUT("/steps/:stepId", adminStepHandler.UpdateStep)
 				courses.DELETE("/steps/:stepId", adminStepHandler.DeleteStep)
+			}
+
+			// Learning tracks management (Phase 0 standalone content)
+			adminTracks := admin.Group("/tracks")
+			{
+				adminTracks.GET("", trackHandler.AdminListTracks)
+				adminTracks.POST("", trackHandler.CreateTrack)
+				adminTracks.PUT("/:id", trackHandler.UpdateTrack)
+				adminTracks.DELETE("/:id", trackHandler.DeleteTrack)
+				adminTracks.PUT("/:id/publish", trackHandler.PublishTrack)
+				adminTracks.POST("/:id/lessons", trackHandler.AddLessonToTrack)
+				adminTracks.DELETE("/:id/lessons/:lessonId", trackHandler.RemoveLessonFromTrack)
+				adminTracks.PUT("/:id/lessons/reorder", trackHandler.ReorderTrackLessons)
 			}
 
 			// Video management
