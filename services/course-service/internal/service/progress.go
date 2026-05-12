@@ -4,6 +4,7 @@ import (
 	"context"
 	"time"
 
+	"github.com/elearning/course-service/internal/client/gamification"
 	"github.com/elearning/course-service/internal/model"
 	"github.com/elearning/course-service/internal/repository"
 )
@@ -17,25 +18,34 @@ type ProgressService interface {
 }
 
 type progressService struct {
-	progressRepo   repository.ProgressRepository
-	courseRepo     repository.CourseRepository
-	enrollmentRepo repository.EnrollmentRepository
+	progressRepo      repository.ProgressRepository
+	courseRepo        repository.CourseRepository
+	enrollmentRepo    repository.EnrollmentRepository
+	gamificationClient gamification.Client
 }
 
-// NewProgressService создает новый экземпляр сервиса прогресса
+// NewProgressService создает новый экземпляр сервиса прогресса.
+// gamificationClient может быть nil — тогда используется noop клиент.
 func NewProgressService(
 	progressRepo repository.ProgressRepository,
 	courseRepo repository.CourseRepository,
 	enrollmentRepo repository.EnrollmentRepository,
+	gamificationClient gamification.Client,
 ) ProgressService {
+	if gamificationClient == nil {
+		gamificationClient = gamification.NewNoopClient()
+	}
 	return &progressService{
-		progressRepo:   progressRepo,
-		courseRepo:     courseRepo,
-		enrollmentRepo: enrollmentRepo,
+		progressRepo:       progressRepo,
+		courseRepo:         courseRepo,
+		enrollmentRepo:     enrollmentRepo,
+		gamificationClient: gamificationClient,
 	}
 }
 
-// MarkStepComplete отмечает шаг как завершенный
+// MarkStepComplete отмечает шаг как завершенный.
+// Phase 0: поддерживает standalone-уроки (без модуля/курса). Для них
+// access-check пропускается, а source_type = "standalone".
 func (s *progressService) MarkStepComplete(
 	ctx context.Context,
 	userID, stepID string,
@@ -43,39 +53,41 @@ func (s *progressService) MarkStepComplete(
 	attempts *int32,
 	score *float64,
 ) (*model.StepProgress, *model.LessonProgress, error) {
-	// Получаем информацию о шаге
 	step, err := s.courseRepo.GetStepByID(ctx, stepID)
 	if err != nil {
 		return nil, nil, err
 	}
 
-	// Получаем lesson_id
-	lessonID := step.LessonID
-
-	// Получаем урок для получения course_id
-	lesson, err := s.courseRepo.GetLessonByID(ctx, lessonID)
+	lesson, err := s.courseRepo.GetLessonByID(ctx, step.LessonID)
 	if err != nil {
 		return nil, nil, err
 	}
 
-	// Получаем модуль для получения course_id
-	module, err := s.courseRepo.GetModuleByID(ctx, lesson.ModuleID)
-	if err != nil {
-		return nil, nil, err
+	// Резолвим контекст урока: course | standalone
+	var (
+		sourceType = model.SourceTypeCourse
+		sourceID   *string // course_id для course-урока, nil для standalone
+	)
+
+	if lesson.ModuleID == "" {
+		// Standalone: ни enrollment, ни course-id не нужны
+		sourceType = model.SourceTypeStandalone
+	} else {
+		module, err := s.courseRepo.GetModuleByID(ctx, lesson.ModuleID)
+		if err != nil {
+			return nil, nil, err
+		}
+		hasAccess, err := s.enrollmentRepo.CheckAccess(ctx, userID, module.CourseID)
+		if err != nil {
+			return nil, nil, err
+		}
+		if !hasAccess {
+			return nil, nil, ErrNoAccess
+		}
+		cID := module.CourseID
+		sourceID = &cID
 	}
 
-	courseID := module.CourseID
-
-	// Проверяем enrollment пользователя
-	hasAccess, err := s.enrollmentRepo.CheckAccess(ctx, userID, courseID)
-	if err != nil {
-		return nil, nil, err
-	}
-	if !hasAccess {
-		return nil, nil, ErrNoAccess
-	}
-
-	// Проверяем существующий прогресс
 	existingProgress, err := s.progressRepo.GetStepProgress(ctx, userID, stepID)
 	if err != nil {
 		return nil, nil, err
@@ -85,27 +97,29 @@ func (s *progressService) MarkStepComplete(
 	stepProgress := &model.StepProgress{
 		UserID:           userID,
 		StepID:           stepID,
-		LessonID:         lessonID,
+		LessonID:         step.LessonID,
 		Completed:        true,
 		CompletedAt:      &now,
 		TimeSpentSeconds: timeSpentSeconds,
 		Attempts:         1,
 		Score:            score,
+		SourceType:       sourceType,
+		SourceID:         sourceID,
 	}
 
 	if attempts != nil {
 		stepProgress.Attempts = *attempts
 	}
 
-	// Если прогресс уже существует, обновляем
 	if existingProgress != nil {
 		stepProgress.ID = existingProgress.ID
 		stepProgress.CreatedAt = existingProgress.CreatedAt
+		// source_* у существующей записи сохраняем
+		stepProgress.SourceType = existingProgress.SourceType
+		stepProgress.SourceID = existingProgress.SourceID
 
-		// Увеличиваем количество попыток если уже был завершен
 		if existingProgress.Completed {
 			stepProgress.Attempts = existingProgress.Attempts + 1
-			// Обновляем score только если новый выше
 			if score != nil && existingProgress.Score != nil && *score <= *existingProgress.Score {
 				stepProgress.Score = existingProgress.Score
 			}
@@ -120,10 +134,30 @@ func (s *progressService) MarkStepComplete(
 		return nil, nil, err
 	}
 
-	// Пересчитываем прогресс урока
-	lessonProgress, err := s.progressRepo.RecalculateLessonProgress(ctx, userID, lessonID)
+	lessonProgress, err := s.progressRepo.RecalculateLessonProgress(ctx, userID, step.LessonID)
 	if err != nil {
 		return nil, nil, err
+	}
+
+	// Phase 1 prep: вызываем gamification (noop пока) после успешной записи.
+	// Ошибки логирует сам клиент; на основной поток не влияем.
+	_ = s.gamificationClient.OnStepCompleted(ctx, gamification.StepCompletedEvent{
+		UserID:     userID,
+		StepID:     stepID,
+		LessonID:   step.LessonID,
+		SourceType: string(stepProgress.SourceType),
+		SourceID:   stepProgress.SourceID,
+		IsCorrect:  true, // Phase 0: квизы пока не различают correct/incorrect здесь
+		Score:      score,
+	})
+
+	if lessonProgress.CompletedAt != nil && (existingProgress == nil || !existingProgress.Completed) {
+		_ = s.gamificationClient.OnLessonCompleted(ctx, gamification.LessonCompletedEvent{
+			UserID:     userID,
+			LessonID:   step.LessonID,
+			SourceType: string(stepProgress.SourceType),
+			SourceID:   stepProgress.SourceID,
+		})
 	}
 
 	return stepProgress, lessonProgress, nil
@@ -151,13 +185,11 @@ func (s *progressService) GetLessonProgress(ctx context.Context, userID, lessonI
 
 // GetCourseProgress получает прогресс по курсу
 func (s *progressService) GetCourseProgress(ctx context.Context, userID, courseID string) ([]*model.LessonProgress, int32, int32, float64, error) {
-	// Получаем все прогрессы по урокам курса
 	lessonProgresses, err := s.progressRepo.ListLessonProgressByCourse(ctx, userID, courseID)
 	if err != nil {
 		return nil, 0, 0, 0, err
 	}
 
-	// Подсчитываем общее количество уроков в курсе
 	modules, err := s.courseRepo.ListModulesByCourseID(ctx, courseID)
 	if err != nil {
 		return nil, 0, 0, 0, err
@@ -172,7 +204,6 @@ func (s *progressService) GetCourseProgress(ctx context.Context, userID, courseI
 		totalLessons += int32(len(lessons))
 	}
 
-	// Подсчитываем завершенные уроки
 	var completedLessons int32
 	for _, lp := range lessonProgresses {
 		if lp.CompletedAt != nil {
@@ -180,7 +211,6 @@ func (s *progressService) GetCourseProgress(ctx context.Context, userID, courseI
 		}
 	}
 
-	// Вычисляем общий прогресс
 	var overallProgress float64
 	if totalLessons > 0 {
 		overallProgress = (float64(completedLessons) / float64(totalLessons)) * 100

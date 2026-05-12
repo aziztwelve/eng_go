@@ -42,11 +42,16 @@ func ToLessonProgressProto(progress *model.LessonProgress) *coursev1.LessonProgr
 		return nil
 	}
 
+	courseID := ""
+	if progress.CourseID != nil {
+		courseID = *progress.CourseID
+	}
+
 	proto := &coursev1.LessonProgress{
 		Id:                 progress.ID,
 		UserId:             progress.UserID,
 		LessonId:           progress.LessonID,
-		CourseId:           progress.CourseID,
+		CourseId:           courseID,
 		TotalSteps:         progress.TotalSteps,
 		CompletedSteps:     progress.CompletedSteps,
 		ProgressPercentage: progress.ProgressPercentage,

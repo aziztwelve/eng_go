@@ -95,6 +95,7 @@ func (a *App) initRouter(ctx context.Context) error {
 	adminStepHandler := handler.NewAdminStepHandler(a.diContainer.CourseClient(ctx))
 	adminVideoHandler := handler.NewAdminVideoRealHandler(a.diContainer.VideoClient(ctx))
 	trackHandler := handler.NewTrackHandler(a.diContainer.CourseClient(ctx))
+	lessonHandler := handler.NewLessonHandler(a.diContainer.CourseClient(ctx))
 	authMiddleware := middleware.NewAuthMiddleware(a.diContainer.AuthClient(ctx))
 	adminMiddleware := middleware.NewAdminOnlyMiddleware()
 
@@ -118,6 +119,12 @@ func (a *App) initRouter(ctx context.Context) error {
 		{
 			tracks.GET("", trackHandler.ListTracks)
 			tracks.GET("/:id", trackHandler.GetTrack)
+		}
+
+		// Универсальный публичный доступ к уроку (course-bound или standalone)
+		lessons := v1.Group("/lessons")
+		{
+			lessons.GET("/:id", lessonHandler.GetLesson)
 		}
 
 		videos := v1.Group("/videos")

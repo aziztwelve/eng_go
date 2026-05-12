@@ -15,6 +15,7 @@ import (
 	coursev1 "github.com/elearning/shared/pkg/proto/course/v1"
 
 	"github.com/elearning/course-service/internal/api/course/v1"
+	"github.com/elearning/course-service/internal/client/gamification"
 	"github.com/elearning/course-service/internal/config"
 	postgresrepo "github.com/elearning/course-service/internal/repository/postgres"
 	"github.com/elearning/course-service/internal/service"
@@ -73,9 +74,12 @@ func New(ctx context.Context) (*App, error) {
 
 	// Инициализация сервисов
 	videoClient := service.NewMockVideoClient()
+	// Phase 1 prep: noop gamification клиент. Заменить на реальную реализацию,
+	// когда появится отдельный gamification-service.
+	gamificationClient := gamification.NewNoopClient()
 	courseService := service.NewCourseService(courseRepo, videoClient)
 	enrollmentService := service.NewEnrollmentService(enrollmentRepo)
-	progressService := service.NewProgressService(progressRepo, courseRepo, enrollmentRepo)
+	progressService := service.NewProgressService(progressRepo, courseRepo, enrollmentRepo, gamificationClient)
 	trackService := service.NewTrackService(trackRepo)
 
 	// Инициализация gRPC API

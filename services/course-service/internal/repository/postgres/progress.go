@@ -2,6 +2,7 @@ package postgres
 
 import (
 	"context"
+	"database/sql"
 	"time"
 
 	"github.com/google/uuid"
@@ -21,15 +22,29 @@ func NewProgressRepository(pool *pgxpool.Pool) repository.ProgressRepository {
 	return &progressRepository{pool: pool}
 }
 
-// CreateStepProgress создает новую запись прогресса по шагу
+// nullStringValue: для *string возвращает nil-friendly значение для PG.
+func nullStringValue(s *string) interface{} {
+	if s == nil || *s == "" {
+		return nil
+	}
+	return *s
+}
+
+// CreateStepProgress создает новую запись прогресса по шагу.
+// source_type / source_id выставляются один раз при создании; ON CONFLICT
+// их не перезаписывает.
 func (r *progressRepository) CreateStepProgress(ctx context.Context, progress *model.StepProgress) error {
 	progress.ID = uuid.New().String()
 	progress.CreatedAt = time.Now()
 	progress.UpdatedAt = time.Now()
 
+	if progress.SourceType == "" {
+		progress.SourceType = model.SourceTypeCourse
+	}
+
 	query := `
-		INSERT INTO step_progress (id, user_id, step_id, lesson_id, completed, completed_at, time_spent_seconds, attempts, score, created_at, updated_at)
-		VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
+		INSERT INTO step_progress (id, user_id, step_id, lesson_id, completed, completed_at, time_spent_seconds, attempts, score, source_type, source_id, created_at, updated_at)
+		VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
 		ON CONFLICT (user_id, step_id) DO UPDATE SET
 			completed = EXCLUDED.completed,
 			completed_at = EXCLUDED.completed_at,
@@ -50,6 +65,8 @@ func (r *progressRepository) CreateStepProgress(ctx context.Context, progress *m
 		progress.TimeSpentSeconds,
 		progress.Attempts,
 		progress.Score,
+		string(progress.SourceType),
+		nullStringValue(progress.SourceID),
 		progress.CreatedAt,
 		progress.UpdatedAt,
 	).Scan(&progress.ID, &progress.CreatedAt, &progress.UpdatedAt)
@@ -57,7 +74,8 @@ func (r *progressRepository) CreateStepProgress(ctx context.Context, progress *m
 	return err
 }
 
-// UpdateStepProgress обновляет запись прогресса по шагу
+// UpdateStepProgress обновляет запись прогресса по шагу.
+// source_type / source_id неизменны после первой записи.
 func (r *progressRepository) UpdateStepProgress(ctx context.Context, progress *model.StepProgress) error {
 	progress.UpdatedAt = time.Now()
 
@@ -84,12 +102,14 @@ func (r *progressRepository) UpdateStepProgress(ctx context.Context, progress *m
 // GetStepProgress получает прогресс по шагу
 func (r *progressRepository) GetStepProgress(ctx context.Context, userID, stepID string) (*model.StepProgress, error) {
 	query := `
-		SELECT id, user_id, step_id, lesson_id, completed, completed_at, time_spent_seconds, attempts, score, created_at, updated_at
+		SELECT id, user_id, step_id, lesson_id, completed, completed_at, time_spent_seconds, attempts, score, source_type, source_id, created_at, updated_at
 		FROM step_progress
 		WHERE user_id = $1 AND step_id = $2
 	`
 
 	progress := &model.StepProgress{}
+	var sourceType string
+	var sourceID sql.NullString
 	err := r.pool.QueryRow(ctx, query, userID, stepID).Scan(
 		&progress.ID,
 		&progress.UserID,
@@ -100,6 +120,8 @@ func (r *progressRepository) GetStepProgress(ctx context.Context, userID, stepID
 		&progress.TimeSpentSeconds,
 		&progress.Attempts,
 		&progress.Score,
+		&sourceType,
+		&sourceID,
 		&progress.CreatedAt,
 		&progress.UpdatedAt,
 	)
@@ -112,13 +134,18 @@ func (r *progressRepository) GetStepProgress(ctx context.Context, userID, stepID
 		return nil, err
 	}
 
+	progress.SourceType = model.SourceType(sourceType)
+	if sourceID.Valid {
+		v := sourceID.String
+		progress.SourceID = &v
+	}
 	return progress, nil
 }
 
 // ListStepProgressByLesson получает список прогресса по шагам урока
 func (r *progressRepository) ListStepProgressByLesson(ctx context.Context, userID, lessonID string) ([]*model.StepProgress, error) {
 	query := `
-		SELECT id, user_id, step_id, lesson_id, completed, completed_at, time_spent_seconds, attempts, score, created_at, updated_at
+		SELECT id, user_id, step_id, lesson_id, completed, completed_at, time_spent_seconds, attempts, score, source_type, source_id, created_at, updated_at
 		FROM step_progress
 		WHERE user_id = $1 AND lesson_id = $2
 		ORDER BY created_at ASC
@@ -133,6 +160,8 @@ func (r *progressRepository) ListStepProgressByLesson(ctx context.Context, userI
 	var progresses []*model.StepProgress
 	for rows.Next() {
 		progress := &model.StepProgress{}
+		var sourceType string
+		var sourceID sql.NullString
 		err := rows.Scan(
 			&progress.ID,
 			&progress.UserID,
@@ -143,11 +172,18 @@ func (r *progressRepository) ListStepProgressByLesson(ctx context.Context, userI
 			&progress.TimeSpentSeconds,
 			&progress.Attempts,
 			&progress.Score,
+			&sourceType,
+			&sourceID,
 			&progress.CreatedAt,
 			&progress.UpdatedAt,
 		)
 		if err != nil {
 			return nil, err
+		}
+		progress.SourceType = model.SourceType(sourceType)
+		if sourceID.Valid {
+			v := sourceID.String
+			progress.SourceID = &v
 		}
 		progresses = append(progresses, progress)
 	}
@@ -177,7 +213,7 @@ func (r *progressRepository) CreateLessonProgress(ctx context.Context, progress 
 		progress.ID,
 		progress.UserID,
 		progress.LessonID,
-		progress.CourseID,
+		nullStringValue(progress.CourseID),
 		progress.TotalSteps,
 		progress.CompletedSteps,
 		progress.ProgressPercentage,
@@ -221,11 +257,12 @@ func (r *progressRepository) GetLessonProgress(ctx context.Context, userID, less
 	`
 
 	progress := &model.LessonProgress{}
+	var courseID sql.NullString
 	err := r.pool.QueryRow(ctx, query, userID, lessonID).Scan(
 		&progress.ID,
 		&progress.UserID,
 		&progress.LessonID,
-		&progress.CourseID,
+		&courseID,
 		&progress.TotalSteps,
 		&progress.CompletedSteps,
 		&progress.ProgressPercentage,
@@ -242,6 +279,10 @@ func (r *progressRepository) GetLessonProgress(ctx context.Context, userID, less
 		return nil, err
 	}
 
+	if courseID.Valid {
+		v := courseID.String
+		progress.CourseID = &v
+	}
 	return progress, nil
 }
 
@@ -263,11 +304,12 @@ func (r *progressRepository) ListLessonProgressByCourse(ctx context.Context, use
 	var progresses []*model.LessonProgress
 	for rows.Next() {
 		progress := &model.LessonProgress{}
+		var cID sql.NullString
 		err := rows.Scan(
 			&progress.ID,
 			&progress.UserID,
 			&progress.LessonID,
-			&progress.CourseID,
+			&cID,
 			&progress.TotalSteps,
 			&progress.CompletedSteps,
 			&progress.ProgressPercentage,
@@ -278,55 +320,59 @@ func (r *progressRepository) ListLessonProgressByCourse(ctx context.Context, use
 		if err != nil {
 			return nil, err
 		}
+		if cID.Valid {
+			v := cID.String
+			progress.CourseID = &v
+		}
 		progresses = append(progresses, progress)
 	}
 
 	return progresses, nil
 }
 
-// RecalculateLessonProgress пересчитывает прогресс по уроку
+// RecalculateLessonProgress пересчитывает прогресс по уроку.
+// Поддерживает standalone-уроки (module_id IS NULL → course_id = nil).
 func (r *progressRepository) RecalculateLessonProgress(ctx context.Context, userID, lessonID string) (*model.LessonProgress, error) {
-	// Получаем course_id для урока
-	var courseID string
+	// Получаем module_id урока (может быть NULL для standalone)
+	var moduleID sql.NullString
 	err := r.pool.QueryRow(ctx, `
-		SELECT l.module_id 
-		FROM lessons l 
-		WHERE l.id = $1
-	`, lessonID).Scan(&courseID)
+		SELECT module_id
+		FROM lessons
+		WHERE id = $1
+	`, lessonID).Scan(&moduleID)
 
 	if err != nil {
 		return nil, err
 	}
 
-	// Получаем course_id через module
-	err = r.pool.QueryRow(ctx, `
-		SELECT m.course_id 
-		FROM modules m 
-		WHERE m.id = $1
-	`, courseID).Scan(&courseID)
-
-	if err != nil {
-		return nil, err
+	// Если урок принадлежит модулю — резолвим course_id через модуль
+	var courseID *string
+	if moduleID.Valid {
+		var cID string
+		if err := r.pool.QueryRow(ctx, `
+			SELECT course_id
+			FROM modules
+			WHERE id = $1
+		`, moduleID.String).Scan(&cID); err != nil {
+			return nil, err
+		}
+		courseID = &cID
 	}
 
 	// Подсчитываем общее количество шагов в уроке
 	var totalSteps int32
-	err = r.pool.QueryRow(ctx, `
+	if err := r.pool.QueryRow(ctx, `
 		SELECT COUNT(*) FROM steps WHERE lesson_id = $1
-	`, lessonID).Scan(&totalSteps)
-
-	if err != nil {
+	`, lessonID).Scan(&totalSteps); err != nil {
 		return nil, err
 	}
 
 	// Подсчитываем завершенные шаги
 	var completedSteps int32
-	err = r.pool.QueryRow(ctx, `
-		SELECT COUNT(*) FROM step_progress 
+	if err := r.pool.QueryRow(ctx, `
+		SELECT COUNT(*) FROM step_progress
 		WHERE user_id = $1 AND lesson_id = $2 AND completed = true
-	`, userID, lessonID).Scan(&completedSteps)
-
-	if err != nil {
+	`, userID, lessonID).Scan(&completedSteps); err != nil {
 		return nil, err
 	}
 
