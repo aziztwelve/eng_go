@@ -42,6 +42,11 @@ Thumbs.db
 # Database
 *.db
 *.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Local tooling state (Omniroute / Devin etc.)
+.omniroute/
 
 # Generated files
 shared/pkg/proto/
