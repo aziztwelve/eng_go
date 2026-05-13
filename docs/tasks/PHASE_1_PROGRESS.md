@@ -155,12 +155,146 @@ ok  github.com/elearning/gamification-service/internal/service  0.007s
 
 ---
 
-## ⏭️ Что осталось (Phase 1 frontend)
+## ⏭️ Что осталось — Phase 1 frontend
 
-- `eng_next2/src/components/gamification/*` — HeartCounter, XPBar,
-  StreakBadge, DailyGoalRing, AchievementToast, AchievementsGrid.
-- `eng_next2/src/hooks/use-{user-stats,hearts,daily-goal,achievements}.ts`.
-- `eng_next2/src/lib/gamification-api.ts` — API клиент.
-- Страницы `/profile/stats`, `/profile/achievements`, `/profile/streak`.
-- Topbar с hearts / streak / XP.
-- Аналогичная работа в `eng_mob`.
+> **Scope (по решению):** делаем web + mobile параллельно, lesson flow
+> получает **topbar + toast'ы** (анимация +XP, level-up, achievement unlock,
+> daily-goal hit).
+
+### Web — `eng_next2`
+
+#### Foundation
+- [ ] **`src/types/api.ts`** — добавить типы из gamification proto: `UserStats`,
+  `Hearts`, `DailyGoal`, `DailyGoalProgress`, `Streak`, `StreakDay`,
+  `StreakHistory`, `XPTransaction`, `Achievement`, `UserAchievement`,
+  `AddXPResponse`. Поле `next_level_xp` уже есть в proto.
+- [ ] **`src/lib/gamification-api.ts`** — клиент поверх существующего
+  `ApiClient`: `getMyStats()`, `getHearts()`, `refillHearts()`,
+  `getDailyGoal()`, `updateDailyGoal()`, `getStreakHistory()`,
+  `useStreakFreeze()`, `listAchievements()`, `getMyAchievements()`,
+  `getXPHistory()`.
+
+#### Hooks (TanStack Query, как в `use-tracks`)
+- [ ] **`src/hooks/use-user-stats.ts`** — `useUserStats()` (`/gamification/stats`).
+- [ ] **`src/hooks/use-hearts.ts`** — `useHearts()` + `useRefillHearts()` mutation.
+- [ ] **`src/hooks/use-daily-goal.ts`** — `useDailyGoal()` + `useUpdateDailyGoal()`.
+- [ ] **`src/hooks/use-streak.ts`** — `useStreakHistory(days)` + `useUseFreeze()`.
+- [ ] **`src/hooks/use-achievements.ts`** — `useAchievements(filter)` +
+  `useMyAchievements()`.
+- [ ] **`src/hooks/use-xp-history.ts`** — пагинация по `/gamification/xp/history`.
+
+#### Components `src/components/gamification/`
+- [ ] **`HeartCounter.tsx`** — иконка ❤️ × N + таймер до следующей регенерации
+  (использует `next_heart_at`).
+- [ ] **`XPBar.tsx`** — полоска прогресса к следующему уровню (на основе
+  `next_level_xp` из stats).
+- [ ] **`StreakBadge.tsx`** — огонёк 🔥 + число дней. Серый, если streak=0.
+- [ ] **`LevelBadge.tsx`** — компактный бейдж текущего уровня.
+- [ ] **`DailyGoalRing.tsx`** — SVG-кольцо прогресса дневной цели.
+- [ ] **`XPGainAnimation.tsx`** — toast "+15 XP" с fade-in/out.
+- [ ] **`AchievementToast.tsx`** — toast при unlock'е (иконка + title + XP/gems
+  reward).
+- [ ] **`AchievementCard.tsx`** — карточка достижения (locked/unlocked,
+  category, tier).
+- [ ] **`AchievementsGrid.tsx`** — сетка всех achievement'ов, фильтр по
+  category, разделение locked / unlocked.
+- [ ] **`StreakCalendar.tsx`** — календарь streak'а (последние 30 дней,
+  цвет: completed / freeze / missed).
+- [ ] **`GamificationTopbar.tsx`** — комбо HeartCounter + StreakBadge +
+  XPBar + LevelBadge для шапки.
+
+#### Интеграция в navbar
+- [ ] **`src/components/navbar.tsx`** (или где сейчас) — рядом с «Треки»
+  показывать `<GamificationTopbar />` для авторизованных. На мобильной
+  ширине — только StreakBadge + HeartCounter.
+
+#### Интеграция в lesson flow
+- [ ] **`src/app/lessons/[id]/page.tsx`** (или вокруг
+  `POST /progress/steps/:id/complete`):
+  - после успеха `step.complete` берем `AddXPResponse` (но! сейчас
+    progress endpoint возвращает только LessonProgress — gateway придется
+    либо отдельный вызов `/gamification/stats` сделать, либо расширить
+    ответ). Простейший путь — после complete: `queryClient.invalidate(['user-stats'])` + всплывающий toast с дельтой,
+    рассчитанной локально (или через свежий `getMyStats()`).
+  - если `leveled_up` → большая level-up анимация (Lottie/CSS).
+  - если `unlocked_achievements.length` → серия `AchievementToast`.
+  - если `daily_goal_progress.completed` впервые → конфетти.
+- [ ] **toast-провайдер**: проверить что в проекте уже есть toast-механизм
+  (sonner / react-hot-toast / shadcn `useToast`). Если нет — поднять.
+
+#### Страницы
+- [ ] **`src/app/profile/page.tsx`** — расширить: блок stats (level, XP,
+  streak), последние achievements, ссылки на subpages.
+- [ ] **`src/app/profile/stats/page.tsx`** — детальная статистика: XP
+  history (через `use-xp-history`), графики по дням (recharts?).
+- [ ] **`src/app/profile/achievements/page.tsx`** — `AchievementsGrid` +
+  фильтры.
+- [ ] **`src/app/profile/streak/page.tsx`** — `StreakCalendar` + кнопка
+  «Активировать freeze» (с подтверждением).
+
+#### i18n
+- [ ] `lib/i18n.tsx` — ключи `gamification.{hearts,xp,streak,level,
+  daily_goal,achievements,locked,unlocked,freeze}` (ru + en).
+
+### Mobile — `eng_mob`
+
+> Стиль NativeWind, как остальные экраны (`bg-card border-4 border-border
+> rounded-3xl`, `bg-primary` CTA). Анимации через `react-native-reanimated`.
+
+#### Foundation
+- [ ] **`src/types/api.ts`** — те же типы, что и в web (можно скопировать).
+- [ ] **`src/lib/api-client.ts`** — добавить `GamificationApi` namespace
+  с теми же методами, что и web-клиент.
+
+#### Hooks
+- [ ] **`src/hooks/use-user-stats.ts`** + аналоги остальных пяти —
+  точные RN-аналоги web-версий.
+
+#### Components `src/components/gamification/`
+- [ ] **`HeartCounter.tsx`** — `View` с иконками + countdown.
+- [ ] **`XPBar.tsx`** — анимированная полоска (`Animated.View`).
+- [ ] **`StreakBadge.tsx`**.
+- [ ] **`LevelBadge.tsx`**.
+- [ ] **`DailyGoalRing.tsx`** — `react-native-svg`.
+- [ ] **`XPGainAnimation.tsx`** — Reanimated `withSpring` + fade.
+- [ ] **`AchievementModal.tsx`** — bottom-sheet/modal с анимацией unlock.
+- [ ] **`AchievementCard.tsx`**.
+- [ ] **`StreakCalendar.tsx`**.
+
+#### Tabs / topbar
+- [ ] **`app/(tabs)/_layout.tsx`** — над основным контентом тонкий
+  «sticky-row» с HeartCounter / StreakBadge / XPBar. Видим на всех табах
+  для авторизованных.
+
+#### Lesson screen
+- [ ] **`app/learn/[lessonId].tsx`** — после `LessonsApi.completeStep`:
+  показать `XPGainAnimation`, на `leveled_up` → конфетти (Lottie),
+  на `unlocked_achievements` → `AchievementModal`. Plus haptic feedback
+  (`expo-haptics`) на ключевых событиях.
+
+#### Sounds (опционально, можно отложить)
+- [ ] `expo-av` + ассеты `correct.mp3`, `level_up.mp3`, `achievement.mp3`,
+  `streak.mp3`. Настройка отключения в настройках профиля.
+
+#### Screens
+- [ ] **`app/(tabs)/profile.tsx`** — расширить, как в web.
+- [ ] **`app/profile/stats.tsx`**.
+- [ ] **`app/profile/achievements.tsx`**.
+- [ ] **`app/profile/streak.tsx`**.
+
+---
+
+## 🧰 Поддерживающие задачи (можно делать параллельно)
+
+- [ ] **Gateway extension** — чтобы фронт не делал 2 запроса при completion
+  шага, расширить `POST /progress/steps/:id/complete` ответ полем
+  `gamification?: AddXPResponse` (опционально, если клиент настроен).
+- [ ] **`SubmitQuizAnswer` → LoseHeart** — когда переедем на Phase 2
+  форматы, в `quiz-service.SubmitAnswer` добавить вызов
+  `gamification.LoseHeart(userID)` при неправильном ответе. Сейчас
+  заблокировано тем, что quiz-service не знает gamification-клиент.
+- [ ] **Cross-service achievement triggers** — `courses_completed`,
+  `perfect_quizzes`, `languages`, `birthday`. Требует данных от course /
+  quiz / user сервисов, пока no-op.
+- [ ] **Timezone-aware streak** — сейчас всё в UTC; для корректного
+  «потерял streak в полночь» нужен `user.timezone` от user-service.
