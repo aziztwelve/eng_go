@@ -97,7 +97,7 @@ gamification.AddXP() ← вызывается одинаково
 | # | Фаза | Срок | Сложность | Зависимости | Статус |
 |---|------|------|-----------|-------------|--------|
 | 0 | [Standalone-контент](./phase-0-standalone-content.md) ([log](./PHASE_0_PROGRESS.md)) | 3-5 дней | Низкая | — | ✅ Done |
-| 1 | [Геймификация](./phase-1-gamification.md) | 1-2 нед | Средняя | Phase 0 | 📝 Planning |
+| 1 | [Геймификация](./phase-1-gamification.md) ([log](./PHASE_1_PROGRESS.md)) | 1-2 нед | Средняя | Phase 0 | 🟡 Backend Done |
 | 2 | [Новые форматы шагов](./phase-2-step-formats.md) | 2-3 нед | Высокая | Phase 1 | 📝 Planning |
 | 3 | [Адаптивное обучение](./phase-3-adaptive-learning.md) | 2 нед | Высокая | Phase 1, 2 | 📝 Planning |
 | 4 | [Социальное (Leagues)](./phase-4-social.md) | 1-2 нед | Средняя | Phase 1 | 📝 Planning |
