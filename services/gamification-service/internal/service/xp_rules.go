@@ -35,3 +35,24 @@ func XPForStep(kind gamificationv1.StepKind, isCorrect bool, score float64) int 
 func XPForLessonBonus() int {
 	return 10
 }
+
+// XPForCourseBonus — большой бонус за завершение всего курса.
+func XPForCourseBonus() int {
+	return 100
+}
+
+// XPForQuizCompleted — XP за прохождение квиза. Базово 15, на perfect-результат
+// дополнительные 25 (итого 40). Возвращается tuple (xp, isPerfect): isPerfect
+// влияет на reason (perfect_quizzes vs quiz_completed), а величина XP всегда
+// едина — иначе сумма total_xp перестанет совпадать с журналом транзакций.
+func XPForQuizCompleted(scorePercentage float64, isPassed bool) (xp int, isPerfect bool) {
+	if !isPassed {
+		return 0, false
+	}
+	isPerfect = scorePercentage >= 99.5
+	xp = 15
+	if isPerfect {
+		xp = 40
+	}
+	return xp, isPerfect
+}

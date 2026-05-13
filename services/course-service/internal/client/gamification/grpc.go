@@ -62,7 +62,7 @@ func mapSourceType(s string) gamificationv1.SourceType {
 	}
 }
 
-func (c *grpcClient) OnStepCompleted(ctx context.Context, ev StepCompletedEvent) error {
+func (c *grpcClient) OnStepCompleted(ctx context.Context, ev StepCompletedEvent) (*gamificationv1.AddXPResponse, error) {
 	srcID := ""
 	if ev.SourceID != nil {
 		srcID = *ev.SourceID
@@ -71,7 +71,7 @@ func (c *grpcClient) OnStepCompleted(ctx context.Context, ev StepCompletedEvent)
 	if ev.Score != nil {
 		score = *ev.Score
 	}
-	_, err := c.client.OnStepCompleted(ctx, &gamificationv1.OnStepCompletedRequest{
+	resp, err := c.client.OnStepCompleted(ctx, &gamificationv1.OnStepCompletedRequest{
 		UserId:     ev.UserID,
 		StepId:     ev.StepID,
 		LessonId:   ev.LessonID,
@@ -87,16 +87,34 @@ func (c *grpcClient) OnStepCompleted(ctx context.Context, ev StepCompletedEvent)
 			zap.String("step_id", ev.StepID),
 			zap.Error(err),
 		)
+		return nil, nil
 	}
-	return nil
+	return resp.GetXp(), nil
 }
 
-func (c *grpcClient) OnLessonCompleted(ctx context.Context, ev LessonCompletedEvent) error {
+func (c *grpcClient) OnCourseCompleted(ctx context.Context, ev CourseCompletedEvent) (*gamificationv1.AddXPResponse, error) {
+	resp, err := c.client.OnCourseCompleted(ctx, &gamificationv1.OnCourseCompletedRequest{
+		UserId:   ev.UserID,
+		CourseId: ev.CourseID,
+		Language: ev.Language,
+	})
+	if err != nil {
+		logger.Warn(ctx, "gamification.OnCourseCompleted failed (non-fatal)",
+			zap.String("user_id", ev.UserID),
+			zap.String("course_id", ev.CourseID),
+			zap.Error(err),
+		)
+		return nil, nil
+	}
+	return resp.GetXp(), nil
+}
+
+func (c *grpcClient) OnLessonCompleted(ctx context.Context, ev LessonCompletedEvent) (*gamificationv1.AddXPResponse, error) {
 	srcID := ""
 	if ev.SourceID != nil {
 		srcID = *ev.SourceID
 	}
-	_, err := c.client.OnLessonCompleted(ctx, &gamificationv1.OnLessonCompletedRequest{
+	resp, err := c.client.OnLessonCompleted(ctx, &gamificationv1.OnLessonCompletedRequest{
 		UserId:     ev.UserID,
 		LessonId:   ev.LessonID,
 		SourceType: mapSourceType(ev.SourceType),
@@ -108,6 +126,7 @@ func (c *grpcClient) OnLessonCompleted(ctx context.Context, ev LessonCompletedEv
 			zap.String("lesson_id", ev.LessonID),
 			zap.Error(err),
 		)
+		return nil, nil
 	}
-	return nil
+	return resp.GetXp(), nil
 }

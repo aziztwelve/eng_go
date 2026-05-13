@@ -1,10 +1,12 @@
-// Package gamification определяет интерфейс клиента к будущему
-// gamification-сервису (Phase 1). На данный момент Phase 0 использует
-// noop-реализацию (см. noop.go) — точки вызова уже расставлены, чтобы
-// при появлении сервиса достаточно было подменить реализацию в DI.
+// Package gamification определяет интерфейс клиента к gamification-сервису.
+// Реализации: grpc (boundary) и noop (fallback, активен если адрес не задан).
 package gamification
 
-import "context"
+import (
+	"context"
+
+	gamificationv1 "github.com/elearning/shared/pkg/proto/gamification/v1"
+)
 
 // StepCompletedEvent — событие "пользователь успешно завершил шаг".
 type StepCompletedEvent struct {
@@ -26,10 +28,24 @@ type LessonCompletedEvent struct {
 	SourceID   *string
 }
 
+// CourseCompletedEvent — событие "пользователь завершил все уроки курса".
+// Срабатывает один раз — в момент перехода последнего урока в completed.
+// Language передается для achievement `languages` (ISO 639-1).
+type CourseCompletedEvent struct {
+	UserID   string
+	CourseID string
+	Language string
+}
+
 // Client описывает контракт для gamification-сервиса.
 // Реализации не должны паниковать; ошибки логируются и не пробрасываются
 // в основной поток выполнения.
+//
+// `OnStepCompleted` возвращает `*gamificationv1.AddXPResponse` (XP-payload —
+// transaction, stats, leveled_up, unlocked_achievements, daily_goal_progress)
+// если сервис настроен и вызов прошел успешно. Иначе возвращает (nil, nil).
 type Client interface {
-	OnStepCompleted(ctx context.Context, event StepCompletedEvent) error
-	OnLessonCompleted(ctx context.Context, event LessonCompletedEvent) error
+	OnStepCompleted(ctx context.Context, event StepCompletedEvent) (*gamificationv1.AddXPResponse, error)
+	OnLessonCompleted(ctx context.Context, event LessonCompletedEvent) (*gamificationv1.AddXPResponse, error)
+	OnCourseCompleted(ctx context.Context, event CourseCompletedEvent) (*gamificationv1.AddXPResponse, error)
 }

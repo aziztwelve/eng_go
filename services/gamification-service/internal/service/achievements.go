@@ -138,7 +138,9 @@ func (s *Service) matchCriteria(ctx context.Context, userID string, stats *model
 	if err := json.Unmarshal(a.Criteria, &c); err != nil {
 		return false, fmt.Errorf("unmarshal criteria: %w", err)
 	}
-	now := s.now()
+	// Время/дата трактуются в локальной зоне пользователя — чтобы "ночная
+	// сова" и "именинник" срабатывали по тому же календарю, что и в UI.
+	now := s.nowInTZ(ctx, userID)
 
 	switch c.Type {
 	case "streak":
@@ -173,9 +175,34 @@ func (s *Service) matchCriteria(ctx context.Context, userID string, stats *model
 	case "comeback":
 		// был ли пропуск >= c.Value дней до того, как сегодня выполнил.
 		return s.checkComeback(ctx, userID, c.Value)
-	case "courses_completed", "perfect_quizzes", "quiz_completed", "languages", "birthday":
-		// MVP: требует данных от других сервисов — пока всегда false.
-		return false, nil
+	case "courses_completed":
+		return s.countXPByReason(ctx, userID, model.XPReasonCourseCompleted, c.Value)
+	case "quiz_completed":
+		// Завершенные квизы = просто пройденные + perfect. Считаем обе reason'ы.
+		ok, err := s.countXPByReason(ctx, userID, model.XPReasonQuizCompleted, c.Value)
+		if err != nil || ok {
+			return ok, err
+		}
+		// Возможно, target набирается только за счет perfect-квизов.
+		regular, err := s.countByReason(ctx, userID, model.XPReasonQuizCompleted)
+		if err != nil {
+			return false, err
+		}
+		perfect, err := s.countByReason(ctx, userID, model.XPReasonQuizPerfect)
+		if err != nil {
+			return false, err
+		}
+		return regular+perfect >= c.Value, nil
+	case "perfect_quizzes":
+		return s.countXPByReason(ctx, userID, model.XPReasonQuizPerfect, c.Value)
+	case "languages":
+		return len(stats.LearnedLanguages) >= c.Value, nil
+	case "birthday":
+		dob, err := s.user.DateOfBirthMMDD(ctx, userID)
+		if err != nil || dob == "" {
+			return false, nil
+		}
+		return fmt.Sprintf("%02d-%02d", now.Month(), now.Day()) == dob, nil
 	default:
 		logger.Debug(ctx, "unknown achievement criteria type",
 			zap.String("code", a.Code), zap.String("type", c.Type))
@@ -210,6 +237,30 @@ func (s *Service) countXPByReason(ctx context.Context, userID string, reason mod
 	return false, nil
 }
 
+// countByReason возвращает абсолютный счет транзакций по reason'у. Используется
+// для составных критериев, где надо проверить сумму нескольких reason'ов.
+func (s *Service) countByReason(ctx context.Context, userID string, reason model.XPReason) (int, error) {
+	const pageSize = 1000
+	offset := 0
+	total := 0
+	for {
+		page, _, err := s.xp.ListByUser(ctx, userID, pageSize, offset)
+		if err != nil {
+			return 0, err
+		}
+		for _, t := range page {
+			if t.Reason == reason {
+				total++
+			}
+		}
+		if len(page) < pageSize {
+			break
+		}
+		offset += pageSize
+	}
+	return total, nil
+}
+
 func (s *Service) checkWeekendPair(ctx context.Context, userID string) (bool, error) {
 	// Ищем сегодняшний понедельник? Проще — последние 7 дней, найти пару Sat+Sun completed.
 	days, err := s.streak.ListLast(ctx, userID, 14)
@@ -222,8 +273,9 @@ func (s *Service) checkWeekendPair(ctx context.Context, userID string) (bool, er
 			completed[d.Date.Format("2006-01-02")] = true
 		}
 	}
-	// Проверим прошедшие выходные.
-	today := s.today()
+	// Проверим прошедшие выходные — в зоне пользователя, чтобы
+	// "субботний+воскресный урок" совпал с локальным календарем.
+	today := s.todayInTZ(ctx, userID)
 	for i := 0; i < 7; i++ {
 		day := today.AddDate(0, 0, -i)
 		if day.Weekday() == time.Sunday {

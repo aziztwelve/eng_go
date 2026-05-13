@@ -13,6 +13,7 @@ import (
 	"google.golang.org/grpc"
 
 	quizapiv1 "github.com/elearning/quiz-service/internal/api/quiz/v1"
+	"github.com/elearning/quiz-service/internal/client/gamification"
 	"github.com/elearning/quiz-service/internal/config"
 	"github.com/elearning/quiz-service/internal/repository/postgres"
 	quizservice "github.com/elearning/quiz-service/internal/service/quiz"
@@ -56,6 +57,31 @@ func main() {
 	attemptRepo := postgres.NewAttemptRepository(dbPool)
 	attemptAnswerRepo := postgres.NewAttemptAnswerRepository(dbPool)
 
+	// gamification client (для LoseHeart на неверный ответ).
+	// Если адрес не задан — используем noop, основной flow сабмита ответа
+	// не блокируется отсутствием gamification-service.
+	var gamificationClient gamification.Client
+	var gamificationCloser func() error
+	if cfg.Gamification.Addr != "" {
+		gc, closer, gerr := gamification.NewGRPCClient(context.Background(), cfg.Gamification.Addr)
+		if gerr != nil {
+			log.Printf("⚠️  gamification client init failed (will fall back to noop): %v", gerr)
+			gamificationClient = gamification.NewNoopClient()
+		} else {
+			gamificationClient = gc
+			gamificationCloser = closer
+			log.Printf("✅ Connected to gamification-service at %s", cfg.Gamification.Addr)
+		}
+	} else {
+		gamificationClient = gamification.NewNoopClient()
+		log.Println("ℹ️  GAMIFICATION_SERVICE_ADDR is empty — using noop client")
+	}
+	defer func() {
+		if gamificationCloser != nil {
+			_ = gamificationCloser()
+		}
+	}()
+
 	// Инициализация сервисов
 	quizSvc := quizservice.NewService(
 		quizRepo,
@@ -63,6 +89,7 @@ func main() {
 		answerRepo,
 		attemptRepo,
 		attemptAnswerRepo,
+		gamificationClient,
 	)
 
 	// Инициализация gRPC API

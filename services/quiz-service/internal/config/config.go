@@ -7,9 +7,16 @@ import (
 )
 
 type Config struct {
-	GRPC     GRPCConfig
-	Postgres PostgresConfig
-	Logger   LoggerConfig
+	GRPC         GRPCConfig
+	Postgres     PostgresConfig
+	Logger       LoggerConfig
+	Gamification GamificationConfig
+}
+
+// GamificationConfig адрес gamification-service. Пустая строка отключает
+// интеграцию (используется noopClient).
+type GamificationConfig struct {
+	Addr string
 }
 
 type GRPCConfig struct {
@@ -54,6 +61,9 @@ func Load() (*Config, error) {
 		},
 		Logger: LoggerConfig{
 			Level: getEnv("LOG_LEVEL", "info"),
+		},
+		Gamification: GamificationConfig{
+			Addr: getEnv("GAMIFICATION_SERVICE_ADDR", ""),
 		},
 	}, nil
 }

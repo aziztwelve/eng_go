@@ -1,5 +1,9 @@
 package dto
 
+import (
+	gamificationv1 "github.com/elearning/shared/pkg/proto/gamification/v1"
+)
+
 // MarkStepCompleteRequest содержит данные для отметки шага как завершенного
 type MarkStepCompleteRequest struct {
 	TimeSpentSeconds int32    `json:"time_spent_seconds"`
@@ -36,10 +40,20 @@ type LessonProgressResponse struct {
 	CompletedAt        *string `json:"completed_at,omitempty"`
 }
 
-// MarkStepCompleteResponse содержит результат отметки шага
+// MarkStepCompleteResponse содержит результат отметки шага.
+//
+// Gamification — опциональный блок (`AddXPResponse` из gamification proto):
+// заполняется когда course-service сконфигурирован на gamification-service.
+// Если nil — фронт фолбэкнется на use-gamification-fx (diff из кэша).
+//
+// Сериализуется через стандартный Go encoding/json — proto v2 не
+// реализует MarshalJSON, поэтому используются json-теги из сгенерированных
+// struct'ов: snake_case поля + timestamps как `{seconds, nanos}`.
+// Фронт нормализует через `tsToDate()`.
 type MarkStepCompleteResponse struct {
-	StepProgress   StepProgressResponse   `json:"step_progress"`
-	LessonProgress LessonProgressResponse `json:"lesson_progress"`
+	StepProgress   StepProgressResponse           `json:"step_progress"`
+	LessonProgress LessonProgressResponse         `json:"lesson_progress"`
+	Gamification   *gamificationv1.AddXPResponse  `json:"gamification,omitempty"`
 }
 
 // GetStepProgressResponse содержит прогресс по шагу

@@ -20,11 +20,12 @@ func (s *Service) GetDailyGoal(ctx context.Context, userID string) (*model.Daily
 		return nil, nil, err
 	}
 
-	progress, err := s.dailyGoal.GetProgress(ctx, userID, s.today())
+	today := s.todayInTZ(ctx, userID)
+	progress, err := s.dailyGoal.GetProgress(ctx, userID, today)
 	if errors.Is(err, repository.ErrNotFound) {
 		progress = &model.DailyGoalProgress{
 			UserID: userID,
-			Date:   s.today(),
+			Date:   today,
 			Goal:   goal.TargetXP,
 		}
 	} else if err != nil {

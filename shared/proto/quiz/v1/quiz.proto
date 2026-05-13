@@ -5,6 +5,7 @@ package quiz.v1;
 option go_package = "github.com/elearning/shared/proto/quiz/v1;quizv1";
 
 import "google/protobuf/timestamp.proto";
+import "gamification/v1/gamification.proto";
 
 // QuizService управляет квизами и тестами
 service QuizService {
@@ -248,6 +249,10 @@ message SubmitAnswerRequest {
 
 message SubmitAnswerResponse {
   QuizAttemptAnswer answer = 1;
+  // Заполняется, когда ответ оказался неверным и quiz-service настроен на
+  // gamification-service: содержит обновленное состояние hearts после
+  // gamification.LoseHeart. Если nil — фронт не обновляет heart-cache.
+  optional gamification.v1.Hearts hearts = 2;
 }
 
 // CompleteQuizAttempt
@@ -257,6 +262,10 @@ message CompleteQuizAttemptRequest {
 
 message CompleteQuizAttemptResponse {
   QuizAttempt attempt = 1;
+  // XP-payload (transaction, stats, leveled_up, unlocked_achievements,
+  // daily_goal_progress). Заполняется только при первом переходе попытки
+  // в completed-состояние и если gamification-service сконфигурирован.
+  optional gamification.v1.AddXPResponse xp = 2;
 }
 
 // GetAttempt

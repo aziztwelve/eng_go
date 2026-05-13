@@ -231,7 +231,7 @@ func (a *API) SubmitAnswer(ctx context.Context, req *quizv1.SubmitAnswerRequest)
 		textAnswer = req.TextAnswer
 	}
 
-	answer, err := a.quizService.SubmitAnswer(ctx, &quiz.SubmitAnswerRequest{
+	result, err := a.quizService.SubmitAnswer(ctx, &quiz.SubmitAnswerRequest{
 		AttemptID:         req.AttemptId,
 		QuestionID:        req.QuestionId,
 		SelectedAnswerIDs: req.SelectedAnswerIds,
@@ -242,19 +242,23 @@ func (a *API) SubmitAnswer(ctx context.Context, req *quizv1.SubmitAnswerRequest)
 	}
 
 	return &quizv1.SubmitAnswerResponse{
-		Answer: modelAttemptAnswerToProto(answer),
+		Answer: modelAttemptAnswerToProto(result.Answer),
+		Hearts: result.Hearts,
 	}, nil
 }
 
-// CompleteQuizAttempt завершает попытку и подсчитывает результаты
+// CompleteQuizAttempt завершает попытку и подсчитывает результаты.
+// XP-payload (см. gamification.OnQuizCompleted) проксируется фронту, если
+// gamification-service сконфигурирован и попытка transition'ила в completed.
 func (a *API) CompleteQuizAttempt(ctx context.Context, req *quizv1.CompleteQuizAttemptRequest) (*quizv1.CompleteQuizAttemptResponse, error) {
-	attempt, err := a.quizService.CompleteQuizAttempt(ctx, req.AttemptId)
+	attempt, xp, err := a.quizService.CompleteQuizAttempt(ctx, req.AttemptId)
 	if err != nil {
 		return nil, err
 	}
 
 	return &quizv1.CompleteQuizAttemptResponse{
 		Attempt: modelAttemptToProto(attempt),
+		Xp:      xp,
 	}, nil
 }
 

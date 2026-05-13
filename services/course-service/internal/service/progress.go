@@ -7,11 +7,17 @@ import (
 	"github.com/elearning/course-service/internal/client/gamification"
 	"github.com/elearning/course-service/internal/model"
 	"github.com/elearning/course-service/internal/repository"
+	gamificationv1 "github.com/elearning/shared/pkg/proto/gamification/v1"
 )
 
-// ProgressService определяет интерфейс бизнес-логики для прогресса
+// ProgressService определяет интерфейс бизнес-логики для прогресса.
+//
+// MarkStepComplete возвращает дополнительный 3-й параметр —
+// `*gamificationv1.AddXPResponse`. Он будет nil если gamification-клиент
+// не настроен (noop) или вызов упал — это не ошибка основного потока,
+// а graceful degradation; фронт фолбэкнется на /gamification/stats.
 type ProgressService interface {
-	MarkStepComplete(ctx context.Context, userID, stepID string, timeSpentSeconds int32, attempts *int32, score *float64) (*model.StepProgress, *model.LessonProgress, error)
+	MarkStepComplete(ctx context.Context, userID, stepID string, timeSpentSeconds int32, attempts *int32, score *float64) (*model.StepProgress, *model.LessonProgress, *gamificationv1.AddXPResponse, error)
 	GetStepProgress(ctx context.Context, userID, stepID string) (*model.StepProgress, error)
 	GetLessonProgress(ctx context.Context, userID, lessonID string) (*model.LessonProgress, []*model.StepProgress, error)
 	GetCourseProgress(ctx context.Context, userID, courseID string) ([]*model.LessonProgress, int32, int32, float64, error)
@@ -52,15 +58,15 @@ func (s *progressService) MarkStepComplete(
 	timeSpentSeconds int32,
 	attempts *int32,
 	score *float64,
-) (*model.StepProgress, *model.LessonProgress, error) {
+) (*model.StepProgress, *model.LessonProgress, *gamificationv1.AddXPResponse, error) {
 	step, err := s.courseRepo.GetStepByID(ctx, stepID)
 	if err != nil {
-		return nil, nil, err
+		return nil, nil, nil, err
 	}
 
 	lesson, err := s.courseRepo.GetLessonByID(ctx, step.LessonID)
 	if err != nil {
-		return nil, nil, err
+		return nil, nil, nil, err
 	}
 
 	// Резолвим контекст урока: course | standalone
@@ -75,14 +81,14 @@ func (s *progressService) MarkStepComplete(
 	} else {
 		module, err := s.courseRepo.GetModuleByID(ctx, lesson.ModuleID)
 		if err != nil {
-			return nil, nil, err
+			return nil, nil, nil, err
 		}
 		hasAccess, err := s.enrollmentRepo.CheckAccess(ctx, userID, module.CourseID)
 		if err != nil {
-			return nil, nil, err
+			return nil, nil, nil, err
 		}
 		if !hasAccess {
-			return nil, nil, ErrNoAccess
+			return nil, nil, nil, ErrNoAccess
 		}
 		cID := module.CourseID
 		sourceID = &cID
@@ -90,7 +96,7 @@ func (s *progressService) MarkStepComplete(
 
 	existingProgress, err := s.progressRepo.GetStepProgress(ctx, userID, stepID)
 	if err != nil {
-		return nil, nil, err
+		return nil, nil, nil, err
 	}
 
 	now := time.Now()
@@ -131,37 +137,73 @@ func (s *progressService) MarkStepComplete(
 	}
 
 	if err != nil {
-		return nil, nil, err
+		return nil, nil, nil, err
 	}
 
 	lessonProgress, err := s.progressRepo.RecalculateLessonProgress(ctx, userID, step.LessonID)
 	if err != nil {
-		return nil, nil, err
+		return nil, nil, nil, err
 	}
 
-	// Phase 1 prep: вызываем gamification (noop пока) после успешной записи.
-	// Ошибки логирует сам клиент; на основной поток не влияем.
-	_ = s.gamificationClient.OnStepCompleted(ctx, gamification.StepCompletedEvent{
+	// Phase 1: вызываем gamification после успешной записи прогресса.
+	// Ошибки логирует сам клиент и возвращает (nil, nil) — основной поток
+	// продолжаем как обычно.
+	xpResp, _ := s.gamificationClient.OnStepCompleted(ctx, gamification.StepCompletedEvent{
 		UserID:     userID,
 		StepID:     stepID,
 		LessonID:   step.LessonID,
 		StepType:   string(step.Type),
 		SourceType: string(stepProgress.SourceType),
 		SourceID:   stepProgress.SourceID,
-		IsCorrect:  true, // Phase 0: квизы пока не различают correct/incorrect здесь
+		IsCorrect:  true, // Phase 0/1: квизы пока не различают correct/incorrect здесь
 		Score:      score,
 	})
 
 	if lessonProgress.CompletedAt != nil && (existingProgress == nil || !existingProgress.Completed) {
-		_ = s.gamificationClient.OnLessonCompleted(ctx, gamification.LessonCompletedEvent{
+		// Бонус за окончание урока. Если есть ответ — переписываем им
+		// step-уровневый xpResp, чтобы у фронта была актуальная картинка
+		// (новый level / unlocked_achievements / daily_goal).
+		if lessonXP, _ := s.gamificationClient.OnLessonCompleted(ctx, gamification.LessonCompletedEvent{
 			UserID:     userID,
 			LessonID:   step.LessonID,
 			SourceType: string(stepProgress.SourceType),
 			SourceID:   stepProgress.SourceID,
-		})
+		}); lessonXP != nil {
+			xpResp = lessonXP
+		}
+
+		// Если этот урок только что закрыл course — фаерим OnCourseCompleted
+		// (один раз, благодаря guard'у выше — повторно сюда не зайдем).
+		// Standalone-уроки не имеют source_id, их пропускаем.
+		if stepProgress.SourceType == model.SourceTypeCourse && stepProgress.SourceID != nil {
+			if courseXP := s.maybeFireCourseCompleted(ctx, userID, *stepProgress.SourceID); courseXP != nil {
+				xpResp = courseXP
+			}
+		}
 	}
 
-	return stepProgress, lessonProgress, nil
+	return stepProgress, lessonProgress, xpResp, nil
+}
+
+// maybeFireCourseCompleted проверяет, что все уроки курса завершены, и если
+// да — однократно дергает gamification.OnCourseCompleted. Идемпотентность
+// обеспечивается guard'ом в MarkStepComplete (срабатывает только в момент
+// transition lesson → completed).
+func (s *progressService) maybeFireCourseCompleted(ctx context.Context, userID, courseID string) *gamificationv1.AddXPResponse {
+	_, totalLessons, completedLessons, _, err := s.GetCourseProgress(ctx, userID, courseID)
+	if err != nil || totalLessons == 0 || completedLessons < totalLessons {
+		return nil
+	}
+	course, err := s.courseRepo.GetByID(ctx, courseID)
+	if err != nil {
+		return nil
+	}
+	xp, _ := s.gamificationClient.OnCourseCompleted(ctx, gamification.CourseCompletedEvent{
+		UserID:   userID,
+		CourseID: courseID,
+		Language: course.Language,
+	})
+	return xp
 }
 
 // GetStepProgress получает прогресс по шагу

@@ -362,7 +362,7 @@ func (a *api) MarkStepComplete(ctx context.Context, req *coursev1.MarkStepComple
 		score = &val
 	}
 
-	stepProgress, lessonProgress, err := a.progressService.MarkStepComplete(
+	stepProgress, lessonProgress, xp, err := a.progressService.MarkStepComplete(
 		ctx,
 		req.UserId,
 		req.StepId,
@@ -378,6 +378,7 @@ func (a *api) MarkStepComplete(ctx context.Context, req *coursev1.MarkStepComple
 	return &coursev1.MarkStepCompleteResponse{
 		StepProgress:   converter.ToStepProgressProto(stepProgress),
 		LessonProgress: converter.ToLessonProgressProto(lessonProgress),
+		Gamification:   xp, // nil если gamification-клиент не настроен или вызов упал
 	}, nil
 }
 

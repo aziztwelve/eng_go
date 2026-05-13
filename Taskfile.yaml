@@ -224,6 +224,10 @@ tasks:
           echo "  ✅ $name"
         }
 
+        # Gamification — запускаем первым: course/quiz могут дернуть его
+        # gRPC при старте (хотя оба фолбэкаются на noop, лучше избежать
+        # лишних warn-ов в логах).
+        start_svc "Gamification"   gamification-service gamification.env cmd/main.go gamification.log
         start_svc "Auth Service"   auth-service    auth.env    cmd/main.go      auth.log
         start_svc "User Service"   user-service    user.env    cmd/main.go      user.log
         start_svc "Course Service" course-service  course.env  cmd/main.go      course.log

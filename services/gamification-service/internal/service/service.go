@@ -9,6 +9,7 @@ import (
 	"context"
 	"time"
 
+	userclient "github.com/elearning/gamification-service/internal/client/user"
 	"github.com/elearning/gamification-service/internal/model"
 	"github.com/elearning/gamification-service/internal/repository"
 )
@@ -21,6 +22,10 @@ type Service struct {
 	dailyGoal repository.DailyGoalRepository
 	streak    repository.StreakRepository
 	ach       repository.AchievementRepository
+	// user — клиент к user-service для achievement-критериев, которым нужны
+	// профильные данные (date_of_birth для `birthday`). Не должен быть nil:
+	// передавайте `userclient.NewNoopClient()`, если интеграция не нужна.
+	user userclient.Client
 
 	// now позволяет инжектить часы в тестах.
 	now func() time.Time
@@ -42,6 +47,7 @@ func New(
 	dailyGoal repository.DailyGoalRepository,
 	streak repository.StreakRepository,
 	ach repository.AchievementRepository,
+	user userclient.Client,
 ) *Service {
 	if cfg.MaxHearts <= 0 {
 		cfg.MaxHearts = 5
@@ -55,6 +61,9 @@ func New(
 	if cfg.StreakFreezeMax <= 0 {
 		cfg.StreakFreezeMax = 2
 	}
+	if user == nil {
+		user = userclient.NewNoopClient()
+	}
 	return &Service{
 		cfg:       cfg,
 		stats:     stats,
@@ -62,6 +71,7 @@ func New(
 		dailyGoal: dailyGoal,
 		streak:    streak,
 		ach:       ach,
+		user:      user,
 		now:       func() time.Time { return time.Now().UTC() },
 	}
 }
@@ -78,7 +88,49 @@ func (s *Service) ensureStats(ctx context.Context, userID string) (*model.UserSt
 }
 
 // today возвращает дату (00:00 UTC).
+//
+// Deprecated: используется только для процессов, не привязанных к
+// календарной дате конкретного пользователя (cron'ы, ResetWeeklyXP, …).
+// Для streak/daily-goal/achievement-критериев используй `todayInTZ`.
 func (s *Service) today() time.Time {
 	t := s.now()
 	return time.Date(t.Year(), t.Month(), t.Day(), 0, 0, 0, 0, time.UTC)
+}
+
+// userLocation возвращает *time.Location для пользователя на основе
+// profile.timezone. Если профиль / зона пуст(а) либо имя зоны невалидно,
+// возвращается time.UTC. Ошибка user-client'а трактуется как "UTC".
+//
+// Кэш профиля живет внутри grpcClient (см. profileCacheTTL), поэтому
+// частые вызовы за step-completion стоят O(1) после прогрева.
+func (s *Service) userLocation(ctx context.Context, userID string) *time.Location {
+	tz, err := s.user.Timezone(ctx, userID)
+	if err != nil || tz == "" {
+		return time.UTC
+	}
+	loc, err := time.LoadLocation(tz)
+	if err != nil {
+		return time.UTC
+	}
+	return loc
+}
+
+// nowInTZ возвращает s.now(), сконвертированное в зону пользователя.
+// Используется для time_of_day / date / birthday — критериев, чувствительных
+// к календарю.
+func (s *Service) nowInTZ(ctx context.Context, userID string) time.Time {
+	return s.now().In(s.userLocation(ctx, userID))
+}
+
+// todayInTZ — 00:00 текущего дня в локальной зоне пользователя.
+// Используется как ключ в streak/daily-goal таблицах, чтобы границы дня
+// совпадали с тем, что видит пользователь в UI.
+//
+// Запись в БД хранится как date (без зоны), но смысл — "локальный день в
+// зоне юзера на момент записи". Это компромисс: если пользователь переедет
+// в другую зону и сместится граница дня, на стыке возможна потеря streak'а
+// или дубль daily-goal на ±1 день. В рамках MVP считаем допустимым.
+func (s *Service) todayInTZ(ctx context.Context, userID string) time.Time {
+	t := s.nowInTZ(ctx, userID)
+	return time.Date(t.Year(), t.Month(), t.Day(), 0, 0, 0, 0, t.Location())
 }

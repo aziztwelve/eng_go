@@ -265,6 +265,43 @@ func (a *API) OnLessonCompleted(ctx context.Context, req *gamificationv1.OnLesso
 	}, nil
 }
 
+func (a *API) OnCourseCompleted(ctx context.Context, req *gamificationv1.OnCourseCompletedRequest) (*gamificationv1.OnCourseCompletedResponse, error) {
+	if req.GetUserId() == "" || req.GetCourseId() == "" {
+		return nil, status.Error(codes.InvalidArgument, "user_id and course_id are required")
+	}
+	res, err := a.svc.OnCourseCompleted(ctx, service.CourseCompletedInput{
+		UserID:   req.UserId,
+		CourseID: req.CourseId,
+		Language: req.GetLanguage(),
+	})
+	if err != nil {
+		return nil, toGRPCError(err)
+	}
+	return &gamificationv1.OnCourseCompletedResponse{
+		Xp: addXPResultToProto(res),
+	}, nil
+}
+
+func (a *API) OnQuizCompleted(ctx context.Context, req *gamificationv1.OnQuizCompletedRequest) (*gamificationv1.OnQuizCompletedResponse, error) {
+	if req.GetUserId() == "" || req.GetQuizId() == "" {
+		return nil, status.Error(codes.InvalidArgument, "user_id and quiz_id are required")
+	}
+	res, err := a.svc.OnQuizCompleted(ctx, service.QuizCompletedInput{
+		UserID:          req.UserId,
+		QuizID:          req.QuizId,
+		ScorePercentage: req.GetScorePercentage(),
+		IsPassed:        req.GetIsPassed(),
+	})
+	if err != nil {
+		return nil, toGRPCError(err)
+	}
+	out := &gamificationv1.OnQuizCompletedResponse{}
+	if res != nil {
+		out.Xp = addXPResultToProto(res)
+	}
+	return out, nil
+}
+
 // --- helpers ---
 
 func toGRPCError(err error) error {

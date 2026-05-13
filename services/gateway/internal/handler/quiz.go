@@ -293,7 +293,10 @@ func (h *QuizHandler) SubmitAnswer(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusCreated, protoAttemptAnswerToDTO(resp.Answer))
+	c.JSON(http.StatusCreated, dto.SubmitAnswerResponse{
+		Answer: protoAttemptAnswerToDTO(resp.Answer),
+		Hearts: resp.GetHearts(),
+	})
 }
 
 // CompleteQuizAttempt завершает попытку

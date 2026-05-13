@@ -6,6 +6,7 @@ option go_package = "github.com/elearning/shared/pkg/proto/course/v1;coursev1";
 
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/wrappers.proto";
+import "gamification/v1/gamification.proto";
 
 // CourseService предоставляет методы для управления курсами
 service CourseService {
@@ -468,6 +469,11 @@ message MarkStepCompleteRequest {
 message MarkStepCompleteResponse {
   StepProgress step_progress = 1;
   LessonProgress lesson_progress = 2;
+  // Опциональный gamification-payload, заполняется когда course-service
+  // настроен на gamification-service (gRPC). Если клиент не настроен
+  // или вызов упал — поле будет null/отсутствовать; фронт должен
+  // gracefully degrade'ить (см. use-gamification-fx).
+  gamification.v1.AddXPResponse gamification = 3;
 }
 
 // GetStepProgressRequest содержит данные для получения прогресса по шагу

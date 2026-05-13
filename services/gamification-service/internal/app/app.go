@@ -11,6 +11,7 @@ import (
 	"google.golang.org/grpc"
 
 	apiv1 "github.com/elearning/gamification-service/internal/api/gamification/v1"
+	userclient "github.com/elearning/gamification-service/internal/client/user"
 	"github.com/elearning/gamification-service/internal/config"
 	"github.com/elearning/gamification-service/internal/cron"
 	postgresrepo "github.com/elearning/gamification-service/internal/repository/postgres"
@@ -67,12 +68,35 @@ func New(ctx context.Context) (*App, error) {
 	streakRepo := postgresrepo.NewStreakRepository(pool)
 	achRepo := postgresrepo.NewAchievementRepository(pool)
 
+	// user-client опционален: используется только для achievement `birthday`.
+	// Если адрес не задан или dial фейлится — фолбэк на noop, основной flow
+	// гамификации не блокируется.
+	var userCli userclient.Client
+	if cfg.UserServiceAddr != "" {
+		uc, closeFn, uerr := userclient.NewGRPCClient(ctx, cfg.UserServiceAddr)
+		if uerr != nil {
+			logger.Warn(ctx, "user client init failed; falling back to noop",
+				zap.String("addr", cfg.UserServiceAddr), zap.Error(uerr))
+			userCli = userclient.NewNoopClient()
+		} else {
+			userCli = uc
+			logger.Info(ctx, "✅ Connected to user-service", zap.String("addr", cfg.UserServiceAddr))
+			closer.Add(func(ctx context.Context) error {
+				logger.Info(ctx, "Closing user-service connection")
+				return closeFn()
+			})
+		}
+	} else {
+		userCli = userclient.NewNoopClient()
+		logger.Info(ctx, "USER_SERVICE_ADDR is empty — birthday achievement disabled")
+	}
+
 	svc := service.New(service.Config{
 		MaxHearts:          cfg.MaxHearts,
 		HeartRegenInterval: cfg.HeartRegenInterval,
 		DefaultDailyXP:     cfg.DefaultDailyXP,
 		StreakFreezeMax:    cfg.StreakFreezeMax,
-	}, statsRepo, xpRepo, dailyGoalRepo, streakRepo, achRepo)
+	}, statsRepo, xpRepo, dailyGoalRepo, streakRepo, achRepo, userCli)
 
 	api := apiv1.New(svc)
 	grpcServer := grpc.NewServer()

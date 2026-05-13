@@ -335,7 +335,7 @@ func buildService(now func() time.Time) (*Service, *fakeStats, *fakeXP, *fakeDai
 	streak := newFakeStreak()
 	ach := newFakeAch()
 	cfg := Config{MaxHearts: 5, HeartRegenInterval: 30 * time.Minute, DefaultDailyXP: 20, StreakFreezeMax: 2}
-	svc := New(cfg, stats, xp, dg, streak, ach)
+	svc := New(cfg, stats, xp, dg, streak, ach, nil)
 	if now != nil {
 		svc.WithClock(now)
 	}

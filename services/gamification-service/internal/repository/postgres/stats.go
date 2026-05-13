@@ -25,7 +25,7 @@ func NewStatsRepository(pool *pgxpool.Pool) repository.StatsRepository {
 
 const statsColumns = `user_id, level, total_xp, weekly_xp, current_streak, max_streak,
 	last_lesson_at, hearts, max_hearts, next_heart_at, gems, streak_freezes,
-	created_at, updated_at`
+	learned_languages, created_at, updated_at`
 
 func scanStats(row pgx.Row) (*model.UserStats, error) {
 	s := &model.UserStats{}
@@ -33,7 +33,7 @@ func scanStats(row pgx.Row) (*model.UserStats, error) {
 	err := row.Scan(
 		&s.UserID, &s.Level, &s.TotalXP, &s.WeeklyXP, &s.CurrentStreak, &s.MaxStreak,
 		&lastLesson, &s.Hearts, &s.MaxHearts, &nextHeart, &s.Gems, &s.StreakFreezes,
-		&s.CreatedAt, &s.UpdatedAt,
+		&s.LearnedLanguages, &s.CreatedAt, &s.UpdatedAt,
 	)
 	if err != nil {
 		return nil, err
@@ -64,11 +64,17 @@ func (r *statsRepository) Get(ctx context.Context, userID string) (*model.UserSt
 func (r *statsRepository) Create(ctx context.Context, s *model.UserStats) error {
 	q := `INSERT INTO user_stats (
 		user_id, level, total_xp, weekly_xp, current_streak, max_streak,
-		last_lesson_at, hearts, max_hearts, next_heart_at, gems, streak_freezes
-	) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)`
+		last_lesson_at, hearts, max_hearts, next_heart_at, gems, streak_freezes,
+		learned_languages
+	) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)`
+	langs := s.LearnedLanguages
+	if langs == nil {
+		langs = []string{}
+	}
 	_, err := r.pool.Exec(ctx, q,
 		s.UserID, s.Level, s.TotalXP, s.WeeklyXP, s.CurrentStreak, s.MaxStreak,
 		s.LastLessonAt, s.Hearts, s.MaxHearts, s.NextHeartAt, s.Gems, s.StreakFreezes,
+		langs,
 	)
 	if err != nil {
 		return fmt.Errorf("insert stats: %w", err)
@@ -106,11 +112,16 @@ func (r *statsRepository) Update(ctx context.Context, s *model.UserStats) error 
 	q := `UPDATE user_stats SET
 		level=$2, total_xp=$3, weekly_xp=$4, current_streak=$5, max_streak=$6,
 		last_lesson_at=$7, hearts=$8, max_hearts=$9, next_heart_at=$10,
-		gems=$11, streak_freezes=$12, updated_at=NOW()
+		gems=$11, streak_freezes=$12, learned_languages=$13, updated_at=NOW()
 		WHERE user_id=$1`
+	langs := s.LearnedLanguages
+	if langs == nil {
+		langs = []string{}
+	}
 	ct, err := r.pool.Exec(ctx, q,
 		s.UserID, s.Level, s.TotalXP, s.WeeklyXP, s.CurrentStreak, s.MaxStreak,
 		s.LastLessonAt, s.Hearts, s.MaxHearts, s.NextHeartAt, s.Gems, s.StreakFreezes,
+		langs,
 	)
 	if err != nil {
 		return fmt.Errorf("update stats: %w", err)

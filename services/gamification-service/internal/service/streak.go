@@ -22,7 +22,7 @@ func (s *Service) UpdateStreak(ctx context.Context, userID string) (*model.UserS
 	if err != nil {
 		return nil, err
 	}
-	today := s.today()
+	today := s.todayInTZ(ctx, userID)
 	yesterday := today.AddDate(0, 0, -1)
 
 	// Уже отмечен сегодня?

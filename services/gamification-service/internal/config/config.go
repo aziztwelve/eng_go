@@ -33,6 +33,10 @@ type Config struct {
 	// Cron-расписания.
 	CronHeartsEvery time.Duration // 5m
 	CronStreakDaily string        // "00:05" UTC
+
+	// USER_SERVICE_ADDR — адрес user-service, нужен только для achievement
+	// `birthday` (lookup date_of_birth). Если пусто — `birthday` всегда false.
+	UserServiceAddr string
 }
 
 // Load подгружает .env (если есть) — игнорирует отсутствие файла,
@@ -70,6 +74,8 @@ func Get() *Config {
 
 		CronHeartsEvery: getEnvDuration("CRON_HEARTS_EVERY", 5*time.Minute),
 		CronStreakDaily: getEnv("CRON_STREAK_DAILY", "00:05"),
+
+		UserServiceAddr: getEnv("USER_SERVICE_ADDR", ""),
 	}
 }
 

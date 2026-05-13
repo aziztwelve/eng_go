@@ -37,11 +37,17 @@ service GamificationService {
   rpc GetUserAchievements(GetUserAchievementsRequest) returns (UserAchievementsResponse);
   rpc CheckAchievements(CheckAchievementsRequest) returns (UnlockedAchievementsResponse);
 
-  // === Event hooks (вызываются из course-service) ===
+  // === Event hooks (вызываются из course-service / quiz-service) ===
   // OnStepCompleted — пользователь успешно завершил шаг.
   rpc OnStepCompleted(OnStepCompletedRequest) returns (OnStepCompletedResponse);
   // OnLessonCompleted — пользователь завершил все шаги урока.
   rpc OnLessonCompleted(OnLessonCompletedRequest) returns (OnLessonCompletedResponse);
+  // OnCourseCompleted — все уроки курса пройдены. Используется для
+  // achievement-триггеров `courses_completed` и `languages`.
+  rpc OnCourseCompleted(OnCourseCompletedRequest) returns (OnCourseCompletedResponse);
+  // OnQuizCompleted — пользователь завершил попытку квиза. Используется для
+  // achievement-триггеров `quiz_completed` и `perfect_quizzes`.
+  rpc OnQuizCompleted(OnQuizCompletedRequest) returns (OnQuizCompletedResponse);
 }
 
 // ============================================================================
@@ -327,5 +333,28 @@ message OnLessonCompletedRequest {
 
 message OnLessonCompletedResponse {
   // Bonus XP за завершение урока + проверка achievements.
+  AddXPResponse xp = 1;
+}
+
+message OnCourseCompletedRequest {
+  string user_id = 1;
+  string course_id = 2;
+  // ISO 639-1 код языка курса (en, es, fr, ...) — для `languages` achievement.
+  string language = 3;
+}
+
+message OnCourseCompletedResponse {
+  AddXPResponse xp = 1;
+}
+
+message OnQuizCompletedRequest {
+  string user_id = 1;
+  string quiz_id = 2;
+  // 0..100; 100.0 → засчитывается как perfect quiz.
+  double score_percentage = 3;
+  bool is_passed = 4;
+}
+
+message OnQuizCompletedResponse {
   AddXPResponse xp = 1;
 }

@@ -1,5 +1,9 @@
 package dto
 
+import (
+	gamificationv1 "github.com/elearning/shared/pkg/proto/gamification/v1"
+)
+
 // Quiz DTOs
 
 type QuizDTO struct {
@@ -79,6 +83,16 @@ type QuizAttemptAnswerDTO struct {
 type AttemptWithAnswersDTO struct {
 	Attempt QuizAttemptDTO         `json:"attempt"`
 	Answers []QuizAttemptAnswerDTO `json:"answers"`
+}
+
+// SubmitAnswerResponse — ответ ручки POST /attempts/:id/answers.
+//
+// Hearts заполняется, когда ответ был неверным и quiz-service сконфигурирован
+// на gamification-service. Сериализуется через стандартный encoding/json
+// (поля snake_case + timestamps как `{seconds, nanos}` — фронт нормализует).
+type SubmitAnswerResponse struct {
+	Answer QuizAttemptAnswerDTO    `json:"answer"`
+	Hearts *gamificationv1.Hearts  `json:"hearts,omitempty"`
 }
 
 // Request DTOs

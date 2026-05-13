@@ -64,3 +64,70 @@ func (s *Service) OnLessonCompleted(ctx context.Context, in LessonCompletedInput
 	}
 	return xp, nil
 }
+
+// CourseCompletedInput — DTO для OnCourseCompleted.
+type CourseCompletedInput struct {
+	UserID   string
+	CourseID string
+	// ISO 639-1 код языка; пустой допустим, но тогда `languages` achievement
+	// не сдвинется.
+	Language string
+}
+
+// OnCourseCompleted — пользователь прошел все уроки курса. Начисляем bonus XP
+// и денормализуем язык в stats.learned_languages для achievement `languages`.
+func (s *Service) OnCourseCompleted(ctx context.Context, in CourseCompletedInput) (*AddXPResult, error) {
+	if in.Language != "" {
+		if err := s.appendLearnedLanguage(ctx, in.UserID, in.Language); err != nil {
+			return nil, err
+		}
+	}
+	courseID := in.CourseID
+	xp, err := s.AddXP(ctx, in.UserID, XPForCourseBonus(), model.XPReasonCourseCompleted, &courseID)
+	if err != nil {
+		return nil, err
+	}
+	return xp, nil
+}
+
+// appendLearnedLanguage добавляет язык в stats.learned_languages (без
+// дубликатов). Делается перед AddXP, чтобы первый же matchCriteria после
+// начисления уже видел обновленный slice.
+func (s *Service) appendLearnedLanguage(ctx context.Context, userID, lang string) error {
+	stats, err := s.ensureStats(ctx, userID)
+	if err != nil {
+		return err
+	}
+	for _, l := range stats.LearnedLanguages {
+		if l == lang {
+			return nil
+		}
+	}
+	stats.LearnedLanguages = append(stats.LearnedLanguages, lang)
+	return s.stats.Update(ctx, stats)
+}
+
+// QuizCompletedInput — DTO для OnQuizCompleted.
+type QuizCompletedInput struct {
+	UserID          string
+	QuizID          string
+	ScorePercentage float64
+	IsPassed        bool
+}
+
+// OnQuizCompleted — попытка квиза завершена. Начисляем XP с reason'ом
+// quiz_completed (или quiz_perfect для 100%) — это разделение позволяет
+// matchCriteria различать `quiz_completed` и `perfect_quizzes` через
+// countXPByReason. Если не passed — ничего не делаем.
+func (s *Service) OnQuizCompleted(ctx context.Context, in QuizCompletedInput) (*AddXPResult, error) {
+	amount, isPerfect := XPForQuizCompleted(in.ScorePercentage, in.IsPassed)
+	if amount == 0 {
+		return nil, nil
+	}
+	reason := model.XPReasonQuizCompleted
+	if isPerfect {
+		reason = model.XPReasonQuizPerfect
+	}
+	quizID := in.QuizID
+	return s.AddXP(ctx, in.UserID, amount, reason, &quizID)
+}

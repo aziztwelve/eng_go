@@ -7,6 +7,7 @@ require (
 	github.com/elearning/platform v0.0.0
 	github.com/elearning/shared v0.0.0
 	github.com/gin-gonic/gin v1.10.0
+	github.com/google/uuid v1.6.0
 	github.com/joho/godotenv v1.5.1
 	go.uber.org/zap v1.27.1
 	google.golang.org/grpc v1.69.4

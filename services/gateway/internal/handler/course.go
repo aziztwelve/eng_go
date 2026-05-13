@@ -184,6 +184,7 @@ func (h *CourseHandler) MarkStepComplete(c *gin.Context) {
 	c.JSON(http.StatusOK, dto.MarkStepCompleteResponse{
 		StepProgress:   convertStepProgress(resp.StepProgress),
 		LessonProgress: convertLessonProgress(resp.LessonProgress),
+		Gamification:   resp.Gamification, // nil если не настроено / не вернулось
 	})
 }
 

@@ -99,7 +99,7 @@ func (s *Service) bumpDailyGoal(ctx context.Context, userID string, amount int) 
 		}
 	}
 
-	date := s.today()
+	date := s.todayInTZ(ctx, userID)
 	progress, err := s.dailyGoal.GetProgress(ctx, userID, date)
 	if err != nil && !errors.Is(err, repository.ErrNotFound) {
 		return nil, fmt.Errorf("get daily progress: %w", err)
