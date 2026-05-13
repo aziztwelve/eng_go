@@ -9,11 +9,12 @@ import (
 )
 
 type diContainer struct {
-	authClient   *client.AuthClient
-	userClient   *client.UserClient
-	courseClient *client.CourseClient
-	videoClient  client.VideoClient
-	quizClient   *client.QuizClient
+	authClient         *client.AuthClient
+	userClient         *client.UserClient
+	courseClient       *client.CourseClient
+	videoClient        client.VideoClient
+	quizClient         *client.QuizClient
+	gamificationClient *client.GamificationClient
 }
 
 func NewDiContainer() *diContainer {
@@ -98,4 +99,25 @@ func (d *diContainer) QuizClient(ctx context.Context) *client.QuizClient {
 		d.quizClient = c
 	}
 	return d.quizClient
+}
+
+// GamificationClient может быть nil, если GAMIFICATION_SERVICE_ADDR не задан —
+// в этом случае gamification роуты не регистрируются.
+func (d *diContainer) GamificationClient(ctx context.Context) *client.GamificationClient {
+	if d.gamificationClient != nil {
+		return d.gamificationClient
+	}
+	addr := config.AppConfig().Services.GamificationServiceAddr()
+	if addr == "" {
+		return nil
+	}
+	c, err := client.NewGamificationClient(ctx, addr)
+	if err != nil {
+		panic(err)
+	}
+	closer.AddNamed("Gamification gRPC client", func(ctx context.Context) error {
+		return c.Close()
+	})
+	d.gamificationClient = c
+	return d.gamificationClient
 }

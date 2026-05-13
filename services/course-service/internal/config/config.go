@@ -22,6 +22,10 @@ type Config struct {
 	KafkaBrokers       []string
 	KafkaConsumerGroup string
 
+	// GamificationServiceAddr — адрес gRPC gamification-service (например,
+	// "localhost:50058"). Если пусто, используется noop-клиент.
+	GamificationServiceAddr string
+
 	LoggerLevel  string
 	LoggerAsJSON bool
 }
@@ -52,6 +56,8 @@ func Get() *Config {
 
 		KafkaBrokers:       []string{getEnv("KAFKA_BROKERS", "localhost:9092")},
 		KafkaConsumerGroup: getEnv("KAFKA_CONSUMER_GROUP", "course-service"),
+
+		GamificationServiceAddr: getEnv("GAMIFICATION_SERVICE_ADDR", ""),
 
 		LoggerLevel:  getEnv("LOGGER_LEVEL", "info"),
 		LoggerAsJSON: getEnv("LOGGER_AS_JSON", "false") == "true",

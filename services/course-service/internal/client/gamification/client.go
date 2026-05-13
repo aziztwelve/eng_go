@@ -11,6 +11,7 @@ type StepCompletedEvent struct {
 	UserID     string
 	StepID     string
 	LessonID   string
+	StepType   string  // text | video | quiz | task | brain_game | ai_writing
 	SourceType string  // course | track | standalone
 	SourceID   *string // course_id, track_id или nil
 	IsCorrect  bool

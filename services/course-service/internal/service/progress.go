@@ -145,6 +145,7 @@ func (s *progressService) MarkStepComplete(
 		UserID:     userID,
 		StepID:     stepID,
 		LessonID:   step.LessonID,
+		StepType:   string(step.Type),
 		SourceType: string(stepProgress.SourceType),
 		SourceID:   stepProgress.SourceID,
 		IsCorrect:  true, // Phase 0: квизы пока не различают correct/incorrect здесь

@@ -153,6 +153,25 @@ func (a *App) initRouter(ctx context.Context) error {
 			protected.POST("/attempts/:attemptId/answers", quizHandler.SubmitAnswer)
 			protected.POST("/attempts/:attemptId/complete", quizHandler.CompleteQuizAttempt)
 			protected.GET("/attempts/:attemptId", quizHandler.GetAttempt)
+
+			// Gamification (регистрируется только если сервис настроен)
+			if gc := a.diContainer.GamificationClient(ctx); gc != nil {
+				gh := handler.NewGamificationHandler(gc)
+				g := protected.Group("/gamification")
+				{
+					g.GET("/stats", gh.GetMyStats)
+					g.GET("/stats/:userId", gh.GetUserStats)
+					g.GET("/hearts", gh.GetHearts)
+					g.POST("/hearts/refill", gh.RefillHearts)
+					g.GET("/daily-goal", gh.GetDailyGoal)
+					g.PUT("/daily-goal", gh.UpdateDailyGoal)
+					g.GET("/streak/history", gh.GetStreakHistory)
+					g.POST("/streak/freeze", gh.UseStreakFreeze)
+					g.GET("/achievements", gh.ListAchievements)
+					g.GET("/achievements/mine", gh.GetMyAchievements)
+					g.GET("/xp/history", gh.GetXPHistory)
+				}
+			}
 		}
 
 		// Admin endpoints

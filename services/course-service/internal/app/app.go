@@ -74,9 +74,28 @@ func New(ctx context.Context) (*App, error) {
 
 	// Инициализация сервисов
 	videoClient := service.NewMockVideoClient()
-	// Phase 1 prep: noop gamification клиент. Заменить на реальную реализацию,
-	// когда появится отдельный gamification-service.
-	gamificationClient := gamification.NewNoopClient()
+	// Gamification (Phase 1). Если задан GAMIFICATION_SERVICE_ADDR — используем
+	// gRPC клиент, иначе фоллбэк на noop. Никакая ошибка gamification не должна
+	// блокировать основной поток course-service.
+	var gamificationClient gamification.Client = gamification.NewNoopClient()
+	if cfg.GamificationServiceAddr != "" {
+		gc, closeGC, err := gamification.NewGRPCClient(ctx, cfg.GamificationServiceAddr)
+		if err != nil {
+			logger.Warn(ctx, "❌ failed to dial gamification, falling back to noop",
+				zap.String("addr", cfg.GamificationServiceAddr),
+				zap.Error(err),
+			)
+		} else {
+			gamificationClient = gc
+			closer.Add(func(ctx context.Context) error {
+				logger.Info(ctx, "Closing gamification gRPC connection")
+				return closeGC()
+			})
+			logger.Info(ctx, "✅ Connected to gamification-service",
+				zap.String("addr", cfg.GamificationServiceAddr),
+			)
+		}
+	}
 	courseService := service.NewCourseService(courseRepo, videoClient)
 	enrollmentService := service.NewEnrollmentService(enrollmentRepo)
 	progressService := service.NewProgressService(progressRepo, courseRepo, enrollmentRepo, gamificationClient)

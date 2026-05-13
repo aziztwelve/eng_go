@@ -3,6 +3,7 @@ CREATE SCHEMA IF NOT EXISTS auth;
 CREATE SCHEMA IF NOT EXISTS users;
 CREATE SCHEMA IF NOT EXISTS courses;
 CREATE SCHEMA IF NOT EXISTS videos;
+CREATE SCHEMA IF NOT EXISTS gamification;
 
 -- Создание пользователей для каждого сервиса
 DO $$
@@ -21,6 +22,10 @@ BEGIN
   
   IF NOT EXISTS (SELECT FROM pg_catalog.pg_roles WHERE rolname = 'video_user') THEN
     CREATE USER video_user WITH PASSWORD 'video_pass';
+  END IF;
+
+  IF NOT EXISTS (SELECT FROM pg_catalog.pg_roles WHERE rolname = 'gamification_user') THEN
+    CREATE USER gamification_user WITH PASSWORD 'gamification_pass';
   END IF;
 END
 $$;
@@ -52,3 +57,10 @@ GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA videos TO video_user;
 GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA videos TO video_user;
 ALTER DEFAULT PRIVILEGES IN SCHEMA videos GRANT ALL ON TABLES TO video_user;
 ALTER DEFAULT PRIVILEGES IN SCHEMA videos GRANT ALL ON SEQUENCES TO video_user;
+
+-- Выдача прав доступа для gamification_user
+GRANT ALL PRIVILEGES ON SCHEMA gamification TO gamification_user;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA gamification TO gamification_user;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA gamification TO gamification_user;
+ALTER DEFAULT PRIVILEGES IN SCHEMA gamification GRANT ALL ON TABLES TO gamification_user;
+ALTER DEFAULT PRIVILEGES IN SCHEMA gamification GRANT ALL ON SEQUENCES TO gamification_user;

@@ -22,8 +22,8 @@ vars:
   ENVSUBST: '{{.BIN_DIR}}/envsubst'
   ENVDIR: '{{.ROOT_DIR}}/deploy/env'
 
-  MODULES: platform shared services/auth-service services/user-service services/course-service services/video-service services/gateway
-  SERVICES: auth,user,course,video,gateway
+  MODULES: platform shared services/auth-service services/user-service services/course-service services/video-service services/gamification-service services/gateway
+  SERVICES: auth,user,course,video,gamification,gateway
 
 tasks:
   # === Environment Management ===
@@ -490,6 +490,29 @@ tasks:
         done
         echo "✅ Миграции Video Service применены"
 
+  migrate-up-gamification:
+    desc: "Применить миграции для Gamification Service"
+    cmds:
+      - |
+        echo "📦 Применение миграций для Gamification Service..."
+        cd services/gamification-service/migrations
+        for file in *.up.sql; do
+          if [ -f "$file" ]; then
+            echo "  Применяем $file"
+            PGPASSWORD=change_me_in_production psql -h localhost -U admin -d elearning -f "$file"
+          fi
+        done
+        echo "✅ Миграции Gamification Service применены"
+
+  seed-gamification:
+    desc: "Залить seed данные для Gamification Service (30+ achievements)"
+    cmds:
+      - |
+        echo "🌱 Заливаем seed данные для Gamification Service..."
+        PGPASSWORD=change_me_in_production psql -h localhost -U admin -d elearning \
+          -f services/gamification-service/seeds/001_achievements.sql
+        echo "✅ Seed Gamification Service выполнен"
+
   migrate-up-all:
     desc: "Применить все миграции"
     cmds:
@@ -497,6 +520,7 @@ tasks:
       - task: migrate-up-user
       - task: migrate-up-course
       - task: migrate-up-video
+      - task: migrate-up-gamification
 
   # === Database Seeding ===
   

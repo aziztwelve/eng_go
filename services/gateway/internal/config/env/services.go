@@ -5,11 +5,12 @@ import (
 )
 
 type servicesEnvConfig struct {
-	AuthServiceAddr   string `env:"AUTH_SERVICE_ADDR,required"`
-	UserServiceAddr   string `env:"USER_SERVICE_ADDR,required"`
-	CourseServiceAddr string `env:"COURSE_SERVICE_ADDR,required"`
-	VideoServiceAddr  string `env:"VIDEO_SERVICE_ADDR,required"`
-	QuizServiceAddr   string `env:"QUIZ_SERVICE_ADDR,required"`
+	AuthServiceAddr         string `env:"AUTH_SERVICE_ADDR,required"`
+	UserServiceAddr         string `env:"USER_SERVICE_ADDR,required"`
+	CourseServiceAddr       string `env:"COURSE_SERVICE_ADDR,required"`
+	VideoServiceAddr        string `env:"VIDEO_SERVICE_ADDR,required"`
+	QuizServiceAddr         string `env:"QUIZ_SERVICE_ADDR,required"`
+	GamificationServiceAddr string `env:"GAMIFICATION_SERVICE_ADDR" envDefault:""`
 }
 
 type ServicesConfig struct {
@@ -43,4 +44,8 @@ func (cfg *ServicesConfig) VideoServiceAddr() string {
 
 func (cfg *ServicesConfig) QuizServiceAddr() string {
 	return cfg.raw.QuizServiceAddr
+}
+
+func (cfg *ServicesConfig) GamificationServiceAddr() string {
+	return cfg.raw.GamificationServiceAddr
 }

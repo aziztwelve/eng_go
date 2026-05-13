@@ -1,0 +1,331 @@
+syntax = "proto3";
+
+package gamification.v1;
+
+option go_package = "github.com/elearning/shared/proto/gamification/v1;gamificationv1";
+
+import "google/protobuf/timestamp.proto";
+
+// GamificationService отвечает за XP, hearts, streaks, daily goals и
+// achievements. Сервис не привязан к контейнеру контента (course/track/
+// standalone) — он реагирует на действия пользователя.
+service GamificationService {
+  // === Stats ===
+  rpc InitializeUser(InitializeUserRequest) returns (UserStats);
+  rpc GetUserStats(GetUserStatsRequest) returns (UserStats);
+
+  // === XP ===
+  rpc AddXP(AddXPRequest) returns (AddXPResponse);
+  rpc GetXPHistory(GetXPHistoryRequest) returns (XPHistoryResponse);
+
+  // === Hearts ===
+  rpc LoseHeart(LoseHeartRequest) returns (Hearts);
+  rpc RefillHearts(RefillHeartsRequest) returns (Hearts);
+  rpc CheckHearts(CheckHeartsRequest) returns (Hearts);
+
+  // === Daily Goal ===
+  rpc GetDailyGoal(GetDailyGoalRequest) returns (DailyGoal);
+  rpc UpdateDailyGoal(UpdateDailyGoalRequest) returns (DailyGoal);
+
+  // === Streak ===
+  rpc UpdateStreak(UpdateStreakRequest) returns (Streak);
+  rpc GetStreakHistory(GetStreakHistoryRequest) returns (StreakHistory);
+  rpc UseStreakFreeze(UseStreakFreezeRequest) returns (Streak);
+
+  // === Achievements ===
+  rpc ListAchievements(ListAchievementsRequest) returns (AchievementsResponse);
+  rpc GetUserAchievements(GetUserAchievementsRequest) returns (UserAchievementsResponse);
+  rpc CheckAchievements(CheckAchievementsRequest) returns (UnlockedAchievementsResponse);
+
+  // === Event hooks (вызываются из course-service) ===
+  // OnStepCompleted — пользователь успешно завершил шаг.
+  rpc OnStepCompleted(OnStepCompletedRequest) returns (OnStepCompletedResponse);
+  // OnLessonCompleted — пользователь завершил все шаги урока.
+  rpc OnLessonCompleted(OnLessonCompletedRequest) returns (OnLessonCompletedResponse);
+}
+
+// ============================================================================
+// Stats
+// ============================================================================
+
+message UserStats {
+  string user_id = 1;
+  int32 level = 2;
+  int32 total_xp = 3;
+  int32 weekly_xp = 4;
+  int32 next_level_xp = 5;          // XP, нужный до следующего уровня
+  int32 current_streak = 6;
+  int32 max_streak = 7;
+  google.protobuf.Timestamp last_lesson_at = 8;
+  int32 hearts = 9;
+  int32 max_hearts = 10;
+  google.protobuf.Timestamp next_heart_at = 11;
+  int32 gems = 12;
+  int32 streak_freezes = 13;
+  google.protobuf.Timestamp created_at = 14;
+  google.protobuf.Timestamp updated_at = 15;
+}
+
+message InitializeUserRequest {
+  string user_id = 1;
+}
+
+message GetUserStatsRequest {
+  string user_id = 1;
+}
+
+// ============================================================================
+// XP
+// ============================================================================
+
+enum XPReason {
+  XP_REASON_UNSPECIFIED = 0;
+  XP_REASON_STEP_COMPLETED = 1;
+  XP_REASON_LESSON_COMPLETED = 2;
+  XP_REASON_DAILY_GOAL = 3;
+  XP_REASON_ACHIEVEMENT = 4;
+  XP_REASON_STREAK_BONUS = 5;
+  XP_REASON_PRACTICE = 6;
+}
+
+message XPTransaction {
+  string id = 1;
+  string user_id = 2;
+  int32 amount = 3;
+  XPReason reason = 4;
+  string source_id = 5;             // step_id, lesson_id, achievement_id...
+  google.protobuf.Timestamp created_at = 6;
+}
+
+message AddXPRequest {
+  string user_id = 1;
+  int32 amount = 2;
+  XPReason reason = 3;
+  string source_id = 4;
+}
+
+message AddXPResponse {
+  XPTransaction transaction = 1;
+  UserStats stats = 2;
+  bool leveled_up = 3;
+  int32 new_level = 4;
+  // Список разблокированных за это действие achievements (если есть).
+  repeated UserAchievement unlocked_achievements = 5;
+  // Состояние daily-goal после начисления.
+  DailyGoalProgress daily_goal_progress = 6;
+}
+
+message GetXPHistoryRequest {
+  string user_id = 1;
+  int32 limit = 2;                  // default 50
+  int32 offset = 3;
+}
+
+message XPHistoryResponse {
+  repeated XPTransaction transactions = 1;
+  int32 total = 2;
+}
+
+// ============================================================================
+// Hearts
+// ============================================================================
+
+message Hearts {
+  string user_id = 1;
+  int32 hearts = 2;
+  int32 max_hearts = 3;
+  google.protobuf.Timestamp next_heart_at = 4;
+  bool unlimited = 5;               // для premium
+}
+
+message LoseHeartRequest {
+  string user_id = 1;
+  string source_id = 2;             // step_id / quiz_question_id, для аналитики
+}
+
+enum RefillReason {
+  REFILL_REASON_UNSPECIFIED = 0;
+  REFILL_REASON_PRACTICE = 1;
+  REFILL_REASON_GEMS = 2;
+  REFILL_REASON_PREMIUM = 3;
+  REFILL_REASON_REGEN = 4;          // авто-восстановление по таймеру
+}
+
+message RefillHeartsRequest {
+  string user_id = 1;
+  RefillReason reason = 2;
+  int32 amount = 3;                 // 0 = до max_hearts
+}
+
+message CheckHeartsRequest {
+  string user_id = 1;
+}
+
+// ============================================================================
+// Daily Goal
+// ============================================================================
+
+message DailyGoal {
+  string user_id = 1;
+  int32 target_xp = 2;
+  google.protobuf.Timestamp updated_at = 3;
+  DailyGoalProgress today = 4;
+}
+
+message DailyGoalProgress {
+  string user_id = 1;
+  string date = 2;                  // YYYY-MM-DD
+  int32 xp_earned = 3;
+  int32 goal = 4;
+  bool completed = 5;
+  google.protobuf.Timestamp completed_at = 6;
+}
+
+message GetDailyGoalRequest {
+  string user_id = 1;
+}
+
+message UpdateDailyGoalRequest {
+  string user_id = 1;
+  int32 target_xp = 2;              // 10 / 20 / 30 / 50
+}
+
+// ============================================================================
+// Streak
+// ============================================================================
+
+message Streak {
+  string user_id = 1;
+  int32 current_streak = 2;
+  int32 max_streak = 3;
+  google.protobuf.Timestamp last_lesson_at = 4;
+  int32 streak_freezes = 5;
+}
+
+message StreakDay {
+  string date = 1;                  // YYYY-MM-DD
+  bool completed = 2;
+  bool used_freeze = 3;
+}
+
+message StreakHistory {
+  string user_id = 1;
+  repeated StreakDay days = 2;
+}
+
+message UpdateStreakRequest {
+  string user_id = 1;
+}
+
+message GetStreakHistoryRequest {
+  string user_id = 1;
+  int32 days = 2;                   // default 30
+}
+
+message UseStreakFreezeRequest {
+  string user_id = 1;
+}
+
+// ============================================================================
+// Achievements
+// ============================================================================
+
+message Achievement {
+  string id = 1;
+  string code = 2;
+  string title = 3;
+  string description = 4;
+  string icon_url = 5;
+  string category = 6;              // learning | streak | xp | special
+  int32 tier = 7;                   // 1=bronze, 2=silver, 3=gold
+  int32 xp_reward = 8;
+  int32 gems_reward = 9;
+  string criteria_json = 10;        // {"type":"streak","value":7}
+  bool is_hidden = 11;
+  google.protobuf.Timestamp created_at = 12;
+}
+
+message UserAchievement {
+  string user_id = 1;
+  Achievement achievement = 2;
+  int32 progress = 3;
+  google.protobuf.Timestamp unlocked_at = 4;
+}
+
+message ListAchievementsRequest {
+  string category = 1;              // optional filter
+  bool include_hidden = 2;
+}
+
+message AchievementsResponse {
+  repeated Achievement achievements = 1;
+}
+
+message GetUserAchievementsRequest {
+  string user_id = 1;
+}
+
+message UserAchievementsResponse {
+  repeated UserAchievement achievements = 1;
+}
+
+message CheckAchievementsRequest {
+  string user_id = 1;
+  // trigger — что произошло, чтобы быстро отфильтровать кандидатов:
+  // "step_completed" | "lesson_completed" | "streak_updated" | "xp_added"
+  string trigger = 2;
+}
+
+message UnlockedAchievementsResponse {
+  repeated UserAchievement unlocked = 1;
+}
+
+// ============================================================================
+// Event hooks (от course-service)
+// ============================================================================
+
+enum SourceType {
+  SOURCE_TYPE_UNSPECIFIED = 0;
+  SOURCE_TYPE_COURSE = 1;
+  SOURCE_TYPE_TRACK = 2;
+  SOURCE_TYPE_STANDALONE = 3;
+}
+
+enum StepKind {
+  STEP_KIND_UNSPECIFIED = 0;
+  STEP_KIND_TEXT = 1;
+  STEP_KIND_VIDEO = 2;
+  STEP_KIND_QUIZ = 3;
+  STEP_KIND_MATCH = 4;
+  STEP_KIND_TRANSLATE = 5;
+  STEP_KIND_LISTENING = 6;
+  STEP_KIND_FILL_BLANK = 7;
+}
+
+message OnStepCompletedRequest {
+  string user_id = 1;
+  string step_id = 2;
+  string lesson_id = 3;
+  StepKind step_kind = 4;
+  SourceType source_type = 5;
+  string source_id = 6;             // course_id / track_id, "" для standalone
+  bool is_correct = 7;
+  double score = 8;                 // 0..1, для квизов
+}
+
+message OnStepCompletedResponse {
+  AddXPResponse xp = 1;
+  Streak streak = 2;
+}
+
+message OnLessonCompletedRequest {
+  string user_id = 1;
+  string lesson_id = 2;
+  SourceType source_type = 3;
+  string source_id = 4;
+}
+
+message OnLessonCompletedResponse {
+  // Bonus XP за завершение урока + проверка achievements.
+  AddXPResponse xp = 1;
+}
