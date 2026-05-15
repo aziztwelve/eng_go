@@ -95,6 +95,39 @@ func (r *fakeStats) ResetWeeklyXP(_ context.Context) error {
 	return nil
 }
 
+func (r *fakeStats) ListAllUserIDs(_ context.Context, limit, offset int) ([]string, error) {
+	r.mu.Lock()
+	defer r.mu.Unlock()
+	if limit <= 0 {
+		limit = 500
+	}
+	if offset < 0 {
+		offset = 0
+	}
+	ids := make([]string, 0, len(r.m))
+	for id := range r.m {
+		ids = append(ids, id)
+	}
+	// Stable order для предсказуемости в тестах.
+	sortStrings(ids)
+	if offset >= len(ids) {
+		return nil, nil
+	}
+	end := offset + limit
+	if end > len(ids) {
+		end = len(ids)
+	}
+	return ids[offset:end], nil
+}
+
+func sortStrings(s []string) {
+	for i := 1; i < len(s); i++ {
+		for j := i; j > 0 && s[j-1] > s[j]; j-- {
+			s[j-1], s[j] = s[j], s[j-1]
+		}
+	}
+}
+
 type fakeXP struct {
 	mu  sync.Mutex
 	all []*model.XPTransaction

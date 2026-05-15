@@ -35,4 +35,11 @@ const (
 		FROM profiles
 		WHERE user_id = $1
 	`
+
+	queryBatchGetProfiles = `
+		SELECT id, user_id, first_name, last_name, native_lang, target_lang,
+		       bio, avatar_url, date_of_birth, timezone, created_at, updated_at
+		FROM profiles
+		WHERE user_id = ANY($1)
+	`
 )

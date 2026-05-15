@@ -306,6 +306,9 @@ enum StepKind {
   STEP_KIND_TRANSLATE = 5;
   STEP_KIND_LISTENING = 6;
   STEP_KIND_FILL_BLANK = 7;
+  // Phase 2.
+  STEP_KIND_TAP_WORDS = 8;
+  STEP_KIND_STORY = 9;
 }
 
 message OnStepCompletedRequest {

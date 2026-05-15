@@ -1,0 +1,304 @@
+syntax = "proto3";
+
+package notifications.v1;
+
+option go_package = "github.com/elearning/shared/pkg/proto/notifications/v1;notificationsv1";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/struct.proto";
+
+// NotificationsService — Phase 3 (push notifications).
+//
+// Сервис «тупого отправителя»: хранит device-токены пользователей,
+// их предпочтения по каналам, запись о каждой отправке (для дедупа
+// и аудита), и умеет физически отправлять push'и (Web Push / Expo).
+//
+// Что/когда отправлять — решают доменные сервисы (gamification, srs)
+// через свои крон-планировщики или хуки. Они вызывают SendNotification.
+//
+// Категории (kind):
+//   - practice_reminder  — у юзера есть due-карточки и он давно не заходил
+//   - streak_risk        — стрик в опасности (вечер по TZ, не сохранён сегодня)
+//   - daily_goal         — daily goal не выполнен, время уходит
+//   - achievement        — разблокирована ачивка
+service NotificationsService {
+  // === Devices ===
+
+  // RegisterDevice — регистрирует устройство для push'ей. Идемпотентно
+  // по (user_id, token): повторный вызов поднимает last_seen_at и
+  // снимает revoked_at если был отзыв.
+  rpc RegisterDevice(RegisterDeviceRequest) returns (RegisterDeviceResponse);
+
+  // UnregisterDevice — мягкая отмена регистрации (revoked_at = now).
+  // Используется при logout или при ошибке доставки 404/410.
+  rpc UnregisterDevice(UnregisterDeviceRequest) returns (UnregisterDeviceResponse);
+
+  // ListDevices — все активные устройства юзера (для UI настроек).
+  rpc ListDevices(ListDevicesRequest) returns (ListDevicesResponse);
+
+  // === Preferences ===
+
+  // GetPreferences — текущие настройки юзера. Если записи ещё нет,
+  // возвращает дефолтные значения (все каналы on, quiet_hours 22-08).
+  rpc GetPreferences(GetPreferencesRequest) returns (GetPreferencesResponse);
+
+  // UpdatePreferences — upsert настроек.
+  rpc UpdatePreferences(UpdatePreferencesRequest) returns (UpdatePreferencesResponse);
+
+  // === Send ===
+
+  // SendNotification — основной API для доменных сервисов. Делает:
+  //   1. проверку prefs.<channel>_enabled (если выключено — silent skip)
+  //   2. проверку quiet hours по timezone юзера (если внутри — defer
+  //      до конца окна, либо silent skip если событие срочное)
+  //   3. dedup по (user_id, kind, dedup_key) — если запись уже есть в
+  //      log за окно dedup_window, шлёт повторно НЕ будет
+  //   4. фактическую отправку на все активные devices юзера
+  //   5. запись в notification_log со статусом
+  //
+  // Не блокирует caller'а на доставку — пишет в лог и возвращает
+  // attempted/skipped счётчики; реальная отправка делается параллельно
+  // и обновляет статус позже.
+  rpc SendNotification(SendNotificationRequest) returns (SendNotificationResponse);
+
+  // === Inbox ===
+
+  // ListNotifications — лента уведомлений юзера (для in-app inbox).
+  rpc ListNotifications(ListNotificationsRequest) returns (ListNotificationsResponse);
+
+  // MarkRead — пометить уведомление прочитанным (или все).
+  rpc MarkRead(MarkReadRequest) returns (MarkReadResponse);
+}
+
+// === Enums ===
+
+// Platform — платформа device-токена.
+enum Platform {
+  PLATFORM_UNSPECIFIED = 0;
+  PLATFORM_WEB         = 1; // Web Push (VAPID + endpoint/p256dh/auth)
+  PLATFORM_EXPO        = 2; // Expo push token (ExponentPushToken[xxx])
+  PLATFORM_IOS         = 3; // raw APNs token (на будущее, expo сейчас закрывает)
+  PLATFORM_ANDROID     = 4; // raw FCM token (на будущее)
+}
+
+// Channel — категория push'ей. 1:1 с прокси-полями в UserPreferences.
+enum Channel {
+  CHANNEL_UNSPECIFIED       = 0;
+  CHANNEL_PRACTICE_REMINDER = 1;
+  CHANNEL_STREAK_RISK       = 2;
+  CHANNEL_DAILY_GOAL        = 3;
+  CHANNEL_ACHIEVEMENT       = 4;
+}
+
+// SendStatus — состояние отправки в лог-таблице.
+enum SendStatus {
+  SEND_STATUS_UNSPECIFIED = 0;
+  SEND_STATUS_QUEUED      = 1; // создан, ещё не отправлен
+  SEND_STATUS_SENT        = 2; // отправлен хотя бы на одно устройство
+  SEND_STATUS_FAILED      = 3; // все попытки доставки упали
+  SEND_STATUS_SKIPPED     = 4; // pref off / quiet hours / dedup
+}
+
+// === Messages ===
+
+// DeviceToken — запись о устройстве пользователя.
+message DeviceToken {
+  string id        = 1;
+  string user_id   = 2;
+  Platform platform = 3;
+
+  // Для PLATFORM_EXPO/IOS/ANDROID — opaque token. Для PLATFORM_WEB —
+  // используется как составной ключ в paire с endpoint (см. ниже).
+  string token     = 4;
+
+  // Web Push специфика (RFC 8030 / VAPID). Для не-web остаётся пустым.
+  string endpoint  = 5; // push subscription endpoint
+  string p256dh    = 6; // base64url
+  string auth      = 7; // base64url
+
+  string user_agent = 8; // диагностика, опционально
+  string locale     = 9; // "ru-RU" / "en-US" — для i18n
+
+  google.protobuf.Timestamp last_seen_at  = 10;
+  google.protobuf.Timestamp revoked_at    = 11; // null если активен
+  google.protobuf.Timestamp created_at    = 12;
+}
+
+// UserPreferences — per-user настройки доставки.
+message UserPreferences {
+  string user_id = 1;
+
+  // Каналы (по умолчанию все включены).
+  bool practice_reminder_enabled = 2;
+  bool streak_risk_enabled       = 3;
+  bool daily_goal_enabled        = 4;
+  bool achievement_enabled       = 5;
+
+  // Quiet hours — окно тишины (например 22:00..08:00 локального TZ).
+  // Если start == end — окно отключено. Формат: 0..23.
+  int32 quiet_hours_start = 6; // default 22
+  int32 quiet_hours_end   = 7; // default 8
+
+  // IANA timezone (Europe/Moscow / Asia/Almaty / ...). Если пусто —
+  // используется UTC. На MVP заполняется автоматически из user-service.
+  string timezone = 8;
+
+  google.protobuf.Timestamp updated_at = 9;
+}
+
+// NotificationLog — запись о попытке отправки.
+message NotificationLog {
+  string id      = 1;
+  string user_id = 2;
+  Channel channel = 3;
+  string kind    = 4; // короткий машинный slug (== channel name lower)
+
+  string title = 5;
+  string body  = 6;
+
+  // payload — произвольные данные для click handling (deep link и т.д.)
+  google.protobuf.Struct data = 7;
+
+  string dedup_key = 8;  // ключ дедупа в окне (например "2026-05-15" для daily)
+  SendStatus status = 9;
+  string error      = 10; // для FAILED — текст последней ошибки
+
+  int32 devices_attempted = 11;
+  int32 devices_succeeded = 12;
+
+  bool is_read = 13;
+  google.protobuf.Timestamp read_at = 14;
+
+  google.protobuf.Timestamp scheduled_at = 15; // желаемое время доставки
+  google.protobuf.Timestamp sent_at      = 16;
+  google.protobuf.Timestamp created_at   = 17;
+}
+
+// === RegisterDevice ===
+
+message RegisterDeviceRequest {
+  string user_id = 1;
+  Platform platform = 2;
+  string token     = 3;
+
+  // Только для PLATFORM_WEB.
+  string endpoint  = 4;
+  string p256dh    = 5;
+  string auth      = 6;
+
+  string user_agent = 7;
+  string locale     = 8;
+}
+
+message RegisterDeviceResponse {
+  DeviceToken device = 1;
+  bool created       = 2;
+}
+
+// === UnregisterDevice ===
+
+message UnregisterDeviceRequest {
+  string user_id = 1;
+  // Один из: device_id или token+platform (для веба token == endpoint).
+  string device_id = 2;
+  string token     = 3;
+  Platform platform = 4;
+}
+
+message UnregisterDeviceResponse {
+  int32 unregistered = 1;
+}
+
+// === ListDevices ===
+
+message ListDevicesRequest {
+  string user_id = 1;
+  bool include_revoked = 2;
+}
+
+message ListDevicesResponse {
+  repeated DeviceToken devices = 1;
+}
+
+// === Preferences ===
+
+message GetPreferencesRequest {
+  string user_id = 1;
+}
+
+message GetPreferencesResponse {
+  UserPreferences prefs = 1;
+  bool defaults_used = 2; // true → записи ещё нет, вернули дефолты
+}
+
+message UpdatePreferencesRequest {
+  // Полная замена (PUT-семантика). Сервер заполнит updated_at.
+  UserPreferences prefs = 1;
+}
+
+message UpdatePreferencesResponse {
+  UserPreferences prefs = 1;
+}
+
+// === SendNotification ===
+
+message SendNotificationRequest {
+  string user_id = 1;
+  Channel channel = 2;
+
+  string title = 3;
+  string body  = 4;
+  google.protobuf.Struct data = 5;
+
+  // Если задан — используется для дедупа в окне dedup_window. Иначе
+  // генерируется автоматически из (user_id, channel, дата UTC).
+  string dedup_key = 6;
+  // Окно дедупа в секундах. По умолчанию 86400 (24ч).
+  int32 dedup_window_sec = 7;
+
+  // Если задан, отправка отложена до этого времени. Иначе — немедленно.
+  google.protobuf.Timestamp scheduled_at = 8;
+
+  // Если true — игнорировать quiet hours (для срочных напоминаний — например
+  // streak_risk близко к полуночи).
+  bool ignore_quiet_hours = 9;
+
+  // Если true — игнорировать prefs (для системных уведомлений админа).
+  // На MVP не используется.
+  bool ignore_prefs = 10;
+}
+
+message SendNotificationResponse {
+  NotificationLog log = 1;
+  // Метаданные ответа.
+  bool skipped_pref = 2;
+  bool skipped_quiet_hours = 3;
+  bool skipped_dedup = 4;
+  bool skipped_no_devices = 5;
+}
+
+// === Inbox ===
+
+message ListNotificationsRequest {
+  string user_id = 1;
+  // -1 = все, 0 = только непрочитанные, 1 = только прочитанные
+  int32 read = 2;
+  int32 limit  = 3;
+  int32 offset = 4;
+}
+
+message ListNotificationsResponse {
+  repeated NotificationLog notifications = 1;
+  int32 total = 2;
+  int32 unread = 3;
+}
+
+message MarkReadRequest {
+  string user_id = 1;
+  // Если задан конкретный id — помечается только он. Если пусто — все.
+  string notification_id = 2;
+}
+
+message MarkReadResponse {
+  int32 marked = 1;
+}

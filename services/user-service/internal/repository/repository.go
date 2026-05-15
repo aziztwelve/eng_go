@@ -12,4 +12,5 @@ type UserRepository interface {
 	CreateProfile(ctx context.Context, profile model.Profile) error
 	UpdateProfile(ctx context.Context, userID string, data model.UpdateProfileData) (model.Profile, error)
 	GetUserLanguages(ctx context.Context, userID string) (nativeLang, targetLang string, err error)
+	BatchGetProfiles(ctx context.Context, userIDs []string) (map[string]model.Profile, error)
 }

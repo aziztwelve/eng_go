@@ -18,6 +18,11 @@ service UserService {
   // GetUserLanguages получает языковые настройки пользователя
   rpc GetUserLanguages(GetUserLanguagesRequest) returns (GetUserLanguagesResponse);
 
+  // BatchGetProfiles возвращает профили нескольких пользователей по списку
+  // user_id. Используется leaderboard в social-service для enrichment
+  // (avatar, full_name). Не-существующие user_id просто пропускаются.
+  rpc BatchGetProfiles(BatchGetProfilesRequest) returns (BatchGetProfilesResponse);
+
   // Admin methods
   // ListUsers возвращает список всех пользователей (admin only)
   rpc ListUsers(ListUsersRequest) returns (ListUsersResponse);
@@ -85,6 +90,17 @@ message GetUserLanguagesRequest {
 message GetUserLanguagesResponse {
   string native_lang = 1;
   string target_lang = 2;
+}
+
+// BatchGetProfilesRequest — список user_id для enrichment.
+message BatchGetProfilesRequest {
+  repeated string user_ids = 1;
+}
+
+// BatchGetProfilesResponse — карта user_id → Profile.
+// Не-существующие user_id опускаются (без ошибки).
+message BatchGetProfilesResponse {
+  map<string, Profile> profiles = 1;
 }
 
 // User представляет пользователя системы

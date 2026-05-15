@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/joho/godotenv"
@@ -37,6 +38,18 @@ type Config struct {
 	// USER_SERVICE_ADDR — адрес user-service, нужен только для achievement
 	// `birthday` (lookup date_of_birth). Если пусто — `birthday` всегда false.
 	UserServiceAddr string
+
+	// Phase 4 — Kafka producer для xp.gained. Пусто → producer-no-op.
+	KafkaBrokers []string
+	KafkaTopicXP string
+
+	// NOTIFICATIONS_ADDR — адрес notifications-service (gRPC). Пусто →
+	// noop-клиент (push'и не отправляются, только в логе).
+	NotificationsAddr string
+
+	// Reminders cron — local hours срабатывания для streak_risk / daily_goal.
+	ReminderStreakHour    int // 0..23, default 20
+	ReminderDailyGoalHour int // 0..23, default 21
 }
 
 // Load подгружает .env (если есть) — игнорирует отсутствие файла,
@@ -76,7 +89,29 @@ func Get() *Config {
 		CronStreakDaily: getEnv("CRON_STREAK_DAILY", "00:05"),
 
 		UserServiceAddr: getEnv("USER_SERVICE_ADDR", ""),
+
+		KafkaBrokers: kafkaBrokers(getEnv("KAFKA_BROKERS", "")),
+		KafkaTopicXP: getEnv("KAFKA_TOPIC_XP_GAINED", "xp.gained"),
+
+		NotificationsAddr:     getEnv("NOTIFICATIONS_ADDR", ""),
+		ReminderStreakHour:    getEnvInt("REMINDER_STREAK_HOUR", 20),
+		ReminderDailyGoalHour: getEnvInt("REMINDER_DAILY_GOAL_HOUR", 21),
 	}
+}
+
+// kafkaBrokers — split "host1:9092,host2:9092".
+func kafkaBrokers(s string) []string {
+	if s == "" {
+		return nil
+	}
+	parts := strings.Split(s, ",")
+	out := make([]string, 0, len(parts))
+	for _, p := range parts {
+		if v := strings.TrimSpace(p); v != "" {
+			out = append(out, v)
+		}
+	}
+	return out
 }
 
 func (c *Config) GRPCAddress() string {

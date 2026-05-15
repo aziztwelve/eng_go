@@ -1,0 +1,366 @@
+syntax = "proto3";
+
+package ai.v1;
+
+option go_package = "github.com/elearning/shared/pkg/proto/ai/v1;aiv1";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/struct.proto";
+
+// AIService — Phase 5 (AI Integration).
+//
+// Управляет AI-фичами платформы:
+//   • Conversation — свободный диалог / roleplay / tutor с AI.
+//   • Explain — объяснение ошибок ученика на родном языке.
+//   • Writing assessment — оценка письменной работы.
+//   • Pronunciation check — оценка произношения по аудио.
+//   • Content generation — генерация упражнений для админа.
+//   • Quota — суточные лимиты для free-плана.
+//
+// Все вызовы — pull (gateway → ai-service). Хуков из других сервисов
+// нет (push-стиля как gamification.OnStepCompleted). При недоступности
+// ai-service обучение не страдает: gateway вернёт 5xx только на
+// /api/v1/ai/* эндпоинтах.
+service AIService {
+  // === Conversations / Roleplay / Tutor ===
+
+  // StartConversation — создаёт новую AI-сессию. scenario определяет
+  // тип: free_chat / roleplay_<id> / tutor_qa. user_level берётся из
+  // user-service (если не указан явно — fallback B1).
+  rpc StartConversation(StartConversationRequest) returns (StartConversationResponse);
+
+  // SendMessage — отправляет user-сообщение в существующую беседу,
+  // получает AI-reply (с опциональным TTS audio_url, переводом и
+  // grammar-correction'ами). Учитывает last 10 сообщений из истории.
+  rpc SendMessage(SendMessageRequest) returns (SendMessageResponse);
+
+  // ListConversations — конверсации текущего юзера, отсортированы
+  // по started_at DESC. Без сообщений (lightweight).
+  rpc ListConversations(ListConversationsRequest) returns (ListConversationsResponse);
+
+  // GetConversation — конверсация + все её сообщения (для рендера
+  // полной истории чата).
+  rpc GetConversation(GetConversationRequest) returns (GetConversationResponse);
+
+  // DeleteConversation — soft-delete (ставит ended_at), оставляя
+  // данные для cost-аналитики.
+  rpc DeleteConversation(DeleteConversationRequest) returns (DeleteConversationResponse);
+
+  // ListScenarios — каталог roleplay-сценариев (статика из кода).
+  rpc ListScenarios(ListScenariosRequest) returns (ListScenariosResponse);
+
+  // === Explain ===
+
+  // ExplainMistake — объясняет, почему ответ неверен, на нативном
+  // языке юзера. Кэшируется по (step_id, md5(incorrect_answer)) —
+  // повторные запросы возвращают cached=true мгновенно.
+  rpc ExplainMistake(ExplainMistakeRequest) returns (ExplainMistakeResponse);
+
+  // === Writing ===
+
+  // AssessWriting — оценивает письменную работу: 4 score'а,
+  // corrected_text, structured feedback по категориям.
+  rpc AssessWriting(AssessWritingRequest) returns (AssessWritingResponse);
+
+  // === Pronunciation ===
+
+  // CheckPronunciation — принимает аудио (raw bytes), транскрибирует,
+  // считает phonetic similarity, word-level alignment. На MVP audio_*
+  // обрабатываются через mock-provider; реальный Whisper — позже.
+  rpc CheckPronunciation(CheckPronunciationRequest) returns (CheckPronunciationResponse);
+
+  // === Tutor (lightweight Q&A) ===
+
+  // AskTutor — однократный вопрос «учителю»: prompt + answer без
+  // persistence. Если нужен контекст — открывайте Conversation
+  // со scenario=tutor_qa.
+  rpc AskTutor(AskTutorRequest) returns (AskTutorResponse);
+
+  // === Content generation (admin) ===
+
+  // GenerateExercise — генерирует упражнение указанного типа из
+  // словаря. Без сохранения в БД — caller сам решает дальше.
+  rpc GenerateExercise(GenerateExerciseRequest) returns (GenerateExerciseResponse);
+
+  // === Quota ===
+
+  // GetQuotaStatus — текущие счётчики free-плана. Premium юзеры
+  // получают unlimited: -1 в полях лимитов.
+  rpc GetQuotaStatus(GetQuotaStatusRequest) returns (GetQuotaStatusResponse);
+}
+
+// =====================================================================
+// Domain messages
+// =====================================================================
+
+// MessageRole — роль автора сообщения в conversation.
+enum MessageRole {
+  MESSAGE_ROLE_UNSPECIFIED = 0;
+  MESSAGE_ROLE_USER = 1;
+  MESSAGE_ROLE_ASSISTANT = 2;
+  MESSAGE_ROLE_SYSTEM = 3;
+}
+
+// Conversation — AI-сессия (free chat / roleplay / tutor).
+message Conversation {
+  string id = 1;
+  string user_id = 2;
+  string title = 3;                          // AI-генерация или scenario.title
+  string scenario = 4;                        // free_chat | roleplay_restaurant | tutor_qa | ...
+  string target_language = 5;
+  string user_level = 6;                      // A1..C2
+  string model = 7;
+
+  int32 message_count = 8;
+  int32 total_tokens = 9;
+  double cost_usd = 10;
+
+  google.protobuf.Timestamp started_at = 11;
+  google.protobuf.Timestamp last_message_at = 12;
+  google.protobuf.Timestamp ended_at = 13;
+}
+
+// Message — одно сообщение в conversation.
+message Message {
+  string id = 1;
+  string conversation_id = 2;
+  MessageRole role = 3;
+  string content = 4;
+  string audio_url = 5;
+
+  // Поправки грамматики, рассчитанные провайдером для предыдущего
+  // user-сообщения (релевантно только для assistant-replies).
+  // Каждая запись: { original, corrected, explanation }.
+  repeated Correction corrections = 6;
+
+  // Перевод reply на native-язык (для assistant). Для user — пусто.
+  string translation = 7;
+
+  int32 tokens_used = 8;
+  double cost_usd = 9;
+
+  google.protobuf.Timestamp created_at = 10;
+}
+
+// Correction — единичная поправка.
+message Correction {
+  string original = 1;
+  string corrected = 2;
+  string explanation = 3;
+}
+
+// Scenario — roleplay-сценарий. Статика из кода.
+message Scenario {
+  string id = 1;
+  string title = 2;
+  string description = 3;
+  string user_level = 4;          // A1..C2 — рекомендуемый уровень
+  string language = 5;
+  string ai_role = 6;             // "Waiter named Carlos"
+  string context = 7;
+  string initial_message = 8;
+  repeated string vocabulary_focus = 9;
+  repeated string success_criteria = 10;
+}
+
+// WritingFeedback — единичный пункт фидбэка writing assessment.
+message WritingFeedback {
+  string category = 1;            // grammar | vocabulary | coherence | style
+  string issue = 2;
+  string suggestion = 3;
+}
+
+// WordScore — оценка одного слова в произношении.
+message WordScore {
+  string word = 1;
+  double score = 2;               // 0.0..1.0
+  string feedback = 3;
+}
+
+// =====================================================================
+// Conversation RPCs
+// =====================================================================
+
+message StartConversationRequest {
+  string user_id = 1;
+  string scenario = 2;            // обязательно: free_chat | roleplay_<id> | tutor_qa
+  string target_language = 3;
+  string user_level = 4;          // optional, override профиля
+  string title = 5;               // optional
+}
+
+message StartConversationResponse {
+  Conversation conversation = 1;
+  // initial_message — первое сообщение от AI (для roleplay) или пусто.
+  Message initial_message = 2;
+}
+
+message SendMessageRequest {
+  string user_id = 1;
+  string conversation_id = 2;
+  string content = 3;
+  bool want_audio = 4;            // если true — assistant-reply будет с audio_url
+}
+
+message SendMessageResponse {
+  Message user_message = 1;
+  Message assistant_message = 2;
+}
+
+message ListConversationsRequest {
+  string user_id = 1;
+  int32 limit = 2;                // default 20, max 100
+  int32 offset = 3;
+}
+
+message ListConversationsResponse {
+  repeated Conversation conversations = 1;
+  int64 total = 2;
+}
+
+message GetConversationRequest {
+  string user_id = 1;
+  string conversation_id = 2;
+}
+
+message GetConversationResponse {
+  Conversation conversation = 1;
+  repeated Message messages = 2;
+}
+
+message DeleteConversationRequest {
+  string user_id = 1;
+  string conversation_id = 2;
+}
+
+message DeleteConversationResponse {}
+
+message ListScenariosRequest {
+  string language = 1;            // optional filter
+  string user_level = 2;          // optional filter
+}
+
+message ListScenariosResponse {
+  repeated Scenario scenarios = 1;
+}
+
+// =====================================================================
+// Explain RPCs
+// =====================================================================
+
+message ExplainMistakeRequest {
+  string user_id = 1;
+  string step_id = 2;
+  string incorrect_answer = 3;
+  string correct_answer = 4;
+  string question = 5;            // контекст вопроса (для лучшего объяснения)
+  string target_language = 6;     // язык, который изучают
+  string native_language = 7;     // язык, на котором писать объяснение
+}
+
+message ExplainMistakeResponse {
+  string explanation = 1;
+  bool cached = 2;                // true — взято из ai_explanations
+}
+
+// =====================================================================
+// Writing RPCs
+// =====================================================================
+
+message AssessWritingRequest {
+  string user_id = 1;
+  string prompt = 2;              // задание (то, что нужно написать)
+  string user_text = 3;
+  string target_language = 4;
+  string user_level = 5;
+}
+
+message AssessWritingResponse {
+  string assessment_id = 1;
+  int32 overall_score = 2;        // 0..100
+  int32 grammar_score = 3;
+  int32 vocabulary_score = 4;
+  int32 coherence_score = 5;
+  int32 style_score = 6;
+  string corrected_text = 7;
+  repeated WritingFeedback feedback = 8;
+}
+
+// =====================================================================
+// Pronunciation RPCs
+// =====================================================================
+
+message CheckPronunciationRequest {
+  string user_id = 1;
+  string step_id = 2;
+  string target_text = 3;
+  bytes audio = 4;                // raw bytes — на MVP заходит inline через gRPC
+  string audio_mime = 5;          // audio/mp3 | audio/wav | audio/m4a
+  string language = 6;
+}
+
+message CheckPronunciationResponse {
+  string attempt_id = 1;
+  string transcribed_text = 2;
+  double accuracy_score = 3;      // 0.0..1.0
+  repeated WordScore word_scores = 4;
+  string feedback = 5;
+  string audio_url = 6;           // если был upload — публичный URL
+}
+
+// =====================================================================
+// Tutor RPCs
+// =====================================================================
+
+message AskTutorRequest {
+  string user_id = 1;
+  string question = 2;
+  string target_language = 3;     // язык, по которому задаётся вопрос (если о языке)
+  string native_language = 4;
+}
+
+message AskTutorResponse {
+  string answer = 1;
+  int32 tokens_used = 2;
+  double cost_usd = 3;
+}
+
+// =====================================================================
+// Content gen RPCs (admin)
+// =====================================================================
+
+message GenerateExerciseRequest {
+  string exercise_type = 1;       // translate | match_pairs | fill_blank | ...
+  repeated string vocabulary = 2; // слова, которые нужно использовать
+  string user_level = 3;          // A1..C2
+  string target_language = 4;
+  string native_language = 5;
+}
+
+message GenerateExerciseResponse {
+  // content — JSON-структура упражнения, схема зависит от type.
+  // Использует google.protobuf.Struct для гибкости.
+  google.protobuf.Struct content = 1;
+  int32 tokens_used = 2;
+  double cost_usd = 3;
+}
+
+// =====================================================================
+// Quota RPCs
+// =====================================================================
+
+message GetQuotaStatusRequest {
+  string user_id = 1;
+}
+
+message GetQuotaStatusResponse {
+  // -1 в любом *_limit = unlimited (premium).
+  int32 chat_used = 1;
+  int32 chat_limit = 2;
+  double voice_minutes_used = 3;
+  double voice_minutes_limit = 4;
+  int32 writing_used = 5;
+  int32 writing_limit = 6;
+  string plan = 7;                // free | premium
+  google.protobuf.Timestamp resets_at = 8;
+}

@@ -22,8 +22,8 @@ vars:
   ENVSUBST: '{{.BIN_DIR}}/envsubst'
   ENVDIR: '{{.ROOT_DIR}}/deploy/env'
 
-  MODULES: platform shared services/auth-service services/user-service services/course-service services/video-service services/gamification-service services/gateway
-  SERVICES: auth,user,course,video,gamification,gateway
+  MODULES: platform shared services/auth-service services/user-service services/course-service services/video-service services/gamification-service services/step-validation-service services/srs-service services/social-service services/notifications-service services/ai-service services/gateway
+  SERVICES: auth,user,course,video,gamification,step-validation,srs,social,notifications,ai,gateway
 
 tasks:
   # === Environment Management ===
@@ -199,6 +199,41 @@ tasks:
     cmds:
       - go run cmd/main.go
 
+  run-step-validation:
+    desc: "Запустить Step Validation Service локально (Phase 2)"
+    dir: services/step-validation-service
+    dotenv: ['../../deploy/env/step-validation.env']
+    cmds:
+      - go run cmd/main.go
+
+  run-srs:
+    desc: "Запустить SRS Service локально (Phase 3)"
+    dir: services/srs-service
+    dotenv: ['../../deploy/env/srs.env']
+    cmds:
+      - go run cmd/main.go
+
+  run-social:
+    desc: "Запустить Social Service локально (Phase 4 — Leagues)"
+    dir: services/social-service
+    dotenv: ['../../deploy/env/social.env']
+    cmds:
+      - go run cmd/main.go
+
+  run-notifications:
+    desc: "Запустить Notifications Service локально (Phase 3 — Push)"
+    dir: services/notifications-service
+    dotenv: ['../../deploy/env/notifications.env']
+    cmds:
+      - go run cmd/main.go
+
+  run-ai:
+    desc: "Запустить AI Service локально (Phase 5 — AI Integration)"
+    dir: services/ai-service
+    dotenv: ['../../deploy/env/ai.env']
+    cmds:
+      - go run cmd/main.go
+
   run-all-bg:
     desc: "Запустить все сервисы в фоне"
     cmds:
@@ -234,6 +269,13 @@ tasks:
         start_svc "Video Service"  video-service   video.env   cmd/main.go      video.log
         # Gateway требует Quiz gRPC client — запускаем quiz до gateway.
         start_svc "Quiz Service"   quiz-service    quiz.env    cmd/main/main.go quiz.log
+        # Phase 2/3/4: step-validation, srs и social — опциональные, но если
+        # запущены, gateway автоматически зарегистрирует их роуты.
+        start_svc "SRS Service"           srs-service             srs.env             cmd/main.go srs.log
+        start_svc "Step Validation"       step-validation-service step-validation.env cmd/main.go step-validation.log
+        start_svc "Social Service"        social-service          social.env          cmd/main.go social.log
+        start_svc "Notifications Service" notifications-service   notifications.env   cmd/main.go notifications.log
+        start_svc "AI Service"            ai-service              ai.env              cmd/main.go ai.log
 
         # Дать backend-сервисам пару секунд подняться, чтобы gateway не падал
         # на ретраях gRPC-клиентов при старте.
@@ -285,6 +327,18 @@ tasks:
         (cd services/video-service && go build -o ../../bin/video-service cmd/main.go)
         echo "  📦 Quiz Service..."
         (cd services/quiz-service && go build -o ../../bin/quiz-service cmd/main/main.go)
+        echo "  📦 Gamification Service..."
+        (cd services/gamification-service && go build -o ../../bin/gamification-service cmd/main.go)
+        echo "  📦 Step Validation Service..."
+        (cd services/step-validation-service && go build -o ../../bin/step-validation-service cmd/main.go)
+        echo "  📦 SRS Service..."
+        (cd services/srs-service && go build -o ../../bin/srs-service cmd/main.go)
+        echo "  📦 Social Service..."
+        (cd services/social-service && go build -o ../../bin/social-service cmd/main.go)
+        echo "  📦 Notifications Service..."
+        (cd services/notifications-service && go build -o ../../bin/notifications-service cmd/main.go)
+        echo "  📦 AI Service..."
+        (cd services/ai-service && go build -o ../../bin/ai-service cmd/main.go)
         echo "  📦 Gateway..."
         (cd services/gateway && go build -o ../../bin/gateway cmd/main.go)
         echo "✅ Все сервисы собраны в ./bin/"
@@ -517,6 +571,76 @@ tasks:
           -f services/gamification-service/seeds/001_achievements.sql
         echo "✅ Seed Gamification Service выполнен"
 
+  migrate-up-step-validation:
+    desc: "Применить миграции для Step Validation Service (Phase 2)"
+    cmds:
+      - |
+        echo "📦 Применение миграций для Step Validation Service..."
+        cd services/step-validation-service/migrations
+        for file in *.up.sql; do
+          if [ -f "$file" ]; then
+            echo "  Применяем $file"
+            PGPASSWORD=change_me_in_production psql -h localhost -U admin -d elearning -f "$file"
+          fi
+        done
+        echo "✅ Миграции Step Validation Service применены"
+
+  migrate-up-srs:
+    desc: "Применить миграции для SRS Service (Phase 3)"
+    cmds:
+      - |
+        echo "📦 Применение миграций для SRS Service..."
+        cd services/srs-service/migrations
+        for file in *.up.sql; do
+          if [ -f "$file" ]; then
+            echo "  Применяем $file"
+            PGPASSWORD=change_me_in_production psql -h localhost -U admin -d elearning -f "$file"
+          fi
+        done
+        echo "✅ Миграции SRS Service применены"
+
+  migrate-up-social:
+    desc: "Применить миграции для Social Service (Phase 4 — Leagues)"
+    cmds:
+      - |
+        echo "📦 Применение миграций для Social Service..."
+        cd services/social-service/migrations
+        for file in *.up.sql; do
+          if [ -f "$file" ]; then
+            echo "  Применяем $file"
+            PGPASSWORD=change_me_in_production psql -h localhost -U admin -d elearning -f "$file"
+          fi
+        done
+        echo "✅ Миграции Social Service применены"
+
+  migrate-up-notifications:
+    desc: "Применить миграции для Notifications Service (Phase 3 — Push)"
+    cmds:
+      - |
+        echo "📦 Применение миграций для Notifications Service..."
+        cd services/notifications-service/migrations
+        for file in *.up.sql; do
+          if [ -f "$file" ]; then
+            echo "  Применяем $file"
+            PGPASSWORD=change_me_in_production psql -h localhost -U admin -d elearning -f "$file"
+          fi
+        done
+        echo "✅ Миграции Notifications Service применены"
+
+  migrate-up-ai:
+    desc: "Применить миграции для AI Service (Phase 5 — AI Integration)"
+    cmds:
+      - |
+        echo "📦 Применение миграций для AI Service..."
+        cd services/ai-service/migrations
+        for file in *.up.sql; do
+          if [ -f "$file" ]; then
+            echo "  Применяем $file"
+            PGPASSWORD=change_me_in_production psql -h localhost -U admin -d elearning -f "$file"
+          fi
+        done
+        echo "✅ Миграции AI Service применены"
+
   migrate-up-all:
     desc: "Применить все миграции"
     cmds:
@@ -525,6 +649,11 @@ tasks:
       - task: migrate-up-course
       - task: migrate-up-video
       - task: migrate-up-gamification
+      - task: migrate-up-step-validation
+      - task: migrate-up-srs
+      - task: migrate-up-social
+      - task: migrate-up-notifications
+      - task: migrate-up-ai
 
   # === Database Seeding ===
   

@@ -2,11 +2,16 @@ go 1.25.0
 
 use (
 	./platform
+	./services/ai-service
 	./services/auth-service
 	./services/course-service
 	./services/gamification-service
 	./services/gateway
+	./services/notifications-service
 	./services/quiz-service
+	./services/social-service
+	./services/srs-service
+	./services/step-validation-service
 	./services/user-service
 	./services/video-service
 	./shared

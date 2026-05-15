@@ -25,6 +25,10 @@ type StatsRepository interface {
 
 	// ResetWeeklyXP обнуляет weekly_xp у всех пользователей.
 	ResetWeeklyXP(ctx context.Context) error
+
+	// ListAllUserIDs — постраничный enumerate всех user_stats. Используется
+	// notification cron'ом для еженочного бакета по timezone.
+	ListAllUserIDs(ctx context.Context, limit, offset int) ([]string, error)
 }
 
 // XPRepository — журнал XP-транзакций.

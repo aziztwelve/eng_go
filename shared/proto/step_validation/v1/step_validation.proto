@@ -1,0 +1,83 @@
+syntax = "proto3";
+
+package step_validation.v1;
+
+option go_package = "github.com/elearning/shared/proto/step_validation/v1;stepvalidationv1";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/struct.proto";
+import "gamification/v1/gamification.proto";
+
+// StepValidationService — Phase 2.
+//
+// Принимает ответ пользователя на интерактивный шаг (translate /
+// match_pairs / fill_blank / listening / tap_words / story / quiz),
+// валидирует, пишет attempt в БД и дёргает gamification (AddXP при
+// корректном ответе, LoseHeart при некорректном). При корректном
+// ответе помечает progress.completed=true в course-service.
+service StepValidationService {
+  // SubmitAnswer — основной endpoint. Валидирует ответ и атомарно
+  // фаерит side-effects (gamification + course progress).
+  rpc SubmitAnswer(SubmitAnswerRequest) returns (SubmitAnswerResponse);
+
+  // ListAttempts — история попыток пользователя по шагу
+  // (для аналитики и админки). Сортировка — DESC по created_at.
+  rpc ListAttempts(ListAttemptsRequest) returns (ListAttemptsResponse);
+}
+
+// StepAttempt — запись о попытке прохождения шага.
+message StepAttempt {
+  string id = 1;
+  string user_id = 2;
+  string step_id = 3;
+  string lesson_id = 4;
+  string step_type = 5;            // translate, match_pairs, ...
+  google.protobuf.Struct answer = 6;
+  bool is_correct = 7;
+  double score = 8;                // 0.0–1.0
+  int32 time_spent_ms = 9;
+  google.protobuf.Timestamp created_at = 10;
+}
+
+message SubmitAnswerRequest {
+  string user_id = 1;
+  string step_id = 2;
+  // Ответ пользователя — структура зависит от типа шага.
+  // Описание схем — в docs/tasks/phase-2-step-formats.md.
+  google.protobuf.Struct answer = 3;
+  int32 time_spent_ms = 4;
+  // Phase 0 поля для course-service.MarkStepComplete.
+  string source_type = 5;          // course | track | standalone
+  string source_id = 6;            // optional: course_id или track_id
+}
+
+message SubmitAnswerResponse {
+  bool is_correct = 1;
+  double score = 2;
+  // Канонический правильный ответ (показать пользователю при ошибке).
+  // Структура зависит от типа шага.
+  google.protobuf.Struct correct_answer = 3;
+  string explanation = 4;
+  StepAttempt attempt = 5;
+
+  // Side-effects.
+  // gamification = nil, если course-service шаг и xp/hearts уже
+  // обновлены через legacy MarkStepComplete (не наш случай в Phase 2),
+  // или если is_correct=false и LoseHeart не вернул AddXPResponse.
+  optional gamification.v1.AddXPResponse gamification = 6;
+  // hearts — обновлённый Hearts-snapshot после LoseHeart (только при
+  // is_correct=false). Полезно фронту для немедленного показа.
+  optional gamification.v1.Hearts hearts = 7;
+}
+
+message ListAttemptsRequest {
+  string user_id = 1;
+  string step_id = 2;
+  int32 limit = 3;
+  int32 offset = 4;
+}
+
+message ListAttemptsResponse {
+  repeated StepAttempt attempts = 1;
+  int32 total = 2;
+}

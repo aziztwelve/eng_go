@@ -4,9 +4,14 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"time"
+
+	"go.uber.org/zap"
 
 	"github.com/elearning/gamification-service/internal/model"
+	"github.com/elearning/gamification-service/internal/publisher"
 	"github.com/elearning/gamification-service/internal/repository"
+	"github.com/elearning/platform/pkg/logger"
 )
 
 // AddXPResult — результат AddXP, удобный для конвертации в proto.
@@ -70,6 +75,10 @@ func (s *Service) AddXP(
 		return nil, fmt.Errorf("check achievements: %w", err)
 	}
 
+	// 5. Phase 4: publish xp.gained event для social-service (leagues).
+	// Non-fatal: ошибка publish'а не валит AddXP.
+	s.publishXPGained(ctx, userID, amount, reason, now)
+
 	return &AddXPResult{
 		Transaction:          txn,
 		Stats:                stats,
@@ -78,6 +87,24 @@ func (s *Service) AddXP(
 		UnlockedAchievements: unlocked,
 		DailyGoalProgress:    progress,
 	}, nil
+}
+
+// publishXPGained — non-fatal Kafka emit. Лог при ошибке, но AddXP всегда
+// успешен, если основные транзакции прошли.
+func (s *Service) publishXPGained(ctx context.Context, userID string, amount int, reason model.XPReason, occurredAt time.Time) {
+	ev := publisher.XPGainedEvent{
+		UserID:     userID,
+		Amount:     amount,
+		Reason:     string(reason),
+		OccurredAt: occurredAt,
+	}
+	if err := s.xpPub.XPGained(ctx, ev); err != nil {
+		logger.Warn(ctx, "publish xp.gained failed (non-fatal)",
+			zap.String("user_id", userID),
+			zap.Int("amount", amount),
+			zap.Error(err),
+		)
+	}
 }
 
 // GetXPHistory возвращает страницу транзакций.

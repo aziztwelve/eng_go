@@ -19,6 +19,8 @@ type api struct {
 	enrollmentService service.EnrollmentService
 	progressService   service.ProgressService
 	trackService      service.TrackService
+	vocabService      service.VocabularyService
+	ttsService        service.TTSService
 }
 
 // NewAPI создает новый экземпляр API
@@ -27,12 +29,16 @@ func NewAPI(
 	enrollmentService service.EnrollmentService,
 	progressService service.ProgressService,
 	trackService service.TrackService,
+	vocabService service.VocabularyService,
+	ttsService service.TTSService,
 ) *api {
 	return &api{
 		courseService:     courseService,
 		enrollmentService: enrollmentService,
 		progressService:   progressService,
 		trackService:      trackService,
+		vocabService:      vocabService,
+		ttsService:        ttsService,
 	}
 }
 

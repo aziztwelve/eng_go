@@ -9,8 +9,10 @@ import (
 	"context"
 	"time"
 
+	notifclient "github.com/elearning/gamification-service/internal/client/notifications"
 	userclient "github.com/elearning/gamification-service/internal/client/user"
 	"github.com/elearning/gamification-service/internal/model"
+	"github.com/elearning/gamification-service/internal/publisher"
 	"github.com/elearning/gamification-service/internal/repository"
 )
 
@@ -26,6 +28,14 @@ type Service struct {
 	// профильные данные (date_of_birth для `birthday`). Не должен быть nil:
 	// передавайте `userclient.NewNoopClient()`, если интеграция не нужна.
 	user userclient.Client
+
+	// xpPub — Phase 4: publisher событий xp.gained в Kafka. Не должен быть nil
+	// — передавайте `publisher.NoopPublisher{}`, если Kafka не используется.
+	xpPub publisher.XPPublisher
+
+	// notif — клиент к notifications-service. Не nil: noopClient если адрес
+	// не задан. Используется для achievement-пушей и cron-планировщиков.
+	notif notifclient.Client
 
 	// now позволяет инжектить часы в тестах.
 	now func() time.Time
@@ -72,8 +82,31 @@ func New(
 		streak:    streak,
 		ach:       ach,
 		user:      user,
+		xpPub:     publisher.NoopPublisher{},
+		notif:     notifclient.NewNoop(),
 		now:       func() time.Time { return time.Now().UTC() },
 	}
+}
+
+// WithNotifications переопределяет notifications-клиент. По умолчанию
+// noop; вызывайте этот сеттер из app, если NOTIFICATIONS_ADDR задан.
+func (s *Service) WithNotifications(n notifclient.Client) *Service {
+	if n == nil {
+		n = notifclient.NewNoop()
+	}
+	s.notif = n
+	return s
+}
+
+// WithXPPublisher переопределяет publisher событий xp.gained.
+// По умолчанию используется NoopPublisher; вызывайте этот сеттер из app
+// при наличии Kafka brokers.
+func (s *Service) WithXPPublisher(p publisher.XPPublisher) *Service {
+	if p == nil {
+		p = publisher.NoopPublisher{}
+	}
+	s.xpPub = p
+	return s
 }
 
 // WithClock переопределяет источник времени (для тестов).
@@ -97,13 +130,16 @@ func (s *Service) today() time.Time {
 	return time.Date(t.Year(), t.Month(), t.Day(), 0, 0, 0, 0, time.UTC)
 }
 
-// userLocation возвращает *time.Location для пользователя на основе
+// UserLocation возвращает *time.Location для пользователя на основе
 // profile.timezone. Если профиль / зона пуст(а) либо имя зоны невалидно,
 // возвращается time.UTC. Ошибка user-client'а трактуется как "UTC".
 //
 // Кэш профиля живет внутри grpcClient (см. profileCacheTTL), поэтому
 // частые вызовы за step-completion стоят O(1) после прогрева.
-func (s *Service) userLocation(ctx context.Context, userID string) *time.Location {
+//
+// Экспортирован, чтобы cron-планировщики могли использовать ту же
+// логику бакетирования по timezone.
+func (s *Service) UserLocation(ctx context.Context, userID string) *time.Location {
 	tz, err := s.user.Timezone(ctx, userID)
 	if err != nil || tz == "" {
 		return time.UTC
@@ -119,7 +155,7 @@ func (s *Service) userLocation(ctx context.Context, userID string) *time.Locatio
 // Используется для time_of_day / date / birthday — критериев, чувствительных
 // к календарю.
 func (s *Service) nowInTZ(ctx context.Context, userID string) time.Time {
-	return s.now().In(s.userLocation(ctx, userID))
+	return s.now().In(s.UserLocation(ctx, userID))
 }
 
 // todayInTZ — 00:00 текущего дня в локальной зоне пользователя.
