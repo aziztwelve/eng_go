@@ -133,6 +133,13 @@ func (a *App) initRouter(ctx context.Context) error {
 			videos.GET("/:video_id/url", videoHandler.GetVideoURL)
 		}
 
+		// === Phase 2: vocabulary (read) + tts cache lookup ===
+		vocabHandler := handler.NewVocabularyHandler(a.diContainer.CourseClient(ctx))
+		ttsHandler := handler.NewTTSHandler(a.diContainer.CourseClient(ctx))
+		v1.GET("/vocabulary", vocabHandler.List)
+		v1.GET("/vocabulary/:id", vocabHandler.Get)
+		v1.GET("/tts/by-text", ttsHandler.GetByText)
+
 		protected := v1.Group("")
 		protected.Use(authMiddleware.Handle())
 		{
@@ -154,6 +161,49 @@ func (a *App) initRouter(ctx context.Context) error {
 			protected.POST("/attempts/:attemptId/complete", quizHandler.CompleteQuizAttempt)
 			protected.GET("/attempts/:attemptId", quizHandler.GetAttempt)
 
+			// === Phase 2: step submit (только если step-validation-service настроен) ===
+			if svc := a.diContainer.StepValidationClient(ctx); svc != nil {
+				sh := handler.NewStepSubmitHandler(svc)
+				protected.POST("/steps/:stepId/submit", sh.Submit)
+				protected.GET("/steps/:stepId/attempts", sh.ListAttempts)
+			}
+
+			// === Phase 4: Leagues / leaderboards (только если social-service настроен) ===
+			if soc := a.diContainer.SocialClient(ctx); soc != nil {
+				sh := handler.NewSocialHandler(soc)
+				// Public каталог лиг — без auth.
+				v1.GET("/leagues", sh.ListLeagues)
+				// Authed: my league + leaderboard + history.
+				leagues := protected.Group("/leagues")
+				{
+					leagues.GET("/mine", sh.GetMyLeague)
+					leagues.GET("/mine/leaderboard", sh.GetMyLeaderboard)
+					leagues.GET("/history", sh.GetHistory)
+				}
+			}
+
+			// === Phase 3: SRS + mistakes + practice + skills
+			// (только если srs-service настроен) ===
+			if sc := a.diContainer.SRSClient(ctx); sc != nil {
+				sh := handler.NewSRSHandler(sc)
+				srs := protected.Group("/srs")
+				{
+					srs.GET("/due", sh.GetDue)
+					srs.GET("/weak", sh.GetWeak)
+					srs.GET("/stats", sh.GetStats)
+					srs.POST("/review", sh.Review)
+				}
+				protected.GET("/mistakes", sh.ListMistakes)
+
+				// Phase 3 full: practice session + skill decay.
+				protected.POST("/practice/session", sh.GeneratePracticeSession)
+				skills := protected.Group("/skills")
+				{
+					skills.GET("", sh.ListSkillStrengths)
+					skills.GET("/weak", sh.GetWeakSkills)
+				}
+			}
+
 			// Gamification (регистрируется только если сервис настроен)
 			if gc := a.diContainer.GamificationClient(ctx); gc != nil {
 				gh := handler.NewGamificationHandler(gc)
@@ -170,6 +220,50 @@ func (a *App) initRouter(ctx context.Context) error {
 					g.GET("/achievements", gh.ListAchievements)
 					g.GET("/achievements/mine", gh.GetMyAchievements)
 					g.GET("/xp/history", gh.GetXPHistory)
+				}
+			}
+
+			// === Phase 5: AI features (chat / explain / writing / pronunciation / tutor / quota)
+			// (только если ai-service настроен) ===
+			if ac := a.diContainer.AIClient(ctx); ac != nil {
+				ah := handler.NewAIHandler(ac)
+				ai := protected.Group("/ai")
+				{
+					// Conversations / Roleplay / Tutor.
+					ai.POST("/conversations", ah.StartConversation)
+					ai.GET("/conversations", ah.ListConversations)
+					ai.GET("/conversations/:id", ah.GetConversation)
+					ai.DELETE("/conversations/:id", ah.DeleteConversation)
+					ai.POST("/conversations/:id/messages", ah.SendMessage)
+					ai.GET("/scenarios", ah.ListScenarios)
+
+					// Single-shot endpoints.
+					ai.POST("/explain", ah.ExplainMistake)
+					ai.POST("/writing/assess", ah.AssessWriting)
+					ai.POST("/pronunciation/check", ah.CheckPronunciation)
+					ai.POST("/tutor", ah.AskTutor)
+
+					// Quota.
+					ai.GET("/quota", ah.GetQuotaStatus)
+				}
+			}
+
+			// === Phase 3: Push notifications (devices + prefs + inbox)
+			// (только если notifications-service настроен) ===
+			if nc := a.diContainer.NotificationsClient(ctx); nc != nil {
+				nh := handler.NewNotificationsHandler(nc)
+				n := protected.Group("/notifications")
+				{
+					n.POST("/devices", nh.RegisterDevice)
+					n.GET("/devices", nh.ListDevices)
+					n.DELETE("/devices/:id", nh.UnregisterDevice)
+
+					n.GET("/preferences", nh.GetPreferences)
+					n.PUT("/preferences", nh.UpdatePreferences)
+
+					n.GET("", nh.ListNotifications)
+					n.POST("/read-all", nh.MarkAllRead)
+					n.POST("/:id/read", nh.MarkRead)
 				}
 			}
 		}
@@ -255,6 +349,28 @@ func (a *App) initRouter(ctx context.Context) error {
 			// Quiz questions
 			admin.PUT("/questions/:id", quizHandler.UpdateQuestion)
 			admin.DELETE("/questions/:id", quizHandler.DeleteQuestion)
+
+			// === Phase 2: vocabulary (admin) + TTS synthesize ===
+			adminVocab := admin.Group("/vocabulary")
+			{
+				adminVocab.POST("", vocabHandler.Create)
+				adminVocab.POST("/bulk", vocabHandler.BulkCreate)
+				adminVocab.PUT("/:id", vocabHandler.Update)
+				adminVocab.DELETE("/:id", vocabHandler.Delete)
+			}
+			adminTTS := admin.Group("/tts")
+			{
+				adminTTS.POST("/synthesize", ttsHandler.Synthesize)
+			}
+
+			// === Phase 5: AI admin (content generation) ===
+			if ac := a.diContainer.AIClient(ctx); ac != nil {
+				ah := handler.NewAIHandler(ac)
+				adminAI := admin.Group("/ai")
+				{
+					adminAI.POST("/generate-exercise", ah.GenerateExercise)
+				}
+			}
 		}
 	}
 

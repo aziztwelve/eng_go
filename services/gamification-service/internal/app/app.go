@@ -11,9 +11,11 @@ import (
 	"google.golang.org/grpc"
 
 	apiv1 "github.com/elearning/gamification-service/internal/api/gamification/v1"
+	notifclient "github.com/elearning/gamification-service/internal/client/notifications"
 	userclient "github.com/elearning/gamification-service/internal/client/user"
 	"github.com/elearning/gamification-service/internal/config"
 	"github.com/elearning/gamification-service/internal/cron"
+	"github.com/elearning/gamification-service/internal/publisher"
 	postgresrepo "github.com/elearning/gamification-service/internal/repository/postgres"
 	"github.com/elearning/gamification-service/internal/service"
 	"github.com/elearning/platform/pkg/closer"
@@ -28,6 +30,7 @@ type App struct {
 	grpcServer *grpc.Server
 	pool       *pgxpool.Pool
 	cron       *cron.Scheduler
+	reminders  *cron.RemindersScheduler
 }
 
 // New собирает приложение, готовое к Run.
@@ -98,6 +101,43 @@ func New(ctx context.Context) (*App, error) {
 		StreakFreezeMax:    cfg.StreakFreezeMax,
 	}, statsRepo, xpRepo, dailyGoalRepo, streakRepo, achRepo, userCli)
 
+	// Phase 4: Kafka producer для xp.gained. Если KAFKA_BROKERS пуст —
+	// publisher → noop (NewPublisher возвращает NoopPublisher).
+	xpPub := publisher.New(cfg.KafkaBrokers, cfg.KafkaTopicXP)
+	svc.WithXPPublisher(xpPub)
+	if len(cfg.KafkaBrokers) > 0 {
+		logger.Info(ctx, "✅ Kafka producer ready",
+			zap.Strings("brokers", cfg.KafkaBrokers),
+			zap.String("topic", cfg.KafkaTopicXP),
+		)
+		closer.Add(func(_ context.Context) error { return xpPub.Close() })
+	} else {
+		logger.Info(ctx, "KAFKA_BROKERS empty — xp.gained publishing disabled")
+	}
+
+	// Notifications client (опционально). Если адрес не задан или
+	// dial фейлится — фолбэк на noop. Push'и из gamification идут
+	// non-fatal, поэтому noop никак не блокирует основной flow.
+	var notifCli notifclient.Client = notifclient.NewNoop()
+	if cfg.NotificationsAddr != "" {
+		nc, closeFn, nerr := notifclient.NewGRPCClient(ctx, cfg.NotificationsAddr)
+		if nerr != nil {
+			logger.Warn(ctx, "notifications client init failed; falling back to noop",
+				zap.String("addr", cfg.NotificationsAddr), zap.Error(nerr))
+		} else {
+			notifCli = nc
+			logger.Info(ctx, "✅ Connected to notifications-service",
+				zap.String("addr", cfg.NotificationsAddr))
+			closer.Add(func(ctx context.Context) error {
+				logger.Info(ctx, "Closing notifications-service connection")
+				return closeFn()
+			})
+		}
+	} else {
+		logger.Info(ctx, "NOTIFICATIONS_ADDR empty — push notifications disabled")
+	}
+	svc.WithNotifications(notifCli)
+
 	api := apiv1.New(svc)
 	grpcServer := grpc.NewServer()
 	gamificationv1.RegisterGamificationServiceServer(grpcServer, api)
@@ -107,11 +147,18 @@ func New(ctx context.Context) (*App, error) {
 		StreakDaily: cfg.CronStreakDaily,
 	})
 
+	reminders := cron.NewRemindersScheduler(svc, statsRepo, streakRepo, notifCli, cron.RemindersConfig{
+		StreakRiskHour: cfg.ReminderStreakHour,
+		DailyGoalHour:  cfg.ReminderDailyGoalHour,
+		BatchSize:      cron.DefaultReminders.BatchSize,
+	})
+
 	return &App{
 		cfg:        cfg,
 		grpcServer: grpcServer,
 		pool:       pool,
 		cron:       scheduler,
+		reminders:  reminders,
 	}, nil
 }
 
@@ -133,6 +180,13 @@ func (a *App) Run(ctx context.Context) error {
 	closer.Add(func(ctx context.Context) error {
 		logger.Info(ctx, "Stopping cron")
 		a.cron.Stop()
+		return nil
+	})
+
+	a.reminders.Start(ctx)
+	closer.Add(func(ctx context.Context) error {
+		logger.Info(ctx, "Stopping reminders cron")
+		a.reminders.Stop()
 		return nil
 	})
 

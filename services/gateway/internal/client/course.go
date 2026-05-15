@@ -198,6 +198,42 @@ func (c *CourseClient) ReorderTrackLessons(ctx context.Context, req *coursev1.Re
 	return c.client.ReorderTrackLessons(ctx, req)
 }
 
+// === Vocabulary (Phase 2) ===
+
+func (c *CourseClient) ListVocabulary(ctx context.Context, req *coursev1.ListVocabularyRequest) (*coursev1.ListVocabularyResponse, error) {
+	return c.client.ListVocabulary(ctx, req)
+}
+
+func (c *CourseClient) GetVocabularyEntry(ctx context.Context, req *coursev1.GetVocabularyEntryRequest) (*coursev1.GetVocabularyEntryResponse, error) {
+	return c.client.GetVocabularyEntry(ctx, req)
+}
+
+func (c *CourseClient) CreateVocabularyEntry(ctx context.Context, req *coursev1.CreateVocabularyEntryRequest) (*coursev1.CreateVocabularyEntryResponse, error) {
+	return c.client.CreateVocabularyEntry(ctx, req)
+}
+
+func (c *CourseClient) UpdateVocabularyEntry(ctx context.Context, req *coursev1.UpdateVocabularyEntryRequest) (*coursev1.UpdateVocabularyEntryResponse, error) {
+	return c.client.UpdateVocabularyEntry(ctx, req)
+}
+
+func (c *CourseClient) DeleteVocabularyEntry(ctx context.Context, req *coursev1.DeleteVocabularyEntryRequest) (*coursev1.DeleteVocabularyEntryResponse, error) {
+	return c.client.DeleteVocabularyEntry(ctx, req)
+}
+
+func (c *CourseClient) BulkCreateVocabulary(ctx context.Context, req *coursev1.BulkCreateVocabularyRequest) (*coursev1.BulkCreateVocabularyResponse, error) {
+	return c.client.BulkCreateVocabulary(ctx, req)
+}
+
+// === TTS (Phase 2 stub) ===
+
+func (c *CourseClient) SynthesizeTTS(ctx context.Context, req *coursev1.SynthesizeTTSRequest) (*coursev1.SynthesizeTTSResponse, error) {
+	return c.client.SynthesizeTTS(ctx, req)
+}
+
+func (c *CourseClient) GetTTSByText(ctx context.Context, req *coursev1.GetTTSByTextRequest) (*coursev1.GetTTSByTextResponse, error) {
+	return c.client.GetTTSByText(ctx, req)
+}
+
 // Close закрывает соединение
 func (c *CourseClient) Close() error {
 	return c.conn.Close()

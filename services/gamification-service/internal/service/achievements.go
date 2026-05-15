@@ -7,6 +7,7 @@ import (
 	"strings"
 	"time"
 
+	notifclient "github.com/elearning/gamification-service/internal/client/notifications"
 	"github.com/elearning/gamification-service/internal/model"
 	"github.com/elearning/platform/pkg/logger"
 	"go.uber.org/zap"
@@ -86,6 +87,21 @@ func (s *Service) CheckAchievements(
 		}
 		ua.AchievementRef = a
 		unlocked = append(unlocked, ua)
+
+		// Push-уведомление об ачивке. Non-fatal: ошибка только в лог.
+		if err := s.notif.Send(ctx, notifclient.SendInput{
+			UserID:   userID,
+			Channel:  "achievement",
+			Title:    "🏆 " + a.Title,
+			Body:     a.Description,
+			DedupKey: "achievement:" + a.ID,
+			Data: json.RawMessage(fmt.Sprintf(
+				`{"kind":"achievement","achievement_id":%q,"code":%q}`,
+				a.ID, a.Code,
+			)),
+		}); err != nil {
+			logger.Warn(ctx, "achievement notification failed", zap.String("code", a.Code), zap.Error(err))
+		}
 
 		// Награды: XP/gems.
 		if a.XPReward > 0 {

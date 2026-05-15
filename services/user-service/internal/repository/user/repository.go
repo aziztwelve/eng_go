@@ -123,6 +123,32 @@ func (r *repo) UpdateProfile(ctx context.Context, userID string, data model.Upda
 	return converter.ToProfileFromRepo(profile), nil
 }
 
+func (r *repo) BatchGetProfiles(ctx context.Context, userIDs []string) (map[string]model.Profile, error) {
+	if len(userIDs) == 0 {
+		return map[string]model.Profile{}, nil
+	}
+
+	rows, err := r.pool.Query(ctx, queryBatchGetProfiles, userIDs)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	out := make(map[string]model.Profile, len(userIDs))
+	for rows.Next() {
+		var p repoModel.Profile
+		if err := rows.Scan(
+			&p.ID, &p.UserID, &p.FirstName, &p.LastName,
+			&p.NativeLang, &p.TargetLang, &p.Bio, &p.AvatarURL,
+			&p.DateOfBirth, &p.Timezone, &p.CreatedAt, &p.UpdatedAt,
+		); err != nil {
+			return nil, err
+		}
+		out[p.UserID] = converter.ToProfileFromRepo(p)
+	}
+	return out, rows.Err()
+}
+
 func (r *repo) GetUserLanguages(ctx context.Context, userID string) (nativeLang, targetLang string, err error) {
 	err = r.pool.QueryRow(ctx, queryGetUserLanguages, userID).Scan(&nativeLang, &targetLang)
 	if err != nil {

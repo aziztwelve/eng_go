@@ -1,0 +1,369 @@
+syntax = "proto3";
+
+package srs.v1;
+
+option go_package = "github.com/elearning/shared/proto/srs/v1;srsv1";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/struct.proto";
+
+// SRSService — Phase 3 (Adaptive learning).
+//
+// Хранит карточки повторения по алгоритму SM-2 (SuperMemo 2). Каждая
+// "карточка" — это связка (user_id, item_type, item_id), где item_type
+// — `vocabulary` / `step` / `phrase`. На каждое прохождение шага из
+// step-validation-service вызывается RecordReview(quality), где
+// quality (0..5) рассчитывается из is_correct + time_spent + retry.
+//
+// Sibling-stream — Mistakes: накапливают неправильные ответы для
+// последующего повторения. resolved=true ставится, когда юзер
+// исправляется на том же шаге.
+service SRSService {
+  // === SRS ===
+
+  // EnsureItem — создаёт карточку (user_id, item_type, item_id) если
+  // её нет. Idempotent. Используется при первой встрече материала.
+  rpc EnsureItem(EnsureItemRequest) returns (EnsureItemResponse);
+
+  // RecordReview — записывает попытку повторения и обновляет SM-2
+  // параметры (EF / interval / repetitions / next_review_at).
+  // Создаёт SRS-item лениво если его ещё не было.
+  rpc RecordReview(RecordReviewRequest) returns (RecordReviewResponse);
+
+  // GetDueItems — карточки с next_review_at <= now (отсортированы по
+  // приоритету: сильнее просрочена → раньше).
+  rpc GetDueItems(GetDueItemsRequest) returns (GetDueItemsResponse);
+
+  // GetWeakItems — карточки с самым низким strength (для
+  // дополнительной практики).
+  rpc GetWeakItems(GetWeakItemsRequest) returns (GetWeakItemsResponse);
+
+  // GetStats — счётчики по статусам (total / due / mastered / new).
+  rpc GetStats(GetStatsRequest) returns (GetStatsResponse);
+
+  // === Mistakes ===
+
+  // RecordMistake — фиксирует неправильный ответ. Если такая ошибка
+  // уже была (user_id+step_id+answer-сигнатура) — инкрементируется
+  // times_made.
+  rpc RecordMistake(RecordMistakeRequest) returns (RecordMistakeResponse);
+
+  // ResolveMistakesForStep — помечает все неразрешённые ошибки юзера
+  // на данном шаге как resolved=true. Вызывается из step-validation
+  // при первом корректном ответе после ошибки.
+  rpc ResolveMistakesForStep(ResolveMistakesForStepRequest) returns (ResolveMistakesForStepResponse);
+
+  // ListMistakes — список ошибок юзера (фильтр по resolved).
+  rpc ListMistakes(ListMistakesRequest) returns (ListMistakesResponse);
+
+  // === Practice ===
+
+  // GeneratePracticeSession — собирает microservice-side список items
+  // для практики: микс overdue / mistakes / weak (по умолчанию 50/30/20).
+  // Pure read-only, не создаёт ни Session, ни attempts — лайфцикл
+  // практики делается фронтом через обычный /steps/:id/submit.
+  rpc GeneratePracticeSession(GeneratePracticeSessionRequest) returns (GeneratePracticeSessionResponse);
+
+  // === Skill decay (ржавчина навыков) ===
+
+  // InitSkill — создать запись decay'я для (user, skill). Idempotent.
+  // Вызывается course-service.OnLessonCompleted при первом завершении
+  // урока / модуля (initial_strength = 1.0).
+  rpc InitSkill(InitSkillRequest) returns (InitSkillResponse);
+
+  // StrengthenSkill — практика → подпинка current_strength + reset
+  // last_practiced_at. Используется на практике/в правильных ответах.
+  rpc StrengthenSkill(StrengthenSkillRequest) returns (StrengthenSkillResponse);
+
+  // GetSkillStrengths — все навыки юзера, отсортированы по
+  // current_strength ASC (слабые первыми).
+  rpc GetSkillStrengths(GetSkillStrengthsRequest) returns (GetSkillStrengthsResponse);
+
+  // GetWeakSkills — top-N слабых.
+  rpc GetWeakSkills(GetWeakSkillsRequest) returns (GetWeakSkillsResponse);
+
+  // RunDailyDecay — административный endpoint (cron его сам вызывает,
+  // но можно вручную для тестов / fix-up). Возвращает кол-во затронутых строк.
+  rpc RunDailyDecay(RunDailyDecayRequest) returns (RunDailyDecayResponse);
+}
+
+// ItemType — тип SRS-карточки.
+enum ItemType {
+  ITEM_TYPE_UNSPECIFIED = 0;
+  ITEM_TYPE_VOCABULARY = 1;
+  ITEM_TYPE_STEP = 2;
+  ITEM_TYPE_PHRASE = 3;
+}
+
+// SRSItem — карточка в SRS системе.
+message SRSItem {
+  string id = 1;
+  string user_id = 2;
+  ItemType item_type = 3;
+  string item_id = 4;
+
+  // SM-2 параметры.
+  double easiness_factor = 5;   // default 2.5, min 1.3
+  int32 interval_days = 6;
+  int32 repetitions = 7;
+
+  google.protobuf.Timestamp next_review_at = 8;
+  google.protobuf.Timestamp last_reviewed_at = 9;
+
+  int32 total_reviews = 10;
+  int32 correct_reviews = 11;
+  int32 incorrect_reviews = 12;
+  int32 avg_response_time_ms = 13;
+
+  double strength = 14;          // 0.0–1.0
+
+  google.protobuf.Timestamp created_at = 15;
+  google.protobuf.Timestamp updated_at = 16;
+}
+
+// ReviewHistory — одна запись о попытке.
+message ReviewHistory {
+  string id = 1;
+  string srs_item_id = 2;
+  string user_id = 3;
+  int32 quality = 4;             // 0..5 (SM-2)
+  int32 response_time_ms = 5;
+  bool used_hint = 6;
+  google.protobuf.Timestamp reviewed_at = 7;
+
+  // snapshot после применения SM-2
+  int32 new_interval_days = 8;
+  double new_easiness_factor = 9;
+  int32 new_repetitions = 10;
+}
+
+// Mistake — ошибка пользователя.
+message Mistake {
+  string id = 1;
+  string user_id = 2;
+  string step_id = 3;
+  google.protobuf.Struct incorrect_answer = 4;
+  int32 times_made = 5;
+  google.protobuf.Timestamp last_made_at = 6;
+  bool is_resolved = 7;
+  google.protobuf.Timestamp resolved_at = 8;
+  google.protobuf.Timestamp created_at = 9;
+}
+
+// === Requests / responses ===
+
+message EnsureItemRequest {
+  string user_id = 1;
+  ItemType item_type = 2;
+  string item_id = 3;
+}
+
+message EnsureItemResponse {
+  SRSItem item = 1;
+  bool created = 2;              // true — карточка только что создана
+}
+
+message RecordReviewRequest {
+  string user_id = 1;
+  ItemType item_type = 2;
+  string item_id = 3;
+  int32 quality = 4;             // 0..5
+  int32 response_time_ms = 5;
+  bool used_hint = 6;
+}
+
+message RecordReviewResponse {
+  SRSItem item = 1;              // обновлённый snapshot
+  ReviewHistory history = 2;
+}
+
+message GetDueItemsRequest {
+  string user_id = 1;
+  ItemType item_type = 2;        // 0 = все типы
+  int32 limit = 3;
+}
+
+message GetDueItemsResponse {
+  repeated SRSItem items = 1;
+  int32 total = 2;
+}
+
+message GetWeakItemsRequest {
+  string user_id = 1;
+  ItemType item_type = 2;
+  int32 limit = 3;
+}
+
+message GetWeakItemsResponse {
+  repeated SRSItem items = 1;
+}
+
+message GetStatsRequest {
+  string user_id = 1;
+}
+
+message GetStatsResponse {
+  int32 total_items = 1;
+  int32 due_now = 2;              // next_review_at <= now
+  int32 mastered = 3;             // strength >= 0.9
+  int32 learning = 4;             // 0 < strength < 0.9
+  int32 fresh = 5;                // strength == 0 (только создана)
+  int32 reviewed_today = 6;
+}
+
+message RecordMistakeRequest {
+  string user_id = 1;
+  string step_id = 2;
+  google.protobuf.Struct incorrect_answer = 3;
+}
+
+message RecordMistakeResponse {
+  Mistake mistake = 1;
+  bool incremented = 2;          // true → существовавшая ошибка обновлена
+}
+
+message ResolveMistakesForStepRequest {
+  string user_id = 1;
+  string step_id = 2;
+}
+
+message ResolveMistakesForStepResponse {
+  int32 resolved_count = 1;
+}
+
+message ListMistakesRequest {
+  string user_id = 1;
+  // tri-state: -1 = all, 0 = unresolved only, 1 = resolved only
+  // (proto не поддерживает optional bool без proto3 optional, так
+  // что используем int32 enum-like).
+  int32 resolved = 2;
+  int32 limit = 3;
+  int32 offset = 4;
+}
+
+message ListMistakesResponse {
+  repeated Mistake mistakes = 1;
+  int32 total = 2;
+}
+
+// === Practice ===
+
+// PracticeSource — почему конкретный item оказался в практике.
+enum PracticeSource {
+  PRACTICE_SOURCE_UNSPECIFIED = 0;
+  PRACTICE_SOURCE_OVERDUE = 1;     // next_review_at <= now
+  PRACTICE_SOURCE_MISTAKE = 2;     // unresolved user_mistakes
+  PRACTICE_SOURCE_WEAK = 3;        // низкий strength
+}
+
+// PracticeItem — одна карточка в практической сессии. SRSItem может
+// быть nil для mistake-источников, если у юзера нет ещё SRS-карточки
+// под step_id (rare; обычно step-validation создаёт её при первой
+// ошибке).
+message PracticeItem {
+  PracticeSource source = 1;
+  SRSItem srs_item = 2;
+  // mistake — заполнено только если source = MISTAKE
+  Mistake mistake = 3;
+  // step_id — удобный shortcut для фронта: для STEP-карточек = item_id;
+  // для mistakes = step_id из user_mistakes.
+  string step_id = 4;
+}
+
+message GeneratePracticeSessionRequest {
+  string user_id = 1;
+  int32 size = 2;                   // default 10, max 50
+  // Tunable proportions (если 0 — берётся default 50/30/20).
+  // Сумма не обязательно 100 — нормализуем.
+  int32 ratio_overdue = 3;
+  int32 ratio_mistake = 4;
+  int32 ratio_weak = 5;
+}
+
+message GeneratePracticeSessionResponse {
+  repeated PracticeItem items = 1;
+  // Сколько каждого источника фактически положили (после dedup).
+  int32 overdue_count = 2;
+  int32 mistake_count = 3;
+  int32 weak_count = 4;
+}
+
+// === Skill decay ===
+
+// SkillType — текущая гранулярность decay-карточки.
+enum SkillType {
+  SKILL_TYPE_UNSPECIFIED = 0;
+  SKILL_TYPE_MODULE = 1;
+  SKILL_TYPE_LESSON = 2;
+}
+
+// SkillDecay — "ржавчина" навыка.
+message SkillDecay {
+  string user_id = 1;
+  string skill_id = 2;
+  SkillType skill_type = 3;
+
+  double initial_strength = 4;     // 0..1, обычно 1.0
+  double current_strength = 5;     // 0..1
+  double decay_rate = 6;           // per day (default 0.05)
+
+  google.protobuf.Timestamp last_practiced_at = 7;
+  google.protobuf.Timestamp created_at = 8;
+  google.protobuf.Timestamp updated_at = 9;
+}
+
+message InitSkillRequest {
+  string user_id = 1;
+  string skill_id = 2;
+  SkillType skill_type = 3;
+  // optional override; 0 → default 0.05 (или text default-а БД).
+  double decay_rate = 4;
+}
+
+message InitSkillResponse {
+  SkillDecay skill = 1;
+  bool created = 2;
+}
+
+message StrengthenSkillRequest {
+  string user_id = 1;
+  string skill_id = 2;
+  // delta ∈ (0..1], сколько добавить к current_strength.
+  double amount = 3;
+}
+
+message StrengthenSkillResponse {
+  SkillDecay skill = 1;
+}
+
+message GetSkillStrengthsRequest {
+  string user_id = 1;
+  SkillType skill_type = 2;        // 0 = все типы
+  int32 limit = 3;
+  int32 offset = 4;
+}
+
+message GetSkillStrengthsResponse {
+  repeated SkillDecay skills = 1;
+  int32 total = 2;
+}
+
+message GetWeakSkillsRequest {
+  string user_id = 1;
+  SkillType skill_type = 2;
+  int32 limit = 3;
+}
+
+message GetWeakSkillsResponse {
+  repeated SkillDecay skills = 1;
+}
+
+message RunDailyDecayRequest {
+  // optional user_id — если указан, прогоняем только для одного юзера.
+  // Иначе — для всех (cron).
+  string user_id = 1;
+}
+
+message RunDailyDecayResponse {
+  int32 affected = 1;
+}

@@ -1,0 +1,180 @@
+syntax = "proto3";
+
+package social.v1;
+
+option go_package = "github.com/elearning/shared/proto/social/v1;socialv1";
+
+import "google/protobuf/timestamp.proto";
+
+// SocialService — Phase 4 (Leagues / Cohorts / Leaderboards).
+//
+// Хранит состояние юзера в Duolingo-like лигах: 10 уровней (Bronze → Diamond),
+// когорты по 30 человек, weekly cycle понедельник 00:00 → воскресенье 23:59 UTC.
+//
+// Источник XP — Kafka topic `xp.gained`, который публикует gamification-service
+// после каждого AddXP. Consumer обновляет weekly_xp в Postgres + Redis ZIncrBy
+// в leaderboard:cohort:{cohort_id}.
+//
+// Каждое воскресенье 23:59 cron WeeklyRotation:
+//   - Считывает финальный rank из Redis,
+//   - Записывает в league_history,
+//   - Top 7 → promotion в следующую лигу,
+//   - Bottom 5 (не Bronze) → demotion,
+//   - Reassign в новую когорту,
+//   - Reset Redis + weekly_xp.
+service SocialService {
+  // === Лиги (catalog) ===
+
+  // ListLeagues — каталог 10 лиг (Bronze → Diamond), отсортированы по tier.
+  // Public, кэшируемый. Для UI badges, иконок и т.п.
+  rpc ListLeagues(ListLeaguesRequest) returns (ListLeaguesResponse);
+
+  // === Юзер ↔ Лига ===
+
+  // EnsureUserInLeague — гарантирует что юзер привязан к когорте.
+  // Idempotent: при повторном вызове возвращает существующую запись.
+  // Используется при первом активном действии (login / первый XP).
+  // На MVP: новый юзер автоматически попадает в Bronze League.
+  rpc EnsureUserInLeague(EnsureUserInLeagueRequest) returns (EnsureUserInLeagueResponse);
+
+  // GetMyLeague — текущая лига юзера + cohort_id + weekly_xp + rank.
+  // Если юзер ещё не в лиге — возвращает NotFound.
+  rpc GetMyLeague(GetMyLeagueRequest) returns (GetMyLeagueResponse);
+
+  // GetMyLeaderboard — топ 30 моей когорты, отсортированы по weekly_xp.
+  // Включает promotion/demotion zone hints. Profiles обогащаются
+  // через user-service.BatchGetProfiles.
+  rpc GetMyLeaderboard(GetMyLeaderboardRequest) returns (GetMyLeaderboardResponse);
+
+  // GetHistory — история выступлений в лигах с пагинацией.
+  rpc GetHistory(GetHistoryRequest) returns (GetHistoryResponse);
+
+  // === Admin / cron ===
+
+  // RunWeeklyRotation — запускает rotation немедленно. Обычно вызывается
+  // cron'ом по расписанию (вс 23:59 UTC), но также доступен админу для
+  // manual trigger / тестирования. Параметр force=true игнорирует
+  // проверку "когорта ещё не закрыта".
+  rpc RunWeeklyRotation(RunWeeklyRotationRequest) returns (RunWeeklyRotationResponse);
+}
+
+// ----------------------------------------------------------------------------
+// Domain messages
+// ----------------------------------------------------------------------------
+
+// League — каталог лиг. Tier 1 (Bronze) ↔ 10 (Diamond).
+message League {
+  int32 id = 1;
+  string code = 2;
+  string name = 3;
+  string icon_url = 4;
+  string color = 5;
+  int32 tier = 6;
+}
+
+// UserLeague — снимок состояния юзера в текущей когорте.
+message UserLeague {
+  string user_id = 1;
+  League league = 2;
+  string cohort_id = 3;
+  int32 weekly_xp = 4;
+  // rank_in_cohort обновляется снапшот-cron'ом каждые 10 мин.
+  // Может отставать от actual Redis rank — для real-time запросов
+  // используется отдельный путь (Redis ZRevRank).
+  int32 rank_in_cohort = 5;
+  google.protobuf.Timestamp joined_at = 6;
+  google.protobuf.Timestamp last_updated_at = 7;
+}
+
+// LeaderboardEntry — один из 30 в когорте.
+message LeaderboardEntry {
+  int32 rank = 1;        // 1..30 (актуальный из Redis ZRevRank)
+  string user_id = 2;
+  int32 weekly_xp = 3;
+  // Из user-service:
+  string full_name = 4;
+  string avatar_url = 5;
+  // Помечено true если это сам запросивший юзер.
+  bool is_me = 6;
+}
+
+// LeagueHistoryEntry — финальный итог недели в когорте.
+message LeagueHistoryEntry {
+  string id = 1;
+  string user_id = 2;
+  int32 league_id = 3;
+  string cohort_id = 4;
+  google.protobuf.Timestamp cycle_start_at = 5;
+  google.protobuf.Timestamp cycle_end_at = 6;
+  int32 final_xp = 7;
+  int32 final_rank = 8;
+  bool promoted = 9;
+  bool demoted = 10;
+  int32 gems_earned = 11;
+  google.protobuf.Timestamp created_at = 12;
+}
+
+// ----------------------------------------------------------------------------
+// Requests / Responses
+// ----------------------------------------------------------------------------
+
+message ListLeaguesRequest {}
+message ListLeaguesResponse {
+  repeated League leagues = 1;
+}
+
+message EnsureUserInLeagueRequest {
+  string user_id = 1;
+}
+message EnsureUserInLeagueResponse {
+  UserLeague user_league = 1;
+  // true если запись была создана только что (новый юзер).
+  bool created = 2;
+}
+
+message GetMyLeagueRequest {
+  string user_id = 1;
+}
+message GetMyLeagueResponse {
+  UserLeague user_league = 1;
+  google.protobuf.Timestamp cycle_end_at = 2;
+}
+
+message GetMyLeaderboardRequest {
+  string user_id = 1;
+}
+message GetMyLeaderboardResponse {
+  League league = 1;
+  string cohort_id = 2;
+  google.protobuf.Timestamp cycle_end_at = 3;
+  int32 my_rank = 4;
+  int32 my_weekly_xp = 5;
+  repeated LeaderboardEntry entries = 6;
+  // Промо-зона: топ 7 (rank 1..7). На Diamond — 0 (некуда расти).
+  int32 promotion_count = 7;
+  // Демотация: низ 5 (rank 26..30). На Bronze — 0.
+  int32 demotion_count = 8;
+}
+
+message GetHistoryRequest {
+  string user_id = 1;
+  int32 limit = 2;   // 0 → 20
+  int32 offset = 3;
+}
+message GetHistoryResponse {
+  repeated LeagueHistoryEntry entries = 1;
+  int32 total = 2;
+}
+
+message RunWeeklyRotationRequest {
+  // force=true — игнорировать "когорта уже завершена" + не ждать конца цикла.
+  bool force = 1;
+}
+message RunWeeklyRotationResponse {
+  // Сколько когорт обработано.
+  int32 cohorts_processed = 1;
+  // Сколько юзеров переведено / понижено / осталось.
+  int32 users_promoted = 2;
+  int32 users_demoted = 3;
+  int32 users_sustained = 4;
+}

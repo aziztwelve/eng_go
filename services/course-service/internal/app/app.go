@@ -16,6 +16,7 @@ import (
 
 	"github.com/elearning/course-service/internal/api/course/v1"
 	"github.com/elearning/course-service/internal/client/gamification"
+	"github.com/elearning/course-service/internal/client/srs"
 	"github.com/elearning/course-service/internal/config"
 	postgresrepo "github.com/elearning/course-service/internal/repository/postgres"
 	"github.com/elearning/course-service/internal/service"
@@ -71,6 +72,8 @@ func New(ctx context.Context) (*App, error) {
 	enrollmentRepo := postgresrepo.NewEnrollmentRepository(pool)
 	progressRepo := postgresrepo.NewProgressRepository(pool)
 	trackRepo := postgresrepo.NewTrackRepository(pool)
+	vocabRepo := postgresrepo.NewVocabularyRepository(pool)
+	ttsRepo := postgresrepo.NewTTSRepository(pool)
 
 	// Инициализация сервисов
 	videoClient := service.NewMockVideoClient()
@@ -96,13 +99,37 @@ func New(ctx context.Context) (*App, error) {
 			)
 		}
 	}
+	// SRS (Phase 3). Если задан SRS_SERVICE_ADDR — gRPC, иначе noop.
+	// Используется для InitSkill при первом завершении урока/модуля.
+	var srsClient srs.Client = srs.NewNoopClient()
+	if cfg.SRSServiceAddr != "" {
+		sc, closeSC, err := srs.NewGRPCClient(ctx, cfg.SRSServiceAddr)
+		if err != nil {
+			logger.Warn(ctx, "❌ failed to dial srs, falling back to noop",
+				zap.String("addr", cfg.SRSServiceAddr),
+				zap.Error(err),
+			)
+		} else {
+			srsClient = sc
+			closer.Add(func(ctx context.Context) error {
+				logger.Info(ctx, "Closing srs gRPC connection")
+				return closeSC()
+			})
+			logger.Info(ctx, "✅ Connected to srs-service",
+				zap.String("addr", cfg.SRSServiceAddr),
+			)
+		}
+	}
+
 	courseService := service.NewCourseService(courseRepo, videoClient)
 	enrollmentService := service.NewEnrollmentService(enrollmentRepo)
-	progressService := service.NewProgressService(progressRepo, courseRepo, enrollmentRepo, gamificationClient)
+	progressService := service.NewProgressService(progressRepo, courseRepo, enrollmentRepo, gamificationClient, srsClient)
 	trackService := service.NewTrackService(trackRepo)
+	vocabService := service.NewVocabularyService(vocabRepo)
+	ttsService := service.NewTTSService(ttsRepo)
 
 	// Инициализация gRPC API
-	courseAPI := v1.NewAPI(courseService, enrollmentService, progressService, trackService)
+	courseAPI := v1.NewAPI(courseService, enrollmentService, progressService, trackService, vocabService, ttsService)
 
 	// Создание gRPC сервера
 	grpcServer := grpc.NewServer()

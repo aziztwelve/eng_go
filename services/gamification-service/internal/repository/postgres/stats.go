@@ -162,3 +162,30 @@ func (r *statsRepository) ResetWeeklyXP(ctx context.Context) error {
 	}
 	return nil
 }
+
+// ListAllUserIDs — постраничный enumerate всех user_stats. Stable order
+// по user_id (UUID).
+func (r *statsRepository) ListAllUserIDs(ctx context.Context, limit, offset int) ([]string, error) {
+	if limit <= 0 {
+		limit = 500
+	}
+	if offset < 0 {
+		offset = 0
+	}
+	rows, err := r.pool.Query(ctx, `
+		SELECT user_id::text FROM user_stats ORDER BY user_id LIMIT $1 OFFSET $2
+	`, limit, offset)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var out []string
+	for rows.Next() {
+		var s string
+		if err := rows.Scan(&s); err != nil {
+			return nil, err
+		}
+		out = append(out, s)
+	}
+	return out, rows.Err()
+}

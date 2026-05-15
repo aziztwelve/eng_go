@@ -9,12 +9,17 @@ import (
 )
 
 type diContainer struct {
-	authClient         *client.AuthClient
-	userClient         *client.UserClient
-	courseClient       *client.CourseClient
-	videoClient        client.VideoClient
-	quizClient         *client.QuizClient
-	gamificationClient *client.GamificationClient
+	authClient           *client.AuthClient
+	userClient           *client.UserClient
+	courseClient         *client.CourseClient
+	videoClient          client.VideoClient
+	quizClient           *client.QuizClient
+	gamificationClient   *client.GamificationClient
+	stepValidationClient *client.StepValidationClient
+	srsClient            *client.SRSClient
+	notificationsClient  *client.NotificationsClient
+	socialClient         *client.SocialClient
+	aiClient             *client.AIClient
 }
 
 func NewDiContainer() *diContainer {
@@ -120,4 +125,109 @@ func (d *diContainer) GamificationClient(ctx context.Context) *client.Gamificati
 	})
 	d.gamificationClient = c
 	return d.gamificationClient
+}
+
+// StepValidationClient может быть nil, если STEP_VALIDATION_SERVICE_ADDR
+// не задан. Без него POST /api/v1/steps/:stepId/submit не регистрируется.
+func (d *diContainer) StepValidationClient(ctx context.Context) *client.StepValidationClient {
+	if d.stepValidationClient != nil {
+		return d.stepValidationClient
+	}
+	addr := config.AppConfig().Services.StepValidationServiceAddr()
+	if addr == "" {
+		return nil
+	}
+	c, err := client.NewStepValidationClient(ctx, addr)
+	if err != nil {
+		panic(err)
+	}
+	closer.AddNamed("Step Validation gRPC client", func(ctx context.Context) error {
+		return c.Close()
+	})
+	d.stepValidationClient = c
+	return d.stepValidationClient
+}
+
+// SRSClient может быть nil, если SRS_SERVICE_ADDR не задан. Без него
+// /api/v1/srs/* и /api/v1/mistakes/* не регистрируются.
+func (d *diContainer) SRSClient(ctx context.Context) *client.SRSClient {
+	if d.srsClient != nil {
+		return d.srsClient
+	}
+	addr := config.AppConfig().Services.SRSServiceAddr()
+	if addr == "" {
+		return nil
+	}
+	c, err := client.NewSRSClient(ctx, addr)
+	if err != nil {
+		panic(err)
+	}
+	closer.AddNamed("SRS gRPC client", func(ctx context.Context) error {
+		return c.Close()
+	})
+	d.srsClient = c
+	return d.srsClient
+}
+
+// SocialClient может быть nil, если SOCIAL_SERVICE_ADDR не задан. Без него
+// /api/v1/leagues/* не регистрируются.
+func (d *diContainer) SocialClient(ctx context.Context) *client.SocialClient {
+	if d.socialClient != nil {
+		return d.socialClient
+	}
+	addr := config.AppConfig().Services.SocialServiceAddr()
+	if addr == "" {
+		return nil
+	}
+	c, err := client.NewSocialClient(ctx, addr)
+	if err != nil {
+		panic(err)
+	}
+	closer.AddNamed("Social gRPC client", func(ctx context.Context) error {
+		return c.Close()
+	})
+	d.socialClient = c
+	return d.socialClient
+}
+
+// NotificationsClient может быть nil, если NOTIFICATIONS_SERVICE_ADDR
+// не задан. Без него /api/v1/notifications/* не регистрируются.
+func (d *diContainer) NotificationsClient(ctx context.Context) *client.NotificationsClient {
+	if d.notificationsClient != nil {
+		return d.notificationsClient
+	}
+	addr := config.AppConfig().Services.NotificationsServiceAddr()
+	if addr == "" {
+		return nil
+	}
+	c, err := client.NewNotificationsClient(ctx, addr)
+	if err != nil {
+		panic(err)
+	}
+	closer.AddNamed("Notifications gRPC client", func(ctx context.Context) error {
+		return c.Close()
+	})
+	d.notificationsClient = c
+	return d.notificationsClient
+}
+
+// AIClient может быть nil, если AI_SERVICE_ADDR не задан. Без него
+// /api/v1/ai/* не регистрируются.
+func (d *diContainer) AIClient(ctx context.Context) *client.AIClient {
+	if d.aiClient != nil {
+		return d.aiClient
+	}
+	addr := config.AppConfig().Services.AIServiceAddr()
+	if addr == "" {
+		return nil
+	}
+	c, err := client.NewAIClient(ctx, addr)
+	if err != nil {
+		panic(err)
+	}
+	closer.AddNamed("AI gRPC client", func(ctx context.Context) error {
+		return c.Close()
+	})
+	d.aiClient = c
+	return d.aiClient
 }

@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"github.com/elearning/course-service/internal/client/gamification"
+	"github.com/elearning/course-service/internal/client/srs"
 	"github.com/elearning/course-service/internal/model"
 	"github.com/elearning/course-service/internal/repository"
 	gamificationv1 "github.com/elearning/shared/pkg/proto/gamification/v1"
@@ -24,28 +25,34 @@ type ProgressService interface {
 }
 
 type progressService struct {
-	progressRepo      repository.ProgressRepository
-	courseRepo        repository.CourseRepository
-	enrollmentRepo    repository.EnrollmentRepository
+	progressRepo       repository.ProgressRepository
+	courseRepo         repository.CourseRepository
+	enrollmentRepo     repository.EnrollmentRepository
 	gamificationClient gamification.Client
+	srsClient          srs.Client
 }
 
 // NewProgressService создает новый экземпляр сервиса прогресса.
-// gamificationClient может быть nil — тогда используется noop клиент.
+// gamificationClient / srsClient могут быть nil — тогда noop клиенты.
 func NewProgressService(
 	progressRepo repository.ProgressRepository,
 	courseRepo repository.CourseRepository,
 	enrollmentRepo repository.EnrollmentRepository,
 	gamificationClient gamification.Client,
+	srsClient srs.Client,
 ) ProgressService {
 	if gamificationClient == nil {
 		gamificationClient = gamification.NewNoopClient()
+	}
+	if srsClient == nil {
+		srsClient = srs.NewNoopClient()
 	}
 	return &progressService{
 		progressRepo:       progressRepo,
 		courseRepo:         courseRepo,
 		enrollmentRepo:     enrollmentRepo,
 		gamificationClient: gamificationClient,
+		srsClient:          srsClient,
 	}
 }
 
@@ -172,6 +179,24 @@ func (s *progressService) MarkStepComplete(
 			xpResp = lessonXP
 		}
 
+		// Phase 3: инициализируем skill_decay карточку при первом
+		// прохождении урока. Ошибки srs — non-fatal.
+		_ = s.srsClient.InitSkill(ctx, srs.InitSkillEvent{
+			UserID:    userID,
+			SkillID:   step.LessonID,
+			SkillType: srs.SkillTypeLesson,
+		})
+		// Если у урока есть модуль — пробуем заинитить module-уровень
+		// тоже (idempotent на стороне srs-service).
+		if lesson, err := s.courseRepo.GetLessonByID(ctx, step.LessonID); err == nil &&
+			lesson != nil && lesson.ModuleID != "" {
+			_ = s.srsClient.InitSkill(ctx, srs.InitSkillEvent{
+				UserID:    userID,
+				SkillID:   lesson.ModuleID,
+				SkillType: srs.SkillTypeModule,
+			})
+		}
+
 		// Если этот урок только что закрыл course — фаерим OnCourseCompleted
 		// (один раз, благодаря guard'у выше — повторно сюда не зайдем).
 		// Standalone-уроки не имеют source_id, их пропускаем.
@@ -180,6 +205,15 @@ func (s *progressService) MarkStepComplete(
 				xpResp = courseXP
 			}
 		}
+	} else if lessonProgress.CompletedAt != nil && existingProgress != nil && existingProgress.Completed {
+		// Повторное прохождение шага в уже-завершённом уроке —
+		// подпинаем strength (decay-rust фикс). Non-fatal.
+		_ = s.srsClient.StrengthenSkill(ctx, srs.StrengthenSkillEvent{
+			UserID:    userID,
+			SkillID:   step.LessonID,
+			SkillType: srs.SkillTypeLesson,
+			Amount:    0.1,
+		})
 	}
 
 	return stepProgress, lessonProgress, xpResp, nil

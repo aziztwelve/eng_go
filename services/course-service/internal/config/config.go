@@ -26,6 +26,11 @@ type Config struct {
 	// "localhost:50058"). Если пусто, используется noop-клиент.
 	GamificationServiceAddr string
 
+	// SRSServiceAddr — адрес gRPC srs-service (например, "localhost:50060").
+	// Если пусто — noop. Phase 3: используется для InitSkill / StrengthenSkill
+	// при завершении урока/модуля.
+	SRSServiceAddr string
+
 	LoggerLevel  string
 	LoggerAsJSON bool
 }
@@ -58,6 +63,7 @@ func Get() *Config {
 		KafkaConsumerGroup: getEnv("KAFKA_CONSUMER_GROUP", "course-service"),
 
 		GamificationServiceAddr: getEnv("GAMIFICATION_SERVICE_ADDR", ""),
+		SRSServiceAddr:          getEnv("SRS_SERVICE_ADDR", ""),
 
 		LoggerLevel:  getEnv("LOGGER_LEVEL", "info"),
 		LoggerAsJSON: getEnv("LOGGER_AS_JSON", "false") == "true",

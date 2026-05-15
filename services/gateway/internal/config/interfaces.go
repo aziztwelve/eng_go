@@ -26,4 +26,9 @@ type ServicesConfig interface {
 	VideoServiceAddr() string
 	QuizServiceAddr() string
 	GamificationServiceAddr() string
+	StepValidationServiceAddr() string
+	SRSServiceAddr() string
+	SocialServiceAddr() string
+	NotificationsServiceAddr() string
+	AIServiceAddr() string
 }

@@ -112,6 +112,22 @@ service CourseService {
 
   // ReorderTrackLessons атомарно переустанавливает порядок уроков в треке
   rpc ReorderTrackLessons(ReorderTrackLessonsRequest) returns (ReorderTrackLessonsResponse);
+
+  // === Vocabulary (Phase 2) ===
+  // Словарь — слова с переводами для match_pairs / fill_blank / listening.
+  rpc ListVocabulary(ListVocabularyRequest) returns (ListVocabularyResponse);
+  rpc GetVocabularyEntry(GetVocabularyEntryRequest) returns (GetVocabularyEntryResponse);
+  rpc CreateVocabularyEntry(CreateVocabularyEntryRequest) returns (CreateVocabularyEntryResponse);
+  rpc UpdateVocabularyEntry(UpdateVocabularyEntryRequest) returns (UpdateVocabularyEntryResponse);
+  rpc DeleteVocabularyEntry(DeleteVocabularyEntryRequest) returns (DeleteVocabularyEntryResponse);
+  rpc BulkCreateVocabulary(BulkCreateVocabularyRequest) returns (BulkCreateVocabularyResponse);
+
+  // === TTS (Phase 2 — stub) ===
+  // На phase-2 SynthesizeTTS сохраняет переданный audio_url в кэш
+  // (без вызова TTS-провайдера). GetTTSByText читает из кэша.
+  // Реальная интеграция с Google Cloud TTS / ElevenLabs — Phase 5.
+  rpc SynthesizeTTS(SynthesizeTTSRequest) returns (SynthesizeTTSResponse);
+  rpc GetTTSByText(GetTTSByTextRequest) returns (GetTTSByTextResponse);
 }
 
 // Course представляет курс
@@ -155,7 +171,10 @@ message Lesson {
 message Step {
   string id = 1;
   string lesson_id = 2;
-  string type = 3; // video, text, quiz, task, brain_game, ai_writing
+  // Phase 0 legacy: video, text, quiz, task, brain_game, ai_writing.
+  // Phase 2: translate, match_pairs, listening, fill_blank, tap_words, story.
+  // Структура `content` зависит от типа — см. docs/tasks/phase-2-step-formats.md.
+  string type = 3;
   string title = 4;
   string content = 5; // JSON string
   int32 order_index = 6;
@@ -643,4 +662,133 @@ message ReorderTrackLessonsRequest {
 
 message ReorderTrackLessonsResponse {
   bool success = 1;
+}
+
+// === Vocabulary (Phase 2) ===
+
+// VocabularyEntry — пара слово↔перевод в словаре.
+message VocabularyEntry {
+  string id = 1;
+  string language = 2;        // 'en', 'es', 'kk'
+  string word = 3;
+  string translation = 4;
+  string target_language = 5; // язык перевода
+  string audio_url = 6;       // optional
+  string image_url = 7;       // optional
+  string level = 8;           // A1 | A2 | B1 | ...
+  string pos = 9;             // noun | verb | adj | ...
+  google.protobuf.Timestamp created_at = 10;
+  google.protobuf.Timestamp updated_at = 11;
+}
+
+message ListVocabularyRequest {
+  google.protobuf.StringValue language = 1;
+  google.protobuf.StringValue target_language = 2;
+  google.protobuf.StringValue level = 3;
+  google.protobuf.StringValue pos = 4;
+  string search = 5;
+  int32 limit = 6;
+  int32 offset = 7;
+}
+
+message ListVocabularyResponse {
+  repeated VocabularyEntry entries = 1;
+  int32 total = 2;
+}
+
+message GetVocabularyEntryRequest {
+  string id = 1;
+}
+
+message GetVocabularyEntryResponse {
+  VocabularyEntry entry = 1;
+}
+
+message CreateVocabularyEntryRequest {
+  string language = 1;
+  string word = 2;
+  string translation = 3;
+  string target_language = 4;
+  string audio_url = 5;
+  string image_url = 6;
+  string level = 7;
+  string pos = 8;
+}
+
+message CreateVocabularyEntryResponse {
+  VocabularyEntry entry = 1;
+}
+
+message UpdateVocabularyEntryRequest {
+  string id = 1;
+  google.protobuf.StringValue word = 2;
+  google.protobuf.StringValue translation = 3;
+  google.protobuf.StringValue audio_url = 4;
+  google.protobuf.StringValue image_url = 5;
+  google.protobuf.StringValue level = 6;
+  google.protobuf.StringValue pos = 7;
+}
+
+message UpdateVocabularyEntryResponse {
+  VocabularyEntry entry = 1;
+}
+
+message DeleteVocabularyEntryRequest {
+  string id = 1;
+}
+
+message DeleteVocabularyEntryResponse {
+  bool success = 1;
+}
+
+message BulkCreateVocabularyRequest {
+  repeated CreateVocabularyEntryRequest entries = 1;
+}
+
+message BulkCreateVocabularyResponse {
+  // ID-шники созданных записей в том же порядке, в котором пришли
+  // в запрос. Дубликаты по uniq-ключу (language, word, target_language)
+  // получают пустую строку.
+  repeated string ids = 1;
+  int32 created = 2;
+  int32 skipped = 3;
+}
+
+// === TTS Cache (Phase 2 stub) ===
+
+message TTSCacheEntry {
+  string id = 1;
+  string text = 2;
+  string language = 3;
+  string voice = 4;
+  string audio_url = 5;
+  int32 duration_ms = 6;
+  google.protobuf.Timestamp created_at = 7;
+}
+
+// На phase-2 SynthesizeTTS не вызывает TTS-провайдер. Если передан
+// `audio_url` — сохраняем его в кэш под (text, language, voice).
+// Если не передан — возвращаем INVALID_ARGUMENT, т.к. провайдер ещё
+// не подключён. В Phase 5 будет реальная синтез-логика.
+message SynthesizeTTSRequest {
+  string text = 1;
+  string language = 2;
+  string voice = 3;        // optional, default = "default"
+  string audio_url = 4;    // обязательно для phase-2 stub
+  int32 duration_ms = 5;   // optional
+}
+
+message SynthesizeTTSResponse {
+  TTSCacheEntry entry = 1;
+  bool created = 2; // false = взято из кэша
+}
+
+message GetTTSByTextRequest {
+  string text = 1;
+  string language = 2;
+  string voice = 3; // optional, default = "default"
+}
+
+message GetTTSByTextResponse {
+  TTSCacheEntry entry = 1;
 }
