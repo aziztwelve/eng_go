@@ -7,7 +7,7 @@
 
 **Дата старта:** 2026-05-15
 **Дата последнего обновления:** 2026-05-15
-**Статус:** 🟢 **Backend MVP done (infra + social-service + gamification producer + gateway). Frontend и unit-coverage repos — TODO.**
+**Статус:** 🟢 **Backend full done (infra + social + gamification producer + gateway + promotion push hook). Тесты: service (23) + redis miniredis (12) + postgres testcontainers (19). Frontend web (`/leagues`, `/leagues/history`) — done. Mobile + Friends (Phase 4.5) — TODO.**
 
 ---
 
@@ -103,13 +103,27 @@
 
 ### Тесты
 - [x] **4.26** Unit-tests: `model.CycleBoundaries` (4 cases) + `PromotionGems` (11) + `Cohort.IsFull` (3) + `cron.nextWeeklyAt` (5) — все зелёные.
-- [ ] **4.27** Postgres-репозитории — нужны интеграционные (с тестовой БД через testcontainers / docker-compose).
-- [ ] **4.28** Redis-репозиторий — нужен miniredis тест.
-- [ ] **4.29** Service-слой — нужны in-memory моки для всех repos и unit-тесты на rotation / OnXPGained.
+- [x] **4.27** Postgres-репозитории — `internal/repository/postgres/postgres_test.go` через `testcontainers-go/modules/postgres`. 19 тестов: leagues (2) + cohorts (5) + user_leagues (6) + history (4). Накат миграций в TestMain. Пропуск через `SKIP_PG_INTEGRATION=1`.
+- [x] **4.28** Redis-репозиторий — `internal/repository/redis/leaderboard_test.go` через `alicebob/miniredis/v2`. 12 тестов: AddXP/SetXP/GetTop/GetRank/GetScore/Reset + isolation между cohort-ами + negative amount.
+- [x] **4.29** Service-слой — `internal/service/service_test.go` с in-memory моками для всех 5 repos + users + notifications. 26 тестов: EnsureUserInLeague (5) + OnXPGained (4) + GetMyLeague (2) + GetMyLeaderboard (3) + SnapshotRanks (2) + RunWeeklyRotation (6) + GetHistory (1) + Promotion push (3).
 
-### Frontend (отложено)
-- [ ] **4.30** Web: `/leagues` (hero + leaderboard + timer + zones), `/leagues/history` + hooks `use-my-league`, `use-leaderboard`, `use-league-history`.
-- [ ] **4.31** Mobile: те же экраны + Lottie promotion celebration animation.
+### Промо push (social → notifications)
+- [x] **4.30** Новый клиент `services/social-service/internal/client/notifications/{client,grpc,noop}.go` (по образцу gamification / srs).
+- [x] **4.31** `service.Service.WithNotifications` + `sendPromotionPush` в `RunWeeklyRotation` (только для promoted; channel=`achievement`, `ignore_quiet_hours=true`, dedup_key = `league_promotion:<cohort>:<user>`).
+- [x] **4.32** `app.go` подхватывает `NOTIFICATIONS_SERVICE_ADDR`; `social.env.template` + `deploy/env/.env` (`SOCIAL_NOTIFICATIONS_SERVICE_ADDR`) расширены.
+- [x] **4.33** Fix миграций: `000002_create_cohorts.up.sql` / `000003_create_user_leagues.up.sql` — убран невалидный `COMMENT ON ... 'a' || 'b'` (Postgres не принимает выражения в COMMENT IS, только literals). До этого миграции бы упали на свежем PG.
+
+### Frontend web (eng_next2)
+- [x] **4.34** Hooks: `src/hooks/use-leagues.ts` — `useLeaguesCatalog` / `useMyLeague` / `useMyLeaderboard` / `useLeagueHistory` (TanStack Query, кешируются под auth-флагом).
+- [x] **4.35** API client: `src/lib/social-api.ts` — обёртка над gateway `/api/v1/leagues*`.
+- [x] **4.36** Types: `src/types/api.ts` — `League`, `UserLeague`, `LeaderboardEntry`, `LeagueHistoryEntry`, response shapes.
+- [x] **4.37** Page `/leagues`: Hero (текущая лига + cycle timer + my rank + my XP) + zone hints (promotion top-N / demotion bottom-M) + Leaderboard (топ 30 с avatar + zone-окрашиванием рядов + `is_me` подсветкой).
+- [x] **4.38** Page `/leagues/history`: rows с League name + final_rank + cycle dates + gems + promo/demo badges + пагинация (PAGE_SIZE=20).
+- [x] **4.39** Nav: пункт «Лиги» / «Leagues» добавлен в `components/navbar.tsx` + `lib/i18n.tsx` (ru/en).
+
+### Mobile / Friends (отложено)
+- [ ] **4.40** Mobile (eng_mob): те же экраны + Lottie promotion celebration animation.
+- [ ] **4.41** Phase 4.5: Friends — friendships table, request/accept/reject, friend leaderboard.
 
 ---
 
