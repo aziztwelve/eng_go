@@ -31,6 +31,29 @@ service AuthService {
   
   // DeleteUser удаляет пользователя (admin)
   rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse);
+
+  // SearchByUsername ищет пользователей по префиксу username (ILIKE).
+  // Используется для friend-search (Phase 4.5). Public RPC (без admin).
+  rpc SearchByUsername(SearchByUsernameRequest) returns (SearchByUsernameResponse);
+
+  // CreateGuestSession создаёт анонимного пользователя (is_guest=true) и
+  // выдаёт JWT. Используется на bootstrap mobile/web до прохождения
+  // онбординга. См. docs/tasks/onboarding-spec.md §3.2.
+  // Идемпотентен по device_id: повторный вызов с тем же device_id
+  // возвращает того же гостя.
+  rpc CreateGuestSession(CreateGuestSessionRequest) returns (CreateGuestSessionResponse);
+
+  // ClaimGuestAccount переводит гостя в полноценного юзера, сохраняя
+  // user_id (XP/streak/SRS гостя автоматически принадлежат ему уже).
+  // Caller обязан быть гостем (is_guest=true в JWT). После успеха
+  // user.is_guest = false, появляются email/password/username.
+  rpc ClaimGuestAccount(ClaimGuestAccountRequest) returns (ClaimGuestAccountResponse);
+
+  // CleanupExpiredGuests удаляет гостей старше cutoff_days (default 90).
+  // Используется cron'ом auth-service. Cascade удалит все downstream-данные
+  // через FK ON DELETE CASCADE (которые у нас НЕ настроены — гость просто
+  // удалится из users, остальные таблицы остаются «orphan» и не мешают).
+  rpc CleanupExpiredGuests(CleanupExpiredGuestsRequest) returns (CleanupExpiredGuestsResponse);
 }
 
 // RegisterRequest содержит данные для регистрации
@@ -68,6 +91,7 @@ message ValidateTokenResponse {
   bool valid = 1;
   string user_id = 2;
   string role = 3;
+  bool is_guest = 4;  // true для guest JWT (см. CreateGuestSession)
 }
 
 // RefreshTokenRequest содержит refresh token
@@ -136,3 +160,65 @@ message DeleteUserRequest {
 
 // DeleteUserResponse ответ об удалении пользователя
 message DeleteUserResponse {}
+
+// SearchByUsernameRequest — поиск по префиксу username.
+message SearchByUsernameRequest {
+  string query = 1;       // Префикс username (мин 2 символа).
+  int32 limit = 2;        // Default 20, max 50.
+  string exclude_user_id = 3; // Опционально — исключить из выдачи (обычно self).
+}
+
+// SearchByUsernameResponse — найденные пользователи.
+message SearchByUsernameResponse {
+  repeated UserInfo users = 1;
+}
+
+// === Guest mode (onboarding-spec.md §3.2) ===
+
+// CreateGuestSessionRequest — bootstrap анонимного юзера.
+message CreateGuestSessionRequest {
+  // device_id — UUID v4, генерируется клиентом и хранится локально.
+  // Используется для идемпотентности: один device = один guest user.
+  string device_id = 1;
+}
+
+// CreateGuestSessionResponse — JWT для гостя + его user_id.
+message CreateGuestSessionResponse {
+  string user_id      = 1;
+  string access_token = 2;
+  string refresh_token = 3;
+  google.protobuf.Timestamp expires_at = 4;
+  // true если guest user был создан в этом вызове, false если переиспользован
+  // существующий (idempotent на тот же device_id).
+  bool created = 5;
+}
+
+// ClaimGuestAccountRequest — конвертация гостя в registered user.
+// user_id извлекается из guest JWT (caller передаёт его как контекстный
+// guest_user_id; gateway/middleware валидирует совпадение).
+message ClaimGuestAccountRequest {
+  string guest_user_id = 1;
+  string email         = 2;
+  string password      = 3;
+  string username      = 4;
+}
+
+// ClaimGuestAccountResponse — новые credentials и токены.
+// user_id равен guest_user_id из request (preserve).
+message ClaimGuestAccountResponse {
+  string user_id       = 1;
+  string access_token  = 2;
+  string refresh_token = 3;
+  google.protobuf.Timestamp expires_at = 4;
+}
+
+// CleanupExpiredGuestsRequest — параметры cron-cleanup'а.
+message CleanupExpiredGuestsRequest {
+  // Минимальный возраст guest user для удаления (default 90 если 0).
+  int32 cutoff_days = 1;
+}
+
+// CleanupExpiredGuestsResponse — сколько гостей удалено.
+message CleanupExpiredGuestsResponse {
+  int32 deleted_count = 1;
+}

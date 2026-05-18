@@ -51,6 +51,21 @@ func (c *UserClient) GetUserLanguages(ctx context.Context, req *userv1.GetUserLa
 	return c.client.GetUserLanguages(ctx, req)
 }
 
+// GetOnboardingState читает текущее состояние онбординга юзера.
+func (c *UserClient) GetOnboardingState(ctx context.Context, req *userv1.GetOnboardingStateRequest) (*userv1.GetOnboardingStateResponse, error) {
+	return c.client.GetOnboardingState(ctx, req)
+}
+
+// PatchOnboardingState — partial update.
+func (c *UserClient) PatchOnboardingState(ctx context.Context, req *userv1.PatchOnboardingStateRequest) (*userv1.PatchOnboardingStateResponse, error) {
+	return c.client.PatchOnboardingState(ctx, req)
+}
+
+// CompleteOnboarding ставит onboarded_at = NOW().
+func (c *UserClient) CompleteOnboarding(ctx context.Context, req *userv1.CompleteOnboardingRequest) (*userv1.CompleteOnboardingResponse, error) {
+	return c.client.CompleteOnboarding(ctx, req)
+}
+
 
 
 

@@ -7,7 +7,7 @@ import (
 )
 
 func (a *api) ValidateToken(ctx context.Context, req *authv1.ValidateTokenRequest) (*authv1.ValidateTokenResponse, error) {
-	userID, role, err := a.authService.ValidateToken(ctx, req.GetToken())
+	userID, role, isGuest, err := a.authService.ValidateToken(ctx, req.GetToken())
 	if err != nil {
 		return &authv1.ValidateTokenResponse{
 			Valid: false,
@@ -15,8 +15,9 @@ func (a *api) ValidateToken(ctx context.Context, req *authv1.ValidateTokenReques
 	}
 
 	return &authv1.ValidateTokenResponse{
-		Valid:  true,
-		UserId: userID,
-		Role:   role,
+		Valid:   true,
+		UserId:  userID,
+		Role:    role,
+		IsGuest: isGuest,
 	}, nil
 }

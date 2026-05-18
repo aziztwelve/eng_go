@@ -19,4 +19,12 @@ type Profile struct {
 	Timezone    sql.NullString
 	CreatedAt   time.Time
 	UpdatedAt   time.Time
+
+	// === Onboarding fields (см. migration 002_onboarding_fields.sql) ===
+	ProficiencyLevel sql.NullString
+	DailyGoalXP      sql.NullInt32
+	Motivation       []string // PG TEXT[] -- читается через pgx.Array
+	SignupSource     sql.NullString
+	PlacementScore   sql.NullInt32
+	OnboardedAt      sql.NullTime
 }

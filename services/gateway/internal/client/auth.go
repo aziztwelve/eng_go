@@ -61,6 +61,21 @@ func (c *AuthClient) GetUserInfo(ctx context.Context, req *authv1.GetUserInfoReq
 	return c.client.GetUserInfo(ctx, req)
 }
 
+// CreateGuestSession создаёт анонимного юзера (Phase 0 onboarding §3.2).
+func (c *AuthClient) CreateGuestSession(ctx context.Context, req *authv1.CreateGuestSessionRequest) (*authv1.CreateGuestSessionResponse, error) {
+	return c.client.CreateGuestSession(ctx, req)
+}
+
+// ClaimGuestAccount конвертирует гостя в registered user.
+func (c *AuthClient) ClaimGuestAccount(ctx context.Context, req *authv1.ClaimGuestAccountRequest) (*authv1.ClaimGuestAccountResponse, error) {
+	return c.client.ClaimGuestAccount(ctx, req)
+}
+
+// CleanupExpiredGuests — admin/cron RPC, физически удаляет старых гостей.
+func (c *AuthClient) CleanupExpiredGuests(ctx context.Context, req *authv1.CleanupExpiredGuestsRequest) (*authv1.CleanupExpiredGuestsResponse, error) {
+	return c.client.CleanupExpiredGuests(ctx, req)
+}
+
 // Close закрывает соединение
 func (c *AuthClient) Close() error {
 	return c.conn.Close()

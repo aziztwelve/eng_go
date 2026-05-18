@@ -4,6 +4,8 @@ import (
 	"context"
 	"fmt"
 	"net"
+	"os"
+	"strconv"
 
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
@@ -11,6 +13,7 @@ import (
 	"google.golang.org/grpc/reflection"
 
 	"github.com/elearning/auth-service/internal/config"
+	authCron "github.com/elearning/auth-service/internal/cron"
 	"github.com/elearning/platform/pkg/closer"
 	"github.com/elearning/platform/pkg/grpc/health"
 	"github.com/elearning/platform/pkg/logger"
@@ -48,6 +51,7 @@ func (a *App) initDeps(ctx context.Context) error {
 		a.initCloser,
 		a.initListener,
 		a.initGRPCServer,
+		a.initCron,
 	}
 
 	for _, f := range inits {
@@ -56,6 +60,37 @@ func (a *App) initDeps(ctx context.Context) error {
 			return err
 		}
 	}
+
+	return nil
+}
+
+// initCron запускает фоновую горутину для guest cleanup (раз в сутки в UTC).
+// Управляется env:
+//   - GUEST_CLEANUP_DAILY_AT="HH:MM" (default "03:00")
+//   - GUEST_CLEANUP_CUTOFF_DAYS=<n>  (default 90)
+//   - GUEST_CLEANUP_ENABLED="false"  отключает крон (для CI/тестов)
+func (a *App) initCron(ctx context.Context) error {
+	if os.Getenv("GUEST_CLEANUP_ENABLED") == "false" {
+		logger.Info(ctx, "auth cron disabled via GUEST_CLEANUP_ENABLED=false")
+		return nil
+	}
+
+	cfg := authCron.Config{
+		DailyAt: os.Getenv("GUEST_CLEANUP_DAILY_AT"),
+	}
+	if v := os.Getenv("GUEST_CLEANUP_CUTOFF_DAYS"); v != "" {
+		if parsed, err := strconv.Atoi(v); err == nil {
+			cfg.CutoffDays = int32(parsed)
+		}
+	}
+
+	scheduler := authCron.NewScheduler(a.diContainer.AuthService(ctx), cfg)
+	scheduler.Start(ctx)
+
+	closer.AddNamed("auth cron", func(ctx context.Context) error {
+		scheduler.Stop()
+		return nil
+	})
 
 	return nil
 }

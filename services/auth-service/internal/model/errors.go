@@ -8,4 +8,5 @@ var (
 	ErrUserNotFound       = errors.New("user not found")
 	ErrInvalidToken       = errors.New("invalid token")
 	ErrTokenExpired       = errors.New("token expired")
+	ErrInvalidDeviceID    = errors.New("invalid device id")
 )

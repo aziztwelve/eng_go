@@ -11,6 +11,7 @@ import (
 
 	"github.com/elearning/auth-service/internal/model"
 	def "github.com/elearning/auth-service/internal/repository"
+	repoConverter "github.com/elearning/auth-service/internal/repository/converter"
 )
 
 var _ def.AuthRepository = (*repository)(nil)
@@ -26,9 +27,10 @@ func NewRepository(pool *pgxpool.Pool) *repository {
 	}
 }
 
-// ListUsers возвращает список всех пользователей (admin)
+// ListUsers возвращает список всех пользователей (admin).
+// Гостей (is_guest=true) исключаем — admin не должен их видеть.
 func (r *repository) ListUsers(ctx context.Context, limit, offset int32, search, role string) ([]model.User, int32, error) {
-	var conditions []string
+	conditions := []string{"is_guest = FALSE"}
 	var args []interface{}
 	argPos := 1
 
@@ -46,10 +48,7 @@ func (r *repository) ListUsers(ctx context.Context, limit, offset int32, search,
 		argPos++
 	}
 
-	whereClause := ""
-	if len(conditions) > 0 {
-		whereClause = "WHERE " + strings.Join(conditions, " AND ")
-	}
+	whereClause := "WHERE " + strings.Join(conditions, " AND ")
 
 	// Count total
 	countQuery := fmt.Sprintf("SELECT COUNT(*) FROM public.users %s", whereClause)
@@ -61,12 +60,12 @@ func (r *repository) ListUsers(ctx context.Context, limit, offset int32, search,
 
 	// Get users with pagination
 	query := fmt.Sprintf(`
-		SELECT id, email, username, password_hash, role, created_at
+		SELECT %s
 		FROM public.users
 		%s
 		ORDER BY created_at DESC
 		LIMIT $%d OFFSET $%d
-	`, whereClause, argPos, argPos+1)
+	`, userColumns, whereClause, argPos, argPos+1)
 
 	args = append(args, limit, offset)
 
@@ -78,19 +77,11 @@ func (r *repository) ListUsers(ctx context.Context, limit, offset int32, search,
 
 	var users []model.User
 	for rows.Next() {
-		var user model.User
-		err := rows.Scan(
-			&user.ID,
-			&user.Email,
-			&user.Username,
-			&user.PasswordHash,
-			&user.Role,
-			&user.CreatedAt,
-		)
+		repoUser, err := scanUser(rows)
 		if err != nil {
 			return nil, 0, err
 		}
-		users = append(users, user)
+		users = append(users, repoConverter.ToDomainUser(repoUser))
 	}
 
 	return users, total, rows.Err()
@@ -101,19 +92,10 @@ func (r *repository) UpdateUserRole(ctx context.Context, userID, role string) (m
 	query := `
 		UPDATE public.users
 		SET role = $2
-		WHERE id = $1
-		RETURNING id, email, username, password_hash, role, created_at
-	`
+		WHERE id = $1 AND is_guest = FALSE
+		RETURNING ` + userColumns
 
-	var user model.User
-	err := r.pool.QueryRow(ctx, query, userID, role).Scan(
-		&user.ID,
-		&user.Email,
-		&user.Username,
-		&user.PasswordHash,
-		&user.Role,
-		&user.CreatedAt,
-	)
+	repoUser, err := scanUser(r.pool.QueryRow(ctx, query, userID, role))
 
 	if err != nil {
 		if errors.Is(err, pgx.ErrNoRows) {
@@ -122,7 +104,49 @@ func (r *repository) UpdateUserRole(ctx context.Context, userID, role string) (m
 		return model.User{}, err
 	}
 
-	return user, nil
+	return repoConverter.ToDomainUser(repoUser), nil
+}
+
+// SearchByUsername — public-поиск по префиксу username (ILIKE).
+// Используется для friend-search (Phase 4.5). Гостей исключаем.
+func (r *repository) SearchByUsername(ctx context.Context, query string, limit int32, excludeUserID string) ([]model.User, error) {
+	if limit <= 0 {
+		limit = 20
+	}
+	if limit > 50 {
+		limit = 50
+	}
+
+	args := []interface{}{query + "%", limit}
+	excludeClause := ""
+	if excludeUserID != "" {
+		args = append(args, excludeUserID)
+		excludeClause = " AND id <> $3"
+	}
+
+	q := fmt.Sprintf(`
+		SELECT %s
+		FROM public.users
+		WHERE is_guest = FALSE AND username ILIKE $1%s
+		ORDER BY username ASC
+		LIMIT $2
+	`, userColumns, excludeClause)
+
+	rows, err := r.pool.Query(ctx, q, args...)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	users := make([]model.User, 0)
+	for rows.Next() {
+		repoUser, err := scanUser(rows)
+		if err != nil {
+			return nil, err
+		}
+		users = append(users, repoConverter.ToDomainUser(repoUser))
+	}
+	return users, rows.Err()
 }
 
 // DeleteUser удаляет пользователя (admin)

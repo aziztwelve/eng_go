@@ -35,6 +35,22 @@ service UserService {
   
   // DeleteUser удаляет пользователя (admin only)
   rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse);
+
+  // === Onboarding (см. docs/tasks/onboarding-spec.md §3.1) ===
+  // Эти методы — wrappers поверх profile-таблицы. Onboarding-поля
+  // (proficiency_level, daily_goal_xp, motivation, signup_source,
+  // placement_score, onboarded_at) хранятся в той же таблице profiles
+  // рядом с native_lang/target_lang/date_of_birth.
+
+  // GetOnboardingState — read текущего состояния онбординга юзера.
+  rpc GetOnboardingState(GetOnboardingStateRequest) returns (GetOnboardingStateResponse);
+
+  // PatchOnboardingState — partial update (любое поле может быть nil).
+  // Вызывается клиентом после каждого шага онбординга.
+  rpc PatchOnboardingState(PatchOnboardingStateRequest) returns (PatchOnboardingStateResponse);
+
+  // CompleteOnboarding — финальный шаг, ставит onboarded_at = NOW().
+  rpc CompleteOnboarding(CompleteOnboardingRequest) returns (CompleteOnboardingResponse);
 }
 
 // Profile представляет профиль пользователя
@@ -151,4 +167,69 @@ message DeleteUserRequest {
 // DeleteUserResponse ответ на удаление пользователя
 message DeleteUserResponse {
   bool success = 1;
+}
+
+// === Onboarding (см. docs/tasks/onboarding-spec.md §3.1) ===
+
+// OnboardingState — combined state онбординга юзера, читается из profiles.
+message OnboardingState {
+  string user_id = 1;
+  google.protobuf.StringValue native_language    = 2;  // 'ru' | 'en' | ...
+  google.protobuf.StringValue target_language    = 3;
+  google.protobuf.StringValue proficiency_level  = 4;  // 'beginner'..'b2'|'just_for_fun'
+  google.protobuf.Int32Value  daily_goal_xp      = 5;  // 10/20/30/50
+  repeated string             motivation         = 6;  // ['travel','work',...]
+  google.protobuf.StringValue signup_source      = 7;  // 'tiktok'|'friend'|...
+  google.protobuf.Int32Value  placement_score    = 8;  // 0..5
+  google.protobuf.StringValue date_of_birth      = 9;  // ISO date
+  google.protobuf.Timestamp   onboarded_at       = 10;
+  bool                        completed          = 11; // == onboarded_at != null
+}
+
+// GetOnboardingStateRequest — юзер из контекста.
+message GetOnboardingStateRequest {
+  string user_id = 1;
+}
+
+// GetOnboardingStateResponse — current state.
+message GetOnboardingStateResponse {
+  OnboardingState state = 1;
+}
+
+// PatchOnboardingStateRequest — partial update.
+// Любое не-nil поле перезаписывает текущее значение в БД. nil — оставляет
+// как есть. Поле motivation особое — используется motivation_set, чтобы
+// отличить «не передавали» от «явно очистили в []».
+message PatchOnboardingStateRequest {
+  string user_id = 1;
+
+  google.protobuf.StringValue native_language    = 2;
+  google.protobuf.StringValue target_language    = 3;
+  google.protobuf.StringValue proficiency_level  = 4;
+  google.protobuf.Int32Value  daily_goal_xp      = 5;
+
+  // motivation: repeated → replace целиком (не append).
+  // motivation_set=false → не трогаем колонку.
+  // motivation_set=true  → пишем motivation (даже если пусто).
+  repeated string motivation         = 6;
+  bool            motivation_set     = 7;
+
+  google.protobuf.StringValue signup_source      = 8;
+  google.protobuf.Int32Value  placement_score    = 9;
+  google.protobuf.StringValue date_of_birth      = 10;
+}
+
+// PatchOnboardingStateResponse — обновлённый state.
+message PatchOnboardingStateResponse {
+  OnboardingState state = 1;
+}
+
+// CompleteOnboardingRequest — финальный шаг.
+message CompleteOnboardingRequest {
+  string user_id = 1;
+}
+
+// CompleteOnboardingResponse — обновлённый state с onboarded_at.
+message CompleteOnboardingResponse {
+  OnboardingState state = 1;
 }

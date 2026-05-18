@@ -32,11 +32,12 @@ func (s *service) Register(ctx context.Context, email, password, username string
 	}
 
 	// Создаем пользователя
+	pwdHashStr := string(passwordHash)
 	user := model.User{
 		ID:           uuid.NewString(),
-		Email:        email,
+		Email:        &email,
 		Username:     username,
-		PasswordHash: string(passwordHash),
+		PasswordHash: &pwdHashStr,
 		Role:         defaultRole,
 		CreatedAt:    time.Now(),
 	}

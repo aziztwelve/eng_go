@@ -158,3 +158,96 @@ func getStringValue(wrapper interface{ GetValue() string }) *string {
 	}
 	return &value
 }
+
+// CreateGuestSession — POST /api/v1/auth/guest. Клиент передаёт device_id,
+// получает guest JWT.
+func (h *AuthHandler) CreateGuestSession(c *gin.Context) {
+	var req dto.GuestSessionRequest
+	if err := c.ShouldBindJSON(&req); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	resp, err := h.authClient.CreateGuestSession(c.Request.Context(), &authv1.CreateGuestSessionRequest{
+		DeviceId: req.DeviceID,
+	})
+	if err != nil {
+		errors.HandleGRPCError(c, err)
+		return
+	}
+
+	c.JSON(http.StatusOK, dto.GuestSessionResponse{
+		UserID:       resp.UserId,
+		AccessToken:  resp.AccessToken,
+		RefreshToken: resp.RefreshToken,
+		ExpiresAt:    resp.ExpiresAt.AsTime().Format(time.RFC3339),
+		Created:      resp.Created,
+	})
+}
+
+// AdminCleanupGuestsRequest — body для admin-эндпоинта (cutoff_days опционален,
+// default — 90, как и у крона).
+type adminCleanupGuestsRequest struct {
+	CutoffDays int32 `json:"cutoff_days"`
+}
+
+// CleanupGuests — POST /api/v1/admin/auth/cleanup-guests. Дёргает
+// CleanupExpiredGuests на auth-service. Используется в incident-response,
+// штатно работает суточный cron в auth-service.
+func (h *AuthHandler) CleanupGuests(c *gin.Context) {
+	var req adminCleanupGuestsRequest
+	// Body не обязателен — пустой = use default cutoff (90).
+	_ = c.ShouldBindJSON(&req)
+
+	resp, err := h.authClient.CleanupExpiredGuests(c.Request.Context(), &authv1.CleanupExpiredGuestsRequest{
+		CutoffDays: req.CutoffDays,
+	})
+	if err != nil {
+		errors.HandleGRPCError(c, err)
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"deleted_count": resp.GetDeletedCount(),
+	})
+}
+
+// ClaimGuest — POST /api/v1/auth/claim. Защищён AuthMiddleware: guest_user_id
+// берём из JWT (user_id в context). Гость становится registered user без
+// смены user_id, prosess сохраняет всю историю прогресса.
+func (h *AuthHandler) ClaimGuest(c *gin.Context) {
+	userID, exists := c.Get("user_id")
+	if !exists {
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "User ID not found in context"})
+		return
+	}
+	userIDStr, ok := userID.(string)
+	if !ok {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Invalid user ID format"})
+		return
+	}
+
+	var req dto.ClaimGuestRequest
+	if err := c.ShouldBindJSON(&req); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	resp, err := h.authClient.ClaimGuestAccount(c.Request.Context(), &authv1.ClaimGuestAccountRequest{
+		GuestUserId: userIDStr,
+		Email:       req.Email,
+		Password:    req.Password,
+		Username:    req.Username,
+	})
+	if err != nil {
+		errors.HandleGRPCError(c, err)
+		return
+	}
+
+	c.JSON(http.StatusOK, dto.ClaimGuestResponse{
+		UserID:       resp.UserId,
+		AccessToken:  resp.AccessToken,
+		RefreshToken: resp.RefreshToken,
+		ExpiresAt:    resp.ExpiresAt.AsTime().Format(time.RFC3339),
+	})
+}

@@ -8,12 +8,14 @@ import (
 type api struct {
 	userv1.UnimplementedUserServiceServer
 
-	userService service.UserService
+	userService       service.UserService
+	onboardingService service.OnboardingService
 }
 
 // NewAPI создает новый экземпляр API
-func NewAPI(userService service.UserService) *api {
+func NewAPI(userService service.UserService, onboardingService service.OnboardingService) *api {
 	return &api{
-		userService: userService,
+		userService:       userService,
+		onboardingService: onboardingService,
 	}
 }

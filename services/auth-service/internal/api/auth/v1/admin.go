@@ -27,7 +27,7 @@ func (a *api) ListUsers(ctx context.Context, req *authv1.ListUsersRequest) (*aut
 	for _, u := range users {
 		protoUsers = append(protoUsers, &authv1.UserInfo{
 			Id:        u.ID,
-			Email:     u.Email,
+			Email:     u.EmailValue(),
 			Username:  u.Username,
 			Role:      u.Role,
 			CreatedAt: timestamppb.New(u.CreatedAt),
@@ -50,7 +50,7 @@ func (a *api) UpdateUserRole(ctx context.Context, req *authv1.UpdateUserRoleRequ
 	return &authv1.UpdateUserRoleResponse{
 		User: &authv1.UserInfo{
 			Id:        user.ID,
-			Email:     user.Email,
+			Email:     user.EmailValue(),
 			Username:  user.Username,
 			Role:      user.Role,
 			CreatedAt: timestamppb.New(user.CreatedAt),

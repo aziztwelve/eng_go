@@ -16,7 +16,7 @@ func (a *api) GetUserInfo(ctx context.Context, req *authv1.GetUserInfoRequest) (
 
 	return &authv1.GetUserInfoResponse{
 		Id:        user.ID,
-		Email:     user.Email,
+		Email:     user.EmailValue(),
 		Username:  user.Username,
 		Role:      user.Role,
 		CreatedAt: timestamppb.New(user.CreatedAt),

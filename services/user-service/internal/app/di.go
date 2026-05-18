@@ -10,17 +10,21 @@ import (
 	userAPI "github.com/elearning/user-service/internal/api/user/v1"
 	"github.com/elearning/user-service/internal/config"
 	"github.com/elearning/user-service/internal/repository"
+	onboardingRepository "github.com/elearning/user-service/internal/repository/onboarding"
 	userRepository "github.com/elearning/user-service/internal/repository/user"
 	"github.com/elearning/user-service/internal/service"
+	onboardingService "github.com/elearning/user-service/internal/service/onboarding"
 	userService "github.com/elearning/user-service/internal/service/user"
 )
 
 type diContainer struct {
 	userAPI userv1.UserServiceServer
 
-	userService service.UserService
+	userService       service.UserService
+	onboardingService service.OnboardingService
 
-	userRepository repository.UserRepository
+	userRepository       repository.UserRepository
+	onboardingRepository repository.OnboardingRepository
 
 	postgresPool *pgxpool.Pool
 }
@@ -33,7 +37,7 @@ func NewDiContainer() *diContainer {
 // UserAPI возвращает gRPC API для User Service
 func (d *diContainer) UserAPI(ctx context.Context) userv1.UserServiceServer {
 	if d.userAPI == nil {
-		d.userAPI = userAPI.NewAPI(d.UserService(ctx))
+		d.userAPI = userAPI.NewAPI(d.UserService(ctx), d.OnboardingService(ctx))
 	}
 
 	return d.userAPI
@@ -48,6 +52,15 @@ func (d *diContainer) UserService(ctx context.Context) service.UserService {
 	return d.userService
 }
 
+// OnboardingService возвращает сервис онбординга.
+func (d *diContainer) OnboardingService(ctx context.Context) service.OnboardingService {
+	if d.onboardingService == nil {
+		d.onboardingService = onboardingService.NewService(d.OnboardingRepository(ctx))
+	}
+
+	return d.onboardingService
+}
+
 // UserRepository возвращает репозиторий для работы с профилями
 func (d *diContainer) UserRepository(ctx context.Context) repository.UserRepository {
 	if d.userRepository == nil {
@@ -55,6 +68,15 @@ func (d *diContainer) UserRepository(ctx context.Context) repository.UserReposit
 	}
 
 	return d.userRepository
+}
+
+// OnboardingRepository возвращает репозиторий онбординга.
+func (d *diContainer) OnboardingRepository(ctx context.Context) repository.OnboardingRepository {
+	if d.onboardingRepository == nil {
+		d.onboardingRepository = onboardingRepository.NewRepository(d.PostgresPool(ctx))
+	}
+
+	return d.onboardingRepository
 }
 
 // PostgresPool возвращает connection pool для PostgreSQL

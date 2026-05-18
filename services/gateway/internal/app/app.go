@@ -107,6 +107,12 @@ func (a *App) initRouter(ctx context.Context) error {
 			auth.POST("/login", authHandler.Login)
 			auth.POST("/refresh", authHandler.RefreshToken)
 			auth.GET("/me", authMiddleware.Handle(), authHandler.GetMe)
+
+			// Guest mode (onboarding-spec.md §3.2):
+			// POST /auth/guest — bootstrap анонимного юзера (без auth).
+			// POST /auth/claim — конвертация в registered (требуется guest JWT).
+			auth.POST("/guest", authHandler.CreateGuestSession)
+			auth.POST("/claim", authMiddleware.Handle(), authHandler.ClaimGuest)
 		}
 
 		courses := v1.Group("/courses")
@@ -143,6 +149,15 @@ func (a *App) initRouter(ctx context.Context) error {
 		protected := v1.Group("")
 		protected.Use(authMiddleware.Handle())
 		{
+			// === Onboarding (см. docs/tasks/onboarding-spec.md §3.1) ===
+			onboardingHandler := handler.NewOnboardingHandler(a.diContainer.UserClient(ctx))
+			onboarding := protected.Group("/onboarding")
+			{
+				onboarding.GET("", onboardingHandler.GetOnboardingState)
+				onboarding.PATCH("", onboardingHandler.PatchOnboardingState)
+				onboarding.POST("/complete", onboardingHandler.CompleteOnboarding)
+			}
+
 			protected.POST("/courses/:id/enroll", courseHandler.EnrollCourse)
 
 			// Progress endpoints
@@ -179,6 +194,20 @@ func (a *App) initRouter(ctx context.Context) error {
 					leagues.GET("/mine", sh.GetMyLeague)
 					leagues.GET("/mine/leaderboard", sh.GetMyLeaderboard)
 					leagues.GET("/history", sh.GetHistory)
+				}
+
+				// === Phase 4.5: Friends ===
+				fh := handler.NewFriendsHandler(soc)
+				friends := protected.Group("/friends")
+				{
+					friends.GET("", fh.ListFriends)
+					friends.GET("/pending", fh.ListPending)
+					friends.POST("/request", fh.SendRequest)
+					friends.POST("/accept/:friendshipId", fh.Accept)
+					friends.POST("/reject/:friendshipId", fh.Reject)
+					friends.DELETE("/:friendId", fh.Remove)
+					friends.GET("/search", fh.Search)
+					friends.GET("/leaderboard", fh.Leaderboard)
 				}
 			}
 
@@ -235,6 +264,8 @@ func (a *App) initRouter(ctx context.Context) error {
 					ai.GET("/conversations/:id", ah.GetConversation)
 					ai.DELETE("/conversations/:id", ah.DeleteConversation)
 					ai.POST("/conversations/:id/messages", ah.SendMessage)
+					// Phase 5.27: SSE streaming для chat UX (typewriter эффект).
+					ai.POST("/conversations/:id/stream", ah.SendMessageStream)
 					ai.GET("/scenarios", ah.ListScenarios)
 
 					// Single-shot endpoints.
@@ -242,9 +273,17 @@ func (a *App) initRouter(ctx context.Context) error {
 					ai.POST("/writing/assess", ah.AssessWriting)
 					ai.POST("/pronunciation/check", ah.CheckPronunciation)
 					ai.POST("/tutor", ah.AskTutor)
+					// Phase 5.X: SSE streaming варианты single-shot эндпоинтов.
+					ai.POST("/tutor/stream", ah.AskTutorStream)
+					ai.POST("/explain/stream", ah.ExplainMistakeStream)
+					ai.POST("/writing/assess/stream", ah.AssessWritingStream)
 
 					// Quota.
 					ai.GET("/quota", ah.GetQuotaStatus)
+
+					// Feedback (Phase 5.X) — thumbs up/down на assistant-message'ах.
+					ai.POST("/messages/:id/feedback", ah.SubmitMessageFeedback)
+					ai.DELETE("/messages/:id/feedback", ah.DeleteMessageFeedback)
 				}
 			}
 
@@ -275,6 +314,10 @@ func (a *App) initRouter(ctx context.Context) error {
 		{
 			admin.GET("/me", adminHandler.GetCurrentUser)
 			admin.GET("/stats", adminStatsHandler.GetStats)
+
+			// Auth admin: ручной trigger cleanup'а гостей. Штатно работает
+			// суточный cron в auth-service.
+			admin.POST("/auth/cleanup-guests", authHandler.CleanupGuests)
 
 			// User management
 			users := admin.Group("/users")

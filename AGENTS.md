@@ -1,10 +1,11 @@
 # Backend (microservices-course/elearning)
 
-Микросервисный E-learning стек. Phase 0 + Phase 1 (gamification) +
-Phase 2 (новые форматы шагов) — done. Phase 3 backend full
-(SM-2 SRS + mistakes + practice session generator + skill decay +
-DailyDecay cron + course-service hook + gateway REST) — done.
-Phase 3 web frontend (`/practice/*`, `/profile/strength`) — done.
+Микросервисный E-learning стек. Phase 0 (guest mode + onboarding,
+Sprint 1) + Phase 1 (gamification) + Phase 2 (новые форматы шагов) —
+done. Phase 3 backend full (SM-2 SRS + mistakes + practice session
+generator + skill decay + DailyDecay cron + course-service hook +
+gateway REST) — done. Phase 3 web frontend (`/practice/*`,
+`/profile/strength`) — done.
 
 Phase 3 push notifications — done (backend):
   - notifications-service `:50062` (3 таблицы, gRPC API).
@@ -26,8 +27,8 @@ Phase 3 push notifications — done (backend):
 
 | Сервис | Порт gRPC | Schema | Назначение |
 |--------|-----------|--------|------------|
-| auth-service | 50051 | auth | JWT login/refresh |
-| user-service | 50052 | users | Profile (`date_of_birth`, `timezone`) |
+| auth-service | 50051 | auth | JWT login/refresh + Phase 0 guest mode (`is_guest`, `device_id`, claim, cleanup-cron) |
+| user-service | 50052 | users | Profile (`date_of_birth`, `timezone`) + Phase 0 onboarding (`proficiency_level`, `daily_goal_xp`, `motivation`, `signup_source`, `placement_score`, `onboarded_at`) |
 | course-service | 50053 | courses | Курсы / уроки / шаги / прогресс / vocabulary / tts_cache |
 | video-service | 50054 | videos | MinIO upload, manifests |
 | quiz-service | 50055 | quiz_service | Quizzes, attempts, answers |
@@ -67,6 +68,99 @@ for s in services/*/; do (cd "$s" && go build ./... && go test ./...); done
   proto↔model — в `internal/converter/`.
 - `repository.ErrNotFound` маппится в `codes.NotFound` на gRPC.
 - Generated proto: `shared/pkg/proto/<svc>/v1/`.
+
+## Phase 0 — Guest mode + Onboarding (Sprint 1)
+
+См. `docs/tasks/onboarding-spec.md`. Bootstrap-фаза учёта юзера: гость
+создаётся одним кликом (без email), проходит онбординг, потом —
+optional — клеймится в registered user без потери прогресса.
+
+### Schema
+
+- `auth.users` (миграция auth `00X_guest_mode.sql`):
+  - `is_guest BOOLEAN DEFAULT FALSE`,
+  - `device_id TEXT UNIQUE` (UUID v4 от клиента, idempotency),
+  - `email`/`password_hash`/`username` теперь nullable для гостей.
+- `users.profiles` (миграция user `002_onboarding_fields.sql`) — поверх
+  существующих `native_lang`, `target_lang`, `date_of_birth` добавлено:
+  `proficiency_level`, `daily_goal_xp`, `motivation TEXT[]`,
+  `signup_source`, `placement_score`, `onboarded_at TIMESTAMPTZ`.
+
+### auth-service (Sprint 1.4)
+
+- `service/auth/guest.go` — `CreateGuestSession` (idempotent на `device_id`),
+  `ClaimGuestAccount` (выставляет email/password/username, `is_guest=false`,
+  user_id сохраняется), `CleanupExpiredGuests`.
+- `service/auth/token.go` — `is_guest` claim в JWT (для `ValidateToken`).
+- `internal/cron/cron.go` — `Scheduler.GuestCleanup`:
+  раз в сутки в `GUEST_CLEANUP_DAILY_AT` (UTC HH:MM, default `03:00`)
+  удаляет гостей старше `GUEST_CLEANUP_CUTOFF_DAYS` (default 90).
+  Отключается через `GUEST_CLEANUP_ENABLED=false`.
+
+### user-service onboarding (Sprint 1.5)
+
+- Отдельный `service.OnboardingService` + `repository.OnboardingRepository`
+  поверх той же таблицы `profiles`. Слой и API-handlers: `internal/service/
+  onboarding/{service,get_state,patch_state,complete}.go`,
+  `internal/api/user/v1/{get,patch,complete}_onboarding_state.go`.
+- `PatchState` — partial-update + upsert (`INSERT ON CONFLICT (user_id) DO
+  UPDATE SET ... = COALESCE($N, profiles.X)`). Особый флаг
+  `motivation_set` чтобы отличить «не передавали» от «явно очистили».
+- Валидация: `proficiency_level ∈ {beginner,a1,a2,b1,b2,just_for_fun}`,
+  `daily_goal_xp ∈ {10,20,30,50}`, `placement_score ∈ [0..5]`,
+  `date_of_birth` — ISO `YYYY-MM-DD`. Невалид → `codes.InvalidArgument`.
+
+### gRPC RPCs
+
+```
+# auth.v1.AuthService
+CreateGuestSession   (device_id) → user_id, access_token, refresh_token, expires_at, created
+ClaimGuestAccount    (guest_user_id, email, password, username) → tokens (user_id preserved)
+CleanupExpiredGuests (cutoff_days) → deleted_count
+
+# user.v1.UserService
+GetOnboardingState   (user_id) → OnboardingState
+PatchOnboardingState (user_id, native_language?, target_language?,
+                      proficiency_level?, daily_goal_xp?, motivation,
+                      motivation_set, signup_source?, placement_score?,
+                      date_of_birth?) → OnboardingState
+CompleteOnboarding   (user_id) → OnboardingState (onboarded_at=NOW())
+```
+
+### Gateway routes (Sprint 1.6)
+
+```
+# Public
+POST   /api/v1/auth/guest                 { device_id }
+
+# Protected (JWT, может быть guest-токеном)
+POST   /api/v1/auth/claim                 { email, password, username }
+GET    /api/v1/onboarding
+PATCH  /api/v1/onboarding                 { native_language?, ... }
+POST   /api/v1/onboarding/complete
+
+# Admin (auth + admin)
+POST   /api/v1/admin/auth/cleanup-guests  { cutoff_days? }
+```
+
+### Failure mode / идемпотентность
+
+- `CreateGuestSession` идемпотентен: один и тот же `device_id` → один guest
+  user. Повторный вызов возвращает свежие токены и `created=false`.
+- `CompleteOnboarding` идемпотентен: повторный вызов не перетирает
+  `onboarded_at` (COALESCE).
+- `PatchOnboardingState` — partial-update, безопасно вызывать после
+  каждого шага онбординга.
+
+### Что НЕ сделано (next iterations)
+
+- Web UI `/onboarding/*` (eng_next2) и mobile equivalent.
+- Привязка соцсетей (`signup_source` пока чисто аналитика).
+- A/B-тест воронки онбординга.
+- JWT-middleware enforcement: жёстко ограничить `/auth/claim` только
+  guest-токенами (сейчас принимаем любой валидный JWT, что менее
+  строго, но безопасно — пытаться claim'ить registered user → ошибка
+  на стороне auth-service).
 
 ## Gamification — ключевые моменты
 
@@ -468,6 +562,7 @@ HTTP 429. Provider down → `codes.Unavailable` → HTTP 503.
 
 Перед коммитом:
 ```bash
+cd services/user-service && go test ./internal/service/onboarding/ # Phase 0 onboarding валидация
 cd services/gamification-service && go test ./internal/service/    # Gamification юнит-тесты
 cd services/step-validation-service && go test ./...               # Phase 2 валидаторы + Phase 3 hook
 cd services/srs-service && go test ./...                           # Phase 3 SM-2 + hash (20 тестов)
