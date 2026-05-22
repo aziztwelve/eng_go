@@ -7,7 +7,7 @@
 
 **Дата старта:** 2026-05-15
 **Дата последнего обновления:** 2026-05-15
-**Статус:** 🟢 **Backend full done (infra + social + gamification producer + gateway + promotion push hook). Тесты: service (23) + redis miniredis (12) + postgres testcontainers (19). Frontend web (`/leagues`, `/leagues/history`) — done. Mobile + Friends (Phase 4.5) — TODO.**
+**Статус:** 🟢 **Backend full done (infra + social + gamification producer + gateway + promotion push hook + Phase 4.5 Friends backend). Тесты: service (40+) + redis miniredis (12) + postgres testcontainers (26). Frontend web Leagues (`/leagues`, `/leagues/history`) + Friends (`/friends`, `/friends/leaderboard` + notifications toggle) — done. Mobile — TODO.**
 
 ---
 
@@ -121,9 +121,137 @@
 - [x] **4.38** Page `/leagues/history`: rows с League name + final_rank + cycle dates + gems + promo/demo badges + пагинация (PAGE_SIZE=20).
 - [x] **4.39** Nav: пункт «Лиги» / «Leagues» добавлен в `components/navbar.tsx` + `lib/i18n.tsx` (ru/en).
 
-### Mobile / Friends (отложено)
+### Mobile (отложено)
 - [ ] **4.40** Mobile (eng_mob): те же экраны + Lottie promotion celebration animation.
-- [ ] **4.41** Phase 4.5: Friends — friendships table, request/accept/reject, friend leaderboard.
+
+### Phase 4.5 — Friends (backend full done 2026-05-15)
+- [x] **4.41a** Миграция `000005_create_friendships.up.sql` — таблица `friendships`
+  с нормализованной парой `(user_id_1 < user_id_2)`, status check
+  (`pending`/`accepted`/`blocked`), unique pair, 3 индекса (по обеим сторонам +
+  partial по pending).
+- [x] **4.41b** `model/friendship.go` — `Friendship`, `FriendshipStatus`,
+  `NormalizePair`, `OtherSide`, `IsParticipant`, `ErrSelfFriendship`.
+- [x] **4.41c** `repository/postgres/friendships.go` — `FriendshipRepository`:
+  Get / GetByID / Create (с unique-violation → ErrAlreadyExists) / UpdateStatus /
+  Delete / ListByUser (с total) / ListAcceptedFriendIDs.
+- [x] **4.41d** `repository/postgres/util.go` — общий `isUniqueViolation` (по
+  образцу notifications-service).
+- [x] **4.41e** Friends leaderboard — on-the-fly через
+  `UserLeagueRepo.BatchGetByUserIDs` (вместо денормализованного
+  `leaderboard:friends:{user_id}` ZSET — поддержка N множеств per friend
+  слишком дорогая на каждом xp.gained event).
+- [x] **4.41f** `auth-service.SearchByUsername` — public RPC (proto + repo +
+  service + api). ILIKE prefix-search в `auth.users`. Min query length 2.
+- [x] **4.41g** `social-service/internal/client/auth/{client,grpc,noop}.go` —
+  client с SearchByUsername + BatchGetUsernames (N единичных GetUserInfo,
+  noop fallback).
+- [x] **4.41h** `service/friends.go` — 8 методов: SendFriendRequest (с
+  mutual auto-accept на встречный запрос + idempotent), AcceptFriendRequest /
+  RejectFriendRequest (только target), RemoveFriend, ListFriends,
+  ListPendingRequests (incoming/outgoing/all), SearchUsersByUsername (auth +
+  enrichment + текущий статус дружбы), GetFriendsLeaderboard (друзья + self,
+  sort DESC by weekly_xp).
+- [x] **4.41i** Push hooks: новый канал `friend_request` для friend_request +
+  friend_accepted событий. Миграция `notifications/000004_add_friend_request_channel`,
+  CHECK extension, новое поле `friend_request_enabled`, обновлены proto +
+  converter + repo + DefaultPreferences.
+- [x] **4.41j** `proto/social/v1/social.proto` — 8 новых RPCs +
+  `FriendshipStatus` enum + `Friendship`/`FriendInfo`/`LeaderboardFriendEntry`
+  messages.
+- [x] **4.41k** `internal/api/v1/friends.go` + `internal/converter/friends.go` —
+  gRPC API + конвертеры. mapFriendError маппит ErrFriendshipDisabled →
+  FailedPrecondition.
+- [x] **4.41l** `app.go` DI: client/auth + friendship repo + WithFriendship.
+  Config `AUTH_SERVICE_ADDR`. social.env.template + deploy/env/.env обновлены.
+- [x] **4.41m** Gateway: SocialClient расширен 8 friend-методами,
+  `handler/friends.go` (8 REST endpoints), регистрация в app.go под
+  `protected.Group("/friends")`:
+  - `GET /api/v1/friends`
+  - `GET /api/v1/friends/pending?direction=incoming|outgoing|all`
+  - `POST /api/v1/friends/request { user_id }`
+  - `POST /api/v1/friends/accept/:friendshipId`
+  - `POST /api/v1/friends/reject/:friendshipId`
+  - `DELETE /api/v1/friends/:friendId`
+  - `GET /api/v1/friends/search?q=&limit=`
+  - `GET /api/v1/friends/leaderboard?limit=`
+- [x] **4.41n** Tests:
+  - service-слой (in-memory моки FriendshipRepo + auth + users + notif): 14
+    тестов — Self/NewPair/Mutual/Idempotent/Accept/Reject/Remove/List/Search/
+    Leaderboard/Disabled.
+  - postgres testcontainers: 7 тестов на FriendshipRepository (Create+Get,
+    Duplicate, NotFound, UpdateStatus, Delete, ListByUser, ListAcceptedFriendIDs).
+- [x] **4.41o** `for s in services/*/; do go build ./... && go test ./...; done`
+  — все 12 сервисов зелёные.
+
+### Phase 4.5 Friends — Frontend web (eng_next2, done 2026-05-15)
+- [x] **4.42a** Types `src/types/api.ts`: `FriendshipStatus`, `FriendInfo`,
+  `Friendship`, `LeaderboardFriendEntry` + 8 request/response shapes
+  (`FriendsListResponse`, `PendingFriendsResponse`, `SendFriendRequestRequest`/`Response`,
+  `AcceptFriendRequestResponse`, `FriendSearchResponse`, `FriendsLeaderboardResponse`).
+  Также `friend_request_enabled` в `UserPreferences`/`UpdatePreferencesRequest`
+  + `ChannelFriendRequest` в `channelToShort`.
+- [x] **4.42b** API client `src/lib/social-api.ts` — 8 friends-эндпойнтов
+  (`listFriends`, `listPending`, `sendFriendRequest`, `acceptFriendRequest`,
+  `rejectFriendRequest`, `removeFriend`, `searchUsers`, `getFriendsLeaderboard`).
+- [x] **4.42c** Hooks `src/hooks/use-friends.ts` — 8 query/mutation хуков
+  с invalidation на пересекающихся ключах (mutations инвалидируют friends + pending +
+  leaderboard).
+- [x] **4.42d** Page `/friends` (`app/friends/page.tsx`) — Tabs (Friends list /
+  Pending / Search). Friends-tab: список accepted с avatar / username / weekly_xp +
+  кнопка Remove. Pending: incoming (Accept/Reject) + outgoing (Cancel). Search:
+  debounced input по username (≥2 chars) + Add-кнопка с current_status badge.
+  Компоненты — inline в page.tsx (не выносим в `components/friends/`, ~440 строк).
+- [x] **4.42e** Page `/friends/leaderboard` (`app/friends/leaderboard/page.tsx`) —
+  on-the-fly board (friends + self), Medal для top-3, self-row подсветка,
+  weekly_xp formatted.
+- [x] **4.42f** Navbar (`components/navbar.tsx`): пункт «Друзья» / «Friends»
+  (mobile menu + desktop) + i18n ключи (ru/en) в `lib/i18n.tsx`.
+- [x] **4.42g** Notifications page (`app/profile/notifications/page.tsx`):
+  ChannelToggle для `friend_request_enabled` + добавлен в form initial / isDirty.
+- [x] **4.42h** Verify: `tsc --noEmit` clean, `eslint` clean на новых файлах,
+  `next build` ✓ (маршруты `/friends`, `/friends/leaderboard` зарегистрированы
+  как static).
+
+### Phase 4.5 Friends — Frontend mobile (eng_mob, done 2026-05-16)
+- [x] **4.43a** Types `src/types/api.ts`: блок Phase 4 (League /
+  UserLeague / LeaderboardEntry / LeagueHistoryEntry + 4 response shapes)
+  и блок Phase 4.5 Friends (FriendInfo / Friendship /
+  FriendshipStatusProto+Short + `friendshipStatusToShort` /
+  LeaderboardFriendEntry / PendingDirection + 8 response shapes).
+- [x] **4.43b** API client `src/lib/api-client.ts`: `SocialApi`
+  (4 leagues методы) + `FriendsApi` (8 friends-эндпойнтов).
+- [x] **4.43c** Hooks `src/hooks/use-leagues.ts` (4 query) +
+  `src/hooks/use-friends.ts` (4 query + 4 mutation, общий
+  `invalidateQueries(['friends'])` на каждый success).
+- [x] **4.43d** `app/leagues/_layout.tsx` + `index.tsx` — Hero (Crown +
+  tier + cycle timer + my rank/XP) + Zone hints + Leaderboard top-30
+  (Medal top-3 + is_me highlight + zone-окраска рядов).
+- [x] **4.43e** `app/leagues/history.tsx` — pagination (PAGE_SIZE=20) +
+  promotion/demotion badges + gems-counter.
+- [x] **4.43f** Friends sub-routes (вместо inline tabs):
+  - `app/friends/index.tsx` — 3 action-карты (Search / Pending / LB) +
+    accepted-list с Remove (Alert.alert confirm).
+  - `app/friends/pending.tsx` — incoming/outgoing разделение.
+  - `app/friends/search.tsx` — debounce 250ms + status-aware action.
+  - `app/friends/leaderboard.tsx` — Medal top-3, self highlight.
+- [x] **4.43g** `components/ui/avatar.tsx` — переиспользуемый Avatar
+  (Image + initials fallback).
+- [x] **4.43h** `(tabs)/profile.tsx` — NavRow «🏆 Лиги» → /leagues,
+  «👥 Друзья» → /friends. Нижние 5 табов не трогали.
+- [x] **4.43i** Verification: `npx tsc --noEmit` clean,
+  `npm run lint` — новые файлы clean (pre-existing ошибки унаследованы).
+
+### Phase 4.5 — что НЕ сделано (next iteration)
+- [ ] Push deep-linking из канала `friend_request` в mobile.
+- [ ] Lottie promotion celebration overlay (требует ассет).
+- [x] ~~Home-tab banner / mini-card для текущей лиги~~ — done (2026-05-17,
+  web). `eng_next2/src/components/leagues/LeagueBanner.tsx` + i18n
+  `leagues.{openCta,myRank,weeklyXP,cycleEnds,cycleEnding,zonePromotion,zoneDemotion}`
+  (ru + en). Подключён в `app/page.tsx` (после Daily lesson) и
+  `app/dashboard/page.tsx` (после header). Бесшумно скрывается без
+  auth / при недоступном social-service. Подсвечивает promotion/demotion
+  zone через бейджи поверх лиговой карточки. Использует существующие
+  хуки `useMyLeague` / `useMyLeaderboard`.
 
 ---
 
@@ -213,7 +341,9 @@ event_id + processed_events table.
 
 ## ❌ Открытые TODO
 
-- [ ] **Phase 4.5: Friends** — friendships table, request/accept/reject, friend leaderboard.
+- [x] ~~**Phase 4.5: Friends** — friendships table, request/accept/reject, friend leaderboard.~~ Backend full done.
+- [x] ~~**Phase 4.5 Frontend web** — `/friends`, `/friends/leaderboard`, notifications toggle.~~ Done 2026-05-15.
+- [ ] **Phase 4.5 Frontend mobile** — eng_mob friends-экраны.
 - [ ] **Diamond Tournament** — ежемесячный турнир для топ Diamond. Phase 4.6.
 - [ ] **Promotion celebration UI** — Lottie animation. Frontend.
 - [ ] **Push notifications** "You are in danger zone!" / "You promoted to X!". Mobile.

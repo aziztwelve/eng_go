@@ -17,6 +17,7 @@ import (
 	socialv1 "github.com/elearning/shared/pkg/proto/social/v1"
 
 	apiv1 "github.com/elearning/social-service/internal/api/v1"
+	authcl "github.com/elearning/social-service/internal/client/auth"
 	"github.com/elearning/social-service/internal/client/notifications"
 	"github.com/elearning/social-service/internal/client/users"
 	"github.com/elearning/social-service/internal/config"
@@ -105,6 +106,23 @@ func New(ctx context.Context) (*App, error) {
 		logger.Info(ctx, "USER_SERVICE_ADDR empty — leaderboard enrichment disabled")
 	}
 
+	// Auth-service client (с noop fallback) — для friend-search (Phase 4.5).
+	var authClient authcl.Client = authcl.NewNoopClient()
+	if cfg.AuthServiceAddr != "" {
+		ac, aerr := authcl.NewGRPCClient(cfg.AuthServiceAddr)
+		if aerr != nil {
+			logger.Warn(ctx, "failed to connect to auth-service, using noop",
+				zap.String("addr", cfg.AuthServiceAddr), zap.Error(aerr))
+		} else {
+			authClient = ac
+			logger.Info(ctx, "✅ Connected to auth-service",
+				zap.String("addr", cfg.AuthServiceAddr))
+			closer.Add(func(_ context.Context) error { return authClient.Close() })
+		}
+	} else {
+		logger.Info(ctx, "AUTH_SERVICE_ADDR empty — friend search/enrichment disabled")
+	}
+
 	// Notifications-service client (с noop fallback) — для promotion-пушей.
 	var notifClient notifications.Client = notifications.NewNoop()
 	if cfg.NotificationsServiceAddr != "" {
@@ -128,10 +146,12 @@ func New(ctx context.Context) (*App, error) {
 	userLg := postgresrepo.NewUserLeagueRepository(pool)
 	history := postgresrepo.NewLeagueHistoryRepository(pool)
 	board := redisrepo.NewLeaderboardRepository(redisClient)
+	friends := postgresrepo.NewFriendshipRepository(pool)
 
 	// Service
 	svc := service.New(leagues, cohorts, userLg, history, board, usersClient).
-		WithNotifications(notifClient)
+		WithNotifications(notifClient).
+		WithFriendship(friends, authClient)
 
 	// gRPC API
 	api := apiv1.NewAPI(svc)

@@ -5,7 +5,8 @@
 > См. [phase-2-step-formats.md](./phase-2-step-formats.md) и [PHASE_1_PROGRESS.md](./PHASE_1_PROGRESS.md).
 
 **Дата старта:** 2026-05-13
-**Статус:** 🟡 In progress
+**Дата завершения:** 2026-05-13
+**Статус:** ✅ Done (backend + web + mobile + admin)
 
 ---
 
@@ -576,11 +577,80 @@ ok  step-validation-service/internal/service/validators 0.006s
 #### Verification
 - ✅ `npx tsc --noEmit` в `eng_mob` — чисто.
 
-#### TODO Phase 2.5 (mobile-specific)
-- DnD через `react-native-gesture-handler` для translate и tap_words
-  (PanGestureHandler + Reanimated SharedValues для дрэгабельных слов
-  + drop-zone detection через runOnJS). Текущий tap-only UX —
-  валидное MVP, идентично web.
+#### Phase 2.5 — DnD word bank (2026-05-15)
+
+> Апгрейд translate / tap_words на полноценный drag-and-drop поверх
+> tap-only UX. Тап остаётся primary способом ввода (accessibility +
+> быстрый выбор), drag — для интуитивного reorder/перемещения.
+
+##### Что сделано
+- ✅ `app/_layout.tsx` — обёрнут в `<GestureHandlerRootView>` (был
+  пропущен — обязателен для react-native-gesture-handler v2).
+- ✅ `components/lesson/draggable-word-bank.tsx` — общий DnD-движок,
+  переиспользуется translate и tap_words (UX идентичный):
+  - `Gesture.Race(Tap, Pan)` с `Pan.minDistance(8)` — быстрый тап
+    всегда работает (toggle), длинный жест активирует drag.
+  - Hit-test зон через `measure(useAnimatedRef)` в worklet'е
+    `onEnd`. Сравниваем `e.absoluteX/Y` с `pageX/pageY/width/height`
+    AnimatedRef'ов на bank/answer контейнеры.
+  - Insert-at-index в answer area считаем по `onLayout`-картам
+    детей (`Map<bankIndex, Rect>`) — reading order по строкам (Y),
+    затем по центру X. Reorder внутри answer + drop из банка по
+    позиции — оба используют один `computeInsertIndex`.
+  - Во время drag меняем только SharedValues (translate / scale /
+    elevation / zIndex) — React-state не трогается, остальные слова
+    не re-flow'ятся, drop-target стабильный.
+  - На release: `withSpring(0)` translate-снап в новую layout-позицию
+    (если drop валидный) или обратно (если invalid zone). Zero
+    teleport.
+- ✅ `translate-step.tsx` / `tap-words-step.tsx` — заменили inline
+  `Pressable`-bank + answer area на `<DraggableWordBank>`. Hint-text
+  обновлён («Нажми **или перетащи**»).
+
+##### UX-матрица
+| От → К | Tap | Drag |
+|--------|-----|------|
+| bank → answer | append | insert at drop position |
+| answer → bank | remove | remove |
+| answer → answer | — | reorder by drop position |
+| bank → bank | — | no-op |
+
+##### Verification
+- ✅ `npx tsc --noEmit` в `eng_mob` — чисто.
+
+#### Phase 2.5 — Story markdown rendering (2026-05-15)
+
+> Замена regex-based `stripMarkdown` на полноценный markdown-рендер
+> в story-step. Web уже использует `react-markdown` + tailwind `prose`,
+> теперь mobile тоже рендерит markdown «по-настоящему».
+
+##### Что сделано
+- ✅ `npx expo install react-native-markdown-display` — пакет
+  `react-native-markdown-display@7.0.2` (CommonMark + автолинки).
+- ✅ `components/lesson/story-step.tsx`:
+  - Удалён хелпер `stripMarkdown(s)` (regex-стрипинг bold/italic/code/link).
+  - Импортирован `Markdown` из `react-native-markdown-display`.
+  - Объявлены два `StyleSheet`-варианта:
+    - `mdMain` — для `scene.text` (18px, weight 900, `#ffffff`,
+      heading1-3 / strong / em / link / code_inline / code_block /
+      bullet_list / ordered_list).
+    - `mdTranslation` — для `scene.translation` (14px, weight 500,
+      `#b3b3b3`).
+  - Цвета взяты из `tailwind.config.js` (foreground `#ffffff`,
+    muted-foreground `#b3b3b3`, primary `#58cc02`).
+  - `<Text>{stripMarkdown(...)}</Text>` заменён на
+    `<Markdown style={...}>{...}</Markdown>` в обоих местах.
+
+##### Поддерживаемое markdown
+- **Bold** (`**text**` / `__text__`)
+- *Italic* (`*text*` / `_text_`)
+- `inline code` + code blocks
+- `[link text](url)` (автоматически кликабельные через `openUrl`)
+- Заголовки `# H1` … `### H3` (только в main варианте)
+- Маркированные / нумерованные списки
+
+##### Verification
+- ✅ `npx tsc --noEmit` в `eng_mob` — чисто.
 
 ---
 
@@ -614,10 +684,15 @@ ok  step-validation-service/internal/service/validators 0.006s
   (`eng_next2`, `eng_mob`) собираются без ошибок.
 
 **Открытые TODO для Phase 2.5/3**:
-- Mobile DnD через react-native-gesture-handler.
-- Реальная интеграция TTS (Google Cloud / ElevenLabs) — сейчас stub.
-- Mobile markdown-рендер в story (сейчас — `stripMarkdown`).
-- Phase 3: адаптивное обучение (использовать `step_attempts` истории).
+- ~~Mobile DnD через react-native-gesture-handler.~~ — done (2026-05-15),
+  см. секцию «Phase 2.5 — DnD word bank» выше.
+- Реальная интеграция TTS (Google Cloud / ElevenLabs) — сейчас stub
+  (отложено в Phase 5).
+- ~~Mobile markdown-рендер в story~~ — done (2026-05-15), используется
+  `react-native-markdown-display`. См. секцию «Phase 2.5 — Story
+  markdown rendering».
+- ~~Phase 3: адаптивное обучение~~ — done (SRS + mistakes + practice +
+  skill decay). См. AGENTS.md.
 
 ---
 

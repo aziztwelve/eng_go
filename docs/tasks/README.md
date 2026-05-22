@@ -104,6 +104,12 @@ gamification.AddXP() ← вызывается одинаково
 | 5 | [AI интеграция](./phase-5-ai-integration.md) | 2-3 нед | Высокая | Phase 2 | 📝 Planning |
 | 6 | [Монетизация](./phase-6-monetization.md) | 2 нед | Средняя | Phase 1, 4 | 📝 Planning |
 
+### Cross-cutting specs:
+
+| Spec | Срок | Зависимости | Статус |
+|------|------|-------------|--------|
+| [Onboarding (Duolingo-style + Oki-localized)](./onboarding-spec.md) | 3 нед | Phase 1, 2, 3 | 📝 Planning |
+
 **Общий срок:** ~3 месяца до полного MVP
 
 > **Phase 0** — небольшая, но фундаментальная: разделение контента и геймификации, чтобы остальные фазы строились на правильной архитектуре.

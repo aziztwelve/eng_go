@@ -10,6 +10,7 @@ import (
 	"google.golang.org/protobuf/types/known/structpb"
 
 	"github.com/elearning/ai-service/internal/converter"
+	"github.com/elearning/ai-service/internal/model"
 	"github.com/elearning/ai-service/internal/service"
 	aiv1 "github.com/elearning/shared/pkg/proto/ai/v1"
 )
@@ -61,6 +62,76 @@ func (a *api) SendMessage(ctx context.Context, req *aiv1.SendMessageRequest) (*a
 	}, nil
 }
 
+// SendMessageStream — server-streaming RPC (Phase 5.27).
+//
+// Маппинг service.StreamEvent → aiv1.SendMessageStreamChunk:
+//   - UserMessage      → chunk.UserMessage  (первый)
+//   - Delta            → chunk.Delta        (середина)
+//   - AssistantMessage → chunk.Done         (последний)
+//   - Err              → chunk.ErrorMessage (terminal failure)
+//
+// Synchronous setup-ошибки (validation/quota/forbidden) возвращаются
+// как обычные gRPC-ошибки до открытия стрима. Mid-stream ошибки —
+// финальным chunk'ом ErrorMessage без статус-кода (stream закрывается
+// с OK, ошибка инкапсулируется в payload'е, чтобы клиент мог
+// дифференцировать «сетевая ошибка» от «ошибка провайдера»).
+func (a *api) SendMessageStream(req *aiv1.SendMessageRequest, stream aiv1.AIService_SendMessageStreamServer) error {
+	ctx := stream.Context()
+	events, err := a.svc.SendMessageStream(ctx, service.SendMessageInput{
+		UserID:         req.GetUserId(),
+		ConversationID: req.GetConversationId(),
+		Content:        req.GetContent(),
+		WantAudio:      req.GetWantAudio(),
+	})
+	if err != nil {
+		return mapServiceError(err)
+	}
+
+	var (
+		userMsgProto *aiv1.Message
+	)
+	for ev := range events {
+		switch {
+		case ev.Err != nil:
+			if sendErr := stream.Send(&aiv1.SendMessageStreamChunk{
+				Kind: &aiv1.SendMessageStreamChunk_ErrorMessage{ErrorMessage: ev.Err.Error()},
+			}); sendErr != nil {
+				return sendErr
+			}
+			// Не возвращаем ошибку: stream закрывается OK, error_message
+			// внутри payload'а — клиент может его прочитать.
+			return nil
+
+		case ev.UserMessage != nil:
+			userMsgProto = converter.ToMessageProto(ev.UserMessage)
+			if err := stream.Send(&aiv1.SendMessageStreamChunk{
+				Kind: &aiv1.SendMessageStreamChunk_UserMessage{UserMessage: userMsgProto},
+			}); err != nil {
+				return err
+			}
+
+		case ev.AssistantMessage != nil:
+			done := &aiv1.SendMessageResponse{
+				UserMessage:      userMsgProto,
+				AssistantMessage: converter.ToMessageProto(ev.AssistantMessage),
+			}
+			if err := stream.Send(&aiv1.SendMessageStreamChunk{
+				Kind: &aiv1.SendMessageStreamChunk_Done{Done: done},
+			}); err != nil {
+				return err
+			}
+
+		case ev.Delta != "":
+			if err := stream.Send(&aiv1.SendMessageStreamChunk{
+				Kind: &aiv1.SendMessageStreamChunk_Delta{Delta: ev.Delta},
+			}); err != nil {
+				return err
+			}
+		}
+	}
+	return nil
+}
+
 func (a *api) ListConversations(ctx context.Context, req *aiv1.ListConversationsRequest) (*aiv1.ListConversationsResponse, error) {
 	convs, total, err := a.svc.ListConversations(ctx, req.GetUserId(), int(req.GetLimit()), int(req.GetOffset()))
 	if err != nil {
@@ -78,11 +149,26 @@ func (a *api) GetConversation(ctx context.Context, req *aiv1.GetConversationRequ
 	if err != nil {
 		return nil, mapServiceError(err)
 	}
+
+	// Pre-загрузка feedback'ов для assistant-сообщений (Phase 5.X).
+	// На read-flow non-fatal: если feedback storage упал, рендерим без оценок.
+	assistantIDs := make([]string, 0, len(msgs))
+	for _, m := range msgs {
+		if m.Role == "assistant" {
+			assistantIDs = append(assistantIDs, m.ID)
+		}
+	}
+	feedbacks, _ := a.svc.ListFeedbackForMessages(ctx, req.GetUserId(), assistantIDs)
+
 	out := &aiv1.GetConversationResponse{
 		Conversation: converter.ToConversationProto(conv),
 	}
 	for _, m := range msgs {
-		out.Messages = append(out.Messages, converter.ToMessageProto(m))
+		mp := converter.ToMessageProto(m)
+		if fb, ok := feedbacks[m.ID]; ok {
+			mp.UserFeedback = converter.ToFeedbackProto(fb)
+		}
+		out.Messages = append(out.Messages, mp)
 	}
 	return out, nil
 }
@@ -126,6 +212,56 @@ func (a *api) ExplainMistake(ctx context.Context, req *aiv1.ExplainMistakeReques
 	}, nil
 }
 
+// ExplainMistakeStream — server-streaming RPC (Phase 5.X). См. proto-doc.
+func (a *api) ExplainMistakeStream(req *aiv1.ExplainMistakeRequest, stream aiv1.AIService_ExplainMistakeStreamServer) error {
+	ctx := stream.Context()
+	events, err := a.svc.ExplainMistakeStream(ctx, service.ExplainInput{
+		UserID:          req.GetUserId(),
+		StepID:          req.GetStepId(),
+		Question:        req.GetQuestion(),
+		IncorrectAnswer: req.GetIncorrectAnswer(),
+		CorrectAnswer:   req.GetCorrectAnswer(),
+		TargetLanguage:  req.GetTargetLanguage(),
+		NativeLanguage:  req.GetNativeLanguage(),
+	})
+	if err != nil {
+		return mapServiceError(err)
+	}
+
+	for ev := range events {
+		switch {
+		case ev.Err != nil:
+			if sendErr := stream.Send(&aiv1.ExplainMistakeStreamChunk{
+				Kind: &aiv1.ExplainMistakeStreamChunk_ErrorMessage{ErrorMessage: ev.Err.Error()},
+			}); sendErr != nil {
+				return sendErr
+			}
+			for range events {
+			}
+			return nil
+
+		case ev.Done != nil:
+			done := &aiv1.ExplainMistakeResponse{
+				Explanation: ev.Done.Explanation,
+				Cached:      ev.Done.Cached,
+			}
+			if err := stream.Send(&aiv1.ExplainMistakeStreamChunk{
+				Kind: &aiv1.ExplainMistakeStreamChunk_Done{Done: done},
+			}); err != nil {
+				return err
+			}
+
+		case ev.Delta != "":
+			if err := stream.Send(&aiv1.ExplainMistakeStreamChunk{
+				Kind: &aiv1.ExplainMistakeStreamChunk_Delta{Delta: ev.Delta},
+			}); err != nil {
+				return err
+			}
+		}
+	}
+	return nil
+}
+
 // =====================================================================
 // Writing
 // =====================================================================
@@ -141,19 +277,68 @@ func (a *api) AssessWriting(ctx context.Context, req *aiv1.AssessWritingRequest)
 	if err != nil {
 		return nil, mapServiceError(err)
 	}
-	out := &aiv1.AssessWritingResponse{
-		AssessmentId:   assessment.ID,
-		OverallScore:   assessment.OverallScore,
-		GrammarScore:   assessment.GrammarScore,
-		VocabularyScore: assessment.VocabScore,
-		CoherenceScore: assessment.CoherenceScore,
-		StyleScore:     assessment.StyleScore,
-		CorrectedText:  assessment.CorrectedText,
+	return assessmentToProto(assessment), nil
+}
+
+// AssessWritingStream — server-streaming RPC (Phase 5.X). См. proto-doc.
+func (a *api) AssessWritingStream(req *aiv1.AssessWritingRequest, stream aiv1.AIService_AssessWritingStreamServer) error {
+	ctx := stream.Context()
+	events, err := a.svc.AssessWritingStream(ctx, service.AssessWritingInput{
+		UserID:         req.GetUserId(),
+		Prompt:         req.GetPrompt(),
+		UserText:       req.GetUserText(),
+		TargetLanguage: req.GetTargetLanguage(),
+		UserLevel:      req.GetUserLevel(),
+	})
+	if err != nil {
+		return mapServiceError(err)
 	}
-	for _, f := range assessment.Feedback {
+
+	for ev := range events {
+		switch {
+		case ev.Err != nil:
+			if sendErr := stream.Send(&aiv1.AssessWritingStreamChunk{
+				Kind: &aiv1.AssessWritingStreamChunk_ErrorMessage{ErrorMessage: ev.Err.Error()},
+			}); sendErr != nil {
+				return sendErr
+			}
+			for range events {
+			}
+			return nil
+
+		case ev.Done != nil:
+			if err := stream.Send(&aiv1.AssessWritingStreamChunk{
+				Kind: &aiv1.AssessWritingStreamChunk_Done{Done: assessmentToProto(ev.Done)},
+			}); err != nil {
+				return err
+			}
+
+		case ev.Delta != "":
+			if err := stream.Send(&aiv1.AssessWritingStreamChunk{
+				Kind: &aiv1.AssessWritingStreamChunk_Delta{Delta: ev.Delta},
+			}); err != nil {
+				return err
+			}
+		}
+	}
+	return nil
+}
+
+// assessmentToProto — общий конвертер для AssessWriting/Stream.
+func assessmentToProto(a *model.WritingAssessment) *aiv1.AssessWritingResponse {
+	out := &aiv1.AssessWritingResponse{
+		AssessmentId:    a.ID,
+		OverallScore:    a.OverallScore,
+		GrammarScore:    a.GrammarScore,
+		VocabularyScore: a.VocabScore,
+		CoherenceScore:  a.CoherenceScore,
+		StyleScore:      a.StyleScore,
+		CorrectedText:   a.CorrectedText,
+	}
+	for _, f := range a.Feedback {
 		out.Feedback = append(out.Feedback, converter.ToWritingFeedbackProto(f))
 	}
-	return out, nil
+	return out
 }
 
 // =====================================================================
@@ -206,6 +391,63 @@ func (a *api) AskTutor(ctx context.Context, req *aiv1.AskTutorRequest) (*aiv1.As
 	}, nil
 }
 
+// AskTutorStream — server-streaming RPC (Phase 5.X).
+//
+// Маппинг service.TutorStreamEvent → aiv1.AskTutorStreamChunk:
+//   - Delta → chunk.Delta
+//   - Done  → chunk.Done   (последний)
+//   - Err   → chunk.ErrorMessage  (последний, без done)
+//
+// Контекст cancel'ом из stream.Context() прерывает фоновую горутину
+// сервиса (через cancel в SendMessageStream-стиле).
+func (a *api) AskTutorStream(req *aiv1.AskTutorRequest, stream aiv1.AIService_AskTutorStreamServer) error {
+	ctx := stream.Context()
+	events, err := a.svc.AskTutorStream(ctx, service.AskTutorInput{
+		UserID:         req.GetUserId(),
+		Question:       req.GetQuestion(),
+		TargetLanguage: req.GetTargetLanguage(),
+		NativeLanguage: req.GetNativeLanguage(),
+	})
+	if err != nil {
+		return mapServiceError(err)
+	}
+
+	for ev := range events {
+		switch {
+		case ev.Err != nil:
+			if sendErr := stream.Send(&aiv1.AskTutorStreamChunk{
+				Kind: &aiv1.AskTutorStreamChunk_ErrorMessage{ErrorMessage: ev.Err.Error()},
+			}); sendErr != nil {
+				return sendErr
+			}
+			// drain остатка чтобы горутина service'а не залипла на send'е
+			for range events {
+			}
+			return nil
+
+		case ev.Done != nil:
+			done := &aiv1.AskTutorResponse{
+				Answer:     ev.Done.Answer,
+				TokensUsed: ev.Done.TokensUsed,
+				CostUsd:    ev.Done.CostUSD,
+			}
+			if err := stream.Send(&aiv1.AskTutorStreamChunk{
+				Kind: &aiv1.AskTutorStreamChunk_Done{Done: done},
+			}); err != nil {
+				return err
+			}
+
+		case ev.Delta != "":
+			if err := stream.Send(&aiv1.AskTutorStreamChunk{
+				Kind: &aiv1.AskTutorStreamChunk_Delta{Delta: ev.Delta},
+			}); err != nil {
+				return err
+			}
+		}
+	}
+	return nil
+}
+
 // =====================================================================
 // Content gen (admin)
 // =====================================================================
@@ -245,6 +487,39 @@ func (a *api) GetQuotaStatus(ctx context.Context, req *aiv1.GetQuotaStatusReques
 }
 
 // =====================================================================
+// Feedback (Phase 5.X)
+// =====================================================================
+
+func (a *api) SubmitMessageFeedback(ctx context.Context, req *aiv1.SubmitMessageFeedbackRequest) (*aiv1.SubmitMessageFeedbackResponse, error) {
+	fb, err := a.svc.SubmitFeedback(ctx, service.FeedbackInput{
+		UserID:    req.GetUserId(),
+		MessageID: req.GetMessageId(),
+		Rating:    feedbackRatingFromInt(req.GetRating()),
+		Comment:   req.GetComment(),
+	})
+	if err != nil {
+		return nil, mapServiceError(err)
+	}
+	return &aiv1.SubmitMessageFeedbackResponse{
+		Feedback: converter.ToFeedbackProto(fb),
+	}, nil
+}
+
+func (a *api) DeleteMessageFeedback(ctx context.Context, req *aiv1.DeleteMessageFeedbackRequest) (*aiv1.DeleteMessageFeedbackResponse, error) {
+	if err := a.svc.DeleteFeedback(ctx, req.GetUserId(), req.GetMessageId()); err != nil {
+		return nil, mapServiceError(err)
+	}
+	return &aiv1.DeleteMessageFeedbackResponse{}, nil
+}
+
+// feedbackRatingFromInt — proto int32 → model.FeedbackRating. Любое
+// значение, не равное ±1, передаётся как-is — service layer вернёт
+// InvalidArgument через IsValid().
+func feedbackRatingFromInt(v int32) model.FeedbackRating {
+	return model.FeedbackRating(v)
+}
+
+// =====================================================================
 // Error mapping
 // =====================================================================
 
@@ -262,6 +537,8 @@ func mapServiceError(err error) error {
 		return status.Error(codes.Unavailable, err.Error())
 	case errors.Is(err, service.ErrScenarioNotFound):
 		return status.Error(codes.NotFound, err.Error())
+	case errors.Is(err, service.ErrContentFlagged):
+		return status.Error(codes.FailedPrecondition, err.Error())
 	default:
 		return status.Errorf(codes.Internal, "%v", err)
 	}

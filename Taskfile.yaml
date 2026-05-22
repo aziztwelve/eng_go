@@ -685,6 +685,27 @@ tasks:
         echo "🌱 Заполнение данных для Course Service..."
         ./bin/seed.sh course
 
+  seed-mvp:
+    desc: "Залить MVP-курс English A1 (4 модуля × 5 уроков × 5 шагов + vocab)"
+    vars:
+      DB_HOST: '{{.DB_HOST | default "localhost"}}'
+      DB_PORT: '{{.DB_PORT | default "5432"}}'
+      DB_NAME: '{{.DB_NAME | default "elearning"}}'
+      DB_USER: '{{.DB_USER | default "admin"}}'
+      DB_PASSWORD: '{{.DB_PASSWORD | default "change_me_in_production"}}'
+      MVP_SQL: 'services/course-service/seeds/007_english_a1_mvp.sql'
+    cmds:
+      - |
+        echo "🌱 Регенерируем {{.MVP_SQL}}..."
+        python3 scripts/gen_seed_mvp.py > {{.MVP_SQL}}
+        echo "🚀 Накатываем MVP seed в БД {{.DB_NAME}}@{{.DB_HOST}}:{{.DB_PORT}}..."
+        PGPASSWORD="{{.DB_PASSWORD}}" psql \
+          -h "{{.DB_HOST}}" -p "{{.DB_PORT}}" \
+          -U "{{.DB_USER}}" -d "{{.DB_NAME}}" \
+          -v ON_ERROR_STOP=1 \
+          -f {{.MVP_SQL}}
+        echo "✅ MVP seed готов: 1 course / 4 modules / 20 lessons / 100 steps / vocab."
+
   # === Git Commands ===
   
   git:status:

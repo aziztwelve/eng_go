@@ -133,6 +133,7 @@ message UserPreferences {
   bool streak_risk_enabled       = 3;
   bool daily_goal_enabled        = 4;
   bool achievement_enabled       = 5;
+  bool friend_request_enabled    = 10;
 
   // Quiet hours — окно тишины (например 22:00..08:00 локального TZ).
   // Если start == end — окно отключено. Формат: 0..23.

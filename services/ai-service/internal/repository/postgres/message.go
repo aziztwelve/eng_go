@@ -3,12 +3,14 @@ package postgres
 import (
 	"context"
 	"database/sql"
+	"fmt"
 	"time"
 
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
 
+	"github.com/elearning/ai-service/internal/cryptobox"
 	"github.com/elearning/ai-service/internal/model"
 	"github.com/elearning/ai-service/internal/repository"
 )
@@ -18,31 +20,43 @@ const messageCols = `id, conversation_id, role, content, audio_url,
 
 type messageRepo struct {
 	pool *pgxpool.Pool
+	box  *cryptobox.Box // optional encryption-at-rest для content/translation
 }
 
-// NewMessageRepository — конструктор.
-func NewMessageRepository(pool *pgxpool.Pool) repository.MessageRepository {
-	return &messageRepo{pool: pool}
+// NewMessageRepository — конструктор. box может быть nil → no-op
+// (plaintext storage, backward-compat со старыми деплойями).
+func NewMessageRepository(pool *pgxpool.Pool, box *cryptobox.Box) repository.MessageRepository {
+	return &messageRepo{pool: pool, box: box}
 }
 
-func scanMessage(scan func(...any) error) (*model.Message, error) {
+func (r *messageRepo) scanMessage(scan func(...any) error) (*model.Message, error) {
 	m := &model.Message{}
 	var audioURL sql.NullString
 	var translation sql.NullString
 	var role string
 	var corrections []byte
+	var content string
 	if err := scan(
-		&m.ID, &m.ConversationID, &role, &m.Content, &audioURL,
+		&m.ID, &m.ConversationID, &role, &content, &audioURL,
 		&corrections, &translation, &m.TokensUsed, &m.CostUSD, &m.CreatedAt,
 	); err != nil {
 		return nil, err
 	}
 	m.Role = model.MessageRole(role)
+	plain, err := r.box.Decrypt(content)
+	if err != nil {
+		return nil, fmt.Errorf("decrypt content: %w", err)
+	}
+	m.Content = plain
 	if audioURL.Valid {
 		m.AudioURL = audioURL.String
 	}
 	if translation.Valid {
-		m.Translation = translation.String
+		plainT, err := r.box.Decrypt(translation.String)
+		if err != nil {
+			return nil, fmt.Errorf("decrypt translation: %w", err)
+		}
+		m.Translation = plainT
 	}
 	parsed, err := model.CorrectionsFromJSON(corrections)
 	if err != nil {
@@ -78,6 +92,22 @@ func (r *messageRepo) Create(ctx context.Context, m *model.Message) error {
 	return err
 }
 
+func (r *messageRepo) GetByID(ctx context.Context, id string) (*model.Message, error) {
+	row := r.pool.QueryRow(ctx, `
+		SELECT `+messageCols+`
+		FROM ai_messages
+		WHERE id = $1
+	`, id)
+	m, err := r.scanMessage(row.Scan)
+	if err != nil {
+		if err == pgx.ErrNoRows {
+			return nil, repository.ErrNotFound
+		}
+		return nil, err
+	}
+	return m, nil
+}
+
 func (r *messageRepo) ListByConversation(ctx context.Context, conversationID string) ([]*model.Message, error) {
 	rows, err := r.pool.Query(ctx, `
 		SELECT `+messageCols+`
@@ -89,7 +119,7 @@ func (r *messageRepo) ListByConversation(ctx context.Context, conversationID str
 		return nil, err
 	}
 	defer rows.Close()
-	return scanMessages(rows)
+	return r.scanMessages(rows)
 }
 
 func (r *messageRepo) GetLastN(ctx context.Context, conversationID string, n int) ([]*model.Message, error) {
@@ -107,7 +137,7 @@ func (r *messageRepo) GetLastN(ctx context.Context, conversationID string, n int
 		return nil, err
 	}
 	defer rows.Close()
-	out, err := scanMessages(rows)
+	out, err := r.scanMessages(rows)
 	if err != nil {
 		return nil, err
 	}
@@ -119,10 +149,10 @@ func (r *messageRepo) GetLastN(ctx context.Context, conversationID string, n int
 	return out, nil
 }
 
-func scanMessages(rows pgx.Rows) ([]*model.Message, error) {
+func (r *messageRepo) scanMessages(rows pgx.Rows) ([]*model.Message, error) {
 	var out []*model.Message
 	for rows.Next() {
-		m, err := scanMessage(rows.Scan)
+		m, err := r.scanMessage(rows.Scan)
 		if err != nil {
 			return nil, err
 		}

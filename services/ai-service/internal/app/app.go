@@ -5,14 +5,19 @@ import (
 	"context"
 	"fmt"
 	"net"
+	"strings"
+	"time"
 
 	"github.com/jackc/pgx/v5/pgxpool"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
 
+	"github.com/elearning/ai-service/internal/abtest"
 	apiv1 "github.com/elearning/ai-service/internal/api/v1"
 	userclient "github.com/elearning/ai-service/internal/client/user"
 	"github.com/elearning/ai-service/internal/config"
+	aicron "github.com/elearning/ai-service/internal/cron"
+	"github.com/elearning/ai-service/internal/cryptobox"
 	"github.com/elearning/ai-service/internal/providers"
 	postgresrepo "github.com/elearning/ai-service/internal/repository/postgres"
 	"github.com/elearning/ai-service/internal/service"
@@ -27,6 +32,7 @@ type App struct {
 	cfg        *config.Config
 	grpcServer *grpc.Server
 	pool       *pgxpool.Pool
+	cron       *aicron.Scheduler
 }
 
 // New — собирает все слои.
@@ -62,13 +68,22 @@ func New(ctx context.Context) (*App, error) {
 		return nil
 	})
 
+	// Encryption-at-rest box (no-op если AI_ENCRYPTION_KEY пуст).
+	box, err := cryptobox.New(cfg.EncryptionKey)
+	if err != nil {
+		return nil, fmt.Errorf("failed to init cryptobox: %w", err)
+	}
+	logger.Info(ctx, "✅ Cryptobox initialized", zap.Bool("encryption_enabled", box.Enabled()))
+
 	// Repositories.
 	convsRepo := postgresrepo.NewConversationRepository(pool)
-	msgsRepo := postgresrepo.NewMessageRepository(pool)
+	msgsRepo := postgresrepo.NewMessageRepository(pool, box)
 	explRepo := postgresrepo.NewExplanationRepository(pool)
 	writingRepo := postgresrepo.NewWritingRepository(pool)
 	pronRepo := postgresrepo.NewPronunciationRepository(pool)
 	quotaRepo := postgresrepo.NewQuotaRepository(pool)
+	feedbackRepo := postgresrepo.NewFeedbackRepository(pool)
+	abExposureRepo := postgresrepo.NewABExposureRepository(pool)
 
 	// Provider.
 	provider, err := buildProvider(cfg)
@@ -77,10 +92,30 @@ func New(ctx context.Context) (*App, error) {
 	}
 	logger.Info(ctx, "✅ AI provider initialized", zap.String("name", provider.Name()))
 
+	// Moderator.
+	moderator, err := buildModerator(cfg)
+	if err != nil {
+		return nil, fmt.Errorf("failed to build moderator: %w", err)
+	}
+	logger.Info(ctx, "✅ Moderator initialized",
+		zap.String("mode", cfg.ModerationMode),
+		zap.Bool("active", !isNoopModerator(moderator)),
+	)
+
 	// User-service client (optional).
 	userCli, err := buildUserClient(ctx, cfg)
 	if err != nil {
 		return nil, fmt.Errorf("failed to build user client: %w", err)
+	}
+
+	// A/B-эксперименты для prompts/моделей (Phase 5.X). Bad-config = fatal,
+	// чтобы не «тихо» дропнуть эксперимент в проде.
+	abReg, err := abtest.ParseRegistry(cfg.ABExperimentsJSON)
+	if err != nil {
+		return nil, fmt.Errorf("failed to parse AI_AB_EXPERIMENTS: %w", err)
+	}
+	if names := abReg.Names(); len(names) > 0 {
+		logger.Info(ctx, "✅ A/B experiments loaded", zap.Strings("experiments", names))
 	}
 
 	// Service layer.
@@ -94,14 +129,23 @@ func New(ctx context.Context) (*App, error) {
 		PremiumVoiceMinutesLimit: cfg.PremiumVoiceMinutesLimit,
 		PremiumWritingLimit:      int32(cfg.PremiumWritingLimit),
 	}, service.Deps{
-		Provider:      provider,
-		User:          userCli,
+		Provider:     provider,
+		Moderator:    moderator,
+		SanitizeOpts: providers.SanitizeOpts{MaxLength: cfg.SanitizeMaxLength},
+		PIIOpts: providers.PIIRedactOpts{
+			Enabled:     cfg.PIIRedactEnabled,
+			Replacement: cfg.PIIPlaceholderFmt,
+		},
+		ABTests:     abReg,
+		ABExposures: abExposureRepo,
+		User:        userCli,
 		Conversations: convsRepo,
 		Messages:      msgsRepo,
 		Explanations:  explRepo,
 		Writing:       writingRepo,
 		Pronunciation: pronRepo,
 		Quotas:        quotaRepo,
+		Feedback:      feedbackRepo,
 	})
 
 	api := apiv1.NewAPI(svc)
@@ -110,10 +154,16 @@ func New(ctx context.Context) (*App, error) {
 
 	logger.Info(ctx, "✅ gRPC server initialized")
 
-	return &App{cfg: cfg, grpcServer: grpcServer, pool: pool}, nil
+	// Cron — quota cleanup.
+	scheduler := aicron.NewScheduler(svc, aicron.Config{
+		DailyAt:            cfg.CronDailyAt,
+		QuotaRetentionDays: cfg.QuotaRetentionDays,
+	})
+
+	return &App{cfg: cfg, grpcServer: grpcServer, pool: pool, cron: scheduler}, nil
 }
 
-// Run — стартует gRPC.
+// Run — стартует gRPC + cron.
 func (a *App) Run(ctx context.Context) error {
 	listener, err := net.Listen("tcp", a.cfg.GRPCAddress())
 	if err != nil {
@@ -126,25 +176,148 @@ func (a *App) Run(ctx context.Context) error {
 		return nil
 	})
 
+	if a.cron != nil {
+		a.cron.Start(ctx)
+		closer.Add(func(_ context.Context) error {
+			logger.Info(ctx, "Stopping ai cron")
+			a.cron.Stop()
+			return nil
+		})
+	}
+
 	if err := a.grpcServer.Serve(listener); err != nil {
 		return fmt.Errorf("failed to serve: %w", err)
 	}
 	return nil
 }
 
-// buildProvider — фабрика провайдера. На MVP реализован только mock;
-// другие — вернут ошибку (явный TODO 5.X-real).
+// buildProvider — фабрика провайдера.
+//
+//   - "" | "mock"      → детерминированный MockProvider (Phase 5 MVP).
+//   - "openai"         → OpenAIProvider (Chat + Whisper + TTS).
+//   - "anthropic"      → AnthropicProvider (Chat only; STT/TTS unsupported).
+//   - "router"         → LanguageRouter(Default=OpenAI, Heavy=Anthropic),
+//                         audio-вызовы идут на OpenAI.
 func buildProvider(cfg *config.Config) (providers.AIProvider, error) {
 	switch cfg.Provider {
 	case "", "mock":
 		return providers.NewMockProvider(), nil
+
 	case "openai":
-		return nil, fmt.Errorf("openai provider not implemented yet (Phase 5.X-real)")
+		return buildOpenAI(cfg)
+
 	case "anthropic":
-		return nil, fmt.Errorf("anthropic provider not implemented yet (Phase 5.X-real)")
+		return providers.NewAnthropicProvider(providers.AnthropicConfig{
+			APIKey:       cfg.AnthropicAPIKey,
+			BaseURL:      cfg.AnthropicBaseURL,
+			DefaultModel: cfg.AnthropicModel,
+		})
+
+	case "router":
+		def, err := buildOpenAI(cfg)
+		if err != nil {
+			return nil, fmt.Errorf("router: build openai default: %w", err)
+		}
+		heavy, err := providers.NewAnthropicProvider(providers.AnthropicConfig{
+			APIKey:       cfg.AnthropicAPIKey,
+			BaseURL:      cfg.AnthropicBaseURL,
+			DefaultModel: cfg.AnthropicModel,
+		})
+		if err != nil {
+			return nil, fmt.Errorf("router: build anthropic heavy: %w", err)
+		}
+		langs := splitCSV(cfg.HeavyLanguages)
+		r := providers.NewLanguageRouter(def, heavy, langs)
+		r.AudioProvider = def // STT/TTS — всегда OpenAI.
+		return r, nil
+
 	default:
 		return nil, fmt.Errorf("unknown AI_PROVIDER %q", cfg.Provider)
 	}
+}
+
+func buildOpenAI(cfg *config.Config) (providers.AIProvider, error) {
+	uploader, err := buildAudioUploader(cfg)
+	if err != nil {
+		return nil, fmt.Errorf("audio uploader: %w", err)
+	}
+	return providers.NewOpenAIProvider(providers.OpenAIConfig{
+		APIKey:            cfg.OpenAIAPIKey,
+		BaseURL:           cfg.OpenAIBaseURL,
+		TTSModel:          cfg.TTSModel,
+		TTSVoice:          cfg.TTSVoice,
+		WhisperModel:      cfg.WhisperModel,
+		Uploader:          uploader,
+		DefaultModelChat:  cfg.DefaultModelChat,
+		DefaultModelHeavy: cfg.DefaultModelHeavy,
+	})
+}
+
+// buildAudioUploader — выбирает реализацию по `AI_AUDIO_STORAGE`.
+//
+//   - "noop" | "" → NoopAudioUploader (placeholder URLs).
+//   - "minio"     → MinIOAudioUploader (реальная заливка). Требует
+//     AI_MINIO_ENDPOINT / AI_MINIO_BUCKET / AI_MINIO_ACCESS_KEY /
+//     AI_MINIO_SECRET_KEY. Если bucket недоступен — возвращает ошибку.
+func buildAudioUploader(cfg *config.Config) (providers.AudioUploader, error) {
+	switch strings.ToLower(strings.TrimSpace(cfg.AudioStorage)) {
+	case "", "noop":
+		return providers.NewNoopAudioUploader(cfg.TTSBaseURL), nil
+	case "minio", "s3":
+		ttl := time.Duration(cfg.MinIOPresignTTLHours) * time.Hour
+		return providers.NewMinIOAudioUploader(context.Background(), providers.MinIOConfig{
+			Endpoint:       cfg.MinIOEndpoint,
+			PublicEndpoint: cfg.MinIOPublicEndpoint,
+			AccessKey:      cfg.MinIOAccessKey,
+			SecretKey:      cfg.MinIOSecretKey,
+			UseSSL:         cfg.MinIOUseSSL,
+			Region:         cfg.MinIORegion,
+			Bucket:         cfg.MinIOBucket,
+			Prefix:         cfg.MinIOPrefix,
+			PresignTTL:     ttl,
+		})
+	default:
+		return nil, fmt.Errorf("unknown AI_AUDIO_STORAGE %q", cfg.AudioStorage)
+	}
+}
+
+// buildModerator — Phase 5.33.
+//
+//   - "off"  → NoopModerator (всё пропускает).
+//   - "on"   → OpenAIModerator (требует OpenAIAPIKey).
+//   - "auto" → OpenAIModerator если есть OpenAIAPIKey, иначе Noop.
+func buildModerator(cfg *config.Config) (providers.Moderator, error) {
+	mode := strings.ToLower(strings.TrimSpace(cfg.ModerationMode))
+	switch mode {
+	case "off":
+		return providers.NewNoopModerator(), nil
+	case "on":
+		return providers.NewOpenAIModerator(cfg.OpenAIAPIKey, cfg.OpenAIBaseURL)
+	case "", "auto":
+		if cfg.OpenAIAPIKey == "" {
+			return providers.NewNoopModerator(), nil
+		}
+		return providers.NewOpenAIModerator(cfg.OpenAIAPIKey, cfg.OpenAIBaseURL)
+	default:
+		return nil, fmt.Errorf("unknown AI_MODERATION %q", cfg.ModerationMode)
+	}
+}
+
+// isNoopModerator — true если переданный модератор реально no-op.
+func isNoopModerator(m providers.Moderator) bool {
+	_, ok := m.(*providers.NoopModerator)
+	return ok
+}
+
+func splitCSV(s string) []string {
+	parts := strings.Split(s, ",")
+	out := parts[:0]
+	for _, p := range parts {
+		if p = strings.TrimSpace(p); p != "" {
+			out = append(out, p)
+		}
+	}
+	return out
 }
 
 // buildUserClient — gRPC client если задан USER_SERVICE_ADDR, иначе noop.

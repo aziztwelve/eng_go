@@ -34,6 +34,17 @@ service AIService {
   // grammar-correction'ами). Учитывает last 10 сообщений из истории.
   rpc SendMessage(SendMessageRequest) returns (SendMessageResponse);
 
+  // SendMessageStream — server-streaming версия SendMessage для UX
+  // typewriter-эффекта (Phase 5.27). Гарантированно эмитит:
+  //   1) первым chunk — UserMessage (после sanitize/PII/moderation/persist);
+  //   2) затем N delta-chunk'ов — incremental текст assistant-reply;
+  //   3) финальным chunk — Done с полным AssistantMessage (включая
+  //      tokens / cost / id / timestamp).
+  // При ошибке середины потока — Error chunk и закрытие stream'а.
+  // Для streaming-режима translation/corrections не возвращаются (plain
+  // text reply); за полным форматом — обычный SendMessage.
+  rpc SendMessageStream(SendMessageRequest) returns (stream SendMessageStreamChunk);
+
   // ListConversations — конверсации текущего юзера, отсортированы
   // по started_at DESC. Без сообщений (lightweight).
   rpc ListConversations(ListConversationsRequest) returns (ListConversationsResponse);
@@ -56,11 +67,28 @@ service AIService {
   // повторные запросы возвращают cached=true мгновенно.
   rpc ExplainMistake(ExplainMistakeRequest) returns (ExplainMistakeResponse);
 
+  // ExplainMistakeStream — server-streaming версия ExplainMistake (Phase 5.X).
+  //
+  // При cache-hit'е поток сразу эмитит один Done chunk с cached=true
+  // (без delta'ы, так как объяснение уже есть). При miss'е — стандартные
+  // delta-chunks → final Done с cached=false.
+  // Reply при cache miss — plain text (не JSON), чтобы streaming был
+  // токен-по-токену.
+  rpc ExplainMistakeStream(ExplainMistakeRequest) returns (stream ExplainMistakeStreamChunk);
+
   // === Writing ===
 
   // AssessWriting — оценивает письменную работу: 4 score'а,
   // corrected_text, structured feedback по категориям.
   rpc AssessWriting(AssessWritingRequest) returns (AssessWritingResponse);
+
+  // AssessWritingStream — server-streaming версия AssessWriting (Phase 5.X).
+  //
+  // Provider возвращает структурированный JSON, который сложно парсить
+  // пo-чанково. Поэтому stream эмитит сырые delta-чанки (raw JSON-токены)
+  // как «typing indicator» для UI, а финальный Done chunk содержит уже
+  // распарсенный AssessWritingResponse со всеми scores / feedback.
+  rpc AssessWritingStream(AssessWritingRequest) returns (stream AssessWritingStreamChunk);
 
   // === Pronunciation ===
 
@@ -76,6 +104,14 @@ service AIService {
   // со scenario=tutor_qa.
   rpc AskTutor(AskTutorRequest) returns (AskTutorResponse);
 
+  // AskTutorStream — server-streaming версия AskTutor (Phase 5.X).
+  // Тот же контракт что и SendMessageStream, но без UserMessage echo
+  // (нет persistence): первый chunk — delta или сразу done. Поток
+  // гарантированно завершается одним из: done | error_message.
+  // Reply — plain text (не JSON), потому что streaming JSON неудобно
+  // парсить пo-чанково.
+  rpc AskTutorStream(AskTutorRequest) returns (stream AskTutorStreamChunk);
+
   // === Content generation (admin) ===
 
   // GenerateExercise — генерирует упражнение указанного типа из
@@ -87,6 +123,15 @@ service AIService {
   // GetQuotaStatus — текущие счётчики free-плана. Premium юзеры
   // получают unlimited: -1 в полях лимитов.
   rpc GetQuotaStatus(GetQuotaStatusRequest) returns (GetQuotaStatusResponse);
+
+  // === Feedback (Phase 5.X) ===
+
+  // SubmitMessageFeedback — UPSERT thumbs up/down оценки assistant-message.
+  // Повторный вызов с другим rating'ом — переключает оценку.
+  rpc SubmitMessageFeedback(SubmitMessageFeedbackRequest) returns (SubmitMessageFeedbackResponse);
+
+  // DeleteMessageFeedback — снимает оценку (idempotent).
+  rpc DeleteMessageFeedback(DeleteMessageFeedbackRequest) returns (DeleteMessageFeedbackResponse);
 }
 
 // =====================================================================
@@ -140,6 +185,23 @@ message Message {
   double cost_usd = 9;
 
   google.protobuf.Timestamp created_at = 10;
+
+  // user_feedback — оценка ТЕКУЩИМ юзером этого assistant-message
+  // (для рендера thumbs-state). Только для assistant; для user всегда пусто.
+  // Заполняется в GetConversation; в SendMessage первый раз — пусто.
+  MessageFeedback user_feedback = 11;
+}
+
+// MessageFeedback — оценка assistant-message пользователем.
+message MessageFeedback {
+  string id = 1;
+  string message_id = 2;
+  string conversation_id = 3;
+  string user_id = 4;
+  int32  rating = 5;          // +1 thumbs up, -1 thumbs down
+  string comment = 6;          // optional free-text
+  google.protobuf.Timestamp created_at = 7;
+  google.protobuf.Timestamp updated_at = 8;
 }
 
 // Correction — единичная поправка.
@@ -207,6 +269,27 @@ message SendMessageResponse {
   Message assistant_message = 2;
 }
 
+// SendMessageStreamChunk — единица server-streaming потока.
+// Поток гарантированно завершается ровно одним из:
+//   - done (success)
+//   - error_message (failure)
+message SendMessageStreamChunk {
+  oneof kind {
+    // user_message — первый chunk, отправляется после sanitize/persist
+    // user-message'а. Позволяет фронту сразу показать echo + id.
+    Message user_message = 1;
+    // delta — инкрементальный фрагмент assistant-reply (UTF-8 safe boundary).
+    string delta = 2;
+    // done — финальный chunk с полным AssistantMessage (id, tokens, cost,
+    // created_at). Поле user_message там тот же, что в первом chunk'е,
+    // дублируется для удобства клиента.
+    SendMessageResponse done = 3;
+    // error_message — fatal error mid-stream (например, provider failure
+    // после старта), stream закрывается без done.
+    string error_message = 4;
+  }
+}
+
 message ListConversationsRequest {
   string user_id = 1;
   int32 limit = 2;                // default 20, max 100
@@ -263,6 +346,19 @@ message ExplainMistakeResponse {
   bool cached = 2;                // true — взято из ai_explanations
 }
 
+// ExplainMistakeStreamChunk — единица server-streaming потока.
+// При cache-hit'е содержит только Done. При cache-miss — N Delta + Done.
+message ExplainMistakeStreamChunk {
+  oneof kind {
+    // delta — фрагмент explanation (только для cache-miss).
+    string delta = 1;
+    // done — финальный chunk с полным ExplainMistakeResponse.
+    ExplainMistakeResponse done = 2;
+    // error_message — fatal error mid-stream.
+    string error_message = 3;
+  }
+}
+
 // =====================================================================
 // Writing RPCs
 // =====================================================================
@@ -284,6 +380,21 @@ message AssessWritingResponse {
   int32 style_score = 6;
   string corrected_text = 7;
   repeated WritingFeedback feedback = 8;
+}
+
+// AssessWritingStreamChunk — единица server-streaming потока.
+// Delta'ы — сырые JSON-токены от провайдера (для typing-indicator UX).
+// Done — структурированный AssessWritingResponse.
+message AssessWritingStreamChunk {
+  oneof kind {
+    // delta — сырой JSON-токен. UI обычно не парсит, а просто
+    // показывает progress / typing indicator.
+    string delta = 1;
+    // done — финальный chunk с распарсенным AssessWritingResponse.
+    AssessWritingResponse done = 2;
+    // error_message — fatal error mid-stream.
+    string error_message = 3;
+  }
 }
 
 // =====================================================================
@@ -325,6 +436,23 @@ message AskTutorResponse {
   double cost_usd = 3;
 }
 
+// AskTutorStreamChunk — единица server-streaming потока AskTutorStream.
+// Поток гарантированно завершается ровно одним из:
+//   - done (success)  — содержит финальный AskTutorResponse с answer/tokens/cost
+//   - error_message (failure)
+message AskTutorStreamChunk {
+  oneof kind {
+    // delta — инкрементальный фрагмент answer'а (UTF-8 safe).
+    string delta = 1;
+    // done — финальный chunk с полным AskTutorResponse (answer == полный
+    // склеенный reply, tokens_used / cost_usd заполнены).
+    AskTutorResponse done = 2;
+    // error_message — fatal error mid-stream (например, provider failure
+    // после старта). Stream закрывается без done.
+    string error_message = 3;
+  }
+}
+
 // =====================================================================
 // Content gen RPCs (admin)
 // =====================================================================
@@ -364,3 +492,25 @@ message GetQuotaStatusResponse {
   string plan = 7;                // free | premium
   google.protobuf.Timestamp resets_at = 8;
 }
+
+// =====================================================================
+// Feedback RPCs (Phase 5.X)
+// =====================================================================
+
+message SubmitMessageFeedbackRequest {
+  string user_id = 1;
+  string message_id = 2;
+  int32  rating = 3;           // +1 | -1
+  string comment = 4;          // optional, max 500 chars
+}
+
+message SubmitMessageFeedbackResponse {
+  MessageFeedback feedback = 1;
+}
+
+message DeleteMessageFeedbackRequest {
+  string user_id = 1;
+  string message_id = 2;
+}
+
+message DeleteMessageFeedbackResponse {}

@@ -17,4 +17,7 @@ var (
 	ErrProviderFailed = errors.New("provider failed")
 	// ErrScenarioNotFound — указанный roleplay-сценарий не существует.
 	ErrScenarioNotFound = errors.New("scenario not found")
+	// ErrContentFlagged — content moderation заблокировал текст
+	// (hate / sexual / self-harm / violence). Маппится в FailedPrecondition.
+	ErrContentFlagged = errors.New("content flagged by moderation")
 )

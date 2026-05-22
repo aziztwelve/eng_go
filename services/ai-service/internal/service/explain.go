@@ -46,7 +46,14 @@ func (s *Service) ExplainMistake(ctx context.Context, in ExplainInput) (*Explain
 		return nil, fmt.Errorf("%w: incorrect_answer required", ErrInvalidArgument)
 	}
 
-	md5sum := md5OfString(in.IncorrectAnswer)
+	// PII redact для incorrect_answer + question (correct_answer обычно
+	// от системы и не содержит PII). Cache key — на основе redacted
+	// варианта (иначе одинаковый ответ с разными «случайными» PII даст
+	// cache miss каждый раз).
+	cleanIncorrect := s.redactPII(ctx, in.IncorrectAnswer, "explain.incorrect")
+	cleanQuestion := s.redactPII(ctx, in.Question, "explain.question")
+
+	md5sum := md5OfString(cleanIncorrect)
 	var stepID *string
 	if in.StepID != "" {
 		s := in.StepID
@@ -69,9 +76,9 @@ func (s *Service) ExplainMistake(ctx context.Context, in ExplainInput) (*Explain
 	pCtx := prompts.ExplainContext{
 		TargetLanguage:  in.TargetLanguage,
 		NativeLanguage:  in.NativeLanguage,
-		Question:        in.Question,
+		Question:        cleanQuestion,
 		CorrectAnswer:   in.CorrectAnswer,
-		IncorrectAnswer: in.IncorrectAnswer,
+		IncorrectAnswer: cleanIncorrect,
 	}
 	resp, err := s.provider.Chat(ctx,
 		[]providers.PromptMessage{
@@ -86,11 +93,11 @@ func (s *Service) ExplainMistake(ctx context.Context, in ExplainInput) (*Explain
 
 	explanation := parseExplanation(resp.Content)
 
-	// 4. Save in cache.
+	// 4. Save in cache (с redacted версией!).
 	rec := &model.Explanation{
 		UserID:             in.UserID,
 		StepID:             stepID,
-		IncorrectAnswer:    in.IncorrectAnswer,
+		IncorrectAnswer:    cleanIncorrect,
 		IncorrectAnswerMD5: md5sum,
 		CorrectAnswer:      in.CorrectAnswer,
 		Explanation:        explanation,

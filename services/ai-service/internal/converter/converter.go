@@ -149,6 +149,32 @@ func ToWordScoreProto(w model.WordScore) *aiv1.WordScore {
 }
 
 // =====================================================================
+// Feedback (Phase 5.X)
+// =====================================================================
+
+// ToFeedbackProto — model → proto.
+func ToFeedbackProto(f *model.MessageFeedback) *aiv1.MessageFeedback {
+	if f == nil {
+		return nil
+	}
+	out := &aiv1.MessageFeedback{
+		Id:             f.ID,
+		MessageId:      f.MessageID,
+		ConversationId: f.ConversationID,
+		UserId:         f.UserID,
+		Rating:         int32(f.Rating),
+		Comment:        f.Comment,
+	}
+	if !f.CreatedAt.IsZero() {
+		out.CreatedAt = timestamppb.New(f.CreatedAt)
+	}
+	if !f.UpdatedAt.IsZero() {
+		out.UpdatedAt = timestamppb.New(f.UpdatedAt)
+	}
+	return out
+}
+
+// =====================================================================
 // Quota
 // =====================================================================
 

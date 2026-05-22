@@ -104,6 +104,17 @@ func (s *Service) GetQuotaStatus(ctx context.Context, userID string) (*QuotaStat
 	}, nil
 }
 
+// CleanupOldQuotas — удаляет строки `ai_usage_quota` старше `retention` дней
+// (считая от now UTC). Вызывается ежедневным cron'ом. Возвращает число удалённых
+// записей. retention <= 0 → no-op (защита от случайной полной очистки).
+func (s *Service) CleanupOldQuotas(ctx context.Context, retentionDays int) (int64, error) {
+	if retentionDays <= 0 {
+		return 0, nil
+	}
+	before := time.Now().UTC().AddDate(0, 0, -retentionDays)
+	return s.quotas.DeleteOlderThan(ctx, before)
+}
+
 // limitsFor — для юзера. На MVP — все free (user-service не отдаёт is_premium).
 func (s *Service) limitsFor(ctx context.Context, userID string) model.QuotaLimits {
 	plan := model.PlanFree

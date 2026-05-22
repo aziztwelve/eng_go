@@ -187,6 +187,17 @@ func (r *userLeagueRepoMem) ListByCohort(_ context.Context, cohortID uuid.UUID) 
 	return out, nil
 }
 
+func (r *userLeagueRepoMem) BatchGetByUserIDs(_ context.Context, userIDs []uuid.UUID) ([]*model.UserLeague, error) {
+	out := make([]*model.UserLeague, 0, len(userIDs))
+	for _, id := range userIDs {
+		if ul, ok := r.items[id]; ok {
+			cp := *ul
+			out = append(out, &cp)
+		}
+	}
+	return out, nil
+}
+
 type historyRepoMem struct {
 	items []*model.LeagueHistoryEntry
 }

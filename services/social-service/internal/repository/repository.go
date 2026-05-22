@@ -46,6 +46,9 @@ type UserLeagueRepo interface {
 	UpdateRank(ctx context.Context, userID uuid.UUID, rank int) error
 	ResetWeeklyXPInCohort(ctx context.Context, cohortID uuid.UUID) error
 	ListByCohort(ctx context.Context, cohortID uuid.UUID) ([]*model.UserLeague, error)
+	// BatchGetByUserIDs — выборка user_leagues по списку user_id. Используется
+	// для построения friends leaderboard. Юзеров без записи в выборке нет.
+	BatchGetByUserIDs(ctx context.Context, userIDs []uuid.UUID) ([]*model.UserLeague, error)
 }
 
 // LeagueHistoryRepo — архив выступлений.
@@ -75,3 +78,38 @@ type LeaderboardScore struct {
 	UserID   uuid.UUID
 	WeeklyXP int
 }
+
+// FriendshipFilter — фильтр для ListByUser. Status="" → все статусы.
+type FriendshipFilter struct {
+	Status model.FriendshipStatus
+	// IncludePending — если true, в выборку попадают и pending.
+	// Используется только когда Status="" (для совмещения accepted + pending).
+}
+
+// FriendshipRepo — связи между пользователями.
+//
+// Все методы работают с нормализованной парой (user_id_1 < user_id_2)
+// автоматически — вызывающий код может передавать (a, b) в любом порядке.
+type FriendshipRepo interface {
+	// Get — поиск по паре. Если нет — ErrNotFound.
+	Get(ctx context.Context, a, b uuid.UUID) (*model.Friendship, error)
+	GetByID(ctx context.Context, id uuid.UUID) (*model.Friendship, error)
+	// Create — INSERT. Если запись существует — ErrAlreadyExists.
+	Create(ctx context.Context, f *model.Friendship) error
+	// UpdateStatus — переводит запись в новое состояние + updated_at=NOW.
+	UpdateStatus(ctx context.Context, id uuid.UUID, status model.FriendshipStatus) error
+	// Delete — физически удаляет запись (используется для Remove и
+	// permanent reject).
+	Delete(ctx context.Context, id uuid.UUID) error
+	// ListByUser — все связи где userID — участник, фильтрованные по
+	// status. Сортировка: pending — DESC by created_at; accepted —
+	// ASC by created_at.
+	ListByUser(ctx context.Context, userID uuid.UUID, status model.FriendshipStatus, limit, offset int) ([]*model.Friendship, int, error)
+	// ListAcceptedFriendIDs — DISTINCT user_id «второй стороны» для
+	// accepted-связей. Нужно для построения friends-leaderboard.
+	ListAcceptedFriendIDs(ctx context.Context, userID uuid.UUID) ([]uuid.UUID, error)
+}
+
+// ErrAlreadyExists — запись с такой парой уже есть. Возвращается
+// FriendshipRepo.Create на unique violation.
+var ErrAlreadyExists = errors.New("repository: already exists")

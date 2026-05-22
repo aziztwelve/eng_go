@@ -32,6 +32,7 @@ type Config struct {
 	KafkaConsumerGrp  string
 
 	UserServiceAddr          string
+	AuthServiceAddr          string
 	NotificationsServiceAddr string
 
 	LoggerLevel  string
@@ -74,6 +75,7 @@ func Get() *Config {
 		KafkaConsumerGrp: getEnv("KAFKA_GROUP_ID", "social-xp-consumer"),
 
 		UserServiceAddr:          getEnv("USER_SERVICE_ADDR", ""),
+		AuthServiceAddr:          getEnv("AUTH_SERVICE_ADDR", ""),
 		NotificationsServiceAddr: getEnv("NOTIFICATIONS_SERVICE_ADDR", ""),
 
 		LoggerLevel:  getEnv("LOGGER_LEVEL", "info"),

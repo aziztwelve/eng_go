@@ -141,11 +141,25 @@ func (s *Service) SendMessage(ctx context.Context, in SendMessageInput) (*model.
 		return nil, nil, err
 	}
 
-	// Сохраняем user-message.
+	// Sanitize + PII redact + moderation (Phase 5.33/5.34/5.X).
+	//   - Sanitize — нейтрализует prompt-injection попытки.
+	//   - RedactPII — вырезает email/phone/cards/etc. И из prompt'а,
+	//     И из того, что пишем в БД (privacy-by-default).
+	//   - Moderator — блокирует hate/sexual/self-harm/violence.
+	sanitized, _ := providers.SanitizeUserInput(in.Content, s.sanitize)
+	if sanitized == "" {
+		return nil, nil, fmt.Errorf("%w: content empty after sanitization", ErrInvalidArgument)
+	}
+	sanitized = s.redactPII(ctx, sanitized, "send_message")
+	if mod, err := s.moderator.Check(ctx, sanitized); err == nil && mod != nil && mod.Flagged {
+		return nil, nil, fmt.Errorf("%w: %s", ErrContentFlagged, mod.Reason)
+	}
+
+	// Сохраняем user-message (с санитизированным контентом).
 	userMsg := &model.Message{
 		ConversationID: conv.ID,
 		Role:           model.RoleUser,
-		Content:        in.Content,
+		Content:        sanitized,
 		CreatedAt:      time.Now().UTC(),
 	}
 	if err := s.messages.Create(ctx, userMsg); err != nil {
@@ -170,6 +184,10 @@ func (s *Service) SendMessage(ctx context.Context, in SendMessageInput) (*model.
 		ScenarioCtx:    scenarioCtx,
 		VocabFocus:     vocabFocus,
 	})
+	// A/B (Phase 5.X): chat_prompt → дописать суффикс в system-prompt.
+	if suffix := s.chatPromptSuffixFor(in.UserID); suffix != "" {
+		systemPrompt += "\n\n" + suffix
+	}
 
 	// Собираем prompt: system + history.
 	promptMessages := []providers.PromptMessage{
@@ -183,7 +201,8 @@ func (s *Service) SendMessage(ctx context.Context, in SendMessageInput) (*model.
 	}
 
 	chatResp, err := s.provider.Chat(ctx, promptMessages, providers.ChatOptions{
-		Model:      conv.Model,
+		// A/B (Phase 5.X): chat_model → переопределить model.
+		Model:      s.chatModelFor(in.UserID, conv.Model),
 		JSONOutput: true,
 	})
 	if err != nil {

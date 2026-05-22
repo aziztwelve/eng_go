@@ -137,6 +137,7 @@ func cleanup(t *testing.T) {
 		TRUNCATE social.league_history RESTART IDENTITY CASCADE;
 		TRUNCATE social.user_leagues RESTART IDENTITY CASCADE;
 		TRUNCATE social.cohorts RESTART IDENTITY CASCADE;
+		TRUNCATE social.friendships RESTART IDENTITY CASCADE;
 	`)
 	if err != nil {
 		t.Fatalf("cleanup: %v", err)

@@ -13,6 +13,7 @@ import (
 
 const prefsCols = `user_id,
 	practice_reminder_enabled, streak_risk_enabled, daily_goal_enabled, achievement_enabled,
+	friend_request_enabled,
 	quiet_hours_start, quiet_hours_end, timezone, updated_at`
 
 type prefsRepo struct {
@@ -29,6 +30,7 @@ func scanPrefs(scan func(...any) error) (*model.UserPreferences, error) {
 	if err := scan(
 		&p.UserID,
 		&p.PracticeReminderEnabled, &p.StreakRiskEnabled, &p.DailyGoalEnabled, &p.AchievementEnabled,
+		&p.FriendRequestEnabled,
 		&p.QuietHoursStart, &p.QuietHoursEnd, &p.Timezone, &p.UpdatedAt,
 	); err != nil {
 		return nil, err
@@ -54,17 +56,20 @@ func (r *prefsRepo) Upsert(ctx context.Context, p *model.UserPreferences) (*mode
 		INSERT INTO user_preferences (
 			user_id,
 			practice_reminder_enabled, streak_risk_enabled, daily_goal_enabled, achievement_enabled,
+			friend_request_enabled,
 			quiet_hours_start, quiet_hours_end, timezone, updated_at
 		) VALUES (
 			$1,
 			$2, $3, $4, $5,
-			$6, $7, $8, NOW()
+			$6,
+			$7, $8, $9, NOW()
 		)
 		ON CONFLICT (user_id) DO UPDATE
 			SET practice_reminder_enabled = EXCLUDED.practice_reminder_enabled,
 			    streak_risk_enabled       = EXCLUDED.streak_risk_enabled,
 			    daily_goal_enabled        = EXCLUDED.daily_goal_enabled,
 			    achievement_enabled       = EXCLUDED.achievement_enabled,
+			    friend_request_enabled    = EXCLUDED.friend_request_enabled,
 			    quiet_hours_start         = EXCLUDED.quiet_hours_start,
 			    quiet_hours_end           = EXCLUDED.quiet_hours_end,
 			    timezone                  = EXCLUDED.timezone,
@@ -73,6 +78,7 @@ func (r *prefsRepo) Upsert(ctx context.Context, p *model.UserPreferences) (*mode
 	`,
 		p.UserID,
 		p.PracticeReminderEnabled, p.StreakRiskEnabled, p.DailyGoalEnabled, p.AchievementEnabled,
+		p.FriendRequestEnabled,
 		p.QuietHoursStart, p.QuietHoursEnd, p.Timezone,
 	)
 	return scanPrefs(row.Scan)

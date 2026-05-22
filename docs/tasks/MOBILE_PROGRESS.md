@@ -8,7 +8,7 @@
 
 **Дата старта:** 2026-05-16
 **Дата последнего обновления:** 2026-05-16
-**Статус:** 🟢 **Phase 3 mobile (SRS + practice + mistakes + strength + notifications/push) — DONE. Onboarding + Phase 4/5 — pending.**
+**Статус:** 🟢 **Sprint 1 (Phase 3) + Sprint 2 (Onboarding) + Sprint 3 (Phase 4/4.5: leagues + friends) + Sprint 4 (Phase 5 AI: chat/roleplay/writing/tutor/pronunciation) + Content seed MVP — DONE. Mobile MVP complete.**
 
 ---
 
@@ -242,59 +242,172 @@
 
 ---
 
-### Sprint 3 — Phase 4 mobile (P1, ~4–5 дней)
+### Sprint 3 — Phase 4 + 4.5 mobile (P1) — ✅ DONE (2026-05-16)
 
-#### 4M.1 — Social API + хуки
-- [ ] `SocialApi`: `getMyLeague`, `getLeaderboard`, `getLeagueHistory`
-- [ ] `FriendsApi`: 8 RPC обёрток (search, sendRequest, accept, decline,
-  remove, block, list, listPending, friendsLeaderboard)
-- [ ] Hooks: `use-my-league`, `use-leaderboard`, `use-friends`,
-  `use-friend-search`, `use-pending-requests`
+#### 4M.1 — Social + Friends API + хуки ✅
+- [x] `lib/api-client.ts`: `SocialApi` (4 метода: listLeagues /
+  getMyLeague / getMyLeaderboard / getHistory) + `FriendsApi` (8 методов:
+  list / listPending / sendRequest / accept / reject / remove / search /
+  leaderboard).
+- [x] `types/api.ts`: League / UserLeague / LeaderboardEntry /
+  LeagueHistoryEntry + 4 response shapes (Phase 4); FriendInfo /
+  Friendship / FriendshipStatusProto+Short + `friendshipStatusToShort`
+  helper / LeaderboardFriendEntry / PendingDirection + 8 response
+  shapes (Phase 4.5).
+- [x] `hooks/use-leagues.ts`: 4 query (`useLeaguesCatalog` /
+  `useMyLeague` / `useMyLeaderboard` / `useLeagueHistory`) + exported
+  keys (LEAGUES_CATALOG_KEY / MY_LEAGUE_KEY / MY_LEADERBOARD_KEY /
+  LEAGUE_HISTORY_KEY).
+- [x] `hooks/use-friends.ts`: 4 query (`useFriends` /
+  `usePendingFriends` / `useFriendsSearch` / `useFriendsLeaderboard`) +
+  4 mutation (`useSendFriendRequest` / `useAcceptFriendRequest` /
+  `useRejectFriendRequest` / `useRemoveFriend`). На onSuccess каждый
+  mutation делает `qc.invalidateQueries({ queryKey: ['friends'] })`
+  сразу для всех friends-кэшей.
 
-#### 4M.2 — Leagues routes
-- [ ] `app/leagues/index.tsx` — Hub:
-  - LeagueBadge (Bronze..Diamond) + текущий ранг
-  - «View Leaderboard» / «History» buttons
-- [ ] `app/leagues/leaderboard.tsx` — `FlatList` 30 cohort members:
-  - Top-7 — promotion zone (зелёная полоса)
-  - Bottom-5 — demotion zone (красная)
-  - Sticky header с countdown до недельного reset
-- [ ] `app/leagues/history.tsx` — список прошлых недель
+#### 4M.2 — Leagues routes ✅
+- [x] `app/leagues/_layout.tsx` — Stack (header `#252736` / тинт `#fff`).
+- [x] `app/leagues/index.tsx` (mirror web `/leagues`):
+  - **Hero**: Crown с league.color + tier + cycle timer + my rank/XP
+    block; обновление каждые 30s через setInterval.
+  - **Zone hints**: 2 карты promotion/demotion (только если counts > 0)
+    с цветной обводкой emerald/rose.
+  - **Leaderboard**: топ 30 моей когорты, Medal top-3 (gold/silver/bronze
+    цвета), is_me highlight (`bg-primary/10`), zone-окраска рядов
+    (`bg-emerald-500/10` / `bg-rose-500/10`).
+  - **Avatar** — переиспользуемый `components/ui/avatar.tsx`
+    (`<Image>` с инициалами-фолбэком).
+  - Loading / Error / Empty состояния.
+- [x] `app/leagues/history.tsx` (mirror web `/leagues/history`):
+  - Pagination (PAGE_SIZE=20) с Назад/Вперёд + текущая стр.
+  - HistoryRow: large rank-badge с league color + name + Outcome badge
+    (Промо/Демо/Остались) + период + final XP + gems_earned (Gem icon).
 
-#### 4M.3 — Friends routes
-- [ ] `app/friends/index.tsx` — Friends list + leaderboard
-- [ ] `app/friends/search.tsx` — поиск по username
-- [ ] `app/friends/pending.tsx` — incoming/outgoing requests
-- [ ] Push handler для `friend_request` channel: deep-link в pending
+#### 4M.3 — Friends routes ✅
+Sub-routes в Stack (вместо inline-tabs — choice пользователя):
+- [x] `app/friends/_layout.tsx` — Stack.
+- [x] `app/friends/index.tsx` (главный hub):
+  - 3 action-карты: Search (Search icon) / Pending (Bell + badge с
+    incoming-count) / Leaderboard (Trophy).
+  - Friends-list (accepted) с per-row Remove (`Alert.alert` confirm).
+  - Empty/loading состояния.
+- [x] `app/friends/pending.tsx` — `direction='all'`, разделение по
+  `is_incoming`. Incoming → Accept (emerald) + Reject. Outgoing →
+  Cancel. Group-секции с badge-counter. Toast при success / error.
+- [x] `app/friends/search.tsx` — debounced TextInput (250ms), per-row
+  status badge (accepted / pending / blocked) либо «Добавить» CTA через
+  `friendshipStatusToShort`. min query length 2 + cleared button (X).
+- [x] `app/friends/leaderboard.tsx` — Medal top-3 (gold/silver/orange),
+  self-row highlight (`bg-primary/10`), пустое состояние с CTA «Найти
+  друзей» → /friends/search.
 
-#### 4M.4 — Promotion overlay
-- [ ] `components/social/PromotionOverlay.tsx` — Lottie / Reanimated
-  fallback при league change
+#### 4M.4 — Profile entry ✅
+- [x] В `(tabs)/profile.tsx` — два новых NavRow: «🏆 Лиги» → /leagues,
+  «👥 Друзья» → /friends. Рядом с «💪 Сила навыков». Нижние табы (5
+  штук) не трогали — точки входа только через Profile.
+
+#### 4M.5 — Verification ✅
+- [x] `npx tsc --noEmit` clean.
+- [x] `npm run lint`: все ошибки/ворнинги — в pre-existing файлах
+  (унаследованы; новые файлы lint-clean). Конфиг ESLint поставился
+  автоматически при первом запуске expo lint.
+
+### Что НЕ сделано в Sprint 3 (отложено)
+- **Push deep-linking из канала `friend_request`**
+  (`addNotificationResponseReceivedListener` → router.push('/friends/pending')).
+  Был отложен ещё в Phase 3 mobile, не critical для MVP.
+- **Lottie promotion celebration** — overlay при разблокировке
+  promotion / новой лиги (как level-up). Требует Lottie-asset (1 файл,
+  как и `level-up.json` в Phase 1).
+- **Banner / mini-card на Home tab** для текущей лиги — для visibility.
 
 ---
 
-### Sprint 4 — Phase 5 mobile (P2, ~7–10 дней)
+### Sprint 4 — Phase 5 mobile (P2) — ✅ DONE (2026-05-16)
 
-#### 5M.1 — AI API + хуки
-- [ ] `AiApi`: `createConversation`, `sendMessage`, `listConversations`,
-  `getConversation`, `submitWriting`, `getWritingFeedback`,
-  `pronunciationCheck`, `tutorAsk`, `getQuota`
-- [ ] Hooks: `use-ai-quota`, `use-ai-conversation`, `use-ai-writing`, ...
+#### 5M.1 — AI API + хуки ✅
+- [x] `lib/ai-api.ts`: `AIApi` (9 методов — startConversation / list /
+  get / delete / sendMessage / listScenarios / explainMistake /
+  assessWriting / askTutor / checkPronunciation / getQuota).
+  Pronunciation идёт мимо `ApiClient` — отдельный fetch с Bearer-token
+  через `AuthService.getAccessToken()` (RN FormData с file-объектом
+  `{uri, type, name}`).
+- [x] `types/api.ts`: блок Phase 5 (AIMessageRole / AICorrection /
+  AIMessage / AIConversation / AIScenario + 6 RPC shapes /
+  ExplainMistake* / AssessWriting* + AIWritingFeedback /
+  CheckPronunciation* + AIWordScore / AskTutor* / AIQuotaStatus).
+- [x] `hooks/use-ai.ts`: 4 query (`useAIQuota` / `useAIConversations` /
+  `useAIConversation` / `useAIScenarios`) + 6 mutation
+  (`useStartConversation` / `useSendMessage(id)` /
+  `useDeleteConversation` / `useExplainMistake` / `useAssessWriting` /
+  `useAskTutor` / `useCheckPronunciation`). Mutation-success
+  инвалидирует пересекающиеся keys (specific conversation / list /
+  quota).
 
-#### 5M.2 — AI routes
-- [ ] `app/ai/index.tsx` — Hub: 5 карточек фич + QuotaWidget
-- [ ] `app/ai/chat/[id].tsx` — чат с inline-corrections
-- [ ] `app/ai/roleplay.tsx` — выбор сценария + chat
-- [ ] `app/ai/writing.tsx` — textarea → AssessmentResult с 4 score-bars
-- [ ] `app/ai/tutor.tsx` — single-shot QA
-- [ ] `app/ai/pronunciation.tsx` — `expo-av` Recording → upload в MinIO
-  → result с word-level scores
+#### 5M.2 — AI routes ✅
+- [x] `app/ai/_layout.tsx` — Stack.
+- [x] `app/ai/index.tsx` — Hub: 5 фич + `<QuotaWidget>`.
+- [x] `app/ai/chat/index.tsx` — список конверсаций + «Новый чат»
+  (free_chat scenario, выбор языка). Per-row Delete с `Alert.alert`.
+- [x] `app/ai/chat/[id].tsx` — экран диалога: ScrollView + auto-scroll-
+  to-end + `<KeyboardAvoidingView>` (iOS padding) + AI-печатает
+  индикатор + error banner. Header с back-кнопкой и badges (scenario /
+  language / level).
+- [x] `app/ai/roleplay.tsx` — каталог сценариев + 2 группы pill-фильтров
+  (язык / уровень). Клик по карточке → start({scenario:
+  `roleplay_<id>`}) → router push в /ai/chat/:id.
+- [x] `app/ai/writing.tsx` — форма (lang + level pills, optional prompt,
+  multiline text + word counter, MIN_WORDS=10) → `<AssessmentResult>`.
+- [x] `app/ai/tutor.tsx` — single Q&A с pills (target/native lang).
+  Markdown render через `react-native-markdown-display`.
+- [x] `app/ai/pronunciation.tsx` — target text input + lang pills +
+  `<VoiceRecorder>` → результат с overall progress + word-level badges.
 
-#### 5M.3 — Components
-- [ ] `components/ai/QuotaWidget.tsx`
-- [ ] `components/ai/ChatMessage.tsx` (с corrections / translation)
-- [ ] `components/ai/VoiceRecorder.tsx` (через `expo-av.Audio.Recording`)
-- [ ] `components/ai/AssessmentResult.tsx` (4 score-bars)
+#### 5M.3 — Components ✅
+- [x] `components/ai/quota-widget.tsx` — full-card (на hub) + compact
+  pill-набор (для chat / writing / tutor / pron). Также экспортирует
+  `hasQuotaLeft(q, kind)` helper.
+- [x] `components/ai/chat-message.tsx` — bubble user (right) /
+  assistant (left). Markdown body (react-native-markdown-display) +
+  inline corrections (orig→corrected + explanation, amber-border) +
+  translation toggle (collapsible) + `<MessageAudio>` (expo-av
+  Audio.Sound play/pause).
+- [x] `components/ai/chat-input.tsx` — multiline TextInput +
+  want_audio toggle (Volume2) + Send (disabled при пустой строке /
+  loading).
+- [x] `components/ai/scenario-card.tsx` — карточка roleplay-сценария
+  с title, description, level badge, AI-роль, vocabulary_focus pills,
+  «Начать» CTA.
+- [x] `components/ai/assessment-result.tsx` — overall + 4 score-bars +
+  corrected_text + feedback rows (category-окраска).
+- [x] `components/ai/voice-recorder.tsx` — expo-av Audio.Recording
+  state machine: `idle | recording | recorded | denied`.
+  `Audio.requestPermissionsAsync` + `setAudioModeAsync({allowsRecordingIOS:
+  true, playsInSilentModeIOS: true})` перед записью; восстанавливаем
+  mode для playback после stop. Авто-stop по `MAX_DURATION_SEC=60`.
+  Возвращает `{uri, type, name}` для multipart upload (по платформе:
+  m4a по умолчанию). Replay через `Audio.Sound.createAsync`.
+
+#### 5M.4 — Profile entry ✅
+- [x] В `(tabs)/profile.tsx` — NavRow «🤖 AI помощник» → /ai. Рядом с
+  Лиги / Друзья. Нижние 5 табов не трогали.
+
+#### 5M.5 — Verification ✅
+- [x] `npx tsc --noEmit` clean.
+- [x] `npm run lint` — 22 проблемы ровно как и до Sprint 4 (все —
+  pre-existing). Все новые AI-файлы lint-clean.
+
+### Что НЕ сделано в Sprint 4 (отложено)
+- **Mistake explain UI** — hook `useExplainMistake` готов, но
+  интегрировать в `mistakes.tsx` / lesson-fail flow — отдельная итерация
+  (это «explain my error» CTA на mistake-row).
+- **Pronunciation step type** в lesson player с auto-target-text
+  (post-MVP, нужен новый step.type='pronunciation' на бэке).
+- **Audio playback готовность к real-провайдеру** — сейчас MockProvider
+  возвращает пустой audio_url, кнопка прослушивания скрывается через
+  `if (audio_url && !isUser)` гард. Когда переключатся на real provider —
+  должно заработать без изменений (URL уже резолвится в Audio.Sound).
+- Real provider (OpenAI / Anthropic / Whisper) — backend Phase 5.X-real.
 
 ---
 
@@ -345,7 +458,11 @@ Social / AI типов — синхронизировать с `eng_next2/lib/ty
 - [x] Phase 3 mobile done
 - [x] Onboarding done
 - [x] Expo push token registration работает
-- [ ] Хотя бы 1 язык × 1 курс × 20 уроков seed
+- [x] Хотя бы 1 язык × 1 курс × 20 уроков seed
+      — `services/course-service/seeds/007_english_a1_mvp.sql`
+      (English A1 MVP: 4 модуля × 5 уроков × 5 шагов = 100 шагов + 52 vocab).
+      Сгенерирован через `scripts/gen_seed_mvp.py`, накатывается через
+      `task seed-mvp`.
 
 ---
 
@@ -355,8 +472,8 @@ Social / AI типов — синхронизировать с `eng_next2/lib/ty
 |--------|------|--------------|--------|
 | 1 | Phase 3 mobile (practice + push) | 5–7 дней | ✅ DONE (2026-05-16) |
 | 2 | Onboarding flow | 3–4 дня | ✅ DONE (2026-05-16) |
-| 3 | Phase 4 mobile (leagues + friends) | 4–5 дней | ⏳ pending |
-| 4 | Phase 5 mobile (AI) | 7–10 дней | ⏳ pending |
-| – | Content seed (1 язык × 1 курс × 20 уроков) | 1–2 дня | ⏳ pending |
+| 3 | Phase 4 + 4.5 mobile (leagues + friends) | 4–5 дней | ✅ DONE (2026-05-16) |
+| 4 | Phase 5 mobile (AI: chat/roleplay/writing/tutor/pronunciation) | 7–10 дней | ✅ DONE (2026-05-16) |
+| 5 | Content seed (English A1 × 20 уроков × 100 шагов + vocab) | 1 день | ✅ DONE (2026-05-16) |
 
-**Общий объём:** ~12–17 дней full-time до полного mobile MVP.
+**Mobile MVP complete.** Все sprint'ы закрыты, content seed залит.

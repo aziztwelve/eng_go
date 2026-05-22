@@ -34,12 +34,14 @@ const (
 	ChannelStreakRisk       Channel = "streak_risk"
 	ChannelDailyGoal        Channel = "daily_goal"
 	ChannelAchievement      Channel = "achievement"
+	ChannelFriendRequest    Channel = "friend_request"
 )
 
 // IsValid — соответствует CHECK constraint notification_log.channel.
 func (c Channel) IsValid() bool {
 	switch c {
-	case ChannelPracticeReminder, ChannelStreakRisk, ChannelDailyGoal, ChannelAchievement:
+	case ChannelPracticeReminder, ChannelStreakRisk, ChannelDailyGoal,
+		ChannelAchievement, ChannelFriendRequest:
 		return true
 	default:
 		return false
@@ -106,6 +108,7 @@ type UserPreferences struct {
 	StreakRiskEnabled       bool
 	DailyGoalEnabled        bool
 	AchievementEnabled      bool
+	FriendRequestEnabled    bool
 
 	QuietHoursStart int
 	QuietHoursEnd   int
@@ -122,6 +125,7 @@ func DefaultPreferences(userID string) *UserPreferences {
 		StreakRiskEnabled:       true,
 		DailyGoalEnabled:        true,
 		AchievementEnabled:      true,
+		FriendRequestEnabled:    true,
 		QuietHoursStart:         DefaultQuietHoursStart,
 		QuietHoursEnd:           DefaultQuietHoursEnd,
 		Timezone:                "",
@@ -139,6 +143,8 @@ func (p *UserPreferences) IsChannelEnabled(c Channel) bool {
 		return p.DailyGoalEnabled
 	case ChannelAchievement:
 		return p.AchievementEnabled
+	case ChannelFriendRequest:
+		return p.FriendRequestEnabled
 	default:
 		return false
 	}

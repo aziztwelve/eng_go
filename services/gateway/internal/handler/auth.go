@@ -32,7 +32,7 @@ func (h *AuthHandler) Register(c *gin.Context) {
 		return
 	}
 
-	resp, err := h.authClient.Register(c.Request.Context(), &authv1.RegisterRequest{
+	_, err := h.authClient.Register(c.Request.Context(), &authv1.RegisterRequest{
 		Email:    req.Email,
 		Password: req.Password,
 		Username: req.Username,
@@ -43,7 +43,22 @@ func (h *AuthHandler) Register(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusCreated, dto.RegisterResponse{UserID: resp.UserId})
+	// Auto-login after registration — return tokens directly so clients
+	// don't need a second round-trip.
+	loginResp, err := h.authClient.Login(c.Request.Context(), &authv1.LoginRequest{
+		Email:    req.Email,
+		Password: req.Password,
+	})
+	if err != nil {
+		errors.HandleGRPCError(c, err)
+		return
+	}
+
+	c.JSON(http.StatusCreated, dto.LoginResponse{
+		AccessToken:  loginResp.AccessToken,
+		RefreshToken: loginResp.RefreshToken,
+		ExpiresAt:    loginResp.ExpiresAt.AsTime().Format(time.RFC3339),
+	})
 }
 
 func (h *AuthHandler) Login(c *gin.Context) {

@@ -25,13 +25,56 @@ type Config struct {
 	LoggerAsJSON bool
 
 	// Provider — какой бэкенд использовать.
-	// На MVP: mock. Реальные: openai | anthropic.
+	// На MVP: mock. Реальные: openai | anthropic | router.
+	// router = OpenAI default + Anthropic для HeavyLanguages.
 	Provider          string
 	OpenAIAPIKey      string
 	OpenAIBaseURL     string // override для proxy / Azure / self-hosted
 	AnthropicAPIKey   string
+	AnthropicBaseURL  string
+	AnthropicModel    string // default claude-3-5-haiku-latest
 	DefaultModelChat  string // по умолчанию gpt-4o-mini
 	DefaultModelHeavy string // для writing assessment / explain — gpt-4o
+
+	// HeavyLanguages — CSV ISO-кодов, направляются на heavy-провайдер
+	// при `Provider=router`. Default "ru".
+	HeavyLanguages string
+
+	// TTS / STT.
+	TTSModel     string // tts-1 | tts-1-hd
+	TTSVoice     string // alloy | echo | fable | onyx | nova | shimmer
+	WhisperModel string // whisper-1
+	TTSBaseURL   string // base URL для NoopAudioUploader (placeholder)
+
+	// Audio storage. Если AudioStorage="minio" — используется реальный
+	// MinIO/S3 uploader. Иначе — NoopAudioUploader (placeholder URLs).
+	AudioStorage         string
+	MinIOEndpoint        string // host:port (для PUT)
+	MinIOPublicEndpoint  string // host:port (для GET, опц.)
+	MinIOAccessKey       string
+	MinIOSecretKey       string
+	MinIOUseSSL          bool
+	MinIORegion          string
+	MinIOBucket          string
+	MinIOPrefix          string // префикс ключа, def "ai/tts/"
+	MinIOPresignTTLHours int    // TTL presigned URL, default 24
+
+	// Moderation: auto | on | off. auto → on если есть OpenAIAPIKey.
+	ModerationMode string
+
+	// Sanitize.
+	SanitizeMaxLength int
+
+	// PII redaction (Phase 5.X). Если PIIRedactEnabled=true — все user
+	// inputs (chat / tutor / explain / writing) проходят через
+	// regex-based detector и PII заменяется на [email] / [phone] / etc.
+	// перед отправкой в LLM и сохранением в БД.
+	PIIRedactEnabled  bool
+	PIIPlaceholderFmt string
+
+	// Cron.
+	CronDailyAt        string // "HH:MM" UTC. Default "02:00".
+	QuotaRetentionDays int    // Default 90. <=0 → no-op.
 
 	// Quota free-плана (per day).
 	FreeChatLimit         int
@@ -45,6 +88,25 @@ type Config struct {
 
 	// Внешние сервисы.
 	UserServiceAddr string
+
+	// Encryption-at-rest для message content/translation. Если пусто —
+	// pass-through (старое поведение). См. internal/cryptobox.
+	EncryptionKey string
+
+	// ABExperimentsJSON — JSON-массив A/B-экспериментов для prompts/моделей.
+	// Парсится через `internal/abtest.ParseRegistry`. Пусто → no experiments.
+	// Формат:
+	//   [
+	//     {"name":"chat_model","variants":[
+	//       {"id":"control","weight":80,"params":{"model":"gpt-4o-mini"}},
+	//       {"id":"premium","weight":20,"params":{"model":"gpt-4o"}}
+	//     ]},
+	//     {"name":"chat_prompt","variants":[
+	//       {"id":"strict","weight":50,"params":{"system_prompt_suffix":"Be very strict in corrections."}},
+	//       {"id":"friendly","weight":50,"params":{"system_prompt_suffix":"Be encouraging."}}
+	//     ]}
+	//   ]
+	ABExperimentsJSON string
 }
 
 // Load — лениво грузит .env, если он существует.
@@ -78,8 +140,37 @@ func Get() *Config {
 		OpenAIAPIKey:      getEnv("AI_OPENAI_API_KEY", ""),
 		OpenAIBaseURL:     getEnv("AI_OPENAI_BASE_URL", ""),
 		AnthropicAPIKey:   getEnv("AI_ANTHROPIC_API_KEY", ""),
+		AnthropicBaseURL:  getEnv("AI_ANTHROPIC_BASE_URL", ""),
+		AnthropicModel:    getEnv("AI_ANTHROPIC_MODEL", "claude-3-5-haiku-latest"),
 		DefaultModelChat:  getEnv("AI_DEFAULT_MODEL_CHAT", "gpt-4o-mini"),
 		DefaultModelHeavy: getEnv("AI_DEFAULT_MODEL_HEAVY", "gpt-4o"),
+
+		HeavyLanguages: getEnv("AI_HEAVY_LANGUAGES", "ru"),
+
+		TTSModel:     getEnv("AI_TTS_MODEL", "tts-1"),
+		TTSVoice:     getEnv("AI_TTS_VOICE", "alloy"),
+		WhisperModel: getEnv("AI_WHISPER_MODEL", "whisper-1"),
+		TTSBaseURL:   getEnv("AI_TTS_BASE_URL", ""),
+
+		AudioStorage:         getEnv("AI_AUDIO_STORAGE", "noop"),
+		MinIOEndpoint:        getEnv("AI_MINIO_ENDPOINT", ""),
+		MinIOPublicEndpoint:  getEnv("AI_MINIO_PUBLIC_ENDPOINT", ""),
+		MinIOAccessKey:       getEnv("AI_MINIO_ACCESS_KEY", ""),
+		MinIOSecretKey:       getEnv("AI_MINIO_SECRET_KEY", ""),
+		MinIOUseSSL:          getEnv("AI_MINIO_USE_SSL", "false") == "true",
+		MinIORegion:          getEnv("AI_MINIO_REGION", "us-east-1"),
+		MinIOBucket:          getEnv("AI_MINIO_BUCKET", "ai-audio"),
+		MinIOPrefix:          getEnv("AI_MINIO_PREFIX", "ai/tts/"),
+		MinIOPresignTTLHours: getEnvInt("AI_MINIO_PRESIGN_TTL_HOURS", 24),
+
+		ModerationMode:    getEnv("AI_MODERATION", "auto"),
+		SanitizeMaxLength: getEnvInt("AI_SANITIZE_MAX_LENGTH", 4000),
+
+		PIIRedactEnabled:  getEnv("AI_PII_REDACT", "true") == "true",
+		PIIPlaceholderFmt: getEnv("AI_PII_PLACEHOLDER", "[%s]"),
+
+		CronDailyAt:        getEnv("CRON_DAILY_AT", "02:00"),
+		QuotaRetentionDays: getEnvInt("AI_QUOTA_RETENTION_DAYS", 90),
 
 		FreeChatLimit:         getEnvInt("AI_FREE_CHAT_LIMIT", 5),
 		FreeVoiceMinutesLimit: getEnvFloat("AI_FREE_VOICE_MINUTES_LIMIT", 2),
@@ -90,6 +181,10 @@ func Get() *Config {
 		PremiumWritingLimit:      getEnvInt("AI_PREMIUM_WRITING_LIMIT", -1),
 
 		UserServiceAddr: getEnv("USER_SERVICE_ADDR", ""),
+
+		EncryptionKey: getEnv("AI_ENCRYPTION_KEY", ""),
+
+		ABExperimentsJSON: getEnv("AI_AB_EXPERIMENTS", ""),
 	}
 }
 

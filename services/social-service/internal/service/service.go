@@ -14,6 +14,7 @@ import (
 	"go.uber.org/zap"
 
 	"github.com/elearning/platform/pkg/logger"
+	authcl "github.com/elearning/social-service/internal/client/auth"
 	"github.com/elearning/social-service/internal/client/notifications"
 	"github.com/elearning/social-service/internal/client/users"
 	"github.com/elearning/social-service/internal/model"
@@ -31,19 +32,22 @@ const BronzeLeagueID = 1
 
 // Service — фасад поверх репозиториев.
 type Service struct {
-	leagues repository.LeagueRepo
-	cohorts repository.CohortRepo
-	userLg  repository.UserLeagueRepo
-	history repository.LeagueHistoryRepo
-	board   repository.LeaderboardRepo
-	users   users.Client
-	notif   notifications.Client
+	leagues  repository.LeagueRepo
+	cohorts  repository.CohortRepo
+	userLg   repository.UserLeagueRepo
+	history  repository.LeagueHistoryRepo
+	board    repository.LeaderboardRepo
+	friends  repository.FriendshipRepo
+	users    users.Client
+	auth     authcl.Client
+	notif    notifications.Client
 
 	clock func() time.Time
 }
 
 // New создаёт сервис. Notifications-клиент — noop по умолчанию;
-// заменяется через WithNotifications.
+// заменяется через WithNotifications. Friendship-repo и auth-client опциональны
+// (Phase 4.5) — задаются через WithFriendship.
 func New(
 	leagues repository.LeagueRepo,
 	cohorts repository.CohortRepo,
@@ -59,6 +63,7 @@ func New(
 		history: history,
 		board:   board,
 		users:   users,
+		auth:    authcl.NewNoopClient(),
 		notif:   notifications.NewNoop(),
 		clock:   func() time.Time { return time.Now().UTC() },
 	}
@@ -68,6 +73,16 @@ func New(
 func (s *Service) WithNotifications(c notifications.Client) *Service {
 	if c != nil {
 		s.notif = c
+	}
+	return s
+}
+
+// WithFriendship подключает Phase 4.5 friendships repo + auth-client.
+// Если не задано — Friend-RPC возвращают FailedPrecondition.
+func (s *Service) WithFriendship(friends repository.FriendshipRepo, auth authcl.Client) *Service {
+	s.friends = friends
+	if auth != nil {
+		s.auth = auth
 	}
 	return s
 }

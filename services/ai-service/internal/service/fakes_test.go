@@ -157,6 +157,18 @@ func (f *fakeMessageRepo) Create(_ context.Context, m *model.Message) error {
 	f.items = append(f.items, m)
 	return nil
 }
+func (f *fakeMessageRepo) GetByID(_ context.Context, id string) (*model.Message, error) {
+	f.mu.Lock()
+	defer f.mu.Unlock()
+	for _, m := range f.items {
+		if m.ID == id {
+			cp := *m
+			return &cp, nil
+		}
+	}
+	return nil, repository.ErrNotFound
+}
+
 func (f *fakeMessageRepo) ListByConversation(_ context.Context, convID string) ([]*model.Message, error) {
 	f.mu.Lock()
 	defer f.mu.Unlock()
@@ -284,6 +296,104 @@ func (f *fakePronRepo) ListByUser(_ context.Context, userID string, limit, _ int
 	return out, int64(len(out)), nil
 }
 
+type fakeFeedbackRepo struct {
+	mu    sync.Mutex
+	items map[string]*model.MessageFeedback // key: userID + "|" + messageID
+}
+
+func newFakeFeedbackRepo() *fakeFeedbackRepo {
+	return &fakeFeedbackRepo{items: map[string]*model.MessageFeedback{}}
+}
+
+func (f *fakeFeedbackRepo) Upsert(_ context.Context, fb *model.MessageFeedback) error {
+	f.mu.Lock()
+	defer f.mu.Unlock()
+	if fb.ID == "" {
+		fb.ID = "fb-" + time.Now().Format("150405.000000000")
+	}
+	now := time.Now()
+	if fb.CreatedAt.IsZero() {
+		fb.CreatedAt = now
+	}
+	fb.UpdatedAt = now
+	k := fb.UserID + "|" + fb.MessageID
+	f.items[k] = fb
+	return nil
+}
+
+func (f *fakeFeedbackRepo) Get(_ context.Context, userID, messageID string) (*model.MessageFeedback, error) {
+	f.mu.Lock()
+	defer f.mu.Unlock()
+	fb, ok := f.items[userID+"|"+messageID]
+	if !ok {
+		return nil, repository.ErrNotFound
+	}
+	cp := *fb
+	return &cp, nil
+}
+
+func (f *fakeFeedbackRepo) Delete(_ context.Context, userID, messageID string) error {
+	f.mu.Lock()
+	defer f.mu.Unlock()
+	delete(f.items, userID+"|"+messageID)
+	return nil
+}
+
+func (f *fakeFeedbackRepo) ListByMessageIDs(_ context.Context, userID string, messageIDs []string) (map[string]*model.MessageFeedback, error) {
+	f.mu.Lock()
+	defer f.mu.Unlock()
+	out := make(map[string]*model.MessageFeedback, len(messageIDs))
+	for _, id := range messageIDs {
+		if fb, ok := f.items[userID+"|"+id]; ok {
+			cp := *fb
+			out[id] = &cp
+		}
+	}
+	return out, nil
+}
+
+func (f *fakeFeedbackRepo) GetConversationStats(_ context.Context, conversationID string) (*model.FeedbackStats, error) {
+	f.mu.Lock()
+	defer f.mu.Unlock()
+	stats := &model.FeedbackStats{ConversationID: conversationID}
+	for _, fb := range f.items {
+		if fb.ConversationID != conversationID {
+			continue
+		}
+		if fb.Rating == model.RatingThumbsUp {
+			stats.Likes++
+		} else {
+			stats.Dislikes++
+		}
+	}
+	stats.Total = stats.Likes + stats.Dislikes
+	return stats, nil
+}
+
+// fakeABExposureRepo — in-memory журнал для unit-тестов.
+type fakeABExposureRepo struct {
+	mu      sync.Mutex
+	entries map[string]int // key: userID|experiment|variantID → count
+}
+
+func newFakeABExposureRepo() *fakeABExposureRepo {
+	return &fakeABExposureRepo{entries: map[string]int{}}
+}
+
+func (f *fakeABExposureRepo) LogExposure(_ context.Context, userID, experiment, variantID string) error {
+	f.mu.Lock()
+	defer f.mu.Unlock()
+	key := userID + "|" + experiment + "|" + variantID
+	f.entries[key]++
+	return nil
+}
+
+func (f *fakeABExposureRepo) Count(userID, experiment, variantID string) int {
+	f.mu.Lock()
+	defer f.mu.Unlock()
+	return f.entries[userID+"|"+experiment+"|"+variantID]
+}
+
 type fakeQuotaRepo struct {
 	mu    sync.Mutex
 	items map[string]*model.UsageQuota
@@ -322,20 +432,35 @@ func (f *fakeQuotaRepo) Increment(_ context.Context, userID string, date time.Ti
 	q.WritingChecks += writingDelta
 	return nil
 }
+func (f *fakeQuotaRepo) DeleteOlderThan(_ context.Context, before time.Time) (int64, error) {
+	f.mu.Lock()
+	defer f.mu.Unlock()
+	cut := time.Date(before.UTC().Year(), before.UTC().Month(), before.UTC().Day(), 0, 0, 0, 0, time.UTC)
+	var deleted int64
+	for k, q := range f.items {
+		if q.Date.Before(cut) {
+			delete(f.items, k)
+			deleted++
+		}
+	}
+	return deleted, nil
+}
 
 // =====================================================================
 // Test harness
 // =====================================================================
 
 type testHarness struct {
-	svc      *Service
-	convs    *fakeConversationRepo
-	msgs     *fakeMessageRepo
-	expls    *fakeExplanationRepo
-	writing  *fakeWritingRepo
-	pron     *fakePronRepo
-	quota    *fakeQuotaRepo
-	provider *fakeProvider
+	svc         *Service
+	convs       *fakeConversationRepo
+	msgs        *fakeMessageRepo
+	expls       *fakeExplanationRepo
+	writing     *fakeWritingRepo
+	pron        *fakePronRepo
+	quota       *fakeQuotaRepo
+	feedback    *fakeFeedbackRepo
+	abExposures *fakeABExposureRepo
+	provider    *fakeProvider
 }
 
 func newHarness() *testHarness {
@@ -345,6 +470,8 @@ func newHarness() *testHarness {
 	writing := newFakeWritingRepo()
 	pron := newFakePronRepo()
 	quota := newFakeQuotaRepo()
+	feedback := newFakeFeedbackRepo()
+	abExposures := newFakeABExposureRepo()
 	prov := &fakeProvider{}
 	svc := New(Config{
 		DefaultModelChat:         "test-chat",
@@ -358,22 +485,26 @@ func newHarness() *testHarness {
 	}, Deps{
 		Provider:      prov,
 		User:          &fakeUser{profile: &user.Profile{TargetLanguage: "es", NativeLanguage: "ru", UserLevel: "B1"}},
+		ABExposures:   abExposures,
 		Conversations: convs,
 		Messages:      msgs,
 		Explanations:  expls,
 		Writing:       writing,
 		Pronunciation: pron,
 		Quotas:        quota,
+		Feedback:      feedback,
 	})
 	return &testHarness{
-		svc:      svc,
-		convs:    convs,
-		msgs:     msgs,
-		expls:    expls,
-		writing:  writing,
-		pron:     pron,
-		quota:    quota,
-		provider: prov,
+		svc:         svc,
+		convs:       convs,
+		msgs:        msgs,
+		expls:       expls,
+		writing:     writing,
+		pron:        pron,
+		quota:       quota,
+		feedback:    feedback,
+		abExposures: abExposures,
+		provider:    prov,
 	}
 }
 

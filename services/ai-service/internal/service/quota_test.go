@@ -3,6 +3,7 @@ package service
 import (
 	"context"
 	"testing"
+	"time"
 
 	"github.com/elearning/ai-service/internal/client/user"
 	"github.com/elearning/ai-service/internal/model"
@@ -80,5 +81,44 @@ func TestCheckQuota_VoiceMinutes(t *testing.T) {
 	_ = h.svc.IncrementQuota(context.Background(), "u1", model.QuotaKindVoice, 0.4)
 	if err := h.svc.CheckQuota(context.Background(), "u1", model.QuotaKindVoice, 0.2); err == nil {
 		t.Error("0.9 + 0.2 = 1.1 > 1 should block")
+	}
+}
+
+func TestCleanupOldQuotas(t *testing.T) {
+	h := newHarness()
+	ctx := context.Background()
+
+	// Заводим записи на «старую» и «свежую» даты вручную через fake-репо.
+	old := time.Now().UTC().AddDate(0, 0, -120)
+	fresh := time.Now().UTC().AddDate(0, 0, -10)
+	h.quota.items["u1|"+old.Format("2006-01-02")] = &model.UsageQuota{UserID: "u1", Date: old, ChatRequests: 1}
+	h.quota.items["u1|"+fresh.Format("2006-01-02")] = &model.UsageQuota{UserID: "u1", Date: fresh, ChatRequests: 2}
+
+	deleted, err := h.svc.CleanupOldQuotas(ctx, 90)
+	if err != nil {
+		t.Fatalf("CleanupOldQuotas: %v", err)
+	}
+	if deleted != 1 {
+		t.Errorf("deleted = %d, want 1", deleted)
+	}
+	if len(h.quota.items) != 1 {
+		t.Errorf("items left = %d, want 1", len(h.quota.items))
+	}
+}
+
+func TestCleanupOldQuotas_NoOpOnZero(t *testing.T) {
+	h := newHarness()
+	old := time.Now().UTC().AddDate(0, 0, -1000)
+	h.quota.items["u1|"+old.Format("2006-01-02")] = &model.UsageQuota{UserID: "u1", Date: old}
+
+	deleted, err := h.svc.CleanupOldQuotas(context.Background(), 0)
+	if err != nil {
+		t.Fatalf("CleanupOldQuotas: %v", err)
+	}
+	if deleted != 0 {
+		t.Errorf("deleted = %d, want 0 (no-op on retention<=0)", deleted)
+	}
+	if len(h.quota.items) != 1 {
+		t.Errorf("items still expected = 1, got %d", len(h.quota.items))
 	}
 }

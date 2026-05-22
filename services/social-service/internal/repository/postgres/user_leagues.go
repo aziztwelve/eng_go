@@ -107,6 +107,33 @@ func (r *UserLeagueRepository) ResetWeeklyXPInCohort(ctx context.Context, cohort
 	return nil
 }
 
+func (r *UserLeagueRepository) BatchGetByUserIDs(ctx context.Context, userIDs []uuid.UUID) ([]*model.UserLeague, error) {
+	if len(userIDs) == 0 {
+		return nil, nil
+	}
+	q := fmt.Sprintf(
+		"SELECT %s FROM user_leagues WHERE user_id = ANY($1)",
+		userLeagueColumns,
+	)
+	rows, err := r.pool.Query(ctx, q, userIDs)
+	if err != nil {
+		return nil, fmt.Errorf("batch get user leagues: %w", err)
+	}
+	defer rows.Close()
+
+	out := make([]*model.UserLeague, 0, len(userIDs))
+	for rows.Next() {
+		ul := &model.UserLeague{}
+		var rank *int
+		if err := rows.Scan(&ul.UserID, &ul.LeagueID, &ul.CohortID, &ul.WeeklyXP, &rank, &ul.JoinedAt, &ul.LastUpdatedAt); err != nil {
+			return nil, fmt.Errorf("scan user league: %w", err)
+		}
+		ul.RankInCohort = rank
+		out = append(out, ul)
+	}
+	return out, rows.Err()
+}
+
 func (r *UserLeagueRepository) ListByCohort(ctx context.Context, cohortID uuid.UUID) ([]*model.UserLeague, error) {
 	q := fmt.Sprintf(`
 		SELECT %s FROM user_leagues WHERE cohort_id = $1 ORDER BY weekly_xp DESC, joined_at ASC

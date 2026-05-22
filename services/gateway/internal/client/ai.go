@@ -46,6 +46,16 @@ func (c *AIClient) SendMessage(ctx context.Context, req *aiv1.SendMessageRequest
 	return c.client.SendMessage(ctx, req)
 }
 
+// SendMessageStream — server-streaming RPC. Возвращает gRPC client-stream;
+// caller обязан вызывать Recv() в цикле до io.EOF (или ошибки).
+//
+// Контекст должен быть cancelable: при дисконнекте клиента (закрытом
+// SSE-канале) gateway вызовет cancel — и gRPC закроет соединение, ai-service
+// корректно прервёт работу.
+func (c *AIClient) SendMessageStream(ctx context.Context, req *aiv1.SendMessageRequest) (aiv1.AIService_SendMessageStreamClient, error) {
+	return c.client.SendMessageStream(ctx, req)
+}
+
 func (c *AIClient) ListConversations(ctx context.Context, req *aiv1.ListConversationsRequest) (*aiv1.ListConversationsResponse, error) {
 	return c.client.ListConversations(ctx, req)
 }
@@ -68,10 +78,20 @@ func (c *AIClient) ExplainMistake(ctx context.Context, req *aiv1.ExplainMistakeR
 	return c.client.ExplainMistake(ctx, req)
 }
 
+// ExplainMistakeStream — server-streaming RPC (Phase 5.X). См. SendMessageStream.
+func (c *AIClient) ExplainMistakeStream(ctx context.Context, req *aiv1.ExplainMistakeRequest) (aiv1.AIService_ExplainMistakeStreamClient, error) {
+	return c.client.ExplainMistakeStream(ctx, req)
+}
+
 // === Writing ===
 
 func (c *AIClient) AssessWriting(ctx context.Context, req *aiv1.AssessWritingRequest) (*aiv1.AssessWritingResponse, error) {
 	return c.client.AssessWriting(ctx, req)
+}
+
+// AssessWritingStream — server-streaming RPC (Phase 5.X).
+func (c *AIClient) AssessWritingStream(ctx context.Context, req *aiv1.AssessWritingRequest) (aiv1.AIService_AssessWritingStreamClient, error) {
+	return c.client.AssessWritingStream(ctx, req)
 }
 
 // === Pronunciation ===
@@ -86,6 +106,13 @@ func (c *AIClient) AskTutor(ctx context.Context, req *aiv1.AskTutorRequest) (*ai
 	return c.client.AskTutor(ctx, req)
 }
 
+// AskTutorStream — server-streaming RPC. Caller обязан вызывать Recv()
+// в цикле до io.EOF (или ошибки). Контекст должен быть cancelable —
+// при дисконнекте клиента gateway вызовет cancel и gRPC закроет stream.
+func (c *AIClient) AskTutorStream(ctx context.Context, req *aiv1.AskTutorRequest) (aiv1.AIService_AskTutorStreamClient, error) {
+	return c.client.AskTutorStream(ctx, req)
+}
+
 // === Content gen (admin) ===
 
 func (c *AIClient) GenerateExercise(ctx context.Context, req *aiv1.GenerateExerciseRequest) (*aiv1.GenerateExerciseResponse, error) {
@@ -96,6 +123,16 @@ func (c *AIClient) GenerateExercise(ctx context.Context, req *aiv1.GenerateExerc
 
 func (c *AIClient) GetQuotaStatus(ctx context.Context, req *aiv1.GetQuotaStatusRequest) (*aiv1.GetQuotaStatusResponse, error) {
 	return c.client.GetQuotaStatus(ctx, req)
+}
+
+// === Feedback (Phase 5.X) ===
+
+func (c *AIClient) SubmitMessageFeedback(ctx context.Context, req *aiv1.SubmitMessageFeedbackRequest) (*aiv1.SubmitMessageFeedbackResponse, error) {
+	return c.client.SubmitMessageFeedback(ctx, req)
+}
+
+func (c *AIClient) DeleteMessageFeedback(ctx context.Context, req *aiv1.DeleteMessageFeedbackRequest) (*aiv1.DeleteMessageFeedbackResponse, error) {
+	return c.client.DeleteMessageFeedback(ctx, req)
 }
 
 // Close — закрывает gRPC-соединение.

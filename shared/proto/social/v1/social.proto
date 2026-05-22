@@ -56,6 +56,42 @@ service SocialService {
   // manual trigger / тестирования. Параметр force=true игнорирует
   // проверку "когорта ещё не закрыта".
   rpc RunWeeklyRotation(RunWeeklyRotationRequest) returns (RunWeeklyRotationResponse);
+
+  // === Friends (Phase 4.5) ===
+
+  // SendFriendRequest — отправить запрос дружбы (caller → target).
+  // Idempotent: повторный запрос на pending = no-op.
+  // Если target уже отправил pending caller'у — записи объединяются
+  // в accepted (mutual auto-accept).
+  rpc SendFriendRequest(SendFriendRequestRequest) returns (SendFriendRequestResponse);
+
+  // AcceptFriendRequest — принять входящий pending. Только если
+  // caller — target запроса (не requester).
+  rpc AcceptFriendRequest(AcceptFriendRequestRequest) returns (AcceptFriendRequestResponse);
+
+  // RejectFriendRequest — отклонить входящий pending. Удаляет запись
+  // (юзер сможет отправить запрос снова).
+  rpc RejectFriendRequest(RejectFriendRequestRequest) returns (RejectFriendRequestResponse);
+
+  // RemoveFriend — расторгнуть дружбу (любая сторона). Удаляет
+  // accepted-запись.
+  rpc RemoveFriend(RemoveFriendRequest) returns (RemoveFriendResponse);
+
+  // ListFriends — список accepted-друзей с обогащением профилями.
+  rpc ListFriends(ListFriendsRequest) returns (ListFriendsResponse);
+
+  // ListPendingRequests — pending-входящие (which target == caller)
+  // и/или исходящие (requester == caller).
+  rpc ListPendingRequests(ListPendingRequestsRequest) returns (ListPendingRequestsResponse);
+
+  // SearchUsersByUsername — поиск пользователей для добавления в друзья.
+  // Делегирует в auth-service.SearchByUsername + обогащает профилями.
+  // Возвращает также текущий статус дружбы с caller'ом (если есть).
+  rpc SearchUsersByUsername(SearchUsersByUsernameRequest) returns (SearchUsersByUsernameResponse);
+
+  // GetFriendsLeaderboard — leaderboard среди друзей + self,
+  // отсортирован по weekly_xp (DESC) из user_leagues.
+  rpc GetFriendsLeaderboard(GetFriendsLeaderboardRequest) returns (GetFriendsLeaderboardResponse);
 }
 
 // ----------------------------------------------------------------------------
@@ -177,4 +213,127 @@ message RunWeeklyRotationResponse {
   int32 users_promoted = 2;
   int32 users_demoted = 3;
   int32 users_sustained = 4;
+}
+
+// ----------------------------------------------------------------------------
+// Friends (Phase 4.5)
+// ----------------------------------------------------------------------------
+
+// FriendshipStatus — состояние записи в friendships.
+enum FriendshipStatus {
+  FRIENDSHIP_STATUS_UNSPECIFIED = 0;
+  FRIENDSHIP_STATUS_PENDING = 1;
+  FRIENDSHIP_STATUS_ACCEPTED = 2;
+  FRIENDSHIP_STATUS_BLOCKED = 3;
+}
+
+// Friendship — связь пары пользователей.
+// user_id_1 < user_id_2 (нормализованный порядок). requested_by указывает,
+// кто инициировал запрос.
+message Friendship {
+  string id = 1;
+  string user_id_1 = 2;
+  string user_id_2 = 3;
+  FriendshipStatus status = 4;
+  string requested_by = 5;
+  google.protobuf.Timestamp created_at = 6;
+  google.protobuf.Timestamp updated_at = 7;
+}
+
+// FriendInfo — обогащённое представление друга (или поискового результата).
+// Используется в ListFriends, ListPendingRequests, SearchUsersByUsername.
+message FriendInfo {
+  string user_id = 1;
+  string username = 2;        // из auth-service (опционально, может быть пусто)
+  string full_name = 3;       // из user-service.profiles
+  string avatar_url = 4;      // из user-service.profiles
+  // Для leaderboard / профильного экрана:
+  int32 weekly_xp = 5;
+  int32 total_xp = 6;
+  // Статус дружбы с caller'ом. Для search/list:
+  FriendshipStatus friendship_status = 7;
+  // Если status = pending: true → caller получатель, false → caller отправитель.
+  bool is_incoming = 8;
+  // ID записи friendships (если есть).
+  string friendship_id = 9;
+}
+
+// LeaderboardFriendEntry — представление одного юзера в friends-leaderboard.
+message LeaderboardFriendEntry {
+  int32 rank = 1;
+  string user_id = 2;
+  string username = 3;
+  string full_name = 4;
+  string avatar_url = 5;
+  int32 weekly_xp = 6;
+  bool is_me = 7;
+}
+
+message SendFriendRequestRequest {
+  string user_id = 1;     // caller (requester)
+  string target_id = 2;   // получатель запроса
+}
+message SendFriendRequestResponse {
+  Friendship friendship = 1;
+  // true если в результате запроса сразу установилось accepted (mutual).
+  bool auto_accepted = 2;
+}
+
+message AcceptFriendRequestRequest {
+  string user_id = 1;       // caller (target запроса)
+  string friendship_id = 2;
+}
+message AcceptFriendRequestResponse {
+  Friendship friendship = 1;
+}
+
+message RejectFriendRequestRequest {
+  string user_id = 1;       // caller (target запроса)
+  string friendship_id = 2;
+}
+message RejectFriendRequestResponse {}
+
+message RemoveFriendRequest {
+  string user_id = 1;       // caller
+  string friend_id = 2;     // вторая сторона дружбы
+}
+message RemoveFriendResponse {}
+
+message ListFriendsRequest {
+  string user_id = 1;
+  int32 limit = 2;          // 0 → 50
+  int32 offset = 3;
+}
+message ListFriendsResponse {
+  repeated FriendInfo friends = 1;
+  int32 total = 2;
+}
+
+message ListPendingRequestsRequest {
+  string user_id = 1;
+  // direction: 0 → all, 1 → incoming (target=caller), 2 → outgoing (requester=caller).
+  int32 direction = 2;
+  int32 limit = 3;
+  int32 offset = 4;
+}
+message ListPendingRequestsResponse {
+  repeated FriendInfo requests = 1;
+  int32 total = 2;
+}
+
+message SearchUsersByUsernameRequest {
+  string user_id = 1;       // caller (для статуса дружбы)
+  string query = 2;         // префикс username
+  int32 limit = 3;          // 0 → 20, max 50
+}
+message SearchUsersByUsernameResponse {
+  repeated FriendInfo users = 1;
+}
+
+message GetFriendsLeaderboardRequest {
+  string user_id = 1;
+  int32 limit = 2;          // 0 → 50
+}
+message GetFriendsLeaderboardResponse {
+  repeated LeaderboardFriendEntry entries = 1;
 }

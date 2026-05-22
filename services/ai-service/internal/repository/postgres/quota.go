@@ -61,5 +61,17 @@ func (r *quotaRepo) Increment(ctx context.Context, userID string, date time.Time
 	return err
 }
 
+func (r *quotaRepo) DeleteOlderThan(ctx context.Context, before time.Time) (int64, error) {
+	day := truncateDay(before)
+	tag, err := r.pool.Exec(ctx, `
+		DELETE FROM ai_usage_quota
+		WHERE date < $1
+	`, day)
+	if err != nil {
+		return 0, err
+	}
+	return tag.RowsAffected(), nil
+}
+
 // Sentinel — на случай если caller хочет проверить ErrNotFound.
 var _ = repository.ErrNotFound

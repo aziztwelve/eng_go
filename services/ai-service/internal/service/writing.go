@@ -34,11 +34,15 @@ func (s *Service) AssessWriting(ctx context.Context, in AssessWritingInput) (*mo
 		return nil, err
 	}
 
+	// PII redact: и в prompt provider'у, и в `user_text`, который
+	// сохраняется в `ai_writing_assessments`.
+	cleanText := s.redactPII(ctx, in.UserText, "assess_writing")
+
 	pCtx := prompts.WritingContext{
 		TargetLanguage: in.TargetLanguage,
 		UserLevel:      in.UserLevel,
 		Prompt:         in.Prompt,
-		UserText:       in.UserText,
+		UserText:       cleanText,
 	}
 
 	resp, err := s.provider.Chat(ctx,
@@ -55,7 +59,7 @@ func (s *Service) AssessWriting(ctx context.Context, in AssessWritingInput) (*mo
 	assessment := parseWritingAssessment(resp.Content)
 	assessment.UserID = in.UserID
 	assessment.Prompt = in.Prompt
-	assessment.UserText = in.UserText
+	assessment.UserText = cleanText // PII-redacted версия в БД
 	assessment.TargetLanguage = in.TargetLanguage
 	assessment.UserLevel = in.UserLevel
 	assessment.TokensUsed = resp.TokensUsed

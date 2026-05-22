@@ -27,6 +27,8 @@ type ConversationRepository interface {
 // MessageRepository — хранилище сообщений.
 type MessageRepository interface {
 	Create(ctx context.Context, m *model.Message) error
+	// GetByID — для feedback / streaming флоу. ErrNotFound если нет.
+	GetByID(ctx context.Context, id string) (*model.Message, error)
 	// ListByConversation — все сообщения, ORDER BY created_at ASC.
 	ListByConversation(ctx context.Context, conversationID string) ([]*model.Message, error)
 	// GetLastN — последние N сообщений (для prompt history). ORDER BY created_at DESC.
@@ -54,6 +56,35 @@ type PronunciationRepository interface {
 	ListByUser(ctx context.Context, userID string, limit, offset int) ([]*model.PronunciationAttempt, int64, error)
 }
 
+// FeedbackRepository — оценки юзером assistant-сообщений (Phase 5.X).
+//
+// Запись уникальна по (user_id, message_id). Upsert — переключает
+// thumbs up ↔ thumbs down, либо обновляет comment.
+type FeedbackRepository interface {
+	Upsert(ctx context.Context, f *model.MessageFeedback) error
+	Get(ctx context.Context, userID, messageID string) (*model.MessageFeedback, error)
+	Delete(ctx context.Context, userID, messageID string) error
+	// ListByMessageIDs — pre-загрузка для GetConversation. Возвращает
+	// map keyed by message_id.
+	ListByMessageIDs(ctx context.Context, userID string, messageIDs []string) (map[string]*model.MessageFeedback, error)
+	GetConversationStats(ctx context.Context, conversationID string) (*model.FeedbackStats, error)
+}
+
+// ABExposureRepository — журнал A/B exposure events (Phase 5.X).
+//
+// Идемпотентный upsert по (user_id, experiment, variant_id):
+//   - первый assignment → INSERT (first_seen_at = last_seen_at = now,
+//     exposure_count = 1).
+//   - повторные → UPDATE last_seen_at = now, exposure_count++.
+//
+// Запись non-blocking: вызывается асинхронно из service.Pick, чтобы
+// не задерживать hot path AI-вызовов.
+type ABExposureRepository interface {
+	// LogExposure — fire-and-store для одного assignment'а. Неблокирующий
+	// вызов уровня DB; caller обычно вызывает в горутине.
+	LogExposure(ctx context.Context, userID, experiment, variantID string) error
+}
+
 // QuotaRepository — суточные счётчики.
 type QuotaRepository interface {
 	// Get — счётчик за конкретную дату. Если строки нет — возвращает
@@ -63,4 +94,8 @@ type QuotaRepository interface {
 	// Increment — атомарный UPSERT с инкрементом нужного поля.
 	// Один из chatDelta / voiceMinutesDelta / writingDelta задан, остальные = 0.
 	Increment(ctx context.Context, userID string, date time.Time, chatDelta int32, voiceMinutesDelta float64, writingDelta int32) error
+	// DeleteOlderThan — удаляет все строки с date < before. Возвращает
+	// количество удалённых записей. Используется ежедневным cron'ом
+	// для cleanup старых счётчиков (по умолчанию >90 дней).
+	DeleteOlderThan(ctx context.Context, before time.Time) (int64, error)
 }
