@@ -158,6 +158,19 @@ func (s *Service) nowInTZ(ctx context.Context, userID string) time.Time {
 	return s.now().In(s.UserLocation(ctx, userID))
 }
 
+// UserReminderSlot возвращает онбординговое окно напоминаний пользователя:
+// "morning" | "day" | "evening" | "flex". Пустая строка — слот не задан
+// (caller использует default-окно из RemindersConfig).
+//
+// Ошибка user-client'а гасится → "" (значение неизвестно).
+func (s *Service) UserReminderSlot(ctx context.Context, userID string) string {
+	slot, err := s.user.ReminderSlot(ctx, userID)
+	if err != nil {
+		return ""
+	}
+	return slot
+}
+
 // todayInTZ — 00:00 текущего дня в локальной зоне пользователя.
 // Используется как ключ в streak/daily-goal таблицах, чтобы границы дня
 // совпадали с тем, что видит пользователь в UI.

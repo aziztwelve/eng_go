@@ -27,12 +27,18 @@ type profileSnapshot struct {
 	expires  time.Time
 }
 
+type onboardingSnapshot struct {
+	reminderSlot string
+	expires      time.Time
+}
+
 type grpcClient struct {
 	conn   *grpc.ClientConn
 	client userv1.UserServiceClient
 
-	mu    sync.Mutex
-	cache map[string]profileSnapshot
+	mu      sync.Mutex
+	cache   map[string]profileSnapshot
+	onbCache map[string]onboardingSnapshot
 }
 
 // NewGRPCClient устанавливает соединение и возвращает Client. Закрытие
@@ -49,9 +55,10 @@ func NewGRPCClient(ctx context.Context, addr string) (Client, func() error, erro
 		return nil, nil, fmt.Errorf("dial user %s: %w", addr, err)
 	}
 	return &grpcClient{
-		conn:   conn,
-		client: userv1.NewUserServiceClient(conn),
-		cache:  map[string]profileSnapshot{},
+		conn:     conn,
+		client:   userv1.NewUserServiceClient(conn),
+		cache:    map[string]profileSnapshot{},
+		onbCache: map[string]onboardingSnapshot{},
 	}, conn.Close, nil
 }
 
@@ -95,6 +102,40 @@ func (c *grpcClient) DateOfBirthMMDD(ctx context.Context, userID string) (string
 
 func (c *grpcClient) Timezone(ctx context.Context, userID string) (string, error) {
 	return c.getSnapshot(ctx, userID).timezone, nil
+}
+
+// getOnboardingSnapshot возвращает выжимку из OnboardingState (только
+// `reminder_slot`). TTL и trade-off'ы аналогичны profileCacheTTL.
+func (c *grpcClient) getOnboardingSnapshot(ctx context.Context, userID string) onboardingSnapshot {
+	c.mu.Lock()
+	if cached, ok := c.onbCache[userID]; ok && time.Now().Before(cached.expires) {
+		c.mu.Unlock()
+		return cached
+	}
+	c.mu.Unlock()
+
+	resp, err := c.client.GetOnboardingState(ctx, &userv1.GetOnboardingStateRequest{UserId: userID})
+	if err != nil {
+		logger.Debug(ctx, "user.GetOnboardingState failed (will fall back to defaults)",
+			zap.String("user_id", userID), zap.Error(err))
+		empty := onboardingSnapshot{expires: time.Now().Add(profileCacheTTL)}
+		c.mu.Lock()
+		c.onbCache[userID] = empty
+		c.mu.Unlock()
+		return empty
+	}
+	snap := onboardingSnapshot{
+		reminderSlot: strings.TrimSpace(resp.GetState().GetReminderSlot().GetValue()),
+		expires:      time.Now().Add(profileCacheTTL),
+	}
+	c.mu.Lock()
+	c.onbCache[userID] = snap
+	c.mu.Unlock()
+	return snap
+}
+
+func (c *grpcClient) ReminderSlot(ctx context.Context, userID string) (string, error) {
+	return c.getOnboardingSnapshot(ctx, userID).reminderSlot, nil
 }
 
 // toMMDD нормализует разные распространенные форматы даты в "MM-DD".

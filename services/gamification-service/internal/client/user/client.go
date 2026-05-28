@@ -20,4 +20,8 @@ type Client interface {
 	// Если профиль отсутствует, поле пусто или сервис недоступен — возвращает
 	// "" (вызывающий код должен трактовать как UTC).
 	Timezone(ctx context.Context, userID string) (string, error)
+	// ReminderSlot возвращает онбординговое окно напоминаний пользователя:
+	// "morning" | "day" | "evening" | "flex". Пусто → не задано (caller
+	// использует default-окно).
+	ReminderSlot(ctx context.Context, userID string) (string, error)
 }

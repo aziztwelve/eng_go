@@ -113,6 +113,9 @@ func (a *App) initRouter(ctx context.Context) error {
 			// POST /auth/claim — конвертация в registered (требуется guest JWT).
 			auth.POST("/guest", authHandler.CreateGuestSession)
 			auth.POST("/claim", authMiddleware.Handle(), authHandler.ClaimGuest)
+			// Onboarding v3 (Oki-style): OAuth-claim для sign-up через
+			// Google / Apple. См. docs/tasks/mob/onboarding-v3-oki-style.md §2.4.
+			auth.POST("/claim/oauth", authMiddleware.Handle(), authHandler.ClaimGuestOAuth)
 		}
 
 		courses := v1.Group("/courses")

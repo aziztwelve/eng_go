@@ -11,8 +11,9 @@ import (
 
 // fakeUserClient — реализация userclient.Client для unit-тестов.
 type fakeUserClient struct {
-	dob string
-	tz  string
+	dob          string
+	tz           string
+	reminderSlot string
 }
 
 func (f *fakeUserClient) DateOfBirthMMDD(_ context.Context, _ string) (string, error) {
@@ -21,6 +22,10 @@ func (f *fakeUserClient) DateOfBirthMMDD(_ context.Context, _ string) (string, e
 
 func (f *fakeUserClient) Timezone(_ context.Context, _ string) (string, error) {
 	return f.tz, nil
+}
+
+func (f *fakeUserClient) ReminderSlot(_ context.Context, _ string) (string, error) {
+	return f.reminderSlot, nil
 }
 
 // buildServiceWithUser — buildService + кастомный user-клиент. Возвращает

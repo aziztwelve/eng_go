@@ -11,7 +11,7 @@ import (
 	repoModel "github.com/elearning/auth-service/internal/repository/model"
 )
 
-const userColumns = `id, email, username, password_hash, role, created_at, is_guest, guest_device_id`
+const userColumns = `id, email, username, password_hash, role, created_at, is_guest, guest_device_id, oauth_provider, oauth_sub`
 
 func scanUser(row pgx.Row) (repoModel.User, error) {
 	var u repoModel.User
@@ -24,6 +24,8 @@ func scanUser(row pgx.Row) (repoModel.User, error) {
 		&u.CreatedAt,
 		&u.IsGuest,
 		&u.GuestDeviceID,
+		&u.OAuthProvider,
+		&u.OAuthSub,
 	)
 	return u, err
 }
@@ -133,6 +135,72 @@ func (r *repository) ClaimGuest(ctx context.Context, userID, email, username, pa
 		RETURNING ` + userColumns
 
 	repoUser, err := scanUser(tx.QueryRow(ctx, query, userID, email, username, passwordHash))
+	if err != nil {
+		if errors.Is(err, pgx.ErrNoRows) {
+			return model.User{}, model.ErrUserNotFound
+		}
+		return model.User{}, err
+	}
+
+	if err := tx.Commit(ctx); err != nil {
+		return model.User{}, err
+	}
+
+	return repoConverter.ToDomainUser(repoUser), nil
+}
+
+// ClaimGuestWithOAuth атомарно конвертирует гостя в registered user через
+// OAuth-credentials (Google / Apple / guest_fake stub).
+// Возвращает ErrUserAlreadyExists если email/(provider,sub) заняты,
+// ErrUserNotFound если гость не найден или уже не is_guest.
+func (r *repository) ClaimGuestWithOAuth(
+	ctx context.Context,
+	userID, email, username, provider, sub string,
+) (model.User, error) {
+	tx, err := r.pool.Begin(ctx)
+	if err != nil {
+		return model.User{}, err
+	}
+	defer func() { _ = tx.Rollback(ctx) }()
+
+	// 1. email uniqueness check (на не-self users).
+	var taken bool
+	if err := tx.QueryRow(ctx, `
+		SELECT EXISTS(SELECT 1 FROM public.users WHERE email = $1 AND id != $2)
+	`, email, userID).Scan(&taken); err != nil {
+		return model.User{}, err
+	}
+	if taken {
+		return model.User{}, model.ErrUserAlreadyExists
+	}
+
+	// 2. (provider, sub) uniqueness check.
+	if err := tx.QueryRow(ctx, `
+		SELECT EXISTS(
+			SELECT 1 FROM public.users
+			WHERE oauth_provider = $1 AND oauth_sub = $2 AND id != $3
+		)
+	`, provider, sub, userID).Scan(&taken); err != nil {
+		return model.User{}, err
+	}
+	if taken {
+		return model.User{}, model.ErrUserAlreadyExists
+	}
+
+	// 3. UPDATE с условием is_guest=true (защита от двойного claim).
+	// password_hash остаётся NULL — auth через OAuth.
+	query := `
+		UPDATE public.users
+		SET email = $2,
+		    username = $3,
+		    oauth_provider = $4,
+		    oauth_sub = $5,
+		    is_guest = FALSE,
+		    guest_device_id = NULL
+		WHERE id = $1 AND is_guest = TRUE
+		RETURNING ` + userColumns
+
+	repoUser, err := scanUser(tx.QueryRow(ctx, query, userID, email, username, provider, sub))
 	if err != nil {
 		if errors.Is(err, pgx.ErrNoRows) {
 			return model.User{}, model.ErrUserNotFound

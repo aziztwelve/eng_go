@@ -71,6 +71,12 @@ func (c *AuthClient) ClaimGuestAccount(ctx context.Context, req *authv1.ClaimGue
 	return c.client.ClaimGuestAccount(ctx, req)
 }
 
+// ClaimGuestWithOAuth — OAuth-based claim для onboarding v3 (Oki-style).
+// См. docs/tasks/mob/onboarding-v3-oki-style.md §2.4.
+func (c *AuthClient) ClaimGuestWithOAuth(ctx context.Context, req *authv1.ClaimGuestWithOAuthRequest) (*authv1.ClaimGuestAccountResponse, error) {
+	return c.client.ClaimGuestWithOAuth(ctx, req)
+}
+
 // CleanupExpiredGuests — admin/cron RPC, физически удаляет старых гостей.
 func (c *AuthClient) CleanupExpiredGuests(ctx context.Context, req *authv1.CleanupExpiredGuestsRequest) (*authv1.CleanupExpiredGuestsResponse, error) {
 	return c.client.CleanupExpiredGuests(ctx, req)

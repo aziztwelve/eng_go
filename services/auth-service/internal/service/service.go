@@ -36,6 +36,12 @@ type AuthService interface {
 	// и выдаёт fresh-токены без is_guest claim. user_id preserve'ится.
 	ClaimGuestAccount(ctx context.Context, guestUserID, email, password, username string) (user model.User, tokens model.TokenPair, err error)
 
+	// ClaimGuestWithOAuth — claim guest через OAuth (Google / Apple).
+	// В Sprint 1 верификация id_token stub'нута: provider='guest_fake'
+	// принимает любой id_token, использует email/displayName из request.
+	// См. docs/tasks/mob/onboarding-v3-oki-style.md §2.4.
+	ClaimGuestWithOAuth(ctx context.Context, guestUserID, provider, idToken, email, displayName string) (user model.User, tokens model.TokenPair, err error)
+
 	// CleanupExpiredGuests удаляет гостей старше cutoffDays (default 90).
 	CleanupExpiredGuests(ctx context.Context, cutoffDays int32) (int32, error)
 }

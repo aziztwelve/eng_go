@@ -17,6 +17,9 @@ type User struct {
 	CreatedAt     time.Time
 	IsGuest       bool
 	GuestDeviceID *string
+	// Onboarding v3 — OAuth claim. nil для regular email-password users.
+	OAuthProvider *string // 'google' | 'apple' | 'guest_fake'
+	OAuthSub      *string // subject claim из id_token
 }
 
 // EmailValue возвращает email или пустую строку (для proto-конверсии).

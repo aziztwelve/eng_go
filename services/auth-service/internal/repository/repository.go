@@ -28,6 +28,12 @@ type AuthRepository interface {
 	// ClaimGuest конвертирует гостя (is_guest=true) в registered user
 	// одним атомарным UPDATE'ом, сохраняя user_id.
 	ClaimGuest(ctx context.Context, userID, email, username, passwordHash string) (model.User, error)
+
+	// ClaimGuestWithOAuth — claim guest через OAuth (Google / Apple /
+	// guest_fake). Conflict-handling такой же как у ClaimGuest:
+	// ErrUserAlreadyExists если email или (provider, sub) заняты,
+	// ErrUserNotFound если гость не существует/не is_guest.
+	ClaimGuestWithOAuth(ctx context.Context, userID, email, username, provider, sub string) (model.User, error)
 	// CleanupExpiredGuests удаляет всех гостей старше cutoffDays.
 	CleanupExpiredGuests(ctx context.Context, cutoffDays int32) (int32, error)
 }

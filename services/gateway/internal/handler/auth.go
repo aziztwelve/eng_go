@@ -266,3 +266,44 @@ func (h *AuthHandler) ClaimGuest(c *gin.Context) {
 		ExpiresAt:    resp.ExpiresAt.AsTime().Format(time.RFC3339),
 	})
 }
+
+// ClaimGuestOAuth — POST /api/v1/auth/claim/oauth. Защищён AuthMiddleware:
+// guest_user_id берётся из JWT. Для onboarding v3 sign-up экрана (Google /
+// Apple). См. docs/tasks/mob/onboarding-v3-oki-style.md §2.4.
+func (h *AuthHandler) ClaimGuestOAuth(c *gin.Context) {
+	userID, exists := c.Get("user_id")
+	if !exists {
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "User ID not found in context"})
+		return
+	}
+	userIDStr, ok := userID.(string)
+	if !ok {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Invalid user ID format"})
+		return
+	}
+
+	var req dto.ClaimGuestOAuthRequest
+	if err := c.ShouldBindJSON(&req); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	resp, err := h.authClient.ClaimGuestWithOAuth(c.Request.Context(), &authv1.ClaimGuestWithOAuthRequest{
+		GuestUserId: userIDStr,
+		Provider:    req.Provider,
+		IdToken:     req.IDToken,
+		Email:       req.Email,
+		DisplayName: req.DisplayName,
+	})
+	if err != nil {
+		errors.HandleGRPCError(c, err)
+		return
+	}
+
+	c.JSON(http.StatusOK, dto.ClaimGuestResponse{
+		UserID:       resp.UserId,
+		AccessToken:  resp.AccessToken,
+		RefreshToken: resp.RefreshToken,
+		ExpiresAt:    resp.ExpiresAt.AsTime().Format(time.RFC3339),
+	})
+}

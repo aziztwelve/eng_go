@@ -15,4 +15,7 @@ type User struct {
 	CreatedAt     time.Time      `db:"created_at"`
 	IsGuest       bool           `db:"is_guest"`
 	GuestDeviceID sql.NullString `db:"guest_device_id"`
+	// Onboarding v3 — OAuth claim (Google / Apple / guest_fake).
+	OAuthProvider sql.NullString `db:"oauth_provider"`
+	OAuthSub      sql.NullString `db:"oauth_sub"`
 }

@@ -49,6 +49,20 @@ service AuthService {
   // user.is_guest = false, появляются email/password/username.
   rpc ClaimGuestAccount(ClaimGuestAccountRequest) returns (ClaimGuestAccountResponse);
 
+  // ClaimGuestWithOAuth — claim guest через OAuth (Google / Apple).
+  // Mobile onboarding v3 (Oki-style) использует только OAuth-кнопки на
+  // sign-up экране, без email/password формы. См.
+  // docs/tasks/mob/onboarding-v3-oki-style.md §2.4.
+  //
+  // Pipeline:
+  //   1. Verify id_token (Google JWKS / Apple JWKS). В Sprint 1 верификация
+  //      stub'нута: provider='guest_fake' принимает любой id_token.
+  //   2. Извлечь email + sub из id_token (или из request для guest_fake).
+  //   3. UPDATE users SET is_guest=false, email, oauth_provider, oauth_sub
+  //      WHERE id = guest_user_id AND is_guest = true.
+  //   4. Issue fresh JWT без is_guest claim.
+  rpc ClaimGuestWithOAuth(ClaimGuestWithOAuthRequest) returns (ClaimGuestAccountResponse);
+
   // CleanupExpiredGuests удаляет гостей старше cutoff_days (default 90).
   // Используется cron'ом auth-service. Cascade удалит все downstream-данные
   // через FK ON DELETE CASCADE (которые у нас НЕ настроены — гость просто
@@ -210,6 +224,25 @@ message ClaimGuestAccountResponse {
   string access_token  = 2;
   string refresh_token = 3;
   google.protobuf.Timestamp expires_at = 4;
+}
+
+// ClaimGuestWithOAuthRequest — OAuth-based claim для онбординга v3.
+//
+// provider:
+//   'google' — id_token проверяется через Google JWKS.
+//   'apple'  — id_token проверяется через Apple JWKS.
+//   'guest_fake' — Sprint 1 stub; принимает любой id_token, использует
+//                  email/display_name из request as-is.
+//
+// id_token — JWT от провайдера. Из него извлекается email и sub.
+// email/display_name — fallback'и для guest_fake и редких кейсов
+// (Apple возвращает email только при первом логине).
+message ClaimGuestWithOAuthRequest {
+  string guest_user_id = 1;
+  string provider      = 2; // 'google' | 'apple' | 'guest_fake'
+  string id_token      = 3; // JWT
+  string email         = 4; // fallback / required for guest_fake stub
+  string display_name  = 5; // optional, fallback на username из id_token sub
 }
 
 // CleanupExpiredGuestsRequest — параметры cron-cleanup'а.

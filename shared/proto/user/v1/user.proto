@@ -184,6 +184,19 @@ message OnboardingState {
   google.protobuf.StringValue date_of_birth      = 9;  // ISO date
   google.protobuf.Timestamp   onboarded_at       = 10;
   bool                        completed          = 11; // == onboarded_at != null
+
+  // === Onboarding v3 (Oki-style) ===
+  // См. docs/tasks/mob/onboarding-v3-oki-style.md §2.1.
+  google.protobuf.StringValue age_bracket           = 12; // '7-12'|'13-17'|...|'55+'
+  google.protobuf.Int32Value  daily_commit_minutes  = 13; // 5|10|15|25
+  google.protobuf.StringValue pain_point            = 14; // 'fear_speaking'|'lack_vocab'|...
+  google.protobuf.StringValue speaking_situation    = 15; // 'freeze'|'translate_in_head'|...
+  google.protobuf.StringValue past_blocker          = 16; // 'boring'|'too_hard'|...
+  google.protobuf.StringValue future_regret         = 17; // 'stay_same'|'limit_self'|...
+  google.protobuf.StringValue emotional_reaction    = 18; // 'lose_confidence'|'upset'|...
+  google.protobuf.StringValue reminder_slot         = 19; // 'morning'|'day'|'evening'|'flex'
+  google.protobuf.Timestamp   paywall_seen_at       = 20;
+  google.protobuf.StringValue paywall_choice        = 21; // 'annual'|'monthly'|'dismissed'|'special_offer'
 }
 
 // GetOnboardingStateRequest — юзер из контекста.
@@ -217,6 +230,18 @@ message PatchOnboardingStateRequest {
   google.protobuf.StringValue signup_source      = 8;
   google.protobuf.Int32Value  placement_score    = 9;
   google.protobuf.StringValue date_of_birth      = 10;
+
+  // === Onboarding v3 (Oki-style) — все nullable для partial-update ===
+  google.protobuf.StringValue age_bracket           = 11;
+  google.protobuf.Int32Value  daily_commit_minutes  = 12;
+  google.protobuf.StringValue pain_point            = 13;
+  google.protobuf.StringValue speaking_situation    = 14;
+  google.protobuf.StringValue past_blocker          = 15;
+  google.protobuf.StringValue future_regret         = 16;
+  google.protobuf.StringValue emotional_reaction    = 17;
+  google.protobuf.StringValue reminder_slot         = 18;
+  google.protobuf.Timestamp   paywall_seen_at       = 19;
+  google.protobuf.StringValue paywall_choice        = 20;
 }
 
 // PatchOnboardingStateResponse — обновлённый state.

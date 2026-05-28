@@ -19,23 +19,11 @@ type Scenario struct {
 }
 
 // allScenarios — каталог. id-формат: "roleplay_<slug>".
+//
+// MVP-набор: только English-сценарии (см. AI_TARGET_LANGS на фронте,
+// 2026-05). Сценарии для es/fr/de вернутся вместе с активацией
+// соответствующих языков на UI.
 var allScenarios = []Scenario{
-	{
-		ID:          "roleplay_restaurant",
-		Title:       "Ordering at a Restaurant",
-		Description: "Practice ordering food and drinks in a Spanish restaurant.",
-		UserLevel:   "A2",
-		Language:    "es",
-		AIRole:      "Waiter named Carlos",
-		Context:     "You're at a Spanish restaurant. The waiter approaches your table.",
-		InitialMessage: "¡Hola! Bienvenido. ¿Qué desea ordenar?",
-		VocabularyFocus: []string{"food", "drinks", "polite_phrases"},
-		SuccessCriteria: []string{
-			"Order at least one main dish",
-			"Order at least one drink",
-			"Use 'por favor' and 'gracias'",
-		},
-	},
 	{
 		ID:          "roleplay_airport",
 		Title:       "At the Airport",
@@ -66,22 +54,6 @@ var allScenarios = []Scenario{
 			"State your name and role",
 			"Mention previous experience",
 			"Express enthusiasm",
-		},
-	},
-	{
-		ID:          "roleplay_hotel",
-		Title:       "Hotel Check-in",
-		Description: "Check into a hotel, ask about facilities and resolve a small issue.",
-		UserLevel:   "A2",
-		Language:    "fr",
-		AIRole:      "Receptionist named Pierre",
-		Context:     "You arrive at a hotel in Paris with a reservation.",
-		InitialMessage: "Bonsoir, monsieur/madame ! Avez-vous une réservation ?",
-		VocabularyFocus: []string{"hotel", "facilities", "complaints"},
-		SuccessCriteria: []string{
-			"Provide reservation name",
-			"Ask about Wi-Fi or breakfast",
-			"Use polite forms",
 		},
 	},
 	{

@@ -4,6 +4,7 @@ import (
 	"context"
 	"database/sql"
 	"errors"
+	"time"
 
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
@@ -34,6 +35,18 @@ func scanState(row pgx.Row) (model.OnboardingState, error) {
 		placementScore sql.NullInt32
 		dateOfBirth    sql.NullTime
 		onboardedAt    sql.NullTime
+
+		// v3 fields:
+		ageBracket         sql.NullString
+		dailyCommitMinutes sql.NullInt32
+		painPoint          sql.NullString
+		speakingSituation  sql.NullString
+		pastBlocker        sql.NullString
+		futureRegret       sql.NullString
+		emotionalReaction  sql.NullString
+		reminderSlot       sql.NullString
+		paywallSeenAt      sql.NullTime
+		paywallChoice      sql.NullString
 	)
 
 	err := row.Scan(
@@ -47,6 +60,16 @@ func scanState(row pgx.Row) (model.OnboardingState, error) {
 		&placementScore,
 		&dateOfBirth,
 		&onboardedAt,
+		&ageBracket,
+		&dailyCommitMinutes,
+		&painPoint,
+		&speakingSituation,
+		&pastBlocker,
+		&futureRegret,
+		&emotionalReaction,
+		&reminderSlot,
+		&paywallSeenAt,
+		&paywallChoice,
 	)
 	if err != nil {
 		return model.OnboardingState{}, err
@@ -88,6 +111,40 @@ func scanState(row pgx.Row) (model.OnboardingState, error) {
 		state.OnboardedAt = &t
 	}
 
+	// v3 fields:
+	if ageBracket.Valid {
+		state.AgeBracket = &ageBracket.String
+	}
+	if dailyCommitMinutes.Valid {
+		v := dailyCommitMinutes.Int32
+		state.DailyCommitMinutes = &v
+	}
+	if painPoint.Valid {
+		state.PainPoint = &painPoint.String
+	}
+	if speakingSituation.Valid {
+		state.SpeakingSituation = &speakingSituation.String
+	}
+	if pastBlocker.Valid {
+		state.PastBlocker = &pastBlocker.String
+	}
+	if futureRegret.Valid {
+		state.FutureRegret = &futureRegret.String
+	}
+	if emotionalReaction.Valid {
+		state.EmotionalReaction = &emotionalReaction.String
+	}
+	if reminderSlot.Valid {
+		state.ReminderSlot = &reminderSlot.String
+	}
+	if paywallSeenAt.Valid {
+		t := paywallSeenAt.Time
+		state.PaywallSeenAt = &t
+	}
+	if paywallChoice.Valid {
+		state.PaywallChoice = &paywallChoice.String
+	}
+
 	return state, nil
 }
 
@@ -127,6 +184,17 @@ func (r *repo) PatchState(ctx context.Context, userID string, patch model.PatchO
 		toNullString(patch.SignupSource),
 		toNullInt32(patch.PlacementScore),
 		dob,
+		// v3:
+		toNullString(patch.AgeBracket),
+		toNullInt32(patch.DailyCommitMinutes),
+		toNullString(patch.PainPoint),
+		toNullString(patch.SpeakingSituation),
+		toNullString(patch.PastBlocker),
+		toNullString(patch.FutureRegret),
+		toNullString(patch.EmotionalReaction),
+		toNullString(patch.ReminderSlot),
+		toNullTime(patch.PaywallSeenAt),
+		toNullString(patch.PaywallChoice),
 	)
 	return scanState(row)
 }
@@ -148,4 +216,11 @@ func toNullInt32(v *int32) sql.NullInt32 {
 		return sql.NullInt32{}
 	}
 	return sql.NullInt32{Int32: *v, Valid: true}
+}
+
+func toNullTime(t *time.Time) sql.NullTime {
+	if t == nil {
+		return sql.NullTime{}
+	}
+	return sql.NullTime{Time: *t, Valid: true}
 }

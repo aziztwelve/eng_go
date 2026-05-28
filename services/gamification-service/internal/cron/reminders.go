@@ -33,6 +33,8 @@ import (
 // RemindersConfig — настройки notification cron'а.
 type RemindersConfig struct {
 	// Local hour (0..23) когда шлём streak_risk (если не сохранён).
+	// Используется как default, если у юзера не задан reminder_slot
+	// (или slot=='flex'). Slot-aware маппинг см. SlotHours.
 	StreakRiskHour int
 	// Local hour (0..23) когда шлём daily_goal (если не выполнен).
 	DailyGoalHour int
@@ -45,6 +47,36 @@ var DefaultReminders = RemindersConfig{
 	StreakRiskHour: 20,
 	DailyGoalHour:  21,
 	BatchSize:      500,
+}
+
+// SlotHours — час срабатывания streak_risk + daily_goal в пределах окна
+// `reminder_slot` (см. spec §1, §2.7). Хотим, чтобы streak_risk бил ближе
+// к концу окна (last call), а daily_goal — на час позже (если человек
+// прошёл часть, но не добил).
+//
+//   morning  07-11  → streak_risk=10, daily_goal=11
+//   day      12-17  → streak_risk=16, daily_goal=17
+//   evening  18-22  → streak_risk=20, daily_goal=21
+//   flex     любое  → используем default (20 / 21).
+type SlotHours struct {
+	StreakRisk int
+	DailyGoal  int
+}
+
+var SlotHoursMap = map[string]SlotHours{
+	"morning": {StreakRisk: 10, DailyGoal: 11},
+	"day":     {StreakRisk: 16, DailyGoal: 17},
+	"evening": {StreakRisk: 20, DailyGoal: 21},
+	// "flex" → не в map'е; caller использует cfg defaults.
+}
+
+// hoursForSlot возвращает (streak, goal) часы для slot'а; пустой / 'flex' /
+// неизвестный slot → cfg defaults.
+func (cfg RemindersConfig) hoursForSlot(slot string) (int, int) {
+	if h, ok := SlotHoursMap[slot]; ok {
+		return h.StreakRisk, h.DailyGoal
+	}
+	return cfg.StreakRiskHour, cfg.DailyGoalHour
 }
 
 // RemindersScheduler — отдельный планировщик для streak_risk + daily_goal.
@@ -161,20 +193,26 @@ func (r *RemindersScheduler) tick(ctx context.Context, ranAt time.Time) {
 
 // maybeRemind проверяет один user'ов локальный час и шлёт push'и при
 // совпадении. Возвращает (streak_sent, daily_goal_sent) — 0/1 для каждого.
+//
+// Часы определяются через `reminder_slot` из онбординга (slot-aware):
+//   morning → 10/11, day → 16/17, evening → 20/21, flex/empty → cfg defaults.
 func (r *RemindersScheduler) maybeRemind(ctx context.Context, userID string, ranAtUTC time.Time) (int, int) {
 	loc := r.svc.UserLocation(ctx, userID)
 	local := ranAtUTC.In(loc)
 	hour := local.Hour()
 
+	slot := r.svc.UserReminderSlot(ctx, userID)
+	streakHour, goalHour := r.cfg.hoursForSlot(slot)
+
 	// Только в часы триггеров делаем работу. tick на :00 каждого часа,
 	// поэтому проверка точная.
-	if hour != r.cfg.StreakRiskHour && hour != r.cfg.DailyGoalHour {
+	if hour != streakHour && hour != goalHour {
 		return 0, 0
 	}
 
 	streakSent, goalSent := 0, 0
 
-	if hour == r.cfg.StreakRiskHour {
+	if hour == streakHour {
 		todayLocal := time.Date(local.Year(), local.Month(), local.Day(), 0, 0, 0, 0, loc)
 		day, err := r.streakRpo.Get(ctx, userID, todayLocal)
 		// repository.ErrNotFound → ещё не было completion'а сегодня.
@@ -192,7 +230,7 @@ func (r *RemindersScheduler) maybeRemind(ctx context.Context, userID string, ran
 		}
 	}
 
-	if hour == r.cfg.DailyGoalHour {
+	if hour == goalHour {
 		_, prog, err := r.svc.GetDailyGoal(ctx, userID)
 		if err == nil && prog != nil && !prog.Completed {
 			if r.send(ctx, userID, "daily_goal",

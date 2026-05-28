@@ -17,3 +17,7 @@ func (n *noopClient) DateOfBirthMMDD(_ context.Context, _ string) (string, error
 func (n *noopClient) Timezone(_ context.Context, _ string) (string, error) {
 	return "", nil
 }
+
+func (n *noopClient) ReminderSlot(_ context.Context, _ string) (string, error) {
+	return "", nil
+}

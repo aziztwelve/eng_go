@@ -18,6 +18,8 @@ func ToRepoUser(user model.User) repoModel.User {
 		CreatedAt:     user.CreatedAt,
 		IsGuest:       user.IsGuest,
 		GuestDeviceID: strPtrToNull(user.GuestDeviceID),
+		OAuthProvider: strPtrToNull(user.OAuthProvider),
+		OAuthSub:      strPtrToNull(user.OAuthSub),
 	}
 }
 
@@ -32,6 +34,8 @@ func ToDomainUser(user repoModel.User) model.User {
 		CreatedAt:     user.CreatedAt,
 		IsGuest:       user.IsGuest,
 		GuestDeviceID: nullToStrPtr(user.GuestDeviceID),
+		OAuthProvider: nullToStrPtr(user.OAuthProvider),
+		OAuthSub:      nullToStrPtr(user.OAuthSub),
 	}
 }
 

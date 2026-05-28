@@ -63,6 +63,22 @@ type ClaimGuestResponse struct {
 	ExpiresAt    string `json:"expires_at"`
 }
 
+// ClaimGuestOAuthRequest — гость claim'ится через OAuth (Google / Apple).
+// guest_user_id берётся из JWT (middleware).
+//
+// provider:
+//   'google' / 'apple' — реальные OAuth-провайдеры (Sprint 2 — JWKS verify).
+//   'guest_fake' — Sprint 1 stub, принимает любой id_token.
+//
+// email и display_name — fallback'и. Для guest_fake — обязательны.
+// См. docs/tasks/mob/onboarding-v3-oki-style.md §2.4.
+type ClaimGuestOAuthRequest struct {
+	Provider    string `json:"provider"     binding:"required,oneof=google apple guest_fake"`
+	IDToken     string `json:"id_token"     binding:"required"`
+	Email       string `json:"email"        binding:"required,email"`
+	DisplayName string `json:"display_name,omitempty"`
+}
+
 // MeResponse содержит полную информацию о текущем пользователе
 type MeResponse struct {
 	// Из auth-service

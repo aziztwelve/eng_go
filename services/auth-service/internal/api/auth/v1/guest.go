@@ -68,6 +68,41 @@ func (a *api) ClaimGuestAccount(
 	}, nil
 }
 
+// ClaimGuestWithOAuth — конвертирует гостя через OAuth (Google / Apple).
+// Sprint 1 stub'нут (см. service/auth/claim.go ClaimGuestWithOAuth).
+func (a *api) ClaimGuestWithOAuth(
+	ctx context.Context,
+	req *authv1.ClaimGuestWithOAuthRequest,
+) (*authv1.ClaimGuestAccountResponse, error) {
+	user, tokens, err := a.authService.ClaimGuestWithOAuth(
+		ctx,
+		req.GetGuestUserId(),
+		req.GetProvider(),
+		req.GetIdToken(),
+		req.GetEmail(),
+		req.GetDisplayName(),
+	)
+	if err != nil {
+		switch {
+		case errors.Is(err, model.ErrInvalidCredentials):
+			return nil, status.Error(codes.InvalidArgument, "invalid oauth credentials")
+		case errors.Is(err, model.ErrUserAlreadyExists):
+			return nil, status.Error(codes.AlreadyExists, "email or oauth identity already taken")
+		case errors.Is(err, model.ErrUserNotFound):
+			return nil, status.Error(codes.FailedPrecondition, "guest not found or already claimed")
+		default:
+			return nil, status.Errorf(codes.Internal, "claim guest oauth: %v", err)
+		}
+	}
+
+	return &authv1.ClaimGuestAccountResponse{
+		UserId:       user.ID,
+		AccessToken:  tokens.AccessToken,
+		RefreshToken: tokens.RefreshToken,
+		ExpiresAt:    timestamppb.New(tokens.ExpiresAt),
+	}, nil
+}
+
 // CleanupExpiredGuests — RPC для cron'а (или admin-инструмента).
 func (a *api) CleanupExpiredGuests(
 	ctx context.Context,
