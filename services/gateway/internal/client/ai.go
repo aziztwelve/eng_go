@@ -135,6 +135,12 @@ func (c *AIClient) DeleteMessageFeedback(ctx context.Context, req *aiv1.DeleteMe
 	return c.client.DeleteMessageFeedback(ctx, req)
 }
 
+// === Flashcard suggestions (Phase 7) ===
+
+func (c *AIClient) SuggestFlashcards(ctx context.Context, req *aiv1.SuggestFlashcardsRequest) (*aiv1.SuggestFlashcardsResponse, error) {
+	return c.client.SuggestFlashcards(ctx, req)
+}
+
 // Close — закрывает gRPC-соединение.
 func (c *AIClient) Close() error {
 	return c.conn.Close()

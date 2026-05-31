@@ -4,8 +4,10 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"os"
 	"testing"
 
+	"github.com/elearning/platform/pkg/logger"
 	gamificationv1 "github.com/elearning/shared/pkg/proto/gamification/v1"
 	srsv1 "github.com/elearning/shared/pkg/proto/srs/v1"
 	"github.com/elearning/step-validation-service/internal/client/course"
@@ -13,6 +15,13 @@ import (
 	"github.com/elearning/step-validation-service/internal/client/srs"
 	"github.com/elearning/step-validation-service/internal/model"
 )
+
+// TestMain — инициализируем глобальный logger как nop, иначе logger.Info
+// в auto-add hook'е упадёт в nil-pointer.
+func TestMain(m *testing.M) {
+	logger.InitForBenchmark()
+	os.Exit(m.Run())
+}
 
 // === fakes ===
 
@@ -58,6 +67,11 @@ type stubCourse struct {
 	markCalled     int
 	markErr        error
 	lastMarkedStep string
+
+	// Phase 7 auto-add hook tracking.
+	addFlashcardCalled int
+	addFlashcardVocab  []string
+	addFlashcardErr    error
 }
 
 func (c *stubCourse) GetStep(_ context.Context, _ string) (*course.Step, error) {
@@ -71,6 +85,12 @@ func (c *stubCourse) MarkStepComplete(_ context.Context, req course.MarkComplete
 	c.markCalled++
 	c.lastMarkedStep = req.StepID
 	return c.markErr
+}
+
+func (c *stubCourse) AddVocabularyAsFlashcard(_ context.Context, _, vocabularyID, _ string) error {
+	c.addFlashcardCalled++
+	c.addFlashcardVocab = append(c.addFlashcardVocab, vocabularyID)
+	return c.addFlashcardErr
 }
 
 type stubGamification struct {

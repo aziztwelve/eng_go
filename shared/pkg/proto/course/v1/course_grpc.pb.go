@@ -19,47 +19,58 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	CourseService_ListCourses_FullMethodName           = "/course.v1.CourseService/ListCourses"
-	CourseService_GetCourse_FullMethodName             = "/course.v1.CourseService/GetCourse"
-	CourseService_GetLesson_FullMethodName             = "/course.v1.CourseService/GetLesson"
-	CourseService_GetStepContent_FullMethodName        = "/course.v1.CourseService/GetStepContent"
-	CourseService_EnrollUser_FullMethodName            = "/course.v1.CourseService/EnrollUser"
-	CourseService_CheckAccess_FullMethodName           = "/course.v1.CourseService/CheckAccess"
-	CourseService_CreateCourse_FullMethodName          = "/course.v1.CourseService/CreateCourse"
-	CourseService_UpdateCourse_FullMethodName          = "/course.v1.CourseService/UpdateCourse"
-	CourseService_DeleteCourse_FullMethodName          = "/course.v1.CourseService/DeleteCourse"
-	CourseService_PublishCourse_FullMethodName         = "/course.v1.CourseService/PublishCourse"
-	CourseService_CreateModule_FullMethodName          = "/course.v1.CourseService/CreateModule"
-	CourseService_UpdateModule_FullMethodName          = "/course.v1.CourseService/UpdateModule"
-	CourseService_DeleteModule_FullMethodName          = "/course.v1.CourseService/DeleteModule"
-	CourseService_CreateLesson_FullMethodName          = "/course.v1.CourseService/CreateLesson"
-	CourseService_UpdateLesson_FullMethodName          = "/course.v1.CourseService/UpdateLesson"
-	CourseService_DeleteLesson_FullMethodName          = "/course.v1.CourseService/DeleteLesson"
-	CourseService_CreateStep_FullMethodName            = "/course.v1.CourseService/CreateStep"
-	CourseService_UpdateStep_FullMethodName            = "/course.v1.CourseService/UpdateStep"
-	CourseService_DeleteStep_FullMethodName            = "/course.v1.CourseService/DeleteStep"
-	CourseService_MarkStepComplete_FullMethodName      = "/course.v1.CourseService/MarkStepComplete"
-	CourseService_GetStepProgress_FullMethodName       = "/course.v1.CourseService/GetStepProgress"
-	CourseService_GetLessonProgress_FullMethodName     = "/course.v1.CourseService/GetLessonProgress"
-	CourseService_GetCourseProgress_FullMethodName     = "/course.v1.CourseService/GetCourseProgress"
-	CourseService_ListTracks_FullMethodName            = "/course.v1.CourseService/ListTracks"
-	CourseService_GetTrack_FullMethodName              = "/course.v1.CourseService/GetTrack"
-	CourseService_GetTrackByCode_FullMethodName        = "/course.v1.CourseService/GetTrackByCode"
-	CourseService_CreateTrack_FullMethodName           = "/course.v1.CourseService/CreateTrack"
-	CourseService_UpdateTrack_FullMethodName           = "/course.v1.CourseService/UpdateTrack"
-	CourseService_DeleteTrack_FullMethodName           = "/course.v1.CourseService/DeleteTrack"
-	CourseService_PublishTrack_FullMethodName          = "/course.v1.CourseService/PublishTrack"
-	CourseService_AddLessonToTrack_FullMethodName      = "/course.v1.CourseService/AddLessonToTrack"
-	CourseService_RemoveLessonFromTrack_FullMethodName = "/course.v1.CourseService/RemoveLessonFromTrack"
-	CourseService_ReorderTrackLessons_FullMethodName   = "/course.v1.CourseService/ReorderTrackLessons"
-	CourseService_ListVocabulary_FullMethodName        = "/course.v1.CourseService/ListVocabulary"
-	CourseService_GetVocabularyEntry_FullMethodName    = "/course.v1.CourseService/GetVocabularyEntry"
-	CourseService_CreateVocabularyEntry_FullMethodName = "/course.v1.CourseService/CreateVocabularyEntry"
-	CourseService_UpdateVocabularyEntry_FullMethodName = "/course.v1.CourseService/UpdateVocabularyEntry"
-	CourseService_DeleteVocabularyEntry_FullMethodName = "/course.v1.CourseService/DeleteVocabularyEntry"
-	CourseService_BulkCreateVocabulary_FullMethodName  = "/course.v1.CourseService/BulkCreateVocabulary"
-	CourseService_SynthesizeTTS_FullMethodName         = "/course.v1.CourseService/SynthesizeTTS"
-	CourseService_GetTTSByText_FullMethodName          = "/course.v1.CourseService/GetTTSByText"
+	CourseService_ListCourses_FullMethodName              = "/course.v1.CourseService/ListCourses"
+	CourseService_GetCourse_FullMethodName                = "/course.v1.CourseService/GetCourse"
+	CourseService_GetLesson_FullMethodName                = "/course.v1.CourseService/GetLesson"
+	CourseService_GetStepContent_FullMethodName           = "/course.v1.CourseService/GetStepContent"
+	CourseService_EnrollUser_FullMethodName               = "/course.v1.CourseService/EnrollUser"
+	CourseService_CheckAccess_FullMethodName              = "/course.v1.CourseService/CheckAccess"
+	CourseService_CreateCourse_FullMethodName             = "/course.v1.CourseService/CreateCourse"
+	CourseService_UpdateCourse_FullMethodName             = "/course.v1.CourseService/UpdateCourse"
+	CourseService_DeleteCourse_FullMethodName             = "/course.v1.CourseService/DeleteCourse"
+	CourseService_PublishCourse_FullMethodName            = "/course.v1.CourseService/PublishCourse"
+	CourseService_CreateModule_FullMethodName             = "/course.v1.CourseService/CreateModule"
+	CourseService_UpdateModule_FullMethodName             = "/course.v1.CourseService/UpdateModule"
+	CourseService_DeleteModule_FullMethodName             = "/course.v1.CourseService/DeleteModule"
+	CourseService_CreateLesson_FullMethodName             = "/course.v1.CourseService/CreateLesson"
+	CourseService_UpdateLesson_FullMethodName             = "/course.v1.CourseService/UpdateLesson"
+	CourseService_DeleteLesson_FullMethodName             = "/course.v1.CourseService/DeleteLesson"
+	CourseService_CreateStep_FullMethodName               = "/course.v1.CourseService/CreateStep"
+	CourseService_UpdateStep_FullMethodName               = "/course.v1.CourseService/UpdateStep"
+	CourseService_DeleteStep_FullMethodName               = "/course.v1.CourseService/DeleteStep"
+	CourseService_MarkStepComplete_FullMethodName         = "/course.v1.CourseService/MarkStepComplete"
+	CourseService_GetStepProgress_FullMethodName          = "/course.v1.CourseService/GetStepProgress"
+	CourseService_GetLessonProgress_FullMethodName        = "/course.v1.CourseService/GetLessonProgress"
+	CourseService_GetCourseProgress_FullMethodName        = "/course.v1.CourseService/GetCourseProgress"
+	CourseService_ListTracks_FullMethodName               = "/course.v1.CourseService/ListTracks"
+	CourseService_GetTrack_FullMethodName                 = "/course.v1.CourseService/GetTrack"
+	CourseService_GetTrackByCode_FullMethodName           = "/course.v1.CourseService/GetTrackByCode"
+	CourseService_CreateTrack_FullMethodName              = "/course.v1.CourseService/CreateTrack"
+	CourseService_UpdateTrack_FullMethodName              = "/course.v1.CourseService/UpdateTrack"
+	CourseService_DeleteTrack_FullMethodName              = "/course.v1.CourseService/DeleteTrack"
+	CourseService_PublishTrack_FullMethodName             = "/course.v1.CourseService/PublishTrack"
+	CourseService_AddLessonToTrack_FullMethodName         = "/course.v1.CourseService/AddLessonToTrack"
+	CourseService_RemoveLessonFromTrack_FullMethodName    = "/course.v1.CourseService/RemoveLessonFromTrack"
+	CourseService_ReorderTrackLessons_FullMethodName      = "/course.v1.CourseService/ReorderTrackLessons"
+	CourseService_ListVocabulary_FullMethodName           = "/course.v1.CourseService/ListVocabulary"
+	CourseService_GetVocabularyEntry_FullMethodName       = "/course.v1.CourseService/GetVocabularyEntry"
+	CourseService_CreateVocabularyEntry_FullMethodName    = "/course.v1.CourseService/CreateVocabularyEntry"
+	CourseService_UpdateVocabularyEntry_FullMethodName    = "/course.v1.CourseService/UpdateVocabularyEntry"
+	CourseService_DeleteVocabularyEntry_FullMethodName    = "/course.v1.CourseService/DeleteVocabularyEntry"
+	CourseService_BulkCreateVocabulary_FullMethodName     = "/course.v1.CourseService/BulkCreateVocabulary"
+	CourseService_SynthesizeTTS_FullMethodName            = "/course.v1.CourseService/SynthesizeTTS"
+	CourseService_GetTTSByText_FullMethodName             = "/course.v1.CourseService/GetTTSByText"
+	CourseService_ListFlashcards_FullMethodName           = "/course.v1.CourseService/ListFlashcards"
+	CourseService_GetFlashcard_FullMethodName             = "/course.v1.CourseService/GetFlashcard"
+	CourseService_CreateFlashcard_FullMethodName          = "/course.v1.CourseService/CreateFlashcard"
+	CourseService_UpdateFlashcard_FullMethodName          = "/course.v1.CourseService/UpdateFlashcard"
+	CourseService_ArchiveFlashcard_FullMethodName         = "/course.v1.CourseService/ArchiveFlashcard"
+	CourseService_BulkCreateFlashcards_FullMethodName     = "/course.v1.CourseService/BulkCreateFlashcards"
+	CourseService_AddVocabularyAsFlashcard_FullMethodName = "/course.v1.CourseService/AddVocabularyAsFlashcard"
+	CourseService_GetFlashcardStats_FullMethodName        = "/course.v1.CourseService/GetFlashcardStats"
+	CourseService_PinForToday_FullMethodName              = "/course.v1.CourseService/PinForToday"
+	CourseService_UnpinFromToday_FullMethodName           = "/course.v1.CourseService/UnpinFromToday"
+	CourseService_ListTodayQueue_FullMethodName           = "/course.v1.CourseService/ListTodayQueue"
 )
 
 // CourseServiceClient is the client API for CourseService service.
@@ -152,6 +163,23 @@ type CourseServiceClient interface {
 	// Реальная интеграция с Google Cloud TTS / ElevenLabs — Phase 5.
 	SynthesizeTTS(ctx context.Context, in *SynthesizeTTSRequest, opts ...grpc.CallOption) (*SynthesizeTTSResponse, error)
 	GetTTSByText(ctx context.Context, in *GetTTSByTextRequest, opts ...grpc.CallOption) (*GetTTSByTextResponse, error)
+	// === Flashcards (Phase 7 — повтор слов) ===
+	// Личные карточки слов пользователя для feature "Повтор слов".
+	// См. docs/tasks/phase-7-word-flashcards.md.
+	ListFlashcards(ctx context.Context, in *ListFlashcardsRequest, opts ...grpc.CallOption) (*ListFlashcardsResponse, error)
+	GetFlashcard(ctx context.Context, in *GetFlashcardRequest, opts ...grpc.CallOption) (*GetFlashcardResponse, error)
+	CreateFlashcard(ctx context.Context, in *CreateFlashcardRequest, opts ...grpc.CallOption) (*CreateFlashcardResponse, error)
+	UpdateFlashcard(ctx context.Context, in *UpdateFlashcardRequest, opts ...grpc.CallOption) (*UpdateFlashcardResponse, error)
+	ArchiveFlashcard(ctx context.Context, in *ArchiveFlashcardRequest, opts ...grpc.CallOption) (*ArchiveFlashcardResponse, error)
+	BulkCreateFlashcards(ctx context.Context, in *BulkCreateFlashcardsRequest, opts ...grpc.CallOption) (*BulkCreateFlashcardsResponse, error)
+	AddVocabularyAsFlashcard(ctx context.Context, in *AddVocabularyAsFlashcardRequest, opts ...grpc.CallOption) (*AddVocabularyAsFlashcardResponse, error)
+	GetFlashcardStats(ctx context.Context, in *GetFlashcardStatsRequest, opts ...grpc.CallOption) (*GetFlashcardStatsResponse, error)
+	// === Today queue (Phase 7) ===
+	// Priority queue "На сегодня" — карточки запинаны юзером для
+	// обязательной practice-сессии сегодня.
+	PinForToday(ctx context.Context, in *PinForTodayRequest, opts ...grpc.CallOption) (*PinForTodayResponse, error)
+	UnpinFromToday(ctx context.Context, in *UnpinFromTodayRequest, opts ...grpc.CallOption) (*UnpinFromTodayResponse, error)
+	ListTodayQueue(ctx context.Context, in *ListTodayQueueRequest, opts ...grpc.CallOption) (*ListTodayQueueResponse, error)
 }
 
 type courseServiceClient struct {
@@ -572,6 +600,116 @@ func (c *courseServiceClient) GetTTSByText(ctx context.Context, in *GetTTSByText
 	return out, nil
 }
 
+func (c *courseServiceClient) ListFlashcards(ctx context.Context, in *ListFlashcardsRequest, opts ...grpc.CallOption) (*ListFlashcardsResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ListFlashcardsResponse)
+	err := c.cc.Invoke(ctx, CourseService_ListFlashcards_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *courseServiceClient) GetFlashcard(ctx context.Context, in *GetFlashcardRequest, opts ...grpc.CallOption) (*GetFlashcardResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(GetFlashcardResponse)
+	err := c.cc.Invoke(ctx, CourseService_GetFlashcard_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *courseServiceClient) CreateFlashcard(ctx context.Context, in *CreateFlashcardRequest, opts ...grpc.CallOption) (*CreateFlashcardResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(CreateFlashcardResponse)
+	err := c.cc.Invoke(ctx, CourseService_CreateFlashcard_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *courseServiceClient) UpdateFlashcard(ctx context.Context, in *UpdateFlashcardRequest, opts ...grpc.CallOption) (*UpdateFlashcardResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(UpdateFlashcardResponse)
+	err := c.cc.Invoke(ctx, CourseService_UpdateFlashcard_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *courseServiceClient) ArchiveFlashcard(ctx context.Context, in *ArchiveFlashcardRequest, opts ...grpc.CallOption) (*ArchiveFlashcardResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ArchiveFlashcardResponse)
+	err := c.cc.Invoke(ctx, CourseService_ArchiveFlashcard_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *courseServiceClient) BulkCreateFlashcards(ctx context.Context, in *BulkCreateFlashcardsRequest, opts ...grpc.CallOption) (*BulkCreateFlashcardsResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(BulkCreateFlashcardsResponse)
+	err := c.cc.Invoke(ctx, CourseService_BulkCreateFlashcards_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *courseServiceClient) AddVocabularyAsFlashcard(ctx context.Context, in *AddVocabularyAsFlashcardRequest, opts ...grpc.CallOption) (*AddVocabularyAsFlashcardResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(AddVocabularyAsFlashcardResponse)
+	err := c.cc.Invoke(ctx, CourseService_AddVocabularyAsFlashcard_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *courseServiceClient) GetFlashcardStats(ctx context.Context, in *GetFlashcardStatsRequest, opts ...grpc.CallOption) (*GetFlashcardStatsResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(GetFlashcardStatsResponse)
+	err := c.cc.Invoke(ctx, CourseService_GetFlashcardStats_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *courseServiceClient) PinForToday(ctx context.Context, in *PinForTodayRequest, opts ...grpc.CallOption) (*PinForTodayResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(PinForTodayResponse)
+	err := c.cc.Invoke(ctx, CourseService_PinForToday_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *courseServiceClient) UnpinFromToday(ctx context.Context, in *UnpinFromTodayRequest, opts ...grpc.CallOption) (*UnpinFromTodayResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(UnpinFromTodayResponse)
+	err := c.cc.Invoke(ctx, CourseService_UnpinFromToday_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *courseServiceClient) ListTodayQueue(ctx context.Context, in *ListTodayQueueRequest, opts ...grpc.CallOption) (*ListTodayQueueResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ListTodayQueueResponse)
+	err := c.cc.Invoke(ctx, CourseService_ListTodayQueue_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // CourseServiceServer is the server API for CourseService service.
 // All implementations must embed UnimplementedCourseServiceServer
 // for forward compatibility.
@@ -662,6 +800,23 @@ type CourseServiceServer interface {
 	// Реальная интеграция с Google Cloud TTS / ElevenLabs — Phase 5.
 	SynthesizeTTS(context.Context, *SynthesizeTTSRequest) (*SynthesizeTTSResponse, error)
 	GetTTSByText(context.Context, *GetTTSByTextRequest) (*GetTTSByTextResponse, error)
+	// === Flashcards (Phase 7 — повтор слов) ===
+	// Личные карточки слов пользователя для feature "Повтор слов".
+	// См. docs/tasks/phase-7-word-flashcards.md.
+	ListFlashcards(context.Context, *ListFlashcardsRequest) (*ListFlashcardsResponse, error)
+	GetFlashcard(context.Context, *GetFlashcardRequest) (*GetFlashcardResponse, error)
+	CreateFlashcard(context.Context, *CreateFlashcardRequest) (*CreateFlashcardResponse, error)
+	UpdateFlashcard(context.Context, *UpdateFlashcardRequest) (*UpdateFlashcardResponse, error)
+	ArchiveFlashcard(context.Context, *ArchiveFlashcardRequest) (*ArchiveFlashcardResponse, error)
+	BulkCreateFlashcards(context.Context, *BulkCreateFlashcardsRequest) (*BulkCreateFlashcardsResponse, error)
+	AddVocabularyAsFlashcard(context.Context, *AddVocabularyAsFlashcardRequest) (*AddVocabularyAsFlashcardResponse, error)
+	GetFlashcardStats(context.Context, *GetFlashcardStatsRequest) (*GetFlashcardStatsResponse, error)
+	// === Today queue (Phase 7) ===
+	// Priority queue "На сегодня" — карточки запинаны юзером для
+	// обязательной practice-сессии сегодня.
+	PinForToday(context.Context, *PinForTodayRequest) (*PinForTodayResponse, error)
+	UnpinFromToday(context.Context, *UnpinFromTodayRequest) (*UnpinFromTodayResponse, error)
+	ListTodayQueue(context.Context, *ListTodayQueueRequest) (*ListTodayQueueResponse, error)
 	mustEmbedUnimplementedCourseServiceServer()
 }
 
@@ -794,6 +949,39 @@ func (UnimplementedCourseServiceServer) SynthesizeTTS(context.Context, *Synthesi
 }
 func (UnimplementedCourseServiceServer) GetTTSByText(context.Context, *GetTTSByTextRequest) (*GetTTSByTextResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method GetTTSByText not implemented")
+}
+func (UnimplementedCourseServiceServer) ListFlashcards(context.Context, *ListFlashcardsRequest) (*ListFlashcardsResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method ListFlashcards not implemented")
+}
+func (UnimplementedCourseServiceServer) GetFlashcard(context.Context, *GetFlashcardRequest) (*GetFlashcardResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method GetFlashcard not implemented")
+}
+func (UnimplementedCourseServiceServer) CreateFlashcard(context.Context, *CreateFlashcardRequest) (*CreateFlashcardResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method CreateFlashcard not implemented")
+}
+func (UnimplementedCourseServiceServer) UpdateFlashcard(context.Context, *UpdateFlashcardRequest) (*UpdateFlashcardResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method UpdateFlashcard not implemented")
+}
+func (UnimplementedCourseServiceServer) ArchiveFlashcard(context.Context, *ArchiveFlashcardRequest) (*ArchiveFlashcardResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method ArchiveFlashcard not implemented")
+}
+func (UnimplementedCourseServiceServer) BulkCreateFlashcards(context.Context, *BulkCreateFlashcardsRequest) (*BulkCreateFlashcardsResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method BulkCreateFlashcards not implemented")
+}
+func (UnimplementedCourseServiceServer) AddVocabularyAsFlashcard(context.Context, *AddVocabularyAsFlashcardRequest) (*AddVocabularyAsFlashcardResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method AddVocabularyAsFlashcard not implemented")
+}
+func (UnimplementedCourseServiceServer) GetFlashcardStats(context.Context, *GetFlashcardStatsRequest) (*GetFlashcardStatsResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method GetFlashcardStats not implemented")
+}
+func (UnimplementedCourseServiceServer) PinForToday(context.Context, *PinForTodayRequest) (*PinForTodayResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method PinForToday not implemented")
+}
+func (UnimplementedCourseServiceServer) UnpinFromToday(context.Context, *UnpinFromTodayRequest) (*UnpinFromTodayResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method UnpinFromToday not implemented")
+}
+func (UnimplementedCourseServiceServer) ListTodayQueue(context.Context, *ListTodayQueueRequest) (*ListTodayQueueResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method ListTodayQueue not implemented")
 }
 func (UnimplementedCourseServiceServer) mustEmbedUnimplementedCourseServiceServer() {}
 func (UnimplementedCourseServiceServer) testEmbeddedByValue()                       {}
@@ -1554,6 +1742,204 @@ func _CourseService_GetTTSByText_Handler(srv interface{}, ctx context.Context, d
 	return interceptor(ctx, in, info, handler)
 }
 
+func _CourseService_ListFlashcards_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListFlashcardsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).ListFlashcards(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_ListFlashcards_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).ListFlashcards(ctx, req.(*ListFlashcardsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CourseService_GetFlashcard_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetFlashcardRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).GetFlashcard(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_GetFlashcard_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).GetFlashcard(ctx, req.(*GetFlashcardRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CourseService_CreateFlashcard_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CreateFlashcardRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).CreateFlashcard(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_CreateFlashcard_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).CreateFlashcard(ctx, req.(*CreateFlashcardRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CourseService_UpdateFlashcard_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UpdateFlashcardRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).UpdateFlashcard(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_UpdateFlashcard_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).UpdateFlashcard(ctx, req.(*UpdateFlashcardRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CourseService_ArchiveFlashcard_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ArchiveFlashcardRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).ArchiveFlashcard(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_ArchiveFlashcard_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).ArchiveFlashcard(ctx, req.(*ArchiveFlashcardRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CourseService_BulkCreateFlashcards_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(BulkCreateFlashcardsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).BulkCreateFlashcards(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_BulkCreateFlashcards_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).BulkCreateFlashcards(ctx, req.(*BulkCreateFlashcardsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CourseService_AddVocabularyAsFlashcard_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AddVocabularyAsFlashcardRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).AddVocabularyAsFlashcard(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_AddVocabularyAsFlashcard_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).AddVocabularyAsFlashcard(ctx, req.(*AddVocabularyAsFlashcardRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CourseService_GetFlashcardStats_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetFlashcardStatsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).GetFlashcardStats(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_GetFlashcardStats_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).GetFlashcardStats(ctx, req.(*GetFlashcardStatsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CourseService_PinForToday_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PinForTodayRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).PinForToday(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_PinForToday_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).PinForToday(ctx, req.(*PinForTodayRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CourseService_UnpinFromToday_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UnpinFromTodayRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).UnpinFromToday(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_UnpinFromToday_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).UnpinFromToday(ctx, req.(*UnpinFromTodayRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CourseService_ListTodayQueue_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListTodayQueueRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).ListTodayQueue(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_ListTodayQueue_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).ListTodayQueue(ctx, req.(*ListTodayQueueRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // CourseService_ServiceDesc is the grpc.ServiceDesc for CourseService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1724,6 +2110,50 @@ var CourseService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetTTSByText",
 			Handler:    _CourseService_GetTTSByText_Handler,
+		},
+		{
+			MethodName: "ListFlashcards",
+			Handler:    _CourseService_ListFlashcards_Handler,
+		},
+		{
+			MethodName: "GetFlashcard",
+			Handler:    _CourseService_GetFlashcard_Handler,
+		},
+		{
+			MethodName: "CreateFlashcard",
+			Handler:    _CourseService_CreateFlashcard_Handler,
+		},
+		{
+			MethodName: "UpdateFlashcard",
+			Handler:    _CourseService_UpdateFlashcard_Handler,
+		},
+		{
+			MethodName: "ArchiveFlashcard",
+			Handler:    _CourseService_ArchiveFlashcard_Handler,
+		},
+		{
+			MethodName: "BulkCreateFlashcards",
+			Handler:    _CourseService_BulkCreateFlashcards_Handler,
+		},
+		{
+			MethodName: "AddVocabularyAsFlashcard",
+			Handler:    _CourseService_AddVocabularyAsFlashcard_Handler,
+		},
+		{
+			MethodName: "GetFlashcardStats",
+			Handler:    _CourseService_GetFlashcardStats_Handler,
+		},
+		{
+			MethodName: "PinForToday",
+			Handler:    _CourseService_PinForToday_Handler,
+		},
+		{
+			MethodName: "UnpinFromToday",
+			Handler:    _CourseService_UnpinFromToday_Handler,
+		},
+		{
+			MethodName: "ListTodayQueue",
+			Handler:    _CourseService_ListTodayQueue_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

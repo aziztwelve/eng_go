@@ -37,6 +37,7 @@ const (
 	AIService_GetQuotaStatus_FullMethodName        = "/ai.v1.AIService/GetQuotaStatus"
 	AIService_SubmitMessageFeedback_FullMethodName = "/ai.v1.AIService/SubmitMessageFeedback"
 	AIService_DeleteMessageFeedback_FullMethodName = "/ai.v1.AIService/DeleteMessageFeedback"
+	AIService_SuggestFlashcards_FullMethodName     = "/ai.v1.AIService/SuggestFlashcards"
 )
 
 // AIServiceClient is the client API for AIService service.
@@ -136,6 +137,11 @@ type AIServiceClient interface {
 	SubmitMessageFeedback(ctx context.Context, in *SubmitMessageFeedbackRequest, opts ...grpc.CallOption) (*SubmitMessageFeedbackResponse, error)
 	// DeleteMessageFeedback — снимает оценку (idempotent).
 	DeleteMessageFeedback(ctx context.Context, in *DeleteMessageFeedbackRequest, opts ...grpc.CallOption) (*DeleteMessageFeedbackResponse, error)
+	// === Flashcard suggestions (Phase 7) ===
+	// SuggestFlashcards — рекомендует слова для добавления в библиотеку
+	// на основе профиля пользователя (level, goal, pain_point).
+	// Mock provider возвращает hard-coded список по level+goal.
+	SuggestFlashcards(ctx context.Context, in *SuggestFlashcardsRequest, opts ...grpc.CallOption) (*SuggestFlashcardsResponse, error)
 }
 
 type aIServiceClient struct {
@@ -362,6 +368,16 @@ func (c *aIServiceClient) DeleteMessageFeedback(ctx context.Context, in *DeleteM
 	return out, nil
 }
 
+func (c *aIServiceClient) SuggestFlashcards(ctx context.Context, in *SuggestFlashcardsRequest, opts ...grpc.CallOption) (*SuggestFlashcardsResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(SuggestFlashcardsResponse)
+	err := c.cc.Invoke(ctx, AIService_SuggestFlashcards_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // AIServiceServer is the server API for AIService service.
 // All implementations must embed UnimplementedAIServiceServer
 // for forward compatibility.
@@ -459,6 +475,11 @@ type AIServiceServer interface {
 	SubmitMessageFeedback(context.Context, *SubmitMessageFeedbackRequest) (*SubmitMessageFeedbackResponse, error)
 	// DeleteMessageFeedback — снимает оценку (idempotent).
 	DeleteMessageFeedback(context.Context, *DeleteMessageFeedbackRequest) (*DeleteMessageFeedbackResponse, error)
+	// === Flashcard suggestions (Phase 7) ===
+	// SuggestFlashcards — рекомендует слова для добавления в библиотеку
+	// на основе профиля пользователя (level, goal, pain_point).
+	// Mock provider возвращает hard-coded список по level+goal.
+	SuggestFlashcards(context.Context, *SuggestFlashcardsRequest) (*SuggestFlashcardsResponse, error)
 	mustEmbedUnimplementedAIServiceServer()
 }
 
@@ -522,6 +543,9 @@ func (UnimplementedAIServiceServer) SubmitMessageFeedback(context.Context, *Subm
 }
 func (UnimplementedAIServiceServer) DeleteMessageFeedback(context.Context, *DeleteMessageFeedbackRequest) (*DeleteMessageFeedbackResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method DeleteMessageFeedback not implemented")
+}
+func (UnimplementedAIServiceServer) SuggestFlashcards(context.Context, *SuggestFlashcardsRequest) (*SuggestFlashcardsResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method SuggestFlashcards not implemented")
 }
 func (UnimplementedAIServiceServer) mustEmbedUnimplementedAIServiceServer() {}
 func (UnimplementedAIServiceServer) testEmbeddedByValue()                   {}
@@ -840,6 +864,24 @@ func _AIService_DeleteMessageFeedback_Handler(srv interface{}, ctx context.Conte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _AIService_SuggestFlashcards_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SuggestFlashcardsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AIServiceServer).SuggestFlashcards(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AIService_SuggestFlashcards_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AIServiceServer).SuggestFlashcards(ctx, req.(*SuggestFlashcardsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // AIService_ServiceDesc is the grpc.ServiceDesc for AIService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -902,6 +944,10 @@ var AIService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "DeleteMessageFeedback",
 			Handler:    _AIService_DeleteMessageFeedback_Handler,
+		},
+		{
+			MethodName: "SuggestFlashcards",
+			Handler:    _AIService_SuggestFlashcards_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{

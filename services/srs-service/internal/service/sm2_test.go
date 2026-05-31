@@ -16,6 +16,37 @@ func newFreshItem() *model.SRSItem {
 	}
 }
 
+// TestItemType_FlashcardValid — Phase 7: 'flashcard' — допустимый item_type
+// (полиморфизм SRS-карточек). Сверяется CHECK миграции srs 000005.
+func TestItemType_FlashcardValid(t *testing.T) {
+	if !model.ItemTypeFlashcard.IsValid() {
+		t.Fatalf("expected flashcard item_type to be valid")
+	}
+	if model.ItemType("bogus").IsValid() {
+		t.Fatalf("unexpected: bogus item_type valid")
+	}
+}
+
+// TestSM2_FlashcardItem_Polymorphic — SM-2 работает идентично для
+// item_type='flashcard', как и для vocabulary/step (алгоритм
+// type-agnostic).
+func TestSM2_FlashcardItem_Polymorphic(t *testing.T) {
+	item := newFreshItem()
+	item.ItemType = model.ItemTypeFlashcard
+	item.ItemID = "user-flashcard-1"
+	now := time.Date(2025, 1, 1, 12, 0, 0, 0, time.UTC)
+
+	ApplySM2(item, 5, 3000, now)
+
+	if item.IntervalDays != 1 || item.Repetitions != 1 {
+		t.Fatalf("expected interval=1 reps=1 for flashcard, got %d/%d",
+			item.IntervalDays, item.Repetitions)
+	}
+	if item.ItemType != model.ItemTypeFlashcard {
+		t.Fatalf("item_type должен остаться flashcard, got %q", item.ItemType)
+	}
+}
+
 func TestSM2_FirstReview_Correct(t *testing.T) {
 	item := newFreshItem()
 	now := time.Date(2025, 1, 1, 12, 0, 0, 0, time.UTC)

@@ -2939,6 +2939,259 @@ func (*DeleteMessageFeedbackResponse) Descriptor() ([]byte, []int) {
 	return file_ai_v1_ai_proto_rawDescGZIP(), []int{38}
 }
 
+type SuggestFlashcardsRequest struct {
+	state  protoimpl.MessageState `protogen:"open.v1"`
+	UserId string                 `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	// Профиль: уровень / мотивация / pain_point из onboarding.
+	// Если empty — провайдер использует defaults (a2 / general).
+	Level          string `protobuf:"bytes,2,opt,name=level,proto3" json:"level,omitempty"`                                         // 'beginner' | 'a1' | 'a2' | 'b1' | 'b2' | 'just_for_fun'
+	Goal           string `protobuf:"bytes,3,opt,name=goal,proto3" json:"goal,omitempty"`                                           // motivation[0]: 'work' | 'travel' | 'exam' | ...
+	PainPoint      string `protobuf:"bytes,4,opt,name=pain_point,json=painPoint,proto3" json:"pain_point,omitempty"`                // 'fear_speaking' | 'lack_vocab' | ...
+	TargetLanguage string `protobuf:"bytes,5,opt,name=target_language,json=targetLanguage,proto3" json:"target_language,omitempty"` // 'en'
+	NativeLanguage string `protobuf:"bytes,6,opt,name=native_language,json=nativeLanguage,proto3" json:"native_language,omitempty"` // 'ru'
+	// Сколько suggestion'ов вернуть. Default 5, max 10.
+	Count int32 `protobuf:"varint,7,opt,name=count,proto3" json:"count,omitempty"`
+	// Опционально: список user_flashcard.word (lowercase) — exclude из
+	// suggestions, чтобы не предлагать уже добавленные.
+	ExcludeWords  []string `protobuf:"bytes,8,rep,name=exclude_words,json=excludeWords,proto3" json:"exclude_words,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *SuggestFlashcardsRequest) Reset() {
+	*x = SuggestFlashcardsRequest{}
+	mi := &file_ai_v1_ai_proto_msgTypes[39]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *SuggestFlashcardsRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SuggestFlashcardsRequest) ProtoMessage() {}
+
+func (x *SuggestFlashcardsRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_ai_v1_ai_proto_msgTypes[39]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SuggestFlashcardsRequest.ProtoReflect.Descriptor instead.
+func (*SuggestFlashcardsRequest) Descriptor() ([]byte, []int) {
+	return file_ai_v1_ai_proto_rawDescGZIP(), []int{39}
+}
+
+func (x *SuggestFlashcardsRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *SuggestFlashcardsRequest) GetLevel() string {
+	if x != nil {
+		return x.Level
+	}
+	return ""
+}
+
+func (x *SuggestFlashcardsRequest) GetGoal() string {
+	if x != nil {
+		return x.Goal
+	}
+	return ""
+}
+
+func (x *SuggestFlashcardsRequest) GetPainPoint() string {
+	if x != nil {
+		return x.PainPoint
+	}
+	return ""
+}
+
+func (x *SuggestFlashcardsRequest) GetTargetLanguage() string {
+	if x != nil {
+		return x.TargetLanguage
+	}
+	return ""
+}
+
+func (x *SuggestFlashcardsRequest) GetNativeLanguage() string {
+	if x != nil {
+		return x.NativeLanguage
+	}
+	return ""
+}
+
+func (x *SuggestFlashcardsRequest) GetCount() int32 {
+	if x != nil {
+		return x.Count
+	}
+	return 0
+}
+
+func (x *SuggestFlashcardsRequest) GetExcludeWords() []string {
+	if x != nil {
+		return x.ExcludeWords
+	}
+	return nil
+}
+
+type FlashcardSuggestion struct {
+	state           protoimpl.MessageState `protogen:"open.v1"`
+	Word            string                 `protobuf:"bytes,1,opt,name=word,proto3" json:"word,omitempty"`
+	Translation     string                 `protobuf:"bytes,2,opt,name=translation,proto3" json:"translation,omitempty"`
+	Definition      string                 `protobuf:"bytes,3,opt,name=definition,proto3" json:"definition,omitempty"`                                  // optional
+	ExampleSentence string                 `protobuf:"bytes,4,opt,name=example_sentence,json=exampleSentence,proto3" json:"example_sentence,omitempty"` // optional
+	// Объяснение «почему предложили это слово» — для UI tooltip'а.
+	Reason string `protobuf:"bytes,5,opt,name=reason,proto3" json:"reason,omitempty"` // например: "часто встречается в work + b1"
+	// Опциональный pos (part of speech) и level для UI.
+	Pos           string `protobuf:"bytes,6,opt,name=pos,proto3" json:"pos,omitempty"`     // 'noun' | 'verb' | ...
+	Level         string `protobuf:"bytes,7,opt,name=level,proto3" json:"level,omitempty"` // 'a2' | 'b1' | ...
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *FlashcardSuggestion) Reset() {
+	*x = FlashcardSuggestion{}
+	mi := &file_ai_v1_ai_proto_msgTypes[40]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *FlashcardSuggestion) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*FlashcardSuggestion) ProtoMessage() {}
+
+func (x *FlashcardSuggestion) ProtoReflect() protoreflect.Message {
+	mi := &file_ai_v1_ai_proto_msgTypes[40]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use FlashcardSuggestion.ProtoReflect.Descriptor instead.
+func (*FlashcardSuggestion) Descriptor() ([]byte, []int) {
+	return file_ai_v1_ai_proto_rawDescGZIP(), []int{40}
+}
+
+func (x *FlashcardSuggestion) GetWord() string {
+	if x != nil {
+		return x.Word
+	}
+	return ""
+}
+
+func (x *FlashcardSuggestion) GetTranslation() string {
+	if x != nil {
+		return x.Translation
+	}
+	return ""
+}
+
+func (x *FlashcardSuggestion) GetDefinition() string {
+	if x != nil {
+		return x.Definition
+	}
+	return ""
+}
+
+func (x *FlashcardSuggestion) GetExampleSentence() string {
+	if x != nil {
+		return x.ExampleSentence
+	}
+	return ""
+}
+
+func (x *FlashcardSuggestion) GetReason() string {
+	if x != nil {
+		return x.Reason
+	}
+	return ""
+}
+
+func (x *FlashcardSuggestion) GetPos() string {
+	if x != nil {
+		return x.Pos
+	}
+	return ""
+}
+
+func (x *FlashcardSuggestion) GetLevel() string {
+	if x != nil {
+		return x.Level
+	}
+	return ""
+}
+
+type SuggestFlashcardsResponse struct {
+	state protoimpl.MessageState `protogen:"open.v1"`
+	Items []*FlashcardSuggestion `protobuf:"bytes,1,rep,name=items,proto3" json:"items,omitempty"`
+	// Опциональная подсказка для UI: если suggestion-pool исчерпан —
+	// фронт может показать «попробуйте позже» вместо ещё одной кнопки.
+	Exhausted     bool `protobuf:"varint,2,opt,name=exhausted,proto3" json:"exhausted,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *SuggestFlashcardsResponse) Reset() {
+	*x = SuggestFlashcardsResponse{}
+	mi := &file_ai_v1_ai_proto_msgTypes[41]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *SuggestFlashcardsResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SuggestFlashcardsResponse) ProtoMessage() {}
+
+func (x *SuggestFlashcardsResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_ai_v1_ai_proto_msgTypes[41]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SuggestFlashcardsResponse.ProtoReflect.Descriptor instead.
+func (*SuggestFlashcardsResponse) Descriptor() ([]byte, []int) {
+	return file_ai_v1_ai_proto_rawDescGZIP(), []int{41}
+}
+
+func (x *SuggestFlashcardsResponse) GetItems() []*FlashcardSuggestion {
+	if x != nil {
+		return x.Items
+	}
+	return nil
+}
+
+func (x *SuggestFlashcardsResponse) GetExhausted() bool {
+	if x != nil {
+		return x.Exhausted
+	}
+	return false
+}
+
 var File_ai_v1_ai_proto protoreflect.FileDescriptor
 
 const file_ai_v1_ai_proto_rawDesc = "" +
@@ -3173,12 +3426,35 @@ const file_ai_v1_ai_proto_rawDesc = "" +
 	"\auser_id\x18\x01 \x01(\tR\x06userId\x12\x1d\n" +
 	"\n" +
 	"message_id\x18\x02 \x01(\tR\tmessageId\"\x1f\n" +
-	"\x1dDeleteMessageFeedbackResponse*w\n" +
+	"\x1dDeleteMessageFeedbackResponse\"\x89\x02\n" +
+	"\x18SuggestFlashcardsRequest\x12\x17\n" +
+	"\auser_id\x18\x01 \x01(\tR\x06userId\x12\x14\n" +
+	"\x05level\x18\x02 \x01(\tR\x05level\x12\x12\n" +
+	"\x04goal\x18\x03 \x01(\tR\x04goal\x12\x1d\n" +
+	"\n" +
+	"pain_point\x18\x04 \x01(\tR\tpainPoint\x12'\n" +
+	"\x0ftarget_language\x18\x05 \x01(\tR\x0etargetLanguage\x12'\n" +
+	"\x0fnative_language\x18\x06 \x01(\tR\x0enativeLanguage\x12\x14\n" +
+	"\x05count\x18\a \x01(\x05R\x05count\x12#\n" +
+	"\rexclude_words\x18\b \x03(\tR\fexcludeWords\"\xd6\x01\n" +
+	"\x13FlashcardSuggestion\x12\x12\n" +
+	"\x04word\x18\x01 \x01(\tR\x04word\x12 \n" +
+	"\vtranslation\x18\x02 \x01(\tR\vtranslation\x12\x1e\n" +
+	"\n" +
+	"definition\x18\x03 \x01(\tR\n" +
+	"definition\x12)\n" +
+	"\x10example_sentence\x18\x04 \x01(\tR\x0fexampleSentence\x12\x16\n" +
+	"\x06reason\x18\x05 \x01(\tR\x06reason\x12\x10\n" +
+	"\x03pos\x18\x06 \x01(\tR\x03pos\x12\x14\n" +
+	"\x05level\x18\a \x01(\tR\x05level\"k\n" +
+	"\x19SuggestFlashcardsResponse\x120\n" +
+	"\x05items\x18\x01 \x03(\v2\x1a.ai.v1.FlashcardSuggestionR\x05items\x12\x1c\n" +
+	"\texhausted\x18\x02 \x01(\bR\texhausted*w\n" +
 	"\vMessageRole\x12\x1c\n" +
 	"\x18MESSAGE_ROLE_UNSPECIFIED\x10\x00\x12\x15\n" +
 	"\x11MESSAGE_ROLE_USER\x10\x01\x12\x1a\n" +
 	"\x16MESSAGE_ROLE_ASSISTANT\x10\x02\x12\x17\n" +
-	"\x13MESSAGE_ROLE_SYSTEM\x10\x032\xe3\v\n" +
+	"\x13MESSAGE_ROLE_SYSTEM\x10\x032\xbb\f\n" +
 	"\tAIService\x12V\n" +
 	"\x11StartConversation\x12\x1f.ai.v1.StartConversationRequest\x1a .ai.v1.StartConversationResponse\x12D\n" +
 	"\vSendMessage\x12\x19.ai.v1.SendMessageRequest\x1a\x1a.ai.v1.SendMessageResponse\x12O\n" +
@@ -3197,7 +3473,8 @@ const file_ai_v1_ai_proto_rawDesc = "" +
 	"\x10GenerateExercise\x12\x1e.ai.v1.GenerateExerciseRequest\x1a\x1f.ai.v1.GenerateExerciseResponse\x12M\n" +
 	"\x0eGetQuotaStatus\x12\x1c.ai.v1.GetQuotaStatusRequest\x1a\x1d.ai.v1.GetQuotaStatusResponse\x12b\n" +
 	"\x15SubmitMessageFeedback\x12#.ai.v1.SubmitMessageFeedbackRequest\x1a$.ai.v1.SubmitMessageFeedbackResponse\x12b\n" +
-	"\x15DeleteMessageFeedback\x12#.ai.v1.DeleteMessageFeedbackRequest\x1a$.ai.v1.DeleteMessageFeedbackResponseB{\n" +
+	"\x15DeleteMessageFeedback\x12#.ai.v1.DeleteMessageFeedbackRequest\x1a$.ai.v1.DeleteMessageFeedbackResponse\x12V\n" +
+	"\x11SuggestFlashcards\x12\x1f.ai.v1.SuggestFlashcardsRequest\x1a .ai.v1.SuggestFlashcardsResponseB{\n" +
 	"\tcom.ai.v1B\aAiProtoP\x01Z0github.com/elearning/shared/pkg/proto/ai/v1;aiv1\xa2\x02\x03AXX\xaa\x02\x05Ai.V1\xca\x02\x05Ai\\V1\xe2\x02\x11Ai\\V1\\GPBMetadata\xea\x02\x06Ai::V1b\x06proto3"
 
 var (
@@ -3213,7 +3490,7 @@ func file_ai_v1_ai_proto_rawDescGZIP() []byte {
 }
 
 var file_ai_v1_ai_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_ai_v1_ai_proto_msgTypes = make([]protoimpl.MessageInfo, 39)
+var file_ai_v1_ai_proto_msgTypes = make([]protoimpl.MessageInfo, 42)
 var file_ai_v1_ai_proto_goTypes = []any{
 	(MessageRole)(0),                      // 0: ai.v1.MessageRole
 	(*Conversation)(nil),                  // 1: ai.v1.Conversation
@@ -3255,19 +3532,22 @@ var file_ai_v1_ai_proto_goTypes = []any{
 	(*SubmitMessageFeedbackResponse)(nil), // 37: ai.v1.SubmitMessageFeedbackResponse
 	(*DeleteMessageFeedbackRequest)(nil),  // 38: ai.v1.DeleteMessageFeedbackRequest
 	(*DeleteMessageFeedbackResponse)(nil), // 39: ai.v1.DeleteMessageFeedbackResponse
-	(*timestamppb.Timestamp)(nil),         // 40: google.protobuf.Timestamp
-	(*structpb.Struct)(nil),               // 41: google.protobuf.Struct
+	(*SuggestFlashcardsRequest)(nil),      // 40: ai.v1.SuggestFlashcardsRequest
+	(*FlashcardSuggestion)(nil),           // 41: ai.v1.FlashcardSuggestion
+	(*SuggestFlashcardsResponse)(nil),     // 42: ai.v1.SuggestFlashcardsResponse
+	(*timestamppb.Timestamp)(nil),         // 43: google.protobuf.Timestamp
+	(*structpb.Struct)(nil),               // 44: google.protobuf.Struct
 }
 var file_ai_v1_ai_proto_depIdxs = []int32{
-	40, // 0: ai.v1.Conversation.started_at:type_name -> google.protobuf.Timestamp
-	40, // 1: ai.v1.Conversation.last_message_at:type_name -> google.protobuf.Timestamp
-	40, // 2: ai.v1.Conversation.ended_at:type_name -> google.protobuf.Timestamp
+	43, // 0: ai.v1.Conversation.started_at:type_name -> google.protobuf.Timestamp
+	43, // 1: ai.v1.Conversation.last_message_at:type_name -> google.protobuf.Timestamp
+	43, // 2: ai.v1.Conversation.ended_at:type_name -> google.protobuf.Timestamp
 	0,  // 3: ai.v1.Message.role:type_name -> ai.v1.MessageRole
 	4,  // 4: ai.v1.Message.corrections:type_name -> ai.v1.Correction
-	40, // 5: ai.v1.Message.created_at:type_name -> google.protobuf.Timestamp
+	43, // 5: ai.v1.Message.created_at:type_name -> google.protobuf.Timestamp
 	3,  // 6: ai.v1.Message.user_feedback:type_name -> ai.v1.MessageFeedback
-	40, // 7: ai.v1.MessageFeedback.created_at:type_name -> google.protobuf.Timestamp
-	40, // 8: ai.v1.MessageFeedback.updated_at:type_name -> google.protobuf.Timestamp
+	43, // 7: ai.v1.MessageFeedback.created_at:type_name -> google.protobuf.Timestamp
+	43, // 8: ai.v1.MessageFeedback.updated_at:type_name -> google.protobuf.Timestamp
 	1,  // 9: ai.v1.StartConversationResponse.conversation:type_name -> ai.v1.Conversation
 	2,  // 10: ai.v1.StartConversationResponse.initial_message:type_name -> ai.v1.Message
 	2,  // 11: ai.v1.SendMessageResponse.user_message:type_name -> ai.v1.Message
@@ -3283,50 +3563,53 @@ var file_ai_v1_ai_proto_depIdxs = []int32{
 	25, // 21: ai.v1.AssessWritingStreamChunk.done:type_name -> ai.v1.AssessWritingResponse
 	7,  // 22: ai.v1.CheckPronunciationResponse.word_scores:type_name -> ai.v1.WordScore
 	30, // 23: ai.v1.AskTutorStreamChunk.done:type_name -> ai.v1.AskTutorResponse
-	41, // 24: ai.v1.GenerateExerciseResponse.content:type_name -> google.protobuf.Struct
-	40, // 25: ai.v1.GetQuotaStatusResponse.resets_at:type_name -> google.protobuf.Timestamp
+	44, // 24: ai.v1.GenerateExerciseResponse.content:type_name -> google.protobuf.Struct
+	43, // 25: ai.v1.GetQuotaStatusResponse.resets_at:type_name -> google.protobuf.Timestamp
 	3,  // 26: ai.v1.SubmitMessageFeedbackResponse.feedback:type_name -> ai.v1.MessageFeedback
-	8,  // 27: ai.v1.AIService.StartConversation:input_type -> ai.v1.StartConversationRequest
-	10, // 28: ai.v1.AIService.SendMessage:input_type -> ai.v1.SendMessageRequest
-	10, // 29: ai.v1.AIService.SendMessageStream:input_type -> ai.v1.SendMessageRequest
-	13, // 30: ai.v1.AIService.ListConversations:input_type -> ai.v1.ListConversationsRequest
-	15, // 31: ai.v1.AIService.GetConversation:input_type -> ai.v1.GetConversationRequest
-	17, // 32: ai.v1.AIService.DeleteConversation:input_type -> ai.v1.DeleteConversationRequest
-	19, // 33: ai.v1.AIService.ListScenarios:input_type -> ai.v1.ListScenariosRequest
-	21, // 34: ai.v1.AIService.ExplainMistake:input_type -> ai.v1.ExplainMistakeRequest
-	21, // 35: ai.v1.AIService.ExplainMistakeStream:input_type -> ai.v1.ExplainMistakeRequest
-	24, // 36: ai.v1.AIService.AssessWriting:input_type -> ai.v1.AssessWritingRequest
-	24, // 37: ai.v1.AIService.AssessWritingStream:input_type -> ai.v1.AssessWritingRequest
-	27, // 38: ai.v1.AIService.CheckPronunciation:input_type -> ai.v1.CheckPronunciationRequest
-	29, // 39: ai.v1.AIService.AskTutor:input_type -> ai.v1.AskTutorRequest
-	29, // 40: ai.v1.AIService.AskTutorStream:input_type -> ai.v1.AskTutorRequest
-	32, // 41: ai.v1.AIService.GenerateExercise:input_type -> ai.v1.GenerateExerciseRequest
-	34, // 42: ai.v1.AIService.GetQuotaStatus:input_type -> ai.v1.GetQuotaStatusRequest
-	36, // 43: ai.v1.AIService.SubmitMessageFeedback:input_type -> ai.v1.SubmitMessageFeedbackRequest
-	38, // 44: ai.v1.AIService.DeleteMessageFeedback:input_type -> ai.v1.DeleteMessageFeedbackRequest
-	9,  // 45: ai.v1.AIService.StartConversation:output_type -> ai.v1.StartConversationResponse
-	11, // 46: ai.v1.AIService.SendMessage:output_type -> ai.v1.SendMessageResponse
-	12, // 47: ai.v1.AIService.SendMessageStream:output_type -> ai.v1.SendMessageStreamChunk
-	14, // 48: ai.v1.AIService.ListConversations:output_type -> ai.v1.ListConversationsResponse
-	16, // 49: ai.v1.AIService.GetConversation:output_type -> ai.v1.GetConversationResponse
-	18, // 50: ai.v1.AIService.DeleteConversation:output_type -> ai.v1.DeleteConversationResponse
-	20, // 51: ai.v1.AIService.ListScenarios:output_type -> ai.v1.ListScenariosResponse
-	22, // 52: ai.v1.AIService.ExplainMistake:output_type -> ai.v1.ExplainMistakeResponse
-	23, // 53: ai.v1.AIService.ExplainMistakeStream:output_type -> ai.v1.ExplainMistakeStreamChunk
-	25, // 54: ai.v1.AIService.AssessWriting:output_type -> ai.v1.AssessWritingResponse
-	26, // 55: ai.v1.AIService.AssessWritingStream:output_type -> ai.v1.AssessWritingStreamChunk
-	28, // 56: ai.v1.AIService.CheckPronunciation:output_type -> ai.v1.CheckPronunciationResponse
-	30, // 57: ai.v1.AIService.AskTutor:output_type -> ai.v1.AskTutorResponse
-	31, // 58: ai.v1.AIService.AskTutorStream:output_type -> ai.v1.AskTutorStreamChunk
-	33, // 59: ai.v1.AIService.GenerateExercise:output_type -> ai.v1.GenerateExerciseResponse
-	35, // 60: ai.v1.AIService.GetQuotaStatus:output_type -> ai.v1.GetQuotaStatusResponse
-	37, // 61: ai.v1.AIService.SubmitMessageFeedback:output_type -> ai.v1.SubmitMessageFeedbackResponse
-	39, // 62: ai.v1.AIService.DeleteMessageFeedback:output_type -> ai.v1.DeleteMessageFeedbackResponse
-	45, // [45:63] is the sub-list for method output_type
-	27, // [27:45] is the sub-list for method input_type
-	27, // [27:27] is the sub-list for extension type_name
-	27, // [27:27] is the sub-list for extension extendee
-	0,  // [0:27] is the sub-list for field type_name
+	41, // 27: ai.v1.SuggestFlashcardsResponse.items:type_name -> ai.v1.FlashcardSuggestion
+	8,  // 28: ai.v1.AIService.StartConversation:input_type -> ai.v1.StartConversationRequest
+	10, // 29: ai.v1.AIService.SendMessage:input_type -> ai.v1.SendMessageRequest
+	10, // 30: ai.v1.AIService.SendMessageStream:input_type -> ai.v1.SendMessageRequest
+	13, // 31: ai.v1.AIService.ListConversations:input_type -> ai.v1.ListConversationsRequest
+	15, // 32: ai.v1.AIService.GetConversation:input_type -> ai.v1.GetConversationRequest
+	17, // 33: ai.v1.AIService.DeleteConversation:input_type -> ai.v1.DeleteConversationRequest
+	19, // 34: ai.v1.AIService.ListScenarios:input_type -> ai.v1.ListScenariosRequest
+	21, // 35: ai.v1.AIService.ExplainMistake:input_type -> ai.v1.ExplainMistakeRequest
+	21, // 36: ai.v1.AIService.ExplainMistakeStream:input_type -> ai.v1.ExplainMistakeRequest
+	24, // 37: ai.v1.AIService.AssessWriting:input_type -> ai.v1.AssessWritingRequest
+	24, // 38: ai.v1.AIService.AssessWritingStream:input_type -> ai.v1.AssessWritingRequest
+	27, // 39: ai.v1.AIService.CheckPronunciation:input_type -> ai.v1.CheckPronunciationRequest
+	29, // 40: ai.v1.AIService.AskTutor:input_type -> ai.v1.AskTutorRequest
+	29, // 41: ai.v1.AIService.AskTutorStream:input_type -> ai.v1.AskTutorRequest
+	32, // 42: ai.v1.AIService.GenerateExercise:input_type -> ai.v1.GenerateExerciseRequest
+	34, // 43: ai.v1.AIService.GetQuotaStatus:input_type -> ai.v1.GetQuotaStatusRequest
+	36, // 44: ai.v1.AIService.SubmitMessageFeedback:input_type -> ai.v1.SubmitMessageFeedbackRequest
+	38, // 45: ai.v1.AIService.DeleteMessageFeedback:input_type -> ai.v1.DeleteMessageFeedbackRequest
+	40, // 46: ai.v1.AIService.SuggestFlashcards:input_type -> ai.v1.SuggestFlashcardsRequest
+	9,  // 47: ai.v1.AIService.StartConversation:output_type -> ai.v1.StartConversationResponse
+	11, // 48: ai.v1.AIService.SendMessage:output_type -> ai.v1.SendMessageResponse
+	12, // 49: ai.v1.AIService.SendMessageStream:output_type -> ai.v1.SendMessageStreamChunk
+	14, // 50: ai.v1.AIService.ListConversations:output_type -> ai.v1.ListConversationsResponse
+	16, // 51: ai.v1.AIService.GetConversation:output_type -> ai.v1.GetConversationResponse
+	18, // 52: ai.v1.AIService.DeleteConversation:output_type -> ai.v1.DeleteConversationResponse
+	20, // 53: ai.v1.AIService.ListScenarios:output_type -> ai.v1.ListScenariosResponse
+	22, // 54: ai.v1.AIService.ExplainMistake:output_type -> ai.v1.ExplainMistakeResponse
+	23, // 55: ai.v1.AIService.ExplainMistakeStream:output_type -> ai.v1.ExplainMistakeStreamChunk
+	25, // 56: ai.v1.AIService.AssessWriting:output_type -> ai.v1.AssessWritingResponse
+	26, // 57: ai.v1.AIService.AssessWritingStream:output_type -> ai.v1.AssessWritingStreamChunk
+	28, // 58: ai.v1.AIService.CheckPronunciation:output_type -> ai.v1.CheckPronunciationResponse
+	30, // 59: ai.v1.AIService.AskTutor:output_type -> ai.v1.AskTutorResponse
+	31, // 60: ai.v1.AIService.AskTutorStream:output_type -> ai.v1.AskTutorStreamChunk
+	33, // 61: ai.v1.AIService.GenerateExercise:output_type -> ai.v1.GenerateExerciseResponse
+	35, // 62: ai.v1.AIService.GetQuotaStatus:output_type -> ai.v1.GetQuotaStatusResponse
+	37, // 63: ai.v1.AIService.SubmitMessageFeedback:output_type -> ai.v1.SubmitMessageFeedbackResponse
+	39, // 64: ai.v1.AIService.DeleteMessageFeedback:output_type -> ai.v1.DeleteMessageFeedbackResponse
+	42, // 65: ai.v1.AIService.SuggestFlashcards:output_type -> ai.v1.SuggestFlashcardsResponse
+	47, // [47:66] is the sub-list for method output_type
+	28, // [28:47] is the sub-list for method input_type
+	28, // [28:28] is the sub-list for extension type_name
+	28, // [28:28] is the sub-list for extension extendee
+	0,  // [0:28] is the sub-list for field type_name
 }
 
 func init() { file_ai_v1_ai_proto_init() }
@@ -3361,7 +3644,7 @@ func file_ai_v1_ai_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_ai_v1_ai_proto_rawDesc), len(file_ai_v1_ai_proto_rawDesc)),
 			NumEnums:      1,
-			NumMessages:   39,
+			NumMessages:   42,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

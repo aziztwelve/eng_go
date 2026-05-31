@@ -7,6 +7,19 @@ generator + skill decay + DailyDecay cron + course-service hook +
 gateway REST) — done. Phase 3 web frontend (`/practice/*`,
 `/profile/strength`) — done.
 
+Phase 7 — Word Flashcards (повтор слов) — done:
+  - course-service: `user_flashcards` + `flashcard_today_queue` таблицы,
+    11 gRPC RPC (CRUD + bulk + from-vocabulary + today queue + stats).
+  - ai-service: `SuggestFlashcards` (mock pool по level×goal).
+  - step-validation-service: auto-add hook (extract vocabulary_id из
+    match_pairs/fill_blank/translate/listening → AddVocabularyAsFlashcard).
+  - srs-service: `item_type='flashcard'` в CHECK constraint.
+  - Gateway REST: 12 endpoints (flashcards CRUD + today queue + AI suggestions).
+  - Mobile UI: library, flashcard practice (3D flip), results, add sheet,
+    suggestions widget, TTS auto-play, skip/undo (5-card stack).
+  - Unit tests: 65+ (course-service 17, ai-service 7, step-validation 9,
+    gateway 32).
+
 Phase 3 push notifications — done (backend):
   - notifications-service `:50062` (3 таблицы, gRPC API).
   - Sender adapters: WebPushSender (VAPID, RFC 8030 через `webpush-go`)
@@ -53,7 +66,60 @@ cd services/<name> && go run ./cmd
 
 # Build + test всего
 for s in services/*/; do (cd "$s" && go build ./... && go test ./...); done
+
+# Seed onboarding (1110 синтетических юзеров: L1 fixtures / L2 grid / L3 random):
+python3 scripts/gen_seed_onboarding.py    # регенерация SQL-файлов (детерминизм seed=42)
+./bin/seed.sh                             # накат всех seeds (auth → user → course →
+                                          # gamification → social → srs)
 ```
+
+## Onboarding seed (`scripts/gen_seed_onboarding.py`)
+
+3-слойный детерминистичный сидер для тестирования онбординга и связанных
+систем (gamification / leagues / friends / SRS). Все юзеры имеют префикс
+UUID по слою — легко чистить `WHERE id::text LIKE 'aaaa%'` и т.д.
+
+| Слой | UUID prefix | Юзеров | Что покрывает |
+|------|-------------|--------|---------------|
+| L1 fixtures | `aaaa****` | 56 | По 1 юзеру на каждое значение каждого enum-поля (proficiency / age / pain_point / past_blocker / future_regret / emotional_reaction / reminder_slot / paywall_choice / daily_goal / commit_minutes / speaking_situation) + 5 edge-cases (all NULL / in-progress / guest unclaimed / guest claimed / multilang) |
+| L2 grid | `bbbb****` | 54 | 6 уровней × 9 целей — все бизнес-критичные пары для рекомендаций контента |
+| L3 random | `cccc****` | 1000 | Faker по реалистичным весам (60% A1-B1, 50% paywall.dismissed, 70% native=ru, 10% гости, 5% незавершённый онбординг) |
+
+Записей в БД (~25 400):
+
+| Таблица | Строк | Примечание |
+|---|---:|---|
+| `public.users` | 1 110 | Из них 106 гостей (~10%) |
+| `public.profiles` | 1 110 | 11 enum-полей + native/target/age/etc |
+| `gamification.user_stats` | 1 110 | level/XP/streak/hearts |
+| `gamification.daily_goals` | 1 110 | target_xp из profiles |
+| `gamification.daily_goal_progress` | 1 064 | только для completed онбординга |
+| `gamification.streak_history` | 12 983 | 1-14 дней назад для активных |
+| `gamification.xp_transactions` | 3 321 | разбивка total_xp на 1-5 транзакций |
+| `social.cohorts` | 10 | 1 на лигу (Bronze..Diamond) |
+| `social.user_leagues` | 200 | top-200 active по weekly_xp |
+| `social.friendships` | 600 | граф между L1+L2 fixtures |
+| `srs.user_srs_items` | 2 657 | ~25 карточек на 100 active юзеров |
+
+Регенерация и валидация:
+
+```bash
+python3 scripts/gen_seed_onboarding.py    # → 5 SQL-файлов в services/*/seeds/
+
+# Dry-run валидация (BEGIN ... ROLLBACK против живой БД):
+{ echo "BEGIN;"; cat services/{auth,user,gamification,social,srs}-service/seeds/*.sql; echo "ROLLBACK;"; } |
+  PGPASSWORD=change_me_in_production psql -h localhost -U admin -d elearning -v ON_ERROR_STOP=1
+```
+
+**Что важно**:
+- Файлы детерминистичные (`random.seed(42)`) — diff в git стабильный.
+- bcrypt password hash для всех = bcrypt(`password123`), как в legacy seed.
+- L1/L2 UUIDs зарезервированы для unit/integration тестов — не пересекаются
+  с legacy `1111-/2222-/3333-` из `001_users.sql`.
+- `bin/seed.sh` теперь обрабатывает `auth → user → course → gamification →
+  social → srs` в нужном порядке (FK на `public.users`).
+- Регенерация **не нужна** при добавлении новых enum-значений в БД — нужна,
+  если меняем веса/структуру в `gen_seed_onboarding.py`.
 
 ## Конвенции
 

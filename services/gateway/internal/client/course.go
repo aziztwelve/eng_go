@@ -224,6 +224,52 @@ func (c *CourseClient) BulkCreateVocabulary(ctx context.Context, req *coursev1.B
 	return c.client.BulkCreateVocabulary(ctx, req)
 }
 
+// === Flashcards (Phase 7) ===
+
+func (c *CourseClient) ListFlashcards(ctx context.Context, req *coursev1.ListFlashcardsRequest) (*coursev1.ListFlashcardsResponse, error) {
+	return c.client.ListFlashcards(ctx, req)
+}
+
+func (c *CourseClient) GetFlashcard(ctx context.Context, req *coursev1.GetFlashcardRequest) (*coursev1.GetFlashcardResponse, error) {
+	return c.client.GetFlashcard(ctx, req)
+}
+
+func (c *CourseClient) CreateFlashcard(ctx context.Context, req *coursev1.CreateFlashcardRequest) (*coursev1.CreateFlashcardResponse, error) {
+	return c.client.CreateFlashcard(ctx, req)
+}
+
+func (c *CourseClient) UpdateFlashcard(ctx context.Context, req *coursev1.UpdateFlashcardRequest) (*coursev1.UpdateFlashcardResponse, error) {
+	return c.client.UpdateFlashcard(ctx, req)
+}
+
+func (c *CourseClient) ArchiveFlashcard(ctx context.Context, req *coursev1.ArchiveFlashcardRequest) (*coursev1.ArchiveFlashcardResponse, error) {
+	return c.client.ArchiveFlashcard(ctx, req)
+}
+
+func (c *CourseClient) BulkCreateFlashcards(ctx context.Context, req *coursev1.BulkCreateFlashcardsRequest) (*coursev1.BulkCreateFlashcardsResponse, error) {
+	return c.client.BulkCreateFlashcards(ctx, req)
+}
+
+func (c *CourseClient) AddVocabularyAsFlashcard(ctx context.Context, req *coursev1.AddVocabularyAsFlashcardRequest) (*coursev1.AddVocabularyAsFlashcardResponse, error) {
+	return c.client.AddVocabularyAsFlashcard(ctx, req)
+}
+
+func (c *CourseClient) GetFlashcardStats(ctx context.Context, req *coursev1.GetFlashcardStatsRequest) (*coursev1.GetFlashcardStatsResponse, error) {
+	return c.client.GetFlashcardStats(ctx, req)
+}
+
+func (c *CourseClient) PinForToday(ctx context.Context, req *coursev1.PinForTodayRequest) (*coursev1.PinForTodayResponse, error) {
+	return c.client.PinForToday(ctx, req)
+}
+
+func (c *CourseClient) UnpinFromToday(ctx context.Context, req *coursev1.UnpinFromTodayRequest) (*coursev1.UnpinFromTodayResponse, error) {
+	return c.client.UnpinFromToday(ctx, req)
+}
+
+func (c *CourseClient) ListTodayQueue(ctx context.Context, req *coursev1.ListTodayQueueRequest) (*coursev1.ListTodayQueueResponse, error) {
+	return c.client.ListTodayQueue(ctx, req)
+}
+
 // === TTS (Phase 2 stub) ===
 
 func (c *CourseClient) SynthesizeTTS(ctx context.Context, req *coursev1.SynthesizeTTSRequest) (*coursev1.SynthesizeTTSResponse, error) {

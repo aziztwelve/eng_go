@@ -128,6 +128,25 @@ service CourseService {
   // Реальная интеграция с Google Cloud TTS / ElevenLabs — Phase 5.
   rpc SynthesizeTTS(SynthesizeTTSRequest) returns (SynthesizeTTSResponse);
   rpc GetTTSByText(GetTTSByTextRequest) returns (GetTTSByTextResponse);
+
+  // === Flashcards (Phase 7 — повтор слов) ===
+  // Личные карточки слов пользователя для feature "Повтор слов".
+  // См. docs/tasks/phase-7-word-flashcards.md.
+  rpc ListFlashcards(ListFlashcardsRequest) returns (ListFlashcardsResponse);
+  rpc GetFlashcard(GetFlashcardRequest) returns (GetFlashcardResponse);
+  rpc CreateFlashcard(CreateFlashcardRequest) returns (CreateFlashcardResponse);
+  rpc UpdateFlashcard(UpdateFlashcardRequest) returns (UpdateFlashcardResponse);
+  rpc ArchiveFlashcard(ArchiveFlashcardRequest) returns (ArchiveFlashcardResponse);
+  rpc BulkCreateFlashcards(BulkCreateFlashcardsRequest) returns (BulkCreateFlashcardsResponse);
+  rpc AddVocabularyAsFlashcard(AddVocabularyAsFlashcardRequest) returns (AddVocabularyAsFlashcardResponse);
+  rpc GetFlashcardStats(GetFlashcardStatsRequest) returns (GetFlashcardStatsResponse);
+
+  // === Today queue (Phase 7) ===
+  // Priority queue "На сегодня" — карточки запинаны юзером для
+  // обязательной practice-сессии сегодня.
+  rpc PinForToday(PinForTodayRequest) returns (PinForTodayResponse);
+  rpc UnpinFromToday(UnpinFromTodayRequest) returns (UnpinFromTodayResponse);
+  rpc ListTodayQueue(ListTodayQueueRequest) returns (ListTodayQueueResponse);
 }
 
 // Course представляет курс
@@ -791,4 +810,207 @@ message GetTTSByTextRequest {
 
 message GetTTSByTextResponse {
   TTSCacheEntry entry = 1;
+}
+
+// =====================================================================
+// Phase 7: Flashcards + Today Queue
+// =====================================================================
+
+// Flashcard — личная карточка слова пользователя.
+message Flashcard {
+  string id              = 1;
+  string user_id         = 2;
+  // 'manual' | 'lesson' | 'mistake' | 'ai_suggestion'
+  string source          = 3;
+  // Optional: NULL для чисто manual карточек.
+  string vocabulary_id   = 4;
+  string word            = 5;
+  string translation     = 6;
+  string language        = 7;
+  string target_language = 8;
+  string definition       = 9;   // optional
+  string example_sentence = 10;  // optional
+  string audio_url       = 11;   // optional
+  string image_url       = 12;   // optional
+  google.protobuf.Timestamp archived_at = 13;
+  google.protobuf.Timestamp created_at  = 14;
+  google.protobuf.Timestamp updated_at  = 15;
+  // Computed: запинана ли карточка на сегодня (см. flashcard_today_queue).
+  bool   pinned_today    = 16;
+  // Опциональная SM-2 проекция (вернётся, если caller просит include_srs).
+  // Заполняется course-service'ом из srs-service (cross-svc вызов).
+  optional double strength       = 17;
+  optional int32  repetitions    = 18;
+  optional google.protobuf.Timestamp next_review_at = 19;
+}
+
+// === ListFlashcards ===
+message ListFlashcardsRequest {
+  string user_id      = 1;
+  // Фильтр по source: 'manual' | 'lesson' | 'mistake' | 'ai_suggestion'.
+  // Empty = all sources.
+  string source       = 2;
+  // Если true — только запинанные на сегодня.
+  bool   pinned_today = 3;
+  // Поиск по lower(word). Empty = без фильтра.
+  string search       = 4;
+  // Если true — также возвращаем archived (для UI «корзина»).
+  bool   include_archived = 5;
+  // Если true — заполняем SM-2 поля (strength/repetitions/next_review_at).
+  bool   include_srs  = 6;
+  int32  limit        = 7;  // default 50, max 200
+  int32  offset       = 8;
+}
+
+message ListFlashcardsResponse {
+  repeated Flashcard items = 1;
+  int32 total              = 2;
+}
+
+// === GetFlashcard ===
+message GetFlashcardRequest {
+  string user_id      = 1;
+  string flashcard_id = 2;
+  bool   include_srs  = 3;
+}
+
+message GetFlashcardResponse {
+  Flashcard flashcard = 1;
+}
+
+// === CreateFlashcard ===
+// Manual create: client передаёт word/translation/(definition/example).
+// vocabulary_id не передаётся — карточка считается manual.
+message CreateFlashcardRequest {
+  string user_id          = 1;
+  string word             = 2;
+  string translation      = 3;
+  string language         = 4;   // например 'en'
+  string target_language  = 5;   // например 'ru'
+  string definition       = 6;   // optional
+  string example_sentence = 7;   // optional
+  string audio_url        = 8;   // optional
+  string image_url        = 9;   // optional
+}
+
+message CreateFlashcardResponse {
+  Flashcard flashcard = 1;
+}
+
+// === UpdateFlashcard ===
+// Partial update — только non-empty значения применяются.
+message UpdateFlashcardRequest {
+  string user_id      = 1;
+  string flashcard_id = 2;
+  google.protobuf.StringValue word             = 3;
+  google.protobuf.StringValue translation      = 4;
+  google.protobuf.StringValue definition       = 5;
+  google.protobuf.StringValue example_sentence = 6;
+  google.protobuf.StringValue audio_url        = 7;
+  google.protobuf.StringValue image_url        = 8;
+}
+
+message UpdateFlashcardResponse {
+  Flashcard flashcard = 1;
+}
+
+// === ArchiveFlashcard ===
+// Soft-delete (set archived_at = NOW()).
+message ArchiveFlashcardRequest {
+  string user_id      = 1;
+  string flashcard_id = 2;
+}
+
+message ArchiveFlashcardResponse {}
+
+// === BulkCreateFlashcards ===
+// Для accept-all из AI suggestions либо batch-import.
+message BulkCreateFlashcardsRequest {
+  string user_id = 1;
+  message Item {
+    string word             = 1;
+    string translation      = 2;
+    string language         = 3;
+    string target_language  = 4;
+    string definition       = 5;
+    string example_sentence = 6;
+    string source           = 7; // default 'manual'
+    string vocabulary_id    = 8; // optional, если ref на system vocab
+  }
+  repeated Item items = 2;
+}
+
+message BulkCreateFlashcardsResponse {
+  int32 created_count = 1;
+  int32 skipped_count = 2; // дубликаты (vocabulary_id уже есть)
+  repeated Flashcard items = 3;
+}
+
+// === AddVocabularyAsFlashcard ===
+// Дёргается step-validation-service'ом при auto-add из урока, либо
+// клиентом при выборе слова из catalog.
+message AddVocabularyAsFlashcardRequest {
+  string user_id       = 1;
+  string vocabulary_id = 2;
+  // 'lesson' | 'mistake' | 'ai_suggestion' (не 'manual', т.к. ref на vocab).
+  string source        = 3;
+}
+
+message AddVocabularyAsFlashcardResponse {
+  Flashcard flashcard = 1;
+  // false если карточка с таким vocabulary_id уже существовала.
+  bool created = 2;
+}
+
+// === GetFlashcardStats ===
+// Stats для UI tile блока в Library экране.
+message GetFlashcardStatsRequest {
+  string user_id = 1;
+}
+
+message GetFlashcardStatsResponse {
+  // Карточек, у которых next_review_at <= now() OR pinned_today.
+  int32 today_due       = 1;
+  // Из today_due — сколько уже отревьювлено сегодня.
+  int32 today_completed = 2;
+  // Карточек reps>0 && strength<0.8.
+  int32 learning_count  = 3;
+  // Карточек strength>=0.8.
+  int32 mastered_count  = 4;
+  // Total non-archived карточек.
+  int32 total_count     = 5;
+}
+
+// === Today Queue ===
+message PinForTodayRequest {
+  string user_id      = 1;
+  string flashcard_id = 2;
+  // Дата в timezone юзера (YYYY-MM-DD). Empty → сервер сам считает.
+  string queued_for_date = 3;
+}
+
+message PinForTodayResponse {
+  // Когда карточка запиннута (для UI feedback).
+  google.protobuf.Timestamp added_at = 1;
+}
+
+message UnpinFromTodayRequest {
+  string user_id      = 1;
+  string flashcard_id = 2;
+  string queued_for_date = 3; // optional — empty значит "сегодня"
+}
+
+message UnpinFromTodayResponse {}
+
+message ListTodayQueueRequest {
+  string user_id = 1;
+  // Empty → "сегодня" в timezone юзера.
+  string queued_for_date = 2;
+  bool   include_srs = 3;
+}
+
+message ListTodayQueueResponse {
+  repeated Flashcard items = 1;
+  // Дата, для которой вернули список (фактическая, после авто-вычисления).
+  string queued_for_date = 2;
 }

@@ -187,6 +187,12 @@ func (s *submissionService) Submit(ctx context.Context, req SubmitRequest) (*Sub
 	// из-за отказа srs-service.
 	s.recordSRS(ctx, req, attempt, result, attemptIndex)
 
+	// 6. Phase 7 auto-add: при correct извлекаем словарь из step.content
+	// и добавляем как личные flashcards (source='lesson'). Non-fatal.
+	if result.IsCorrect {
+		s.autoAddFlashcards(ctx, req.UserID, step)
+	}
+
 	return out, nil
 }
 

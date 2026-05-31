@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"google.golang.org/protobuf/types/known/timestamppb"
 	"google.golang.org/protobuf/types/known/wrapperspb"
 
 	"github.com/elearning/gateway/internal/client"
@@ -69,6 +70,20 @@ func (h *OnboardingHandler) PatchOnboardingState(c *gin.Context) {
 		return
 	}
 
+	// paywall_seen_at принимаем как RFC3339-string. Если задано но не парсится —
+	// возвращаем 400 (а не молча игнорируем).
+	var paywallSeenAt *timestamppb.Timestamp
+	if req.PaywallSeenAt != nil {
+		t, err := time.Parse(time.RFC3339, *req.PaywallSeenAt)
+		if err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{
+				"error": "paywall_seen_at must be RFC3339 timestamp",
+			})
+			return
+		}
+		paywallSeenAt = timestamppb.New(t)
+	}
+
 	pbReq := &userv1.PatchOnboardingStateRequest{
 		UserId:           userID,
 		Motivation:       req.Motivation,
@@ -80,6 +95,18 @@ func (h *OnboardingHandler) PatchOnboardingState(c *gin.Context) {
 		SignupSource:     wrapNullableString(req.SignupSource),
 		PlacementScore:   wrapNullableInt32(req.PlacementScore),
 		DateOfBirth:      wrapNullableString(req.DateOfBirth),
+
+		// === Onboarding v3 (Oki-style) ===
+		AgeBracket:         wrapNullableString(req.AgeBracket),
+		DailyCommitMinutes: wrapNullableInt32(req.DailyCommitMinutes),
+		PainPoint:          wrapNullableString(req.PainPoint),
+		SpeakingSituation:  wrapNullableString(req.SpeakingSituation),
+		PastBlocker:        wrapNullableString(req.PastBlocker),
+		FutureRegret:       wrapNullableString(req.FutureRegret),
+		EmotionalReaction:  wrapNullableString(req.EmotionalReaction),
+		ReminderSlot:       wrapNullableString(req.ReminderSlot),
+		PaywallSeenAt:      paywallSeenAt,
+		PaywallChoice:      wrapNullableString(req.PaywallChoice),
 	}
 
 	resp, err := h.userClient.PatchOnboardingState(c.Request.Context(), pbReq)
@@ -122,6 +149,16 @@ func toOnboardingDTO(s *userv1.OnboardingState) dto.OnboardingStateResponse {
 		ProficiencyLevel: getStringValue(s.GetProficiencyLevel()),
 		SignupSource:     getStringValue(s.GetSignupSource()),
 		DateOfBirth:      getStringValue(s.GetDateOfBirth()),
+
+		// === Onboarding v3 (Oki-style) ===
+		AgeBracket:        getStringValue(s.GetAgeBracket()),
+		PainPoint:         getStringValue(s.GetPainPoint()),
+		SpeakingSituation: getStringValue(s.GetSpeakingSituation()),
+		PastBlocker:       getStringValue(s.GetPastBlocker()),
+		FutureRegret:      getStringValue(s.GetFutureRegret()),
+		EmotionalReaction: getStringValue(s.GetEmotionalReaction()),
+		ReminderSlot:      getStringValue(s.GetReminderSlot()),
+		PaywallChoice:     getStringValue(s.GetPaywallChoice()),
 	}
 	if out.Motivation == nil {
 		out.Motivation = []string{}
@@ -137,6 +174,14 @@ func toOnboardingDTO(s *userv1.OnboardingState) dto.OnboardingStateResponse {
 	if v := s.GetOnboardedAt(); v != nil {
 		ts := v.AsTime().Format(time.RFC3339)
 		out.OnboardedAt = &ts
+	}
+	if v := s.GetDailyCommitMinutes(); v != nil {
+		val := v.GetValue()
+		out.DailyCommitMinutes = &val
+	}
+	if v := s.GetPaywallSeenAt(); v != nil {
+		ts := v.AsTime().Format(time.RFC3339)
+		out.PaywallSeenAt = &ts
 	}
 	return out
 }

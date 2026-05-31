@@ -68,3 +68,12 @@ func (c *grpcClient) MarkStepComplete(ctx context.Context, req MarkCompletedRequ
 	_, err := c.client.MarkStepComplete(ctx, r)
 	return err
 }
+
+func (c *grpcClient) AddVocabularyAsFlashcard(ctx context.Context, userID, vocabularyID, source string) error {
+	_, err := c.client.AddVocabularyAsFlashcard(ctx, &coursev1.AddVocabularyAsFlashcardRequest{
+		UserId:       userID,
+		VocabularyId: vocabularyID,
+		Source:       source,
+	})
+	return err
+}

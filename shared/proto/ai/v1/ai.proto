@@ -132,6 +132,12 @@ service AIService {
 
   // DeleteMessageFeedback — снимает оценку (idempotent).
   rpc DeleteMessageFeedback(DeleteMessageFeedbackRequest) returns (DeleteMessageFeedbackResponse);
+
+  // === Flashcard suggestions (Phase 7) ===
+  // SuggestFlashcards — рекомендует слова для добавления в библиотеку
+  // на основе профиля пользователя (level, goal, pain_point).
+  // Mock provider возвращает hard-coded список по level+goal.
+  rpc SuggestFlashcards(SuggestFlashcardsRequest) returns (SuggestFlashcardsResponse);
 }
 
 // =====================================================================
@@ -514,3 +520,42 @@ message DeleteMessageFeedbackRequest {
 }
 
 message DeleteMessageFeedbackResponse {}
+
+// =====================================================================
+// Flashcard suggestions (Phase 7)
+// =====================================================================
+
+message SuggestFlashcardsRequest {
+  string user_id         = 1;
+  // Профиль: уровень / мотивация / pain_point из onboarding.
+  // Если empty — провайдер использует defaults (a2 / general).
+  string level           = 2;  // 'beginner' | 'a1' | 'a2' | 'b1' | 'b2' | 'just_for_fun'
+  string goal            = 3;  // motivation[0]: 'work' | 'travel' | 'exam' | ...
+  string pain_point      = 4;  // 'fear_speaking' | 'lack_vocab' | ...
+  string target_language = 5;  // 'en'
+  string native_language = 6;  // 'ru'
+  // Сколько suggestion'ов вернуть. Default 5, max 10.
+  int32  count           = 7;
+  // Опционально: список user_flashcard.word (lowercase) — exclude из
+  // suggestions, чтобы не предлагать уже добавленные.
+  repeated string exclude_words = 8;
+}
+
+message FlashcardSuggestion {
+  string word             = 1;
+  string translation      = 2;
+  string definition       = 3;   // optional
+  string example_sentence = 4;   // optional
+  // Объяснение «почему предложили это слово» — для UI tooltip'а.
+  string reason           = 5;   // например: "часто встречается в work + b1"
+  // Опциональный pos (part of speech) и level для UI.
+  string pos              = 6;   // 'noun' | 'verb' | ...
+  string level            = 7;   // 'a2' | 'b1' | ...
+}
+
+message SuggestFlashcardsResponse {
+  repeated FlashcardSuggestion items = 1;
+  // Опциональная подсказка для UI: если suggestion-pool исчерпан —
+  // фронт может показать «попробуйте позже» вместо ещё одной кнопки.
+  bool exhausted = 2;
+}

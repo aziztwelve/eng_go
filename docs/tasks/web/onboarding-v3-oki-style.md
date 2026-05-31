@@ -150,12 +150,12 @@ schedule). Web-документ её **не дублирует** — реали�
 
 Идентично mobile (см. mob-спеку §1). На веб мы **дополнительно** ловим
 `?step=` query-param на `/onboarding` для resume — если пользователь закрыл
-вкладку и вернулся, мы читаем `GET /me/onboarding`, определяем последний
+вкладку и вернулся, мы читаем `GET /onboarding`, определяем последний
 заполненный поле и перенаправляем на нужный шаг.
 
 ### 1.2 Resume-логика
 
-Источник истины — backend-стейт (`GET /api/v1/me/onboarding`). Локально только
+Источник истины — backend-стейт (`GET /api/v1/onboarding`). Локально только
 кешируем результат через TanStack Query (`queryKey: ['onboarding','state']`).
 
 ```ts
@@ -192,9 +192,9 @@ export function resolveResumeStep(state: OnboardingState): string {
 | Что нужно web'у | Endpoint | Источник |
 |---|---|---|
 | Создать guest JWT | `POST /api/v1/auth/guest { device_id }` | mob-спека §2.5 / spec v2 §4.4 |
-| Получить onboarding-state (для resume) | `GET /api/v1/me/onboarding` | mob-спека §2.2 / spec v2 §3 |
-| Сохранить ответ шага | `PATCH /api/v1/me/onboarding {...}` | mob-спека §2.2 |
-| Отметить онбординг завершённым | `POST /api/v1/me/onboarding/complete` | mob-спека §2.5 / spec v2 |
+| Получить onboarding-state (для resume) | `GET /api/v1/onboarding` | mob-спека §2.2 / spec v2 §3 |
+| Сохранить ответ шага | `PATCH /api/v1/onboarding {...}` | mob-спека §2.2 |
+| Отметить онбординг завершённым | `POST /api/v1/onboarding/complete` | mob-спека §2.5 / spec v2 |
 | Claim гостя по OAuth (Google) | `POST /api/v1/auth/claim/oauth { provider, id_token }` | mob-спека §2.4 |
 | Claim гостя по email+password | `POST /api/v1/auth/claim { email, password }` | spec v2 §4.7 |
 | First-lesson seed | `GET /api/v1/lessons/first?target_language=&level=` | spec v2 §4.6 |
@@ -813,7 +813,7 @@ export function useClaimWithOAuth() {
       return res;
     },
     onSuccess: async () => {
-      await ApiClient.post('/me/onboarding/complete', {});
+      await ApiClient.post('/onboarding/complete', {});
       router.replace('/dashboard');
     },
   });
@@ -902,13 +902,35 @@ VAPID public key подсасываем из `process.env.NEXT_PUBLIC_VAPID_PUBL
 - [ ] Контент тестимониалов (5 штук × локализация на RU).
 - [ ] Placement questions pool (12 langs × 8+ вопросов).
 
-### Sprint 1 — Backend dependency check (1 день)
+### Sprint 1 — Backend dependency check (1 день) ✅ DONE 2026-05-28
 
-- [ ] Убедиться что mob-команда уже накатила миграции (`003_onboarding_v3_fields`,
-      `004_oauth_credentials`) и проры (OnboardingState v3, ClaimGuestWithOAuth).
-- [ ] Если нет — заблокировать web-разработку до готовности backend'а.
-      Альтернатива — в коде сделать stubs `useOnboarding()` поверх localStorage и
-      замёрджить на бэк позже (НЕ рекомендуется, дрифт состояний).
+- [x] Миграции в БД накатываются: `users.profiles 003_onboarding_v3_fields.sql` (10
+      новых колонок + CHECK + индекс на `reminder_slot`); `auth.users 002_guest_users.sql`
+      (`is_guest`/`guest_device_id` + nullable email/password); `auth.users
+      003_oauth_credentials.sql` (`oauth_provider`/`oauth_sub` + UNIQUE).
+- [x] Proto OnboardingState v3 / PatchOnboardingStateRequest содержит все 10 v3-полей
+      (`shared/proto/user/v1/user.proto`).
+- [x] User-service repository / converter / API целиком v3-aware
+      (`patch_state_v3_test.go` зелёный).
+- [x] Auth-service: `ClaimGuestWithOAuth` RPC реализован.
+- [x] Gateway routes: `POST /api/v1/auth/guest`, `POST /api/v1/auth/claim`,
+      `POST /api/v1/auth/claim/oauth`, `GET/PATCH /api/v1/onboarding`,
+      `POST /api/v1/onboarding/complete`, `POST /api/v1/notifications/devices`.
+- [x] **Fix:** gateway `OnboardingHandler` + `dto.PatchOnboardingRequest` /
+      `OnboardingStateResponse` расширены v3-полями (раньше пробрасывали только
+      v2-набор, что сломало бы web/mobile PATCH'и). Build + tests clean.
+- [ ] **Note:** `GET /api/v1/lessons/first?target_language=&level=` (опц., из spec v2 §4.6)
+      пока не реализован в gateway. Не блокирует онбординг — это для post-flow landing.
+
+#### Найденные расхождения web-спеки с реальностью бэка
+
+| Спека (было) | Реальность | Что сделали |
+|---|---|---|
+| `GET /me/onboarding` | `GET /onboarding` | sed-replace в спеке |
+| `PATCH /me/onboarding` | `PATCH /onboarding` | sed-replace в спеке |
+| `POST /me/onboarding/complete` | `POST /onboarding/complete` | sed-replace в спеке |
+| Gateway DTO имеет v3-поля | DTO имел только v2 | Расширили DTO + handler в этом спринте |
+
 
 ### Sprint 2 — Web bootstrap + базовые шаги (4 дня)
 

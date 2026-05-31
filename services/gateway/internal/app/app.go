@@ -179,6 +179,33 @@ func (a *App) initRouter(ctx context.Context) error {
 			protected.POST("/attempts/:attemptId/complete", quizHandler.CompleteQuizAttempt)
 			protected.GET("/attempts/:attemptId", quizHandler.GetAttempt)
 
+			// === Phase 7: flashcards (повтор слов) + today queue ===
+			// AI suggestions подключаются только если ai-service настроен.
+			flashcardHandler := handler.NewFlashcardHandler(
+				a.diContainer.CourseClient(ctx),
+				a.diContainer.AIClient(ctx),
+			)
+			flashcards := protected.Group("/flashcards")
+			{
+				// Static-сегменты до /:id (gin приоритизирует static, но
+				// порядок объявления держим явным для читаемости).
+				flashcards.GET("/stats", flashcardHandler.Stats)
+				flashcards.GET("/today", flashcardHandler.ListToday)
+				flashcards.POST("/today/:flashcardId", flashcardHandler.PinForToday)
+				flashcards.DELETE("/today/:flashcardId", flashcardHandler.UnpinFromToday)
+				flashcards.POST("/bulk", flashcardHandler.BulkCreate)
+				flashcards.POST("/from-vocabulary", flashcardHandler.FromVocabulary)
+
+				flashcards.GET("", flashcardHandler.List)
+				flashcards.POST("", flashcardHandler.Create)
+				flashcards.GET("/:id", flashcardHandler.Get)
+				flashcards.PUT("/:id", flashcardHandler.Update)
+				flashcards.DELETE("/:id", flashcardHandler.Archive)
+			}
+			// AI flashcard-suggestions (отдельно от /flashcards чтобы
+			// сгруппировать с прочими /ai эндпоинтами).
+			protected.GET("/ai/flashcard-suggestions", flashcardHandler.Suggestions)
+
 			// === Phase 2: step submit (только если step-validation-service настроен) ===
 			if svc := a.diContainer.StepValidationClient(ctx); svc != nil {
 				sh := handler.NewStepSubmitHandler(svc)

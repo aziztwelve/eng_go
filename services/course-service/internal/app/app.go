@@ -74,6 +74,8 @@ func New(ctx context.Context) (*App, error) {
 	trackRepo := postgresrepo.NewTrackRepository(pool)
 	vocabRepo := postgresrepo.NewVocabularyRepository(pool)
 	ttsRepo := postgresrepo.NewTTSRepository(pool)
+	flashcardRepo := postgresrepo.NewFlashcardRepository(pool)
+	todayQueueRepo := postgresrepo.NewTodayQueueRepository(pool)
 
 	// Инициализация сервисов
 	videoClient := service.NewMockVideoClient()
@@ -127,9 +129,11 @@ func New(ctx context.Context) (*App, error) {
 	trackService := service.NewTrackService(trackRepo)
 	vocabService := service.NewVocabularyService(vocabRepo)
 	ttsService := service.NewTTSService(ttsRepo)
+	flashcardService := service.NewFlashcardService(flashcardRepo, vocabRepo)
+	todayQueueService := service.NewTodayQueueService(todayQueueRepo)
 
 	// Инициализация gRPC API
-	courseAPI := v1.NewAPI(courseService, enrollmentService, progressService, trackService, vocabService, ttsService)
+	courseAPI := v1.NewAPI(courseService, enrollmentService, progressService, trackService, vocabService, ttsService, flashcardService, todayQueueService)
 
 	// Создание gRPC сервера
 	grpcServer := grpc.NewServer()

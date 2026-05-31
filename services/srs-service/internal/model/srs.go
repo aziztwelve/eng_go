@@ -13,12 +13,15 @@ const (
 	ItemTypeVocabulary ItemType = "vocabulary"
 	ItemTypeStep       ItemType = "step"
 	ItemTypePhrase     ItemType = "phrase"
+	// ItemTypeFlashcard — Phase 7: личные карточки пользователя
+	// (courses.user_flashcards). Добавлено в CHECK миграцией srs 000005.
+	ItemTypeFlashcard ItemType = "flashcard"
 )
 
 // IsValid — допустимый ли тип. Сверяется CHECK constraint миграции.
 func (t ItemType) IsValid() bool {
 	switch t {
-	case ItemTypeVocabulary, ItemTypeStep, ItemTypePhrase:
+	case ItemTypeVocabulary, ItemTypeStep, ItemTypePhrase, ItemTypeFlashcard:
 		return true
 	default:
 		return false

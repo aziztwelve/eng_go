@@ -35,7 +35,7 @@ func TestStartConversation_Roleplay_HasInitialMessage(t *testing.T) {
 	h := newHarness()
 	conv, initial, err := h.svc.StartConversation(context.Background(), StartConversationInput{
 		UserID:   "u1",
-		Scenario: "roleplay_restaurant",
+		Scenario: "roleplay_airport",
 	})
 	if err != nil {
 		t.Fatalf("StartConversation: %v", err)
@@ -52,7 +52,7 @@ func TestStartConversation_Roleplay_HasInitialMessage(t *testing.T) {
 	if conv.MessageCount != 1 {
 		t.Errorf("expected message_count=1 after initial, got %d", conv.MessageCount)
 	}
-	if conv.TargetLanguage != "es" {
+	if conv.TargetLanguage != "en" {
 		t.Errorf("scenario language should override; got %q", conv.TargetLanguage)
 	}
 }

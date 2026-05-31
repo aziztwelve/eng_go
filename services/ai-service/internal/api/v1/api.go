@@ -520,6 +520,39 @@ func feedbackRatingFromInt(v int32) model.FeedbackRating {
 }
 
 // =====================================================================
+// Flashcard suggestions (Phase 7)
+// =====================================================================
+
+func (a *api) SuggestFlashcards(ctx context.Context, req *aiv1.SuggestFlashcardsRequest) (*aiv1.SuggestFlashcardsResponse, error) {
+	items, exhausted, err := a.svc.SuggestFlashcards(ctx, service.SuggestFlashcardsInput{
+		UserID:         req.GetUserId(),
+		Level:          req.GetLevel(),
+		Goal:           req.GetGoal(),
+		PainPoint:      req.GetPainPoint(),
+		TargetLanguage: req.GetTargetLanguage(),
+		NativeLanguage: req.GetNativeLanguage(),
+		Count:          req.GetCount(),
+		ExcludeWords:   req.GetExcludeWords(),
+	})
+	if err != nil {
+		return nil, mapServiceError(err)
+	}
+	out := make([]*aiv1.FlashcardSuggestion, 0, len(items))
+	for _, c := range items {
+		out = append(out, &aiv1.FlashcardSuggestion{
+			Word:            c.Word,
+			Translation:     c.Translation,
+			Definition:      c.Definition,
+			ExampleSentence: c.ExampleSentence,
+			Reason:          c.Reason,
+			Pos:             c.POS,
+			Level:           c.Level,
+		})
+	}
+	return &aiv1.SuggestFlashcardsResponse{Items: out, Exhausted: exhausted}, nil
+}
+
+// =====================================================================
 // Error mapping
 // =====================================================================
 

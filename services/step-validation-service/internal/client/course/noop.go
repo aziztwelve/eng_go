@@ -20,3 +20,7 @@ func (noopClient) GetStep(context.Context, string) (*Step, error) {
 func (noopClient) MarkStepComplete(context.Context, MarkCompletedRequest) error {
 	return nil
 }
+
+func (noopClient) AddVocabularyAsFlashcard(context.Context, string, string, string) error {
+	return nil
+}

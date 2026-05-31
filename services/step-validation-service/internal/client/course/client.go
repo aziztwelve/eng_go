@@ -32,6 +32,10 @@ type MarkCompletedRequest struct {
 type Client interface {
 	GetStep(ctx context.Context, stepID string) (*Step, error)
 	MarkStepComplete(ctx context.Context, req MarkCompletedRequest) error
+	// AddVocabularyAsFlashcard — Phase 7 auto-add hook. Идемпотентен на
+	// стороне course-service (UNIQUE по user_id+vocabulary_id). Возвращает
+	// nil даже когда карточка уже существовала.
+	AddVocabularyAsFlashcard(ctx context.Context, userID, vocabularyID, source string) error
 	// AddXPResponse-like от gamification client — не нужен, мы напрямую
 	// вызываем gamification.Client.
 }

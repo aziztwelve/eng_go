@@ -5872,6 +5872,1630 @@ func (x *GetTTSByTextResponse) GetEntry() *TTSCacheEntry {
 	return nil
 }
 
+// Flashcard — личная карточка слова пользователя.
+type Flashcard struct {
+	state  protoimpl.MessageState `protogen:"open.v1"`
+	Id     string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	UserId string                 `protobuf:"bytes,2,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	// 'manual' | 'lesson' | 'mistake' | 'ai_suggestion'
+	Source string `protobuf:"bytes,3,opt,name=source,proto3" json:"source,omitempty"`
+	// Optional: NULL для чисто manual карточек.
+	VocabularyId    string                 `protobuf:"bytes,4,opt,name=vocabulary_id,json=vocabularyId,proto3" json:"vocabulary_id,omitempty"`
+	Word            string                 `protobuf:"bytes,5,opt,name=word,proto3" json:"word,omitempty"`
+	Translation     string                 `protobuf:"bytes,6,opt,name=translation,proto3" json:"translation,omitempty"`
+	Language        string                 `protobuf:"bytes,7,opt,name=language,proto3" json:"language,omitempty"`
+	TargetLanguage  string                 `protobuf:"bytes,8,opt,name=target_language,json=targetLanguage,proto3" json:"target_language,omitempty"`
+	Definition      string                 `protobuf:"bytes,9,opt,name=definition,proto3" json:"definition,omitempty"`                                   // optional
+	ExampleSentence string                 `protobuf:"bytes,10,opt,name=example_sentence,json=exampleSentence,proto3" json:"example_sentence,omitempty"` // optional
+	AudioUrl        string                 `protobuf:"bytes,11,opt,name=audio_url,json=audioUrl,proto3" json:"audio_url,omitempty"`                      // optional
+	ImageUrl        string                 `protobuf:"bytes,12,opt,name=image_url,json=imageUrl,proto3" json:"image_url,omitempty"`                      // optional
+	ArchivedAt      *timestamppb.Timestamp `protobuf:"bytes,13,opt,name=archived_at,json=archivedAt,proto3" json:"archived_at,omitempty"`
+	CreatedAt       *timestamppb.Timestamp `protobuf:"bytes,14,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
+	UpdatedAt       *timestamppb.Timestamp `protobuf:"bytes,15,opt,name=updated_at,json=updatedAt,proto3" json:"updated_at,omitempty"`
+	// Computed: запинана ли карточка на сегодня (см. flashcard_today_queue).
+	PinnedToday bool `protobuf:"varint,16,opt,name=pinned_today,json=pinnedToday,proto3" json:"pinned_today,omitempty"`
+	// Опциональная SM-2 проекция (вернётся, если caller просит include_srs).
+	// Заполняется course-service'ом из srs-service (cross-svc вызов).
+	Strength      *float64               `protobuf:"fixed64,17,opt,name=strength,proto3,oneof" json:"strength,omitempty"`
+	Repetitions   *int32                 `protobuf:"varint,18,opt,name=repetitions,proto3,oneof" json:"repetitions,omitempty"`
+	NextReviewAt  *timestamppb.Timestamp `protobuf:"bytes,19,opt,name=next_review_at,json=nextReviewAt,proto3,oneof" json:"next_review_at,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *Flashcard) Reset() {
+	*x = Flashcard{}
+	mi := &file_course_v1_course_proto_msgTypes[94]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *Flashcard) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*Flashcard) ProtoMessage() {}
+
+func (x *Flashcard) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[94]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use Flashcard.ProtoReflect.Descriptor instead.
+func (*Flashcard) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{94}
+}
+
+func (x *Flashcard) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *Flashcard) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *Flashcard) GetSource() string {
+	if x != nil {
+		return x.Source
+	}
+	return ""
+}
+
+func (x *Flashcard) GetVocabularyId() string {
+	if x != nil {
+		return x.VocabularyId
+	}
+	return ""
+}
+
+func (x *Flashcard) GetWord() string {
+	if x != nil {
+		return x.Word
+	}
+	return ""
+}
+
+func (x *Flashcard) GetTranslation() string {
+	if x != nil {
+		return x.Translation
+	}
+	return ""
+}
+
+func (x *Flashcard) GetLanguage() string {
+	if x != nil {
+		return x.Language
+	}
+	return ""
+}
+
+func (x *Flashcard) GetTargetLanguage() string {
+	if x != nil {
+		return x.TargetLanguage
+	}
+	return ""
+}
+
+func (x *Flashcard) GetDefinition() string {
+	if x != nil {
+		return x.Definition
+	}
+	return ""
+}
+
+func (x *Flashcard) GetExampleSentence() string {
+	if x != nil {
+		return x.ExampleSentence
+	}
+	return ""
+}
+
+func (x *Flashcard) GetAudioUrl() string {
+	if x != nil {
+		return x.AudioUrl
+	}
+	return ""
+}
+
+func (x *Flashcard) GetImageUrl() string {
+	if x != nil {
+		return x.ImageUrl
+	}
+	return ""
+}
+
+func (x *Flashcard) GetArchivedAt() *timestamppb.Timestamp {
+	if x != nil {
+		return x.ArchivedAt
+	}
+	return nil
+}
+
+func (x *Flashcard) GetCreatedAt() *timestamppb.Timestamp {
+	if x != nil {
+		return x.CreatedAt
+	}
+	return nil
+}
+
+func (x *Flashcard) GetUpdatedAt() *timestamppb.Timestamp {
+	if x != nil {
+		return x.UpdatedAt
+	}
+	return nil
+}
+
+func (x *Flashcard) GetPinnedToday() bool {
+	if x != nil {
+		return x.PinnedToday
+	}
+	return false
+}
+
+func (x *Flashcard) GetStrength() float64 {
+	if x != nil && x.Strength != nil {
+		return *x.Strength
+	}
+	return 0
+}
+
+func (x *Flashcard) GetRepetitions() int32 {
+	if x != nil && x.Repetitions != nil {
+		return *x.Repetitions
+	}
+	return 0
+}
+
+func (x *Flashcard) GetNextReviewAt() *timestamppb.Timestamp {
+	if x != nil {
+		return x.NextReviewAt
+	}
+	return nil
+}
+
+// === ListFlashcards ===
+type ListFlashcardsRequest struct {
+	state  protoimpl.MessageState `protogen:"open.v1"`
+	UserId string                 `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	// Фильтр по source: 'manual' | 'lesson' | 'mistake' | 'ai_suggestion'.
+	// Empty = all sources.
+	Source string `protobuf:"bytes,2,opt,name=source,proto3" json:"source,omitempty"`
+	// Если true — только запинанные на сегодня.
+	PinnedToday bool `protobuf:"varint,3,opt,name=pinned_today,json=pinnedToday,proto3" json:"pinned_today,omitempty"`
+	// Поиск по lower(word). Empty = без фильтра.
+	Search string `protobuf:"bytes,4,opt,name=search,proto3" json:"search,omitempty"`
+	// Если true — также возвращаем archived (для UI «корзина»).
+	IncludeArchived bool `protobuf:"varint,5,opt,name=include_archived,json=includeArchived,proto3" json:"include_archived,omitempty"`
+	// Если true — заполняем SM-2 поля (strength/repetitions/next_review_at).
+	IncludeSrs    bool  `protobuf:"varint,6,opt,name=include_srs,json=includeSrs,proto3" json:"include_srs,omitempty"`
+	Limit         int32 `protobuf:"varint,7,opt,name=limit,proto3" json:"limit,omitempty"` // default 50, max 200
+	Offset        int32 `protobuf:"varint,8,opt,name=offset,proto3" json:"offset,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ListFlashcardsRequest) Reset() {
+	*x = ListFlashcardsRequest{}
+	mi := &file_course_v1_course_proto_msgTypes[95]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ListFlashcardsRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ListFlashcardsRequest) ProtoMessage() {}
+
+func (x *ListFlashcardsRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[95]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ListFlashcardsRequest.ProtoReflect.Descriptor instead.
+func (*ListFlashcardsRequest) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{95}
+}
+
+func (x *ListFlashcardsRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *ListFlashcardsRequest) GetSource() string {
+	if x != nil {
+		return x.Source
+	}
+	return ""
+}
+
+func (x *ListFlashcardsRequest) GetPinnedToday() bool {
+	if x != nil {
+		return x.PinnedToday
+	}
+	return false
+}
+
+func (x *ListFlashcardsRequest) GetSearch() string {
+	if x != nil {
+		return x.Search
+	}
+	return ""
+}
+
+func (x *ListFlashcardsRequest) GetIncludeArchived() bool {
+	if x != nil {
+		return x.IncludeArchived
+	}
+	return false
+}
+
+func (x *ListFlashcardsRequest) GetIncludeSrs() bool {
+	if x != nil {
+		return x.IncludeSrs
+	}
+	return false
+}
+
+func (x *ListFlashcardsRequest) GetLimit() int32 {
+	if x != nil {
+		return x.Limit
+	}
+	return 0
+}
+
+func (x *ListFlashcardsRequest) GetOffset() int32 {
+	if x != nil {
+		return x.Offset
+	}
+	return 0
+}
+
+type ListFlashcardsResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Items         []*Flashcard           `protobuf:"bytes,1,rep,name=items,proto3" json:"items,omitempty"`
+	Total         int32                  `protobuf:"varint,2,opt,name=total,proto3" json:"total,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ListFlashcardsResponse) Reset() {
+	*x = ListFlashcardsResponse{}
+	mi := &file_course_v1_course_proto_msgTypes[96]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ListFlashcardsResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ListFlashcardsResponse) ProtoMessage() {}
+
+func (x *ListFlashcardsResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[96]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ListFlashcardsResponse.ProtoReflect.Descriptor instead.
+func (*ListFlashcardsResponse) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{96}
+}
+
+func (x *ListFlashcardsResponse) GetItems() []*Flashcard {
+	if x != nil {
+		return x.Items
+	}
+	return nil
+}
+
+func (x *ListFlashcardsResponse) GetTotal() int32 {
+	if x != nil {
+		return x.Total
+	}
+	return 0
+}
+
+// === GetFlashcard ===
+type GetFlashcardRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserId        string                 `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	FlashcardId   string                 `protobuf:"bytes,2,opt,name=flashcard_id,json=flashcardId,proto3" json:"flashcard_id,omitempty"`
+	IncludeSrs    bool                   `protobuf:"varint,3,opt,name=include_srs,json=includeSrs,proto3" json:"include_srs,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetFlashcardRequest) Reset() {
+	*x = GetFlashcardRequest{}
+	mi := &file_course_v1_course_proto_msgTypes[97]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetFlashcardRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetFlashcardRequest) ProtoMessage() {}
+
+func (x *GetFlashcardRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[97]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetFlashcardRequest.ProtoReflect.Descriptor instead.
+func (*GetFlashcardRequest) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{97}
+}
+
+func (x *GetFlashcardRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *GetFlashcardRequest) GetFlashcardId() string {
+	if x != nil {
+		return x.FlashcardId
+	}
+	return ""
+}
+
+func (x *GetFlashcardRequest) GetIncludeSrs() bool {
+	if x != nil {
+		return x.IncludeSrs
+	}
+	return false
+}
+
+type GetFlashcardResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Flashcard     *Flashcard             `protobuf:"bytes,1,opt,name=flashcard,proto3" json:"flashcard,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetFlashcardResponse) Reset() {
+	*x = GetFlashcardResponse{}
+	mi := &file_course_v1_course_proto_msgTypes[98]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetFlashcardResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetFlashcardResponse) ProtoMessage() {}
+
+func (x *GetFlashcardResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[98]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetFlashcardResponse.ProtoReflect.Descriptor instead.
+func (*GetFlashcardResponse) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{98}
+}
+
+func (x *GetFlashcardResponse) GetFlashcard() *Flashcard {
+	if x != nil {
+		return x.Flashcard
+	}
+	return nil
+}
+
+// === CreateFlashcard ===
+// Manual create: client передаёт word/translation/(definition/example).
+// vocabulary_id не передаётся — карточка считается manual.
+type CreateFlashcardRequest struct {
+	state           protoimpl.MessageState `protogen:"open.v1"`
+	UserId          string                 `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	Word            string                 `protobuf:"bytes,2,opt,name=word,proto3" json:"word,omitempty"`
+	Translation     string                 `protobuf:"bytes,3,opt,name=translation,proto3" json:"translation,omitempty"`
+	Language        string                 `protobuf:"bytes,4,opt,name=language,proto3" json:"language,omitempty"`                                      // например 'en'
+	TargetLanguage  string                 `protobuf:"bytes,5,opt,name=target_language,json=targetLanguage,proto3" json:"target_language,omitempty"`    // например 'ru'
+	Definition      string                 `protobuf:"bytes,6,opt,name=definition,proto3" json:"definition,omitempty"`                                  // optional
+	ExampleSentence string                 `protobuf:"bytes,7,opt,name=example_sentence,json=exampleSentence,proto3" json:"example_sentence,omitempty"` // optional
+	AudioUrl        string                 `protobuf:"bytes,8,opt,name=audio_url,json=audioUrl,proto3" json:"audio_url,omitempty"`                      // optional
+	ImageUrl        string                 `protobuf:"bytes,9,opt,name=image_url,json=imageUrl,proto3" json:"image_url,omitempty"`                      // optional
+	unknownFields   protoimpl.UnknownFields
+	sizeCache       protoimpl.SizeCache
+}
+
+func (x *CreateFlashcardRequest) Reset() {
+	*x = CreateFlashcardRequest{}
+	mi := &file_course_v1_course_proto_msgTypes[99]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CreateFlashcardRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreateFlashcardRequest) ProtoMessage() {}
+
+func (x *CreateFlashcardRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[99]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreateFlashcardRequest.ProtoReflect.Descriptor instead.
+func (*CreateFlashcardRequest) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{99}
+}
+
+func (x *CreateFlashcardRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *CreateFlashcardRequest) GetWord() string {
+	if x != nil {
+		return x.Word
+	}
+	return ""
+}
+
+func (x *CreateFlashcardRequest) GetTranslation() string {
+	if x != nil {
+		return x.Translation
+	}
+	return ""
+}
+
+func (x *CreateFlashcardRequest) GetLanguage() string {
+	if x != nil {
+		return x.Language
+	}
+	return ""
+}
+
+func (x *CreateFlashcardRequest) GetTargetLanguage() string {
+	if x != nil {
+		return x.TargetLanguage
+	}
+	return ""
+}
+
+func (x *CreateFlashcardRequest) GetDefinition() string {
+	if x != nil {
+		return x.Definition
+	}
+	return ""
+}
+
+func (x *CreateFlashcardRequest) GetExampleSentence() string {
+	if x != nil {
+		return x.ExampleSentence
+	}
+	return ""
+}
+
+func (x *CreateFlashcardRequest) GetAudioUrl() string {
+	if x != nil {
+		return x.AudioUrl
+	}
+	return ""
+}
+
+func (x *CreateFlashcardRequest) GetImageUrl() string {
+	if x != nil {
+		return x.ImageUrl
+	}
+	return ""
+}
+
+type CreateFlashcardResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Flashcard     *Flashcard             `protobuf:"bytes,1,opt,name=flashcard,proto3" json:"flashcard,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CreateFlashcardResponse) Reset() {
+	*x = CreateFlashcardResponse{}
+	mi := &file_course_v1_course_proto_msgTypes[100]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CreateFlashcardResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreateFlashcardResponse) ProtoMessage() {}
+
+func (x *CreateFlashcardResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[100]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreateFlashcardResponse.ProtoReflect.Descriptor instead.
+func (*CreateFlashcardResponse) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{100}
+}
+
+func (x *CreateFlashcardResponse) GetFlashcard() *Flashcard {
+	if x != nil {
+		return x.Flashcard
+	}
+	return nil
+}
+
+// === UpdateFlashcard ===
+// Partial update — только non-empty значения применяются.
+type UpdateFlashcardRequest struct {
+	state           protoimpl.MessageState  `protogen:"open.v1"`
+	UserId          string                  `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	FlashcardId     string                  `protobuf:"bytes,2,opt,name=flashcard_id,json=flashcardId,proto3" json:"flashcard_id,omitempty"`
+	Word            *wrapperspb.StringValue `protobuf:"bytes,3,opt,name=word,proto3" json:"word,omitempty"`
+	Translation     *wrapperspb.StringValue `protobuf:"bytes,4,opt,name=translation,proto3" json:"translation,omitempty"`
+	Definition      *wrapperspb.StringValue `protobuf:"bytes,5,opt,name=definition,proto3" json:"definition,omitempty"`
+	ExampleSentence *wrapperspb.StringValue `protobuf:"bytes,6,opt,name=example_sentence,json=exampleSentence,proto3" json:"example_sentence,omitempty"`
+	AudioUrl        *wrapperspb.StringValue `protobuf:"bytes,7,opt,name=audio_url,json=audioUrl,proto3" json:"audio_url,omitempty"`
+	ImageUrl        *wrapperspb.StringValue `protobuf:"bytes,8,opt,name=image_url,json=imageUrl,proto3" json:"image_url,omitempty"`
+	unknownFields   protoimpl.UnknownFields
+	sizeCache       protoimpl.SizeCache
+}
+
+func (x *UpdateFlashcardRequest) Reset() {
+	*x = UpdateFlashcardRequest{}
+	mi := &file_course_v1_course_proto_msgTypes[101]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *UpdateFlashcardRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UpdateFlashcardRequest) ProtoMessage() {}
+
+func (x *UpdateFlashcardRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[101]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UpdateFlashcardRequest.ProtoReflect.Descriptor instead.
+func (*UpdateFlashcardRequest) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{101}
+}
+
+func (x *UpdateFlashcardRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *UpdateFlashcardRequest) GetFlashcardId() string {
+	if x != nil {
+		return x.FlashcardId
+	}
+	return ""
+}
+
+func (x *UpdateFlashcardRequest) GetWord() *wrapperspb.StringValue {
+	if x != nil {
+		return x.Word
+	}
+	return nil
+}
+
+func (x *UpdateFlashcardRequest) GetTranslation() *wrapperspb.StringValue {
+	if x != nil {
+		return x.Translation
+	}
+	return nil
+}
+
+func (x *UpdateFlashcardRequest) GetDefinition() *wrapperspb.StringValue {
+	if x != nil {
+		return x.Definition
+	}
+	return nil
+}
+
+func (x *UpdateFlashcardRequest) GetExampleSentence() *wrapperspb.StringValue {
+	if x != nil {
+		return x.ExampleSentence
+	}
+	return nil
+}
+
+func (x *UpdateFlashcardRequest) GetAudioUrl() *wrapperspb.StringValue {
+	if x != nil {
+		return x.AudioUrl
+	}
+	return nil
+}
+
+func (x *UpdateFlashcardRequest) GetImageUrl() *wrapperspb.StringValue {
+	if x != nil {
+		return x.ImageUrl
+	}
+	return nil
+}
+
+type UpdateFlashcardResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Flashcard     *Flashcard             `protobuf:"bytes,1,opt,name=flashcard,proto3" json:"flashcard,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *UpdateFlashcardResponse) Reset() {
+	*x = UpdateFlashcardResponse{}
+	mi := &file_course_v1_course_proto_msgTypes[102]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *UpdateFlashcardResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UpdateFlashcardResponse) ProtoMessage() {}
+
+func (x *UpdateFlashcardResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[102]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UpdateFlashcardResponse.ProtoReflect.Descriptor instead.
+func (*UpdateFlashcardResponse) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{102}
+}
+
+func (x *UpdateFlashcardResponse) GetFlashcard() *Flashcard {
+	if x != nil {
+		return x.Flashcard
+	}
+	return nil
+}
+
+// === ArchiveFlashcard ===
+// Soft-delete (set archived_at = NOW()).
+type ArchiveFlashcardRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserId        string                 `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	FlashcardId   string                 `protobuf:"bytes,2,opt,name=flashcard_id,json=flashcardId,proto3" json:"flashcard_id,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ArchiveFlashcardRequest) Reset() {
+	*x = ArchiveFlashcardRequest{}
+	mi := &file_course_v1_course_proto_msgTypes[103]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ArchiveFlashcardRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ArchiveFlashcardRequest) ProtoMessage() {}
+
+func (x *ArchiveFlashcardRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[103]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ArchiveFlashcardRequest.ProtoReflect.Descriptor instead.
+func (*ArchiveFlashcardRequest) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{103}
+}
+
+func (x *ArchiveFlashcardRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *ArchiveFlashcardRequest) GetFlashcardId() string {
+	if x != nil {
+		return x.FlashcardId
+	}
+	return ""
+}
+
+type ArchiveFlashcardResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ArchiveFlashcardResponse) Reset() {
+	*x = ArchiveFlashcardResponse{}
+	mi := &file_course_v1_course_proto_msgTypes[104]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ArchiveFlashcardResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ArchiveFlashcardResponse) ProtoMessage() {}
+
+func (x *ArchiveFlashcardResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[104]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ArchiveFlashcardResponse.ProtoReflect.Descriptor instead.
+func (*ArchiveFlashcardResponse) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{104}
+}
+
+// === BulkCreateFlashcards ===
+// Для accept-all из AI suggestions либо batch-import.
+type BulkCreateFlashcardsRequest struct {
+	state         protoimpl.MessageState              `protogen:"open.v1"`
+	UserId        string                              `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	Items         []*BulkCreateFlashcardsRequest_Item `protobuf:"bytes,2,rep,name=items,proto3" json:"items,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *BulkCreateFlashcardsRequest) Reset() {
+	*x = BulkCreateFlashcardsRequest{}
+	mi := &file_course_v1_course_proto_msgTypes[105]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *BulkCreateFlashcardsRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*BulkCreateFlashcardsRequest) ProtoMessage() {}
+
+func (x *BulkCreateFlashcardsRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[105]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use BulkCreateFlashcardsRequest.ProtoReflect.Descriptor instead.
+func (*BulkCreateFlashcardsRequest) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{105}
+}
+
+func (x *BulkCreateFlashcardsRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *BulkCreateFlashcardsRequest) GetItems() []*BulkCreateFlashcardsRequest_Item {
+	if x != nil {
+		return x.Items
+	}
+	return nil
+}
+
+type BulkCreateFlashcardsResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	CreatedCount  int32                  `protobuf:"varint,1,opt,name=created_count,json=createdCount,proto3" json:"created_count,omitempty"`
+	SkippedCount  int32                  `protobuf:"varint,2,opt,name=skipped_count,json=skippedCount,proto3" json:"skipped_count,omitempty"` // дубликаты (vocabulary_id уже есть)
+	Items         []*Flashcard           `protobuf:"bytes,3,rep,name=items,proto3" json:"items,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *BulkCreateFlashcardsResponse) Reset() {
+	*x = BulkCreateFlashcardsResponse{}
+	mi := &file_course_v1_course_proto_msgTypes[106]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *BulkCreateFlashcardsResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*BulkCreateFlashcardsResponse) ProtoMessage() {}
+
+func (x *BulkCreateFlashcardsResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[106]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use BulkCreateFlashcardsResponse.ProtoReflect.Descriptor instead.
+func (*BulkCreateFlashcardsResponse) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{106}
+}
+
+func (x *BulkCreateFlashcardsResponse) GetCreatedCount() int32 {
+	if x != nil {
+		return x.CreatedCount
+	}
+	return 0
+}
+
+func (x *BulkCreateFlashcardsResponse) GetSkippedCount() int32 {
+	if x != nil {
+		return x.SkippedCount
+	}
+	return 0
+}
+
+func (x *BulkCreateFlashcardsResponse) GetItems() []*Flashcard {
+	if x != nil {
+		return x.Items
+	}
+	return nil
+}
+
+// === AddVocabularyAsFlashcard ===
+// Дёргается step-validation-service'ом при auto-add из урока, либо
+// клиентом при выборе слова из catalog.
+type AddVocabularyAsFlashcardRequest struct {
+	state        protoimpl.MessageState `protogen:"open.v1"`
+	UserId       string                 `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	VocabularyId string                 `protobuf:"bytes,2,opt,name=vocabulary_id,json=vocabularyId,proto3" json:"vocabulary_id,omitempty"`
+	// 'lesson' | 'mistake' | 'ai_suggestion' (не 'manual', т.к. ref на vocab).
+	Source        string `protobuf:"bytes,3,opt,name=source,proto3" json:"source,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *AddVocabularyAsFlashcardRequest) Reset() {
+	*x = AddVocabularyAsFlashcardRequest{}
+	mi := &file_course_v1_course_proto_msgTypes[107]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *AddVocabularyAsFlashcardRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*AddVocabularyAsFlashcardRequest) ProtoMessage() {}
+
+func (x *AddVocabularyAsFlashcardRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[107]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use AddVocabularyAsFlashcardRequest.ProtoReflect.Descriptor instead.
+func (*AddVocabularyAsFlashcardRequest) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{107}
+}
+
+func (x *AddVocabularyAsFlashcardRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *AddVocabularyAsFlashcardRequest) GetVocabularyId() string {
+	if x != nil {
+		return x.VocabularyId
+	}
+	return ""
+}
+
+func (x *AddVocabularyAsFlashcardRequest) GetSource() string {
+	if x != nil {
+		return x.Source
+	}
+	return ""
+}
+
+type AddVocabularyAsFlashcardResponse struct {
+	state     protoimpl.MessageState `protogen:"open.v1"`
+	Flashcard *Flashcard             `protobuf:"bytes,1,opt,name=flashcard,proto3" json:"flashcard,omitempty"`
+	// false если карточка с таким vocabulary_id уже существовала.
+	Created       bool `protobuf:"varint,2,opt,name=created,proto3" json:"created,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *AddVocabularyAsFlashcardResponse) Reset() {
+	*x = AddVocabularyAsFlashcardResponse{}
+	mi := &file_course_v1_course_proto_msgTypes[108]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *AddVocabularyAsFlashcardResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*AddVocabularyAsFlashcardResponse) ProtoMessage() {}
+
+func (x *AddVocabularyAsFlashcardResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[108]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use AddVocabularyAsFlashcardResponse.ProtoReflect.Descriptor instead.
+func (*AddVocabularyAsFlashcardResponse) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{108}
+}
+
+func (x *AddVocabularyAsFlashcardResponse) GetFlashcard() *Flashcard {
+	if x != nil {
+		return x.Flashcard
+	}
+	return nil
+}
+
+func (x *AddVocabularyAsFlashcardResponse) GetCreated() bool {
+	if x != nil {
+		return x.Created
+	}
+	return false
+}
+
+// === GetFlashcardStats ===
+// Stats для UI tile блока в Library экране.
+type GetFlashcardStatsRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserId        string                 `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetFlashcardStatsRequest) Reset() {
+	*x = GetFlashcardStatsRequest{}
+	mi := &file_course_v1_course_proto_msgTypes[109]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetFlashcardStatsRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetFlashcardStatsRequest) ProtoMessage() {}
+
+func (x *GetFlashcardStatsRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[109]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetFlashcardStatsRequest.ProtoReflect.Descriptor instead.
+func (*GetFlashcardStatsRequest) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{109}
+}
+
+func (x *GetFlashcardStatsRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+type GetFlashcardStatsResponse struct {
+	state protoimpl.MessageState `protogen:"open.v1"`
+	// Карточек, у которых next_review_at <= now() OR pinned_today.
+	TodayDue int32 `protobuf:"varint,1,opt,name=today_due,json=todayDue,proto3" json:"today_due,omitempty"`
+	// Из today_due — сколько уже отревьювлено сегодня.
+	TodayCompleted int32 `protobuf:"varint,2,opt,name=today_completed,json=todayCompleted,proto3" json:"today_completed,omitempty"`
+	// Карточек reps>0 && strength<0.8.
+	LearningCount int32 `protobuf:"varint,3,opt,name=learning_count,json=learningCount,proto3" json:"learning_count,omitempty"`
+	// Карточек strength>=0.8.
+	MasteredCount int32 `protobuf:"varint,4,opt,name=mastered_count,json=masteredCount,proto3" json:"mastered_count,omitempty"`
+	// Total non-archived карточек.
+	TotalCount    int32 `protobuf:"varint,5,opt,name=total_count,json=totalCount,proto3" json:"total_count,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetFlashcardStatsResponse) Reset() {
+	*x = GetFlashcardStatsResponse{}
+	mi := &file_course_v1_course_proto_msgTypes[110]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetFlashcardStatsResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetFlashcardStatsResponse) ProtoMessage() {}
+
+func (x *GetFlashcardStatsResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[110]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetFlashcardStatsResponse.ProtoReflect.Descriptor instead.
+func (*GetFlashcardStatsResponse) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{110}
+}
+
+func (x *GetFlashcardStatsResponse) GetTodayDue() int32 {
+	if x != nil {
+		return x.TodayDue
+	}
+	return 0
+}
+
+func (x *GetFlashcardStatsResponse) GetTodayCompleted() int32 {
+	if x != nil {
+		return x.TodayCompleted
+	}
+	return 0
+}
+
+func (x *GetFlashcardStatsResponse) GetLearningCount() int32 {
+	if x != nil {
+		return x.LearningCount
+	}
+	return 0
+}
+
+func (x *GetFlashcardStatsResponse) GetMasteredCount() int32 {
+	if x != nil {
+		return x.MasteredCount
+	}
+	return 0
+}
+
+func (x *GetFlashcardStatsResponse) GetTotalCount() int32 {
+	if x != nil {
+		return x.TotalCount
+	}
+	return 0
+}
+
+// === Today Queue ===
+type PinForTodayRequest struct {
+	state       protoimpl.MessageState `protogen:"open.v1"`
+	UserId      string                 `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	FlashcardId string                 `protobuf:"bytes,2,opt,name=flashcard_id,json=flashcardId,proto3" json:"flashcard_id,omitempty"`
+	// Дата в timezone юзера (YYYY-MM-DD). Empty → сервер сам считает.
+	QueuedForDate string `protobuf:"bytes,3,opt,name=queued_for_date,json=queuedForDate,proto3" json:"queued_for_date,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *PinForTodayRequest) Reset() {
+	*x = PinForTodayRequest{}
+	mi := &file_course_v1_course_proto_msgTypes[111]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *PinForTodayRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PinForTodayRequest) ProtoMessage() {}
+
+func (x *PinForTodayRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[111]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PinForTodayRequest.ProtoReflect.Descriptor instead.
+func (*PinForTodayRequest) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{111}
+}
+
+func (x *PinForTodayRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *PinForTodayRequest) GetFlashcardId() string {
+	if x != nil {
+		return x.FlashcardId
+	}
+	return ""
+}
+
+func (x *PinForTodayRequest) GetQueuedForDate() string {
+	if x != nil {
+		return x.QueuedForDate
+	}
+	return ""
+}
+
+type PinForTodayResponse struct {
+	state protoimpl.MessageState `protogen:"open.v1"`
+	// Когда карточка запиннута (для UI feedback).
+	AddedAt       *timestamppb.Timestamp `protobuf:"bytes,1,opt,name=added_at,json=addedAt,proto3" json:"added_at,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *PinForTodayResponse) Reset() {
+	*x = PinForTodayResponse{}
+	mi := &file_course_v1_course_proto_msgTypes[112]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *PinForTodayResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PinForTodayResponse) ProtoMessage() {}
+
+func (x *PinForTodayResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[112]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PinForTodayResponse.ProtoReflect.Descriptor instead.
+func (*PinForTodayResponse) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{112}
+}
+
+func (x *PinForTodayResponse) GetAddedAt() *timestamppb.Timestamp {
+	if x != nil {
+		return x.AddedAt
+	}
+	return nil
+}
+
+type UnpinFromTodayRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserId        string                 `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	FlashcardId   string                 `protobuf:"bytes,2,opt,name=flashcard_id,json=flashcardId,proto3" json:"flashcard_id,omitempty"`
+	QueuedForDate string                 `protobuf:"bytes,3,opt,name=queued_for_date,json=queuedForDate,proto3" json:"queued_for_date,omitempty"` // optional — empty значит "сегодня"
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *UnpinFromTodayRequest) Reset() {
+	*x = UnpinFromTodayRequest{}
+	mi := &file_course_v1_course_proto_msgTypes[113]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *UnpinFromTodayRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UnpinFromTodayRequest) ProtoMessage() {}
+
+func (x *UnpinFromTodayRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[113]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UnpinFromTodayRequest.ProtoReflect.Descriptor instead.
+func (*UnpinFromTodayRequest) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{113}
+}
+
+func (x *UnpinFromTodayRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *UnpinFromTodayRequest) GetFlashcardId() string {
+	if x != nil {
+		return x.FlashcardId
+	}
+	return ""
+}
+
+func (x *UnpinFromTodayRequest) GetQueuedForDate() string {
+	if x != nil {
+		return x.QueuedForDate
+	}
+	return ""
+}
+
+type UnpinFromTodayResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *UnpinFromTodayResponse) Reset() {
+	*x = UnpinFromTodayResponse{}
+	mi := &file_course_v1_course_proto_msgTypes[114]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *UnpinFromTodayResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UnpinFromTodayResponse) ProtoMessage() {}
+
+func (x *UnpinFromTodayResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[114]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UnpinFromTodayResponse.ProtoReflect.Descriptor instead.
+func (*UnpinFromTodayResponse) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{114}
+}
+
+type ListTodayQueueRequest struct {
+	state  protoimpl.MessageState `protogen:"open.v1"`
+	UserId string                 `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	// Empty → "сегодня" в timezone юзера.
+	QueuedForDate string `protobuf:"bytes,2,opt,name=queued_for_date,json=queuedForDate,proto3" json:"queued_for_date,omitempty"`
+	IncludeSrs    bool   `protobuf:"varint,3,opt,name=include_srs,json=includeSrs,proto3" json:"include_srs,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ListTodayQueueRequest) Reset() {
+	*x = ListTodayQueueRequest{}
+	mi := &file_course_v1_course_proto_msgTypes[115]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ListTodayQueueRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ListTodayQueueRequest) ProtoMessage() {}
+
+func (x *ListTodayQueueRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[115]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ListTodayQueueRequest.ProtoReflect.Descriptor instead.
+func (*ListTodayQueueRequest) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{115}
+}
+
+func (x *ListTodayQueueRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *ListTodayQueueRequest) GetQueuedForDate() string {
+	if x != nil {
+		return x.QueuedForDate
+	}
+	return ""
+}
+
+func (x *ListTodayQueueRequest) GetIncludeSrs() bool {
+	if x != nil {
+		return x.IncludeSrs
+	}
+	return false
+}
+
+type ListTodayQueueResponse struct {
+	state protoimpl.MessageState `protogen:"open.v1"`
+	Items []*Flashcard           `protobuf:"bytes,1,rep,name=items,proto3" json:"items,omitempty"`
+	// Дата, для которой вернули список (фактическая, после авто-вычисления).
+	QueuedForDate string `protobuf:"bytes,2,opt,name=queued_for_date,json=queuedForDate,proto3" json:"queued_for_date,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ListTodayQueueResponse) Reset() {
+	*x = ListTodayQueueResponse{}
+	mi := &file_course_v1_course_proto_msgTypes[116]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ListTodayQueueResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ListTodayQueueResponse) ProtoMessage() {}
+
+func (x *ListTodayQueueResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[116]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ListTodayQueueResponse.ProtoReflect.Descriptor instead.
+func (*ListTodayQueueResponse) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{116}
+}
+
+func (x *ListTodayQueueResponse) GetItems() []*Flashcard {
+	if x != nil {
+		return x.Items
+	}
+	return nil
+}
+
+func (x *ListTodayQueueResponse) GetQueuedForDate() string {
+	if x != nil {
+		return x.QueuedForDate
+	}
+	return ""
+}
+
+type BulkCreateFlashcardsRequest_Item struct {
+	state           protoimpl.MessageState `protogen:"open.v1"`
+	Word            string                 `protobuf:"bytes,1,opt,name=word,proto3" json:"word,omitempty"`
+	Translation     string                 `protobuf:"bytes,2,opt,name=translation,proto3" json:"translation,omitempty"`
+	Language        string                 `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`
+	TargetLanguage  string                 `protobuf:"bytes,4,opt,name=target_language,json=targetLanguage,proto3" json:"target_language,omitempty"`
+	Definition      string                 `protobuf:"bytes,5,opt,name=definition,proto3" json:"definition,omitempty"`
+	ExampleSentence string                 `protobuf:"bytes,6,opt,name=example_sentence,json=exampleSentence,proto3" json:"example_sentence,omitempty"`
+	Source          string                 `protobuf:"bytes,7,opt,name=source,proto3" json:"source,omitempty"`                                 // default 'manual'
+	VocabularyId    string                 `protobuf:"bytes,8,opt,name=vocabulary_id,json=vocabularyId,proto3" json:"vocabulary_id,omitempty"` // optional, если ref на system vocab
+	unknownFields   protoimpl.UnknownFields
+	sizeCache       protoimpl.SizeCache
+}
+
+func (x *BulkCreateFlashcardsRequest_Item) Reset() {
+	*x = BulkCreateFlashcardsRequest_Item{}
+	mi := &file_course_v1_course_proto_msgTypes[117]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *BulkCreateFlashcardsRequest_Item) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*BulkCreateFlashcardsRequest_Item) ProtoMessage() {}
+
+func (x *BulkCreateFlashcardsRequest_Item) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[117]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use BulkCreateFlashcardsRequest_Item.ProtoReflect.Descriptor instead.
+func (*BulkCreateFlashcardsRequest_Item) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{105, 0}
+}
+
+func (x *BulkCreateFlashcardsRequest_Item) GetWord() string {
+	if x != nil {
+		return x.Word
+	}
+	return ""
+}
+
+func (x *BulkCreateFlashcardsRequest_Item) GetTranslation() string {
+	if x != nil {
+		return x.Translation
+	}
+	return ""
+}
+
+func (x *BulkCreateFlashcardsRequest_Item) GetLanguage() string {
+	if x != nil {
+		return x.Language
+	}
+	return ""
+}
+
+func (x *BulkCreateFlashcardsRequest_Item) GetTargetLanguage() string {
+	if x != nil {
+		return x.TargetLanguage
+	}
+	return ""
+}
+
+func (x *BulkCreateFlashcardsRequest_Item) GetDefinition() string {
+	if x != nil {
+		return x.Definition
+	}
+	return ""
+}
+
+func (x *BulkCreateFlashcardsRequest_Item) GetExampleSentence() string {
+	if x != nil {
+		return x.ExampleSentence
+	}
+	return ""
+}
+
+func (x *BulkCreateFlashcardsRequest_Item) GetSource() string {
+	if x != nil {
+		return x.Source
+	}
+	return ""
+}
+
+func (x *BulkCreateFlashcardsRequest_Item) GetVocabularyId() string {
+	if x != nil {
+		return x.VocabularyId
+	}
+	return ""
+}
+
 var File_course_v1_course_proto protoreflect.FileDescriptor
 
 const file_course_v1_course_proto_rawDesc = "" +
@@ -6318,7 +7942,140 @@ const file_course_v1_course_proto_rawDesc = "" +
 	"\blanguage\x18\x02 \x01(\tR\blanguage\x12\x14\n" +
 	"\x05voice\x18\x03 \x01(\tR\x05voice\"F\n" +
 	"\x14GetTTSByTextResponse\x12.\n" +
-	"\x05entry\x18\x01 \x01(\v2\x18.course.v1.TTSCacheEntryR\x05entry2\xb9\x1b\n" +
+	"\x05entry\x18\x01 \x01(\v2\x18.course.v1.TTSCacheEntryR\x05entry\"\x86\x06\n" +
+	"\tFlashcard\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x17\n" +
+	"\auser_id\x18\x02 \x01(\tR\x06userId\x12\x16\n" +
+	"\x06source\x18\x03 \x01(\tR\x06source\x12#\n" +
+	"\rvocabulary_id\x18\x04 \x01(\tR\fvocabularyId\x12\x12\n" +
+	"\x04word\x18\x05 \x01(\tR\x04word\x12 \n" +
+	"\vtranslation\x18\x06 \x01(\tR\vtranslation\x12\x1a\n" +
+	"\blanguage\x18\a \x01(\tR\blanguage\x12'\n" +
+	"\x0ftarget_language\x18\b \x01(\tR\x0etargetLanguage\x12\x1e\n" +
+	"\n" +
+	"definition\x18\t \x01(\tR\n" +
+	"definition\x12)\n" +
+	"\x10example_sentence\x18\n" +
+	" \x01(\tR\x0fexampleSentence\x12\x1b\n" +
+	"\taudio_url\x18\v \x01(\tR\baudioUrl\x12\x1b\n" +
+	"\timage_url\x18\f \x01(\tR\bimageUrl\x12;\n" +
+	"\varchived_at\x18\r \x01(\v2\x1a.google.protobuf.TimestampR\n" +
+	"archivedAt\x129\n" +
+	"\n" +
+	"created_at\x18\x0e \x01(\v2\x1a.google.protobuf.TimestampR\tcreatedAt\x129\n" +
+	"\n" +
+	"updated_at\x18\x0f \x01(\v2\x1a.google.protobuf.TimestampR\tupdatedAt\x12!\n" +
+	"\fpinned_today\x18\x10 \x01(\bR\vpinnedToday\x12\x1f\n" +
+	"\bstrength\x18\x11 \x01(\x01H\x00R\bstrength\x88\x01\x01\x12%\n" +
+	"\vrepetitions\x18\x12 \x01(\x05H\x01R\vrepetitions\x88\x01\x01\x12E\n" +
+	"\x0enext_review_at\x18\x13 \x01(\v2\x1a.google.protobuf.TimestampH\x02R\fnextReviewAt\x88\x01\x01B\v\n" +
+	"\t_strengthB\x0e\n" +
+	"\f_repetitionsB\x11\n" +
+	"\x0f_next_review_at\"\xfd\x01\n" +
+	"\x15ListFlashcardsRequest\x12\x17\n" +
+	"\auser_id\x18\x01 \x01(\tR\x06userId\x12\x16\n" +
+	"\x06source\x18\x02 \x01(\tR\x06source\x12!\n" +
+	"\fpinned_today\x18\x03 \x01(\bR\vpinnedToday\x12\x16\n" +
+	"\x06search\x18\x04 \x01(\tR\x06search\x12)\n" +
+	"\x10include_archived\x18\x05 \x01(\bR\x0fincludeArchived\x12\x1f\n" +
+	"\vinclude_srs\x18\x06 \x01(\bR\n" +
+	"includeSrs\x12\x14\n" +
+	"\x05limit\x18\a \x01(\x05R\x05limit\x12\x16\n" +
+	"\x06offset\x18\b \x01(\x05R\x06offset\"Z\n" +
+	"\x16ListFlashcardsResponse\x12*\n" +
+	"\x05items\x18\x01 \x03(\v2\x14.course.v1.FlashcardR\x05items\x12\x14\n" +
+	"\x05total\x18\x02 \x01(\x05R\x05total\"r\n" +
+	"\x13GetFlashcardRequest\x12\x17\n" +
+	"\auser_id\x18\x01 \x01(\tR\x06userId\x12!\n" +
+	"\fflashcard_id\x18\x02 \x01(\tR\vflashcardId\x12\x1f\n" +
+	"\vinclude_srs\x18\x03 \x01(\bR\n" +
+	"includeSrs\"J\n" +
+	"\x14GetFlashcardResponse\x122\n" +
+	"\tflashcard\x18\x01 \x01(\v2\x14.course.v1.FlashcardR\tflashcard\"\xb1\x02\n" +
+	"\x16CreateFlashcardRequest\x12\x17\n" +
+	"\auser_id\x18\x01 \x01(\tR\x06userId\x12\x12\n" +
+	"\x04word\x18\x02 \x01(\tR\x04word\x12 \n" +
+	"\vtranslation\x18\x03 \x01(\tR\vtranslation\x12\x1a\n" +
+	"\blanguage\x18\x04 \x01(\tR\blanguage\x12'\n" +
+	"\x0ftarget_language\x18\x05 \x01(\tR\x0etargetLanguage\x12\x1e\n" +
+	"\n" +
+	"definition\x18\x06 \x01(\tR\n" +
+	"definition\x12)\n" +
+	"\x10example_sentence\x18\a \x01(\tR\x0fexampleSentence\x12\x1b\n" +
+	"\taudio_url\x18\b \x01(\tR\baudioUrl\x12\x1b\n" +
+	"\timage_url\x18\t \x01(\tR\bimageUrl\"M\n" +
+	"\x17CreateFlashcardResponse\x122\n" +
+	"\tflashcard\x18\x01 \x01(\v2\x14.course.v1.FlashcardR\tflashcard\"\xc3\x03\n" +
+	"\x16UpdateFlashcardRequest\x12\x17\n" +
+	"\auser_id\x18\x01 \x01(\tR\x06userId\x12!\n" +
+	"\fflashcard_id\x18\x02 \x01(\tR\vflashcardId\x120\n" +
+	"\x04word\x18\x03 \x01(\v2\x1c.google.protobuf.StringValueR\x04word\x12>\n" +
+	"\vtranslation\x18\x04 \x01(\v2\x1c.google.protobuf.StringValueR\vtranslation\x12<\n" +
+	"\n" +
+	"definition\x18\x05 \x01(\v2\x1c.google.protobuf.StringValueR\n" +
+	"definition\x12G\n" +
+	"\x10example_sentence\x18\x06 \x01(\v2\x1c.google.protobuf.StringValueR\x0fexampleSentence\x129\n" +
+	"\taudio_url\x18\a \x01(\v2\x1c.google.protobuf.StringValueR\baudioUrl\x129\n" +
+	"\timage_url\x18\b \x01(\v2\x1c.google.protobuf.StringValueR\bimageUrl\"M\n" +
+	"\x17UpdateFlashcardResponse\x122\n" +
+	"\tflashcard\x18\x01 \x01(\v2\x14.course.v1.FlashcardR\tflashcard\"U\n" +
+	"\x17ArchiveFlashcardRequest\x12\x17\n" +
+	"\auser_id\x18\x01 \x01(\tR\x06userId\x12!\n" +
+	"\fflashcard_id\x18\x02 \x01(\tR\vflashcardId\"\x1a\n" +
+	"\x18ArchiveFlashcardResponse\"\x85\x03\n" +
+	"\x1bBulkCreateFlashcardsRequest\x12\x17\n" +
+	"\auser_id\x18\x01 \x01(\tR\x06userId\x12A\n" +
+	"\x05items\x18\x02 \x03(\v2+.course.v1.BulkCreateFlashcardsRequest.ItemR\x05items\x1a\x89\x02\n" +
+	"\x04Item\x12\x12\n" +
+	"\x04word\x18\x01 \x01(\tR\x04word\x12 \n" +
+	"\vtranslation\x18\x02 \x01(\tR\vtranslation\x12\x1a\n" +
+	"\blanguage\x18\x03 \x01(\tR\blanguage\x12'\n" +
+	"\x0ftarget_language\x18\x04 \x01(\tR\x0etargetLanguage\x12\x1e\n" +
+	"\n" +
+	"definition\x18\x05 \x01(\tR\n" +
+	"definition\x12)\n" +
+	"\x10example_sentence\x18\x06 \x01(\tR\x0fexampleSentence\x12\x16\n" +
+	"\x06source\x18\a \x01(\tR\x06source\x12#\n" +
+	"\rvocabulary_id\x18\b \x01(\tR\fvocabularyId\"\x94\x01\n" +
+	"\x1cBulkCreateFlashcardsResponse\x12#\n" +
+	"\rcreated_count\x18\x01 \x01(\x05R\fcreatedCount\x12#\n" +
+	"\rskipped_count\x18\x02 \x01(\x05R\fskippedCount\x12*\n" +
+	"\x05items\x18\x03 \x03(\v2\x14.course.v1.FlashcardR\x05items\"w\n" +
+	"\x1fAddVocabularyAsFlashcardRequest\x12\x17\n" +
+	"\auser_id\x18\x01 \x01(\tR\x06userId\x12#\n" +
+	"\rvocabulary_id\x18\x02 \x01(\tR\fvocabularyId\x12\x16\n" +
+	"\x06source\x18\x03 \x01(\tR\x06source\"p\n" +
+	" AddVocabularyAsFlashcardResponse\x122\n" +
+	"\tflashcard\x18\x01 \x01(\v2\x14.course.v1.FlashcardR\tflashcard\x12\x18\n" +
+	"\acreated\x18\x02 \x01(\bR\acreated\"3\n" +
+	"\x18GetFlashcardStatsRequest\x12\x17\n" +
+	"\auser_id\x18\x01 \x01(\tR\x06userId\"\xd0\x01\n" +
+	"\x19GetFlashcardStatsResponse\x12\x1b\n" +
+	"\ttoday_due\x18\x01 \x01(\x05R\btodayDue\x12'\n" +
+	"\x0ftoday_completed\x18\x02 \x01(\x05R\x0etodayCompleted\x12%\n" +
+	"\x0elearning_count\x18\x03 \x01(\x05R\rlearningCount\x12%\n" +
+	"\x0emastered_count\x18\x04 \x01(\x05R\rmasteredCount\x12\x1f\n" +
+	"\vtotal_count\x18\x05 \x01(\x05R\n" +
+	"totalCount\"x\n" +
+	"\x12PinForTodayRequest\x12\x17\n" +
+	"\auser_id\x18\x01 \x01(\tR\x06userId\x12!\n" +
+	"\fflashcard_id\x18\x02 \x01(\tR\vflashcardId\x12&\n" +
+	"\x0fqueued_for_date\x18\x03 \x01(\tR\rqueuedForDate\"L\n" +
+	"\x13PinForTodayResponse\x125\n" +
+	"\badded_at\x18\x01 \x01(\v2\x1a.google.protobuf.TimestampR\aaddedAt\"{\n" +
+	"\x15UnpinFromTodayRequest\x12\x17\n" +
+	"\auser_id\x18\x01 \x01(\tR\x06userId\x12!\n" +
+	"\fflashcard_id\x18\x02 \x01(\tR\vflashcardId\x12&\n" +
+	"\x0fqueued_for_date\x18\x03 \x01(\tR\rqueuedForDate\"\x18\n" +
+	"\x16UnpinFromTodayResponse\"y\n" +
+	"\x15ListTodayQueueRequest\x12\x17\n" +
+	"\auser_id\x18\x01 \x01(\tR\x06userId\x12&\n" +
+	"\x0fqueued_for_date\x18\x02 \x01(\tR\rqueuedForDate\x12\x1f\n" +
+	"\vinclude_srs\x18\x03 \x01(\bR\n" +
+	"includeSrs\"l\n" +
+	"\x16ListTodayQueueResponse\x12*\n" +
+	"\x05items\x18\x01 \x03(\v2\x14.course.v1.FlashcardR\x05items\x12&\n" +
+	"\x0fqueued_for_date\x18\x02 \x01(\tR\rqueuedForDate2\xac#\n" +
 	"\rCourseService\x12L\n" +
 	"\vListCourses\x12\x1d.course.v1.ListCoursesRequest\x1a\x1e.course.v1.ListCoursesResponse\x12F\n" +
 	"\tGetCourse\x12\x1b.course.v1.GetCourseRequest\x1a\x1c.course.v1.GetCourseResponse\x12F\n" +
@@ -6365,7 +8122,18 @@ const file_course_v1_course_proto_rawDesc = "" +
 	"\x15DeleteVocabularyEntry\x12'.course.v1.DeleteVocabularyEntryRequest\x1a(.course.v1.DeleteVocabularyEntryResponse\x12g\n" +
 	"\x14BulkCreateVocabulary\x12&.course.v1.BulkCreateVocabularyRequest\x1a'.course.v1.BulkCreateVocabularyResponse\x12R\n" +
 	"\rSynthesizeTTS\x12\x1f.course.v1.SynthesizeTTSRequest\x1a .course.v1.SynthesizeTTSResponse\x12O\n" +
-	"\fGetTTSByText\x12\x1e.course.v1.GetTTSByTextRequest\x1a\x1f.course.v1.GetTTSByTextResponseB\x9b\x01\n" +
+	"\fGetTTSByText\x12\x1e.course.v1.GetTTSByTextRequest\x1a\x1f.course.v1.GetTTSByTextResponse\x12U\n" +
+	"\x0eListFlashcards\x12 .course.v1.ListFlashcardsRequest\x1a!.course.v1.ListFlashcardsResponse\x12O\n" +
+	"\fGetFlashcard\x12\x1e.course.v1.GetFlashcardRequest\x1a\x1f.course.v1.GetFlashcardResponse\x12X\n" +
+	"\x0fCreateFlashcard\x12!.course.v1.CreateFlashcardRequest\x1a\".course.v1.CreateFlashcardResponse\x12X\n" +
+	"\x0fUpdateFlashcard\x12!.course.v1.UpdateFlashcardRequest\x1a\".course.v1.UpdateFlashcardResponse\x12[\n" +
+	"\x10ArchiveFlashcard\x12\".course.v1.ArchiveFlashcardRequest\x1a#.course.v1.ArchiveFlashcardResponse\x12g\n" +
+	"\x14BulkCreateFlashcards\x12&.course.v1.BulkCreateFlashcardsRequest\x1a'.course.v1.BulkCreateFlashcardsResponse\x12s\n" +
+	"\x18AddVocabularyAsFlashcard\x12*.course.v1.AddVocabularyAsFlashcardRequest\x1a+.course.v1.AddVocabularyAsFlashcardResponse\x12^\n" +
+	"\x11GetFlashcardStats\x12#.course.v1.GetFlashcardStatsRequest\x1a$.course.v1.GetFlashcardStatsResponse\x12L\n" +
+	"\vPinForToday\x12\x1d.course.v1.PinForTodayRequest\x1a\x1e.course.v1.PinForTodayResponse\x12U\n" +
+	"\x0eUnpinFromToday\x12 .course.v1.UnpinFromTodayRequest\x1a!.course.v1.UnpinFromTodayResponse\x12U\n" +
+	"\x0eListTodayQueue\x12 .course.v1.ListTodayQueueRequest\x1a!.course.v1.ListTodayQueueResponseB\x9b\x01\n" +
 	"\rcom.course.v1B\vCourseProtoP\x01Z8github.com/elearning/shared/pkg/proto/course/v1;coursev1\xa2\x02\x03CXX\xaa\x02\tCourse.V1\xca\x02\tCourse\\V1\xe2\x02\x15Course\\V1\\GPBMetadata\xea\x02\n" +
 	"Course::V1b\x06proto3"
 
@@ -6381,127 +8149,151 @@ func file_course_v1_course_proto_rawDescGZIP() []byte {
 	return file_course_v1_course_proto_rawDescData
 }
 
-var file_course_v1_course_proto_msgTypes = make([]protoimpl.MessageInfo, 94)
+var file_course_v1_course_proto_msgTypes = make([]protoimpl.MessageInfo, 118)
 var file_course_v1_course_proto_goTypes = []any{
-	(*Course)(nil),                        // 0: course.v1.Course
-	(*Module)(nil),                        // 1: course.v1.Module
-	(*Lesson)(nil),                        // 2: course.v1.Lesson
-	(*Step)(nil),                          // 3: course.v1.Step
-	(*Enrollment)(nil),                    // 4: course.v1.Enrollment
-	(*ModuleWithLessons)(nil),             // 5: course.v1.ModuleWithLessons
-	(*LessonWithSteps)(nil),               // 6: course.v1.LessonWithSteps
-	(*ListCoursesRequest)(nil),            // 7: course.v1.ListCoursesRequest
-	(*ListCoursesResponse)(nil),           // 8: course.v1.ListCoursesResponse
-	(*GetCourseRequest)(nil),              // 9: course.v1.GetCourseRequest
-	(*GetCourseResponse)(nil),             // 10: course.v1.GetCourseResponse
-	(*GetLessonRequest)(nil),              // 11: course.v1.GetLessonRequest
-	(*GetLessonResponse)(nil),             // 12: course.v1.GetLessonResponse
-	(*GetStepContentRequest)(nil),         // 13: course.v1.GetStepContentRequest
-	(*GetStepContentResponse)(nil),        // 14: course.v1.GetStepContentResponse
-	(*EnrollUserRequest)(nil),             // 15: course.v1.EnrollUserRequest
-	(*EnrollUserResponse)(nil),            // 16: course.v1.EnrollUserResponse
-	(*CheckAccessRequest)(nil),            // 17: course.v1.CheckAccessRequest
-	(*CheckAccessResponse)(nil),           // 18: course.v1.CheckAccessResponse
-	(*CreateCourseRequest)(nil),           // 19: course.v1.CreateCourseRequest
-	(*CreateCourseResponse)(nil),          // 20: course.v1.CreateCourseResponse
-	(*UpdateCourseRequest)(nil),           // 21: course.v1.UpdateCourseRequest
-	(*UpdateCourseResponse)(nil),          // 22: course.v1.UpdateCourseResponse
-	(*DeleteCourseRequest)(nil),           // 23: course.v1.DeleteCourseRequest
-	(*DeleteCourseResponse)(nil),          // 24: course.v1.DeleteCourseResponse
-	(*PublishCourseRequest)(nil),          // 25: course.v1.PublishCourseRequest
-	(*PublishCourseResponse)(nil),         // 26: course.v1.PublishCourseResponse
-	(*CreateModuleRequest)(nil),           // 27: course.v1.CreateModuleRequest
-	(*CreateModuleResponse)(nil),          // 28: course.v1.CreateModuleResponse
-	(*UpdateModuleRequest)(nil),           // 29: course.v1.UpdateModuleRequest
-	(*UpdateModuleResponse)(nil),          // 30: course.v1.UpdateModuleResponse
-	(*DeleteModuleRequest)(nil),           // 31: course.v1.DeleteModuleRequest
-	(*DeleteModuleResponse)(nil),          // 32: course.v1.DeleteModuleResponse
-	(*CreateLessonRequest)(nil),           // 33: course.v1.CreateLessonRequest
-	(*CreateLessonResponse)(nil),          // 34: course.v1.CreateLessonResponse
-	(*UpdateLessonRequest)(nil),           // 35: course.v1.UpdateLessonRequest
-	(*UpdateLessonResponse)(nil),          // 36: course.v1.UpdateLessonResponse
-	(*DeleteLessonRequest)(nil),           // 37: course.v1.DeleteLessonRequest
-	(*DeleteLessonResponse)(nil),          // 38: course.v1.DeleteLessonResponse
-	(*CreateStepRequest)(nil),             // 39: course.v1.CreateStepRequest
-	(*CreateStepResponse)(nil),            // 40: course.v1.CreateStepResponse
-	(*UpdateStepRequest)(nil),             // 41: course.v1.UpdateStepRequest
-	(*UpdateStepResponse)(nil),            // 42: course.v1.UpdateStepResponse
-	(*DeleteStepRequest)(nil),             // 43: course.v1.DeleteStepRequest
-	(*DeleteStepResponse)(nil),            // 44: course.v1.DeleteStepResponse
-	(*StepProgress)(nil),                  // 45: course.v1.StepProgress
-	(*LessonProgress)(nil),                // 46: course.v1.LessonProgress
-	(*MarkStepCompleteRequest)(nil),       // 47: course.v1.MarkStepCompleteRequest
-	(*MarkStepCompleteResponse)(nil),      // 48: course.v1.MarkStepCompleteResponse
-	(*GetStepProgressRequest)(nil),        // 49: course.v1.GetStepProgressRequest
-	(*GetStepProgressResponse)(nil),       // 50: course.v1.GetStepProgressResponse
-	(*GetLessonProgressRequest)(nil),      // 51: course.v1.GetLessonProgressRequest
-	(*GetLessonProgressResponse)(nil),     // 52: course.v1.GetLessonProgressResponse
-	(*GetCourseProgressRequest)(nil),      // 53: course.v1.GetCourseProgressRequest
-	(*GetCourseProgressResponse)(nil),     // 54: course.v1.GetCourseProgressResponse
-	(*Track)(nil),                         // 55: course.v1.Track
-	(*TrackWithLessons)(nil),              // 56: course.v1.TrackWithLessons
-	(*ListTracksRequest)(nil),             // 57: course.v1.ListTracksRequest
-	(*ListTracksResponse)(nil),            // 58: course.v1.ListTracksResponse
-	(*GetTrackRequest)(nil),               // 59: course.v1.GetTrackRequest
-	(*GetTrackByCodeRequest)(nil),         // 60: course.v1.GetTrackByCodeRequest
-	(*GetTrackResponse)(nil),              // 61: course.v1.GetTrackResponse
-	(*CreateTrackRequest)(nil),            // 62: course.v1.CreateTrackRequest
-	(*CreateTrackResponse)(nil),           // 63: course.v1.CreateTrackResponse
-	(*UpdateTrackRequest)(nil),            // 64: course.v1.UpdateTrackRequest
-	(*UpdateTrackResponse)(nil),           // 65: course.v1.UpdateTrackResponse
-	(*DeleteTrackRequest)(nil),            // 66: course.v1.DeleteTrackRequest
-	(*DeleteTrackResponse)(nil),           // 67: course.v1.DeleteTrackResponse
-	(*PublishTrackRequest)(nil),           // 68: course.v1.PublishTrackRequest
-	(*PublishTrackResponse)(nil),          // 69: course.v1.PublishTrackResponse
-	(*AddLessonToTrackRequest)(nil),       // 70: course.v1.AddLessonToTrackRequest
-	(*AddLessonToTrackResponse)(nil),      // 71: course.v1.AddLessonToTrackResponse
-	(*RemoveLessonFromTrackRequest)(nil),  // 72: course.v1.RemoveLessonFromTrackRequest
-	(*RemoveLessonFromTrackResponse)(nil), // 73: course.v1.RemoveLessonFromTrackResponse
-	(*ReorderTrackLessonsRequest)(nil),    // 74: course.v1.ReorderTrackLessonsRequest
-	(*ReorderTrackLessonsResponse)(nil),   // 75: course.v1.ReorderTrackLessonsResponse
-	(*VocabularyEntry)(nil),               // 76: course.v1.VocabularyEntry
-	(*ListVocabularyRequest)(nil),         // 77: course.v1.ListVocabularyRequest
-	(*ListVocabularyResponse)(nil),        // 78: course.v1.ListVocabularyResponse
-	(*GetVocabularyEntryRequest)(nil),     // 79: course.v1.GetVocabularyEntryRequest
-	(*GetVocabularyEntryResponse)(nil),    // 80: course.v1.GetVocabularyEntryResponse
-	(*CreateVocabularyEntryRequest)(nil),  // 81: course.v1.CreateVocabularyEntryRequest
-	(*CreateVocabularyEntryResponse)(nil), // 82: course.v1.CreateVocabularyEntryResponse
-	(*UpdateVocabularyEntryRequest)(nil),  // 83: course.v1.UpdateVocabularyEntryRequest
-	(*UpdateVocabularyEntryResponse)(nil), // 84: course.v1.UpdateVocabularyEntryResponse
-	(*DeleteVocabularyEntryRequest)(nil),  // 85: course.v1.DeleteVocabularyEntryRequest
-	(*DeleteVocabularyEntryResponse)(nil), // 86: course.v1.DeleteVocabularyEntryResponse
-	(*BulkCreateVocabularyRequest)(nil),   // 87: course.v1.BulkCreateVocabularyRequest
-	(*BulkCreateVocabularyResponse)(nil),  // 88: course.v1.BulkCreateVocabularyResponse
-	(*TTSCacheEntry)(nil),                 // 89: course.v1.TTSCacheEntry
-	(*SynthesizeTTSRequest)(nil),          // 90: course.v1.SynthesizeTTSRequest
-	(*SynthesizeTTSResponse)(nil),         // 91: course.v1.SynthesizeTTSResponse
-	(*GetTTSByTextRequest)(nil),           // 92: course.v1.GetTTSByTextRequest
-	(*GetTTSByTextResponse)(nil),          // 93: course.v1.GetTTSByTextResponse
-	(*timestamppb.Timestamp)(nil),         // 94: google.protobuf.Timestamp
-	(*wrapperspb.StringValue)(nil),        // 95: google.protobuf.StringValue
-	(*wrapperspb.DoubleValue)(nil),        // 96: google.protobuf.DoubleValue
-	(*wrapperspb.Int32Value)(nil),         // 97: google.protobuf.Int32Value
-	(*v1.AddXPResponse)(nil),              // 98: gamification.v1.AddXPResponse
+	(*Course)(nil),                           // 0: course.v1.Course
+	(*Module)(nil),                           // 1: course.v1.Module
+	(*Lesson)(nil),                           // 2: course.v1.Lesson
+	(*Step)(nil),                             // 3: course.v1.Step
+	(*Enrollment)(nil),                       // 4: course.v1.Enrollment
+	(*ModuleWithLessons)(nil),                // 5: course.v1.ModuleWithLessons
+	(*LessonWithSteps)(nil),                  // 6: course.v1.LessonWithSteps
+	(*ListCoursesRequest)(nil),               // 7: course.v1.ListCoursesRequest
+	(*ListCoursesResponse)(nil),              // 8: course.v1.ListCoursesResponse
+	(*GetCourseRequest)(nil),                 // 9: course.v1.GetCourseRequest
+	(*GetCourseResponse)(nil),                // 10: course.v1.GetCourseResponse
+	(*GetLessonRequest)(nil),                 // 11: course.v1.GetLessonRequest
+	(*GetLessonResponse)(nil),                // 12: course.v1.GetLessonResponse
+	(*GetStepContentRequest)(nil),            // 13: course.v1.GetStepContentRequest
+	(*GetStepContentResponse)(nil),           // 14: course.v1.GetStepContentResponse
+	(*EnrollUserRequest)(nil),                // 15: course.v1.EnrollUserRequest
+	(*EnrollUserResponse)(nil),               // 16: course.v1.EnrollUserResponse
+	(*CheckAccessRequest)(nil),               // 17: course.v1.CheckAccessRequest
+	(*CheckAccessResponse)(nil),              // 18: course.v1.CheckAccessResponse
+	(*CreateCourseRequest)(nil),              // 19: course.v1.CreateCourseRequest
+	(*CreateCourseResponse)(nil),             // 20: course.v1.CreateCourseResponse
+	(*UpdateCourseRequest)(nil),              // 21: course.v1.UpdateCourseRequest
+	(*UpdateCourseResponse)(nil),             // 22: course.v1.UpdateCourseResponse
+	(*DeleteCourseRequest)(nil),              // 23: course.v1.DeleteCourseRequest
+	(*DeleteCourseResponse)(nil),             // 24: course.v1.DeleteCourseResponse
+	(*PublishCourseRequest)(nil),             // 25: course.v1.PublishCourseRequest
+	(*PublishCourseResponse)(nil),            // 26: course.v1.PublishCourseResponse
+	(*CreateModuleRequest)(nil),              // 27: course.v1.CreateModuleRequest
+	(*CreateModuleResponse)(nil),             // 28: course.v1.CreateModuleResponse
+	(*UpdateModuleRequest)(nil),              // 29: course.v1.UpdateModuleRequest
+	(*UpdateModuleResponse)(nil),             // 30: course.v1.UpdateModuleResponse
+	(*DeleteModuleRequest)(nil),              // 31: course.v1.DeleteModuleRequest
+	(*DeleteModuleResponse)(nil),             // 32: course.v1.DeleteModuleResponse
+	(*CreateLessonRequest)(nil),              // 33: course.v1.CreateLessonRequest
+	(*CreateLessonResponse)(nil),             // 34: course.v1.CreateLessonResponse
+	(*UpdateLessonRequest)(nil),              // 35: course.v1.UpdateLessonRequest
+	(*UpdateLessonResponse)(nil),             // 36: course.v1.UpdateLessonResponse
+	(*DeleteLessonRequest)(nil),              // 37: course.v1.DeleteLessonRequest
+	(*DeleteLessonResponse)(nil),             // 38: course.v1.DeleteLessonResponse
+	(*CreateStepRequest)(nil),                // 39: course.v1.CreateStepRequest
+	(*CreateStepResponse)(nil),               // 40: course.v1.CreateStepResponse
+	(*UpdateStepRequest)(nil),                // 41: course.v1.UpdateStepRequest
+	(*UpdateStepResponse)(nil),               // 42: course.v1.UpdateStepResponse
+	(*DeleteStepRequest)(nil),                // 43: course.v1.DeleteStepRequest
+	(*DeleteStepResponse)(nil),               // 44: course.v1.DeleteStepResponse
+	(*StepProgress)(nil),                     // 45: course.v1.StepProgress
+	(*LessonProgress)(nil),                   // 46: course.v1.LessonProgress
+	(*MarkStepCompleteRequest)(nil),          // 47: course.v1.MarkStepCompleteRequest
+	(*MarkStepCompleteResponse)(nil),         // 48: course.v1.MarkStepCompleteResponse
+	(*GetStepProgressRequest)(nil),           // 49: course.v1.GetStepProgressRequest
+	(*GetStepProgressResponse)(nil),          // 50: course.v1.GetStepProgressResponse
+	(*GetLessonProgressRequest)(nil),         // 51: course.v1.GetLessonProgressRequest
+	(*GetLessonProgressResponse)(nil),        // 52: course.v1.GetLessonProgressResponse
+	(*GetCourseProgressRequest)(nil),         // 53: course.v1.GetCourseProgressRequest
+	(*GetCourseProgressResponse)(nil),        // 54: course.v1.GetCourseProgressResponse
+	(*Track)(nil),                            // 55: course.v1.Track
+	(*TrackWithLessons)(nil),                 // 56: course.v1.TrackWithLessons
+	(*ListTracksRequest)(nil),                // 57: course.v1.ListTracksRequest
+	(*ListTracksResponse)(nil),               // 58: course.v1.ListTracksResponse
+	(*GetTrackRequest)(nil),                  // 59: course.v1.GetTrackRequest
+	(*GetTrackByCodeRequest)(nil),            // 60: course.v1.GetTrackByCodeRequest
+	(*GetTrackResponse)(nil),                 // 61: course.v1.GetTrackResponse
+	(*CreateTrackRequest)(nil),               // 62: course.v1.CreateTrackRequest
+	(*CreateTrackResponse)(nil),              // 63: course.v1.CreateTrackResponse
+	(*UpdateTrackRequest)(nil),               // 64: course.v1.UpdateTrackRequest
+	(*UpdateTrackResponse)(nil),              // 65: course.v1.UpdateTrackResponse
+	(*DeleteTrackRequest)(nil),               // 66: course.v1.DeleteTrackRequest
+	(*DeleteTrackResponse)(nil),              // 67: course.v1.DeleteTrackResponse
+	(*PublishTrackRequest)(nil),              // 68: course.v1.PublishTrackRequest
+	(*PublishTrackResponse)(nil),             // 69: course.v1.PublishTrackResponse
+	(*AddLessonToTrackRequest)(nil),          // 70: course.v1.AddLessonToTrackRequest
+	(*AddLessonToTrackResponse)(nil),         // 71: course.v1.AddLessonToTrackResponse
+	(*RemoveLessonFromTrackRequest)(nil),     // 72: course.v1.RemoveLessonFromTrackRequest
+	(*RemoveLessonFromTrackResponse)(nil),    // 73: course.v1.RemoveLessonFromTrackResponse
+	(*ReorderTrackLessonsRequest)(nil),       // 74: course.v1.ReorderTrackLessonsRequest
+	(*ReorderTrackLessonsResponse)(nil),      // 75: course.v1.ReorderTrackLessonsResponse
+	(*VocabularyEntry)(nil),                  // 76: course.v1.VocabularyEntry
+	(*ListVocabularyRequest)(nil),            // 77: course.v1.ListVocabularyRequest
+	(*ListVocabularyResponse)(nil),           // 78: course.v1.ListVocabularyResponse
+	(*GetVocabularyEntryRequest)(nil),        // 79: course.v1.GetVocabularyEntryRequest
+	(*GetVocabularyEntryResponse)(nil),       // 80: course.v1.GetVocabularyEntryResponse
+	(*CreateVocabularyEntryRequest)(nil),     // 81: course.v1.CreateVocabularyEntryRequest
+	(*CreateVocabularyEntryResponse)(nil),    // 82: course.v1.CreateVocabularyEntryResponse
+	(*UpdateVocabularyEntryRequest)(nil),     // 83: course.v1.UpdateVocabularyEntryRequest
+	(*UpdateVocabularyEntryResponse)(nil),    // 84: course.v1.UpdateVocabularyEntryResponse
+	(*DeleteVocabularyEntryRequest)(nil),     // 85: course.v1.DeleteVocabularyEntryRequest
+	(*DeleteVocabularyEntryResponse)(nil),    // 86: course.v1.DeleteVocabularyEntryResponse
+	(*BulkCreateVocabularyRequest)(nil),      // 87: course.v1.BulkCreateVocabularyRequest
+	(*BulkCreateVocabularyResponse)(nil),     // 88: course.v1.BulkCreateVocabularyResponse
+	(*TTSCacheEntry)(nil),                    // 89: course.v1.TTSCacheEntry
+	(*SynthesizeTTSRequest)(nil),             // 90: course.v1.SynthesizeTTSRequest
+	(*SynthesizeTTSResponse)(nil),            // 91: course.v1.SynthesizeTTSResponse
+	(*GetTTSByTextRequest)(nil),              // 92: course.v1.GetTTSByTextRequest
+	(*GetTTSByTextResponse)(nil),             // 93: course.v1.GetTTSByTextResponse
+	(*Flashcard)(nil),                        // 94: course.v1.Flashcard
+	(*ListFlashcardsRequest)(nil),            // 95: course.v1.ListFlashcardsRequest
+	(*ListFlashcardsResponse)(nil),           // 96: course.v1.ListFlashcardsResponse
+	(*GetFlashcardRequest)(nil),              // 97: course.v1.GetFlashcardRequest
+	(*GetFlashcardResponse)(nil),             // 98: course.v1.GetFlashcardResponse
+	(*CreateFlashcardRequest)(nil),           // 99: course.v1.CreateFlashcardRequest
+	(*CreateFlashcardResponse)(nil),          // 100: course.v1.CreateFlashcardResponse
+	(*UpdateFlashcardRequest)(nil),           // 101: course.v1.UpdateFlashcardRequest
+	(*UpdateFlashcardResponse)(nil),          // 102: course.v1.UpdateFlashcardResponse
+	(*ArchiveFlashcardRequest)(nil),          // 103: course.v1.ArchiveFlashcardRequest
+	(*ArchiveFlashcardResponse)(nil),         // 104: course.v1.ArchiveFlashcardResponse
+	(*BulkCreateFlashcardsRequest)(nil),      // 105: course.v1.BulkCreateFlashcardsRequest
+	(*BulkCreateFlashcardsResponse)(nil),     // 106: course.v1.BulkCreateFlashcardsResponse
+	(*AddVocabularyAsFlashcardRequest)(nil),  // 107: course.v1.AddVocabularyAsFlashcardRequest
+	(*AddVocabularyAsFlashcardResponse)(nil), // 108: course.v1.AddVocabularyAsFlashcardResponse
+	(*GetFlashcardStatsRequest)(nil),         // 109: course.v1.GetFlashcardStatsRequest
+	(*GetFlashcardStatsResponse)(nil),        // 110: course.v1.GetFlashcardStatsResponse
+	(*PinForTodayRequest)(nil),               // 111: course.v1.PinForTodayRequest
+	(*PinForTodayResponse)(nil),              // 112: course.v1.PinForTodayResponse
+	(*UnpinFromTodayRequest)(nil),            // 113: course.v1.UnpinFromTodayRequest
+	(*UnpinFromTodayResponse)(nil),           // 114: course.v1.UnpinFromTodayResponse
+	(*ListTodayQueueRequest)(nil),            // 115: course.v1.ListTodayQueueRequest
+	(*ListTodayQueueResponse)(nil),           // 116: course.v1.ListTodayQueueResponse
+	(*BulkCreateFlashcardsRequest_Item)(nil), // 117: course.v1.BulkCreateFlashcardsRequest.Item
+	(*timestamppb.Timestamp)(nil),            // 118: google.protobuf.Timestamp
+	(*wrapperspb.StringValue)(nil),           // 119: google.protobuf.StringValue
+	(*wrapperspb.DoubleValue)(nil),           // 120: google.protobuf.DoubleValue
+	(*wrapperspb.Int32Value)(nil),            // 121: google.protobuf.Int32Value
+	(*v1.AddXPResponse)(nil),                 // 122: gamification.v1.AddXPResponse
 }
 var file_course_v1_course_proto_depIdxs = []int32{
-	94,  // 0: course.v1.Course.created_at:type_name -> google.protobuf.Timestamp
-	94,  // 1: course.v1.Course.updated_at:type_name -> google.protobuf.Timestamp
-	94,  // 2: course.v1.Module.created_at:type_name -> google.protobuf.Timestamp
-	94,  // 3: course.v1.Module.updated_at:type_name -> google.protobuf.Timestamp
-	94,  // 4: course.v1.Lesson.created_at:type_name -> google.protobuf.Timestamp
-	94,  // 5: course.v1.Lesson.updated_at:type_name -> google.protobuf.Timestamp
-	94,  // 6: course.v1.Step.created_at:type_name -> google.protobuf.Timestamp
-	94,  // 7: course.v1.Step.updated_at:type_name -> google.protobuf.Timestamp
-	94,  // 8: course.v1.Enrollment.enrolled_at:type_name -> google.protobuf.Timestamp
-	94,  // 9: course.v1.Enrollment.access_until:type_name -> google.protobuf.Timestamp
+	118, // 0: course.v1.Course.created_at:type_name -> google.protobuf.Timestamp
+	118, // 1: course.v1.Course.updated_at:type_name -> google.protobuf.Timestamp
+	118, // 2: course.v1.Module.created_at:type_name -> google.protobuf.Timestamp
+	118, // 3: course.v1.Module.updated_at:type_name -> google.protobuf.Timestamp
+	118, // 4: course.v1.Lesson.created_at:type_name -> google.protobuf.Timestamp
+	118, // 5: course.v1.Lesson.updated_at:type_name -> google.protobuf.Timestamp
+	118, // 6: course.v1.Step.created_at:type_name -> google.protobuf.Timestamp
+	118, // 7: course.v1.Step.updated_at:type_name -> google.protobuf.Timestamp
+	118, // 8: course.v1.Enrollment.enrolled_at:type_name -> google.protobuf.Timestamp
+	118, // 9: course.v1.Enrollment.access_until:type_name -> google.protobuf.Timestamp
 	1,   // 10: course.v1.ModuleWithLessons.module:type_name -> course.v1.Module
 	6,   // 11: course.v1.ModuleWithLessons.lessons:type_name -> course.v1.LessonWithSteps
 	2,   // 12: course.v1.LessonWithSteps.lesson:type_name -> course.v1.Lesson
 	3,   // 13: course.v1.LessonWithSteps.steps:type_name -> course.v1.Step
-	95,  // 14: course.v1.ListCoursesRequest.language:type_name -> google.protobuf.StringValue
-	95,  // 15: course.v1.ListCoursesRequest.level:type_name -> google.protobuf.StringValue
-	96,  // 16: course.v1.ListCoursesRequest.min_price:type_name -> google.protobuf.DoubleValue
-	96,  // 17: course.v1.ListCoursesRequest.max_price:type_name -> google.protobuf.DoubleValue
+	119, // 14: course.v1.ListCoursesRequest.language:type_name -> google.protobuf.StringValue
+	119, // 15: course.v1.ListCoursesRequest.level:type_name -> google.protobuf.StringValue
+	120, // 16: course.v1.ListCoursesRequest.min_price:type_name -> google.protobuf.DoubleValue
+	120, // 17: course.v1.ListCoursesRequest.max_price:type_name -> google.protobuf.DoubleValue
 	0,   // 18: course.v1.ListCoursesResponse.courses:type_name -> course.v1.Course
 	0,   // 19: course.v1.GetCourseResponse.course:type_name -> course.v1.Course
 	5,   // 20: course.v1.GetCourseResponse.modules:type_name -> course.v1.ModuleWithLessons
@@ -6510,172 +8302,213 @@ var file_course_v1_course_proto_depIdxs = []int32{
 	3,   // 23: course.v1.GetStepContentResponse.step:type_name -> course.v1.Step
 	4,   // 24: course.v1.EnrollUserResponse.enrollment:type_name -> course.v1.Enrollment
 	0,   // 25: course.v1.CreateCourseResponse.course:type_name -> course.v1.Course
-	95,  // 26: course.v1.UpdateCourseRequest.title:type_name -> google.protobuf.StringValue
-	95,  // 27: course.v1.UpdateCourseRequest.description:type_name -> google.protobuf.StringValue
-	96,  // 28: course.v1.UpdateCourseRequest.price:type_name -> google.protobuf.DoubleValue
-	95,  // 29: course.v1.UpdateCourseRequest.level:type_name -> google.protobuf.StringValue
-	95,  // 30: course.v1.UpdateCourseRequest.language:type_name -> google.protobuf.StringValue
-	95,  // 31: course.v1.UpdateCourseRequest.thumbnail_url:type_name -> google.protobuf.StringValue
+	119, // 26: course.v1.UpdateCourseRequest.title:type_name -> google.protobuf.StringValue
+	119, // 27: course.v1.UpdateCourseRequest.description:type_name -> google.protobuf.StringValue
+	120, // 28: course.v1.UpdateCourseRequest.price:type_name -> google.protobuf.DoubleValue
+	119, // 29: course.v1.UpdateCourseRequest.level:type_name -> google.protobuf.StringValue
+	119, // 30: course.v1.UpdateCourseRequest.language:type_name -> google.protobuf.StringValue
+	119, // 31: course.v1.UpdateCourseRequest.thumbnail_url:type_name -> google.protobuf.StringValue
 	0,   // 32: course.v1.UpdateCourseResponse.course:type_name -> course.v1.Course
 	0,   // 33: course.v1.PublishCourseResponse.course:type_name -> course.v1.Course
 	1,   // 34: course.v1.CreateModuleResponse.module:type_name -> course.v1.Module
-	95,  // 35: course.v1.UpdateModuleRequest.title:type_name -> google.protobuf.StringValue
-	95,  // 36: course.v1.UpdateModuleRequest.description:type_name -> google.protobuf.StringValue
-	97,  // 37: course.v1.UpdateModuleRequest.order_index:type_name -> google.protobuf.Int32Value
+	119, // 35: course.v1.UpdateModuleRequest.title:type_name -> google.protobuf.StringValue
+	119, // 36: course.v1.UpdateModuleRequest.description:type_name -> google.protobuf.StringValue
+	121, // 37: course.v1.UpdateModuleRequest.order_index:type_name -> google.protobuf.Int32Value
 	1,   // 38: course.v1.UpdateModuleResponse.module:type_name -> course.v1.Module
 	2,   // 39: course.v1.CreateLessonResponse.lesson:type_name -> course.v1.Lesson
-	95,  // 40: course.v1.UpdateLessonRequest.title:type_name -> google.protobuf.StringValue
-	95,  // 41: course.v1.UpdateLessonRequest.description:type_name -> google.protobuf.StringValue
-	97,  // 42: course.v1.UpdateLessonRequest.order_index:type_name -> google.protobuf.Int32Value
+	119, // 40: course.v1.UpdateLessonRequest.title:type_name -> google.protobuf.StringValue
+	119, // 41: course.v1.UpdateLessonRequest.description:type_name -> google.protobuf.StringValue
+	121, // 42: course.v1.UpdateLessonRequest.order_index:type_name -> google.protobuf.Int32Value
 	2,   // 43: course.v1.UpdateLessonResponse.lesson:type_name -> course.v1.Lesson
 	3,   // 44: course.v1.CreateStepResponse.step:type_name -> course.v1.Step
-	95,  // 45: course.v1.UpdateStepRequest.type:type_name -> google.protobuf.StringValue
-	95,  // 46: course.v1.UpdateStepRequest.title:type_name -> google.protobuf.StringValue
-	95,  // 47: course.v1.UpdateStepRequest.content:type_name -> google.protobuf.StringValue
-	97,  // 48: course.v1.UpdateStepRequest.order_index:type_name -> google.protobuf.Int32Value
+	119, // 45: course.v1.UpdateStepRequest.type:type_name -> google.protobuf.StringValue
+	119, // 46: course.v1.UpdateStepRequest.title:type_name -> google.protobuf.StringValue
+	119, // 47: course.v1.UpdateStepRequest.content:type_name -> google.protobuf.StringValue
+	121, // 48: course.v1.UpdateStepRequest.order_index:type_name -> google.protobuf.Int32Value
 	3,   // 49: course.v1.UpdateStepResponse.step:type_name -> course.v1.Step
-	94,  // 50: course.v1.StepProgress.completed_at:type_name -> google.protobuf.Timestamp
-	94,  // 51: course.v1.StepProgress.created_at:type_name -> google.protobuf.Timestamp
-	94,  // 52: course.v1.StepProgress.updated_at:type_name -> google.protobuf.Timestamp
-	94,  // 53: course.v1.LessonProgress.started_at:type_name -> google.protobuf.Timestamp
-	94,  // 54: course.v1.LessonProgress.last_activity_at:type_name -> google.protobuf.Timestamp
-	94,  // 55: course.v1.LessonProgress.completed_at:type_name -> google.protobuf.Timestamp
-	97,  // 56: course.v1.MarkStepCompleteRequest.attempts:type_name -> google.protobuf.Int32Value
-	96,  // 57: course.v1.MarkStepCompleteRequest.score:type_name -> google.protobuf.DoubleValue
+	118, // 50: course.v1.StepProgress.completed_at:type_name -> google.protobuf.Timestamp
+	118, // 51: course.v1.StepProgress.created_at:type_name -> google.protobuf.Timestamp
+	118, // 52: course.v1.StepProgress.updated_at:type_name -> google.protobuf.Timestamp
+	118, // 53: course.v1.LessonProgress.started_at:type_name -> google.protobuf.Timestamp
+	118, // 54: course.v1.LessonProgress.last_activity_at:type_name -> google.protobuf.Timestamp
+	118, // 55: course.v1.LessonProgress.completed_at:type_name -> google.protobuf.Timestamp
+	121, // 56: course.v1.MarkStepCompleteRequest.attempts:type_name -> google.protobuf.Int32Value
+	120, // 57: course.v1.MarkStepCompleteRequest.score:type_name -> google.protobuf.DoubleValue
 	45,  // 58: course.v1.MarkStepCompleteResponse.step_progress:type_name -> course.v1.StepProgress
 	46,  // 59: course.v1.MarkStepCompleteResponse.lesson_progress:type_name -> course.v1.LessonProgress
-	98,  // 60: course.v1.MarkStepCompleteResponse.gamification:type_name -> gamification.v1.AddXPResponse
+	122, // 60: course.v1.MarkStepCompleteResponse.gamification:type_name -> gamification.v1.AddXPResponse
 	45,  // 61: course.v1.GetStepProgressResponse.progress:type_name -> course.v1.StepProgress
 	46,  // 62: course.v1.GetLessonProgressResponse.progress:type_name -> course.v1.LessonProgress
 	45,  // 63: course.v1.GetLessonProgressResponse.step_progresses:type_name -> course.v1.StepProgress
 	46,  // 64: course.v1.GetCourseProgressResponse.lesson_progresses:type_name -> course.v1.LessonProgress
-	94,  // 65: course.v1.Track.created_at:type_name -> google.protobuf.Timestamp
-	94,  // 66: course.v1.Track.updated_at:type_name -> google.protobuf.Timestamp
+	118, // 65: course.v1.Track.created_at:type_name -> google.protobuf.Timestamp
+	118, // 66: course.v1.Track.updated_at:type_name -> google.protobuf.Timestamp
 	55,  // 67: course.v1.TrackWithLessons.track:type_name -> course.v1.Track
 	2,   // 68: course.v1.TrackWithLessons.lessons:type_name -> course.v1.Lesson
-	95,  // 69: course.v1.ListTracksRequest.language:type_name -> google.protobuf.StringValue
-	95,  // 70: course.v1.ListTracksRequest.level:type_name -> google.protobuf.StringValue
-	95,  // 71: course.v1.ListTracksRequest.track_type:type_name -> google.protobuf.StringValue
+	119, // 69: course.v1.ListTracksRequest.language:type_name -> google.protobuf.StringValue
+	119, // 70: course.v1.ListTracksRequest.level:type_name -> google.protobuf.StringValue
+	119, // 71: course.v1.ListTracksRequest.track_type:type_name -> google.protobuf.StringValue
 	55,  // 72: course.v1.ListTracksResponse.tracks:type_name -> course.v1.Track
 	55,  // 73: course.v1.GetTrackResponse.track:type_name -> course.v1.Track
 	2,   // 74: course.v1.GetTrackResponse.lessons:type_name -> course.v1.Lesson
 	55,  // 75: course.v1.CreateTrackResponse.track:type_name -> course.v1.Track
-	95,  // 76: course.v1.UpdateTrackRequest.title:type_name -> google.protobuf.StringValue
-	95,  // 77: course.v1.UpdateTrackRequest.description:type_name -> google.protobuf.StringValue
-	95,  // 78: course.v1.UpdateTrackRequest.icon_url:type_name -> google.protobuf.StringValue
-	95,  // 79: course.v1.UpdateTrackRequest.language:type_name -> google.protobuf.StringValue
-	95,  // 80: course.v1.UpdateTrackRequest.level:type_name -> google.protobuf.StringValue
-	95,  // 81: course.v1.UpdateTrackRequest.track_type:type_name -> google.protobuf.StringValue
-	97,  // 82: course.v1.UpdateTrackRequest.sort_order:type_name -> google.protobuf.Int32Value
+	119, // 76: course.v1.UpdateTrackRequest.title:type_name -> google.protobuf.StringValue
+	119, // 77: course.v1.UpdateTrackRequest.description:type_name -> google.protobuf.StringValue
+	119, // 78: course.v1.UpdateTrackRequest.icon_url:type_name -> google.protobuf.StringValue
+	119, // 79: course.v1.UpdateTrackRequest.language:type_name -> google.protobuf.StringValue
+	119, // 80: course.v1.UpdateTrackRequest.level:type_name -> google.protobuf.StringValue
+	119, // 81: course.v1.UpdateTrackRequest.track_type:type_name -> google.protobuf.StringValue
+	121, // 82: course.v1.UpdateTrackRequest.sort_order:type_name -> google.protobuf.Int32Value
 	55,  // 83: course.v1.UpdateTrackResponse.track:type_name -> course.v1.Track
 	55,  // 84: course.v1.PublishTrackResponse.track:type_name -> course.v1.Track
-	94,  // 85: course.v1.VocabularyEntry.created_at:type_name -> google.protobuf.Timestamp
-	94,  // 86: course.v1.VocabularyEntry.updated_at:type_name -> google.protobuf.Timestamp
-	95,  // 87: course.v1.ListVocabularyRequest.language:type_name -> google.protobuf.StringValue
-	95,  // 88: course.v1.ListVocabularyRequest.target_language:type_name -> google.protobuf.StringValue
-	95,  // 89: course.v1.ListVocabularyRequest.level:type_name -> google.protobuf.StringValue
-	95,  // 90: course.v1.ListVocabularyRequest.pos:type_name -> google.protobuf.StringValue
+	118, // 85: course.v1.VocabularyEntry.created_at:type_name -> google.protobuf.Timestamp
+	118, // 86: course.v1.VocabularyEntry.updated_at:type_name -> google.protobuf.Timestamp
+	119, // 87: course.v1.ListVocabularyRequest.language:type_name -> google.protobuf.StringValue
+	119, // 88: course.v1.ListVocabularyRequest.target_language:type_name -> google.protobuf.StringValue
+	119, // 89: course.v1.ListVocabularyRequest.level:type_name -> google.protobuf.StringValue
+	119, // 90: course.v1.ListVocabularyRequest.pos:type_name -> google.protobuf.StringValue
 	76,  // 91: course.v1.ListVocabularyResponse.entries:type_name -> course.v1.VocabularyEntry
 	76,  // 92: course.v1.GetVocabularyEntryResponse.entry:type_name -> course.v1.VocabularyEntry
 	76,  // 93: course.v1.CreateVocabularyEntryResponse.entry:type_name -> course.v1.VocabularyEntry
-	95,  // 94: course.v1.UpdateVocabularyEntryRequest.word:type_name -> google.protobuf.StringValue
-	95,  // 95: course.v1.UpdateVocabularyEntryRequest.translation:type_name -> google.protobuf.StringValue
-	95,  // 96: course.v1.UpdateVocabularyEntryRequest.audio_url:type_name -> google.protobuf.StringValue
-	95,  // 97: course.v1.UpdateVocabularyEntryRequest.image_url:type_name -> google.protobuf.StringValue
-	95,  // 98: course.v1.UpdateVocabularyEntryRequest.level:type_name -> google.protobuf.StringValue
-	95,  // 99: course.v1.UpdateVocabularyEntryRequest.pos:type_name -> google.protobuf.StringValue
+	119, // 94: course.v1.UpdateVocabularyEntryRequest.word:type_name -> google.protobuf.StringValue
+	119, // 95: course.v1.UpdateVocabularyEntryRequest.translation:type_name -> google.protobuf.StringValue
+	119, // 96: course.v1.UpdateVocabularyEntryRequest.audio_url:type_name -> google.protobuf.StringValue
+	119, // 97: course.v1.UpdateVocabularyEntryRequest.image_url:type_name -> google.protobuf.StringValue
+	119, // 98: course.v1.UpdateVocabularyEntryRequest.level:type_name -> google.protobuf.StringValue
+	119, // 99: course.v1.UpdateVocabularyEntryRequest.pos:type_name -> google.protobuf.StringValue
 	76,  // 100: course.v1.UpdateVocabularyEntryResponse.entry:type_name -> course.v1.VocabularyEntry
 	81,  // 101: course.v1.BulkCreateVocabularyRequest.entries:type_name -> course.v1.CreateVocabularyEntryRequest
-	94,  // 102: course.v1.TTSCacheEntry.created_at:type_name -> google.protobuf.Timestamp
+	118, // 102: course.v1.TTSCacheEntry.created_at:type_name -> google.protobuf.Timestamp
 	89,  // 103: course.v1.SynthesizeTTSResponse.entry:type_name -> course.v1.TTSCacheEntry
 	89,  // 104: course.v1.GetTTSByTextResponse.entry:type_name -> course.v1.TTSCacheEntry
-	7,   // 105: course.v1.CourseService.ListCourses:input_type -> course.v1.ListCoursesRequest
-	9,   // 106: course.v1.CourseService.GetCourse:input_type -> course.v1.GetCourseRequest
-	11,  // 107: course.v1.CourseService.GetLesson:input_type -> course.v1.GetLessonRequest
-	13,  // 108: course.v1.CourseService.GetStepContent:input_type -> course.v1.GetStepContentRequest
-	15,  // 109: course.v1.CourseService.EnrollUser:input_type -> course.v1.EnrollUserRequest
-	17,  // 110: course.v1.CourseService.CheckAccess:input_type -> course.v1.CheckAccessRequest
-	19,  // 111: course.v1.CourseService.CreateCourse:input_type -> course.v1.CreateCourseRequest
-	21,  // 112: course.v1.CourseService.UpdateCourse:input_type -> course.v1.UpdateCourseRequest
-	23,  // 113: course.v1.CourseService.DeleteCourse:input_type -> course.v1.DeleteCourseRequest
-	25,  // 114: course.v1.CourseService.PublishCourse:input_type -> course.v1.PublishCourseRequest
-	27,  // 115: course.v1.CourseService.CreateModule:input_type -> course.v1.CreateModuleRequest
-	29,  // 116: course.v1.CourseService.UpdateModule:input_type -> course.v1.UpdateModuleRequest
-	31,  // 117: course.v1.CourseService.DeleteModule:input_type -> course.v1.DeleteModuleRequest
-	33,  // 118: course.v1.CourseService.CreateLesson:input_type -> course.v1.CreateLessonRequest
-	35,  // 119: course.v1.CourseService.UpdateLesson:input_type -> course.v1.UpdateLessonRequest
-	37,  // 120: course.v1.CourseService.DeleteLesson:input_type -> course.v1.DeleteLessonRequest
-	39,  // 121: course.v1.CourseService.CreateStep:input_type -> course.v1.CreateStepRequest
-	41,  // 122: course.v1.CourseService.UpdateStep:input_type -> course.v1.UpdateStepRequest
-	43,  // 123: course.v1.CourseService.DeleteStep:input_type -> course.v1.DeleteStepRequest
-	47,  // 124: course.v1.CourseService.MarkStepComplete:input_type -> course.v1.MarkStepCompleteRequest
-	49,  // 125: course.v1.CourseService.GetStepProgress:input_type -> course.v1.GetStepProgressRequest
-	51,  // 126: course.v1.CourseService.GetLessonProgress:input_type -> course.v1.GetLessonProgressRequest
-	53,  // 127: course.v1.CourseService.GetCourseProgress:input_type -> course.v1.GetCourseProgressRequest
-	57,  // 128: course.v1.CourseService.ListTracks:input_type -> course.v1.ListTracksRequest
-	59,  // 129: course.v1.CourseService.GetTrack:input_type -> course.v1.GetTrackRequest
-	60,  // 130: course.v1.CourseService.GetTrackByCode:input_type -> course.v1.GetTrackByCodeRequest
-	62,  // 131: course.v1.CourseService.CreateTrack:input_type -> course.v1.CreateTrackRequest
-	64,  // 132: course.v1.CourseService.UpdateTrack:input_type -> course.v1.UpdateTrackRequest
-	66,  // 133: course.v1.CourseService.DeleteTrack:input_type -> course.v1.DeleteTrackRequest
-	68,  // 134: course.v1.CourseService.PublishTrack:input_type -> course.v1.PublishTrackRequest
-	70,  // 135: course.v1.CourseService.AddLessonToTrack:input_type -> course.v1.AddLessonToTrackRequest
-	72,  // 136: course.v1.CourseService.RemoveLessonFromTrack:input_type -> course.v1.RemoveLessonFromTrackRequest
-	74,  // 137: course.v1.CourseService.ReorderTrackLessons:input_type -> course.v1.ReorderTrackLessonsRequest
-	77,  // 138: course.v1.CourseService.ListVocabulary:input_type -> course.v1.ListVocabularyRequest
-	79,  // 139: course.v1.CourseService.GetVocabularyEntry:input_type -> course.v1.GetVocabularyEntryRequest
-	81,  // 140: course.v1.CourseService.CreateVocabularyEntry:input_type -> course.v1.CreateVocabularyEntryRequest
-	83,  // 141: course.v1.CourseService.UpdateVocabularyEntry:input_type -> course.v1.UpdateVocabularyEntryRequest
-	85,  // 142: course.v1.CourseService.DeleteVocabularyEntry:input_type -> course.v1.DeleteVocabularyEntryRequest
-	87,  // 143: course.v1.CourseService.BulkCreateVocabulary:input_type -> course.v1.BulkCreateVocabularyRequest
-	90,  // 144: course.v1.CourseService.SynthesizeTTS:input_type -> course.v1.SynthesizeTTSRequest
-	92,  // 145: course.v1.CourseService.GetTTSByText:input_type -> course.v1.GetTTSByTextRequest
-	8,   // 146: course.v1.CourseService.ListCourses:output_type -> course.v1.ListCoursesResponse
-	10,  // 147: course.v1.CourseService.GetCourse:output_type -> course.v1.GetCourseResponse
-	12,  // 148: course.v1.CourseService.GetLesson:output_type -> course.v1.GetLessonResponse
-	14,  // 149: course.v1.CourseService.GetStepContent:output_type -> course.v1.GetStepContentResponse
-	16,  // 150: course.v1.CourseService.EnrollUser:output_type -> course.v1.EnrollUserResponse
-	18,  // 151: course.v1.CourseService.CheckAccess:output_type -> course.v1.CheckAccessResponse
-	20,  // 152: course.v1.CourseService.CreateCourse:output_type -> course.v1.CreateCourseResponse
-	22,  // 153: course.v1.CourseService.UpdateCourse:output_type -> course.v1.UpdateCourseResponse
-	24,  // 154: course.v1.CourseService.DeleteCourse:output_type -> course.v1.DeleteCourseResponse
-	26,  // 155: course.v1.CourseService.PublishCourse:output_type -> course.v1.PublishCourseResponse
-	28,  // 156: course.v1.CourseService.CreateModule:output_type -> course.v1.CreateModuleResponse
-	30,  // 157: course.v1.CourseService.UpdateModule:output_type -> course.v1.UpdateModuleResponse
-	32,  // 158: course.v1.CourseService.DeleteModule:output_type -> course.v1.DeleteModuleResponse
-	34,  // 159: course.v1.CourseService.CreateLesson:output_type -> course.v1.CreateLessonResponse
-	36,  // 160: course.v1.CourseService.UpdateLesson:output_type -> course.v1.UpdateLessonResponse
-	38,  // 161: course.v1.CourseService.DeleteLesson:output_type -> course.v1.DeleteLessonResponse
-	40,  // 162: course.v1.CourseService.CreateStep:output_type -> course.v1.CreateStepResponse
-	42,  // 163: course.v1.CourseService.UpdateStep:output_type -> course.v1.UpdateStepResponse
-	44,  // 164: course.v1.CourseService.DeleteStep:output_type -> course.v1.DeleteStepResponse
-	48,  // 165: course.v1.CourseService.MarkStepComplete:output_type -> course.v1.MarkStepCompleteResponse
-	50,  // 166: course.v1.CourseService.GetStepProgress:output_type -> course.v1.GetStepProgressResponse
-	52,  // 167: course.v1.CourseService.GetLessonProgress:output_type -> course.v1.GetLessonProgressResponse
-	54,  // 168: course.v1.CourseService.GetCourseProgress:output_type -> course.v1.GetCourseProgressResponse
-	58,  // 169: course.v1.CourseService.ListTracks:output_type -> course.v1.ListTracksResponse
-	61,  // 170: course.v1.CourseService.GetTrack:output_type -> course.v1.GetTrackResponse
-	61,  // 171: course.v1.CourseService.GetTrackByCode:output_type -> course.v1.GetTrackResponse
-	63,  // 172: course.v1.CourseService.CreateTrack:output_type -> course.v1.CreateTrackResponse
-	65,  // 173: course.v1.CourseService.UpdateTrack:output_type -> course.v1.UpdateTrackResponse
-	67,  // 174: course.v1.CourseService.DeleteTrack:output_type -> course.v1.DeleteTrackResponse
-	69,  // 175: course.v1.CourseService.PublishTrack:output_type -> course.v1.PublishTrackResponse
-	71,  // 176: course.v1.CourseService.AddLessonToTrack:output_type -> course.v1.AddLessonToTrackResponse
-	73,  // 177: course.v1.CourseService.RemoveLessonFromTrack:output_type -> course.v1.RemoveLessonFromTrackResponse
-	75,  // 178: course.v1.CourseService.ReorderTrackLessons:output_type -> course.v1.ReorderTrackLessonsResponse
-	78,  // 179: course.v1.CourseService.ListVocabulary:output_type -> course.v1.ListVocabularyResponse
-	80,  // 180: course.v1.CourseService.GetVocabularyEntry:output_type -> course.v1.GetVocabularyEntryResponse
-	82,  // 181: course.v1.CourseService.CreateVocabularyEntry:output_type -> course.v1.CreateVocabularyEntryResponse
-	84,  // 182: course.v1.CourseService.UpdateVocabularyEntry:output_type -> course.v1.UpdateVocabularyEntryResponse
-	86,  // 183: course.v1.CourseService.DeleteVocabularyEntry:output_type -> course.v1.DeleteVocabularyEntryResponse
-	88,  // 184: course.v1.CourseService.BulkCreateVocabulary:output_type -> course.v1.BulkCreateVocabularyResponse
-	91,  // 185: course.v1.CourseService.SynthesizeTTS:output_type -> course.v1.SynthesizeTTSResponse
-	93,  // 186: course.v1.CourseService.GetTTSByText:output_type -> course.v1.GetTTSByTextResponse
-	146, // [146:187] is the sub-list for method output_type
-	105, // [105:146] is the sub-list for method input_type
-	105, // [105:105] is the sub-list for extension type_name
-	105, // [105:105] is the sub-list for extension extendee
-	0,   // [0:105] is the sub-list for field type_name
+	118, // 105: course.v1.Flashcard.archived_at:type_name -> google.protobuf.Timestamp
+	118, // 106: course.v1.Flashcard.created_at:type_name -> google.protobuf.Timestamp
+	118, // 107: course.v1.Flashcard.updated_at:type_name -> google.protobuf.Timestamp
+	118, // 108: course.v1.Flashcard.next_review_at:type_name -> google.protobuf.Timestamp
+	94,  // 109: course.v1.ListFlashcardsResponse.items:type_name -> course.v1.Flashcard
+	94,  // 110: course.v1.GetFlashcardResponse.flashcard:type_name -> course.v1.Flashcard
+	94,  // 111: course.v1.CreateFlashcardResponse.flashcard:type_name -> course.v1.Flashcard
+	119, // 112: course.v1.UpdateFlashcardRequest.word:type_name -> google.protobuf.StringValue
+	119, // 113: course.v1.UpdateFlashcardRequest.translation:type_name -> google.protobuf.StringValue
+	119, // 114: course.v1.UpdateFlashcardRequest.definition:type_name -> google.protobuf.StringValue
+	119, // 115: course.v1.UpdateFlashcardRequest.example_sentence:type_name -> google.protobuf.StringValue
+	119, // 116: course.v1.UpdateFlashcardRequest.audio_url:type_name -> google.protobuf.StringValue
+	119, // 117: course.v1.UpdateFlashcardRequest.image_url:type_name -> google.protobuf.StringValue
+	94,  // 118: course.v1.UpdateFlashcardResponse.flashcard:type_name -> course.v1.Flashcard
+	117, // 119: course.v1.BulkCreateFlashcardsRequest.items:type_name -> course.v1.BulkCreateFlashcardsRequest.Item
+	94,  // 120: course.v1.BulkCreateFlashcardsResponse.items:type_name -> course.v1.Flashcard
+	94,  // 121: course.v1.AddVocabularyAsFlashcardResponse.flashcard:type_name -> course.v1.Flashcard
+	118, // 122: course.v1.PinForTodayResponse.added_at:type_name -> google.protobuf.Timestamp
+	94,  // 123: course.v1.ListTodayQueueResponse.items:type_name -> course.v1.Flashcard
+	7,   // 124: course.v1.CourseService.ListCourses:input_type -> course.v1.ListCoursesRequest
+	9,   // 125: course.v1.CourseService.GetCourse:input_type -> course.v1.GetCourseRequest
+	11,  // 126: course.v1.CourseService.GetLesson:input_type -> course.v1.GetLessonRequest
+	13,  // 127: course.v1.CourseService.GetStepContent:input_type -> course.v1.GetStepContentRequest
+	15,  // 128: course.v1.CourseService.EnrollUser:input_type -> course.v1.EnrollUserRequest
+	17,  // 129: course.v1.CourseService.CheckAccess:input_type -> course.v1.CheckAccessRequest
+	19,  // 130: course.v1.CourseService.CreateCourse:input_type -> course.v1.CreateCourseRequest
+	21,  // 131: course.v1.CourseService.UpdateCourse:input_type -> course.v1.UpdateCourseRequest
+	23,  // 132: course.v1.CourseService.DeleteCourse:input_type -> course.v1.DeleteCourseRequest
+	25,  // 133: course.v1.CourseService.PublishCourse:input_type -> course.v1.PublishCourseRequest
+	27,  // 134: course.v1.CourseService.CreateModule:input_type -> course.v1.CreateModuleRequest
+	29,  // 135: course.v1.CourseService.UpdateModule:input_type -> course.v1.UpdateModuleRequest
+	31,  // 136: course.v1.CourseService.DeleteModule:input_type -> course.v1.DeleteModuleRequest
+	33,  // 137: course.v1.CourseService.CreateLesson:input_type -> course.v1.CreateLessonRequest
+	35,  // 138: course.v1.CourseService.UpdateLesson:input_type -> course.v1.UpdateLessonRequest
+	37,  // 139: course.v1.CourseService.DeleteLesson:input_type -> course.v1.DeleteLessonRequest
+	39,  // 140: course.v1.CourseService.CreateStep:input_type -> course.v1.CreateStepRequest
+	41,  // 141: course.v1.CourseService.UpdateStep:input_type -> course.v1.UpdateStepRequest
+	43,  // 142: course.v1.CourseService.DeleteStep:input_type -> course.v1.DeleteStepRequest
+	47,  // 143: course.v1.CourseService.MarkStepComplete:input_type -> course.v1.MarkStepCompleteRequest
+	49,  // 144: course.v1.CourseService.GetStepProgress:input_type -> course.v1.GetStepProgressRequest
+	51,  // 145: course.v1.CourseService.GetLessonProgress:input_type -> course.v1.GetLessonProgressRequest
+	53,  // 146: course.v1.CourseService.GetCourseProgress:input_type -> course.v1.GetCourseProgressRequest
+	57,  // 147: course.v1.CourseService.ListTracks:input_type -> course.v1.ListTracksRequest
+	59,  // 148: course.v1.CourseService.GetTrack:input_type -> course.v1.GetTrackRequest
+	60,  // 149: course.v1.CourseService.GetTrackByCode:input_type -> course.v1.GetTrackByCodeRequest
+	62,  // 150: course.v1.CourseService.CreateTrack:input_type -> course.v1.CreateTrackRequest
+	64,  // 151: course.v1.CourseService.UpdateTrack:input_type -> course.v1.UpdateTrackRequest
+	66,  // 152: course.v1.CourseService.DeleteTrack:input_type -> course.v1.DeleteTrackRequest
+	68,  // 153: course.v1.CourseService.PublishTrack:input_type -> course.v1.PublishTrackRequest
+	70,  // 154: course.v1.CourseService.AddLessonToTrack:input_type -> course.v1.AddLessonToTrackRequest
+	72,  // 155: course.v1.CourseService.RemoveLessonFromTrack:input_type -> course.v1.RemoveLessonFromTrackRequest
+	74,  // 156: course.v1.CourseService.ReorderTrackLessons:input_type -> course.v1.ReorderTrackLessonsRequest
+	77,  // 157: course.v1.CourseService.ListVocabulary:input_type -> course.v1.ListVocabularyRequest
+	79,  // 158: course.v1.CourseService.GetVocabularyEntry:input_type -> course.v1.GetVocabularyEntryRequest
+	81,  // 159: course.v1.CourseService.CreateVocabularyEntry:input_type -> course.v1.CreateVocabularyEntryRequest
+	83,  // 160: course.v1.CourseService.UpdateVocabularyEntry:input_type -> course.v1.UpdateVocabularyEntryRequest
+	85,  // 161: course.v1.CourseService.DeleteVocabularyEntry:input_type -> course.v1.DeleteVocabularyEntryRequest
+	87,  // 162: course.v1.CourseService.BulkCreateVocabulary:input_type -> course.v1.BulkCreateVocabularyRequest
+	90,  // 163: course.v1.CourseService.SynthesizeTTS:input_type -> course.v1.SynthesizeTTSRequest
+	92,  // 164: course.v1.CourseService.GetTTSByText:input_type -> course.v1.GetTTSByTextRequest
+	95,  // 165: course.v1.CourseService.ListFlashcards:input_type -> course.v1.ListFlashcardsRequest
+	97,  // 166: course.v1.CourseService.GetFlashcard:input_type -> course.v1.GetFlashcardRequest
+	99,  // 167: course.v1.CourseService.CreateFlashcard:input_type -> course.v1.CreateFlashcardRequest
+	101, // 168: course.v1.CourseService.UpdateFlashcard:input_type -> course.v1.UpdateFlashcardRequest
+	103, // 169: course.v1.CourseService.ArchiveFlashcard:input_type -> course.v1.ArchiveFlashcardRequest
+	105, // 170: course.v1.CourseService.BulkCreateFlashcards:input_type -> course.v1.BulkCreateFlashcardsRequest
+	107, // 171: course.v1.CourseService.AddVocabularyAsFlashcard:input_type -> course.v1.AddVocabularyAsFlashcardRequest
+	109, // 172: course.v1.CourseService.GetFlashcardStats:input_type -> course.v1.GetFlashcardStatsRequest
+	111, // 173: course.v1.CourseService.PinForToday:input_type -> course.v1.PinForTodayRequest
+	113, // 174: course.v1.CourseService.UnpinFromToday:input_type -> course.v1.UnpinFromTodayRequest
+	115, // 175: course.v1.CourseService.ListTodayQueue:input_type -> course.v1.ListTodayQueueRequest
+	8,   // 176: course.v1.CourseService.ListCourses:output_type -> course.v1.ListCoursesResponse
+	10,  // 177: course.v1.CourseService.GetCourse:output_type -> course.v1.GetCourseResponse
+	12,  // 178: course.v1.CourseService.GetLesson:output_type -> course.v1.GetLessonResponse
+	14,  // 179: course.v1.CourseService.GetStepContent:output_type -> course.v1.GetStepContentResponse
+	16,  // 180: course.v1.CourseService.EnrollUser:output_type -> course.v1.EnrollUserResponse
+	18,  // 181: course.v1.CourseService.CheckAccess:output_type -> course.v1.CheckAccessResponse
+	20,  // 182: course.v1.CourseService.CreateCourse:output_type -> course.v1.CreateCourseResponse
+	22,  // 183: course.v1.CourseService.UpdateCourse:output_type -> course.v1.UpdateCourseResponse
+	24,  // 184: course.v1.CourseService.DeleteCourse:output_type -> course.v1.DeleteCourseResponse
+	26,  // 185: course.v1.CourseService.PublishCourse:output_type -> course.v1.PublishCourseResponse
+	28,  // 186: course.v1.CourseService.CreateModule:output_type -> course.v1.CreateModuleResponse
+	30,  // 187: course.v1.CourseService.UpdateModule:output_type -> course.v1.UpdateModuleResponse
+	32,  // 188: course.v1.CourseService.DeleteModule:output_type -> course.v1.DeleteModuleResponse
+	34,  // 189: course.v1.CourseService.CreateLesson:output_type -> course.v1.CreateLessonResponse
+	36,  // 190: course.v1.CourseService.UpdateLesson:output_type -> course.v1.UpdateLessonResponse
+	38,  // 191: course.v1.CourseService.DeleteLesson:output_type -> course.v1.DeleteLessonResponse
+	40,  // 192: course.v1.CourseService.CreateStep:output_type -> course.v1.CreateStepResponse
+	42,  // 193: course.v1.CourseService.UpdateStep:output_type -> course.v1.UpdateStepResponse
+	44,  // 194: course.v1.CourseService.DeleteStep:output_type -> course.v1.DeleteStepResponse
+	48,  // 195: course.v1.CourseService.MarkStepComplete:output_type -> course.v1.MarkStepCompleteResponse
+	50,  // 196: course.v1.CourseService.GetStepProgress:output_type -> course.v1.GetStepProgressResponse
+	52,  // 197: course.v1.CourseService.GetLessonProgress:output_type -> course.v1.GetLessonProgressResponse
+	54,  // 198: course.v1.CourseService.GetCourseProgress:output_type -> course.v1.GetCourseProgressResponse
+	58,  // 199: course.v1.CourseService.ListTracks:output_type -> course.v1.ListTracksResponse
+	61,  // 200: course.v1.CourseService.GetTrack:output_type -> course.v1.GetTrackResponse
+	61,  // 201: course.v1.CourseService.GetTrackByCode:output_type -> course.v1.GetTrackResponse
+	63,  // 202: course.v1.CourseService.CreateTrack:output_type -> course.v1.CreateTrackResponse
+	65,  // 203: course.v1.CourseService.UpdateTrack:output_type -> course.v1.UpdateTrackResponse
+	67,  // 204: course.v1.CourseService.DeleteTrack:output_type -> course.v1.DeleteTrackResponse
+	69,  // 205: course.v1.CourseService.PublishTrack:output_type -> course.v1.PublishTrackResponse
+	71,  // 206: course.v1.CourseService.AddLessonToTrack:output_type -> course.v1.AddLessonToTrackResponse
+	73,  // 207: course.v1.CourseService.RemoveLessonFromTrack:output_type -> course.v1.RemoveLessonFromTrackResponse
+	75,  // 208: course.v1.CourseService.ReorderTrackLessons:output_type -> course.v1.ReorderTrackLessonsResponse
+	78,  // 209: course.v1.CourseService.ListVocabulary:output_type -> course.v1.ListVocabularyResponse
+	80,  // 210: course.v1.CourseService.GetVocabularyEntry:output_type -> course.v1.GetVocabularyEntryResponse
+	82,  // 211: course.v1.CourseService.CreateVocabularyEntry:output_type -> course.v1.CreateVocabularyEntryResponse
+	84,  // 212: course.v1.CourseService.UpdateVocabularyEntry:output_type -> course.v1.UpdateVocabularyEntryResponse
+	86,  // 213: course.v1.CourseService.DeleteVocabularyEntry:output_type -> course.v1.DeleteVocabularyEntryResponse
+	88,  // 214: course.v1.CourseService.BulkCreateVocabulary:output_type -> course.v1.BulkCreateVocabularyResponse
+	91,  // 215: course.v1.CourseService.SynthesizeTTS:output_type -> course.v1.SynthesizeTTSResponse
+	93,  // 216: course.v1.CourseService.GetTTSByText:output_type -> course.v1.GetTTSByTextResponse
+	96,  // 217: course.v1.CourseService.ListFlashcards:output_type -> course.v1.ListFlashcardsResponse
+	98,  // 218: course.v1.CourseService.GetFlashcard:output_type -> course.v1.GetFlashcardResponse
+	100, // 219: course.v1.CourseService.CreateFlashcard:output_type -> course.v1.CreateFlashcardResponse
+	102, // 220: course.v1.CourseService.UpdateFlashcard:output_type -> course.v1.UpdateFlashcardResponse
+	104, // 221: course.v1.CourseService.ArchiveFlashcard:output_type -> course.v1.ArchiveFlashcardResponse
+	106, // 222: course.v1.CourseService.BulkCreateFlashcards:output_type -> course.v1.BulkCreateFlashcardsResponse
+	108, // 223: course.v1.CourseService.AddVocabularyAsFlashcard:output_type -> course.v1.AddVocabularyAsFlashcardResponse
+	110, // 224: course.v1.CourseService.GetFlashcardStats:output_type -> course.v1.GetFlashcardStatsResponse
+	112, // 225: course.v1.CourseService.PinForToday:output_type -> course.v1.PinForTodayResponse
+	114, // 226: course.v1.CourseService.UnpinFromToday:output_type -> course.v1.UnpinFromTodayResponse
+	116, // 227: course.v1.CourseService.ListTodayQueue:output_type -> course.v1.ListTodayQueueResponse
+	176, // [176:228] is the sub-list for method output_type
+	124, // [124:176] is the sub-list for method input_type
+	124, // [124:124] is the sub-list for extension type_name
+	124, // [124:124] is the sub-list for extension extendee
+	0,   // [0:124] is the sub-list for field type_name
 }
 
 func init() { file_course_v1_course_proto_init() }
@@ -6683,13 +8516,14 @@ func file_course_v1_course_proto_init() {
 	if File_course_v1_course_proto != nil {
 		return
 	}
+	file_course_v1_course_proto_msgTypes[94].OneofWrappers = []any{}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_course_v1_course_proto_rawDesc), len(file_course_v1_course_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   94,
+			NumMessages:   118,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
