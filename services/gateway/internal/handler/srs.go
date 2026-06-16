@@ -34,6 +34,8 @@ func parseItemType(s string) srsv1.ItemType {
 		return srsv1.ItemType_ITEM_TYPE_STEP
 	case "phrase":
 		return srsv1.ItemType_ITEM_TYPE_PHRASE
+	case "flashcard":
+		return srsv1.ItemType_ITEM_TYPE_FLASHCARD
 	default:
 		return srsv1.ItemType_ITEM_TYPE_UNSPECIFIED
 	}

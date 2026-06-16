@@ -566,6 +566,7 @@ message Track {
   string track_type = 8; // thematic | daily | stories | podcast
   bool is_published = 9;
   int32 sort_order = 10;
+  repeated string motivation = 14; // цели: work, travel, exam, etc.
   string created_by = 11;
   google.protobuf.Timestamp created_at = 12;
   google.protobuf.Timestamp updated_at = 13;
@@ -585,6 +586,7 @@ message ListTracksRequest {
   bool include_unpublished = 5;
   int32 limit = 6;
   int32 offset = 7;
+  repeated string motivation = 8; // фильтр по целям (OR): work, travel, exam, etc.
 }
 
 message ListTracksResponse {
@@ -698,6 +700,7 @@ message VocabularyEntry {
   string pos = 9;             // noun | verb | adj | ...
   google.protobuf.Timestamp created_at = 10;
   google.protobuf.Timestamp updated_at = 11;
+  string transcription = 12;  // optional, IPA: /həˈloʊ/
 }
 
 message ListVocabularyRequest {
@@ -732,6 +735,7 @@ message CreateVocabularyEntryRequest {
   string image_url = 6;
   string level = 7;
   string pos = 8;
+  string transcription = 9;  // optional, IPA
 }
 
 message CreateVocabularyEntryResponse {
@@ -746,6 +750,7 @@ message UpdateVocabularyEntryRequest {
   google.protobuf.StringValue image_url = 5;
   google.protobuf.StringValue level = 6;
   google.protobuf.StringValue pos = 7;
+  google.protobuf.StringValue transcription = 8;
 }
 
 message UpdateVocabularyEntryResponse {
@@ -842,6 +847,7 @@ message Flashcard {
   optional double strength       = 17;
   optional int32  repetitions    = 18;
   optional google.protobuf.Timestamp next_review_at = 19;
+  string transcription = 20;  // optional, IPA: /həˈloʊ/
 }
 
 // === ListFlashcards ===
@@ -891,6 +897,7 @@ message CreateFlashcardRequest {
   string example_sentence = 7;   // optional
   string audio_url        = 8;   // optional
   string image_url        = 9;   // optional
+  string transcription    = 10;  // optional, IPA
 }
 
 message CreateFlashcardResponse {
@@ -908,6 +915,7 @@ message UpdateFlashcardRequest {
   google.protobuf.StringValue example_sentence = 6;
   google.protobuf.StringValue audio_url        = 7;
   google.protobuf.StringValue image_url        = 8;
+  google.protobuf.StringValue transcription    = 9;
 }
 
 message UpdateFlashcardResponse {
@@ -936,6 +944,7 @@ message BulkCreateFlashcardsRequest {
     string example_sentence = 6;
     string source           = 7; // default 'manual'
     string vocabulary_id    = 8; // optional, если ref на system vocab
+    string transcription    = 9; // optional, IPA
   }
   repeated Item items = 2;
 }

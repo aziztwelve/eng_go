@@ -22,6 +22,7 @@ const flashcardSelectCols = `
 	f.id, f.user_id, f.source, f.vocabulary_id,
 	f.word, f.translation, f.language, f.target_language,
 	f.definition, f.example_sentence, f.audio_url, f.image_url,
+	f.transcription,
 	f.archived_at, f.created_at, f.updated_at
 `
 
@@ -39,9 +40,9 @@ func NewFlashcardRepository(pool *pgxpool.Pool) repository.FlashcardRepository {
 func scanFlashcard(scan func(...interface{}) error, withPinned bool) (*model.Flashcard, error) {
 	f := &model.Flashcard{}
 	var (
-		vocabID, definition, example, audio, image sql.NullString
-		archivedAt                                 sql.NullTime
-		pinned                                     sql.NullBool
+		vocabID, definition, example, audio, image, transcription sql.NullString
+		archivedAt                                                sql.NullTime
+		pinned                                                    sql.NullBool
 	)
 	dst := []interface{}{
 		&f.ID,
@@ -56,6 +57,7 @@ func scanFlashcard(scan func(...interface{}) error, withPinned bool) (*model.Fla
 		&example,
 		&audio,
 		&image,
+		&transcription,
 		&archivedAt,
 		&f.CreatedAt,
 		&f.UpdatedAt,
@@ -71,6 +73,7 @@ func scanFlashcard(scan func(...interface{}) error, withPinned bool) (*model.Fla
 	f.ExampleSentence = example.String
 	f.AudioURL = audio.String
 	f.ImageURL = image.String
+	f.Transcription = transcription.String
 	if archivedAt.Valid {
 		t := archivedAt.Time
 		f.ArchivedAt = &t
@@ -92,8 +95,9 @@ func (r *flashcardRepository) Create(ctx context.Context, f *model.Flashcard) er
 		INSERT INTO user_flashcards
 			(id, user_id, source, vocabulary_id,
 			 word, translation, language, target_language,
-			 definition, example_sentence, audio_url, image_url)
-		VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
+			 definition, example_sentence, audio_url, image_url,
+			 transcription)
+		VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
 		RETURNING created_at, updated_at
 	`
 	err := r.pool.QueryRow(ctx, query,
@@ -109,6 +113,7 @@ func (r *flashcardRepository) Create(ctx context.Context, f *model.Flashcard) er
 		nullStringPtr(f.ExampleSentence),
 		nullStringPtr(f.AudioURL),
 		nullStringPtr(f.ImageURL),
+		nullStringPtr(f.Transcription),
 	).Scan(&f.CreatedAt, &f.UpdatedAt)
 	if err != nil {
 		// 23505 — unique violation (один и тот же vocabulary_id у user'а).
@@ -177,7 +182,8 @@ func (r *flashcardRepository) Update(ctx context.Context, f *model.Flashcard) er
 		    definition = $5,
 		    example_sentence = $6,
 		    audio_url = $7,
-		    image_url = $8
+		    image_url = $8,
+		    transcription = $9
 		WHERE id = $1 AND user_id = $2
 		RETURNING updated_at
 	`
@@ -190,6 +196,7 @@ func (r *flashcardRepository) Update(ctx context.Context, f *model.Flashcard) er
 		nullStringPtr(f.ExampleSentence),
 		nullStringPtr(f.AudioURL),
 		nullStringPtr(f.ImageURL),
+		nullStringPtr(f.Transcription),
 	).Scan(&f.UpdatedAt)
 	if errors.Is(err, pgx.ErrNoRows) {
 		return repository.ErrFlashcardNotFound
@@ -341,8 +348,9 @@ func (r *flashcardRepository) BulkCreate(ctx context.Context, items []*model.Fla
 			INSERT INTO user_flashcards
 				(id, user_id, source, vocabulary_id,
 				 word, translation, language, target_language,
-				 definition, example_sentence, audio_url, image_url)
-			VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
+				 definition, example_sentence, audio_url, image_url,
+				 transcription)
+			VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
 			RETURNING created_at, updated_at`,
 			f.ID,
 			f.UserID,
@@ -356,6 +364,7 @@ func (r *flashcardRepository) BulkCreate(ctx context.Context, items []*model.Fla
 			nullStringPtr(f.ExampleSentence),
 			nullStringPtr(f.AudioURL),
 			nullStringPtr(f.ImageURL),
+			nullStringPtr(f.Transcription),
 		).Scan(&f.CreatedAt, &f.UpdatedAt)
 		switch {
 		case err == nil:

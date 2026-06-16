@@ -22,7 +22,8 @@ type Track struct {
 	TrackType    string
 	IsPublished  bool
 	SortOrder    int32
-	CreatedBy    string // UUID или "" если не задан
+	Motivation   []string // цели юзера: work, travel, exam, etc.
+	CreatedBy    string   // UUID или "" если не задан
 	CreatedAt    time.Time
 	UpdatedAt    time.Time
 }

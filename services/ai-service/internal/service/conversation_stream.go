@@ -102,7 +102,7 @@ func (s *Service) SendMessageStream(ctx context.Context, in SendMessageInput) (<
 	systemPrompt := prompts.ConversationSystemPrompt(prompts.ConversationContext{
 		UserLevel:      conv.UserLevel,
 		TargetLanguage: conv.TargetLanguage,
-		NativeLanguage: firstNonEmpty(profile.NativeLanguage, "en"),
+		NativeLanguage: firstNonEmpty(profile.NativeLanguage, "Russian"),
 		ScenarioRole:   scenarioRole,
 		ScenarioCtx:    scenarioCtx,
 		VocabFocus:     vocabFocus,

@@ -17,7 +17,7 @@ import (
 )
 
 const vocabularySelectCols = `id, language, word, translation, target_language,
-	audio_url, image_url, level, pos, created_at, updated_at`
+	audio_url, image_url, level, pos, transcription, created_at, updated_at`
 
 type vocabularyRepository struct {
 	pool *pgxpool.Pool
@@ -30,7 +30,7 @@ func NewVocabularyRepository(pool *pgxpool.Pool) repository.VocabularyRepository
 
 func scanVocabulary(scan func(...interface{}) error) (*model.VocabularyEntry, error) {
 	v := &model.VocabularyEntry{}
-	var audio, image, level, pos sql.NullString
+	var audio, image, level, pos, transcription sql.NullString
 	if err := scan(
 		&v.ID,
 		&v.Language,
@@ -41,6 +41,7 @@ func scanVocabulary(scan func(...interface{}) error) (*model.VocabularyEntry, er
 		&image,
 		&level,
 		&pos,
+		&transcription,
 		&v.CreatedAt,
 		&v.UpdatedAt,
 	); err != nil {
@@ -50,6 +51,7 @@ func scanVocabulary(scan func(...interface{}) error) (*model.VocabularyEntry, er
 	v.ImageURL = image.String
 	v.Level = level.String
 	v.POS = pos.String
+	v.Transcription = transcription.String
 	return v, nil
 }
 
@@ -60,8 +62,8 @@ func (r *vocabularyRepository) Create(ctx context.Context, e *model.VocabularyEn
 	query := `
 		INSERT INTO vocabulary
 			(id, language, word, translation, target_language,
-			 audio_url, image_url, level, pos)
-		VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+			 audio_url, image_url, level, pos, transcription)
+		VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
 		RETURNING created_at, updated_at
 	`
 	return r.pool.QueryRow(ctx, query,
@@ -74,6 +76,7 @@ func (r *vocabularyRepository) Create(ctx context.Context, e *model.VocabularyEn
 		nullStringPtr(e.ImageURL),
 		nullStringPtr(e.Level),
 		nullStringPtr(e.POS),
+		nullStringPtr(e.Transcription),
 	).Scan(&e.CreatedAt, &e.UpdatedAt)
 }
 
@@ -87,7 +90,7 @@ func (r *vocabularyRepository) Update(ctx context.Context, e *model.VocabularyEn
 		UPDATE vocabulary
 		SET word = $2, translation = $3,
 		    audio_url = $4, image_url = $5,
-		    level = $6, pos = $7
+		    level = $6, pos = $7, transcription = $8
 		WHERE id = $1
 		RETURNING updated_at
 	`
@@ -99,6 +102,7 @@ func (r *vocabularyRepository) Update(ctx context.Context, e *model.VocabularyEn
 		nullStringPtr(e.ImageURL),
 		nullStringPtr(e.Level),
 		nullStringPtr(e.POS),
+		nullStringPtr(e.Transcription),
 	).Scan(&e.UpdatedAt)
 }
 
@@ -191,8 +195,8 @@ func (r *vocabularyRepository) BulkCreate(ctx context.Context, entries []*model.
 		err := tx.QueryRow(ctx, `
 			INSERT INTO vocabulary
 				(id, language, word, translation, target_language,
-				 audio_url, image_url, level, pos)
-			VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+				 audio_url, image_url, level, pos, transcription)
+			VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
 			ON CONFLICT (language, word, target_language) DO NOTHING
 			RETURNING id`,
 			e.ID,
@@ -204,6 +208,7 @@ func (r *vocabularyRepository) BulkCreate(ctx context.Context, entries []*model.
 			nullStringPtr(e.ImageURL),
 			nullStringPtr(e.Level),
 			nullStringPtr(e.POS),
+			nullStringPtr(e.Transcription),
 		).Scan(&insertedID)
 		switch {
 		case err == nil:

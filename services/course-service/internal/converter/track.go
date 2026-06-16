@@ -23,6 +23,7 @@ func ToTrackProto(t *model.Track) *coursev1.Track {
 		TrackType:   t.TrackType,
 		IsPublished: t.IsPublished,
 		SortOrder:   t.SortOrder,
+		Motivation:  t.Motivation,
 		CreatedBy:   t.CreatedBy,
 		CreatedAt:   timestamppb.New(t.CreatedAt),
 		UpdatedAt:   timestamppb.New(t.UpdatedAt),

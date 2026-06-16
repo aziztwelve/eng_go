@@ -24,6 +24,8 @@ func ItemTypeFromProto(t srsv1.ItemType) model.ItemType {
 		return model.ItemTypeStep
 	case srsv1.ItemType_ITEM_TYPE_PHRASE:
 		return model.ItemTypePhrase
+	case srsv1.ItemType_ITEM_TYPE_FLASHCARD:
+		return model.ItemTypeFlashcard
 	default:
 		return ""
 	}
@@ -38,6 +40,8 @@ func ItemTypeToProto(t model.ItemType) srsv1.ItemType {
 		return srsv1.ItemType_ITEM_TYPE_STEP
 	case model.ItemTypePhrase:
 		return srsv1.ItemType_ITEM_TYPE_PHRASE
+	case model.ItemTypeFlashcard:
+		return srsv1.ItemType_ITEM_TYPE_FLASHCARD
 	default:
 		return srsv1.ItemType_ITEM_TYPE_UNSPECIFIED
 	}

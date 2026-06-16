@@ -94,7 +94,7 @@ func (a *App) initRouter(ctx context.Context) error {
 	adminLessonHandler := handler.NewAdminLessonHandler(a.diContainer.CourseClient(ctx))
 	adminStepHandler := handler.NewAdminStepHandler(a.diContainer.CourseClient(ctx))
 	adminVideoHandler := handler.NewAdminVideoRealHandler(a.diContainer.VideoClient(ctx))
-	trackHandler := handler.NewTrackHandler(a.diContainer.CourseClient(ctx))
+	trackHandler := handler.NewTrackHandler(a.diContainer.CourseClient(ctx), a.diContainer.UserClient(ctx))
 	lessonHandler := handler.NewLessonHandler(a.diContainer.CourseClient(ctx))
 	authMiddleware := middleware.NewAuthMiddleware(a.diContainer.AuthClient(ctx))
 	adminMiddleware := middleware.NewAdminOnlyMiddleware()
@@ -126,7 +126,6 @@ func (a *App) initRouter(ctx context.Context) error {
 
 		tracks := v1.Group("/tracks")
 		{
-			tracks.GET("", trackHandler.ListTracks)
 			tracks.GET("/:id", trackHandler.GetTrack)
 		}
 
@@ -162,6 +161,7 @@ func (a *App) initRouter(ctx context.Context) error {
 			}
 
 			protected.POST("/courses/:id/enroll", courseHandler.EnrollCourse)
+			protected.GET("/tracks", trackHandler.ListTracks)
 
 			// Progress endpoints
 			progress := protected.Group("/progress")
@@ -184,12 +184,14 @@ func (a *App) initRouter(ctx context.Context) error {
 			flashcardHandler := handler.NewFlashcardHandler(
 				a.diContainer.CourseClient(ctx),
 				a.diContainer.AIClient(ctx),
+				a.diContainer.SRSClient(ctx),
 			)
 			flashcards := protected.Group("/flashcards")
 			{
 				// Static-сегменты до /:id (gin приоритизирует static, но
 				// порядок объявления держим явным для читаемости).
 				flashcards.GET("/stats", flashcardHandler.Stats)
+				flashcards.POST("/starter", flashcardHandler.SeedStarter)
 				flashcards.GET("/today", flashcardHandler.ListToday)
 				flashcards.POST("/today/:flashcardId", flashcardHandler.PinForToday)
 				flashcards.DELETE("/today/:flashcardId", flashcardHandler.UnpinFromToday)
@@ -201,6 +203,7 @@ func (a *App) initRouter(ctx context.Context) error {
 				flashcards.GET("/:id", flashcardHandler.Get)
 				flashcards.PUT("/:id", flashcardHandler.Update)
 				flashcards.DELETE("/:id", flashcardHandler.Archive)
+				flashcards.POST("/:id/review", flashcardHandler.Review)
 			}
 			// AI flashcard-suggestions (отдельно от /flashcards чтобы
 			// сгруппировать с прочими /ai эндпоинтами).

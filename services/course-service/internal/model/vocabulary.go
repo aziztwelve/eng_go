@@ -15,6 +15,7 @@ type VocabularyEntry struct {
 	ImageURL       string
 	Level          string
 	POS            string
+	Transcription  string // optional, IPA: /həˈloʊ/
 	CreatedAt      time.Time
 	UpdatedAt      time.Time
 }

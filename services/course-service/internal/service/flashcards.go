@@ -189,6 +189,7 @@ func (s *flashcardService) AddVocabularyAsFlashcard(
 		Translation:     vocab.Translation,
 		Language:        vocab.Language,
 		TargetLanguage:  vocab.TargetLanguage,
+		Transcription:   vocab.Transcription,
 		AudioURL:        vocab.AudioURL,
 		ImageURL:        vocab.ImageURL,
 	}

@@ -31,7 +31,7 @@ func ConversationSystemPrompt(c ConversationContext) string {
 	}
 	native := c.NativeLanguage
 	if native == "" {
-		native = "English"
+		native = "Russian"
 	}
 
 	var b strings.Builder

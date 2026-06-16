@@ -11,6 +11,7 @@ type TrackListFilters struct {
 	Language           *string
 	Level              *string
 	TrackType          *string
+	Motivation         []string // фильтр по целям: work, travel, exam, etc. (OR-семантика, пустой = все)
 	Search             string
 	IncludeUnpublished bool
 	Limit              int

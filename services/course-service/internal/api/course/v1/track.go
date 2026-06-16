@@ -32,6 +32,9 @@ func (a *api) ListTracks(ctx context.Context, req *coursev1.ListTracksRequest) (
 		v := req.TrackType.Value
 		filters.TrackType = &v
 	}
+	if len(req.Motivation) > 0 {
+		filters.Motivation = req.Motivation
+	}
 
 	tracks, total, err := a.trackService.ListTracks(ctx, filters)
 	if err != nil {

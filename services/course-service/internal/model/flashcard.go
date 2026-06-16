@@ -20,6 +20,7 @@ type Flashcard struct {
 	TargetLanguage  string
 	Definition      string // optional
 	ExampleSentence string // optional
+	Transcription   string // optional, IPA: /həˈloʊ/
 	AudioURL        string // optional
 	ImageURL        string // optional
 	ArchivedAt      *time.Time

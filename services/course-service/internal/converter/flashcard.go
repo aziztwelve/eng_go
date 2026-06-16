@@ -25,6 +25,7 @@ func ToFlashcardProto(f *model.Flashcard) *coursev1.Flashcard {
 		TargetLanguage:  f.TargetLanguage,
 		Definition:      f.Definition,
 		ExampleSentence: f.ExampleSentence,
+		Transcription:   f.Transcription,
 		AudioUrl:        f.AudioURL,
 		ImageUrl:        f.ImageURL,
 		CreatedAt:       timestamppb.New(f.CreatedAt),
@@ -59,6 +60,7 @@ func FromCreateFlashcardRequest(req *coursev1.CreateFlashcardRequest) *model.Fla
 		TargetLanguage:  req.TargetLanguage,
 		Definition:      req.Definition,
 		ExampleSentence: req.ExampleSentence,
+		Transcription:   req.Transcription,
 		AudioURL:        req.AudioUrl,
 		ImageURL:        req.ImageUrl,
 	}
@@ -88,6 +90,9 @@ func ApplyUpdateFlashcardRequest(f *model.Flashcard, req *coursev1.UpdateFlashca
 	if req.ImageUrl != nil {
 		f.ImageURL = req.ImageUrl.Value
 	}
+	if req.Transcription != nil {
+		f.Transcription = req.Transcription.Value
+	}
 }
 
 // FromBulkCreateFlashcardItem — для каждого item из BulkCreate.
@@ -107,5 +112,6 @@ func FromBulkCreateFlashcardItem(userID string, item *coursev1.BulkCreateFlashca
 		TargetLanguage:  item.TargetLanguage,
 		Definition:      item.Definition,
 		ExampleSentence: item.ExampleSentence,
+		Transcription:   item.Transcription,
 	}
 }

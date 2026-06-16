@@ -22,6 +22,7 @@ func ToVocabularyEntryProto(e *model.VocabularyEntry) *coursev1.VocabularyEntry 
 		ImageUrl:       e.ImageURL,
 		Level:          e.Level,
 		Pos:            e.POS,
+		Transcription:  e.Transcription,
 		CreatedAt:      timestamppb.New(e.CreatedAt),
 		UpdatedAt:      timestamppb.New(e.UpdatedAt),
 	}
@@ -39,6 +40,7 @@ func FromCreateVocabularyEntryRequest(req *coursev1.CreateVocabularyEntryRequest
 		ImageURL:       req.ImageUrl,
 		Level:          req.Level,
 		POS:            req.Pos,
+		Transcription:  req.Transcription,
 	}
 }
 
@@ -61,5 +63,8 @@ func ApplyUpdateVocabularyEntryRequest(e *model.VocabularyEntry, req *coursev1.U
 	}
 	if req.Pos != nil {
 		e.POS = req.Pos.Value
+	}
+	if req.Transcription != nil {
+		e.Transcription = req.Transcription.Value
 	}
 }

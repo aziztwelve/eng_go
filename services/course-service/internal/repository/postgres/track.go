@@ -37,6 +37,7 @@ func scanTrack(scan func(...interface{}) error) (*model.Track, error) {
 		&t.TrackType,
 		&t.IsPublished,
 		&t.SortOrder,
+		&t.Motivation,
 		&createdBy,
 		&t.CreatedAt,
 		&t.UpdatedAt,
@@ -48,11 +49,14 @@ func scanTrack(scan func(...interface{}) error) (*model.Track, error) {
 	t.Language = language.String
 	t.Level = level.String
 	t.CreatedBy = createdBy.String
+	if t.Motivation == nil {
+		t.Motivation = []string{}
+	}
 	return t, nil
 }
 
 const trackSelectCols = `id, code, title, description, icon_url, language, level,
-		track_type, is_published, sort_order, created_by, created_at, updated_at`
+		track_type, is_published, sort_order, motivation, created_by, created_at, updated_at`
 
 // Create создаёт трек.
 func (r *trackRepository) Create(ctx context.Context, track *model.Track) error {
@@ -137,13 +141,19 @@ func (r *trackRepository) List(ctx context.Context, filters repository.TrackList
 		pos++
 	}
 	if filters.Level != nil {
-		conds = append(conds, fmt.Sprintf("level = $%d", pos))
+		conds = append(conds, fmt.Sprintf("UPPER(level) = UPPER($%d)", pos))
 		args = append(args, *filters.Level)
 		pos++
 	}
 	if filters.TrackType != nil {
 		conds = append(conds, fmt.Sprintf("track_type = $%d", pos))
 		args = append(args, *filters.TrackType)
+		pos++
+	}
+	if len(filters.Motivation) > 0 {
+		// Трек подходит если его motivation пустой (универсальный) ИЛИ пересекается с запрошенными целями
+		conds = append(conds, fmt.Sprintf("(motivation = '{}' OR motivation && $%d::text[])", pos))
+		args = append(args, filters.Motivation)
 		pos++
 	}
 	if filters.Search != "" {

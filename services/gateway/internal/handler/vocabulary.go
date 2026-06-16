@@ -71,6 +71,7 @@ type vocabularyCreateRequest struct {
 	ImageURL       string `json:"image_url"`
 	Level          string `json:"level"`
 	POS            string `json:"pos"`
+	Transcription  string `json:"transcription"`
 }
 
 func (r vocabularyCreateRequest) toProto() *coursev1.CreateVocabularyEntryRequest {
@@ -83,6 +84,7 @@ func (r vocabularyCreateRequest) toProto() *coursev1.CreateVocabularyEntryReques
 		ImageUrl:       r.ImageURL,
 		Level:          r.Level,
 		Pos:            r.POS,
+		Transcription:  r.Transcription,
 	}
 }
 
@@ -108,6 +110,7 @@ type vocabularyUpdateRequest struct {
 	ImageURL    *string `json:"image_url"`
 	Level       *string `json:"level"`
 	POS         *string `json:"pos"`
+	Transcription *string `json:"transcription"`
 }
 
 // Update PUT /api/v1/admin/vocabulary/:id
@@ -135,6 +138,9 @@ func (h *VocabularyHandler) Update(c *gin.Context) {
 	}
 	if req.POS != nil {
 		pr.Pos = wrapperspb.String(*req.POS)
+	}
+	if req.Transcription != nil {
+		pr.Transcription = wrapperspb.String(*req.Transcription)
 	}
 	resp, err := h.course.UpdateVocabularyEntry(c.Request.Context(), pr)
 	if err != nil {

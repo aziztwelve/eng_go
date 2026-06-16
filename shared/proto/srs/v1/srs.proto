@@ -93,6 +93,9 @@ enum ItemType {
   ITEM_TYPE_VOCABULARY = 1;
   ITEM_TYPE_STEP = 2;
   ITEM_TYPE_PHRASE = 3;
+  // ITEM_TYPE_FLASHCARD — Phase 7: личные карточки пользователя
+  // (courses.user_flashcards). item_id = user_flashcards.id.
+  ITEM_TYPE_FLASHCARD = 4;
 }
 
 // SRSItem — карточка в SRS системе.

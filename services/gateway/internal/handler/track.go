@@ -11,21 +11,28 @@ import (
 
 	"github.com/elearning/gateway/internal/client"
 	coursev1 "github.com/elearning/shared/pkg/proto/course/v1"
+	userv1 "github.com/elearning/shared/pkg/proto/user/v1"
 )
 
 // TrackHandler — обработчик REST endpoints для learning tracks.
 type TrackHandler struct {
 	courseClient *client.CourseClient
+	userClient   *client.UserClient
 }
 
 // NewTrackHandler создаёт обработчик.
-func NewTrackHandler(courseClient *client.CourseClient) *TrackHandler {
-	return &TrackHandler{courseClient: courseClient}
+func NewTrackHandler(courseClient *client.CourseClient, userClient *client.UserClient) *TrackHandler {
+	return &TrackHandler{courseClient: courseClient, userClient: userClient}
 }
 
 // --- Public endpoints ---
 
 // ListTracks GET /api/v1/tracks
+//
+// Язык, уровень и мотивацию можно передать query-параметрами (language, level,
+// track_type, motivation). Если они не заданы — подставляются из профиля
+// авторизованного пользователя (target_language, proficiency_level, motivation),
+// чтобы фронтенд мог звать просто GET /api/v1/tracks без параметров.
 func (h *TrackHandler) ListTracks(c *gin.Context) {
 	req := &coursev1.ListTracksRequest{
 		Search:             c.Query("search"),
@@ -33,14 +40,51 @@ func (h *TrackHandler) ListTracks(c *gin.Context) {
 		Limit:              parseIntQuery(c, "limit", 20),
 		Offset:             parseIntQuery(c, "offset", 0),
 	}
-	if v := c.Query("language"); v != "" {
-		req.Language = wrapperspb.String(v)
+
+	langQ := c.Query("language")
+	levelQ := c.Query("level")
+	if langQ != "" {
+		req.Language = wrapperspb.String(langQ)
 	}
-	if v := c.Query("level"); v != "" {
-		req.Level = wrapperspb.String(v)
+	if levelQ != "" {
+		req.Level = wrapperspb.String(levelQ)
 	}
 	if v := c.Query("track_type"); v != "" {
 		req.TrackType = wrapperspb.String(v)
+	}
+
+	motivationSet := false
+	if v := c.QueryArray("motivation"); len(v) > 0 {
+		req.Motivation = v
+		motivationSet = true
+	} else if v := c.Query("motivation"); v != "" {
+		req.Motivation = []string{v}
+		motivationSet = true
+	}
+
+	// Подставляем недостающие фильтры из профиля авторизованного юзера.
+	needLang := langQ == ""
+	needLevel := levelQ == ""
+	needMotivation := !motivationSet
+	if (needLang || needLevel || needMotivation) && h.userClient != nil {
+		if userID := getUserIDFromCtx(c); userID != "" {
+			if ob, err := h.userClient.GetOnboardingState(c.Request.Context(), &userv1.GetOnboardingStateRequest{UserId: userID}); err == nil && ob.GetState() != nil {
+				st := ob.GetState()
+				if needLang {
+					if tl := st.GetTargetLanguage(); tl != nil && tl.GetValue() != "" {
+						req.Language = wrapperspb.String(tl.GetValue())
+					}
+				}
+				if needLevel {
+					if pl := st.GetProficiencyLevel(); pl != nil && pl.GetValue() != "" {
+						req.Level = wrapperspb.String(pl.GetValue())
+					}
+				}
+				if needMotivation {
+					req.Motivation = st.GetMotivation()
+				}
+			}
+		}
 	}
 
 	resp, err := h.courseClient.ListTracks(c.Request.Context(), req)
@@ -308,6 +352,7 @@ func trackToJSON(t *coursev1.Track) gin.H {
 		"track_type":   t.TrackType,
 		"is_published": t.IsPublished,
 		"sort_order":   t.SortOrder,
+		"motivation":   t.Motivation,
 		"created_by":   t.CreatedBy,
 		"created_at":   t.CreatedAt,
 		"updated_at":   t.UpdatedAt,

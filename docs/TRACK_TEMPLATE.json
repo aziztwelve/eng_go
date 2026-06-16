@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "created_by": "Преподаватель",
+    "created_at": "2026-06-03",
+    "version": "1.0",
+    "description": "Шаблон для создания треков по уровням и целям"
+  },
+  "structure": {
+    "levels": ["A1", "A2", "B1", "B2", "C1"],
+    "goals": [
+      "work",
+      "travel",
+      "education",
+      "hobby",
+      "family",
+      "career"
+    ],
+    "tracks_per_combination": 50,
+    "total_tracks": 150
+  },
+  "track_template": {
+    "id": "UUID (генерируется автоматически)",
+    "code": "unique-code",
+    "title": "Название трека",
+    "description": "Описание трека",
+    "language": "en | es | de | fr",
+    "level": "A1 | A2 | B1 | B2 | C1",
+    "goal": "work | travel | education | hobby | family | career",
+    "track_type": "daily | stories | podcast | thematic",
+    "difficulty": 1-5,
+    "estimated_duration_minutes": 30,
+    "icon_url": "https://...",
+    "is_published": true,
+    "sort_order": 1,
+    "tags": ["grammar", "vocabulary", "speaking"],
+    "lessons": [
+      {
+        "order_index": 0,
+        "title": "Lesson 1: Greetings",
+        "description": "Learn basic greetings",
+        "estimated_duration_minutes": 15,
+        "steps": [
+          {
+            "order_index": 0,
+            "type": "video | text | translate | fill_blank | match_pairs | listening | quiz | story | tap_words | ai_writing",
+            "title": "Watch: Introduction",
+            "content": {
+              "video": {
+                "video_id": "UUID",
+                "duration_seconds": 120,
+                "transcript": "Optional transcript"
+              },
+              "text": {
+                "body": "Lesson text content in markdown",
+                "images": ["url1", "url2"]
+              },
+              "translate": {
+                "sentences": [
+                  {
+                    "source": "Hello, how are you?",
+                    "target": "Привет, как дела?",
+                    "context": "informal greeting"
+                  }
+                ]
+              },
+              "fill_blank": {
+                "text": "My name ___ John",
+                "blanks": [
+                  {
+                    "position": 8,
+                    "correct_answers": ["is"],
+                    "hint": "verb to be"
+                  }
+                ]
+              },
+              "match_pairs": {
+                "pairs": [
+                  {
+                    "left": "Hello",
+                    "right": "Привет"
+                  },
+                  {
+                    "left": "Goodbye",
+                    "right": "Пока"
+                  }
+                ]
+              },
+              "listening": {
+                "audio_url": "https://...",
+                "duration_seconds": 60,
+                "text": "Expected transcription",
+                "hint": "Listen carefully"
+              },
+              "quiz": {
+                "question": "What is the correct greeting?",
+                "options": [
+                  {
+                    "text": "Hello",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Goodbye",
+                    "is_correct": false
+                  }
+                ],
+                "explanation": "Hello is a greeting"
+              },
+              "story": {
+                "title": "Story title",
+                "scenes": [
+                  {
+                    "text": "Once upon a time...",
+                    "image_url": "https://...",
+                    "audio_url": "https://..."
+                  }
+                ]
+              },
+              "tap_words": {
+                "prompt": "Tap the words in order: How are you?",
+                "words": ["How", "are", "you", "?"],
+                "distractors": ["I", "am", "fine"]
+              },
+              "ai_writing": {
+                "prompt": "Write a short introduction about yourself",
+                "min_words": 50,
+                "topic": "introduction",
+                "rubric": ["grammar", "vocabulary", "coherence"]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "prerequisites": ["track-code-1", "track-code-2"],
+      "next_tracks": ["track-code-3"],
+      "vocabulary_count": 50,
+      "grammar_topics": ["present simple", "pronouns"],
+      "skills": ["reading", "writing", "listening", "speaking"]
+    }
+  },
+  "example_tracks": {
+    "comment": "Примеры треков для каждой комбинации уровень + цель",
+    "examples": [
+      {
+        "level": "A1",
+        "goal": "work",
+        "tracks": [
+          {
+            "code": "a1-work-001",
+            "title": "Офисные приветствия",
+            "description": "Научитесь здороваться с коллегами на работе",
+            "track_type": "daily",
+            "lessons_count": 5,
+            "difficulty": 1,
+            "estimated_duration_minutes": 25
+          },
+          {
+            "code": "a1-work-002",
+            "title": "Email этикет",
+            "description": "Основы деловой переписки",
+            "track_type": "thematic",
+            "lessons_count": 7,
+            "difficulty": 2,
+            "estimated_duration_minutes": 35
+          }
+        ]
+      },
+      {
+        "level": "A1",
+        "goal": "travel",
+        "tracks": [
+          {
+            "code": "a1-travel-001",
+            "title": "В аэропорту",
+            "description": "Полезные фразы для путешествий",
+            "track_type": "stories",
+            "lessons_count": 6,
+            "difficulty": 1,
+            "estimated_duration_minutes": 30
+          }
+        ]
+      },
+      {
+        "level": "B1",
+        "goal": "work",
+        "tracks": [
+          {
+            "code": "b1-work-001",
+            "title": "Презентации на английском",
+            "description": "Как проводить деловые презентации",
+            "track_type": "thematic",
+            "lessons_count": 10,
+            "difficulty": 3,
+            "estimated_duration_minutes": 50
+          }
+        ]
+      }
+    ]
+  },
+  "content_guidelines": {
+    "lesson_structure": {
+      "warm_up": "1-2 шага (video или text)",
+      "practice": "3-5 шагов (interactive: translate, fill_blank, match_pairs)",
+      "production": "1-2 шага (quiz, ai_writing)",
+      "cool_down": "1 шаг (story или listening)"
+    },
+    "difficulty_by_level": {
+      "A1": {
+        "vocabulary_per_lesson": "5-10 новых слов",
+        "sentence_length": "5-8 слов",
+        "grammar": "present simple, pronouns, basic questions"
+      },
+      "A2": {
+        "vocabulary_per_lesson": "10-15 новых слов",
+        "sentence_length": "8-12 слов",
+        "grammar": "past simple, present continuous, comparatives"
+      },
+      "B1": {
+        "vocabulary_per_lesson": "15-20 новых слов",
+        "sentence_length": "12-15 слов",
+        "grammar": "conditionals, passive voice, present perfect"
+      },
+      "B2": {
+        "vocabulary_per_lesson": "20-25 новых слов",
+        "sentence_length": "15-20 слов",
+        "grammar": "advanced tenses, subjunctive, reported speech"
+      }
+    },
+    "goal_specific_content": {
+      "work": {
+        "vocabulary": ["meeting", "deadline", "colleague", "presentation"],
+        "scenarios": ["meetings", "emails", "phone calls", "negotiations"]
+      },
+      "travel": {
+        "vocabulary": ["airport", "hotel", "restaurant", "directions"],
+        "scenarios": ["booking", "ordering food", "asking for help", "sightseeing"]
+      },
+      "education": {
+        "vocabulary": ["lecture", "assignment", "research", "exam"],
+        "scenarios": ["classroom", "library", "discussions", "presentations"]
+      },
+      "hobby": {
+        "vocabulary": ["leisure", "entertainment", "interests", "passion"],
+        "scenarios": ["sports", "music", "art", "cooking"]
+      },
+      "family": {
+        "vocabulary": ["relatives", "home", "daily routine", "celebrations"],
+        "scenarios": ["conversations", "traditions", "household", "relationships"]
+      },
+      "career": {
+        "vocabulary": ["interview", "CV", "skills", "promotion"],
+        "scenarios": ["job search", "interviews", "networking", "development"]
+      }
+    }
+  }
+}
