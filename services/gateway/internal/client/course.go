@@ -280,6 +280,11 @@ func (c *CourseClient) GetTTSByText(ctx context.Context, req *coursev1.GetTTSByT
 	return c.client.GetTTSByText(ctx, req)
 }
 
+// GetStepContent получает содержимое шага (+ video_url для type=video)
+func (c *CourseClient) GetStepContent(ctx context.Context, req *coursev1.GetStepContentRequest) (*coursev1.GetStepContentResponse, error) {
+	return c.client.GetStepContent(ctx, req)
+}
+
 // Close закрывает соединение
 func (c *CourseClient) Close() error {
 	return c.conn.Close()

@@ -188,6 +188,27 @@ func (h *CourseHandler) MarkStepComplete(c *gin.Context) {
 	})
 }
 
+// GetStep возвращает содержимое шага (+ video_url для type=video).
+// Публичный эндпоинт; user_id опционален (query) — для enrich/доступа.
+func (h *CourseHandler) GetStep(c *gin.Context) {
+	stepID := c.Param("stepId")
+	userID := c.Query("user_id")
+
+	resp, err := h.courseClient.GetStepContent(c.Request.Context(), &coursev1.GetStepContentRequest{
+		StepId: stepID,
+		UserId: userID,
+	})
+	if err != nil {
+		errors.HandleGRPCError(c, err)
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"step":      stepToJSON(resp.Step),
+		"video_url": resp.VideoUrl,
+	})
+}
+
 // GetStepProgress получает прогресс по шагу
 func (h *CourseHandler) GetStepProgress(c *gin.Context) {
 	userID, _ := c.Get("user_id")

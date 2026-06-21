@@ -135,6 +135,12 @@ func (a *App) initRouter(ctx context.Context) error {
 			lessons.GET("/:id", lessonHandler.GetLesson)
 		}
 
+		// Публичный доступ к содержимому шага (+ video_url). user_id опционален (query).
+		steps := v1.Group("/steps")
+		{
+			steps.GET("/:stepId", courseHandler.GetStep)
+		}
+
 		videos := v1.Group("/videos")
 		{
 			videos.GET("/:video_id", videoHandler.GetVideoMetadata)
