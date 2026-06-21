@@ -27,6 +27,13 @@ type Service struct {
 
 	provider     providers.AIProvider
 	moderator    providers.Moderator
+	// ttsSynth — опциональный inline-TTS (path A, напр. Google). Если задан,
+	// SynthesizeTTS возвращает аудио-байты, минуя MinIO. nil → fallback на
+	// provider.SynthesizeTTS (URL/storage).
+	ttsSynth     providers.TTSSynthesizer
+	// sttTranscriber — опциональный STT (Google). nil → TranscribeAudio
+	// вернёт ErrInvalidArgument (фича выключена).
+	sttTranscriber providers.STTTranscriber
 	sanitize     providers.SanitizeOpts
 	pii          providers.PIIRedactOpts
 	abtests      *abtest.Registry
@@ -47,6 +54,12 @@ type Deps struct {
 	Provider providers.AIProvider
 	// Moderator — content-filter (Phase 5.33). nil → NoopModerator.
 	Moderator providers.Moderator
+	// TTSSynth — опциональный inline-TTS синтезатор (path A, напр. Google
+	// Cloud TTS). Если задан — SynthesizeTTS возвращает байты, минуя MinIO.
+	TTSSynth providers.TTSSynthesizer
+	// STTTranscriber — опциональный STT (Google). Если задан — TranscribeAudio
+	// расшифровывает голос в текст.
+	STTTranscriber providers.STTTranscriber
 	// SanitizeOpts — настройки prompt-injection sanitizer (Phase 5.34).
 	// Zero-value → DefaultSanitizeOpts().
 	SanitizeOpts providers.SanitizeOpts
@@ -97,6 +110,8 @@ func New(cfg Config, d Deps) *Service {
 		cfg:           cfg,
 		provider:      d.Provider,
 		moderator:     mod,
+		ttsSynth:      d.TTSSynth,
+		sttTranscriber: d.STTTranscriber,
 		sanitize:      san,
 		pii:           d.PIIOpts,
 		abtests:       abReg,

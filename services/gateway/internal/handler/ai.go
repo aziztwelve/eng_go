@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 	"io"
 	"net/http"
+	"strconv"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -15,6 +16,7 @@ import (
 	"github.com/elearning/gateway/internal/client"
 	"github.com/elearning/gateway/internal/errors"
 	aiv1 "github.com/elearning/shared/pkg/proto/ai/v1"
+	coursev1 "github.com/elearning/shared/pkg/proto/course/v1"
 )
 
 // sseChunkWriteTimeout — максимум на один SSE chunk-write. Если клиент
@@ -29,11 +31,15 @@ const sseChunkWriteTimeout = 10 * time.Second
 // AIHandler оборачивает AIClient.
 type AIHandler struct {
 	ai *client.AIClient
+	// course — для TTS-кэша (tts_cache живёт в course-service). Может быть
+	// nil (например, в admin-группе без course-зависимости): тогда SynthesizeTTS
+	// работает без кэша (always-synth).
+	course *client.CourseClient
 }
 
-// NewAIHandler — для DI.
-func NewAIHandler(ai *client.AIClient) *AIHandler {
-	return &AIHandler{ai: ai}
+// NewAIHandler — для DI. course опционален (nil → TTS без кэш-слоя).
+func NewAIHandler(ai *client.AIClient, course *client.CourseClient) *AIHandler {
+	return &AIHandler{ai: ai, course: course}
 }
 
 // === Conversations ===
@@ -885,6 +891,131 @@ func (h *AIHandler) GenerateExercise(c *gin.Context) {
 		UserLevel:      req.UserLevel,
 		TargetLanguage: req.TargetLanguage,
 		NativeLanguage: req.NativeLanguage,
+	})
+	if err != nil {
+		errors.HandleGRPCError(c, err)
+		return
+	}
+	c.JSON(http.StatusOK, resp)
+}
+
+// === TTS (on-demand озвучка) ===
+
+// synthesizeTTSRequest — POST /api/v1/ai/tts.
+type synthesizeTTSRequest struct {
+	Text     string `json:"text" binding:"required"`
+	Language string `json:"language"`
+	Voice    string `json:"voice"`
+}
+
+// SynthesizeTTS — POST /api/v1/ai/tts
+//
+// Генерит аудио из текста (озвучка слов во флешкартах/словаре, listening).
+// Маршрут под protected-группой (нужен auth).
+//
+// Поток с кэшем (tts_cache живёт в course-service):
+//  1. cache lookup по (text, language, voice) — hit → отдаём сразу, без
+//     OpenAI и без расхода квоты;
+//  2. miss → ai-service синтезирует (там же CheckQuota/IncrementQuota
+//     QuotaKindVoice по user_id);
+//  3. best-effort пишем результат в tts_cache, чтобы повторные запросы
+//     были бесплатными.
+//
+// Если course-client недоступен (nil) — работает без кэша (always-synth).
+func (h *AIHandler) SynthesizeTTS(c *gin.Context) {
+	userID, ok := getUserID(c)
+	if !ok {
+		return
+	}
+	var req synthesizeTTSRequest
+	if err := c.ShouldBindJSON(&req); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	ctx := c.Request.Context()
+
+	// 1. Cache lookup (best-effort: NotFound/любая ошибка → синтезируем).
+	if h.course != nil {
+		if cached, err := h.course.GetTTSByText(ctx, &coursev1.GetTTSByTextRequest{
+			Text:     req.Text,
+			Language: req.Language,
+			Voice:    req.Voice,
+		}); err == nil && cached.GetEntry().GetAudioUrl() != "" {
+			c.JSON(http.StatusOK, &aiv1.SynthesizeTTSResponse{
+				AudioUrl:   cached.GetEntry().GetAudioUrl(),
+				DurationMs: cached.GetEntry().GetDurationMs(),
+				CostUsd:    0, // из кэша — бесплатно
+			})
+			return
+		}
+	}
+
+	// 2. Реальный синтез (квота проверяется в ai-service по user_id).
+	resp, err := h.ai.SynthesizeTTS(ctx, &aiv1.SynthesizeTTSRequest{
+		Text:     req.Text,
+		Language: req.Language,
+		Voice:    req.Voice,
+		UserId:   userID,
+	})
+	if err != nil {
+		errors.HandleGRPCError(c, err)
+		return
+	}
+
+	// 3. Запись в кэш (best-effort: ошибка не влияет на ответ клиенту).
+	if h.course != nil && resp.GetAudioUrl() != "" {
+		_, _ = h.course.SynthesizeTTS(ctx, &coursev1.SynthesizeTTSRequest{
+			Text:       req.Text,
+			Language:   req.Language,
+			Voice:      req.Voice,
+			AudioUrl:   resp.GetAudioUrl(),
+			DurationMs: resp.GetDurationMs(),
+		})
+	}
+
+	c.JSON(http.StatusOK, resp)
+}
+
+// === STT (speech-to-text) ===
+
+// TranscribeAudio — POST /api/v1/ai/stt (multipart/form-data).
+//
+// Голосовой ввод в чат: принимает запись (file `audio`) + поля
+// language / encoding / sample_rate, отдаёт распознанный текст. Произношение
+// не оценивается. Под protected-группой (нужен auth).
+func (h *AIHandler) TranscribeAudio(c *gin.Context) {
+	userID, ok := getUserID(c)
+	if !ok {
+		return
+	}
+
+	file, fileHeader, err := c.Request.FormFile("audio")
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "audio file required: " + err.Error()})
+		return
+	}
+	defer file.Close()
+	audio, err := io.ReadAll(file)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "read audio: " + err.Error()})
+		return
+	}
+
+	var sampleRate int32
+	if sr := c.PostForm("sample_rate"); sr != "" {
+		if v, perr := strconv.Atoi(sr); perr == nil {
+			sampleRate = int32(v)
+		}
+	}
+
+	resp, err := h.ai.TranscribeAudio(c.Request.Context(), &aiv1.TranscribeAudioRequest{
+		UserId:          userID,
+		Audio:           audio,
+		MimeType:        fileHeader.Header.Get("Content-Type"),
+		Language:        c.PostForm("language"),
+		Encoding:        c.PostForm("encoding"),
+		SampleRateHertz: sampleRate,
 	})
 	if err != nil {
 		errors.HandleGRPCError(c, err)

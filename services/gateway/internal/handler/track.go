@@ -3,6 +3,7 @@ package handler
 import (
 	"net/http"
 	"strconv"
+	"sync"
 
 	"github.com/gin-gonic/gin"
 	"google.golang.org/grpc/codes"
@@ -135,6 +136,86 @@ func (h *TrackHandler) GetTrack(c *gin.Context) {
 		out["lessons"] = lessons
 	}
 	c.JSON(http.StatusOK, out)
+}
+
+// GetTrackProgress GET /api/v1/progress/tracks/:trackId
+//
+// Возвращает прогресс прохождения уроков трека для текущего юзера — единым
+// ответом, чтобы клиент мог рисовать замки (последовательная разблокировка)
+// без N запросов. Внутри агрегирует существующие gRPC-методы
+// (GetTrack + GetLessonProgress по каждому уроку, параллельно).
+func (h *TrackHandler) GetTrackProgress(c *gin.Context) {
+	idOrCode := c.Param("trackId")
+	userID := getUserIDFromCtx(c)
+	if userID == "" {
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "unauthorized"})
+		return
+	}
+	ctx := c.Request.Context()
+
+	// 1. Трек с уроками (по UUID или code).
+	var (
+		tr  *coursev1.GetTrackResponse
+		err error
+	)
+	if isLikelyUUID(idOrCode) {
+		tr, err = h.courseClient.GetTrack(ctx, &coursev1.GetTrackRequest{TrackId: idOrCode, IncludeLessons: true})
+	} else {
+		tr, err = h.courseClient.GetTrackByCode(ctx, &coursev1.GetTrackByCodeRequest{Code: idOrCode, IncludeLessons: true})
+	}
+	if err != nil {
+		writeGRPCError(c, err)
+		return
+	}
+
+	lessons := tr.GetLessons()
+	type lessonProg struct {
+		lessonID   string
+		completed  bool
+		percentage float64
+	}
+	results := make([]lessonProg, len(lessons))
+
+	// 2. Прогресс по каждому уроку — параллельно.
+	var wg sync.WaitGroup
+	for i, l := range lessons {
+		wg.Add(1)
+		go func(i int, lessonID string) {
+			defer wg.Done()
+			res := lessonProg{lessonID: lessonID}
+			pr, e := h.courseClient.GetLessonProgress(ctx, &coursev1.GetLessonProgressRequest{
+				UserId:   userID,
+				LessonId: lessonID,
+			})
+			if e == nil && pr.GetProgress() != nil {
+				p := pr.GetProgress()
+				res.percentage = p.GetProgressPercentage()
+				res.completed = p.GetProgressPercentage() >= 100 || p.GetCompletedAt() != nil
+			}
+			results[i] = res
+		}(i, l.GetId())
+	}
+	wg.Wait()
+
+	// 3. Сборка ответа.
+	out := make([]gin.H, 0, len(results))
+	completedCount := 0
+	for _, r := range results {
+		if r.completed {
+			completedCount++
+		}
+		out = append(out, gin.H{
+			"lesson_id":           r.lessonID,
+			"completed":           r.completed,
+			"progress_percentage": r.percentage,
+		})
+	}
+	c.JSON(http.StatusOK, gin.H{
+		"track_id":        tr.GetTrack().GetId(),
+		"lessons":         out,
+		"completed_count": completedCount,
+		"total":           len(results),
+	})
 }
 
 // --- Admin endpoints ---

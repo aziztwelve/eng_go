@@ -170,6 +170,7 @@ func (a *App) initRouter(ctx context.Context) error {
 				progress.GET("/steps/:stepId", courseHandler.GetStepProgress)
 				progress.GET("/lessons/:lessonId", courseHandler.GetLessonProgress)
 				progress.GET("/courses/:courseId", courseHandler.GetCourseProgress)
+				progress.GET("/tracks/:trackId", trackHandler.GetTrackProgress)
 			}
 
 			// Quiz attempts (student)
@@ -288,7 +289,7 @@ func (a *App) initRouter(ctx context.Context) error {
 			// === Phase 5: AI features (chat / explain / writing / pronunciation / tutor / quota)
 			// (только если ai-service настроен) ===
 			if ac := a.diContainer.AIClient(ctx); ac != nil {
-				ah := handler.NewAIHandler(ac)
+				ah := handler.NewAIHandler(ac, a.diContainer.CourseClient(ctx))
 				ai := protected.Group("/ai")
 				{
 					// Conversations / Roleplay / Tutor.
@@ -305,6 +306,8 @@ func (a *App) initRouter(ctx context.Context) error {
 					ai.POST("/explain", ah.ExplainMistake)
 					ai.POST("/writing/assess", ah.AssessWriting)
 					ai.POST("/pronunciation/check", ah.CheckPronunciation)
+					// STT: голосовой ввод в чат (audio → text).
+					ai.POST("/stt", ah.TranscribeAudio)
 					ai.POST("/tutor", ah.AskTutor)
 					// Phase 5.X: SSE streaming варианты single-shot эндпоинтов.
 					ai.POST("/tutor/stream", ah.AskTutorStream)
@@ -313,6 +316,9 @@ func (a *App) initRouter(ctx context.Context) error {
 
 					// Quota.
 					ai.GET("/quota", ah.GetQuotaStatus)
+
+					// TTS (on-demand озвучка слов/фраз).
+					ai.POST("/tts", ah.SynthesizeTTS)
 
 					// Feedback (Phase 5.X) — thumbs up/down на assistant-message'ах.
 					ai.POST("/messages/:id/feedback", ah.SubmitMessageFeedback)
@@ -441,7 +447,7 @@ func (a *App) initRouter(ctx context.Context) error {
 
 			// === Phase 5: AI admin (content generation) ===
 			if ac := a.diContainer.AIClient(ctx); ac != nil {
-				ah := handler.NewAIHandler(ac)
+				ah := handler.NewAIHandler(ac, nil)
 				adminAI := admin.Group("/ai")
 				{
 					adminAI.POST("/generate-exercise", ah.GenerateExercise)

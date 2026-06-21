@@ -141,6 +141,16 @@ func (c *AIClient) SuggestFlashcards(ctx context.Context, req *aiv1.SuggestFlash
 	return c.client.SuggestFlashcards(ctx, req)
 }
 
+// === TTS (on-demand озвучка) ===
+
+func (c *AIClient) SynthesizeTTS(ctx context.Context, req *aiv1.SynthesizeTTSRequest) (*aiv1.SynthesizeTTSResponse, error) {
+	return c.client.SynthesizeTTS(ctx, req)
+}
+
+func (c *AIClient) TranscribeAudio(ctx context.Context, req *aiv1.TranscribeAudioRequest) (*aiv1.TranscribeAudioResponse, error) {
+	return c.client.TranscribeAudio(ctx, req)
+}
+
 // Close — закрывает gRPC-соединение.
 func (c *AIClient) Close() error {
 	return c.conn.Close()

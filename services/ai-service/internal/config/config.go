@@ -4,6 +4,7 @@ package config
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 	"strconv"
 
 	"github.com/joho/godotenv"
@@ -45,6 +46,20 @@ type Config struct {
 	TTSVoice     string // alloy | echo | fable | onyx | nova | shimmer
 	WhisperModel string // whisper-1
 	TTSBaseURL   string // base URL для NoopAudioUploader (placeholder)
+
+	// Google Cloud TTS (path A: inline mp3 bytes для on-demand озвучки
+	// флешкарт). Если GoogleTTSAPIKey задан — SynthesizeTTS использует
+	// Google и возвращает аудио inline, минуя MinIO. Чат остаётся на
+	// основном Provider.
+	GoogleTTSAPIKey string // API-ключ (из .env.local; в git не коммитим)
+	GoogleTTSVoice  string // optional: имя голоса, напр. "en-US-Neural2-C"
+
+	// Google Cloud Speech-to-Text (голосовой ввод в чат). Если ключ задан —
+	// TranscribeAudio использует Google STT. По умолчанию переиспользуем
+	// GoogleTTSAPIKey (тот же ключ должен быть разрешён и для Speech-to-Text
+	// API, а сам API — включён в проекте).
+	GoogleSTTAPIKey string
+	GoogleSTTModel  string // напр. "latest_short" | "default"
 
 	// Audio storage. Если AudioStorage="minio" — используется реальный
 	// MinIO/S3 uploader. Иначе — NoopAudioUploader (placeholder URLs).
@@ -109,7 +124,9 @@ type Config struct {
 	ABExperimentsJSON string
 }
 
-// Load — лениво грузит .env, если он существует.
+// Load — лениво грузит .env, если он существует. Дополнительно подхватывает
+// sibling-файл `.env.local` (если есть) с override — туда кладём секреты,
+// которые не коммитим в git (напр. GOOGLE_TTS_API_KEY).
 func Load(path string) error {
 	if path == "" {
 		return nil
@@ -117,7 +134,17 @@ func Load(path string) error {
 	if _, err := os.Stat(path); err != nil {
 		return nil
 	}
-	return godotenv.Load(path)
+	if err := godotenv.Load(path); err != nil {
+		return err
+	}
+	// Overlay: <dir>/.env.local переопределяет значения из основного .env.
+	localPath := filepath.Join(filepath.Dir(path), ".env.local")
+	if _, err := os.Stat(localPath); err == nil {
+		if err := godotenv.Overload(localPath); err != nil {
+			return err
+		}
+	}
+	return nil
 }
 
 // Get — конфиг из окружения.
@@ -151,6 +178,13 @@ func Get() *Config {
 		TTSVoice:     getEnv("AI_TTS_VOICE", "alloy"),
 		WhisperModel: getEnv("AI_WHISPER_MODEL", "whisper-1"),
 		TTSBaseURL:   getEnv("AI_TTS_BASE_URL", ""),
+
+		GoogleTTSAPIKey: getEnv("GOOGLE_TTS_API_KEY", ""),
+		GoogleTTSVoice:  getEnv("GOOGLE_TTS_VOICE", ""),
+
+		// STT key по умолчанию = TTS key (один Google API-ключ на оба API).
+		GoogleSTTAPIKey: getEnv("GOOGLE_STT_API_KEY", getEnv("GOOGLE_TTS_API_KEY", "")),
+		GoogleSTTModel:  getEnv("GOOGLE_STT_MODEL", "latest_short"),
 
 		AudioStorage:         getEnv("AI_AUDIO_STORAGE", "noop"),
 		MinIOEndpoint:        getEnv("AI_MINIO_ENDPOINT", ""),

@@ -553,6 +553,51 @@ func (a *api) SuggestFlashcards(ctx context.Context, req *aiv1.SuggestFlashcards
 }
 
 // =====================================================================
+// TTS (on-demand озвучка)
+// =====================================================================
+
+func (a *api) SynthesizeTTS(ctx context.Context, req *aiv1.SynthesizeTTSRequest) (*aiv1.SynthesizeTTSResponse, error) {
+	out, err := a.svc.SynthesizeTTS(ctx, service.SynthesizeTTSInput{
+		Text:     req.GetText(),
+		Language: req.GetLanguage(),
+		Voice:    req.GetVoice(),
+		UserID:   req.GetUserId(),
+	})
+	if err != nil {
+		return nil, mapServiceError(err)
+	}
+	return &aiv1.SynthesizeTTSResponse{
+		AudioUrl:     out.AudioURL,
+		DurationMs:   out.DurationMs,
+		CostUsd:      out.CostUSD,
+		AudioContent: out.AudioContent,
+		MimeType:     out.MimeType,
+	}, nil
+}
+
+// =====================================================================
+// STT (speech-to-text)
+// =====================================================================
+
+func (a *api) TranscribeAudio(ctx context.Context, req *aiv1.TranscribeAudioRequest) (*aiv1.TranscribeAudioResponse, error) {
+	out, err := a.svc.TranscribeAudio(ctx, service.TranscribeAudioInput{
+		UserID:          req.GetUserId(),
+		Audio:           req.GetAudio(),
+		MimeType:        req.GetMimeType(),
+		Language:        req.GetLanguage(),
+		Encoding:        req.GetEncoding(),
+		SampleRateHertz: req.GetSampleRateHertz(),
+	})
+	if err != nil {
+		return nil, mapServiceError(err)
+	}
+	return &aiv1.TranscribeAudioResponse{
+		Text:       out.Text,
+		Confidence: out.Confidence,
+	}, nil
+}
+
+// =====================================================================
 // Error mapping
 // =====================================================================
 

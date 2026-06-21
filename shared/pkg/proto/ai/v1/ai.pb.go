@@ -3192,6 +3192,293 @@ func (x *SuggestFlashcardsResponse) GetExhausted() bool {
 	return false
 }
 
+type SynthesizeTTSRequest struct {
+	state    protoimpl.MessageState `protogen:"open.v1"`
+	Text     string                 `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`         // обязательно: что озвучить
+	Language string                 `protobuf:"bytes,2,opt,name=language,proto3" json:"language,omitempty"` // 'en' | 'ru' | ... — для cache-key и оценки длительности
+	Voice    string                 `protobuf:"bytes,3,opt,name=voice,proto3" json:"voice,omitempty"`       // optional, provider-specific (alloy | nova | ...); пусто → default
+	// user_id — для квоты (QuotaKindVoice). Пусто → quota не проверяется
+	// (admin/backfill-путь). Gateway проставляет из JWT для клиентских вызовов.
+	UserId        string `protobuf:"bytes,4,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *SynthesizeTTSRequest) Reset() {
+	*x = SynthesizeTTSRequest{}
+	mi := &file_ai_v1_ai_proto_msgTypes[42]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *SynthesizeTTSRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SynthesizeTTSRequest) ProtoMessage() {}
+
+func (x *SynthesizeTTSRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_ai_v1_ai_proto_msgTypes[42]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SynthesizeTTSRequest.ProtoReflect.Descriptor instead.
+func (*SynthesizeTTSRequest) Descriptor() ([]byte, []int) {
+	return file_ai_v1_ai_proto_rawDescGZIP(), []int{42}
+}
+
+func (x *SynthesizeTTSRequest) GetText() string {
+	if x != nil {
+		return x.Text
+	}
+	return ""
+}
+
+func (x *SynthesizeTTSRequest) GetLanguage() string {
+	if x != nil {
+		return x.Language
+	}
+	return ""
+}
+
+func (x *SynthesizeTTSRequest) GetVoice() string {
+	if x != nil {
+		return x.Voice
+	}
+	return ""
+}
+
+func (x *SynthesizeTTSRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+type SynthesizeTTSResponse struct {
+	state      protoimpl.MessageState `protogen:"open.v1"`
+	AudioUrl   string                 `protobuf:"bytes,1,opt,name=audio_url,json=audioUrl,proto3" json:"audio_url,omitempty"`        // публичный URL (MinIO) — путь B (storage)
+	DurationMs int32                  `protobuf:"varint,2,opt,name=duration_ms,json=durationMs,proto3" json:"duration_ms,omitempty"` // приблизительная длительность
+	CostUsd    float64                `protobuf:"fixed64,3,opt,name=cost_usd,json=costUsd,proto3" json:"cost_usd,omitempty"`         // стоимость синтеза (для cost-аналитики)
+	// Путь A (inline): сырые байты аудио прямо в ответе, без storage.
+	// Используется для on-demand озвучки флешкарт (Google TTS). Если задан —
+	// audio_url пустой. В JSON через gateway сериализуется как base64.
+	AudioContent  []byte `protobuf:"bytes,4,opt,name=audio_content,json=audioContent,proto3" json:"audio_content,omitempty"`
+	MimeType      string `protobuf:"bytes,5,opt,name=mime_type,json=mimeType,proto3" json:"mime_type,omitempty"` // напр. "audio/mpeg"
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *SynthesizeTTSResponse) Reset() {
+	*x = SynthesizeTTSResponse{}
+	mi := &file_ai_v1_ai_proto_msgTypes[43]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *SynthesizeTTSResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SynthesizeTTSResponse) ProtoMessage() {}
+
+func (x *SynthesizeTTSResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_ai_v1_ai_proto_msgTypes[43]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SynthesizeTTSResponse.ProtoReflect.Descriptor instead.
+func (*SynthesizeTTSResponse) Descriptor() ([]byte, []int) {
+	return file_ai_v1_ai_proto_rawDescGZIP(), []int{43}
+}
+
+func (x *SynthesizeTTSResponse) GetAudioUrl() string {
+	if x != nil {
+		return x.AudioUrl
+	}
+	return ""
+}
+
+func (x *SynthesizeTTSResponse) GetDurationMs() int32 {
+	if x != nil {
+		return x.DurationMs
+	}
+	return 0
+}
+
+func (x *SynthesizeTTSResponse) GetCostUsd() float64 {
+	if x != nil {
+		return x.CostUsd
+	}
+	return 0
+}
+
+func (x *SynthesizeTTSResponse) GetAudioContent() []byte {
+	if x != nil {
+		return x.AudioContent
+	}
+	return nil
+}
+
+func (x *SynthesizeTTSResponse) GetMimeType() string {
+	if x != nil {
+		return x.MimeType
+	}
+	return ""
+}
+
+type TranscribeAudioRequest struct {
+	state    protoimpl.MessageState `protogen:"open.v1"`
+	UserId   string                 `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`       // для квоты (опц.); пусто → без квоты
+	Audio    []byte                 `protobuf:"bytes,2,opt,name=audio,proto3" json:"audio,omitempty"`                       // сырые байты записи (inline)
+	MimeType string                 `protobuf:"bytes,3,opt,name=mime_type,json=mimeType,proto3" json:"mime_type,omitempty"` // напр. "audio/amr-wb", "audio/wav"
+	Language string                 `protobuf:"bytes,4,opt,name=language,proto3" json:"language,omitempty"`                 // 'en' | 'en-US' | 'ru' | ...
+	// Google STT encoding: LINEAR16 | AMR_WB | OGG_OPUS | WEBM_OPUS | FLAC | ...
+	// Пусто → провайдер попробует вывести из mime_type.
+	Encoding        string `protobuf:"bytes,5,opt,name=encoding,proto3" json:"encoding,omitempty"`
+	SampleRateHertz int32  `protobuf:"varint,6,opt,name=sample_rate_hertz,json=sampleRateHertz,proto3" json:"sample_rate_hertz,omitempty"` // напр. 16000
+	unknownFields   protoimpl.UnknownFields
+	sizeCache       protoimpl.SizeCache
+}
+
+func (x *TranscribeAudioRequest) Reset() {
+	*x = TranscribeAudioRequest{}
+	mi := &file_ai_v1_ai_proto_msgTypes[44]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *TranscribeAudioRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*TranscribeAudioRequest) ProtoMessage() {}
+
+func (x *TranscribeAudioRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_ai_v1_ai_proto_msgTypes[44]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use TranscribeAudioRequest.ProtoReflect.Descriptor instead.
+func (*TranscribeAudioRequest) Descriptor() ([]byte, []int) {
+	return file_ai_v1_ai_proto_rawDescGZIP(), []int{44}
+}
+
+func (x *TranscribeAudioRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *TranscribeAudioRequest) GetAudio() []byte {
+	if x != nil {
+		return x.Audio
+	}
+	return nil
+}
+
+func (x *TranscribeAudioRequest) GetMimeType() string {
+	if x != nil {
+		return x.MimeType
+	}
+	return ""
+}
+
+func (x *TranscribeAudioRequest) GetLanguage() string {
+	if x != nil {
+		return x.Language
+	}
+	return ""
+}
+
+func (x *TranscribeAudioRequest) GetEncoding() string {
+	if x != nil {
+		return x.Encoding
+	}
+	return ""
+}
+
+func (x *TranscribeAudioRequest) GetSampleRateHertz() int32 {
+	if x != nil {
+		return x.SampleRateHertz
+	}
+	return 0
+}
+
+type TranscribeAudioResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Text          string                 `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`               // распознанный текст
+	Confidence    float64                `protobuf:"fixed64,2,opt,name=confidence,proto3" json:"confidence,omitempty"` // 0.0..1.0 (для будущей оценки; сейчас не используется)
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *TranscribeAudioResponse) Reset() {
+	*x = TranscribeAudioResponse{}
+	mi := &file_ai_v1_ai_proto_msgTypes[45]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *TranscribeAudioResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*TranscribeAudioResponse) ProtoMessage() {}
+
+func (x *TranscribeAudioResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_ai_v1_ai_proto_msgTypes[45]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use TranscribeAudioResponse.ProtoReflect.Descriptor instead.
+func (*TranscribeAudioResponse) Descriptor() ([]byte, []int) {
+	return file_ai_v1_ai_proto_rawDescGZIP(), []int{45}
+}
+
+func (x *TranscribeAudioResponse) GetText() string {
+	if x != nil {
+		return x.Text
+	}
+	return ""
+}
+
+func (x *TranscribeAudioResponse) GetConfidence() float64 {
+	if x != nil {
+		return x.Confidence
+	}
+	return 0
+}
+
 var File_ai_v1_ai_proto protoreflect.FileDescriptor
 
 const file_ai_v1_ai_proto_rawDesc = "" +
@@ -3449,12 +3736,36 @@ const file_ai_v1_ai_proto_rawDesc = "" +
 	"\x05level\x18\a \x01(\tR\x05level\"k\n" +
 	"\x19SuggestFlashcardsResponse\x120\n" +
 	"\x05items\x18\x01 \x03(\v2\x1a.ai.v1.FlashcardSuggestionR\x05items\x12\x1c\n" +
-	"\texhausted\x18\x02 \x01(\bR\texhausted*w\n" +
+	"\texhausted\x18\x02 \x01(\bR\texhausted\"u\n" +
+	"\x14SynthesizeTTSRequest\x12\x12\n" +
+	"\x04text\x18\x01 \x01(\tR\x04text\x12\x1a\n" +
+	"\blanguage\x18\x02 \x01(\tR\blanguage\x12\x14\n" +
+	"\x05voice\x18\x03 \x01(\tR\x05voice\x12\x17\n" +
+	"\auser_id\x18\x04 \x01(\tR\x06userId\"\xb2\x01\n" +
+	"\x15SynthesizeTTSResponse\x12\x1b\n" +
+	"\taudio_url\x18\x01 \x01(\tR\baudioUrl\x12\x1f\n" +
+	"\vduration_ms\x18\x02 \x01(\x05R\n" +
+	"durationMs\x12\x19\n" +
+	"\bcost_usd\x18\x03 \x01(\x01R\acostUsd\x12#\n" +
+	"\raudio_content\x18\x04 \x01(\fR\faudioContent\x12\x1b\n" +
+	"\tmime_type\x18\x05 \x01(\tR\bmimeType\"\xc8\x01\n" +
+	"\x16TranscribeAudioRequest\x12\x17\n" +
+	"\auser_id\x18\x01 \x01(\tR\x06userId\x12\x14\n" +
+	"\x05audio\x18\x02 \x01(\fR\x05audio\x12\x1b\n" +
+	"\tmime_type\x18\x03 \x01(\tR\bmimeType\x12\x1a\n" +
+	"\blanguage\x18\x04 \x01(\tR\blanguage\x12\x1a\n" +
+	"\bencoding\x18\x05 \x01(\tR\bencoding\x12*\n" +
+	"\x11sample_rate_hertz\x18\x06 \x01(\x05R\x0fsampleRateHertz\"M\n" +
+	"\x17TranscribeAudioResponse\x12\x12\n" +
+	"\x04text\x18\x01 \x01(\tR\x04text\x12\x1e\n" +
+	"\n" +
+	"confidence\x18\x02 \x01(\x01R\n" +
+	"confidence*w\n" +
 	"\vMessageRole\x12\x1c\n" +
 	"\x18MESSAGE_ROLE_UNSPECIFIED\x10\x00\x12\x15\n" +
 	"\x11MESSAGE_ROLE_USER\x10\x01\x12\x1a\n" +
 	"\x16MESSAGE_ROLE_ASSISTANT\x10\x02\x12\x17\n" +
-	"\x13MESSAGE_ROLE_SYSTEM\x10\x032\xbb\f\n" +
+	"\x13MESSAGE_ROLE_SYSTEM\x10\x032\xd9\r\n" +
 	"\tAIService\x12V\n" +
 	"\x11StartConversation\x12\x1f.ai.v1.StartConversationRequest\x1a .ai.v1.StartConversationResponse\x12D\n" +
 	"\vSendMessage\x12\x19.ai.v1.SendMessageRequest\x1a\x1a.ai.v1.SendMessageResponse\x12O\n" +
@@ -3474,7 +3785,9 @@ const file_ai_v1_ai_proto_rawDesc = "" +
 	"\x0eGetQuotaStatus\x12\x1c.ai.v1.GetQuotaStatusRequest\x1a\x1d.ai.v1.GetQuotaStatusResponse\x12b\n" +
 	"\x15SubmitMessageFeedback\x12#.ai.v1.SubmitMessageFeedbackRequest\x1a$.ai.v1.SubmitMessageFeedbackResponse\x12b\n" +
 	"\x15DeleteMessageFeedback\x12#.ai.v1.DeleteMessageFeedbackRequest\x1a$.ai.v1.DeleteMessageFeedbackResponse\x12V\n" +
-	"\x11SuggestFlashcards\x12\x1f.ai.v1.SuggestFlashcardsRequest\x1a .ai.v1.SuggestFlashcardsResponseB{\n" +
+	"\x11SuggestFlashcards\x12\x1f.ai.v1.SuggestFlashcardsRequest\x1a .ai.v1.SuggestFlashcardsResponse\x12J\n" +
+	"\rSynthesizeTTS\x12\x1b.ai.v1.SynthesizeTTSRequest\x1a\x1c.ai.v1.SynthesizeTTSResponse\x12P\n" +
+	"\x0fTranscribeAudio\x12\x1d.ai.v1.TranscribeAudioRequest\x1a\x1e.ai.v1.TranscribeAudioResponseB{\n" +
 	"\tcom.ai.v1B\aAiProtoP\x01Z0github.com/elearning/shared/pkg/proto/ai/v1;aiv1\xa2\x02\x03AXX\xaa\x02\x05Ai.V1\xca\x02\x05Ai\\V1\xe2\x02\x11Ai\\V1\\GPBMetadata\xea\x02\x06Ai::V1b\x06proto3"
 
 var (
@@ -3490,7 +3803,7 @@ func file_ai_v1_ai_proto_rawDescGZIP() []byte {
 }
 
 var file_ai_v1_ai_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_ai_v1_ai_proto_msgTypes = make([]protoimpl.MessageInfo, 42)
+var file_ai_v1_ai_proto_msgTypes = make([]protoimpl.MessageInfo, 46)
 var file_ai_v1_ai_proto_goTypes = []any{
 	(MessageRole)(0),                      // 0: ai.v1.MessageRole
 	(*Conversation)(nil),                  // 1: ai.v1.Conversation
@@ -3535,19 +3848,23 @@ var file_ai_v1_ai_proto_goTypes = []any{
 	(*SuggestFlashcardsRequest)(nil),      // 40: ai.v1.SuggestFlashcardsRequest
 	(*FlashcardSuggestion)(nil),           // 41: ai.v1.FlashcardSuggestion
 	(*SuggestFlashcardsResponse)(nil),     // 42: ai.v1.SuggestFlashcardsResponse
-	(*timestamppb.Timestamp)(nil),         // 43: google.protobuf.Timestamp
-	(*structpb.Struct)(nil),               // 44: google.protobuf.Struct
+	(*SynthesizeTTSRequest)(nil),          // 43: ai.v1.SynthesizeTTSRequest
+	(*SynthesizeTTSResponse)(nil),         // 44: ai.v1.SynthesizeTTSResponse
+	(*TranscribeAudioRequest)(nil),        // 45: ai.v1.TranscribeAudioRequest
+	(*TranscribeAudioResponse)(nil),       // 46: ai.v1.TranscribeAudioResponse
+	(*timestamppb.Timestamp)(nil),         // 47: google.protobuf.Timestamp
+	(*structpb.Struct)(nil),               // 48: google.protobuf.Struct
 }
 var file_ai_v1_ai_proto_depIdxs = []int32{
-	43, // 0: ai.v1.Conversation.started_at:type_name -> google.protobuf.Timestamp
-	43, // 1: ai.v1.Conversation.last_message_at:type_name -> google.protobuf.Timestamp
-	43, // 2: ai.v1.Conversation.ended_at:type_name -> google.protobuf.Timestamp
+	47, // 0: ai.v1.Conversation.started_at:type_name -> google.protobuf.Timestamp
+	47, // 1: ai.v1.Conversation.last_message_at:type_name -> google.protobuf.Timestamp
+	47, // 2: ai.v1.Conversation.ended_at:type_name -> google.protobuf.Timestamp
 	0,  // 3: ai.v1.Message.role:type_name -> ai.v1.MessageRole
 	4,  // 4: ai.v1.Message.corrections:type_name -> ai.v1.Correction
-	43, // 5: ai.v1.Message.created_at:type_name -> google.protobuf.Timestamp
+	47, // 5: ai.v1.Message.created_at:type_name -> google.protobuf.Timestamp
 	3,  // 6: ai.v1.Message.user_feedback:type_name -> ai.v1.MessageFeedback
-	43, // 7: ai.v1.MessageFeedback.created_at:type_name -> google.protobuf.Timestamp
-	43, // 8: ai.v1.MessageFeedback.updated_at:type_name -> google.protobuf.Timestamp
+	47, // 7: ai.v1.MessageFeedback.created_at:type_name -> google.protobuf.Timestamp
+	47, // 8: ai.v1.MessageFeedback.updated_at:type_name -> google.protobuf.Timestamp
 	1,  // 9: ai.v1.StartConversationResponse.conversation:type_name -> ai.v1.Conversation
 	2,  // 10: ai.v1.StartConversationResponse.initial_message:type_name -> ai.v1.Message
 	2,  // 11: ai.v1.SendMessageResponse.user_message:type_name -> ai.v1.Message
@@ -3563,8 +3880,8 @@ var file_ai_v1_ai_proto_depIdxs = []int32{
 	25, // 21: ai.v1.AssessWritingStreamChunk.done:type_name -> ai.v1.AssessWritingResponse
 	7,  // 22: ai.v1.CheckPronunciationResponse.word_scores:type_name -> ai.v1.WordScore
 	30, // 23: ai.v1.AskTutorStreamChunk.done:type_name -> ai.v1.AskTutorResponse
-	44, // 24: ai.v1.GenerateExerciseResponse.content:type_name -> google.protobuf.Struct
-	43, // 25: ai.v1.GetQuotaStatusResponse.resets_at:type_name -> google.protobuf.Timestamp
+	48, // 24: ai.v1.GenerateExerciseResponse.content:type_name -> google.protobuf.Struct
+	47, // 25: ai.v1.GetQuotaStatusResponse.resets_at:type_name -> google.protobuf.Timestamp
 	3,  // 26: ai.v1.SubmitMessageFeedbackResponse.feedback:type_name -> ai.v1.MessageFeedback
 	41, // 27: ai.v1.SuggestFlashcardsResponse.items:type_name -> ai.v1.FlashcardSuggestion
 	8,  // 28: ai.v1.AIService.StartConversation:input_type -> ai.v1.StartConversationRequest
@@ -3586,27 +3903,31 @@ var file_ai_v1_ai_proto_depIdxs = []int32{
 	36, // 44: ai.v1.AIService.SubmitMessageFeedback:input_type -> ai.v1.SubmitMessageFeedbackRequest
 	38, // 45: ai.v1.AIService.DeleteMessageFeedback:input_type -> ai.v1.DeleteMessageFeedbackRequest
 	40, // 46: ai.v1.AIService.SuggestFlashcards:input_type -> ai.v1.SuggestFlashcardsRequest
-	9,  // 47: ai.v1.AIService.StartConversation:output_type -> ai.v1.StartConversationResponse
-	11, // 48: ai.v1.AIService.SendMessage:output_type -> ai.v1.SendMessageResponse
-	12, // 49: ai.v1.AIService.SendMessageStream:output_type -> ai.v1.SendMessageStreamChunk
-	14, // 50: ai.v1.AIService.ListConversations:output_type -> ai.v1.ListConversationsResponse
-	16, // 51: ai.v1.AIService.GetConversation:output_type -> ai.v1.GetConversationResponse
-	18, // 52: ai.v1.AIService.DeleteConversation:output_type -> ai.v1.DeleteConversationResponse
-	20, // 53: ai.v1.AIService.ListScenarios:output_type -> ai.v1.ListScenariosResponse
-	22, // 54: ai.v1.AIService.ExplainMistake:output_type -> ai.v1.ExplainMistakeResponse
-	23, // 55: ai.v1.AIService.ExplainMistakeStream:output_type -> ai.v1.ExplainMistakeStreamChunk
-	25, // 56: ai.v1.AIService.AssessWriting:output_type -> ai.v1.AssessWritingResponse
-	26, // 57: ai.v1.AIService.AssessWritingStream:output_type -> ai.v1.AssessWritingStreamChunk
-	28, // 58: ai.v1.AIService.CheckPronunciation:output_type -> ai.v1.CheckPronunciationResponse
-	30, // 59: ai.v1.AIService.AskTutor:output_type -> ai.v1.AskTutorResponse
-	31, // 60: ai.v1.AIService.AskTutorStream:output_type -> ai.v1.AskTutorStreamChunk
-	33, // 61: ai.v1.AIService.GenerateExercise:output_type -> ai.v1.GenerateExerciseResponse
-	35, // 62: ai.v1.AIService.GetQuotaStatus:output_type -> ai.v1.GetQuotaStatusResponse
-	37, // 63: ai.v1.AIService.SubmitMessageFeedback:output_type -> ai.v1.SubmitMessageFeedbackResponse
-	39, // 64: ai.v1.AIService.DeleteMessageFeedback:output_type -> ai.v1.DeleteMessageFeedbackResponse
-	42, // 65: ai.v1.AIService.SuggestFlashcards:output_type -> ai.v1.SuggestFlashcardsResponse
-	47, // [47:66] is the sub-list for method output_type
-	28, // [28:47] is the sub-list for method input_type
+	43, // 47: ai.v1.AIService.SynthesizeTTS:input_type -> ai.v1.SynthesizeTTSRequest
+	45, // 48: ai.v1.AIService.TranscribeAudio:input_type -> ai.v1.TranscribeAudioRequest
+	9,  // 49: ai.v1.AIService.StartConversation:output_type -> ai.v1.StartConversationResponse
+	11, // 50: ai.v1.AIService.SendMessage:output_type -> ai.v1.SendMessageResponse
+	12, // 51: ai.v1.AIService.SendMessageStream:output_type -> ai.v1.SendMessageStreamChunk
+	14, // 52: ai.v1.AIService.ListConversations:output_type -> ai.v1.ListConversationsResponse
+	16, // 53: ai.v1.AIService.GetConversation:output_type -> ai.v1.GetConversationResponse
+	18, // 54: ai.v1.AIService.DeleteConversation:output_type -> ai.v1.DeleteConversationResponse
+	20, // 55: ai.v1.AIService.ListScenarios:output_type -> ai.v1.ListScenariosResponse
+	22, // 56: ai.v1.AIService.ExplainMistake:output_type -> ai.v1.ExplainMistakeResponse
+	23, // 57: ai.v1.AIService.ExplainMistakeStream:output_type -> ai.v1.ExplainMistakeStreamChunk
+	25, // 58: ai.v1.AIService.AssessWriting:output_type -> ai.v1.AssessWritingResponse
+	26, // 59: ai.v1.AIService.AssessWritingStream:output_type -> ai.v1.AssessWritingStreamChunk
+	28, // 60: ai.v1.AIService.CheckPronunciation:output_type -> ai.v1.CheckPronunciationResponse
+	30, // 61: ai.v1.AIService.AskTutor:output_type -> ai.v1.AskTutorResponse
+	31, // 62: ai.v1.AIService.AskTutorStream:output_type -> ai.v1.AskTutorStreamChunk
+	33, // 63: ai.v1.AIService.GenerateExercise:output_type -> ai.v1.GenerateExerciseResponse
+	35, // 64: ai.v1.AIService.GetQuotaStatus:output_type -> ai.v1.GetQuotaStatusResponse
+	37, // 65: ai.v1.AIService.SubmitMessageFeedback:output_type -> ai.v1.SubmitMessageFeedbackResponse
+	39, // 66: ai.v1.AIService.DeleteMessageFeedback:output_type -> ai.v1.DeleteMessageFeedbackResponse
+	42, // 67: ai.v1.AIService.SuggestFlashcards:output_type -> ai.v1.SuggestFlashcardsResponse
+	44, // 68: ai.v1.AIService.SynthesizeTTS:output_type -> ai.v1.SynthesizeTTSResponse
+	46, // 69: ai.v1.AIService.TranscribeAudio:output_type -> ai.v1.TranscribeAudioResponse
+	49, // [49:70] is the sub-list for method output_type
+	28, // [28:49] is the sub-list for method input_type
 	28, // [28:28] is the sub-list for extension type_name
 	28, // [28:28] is the sub-list for extension extendee
 	0,  // [0:28] is the sub-list for field type_name
@@ -3644,7 +3965,7 @@ func file_ai_v1_ai_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_ai_v1_ai_proto_rawDesc), len(file_ai_v1_ai_proto_rawDesc)),
 			NumEnums:      1,
-			NumMessages:   42,
+			NumMessages:   46,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

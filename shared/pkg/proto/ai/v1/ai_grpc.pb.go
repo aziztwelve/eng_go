@@ -38,6 +38,8 @@ const (
 	AIService_SubmitMessageFeedback_FullMethodName = "/ai.v1.AIService/SubmitMessageFeedback"
 	AIService_DeleteMessageFeedback_FullMethodName = "/ai.v1.AIService/DeleteMessageFeedback"
 	AIService_SuggestFlashcards_FullMethodName     = "/ai.v1.AIService/SuggestFlashcards"
+	AIService_SynthesizeTTS_FullMethodName         = "/ai.v1.AIService/SynthesizeTTS"
+	AIService_TranscribeAudio_FullMethodName       = "/ai.v1.AIService/TranscribeAudio"
 )
 
 // AIServiceClient is the client API for AIService service.
@@ -142,6 +144,17 @@ type AIServiceClient interface {
 	// на основе профиля пользователя (level, goal, pain_point).
 	// Mock provider возвращает hard-coded список по level+goal.
 	SuggestFlashcards(ctx context.Context, in *SuggestFlashcardsRequest, opts ...grpc.CallOption) (*SuggestFlashcardsResponse, error)
+	// SynthesizeTTS — генерит аудио из текста через активный провайдер
+	// (OpenAI tts-1 → mp3 → MinIO) и возвращает публичный audio_url.
+	//
+	// Переиспользуемый endpoint: озвучка слов во флешкартах/словаре,
+	// backfill-скрипты, listening-шаги. Идемпотентность на уровне хранилища —
+	// ключ md5(text|voice|language), повторный синтез того же текста
+	// перезапишет тот же объект в MinIO.
+	SynthesizeTTS(ctx context.Context, in *SynthesizeTTSRequest, opts ...grpc.CallOption) (*SynthesizeTTSResponse, error)
+	// TranscribeAudio — расшифровка голосового сообщения в текст (Google STT).
+	// Без оценки произношения: просто audio → text для голосового ввода в чат.
+	TranscribeAudio(ctx context.Context, in *TranscribeAudioRequest, opts ...grpc.CallOption) (*TranscribeAudioResponse, error)
 }
 
 type aIServiceClient struct {
@@ -378,6 +391,26 @@ func (c *aIServiceClient) SuggestFlashcards(ctx context.Context, in *SuggestFlas
 	return out, nil
 }
 
+func (c *aIServiceClient) SynthesizeTTS(ctx context.Context, in *SynthesizeTTSRequest, opts ...grpc.CallOption) (*SynthesizeTTSResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(SynthesizeTTSResponse)
+	err := c.cc.Invoke(ctx, AIService_SynthesizeTTS_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *aIServiceClient) TranscribeAudio(ctx context.Context, in *TranscribeAudioRequest, opts ...grpc.CallOption) (*TranscribeAudioResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(TranscribeAudioResponse)
+	err := c.cc.Invoke(ctx, AIService_TranscribeAudio_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // AIServiceServer is the server API for AIService service.
 // All implementations must embed UnimplementedAIServiceServer
 // for forward compatibility.
@@ -480,6 +513,17 @@ type AIServiceServer interface {
 	// на основе профиля пользователя (level, goal, pain_point).
 	// Mock provider возвращает hard-coded список по level+goal.
 	SuggestFlashcards(context.Context, *SuggestFlashcardsRequest) (*SuggestFlashcardsResponse, error)
+	// SynthesizeTTS — генерит аудио из текста через активный провайдер
+	// (OpenAI tts-1 → mp3 → MinIO) и возвращает публичный audio_url.
+	//
+	// Переиспользуемый endpoint: озвучка слов во флешкартах/словаре,
+	// backfill-скрипты, listening-шаги. Идемпотентность на уровне хранилища —
+	// ключ md5(text|voice|language), повторный синтез того же текста
+	// перезапишет тот же объект в MinIO.
+	SynthesizeTTS(context.Context, *SynthesizeTTSRequest) (*SynthesizeTTSResponse, error)
+	// TranscribeAudio — расшифровка голосового сообщения в текст (Google STT).
+	// Без оценки произношения: просто audio → text для голосового ввода в чат.
+	TranscribeAudio(context.Context, *TranscribeAudioRequest) (*TranscribeAudioResponse, error)
 	mustEmbedUnimplementedAIServiceServer()
 }
 
@@ -546,6 +590,12 @@ func (UnimplementedAIServiceServer) DeleteMessageFeedback(context.Context, *Dele
 }
 func (UnimplementedAIServiceServer) SuggestFlashcards(context.Context, *SuggestFlashcardsRequest) (*SuggestFlashcardsResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method SuggestFlashcards not implemented")
+}
+func (UnimplementedAIServiceServer) SynthesizeTTS(context.Context, *SynthesizeTTSRequest) (*SynthesizeTTSResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method SynthesizeTTS not implemented")
+}
+func (UnimplementedAIServiceServer) TranscribeAudio(context.Context, *TranscribeAudioRequest) (*TranscribeAudioResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method TranscribeAudio not implemented")
 }
 func (UnimplementedAIServiceServer) mustEmbedUnimplementedAIServiceServer() {}
 func (UnimplementedAIServiceServer) testEmbeddedByValue()                   {}
@@ -882,6 +932,42 @@ func _AIService_SuggestFlashcards_Handler(srv interface{}, ctx context.Context, 
 	return interceptor(ctx, in, info, handler)
 }
 
+func _AIService_SynthesizeTTS_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SynthesizeTTSRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AIServiceServer).SynthesizeTTS(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AIService_SynthesizeTTS_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AIServiceServer).SynthesizeTTS(ctx, req.(*SynthesizeTTSRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AIService_TranscribeAudio_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(TranscribeAudioRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AIServiceServer).TranscribeAudio(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AIService_TranscribeAudio_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AIServiceServer).TranscribeAudio(ctx, req.(*TranscribeAudioRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // AIService_ServiceDesc is the grpc.ServiceDesc for AIService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -948,6 +1034,14 @@ var AIService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "SuggestFlashcards",
 			Handler:    _AIService_SuggestFlashcards_Handler,
+		},
+		{
+			MethodName: "SynthesizeTTS",
+			Handler:    _AIService_SynthesizeTTS_Handler,
+		},
+		{
+			MethodName: "TranscribeAudio",
+			Handler:    _AIService_TranscribeAudio_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{

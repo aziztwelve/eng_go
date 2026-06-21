@@ -92,6 +92,23 @@ func New(ctx context.Context) (*App, error) {
 	}
 	logger.Info(ctx, "✅ AI provider initialized", zap.String("name", provider.Name()))
 
+	// Optional inline TTS synthesizer (path A) — Google Cloud TTS. Если задан
+	// GOOGLE_TTS_API_KEY, on-demand озвучка (флешкарты) идёт через него и
+	// возвращает mp3-байты в ответе, минуя MinIO. Чат остаётся на provider.
+	var ttsSynth providers.TTSSynthesizer
+	if cfg.GoogleTTSAPIKey != "" {
+		ttsSynth = providers.NewGoogleTTSProvider(cfg.GoogleTTSAPIKey, cfg.GoogleTTSVoice)
+		logger.Info(ctx, "✅ Google TTS synthesizer initialized", zap.String("name", ttsSynth.Name()))
+	}
+
+	// Optional STT (Google Speech-to-Text) — голосовой ввод в чат. Тот же
+	// Google API-ключ (должен быть разрешён и для Speech-to-Text API).
+	var sttTranscriber providers.STTTranscriber
+	if cfg.GoogleSTTAPIKey != "" {
+		sttTranscriber = providers.NewGoogleSTTProvider(cfg.GoogleSTTAPIKey, cfg.GoogleSTTModel)
+		logger.Info(ctx, "✅ Google STT transcriber initialized", zap.String("name", sttTranscriber.Name()))
+	}
+
 	// Moderator.
 	moderator, err := buildModerator(cfg)
 	if err != nil {
@@ -131,6 +148,8 @@ func New(ctx context.Context) (*App, error) {
 	}, service.Deps{
 		Provider:     provider,
 		Moderator:    moderator,
+		TTSSynth:     ttsSynth,
+		STTTranscriber: sttTranscriber,
 		SanitizeOpts: providers.SanitizeOpts{MaxLength: cfg.SanitizeMaxLength},
 		PIIOpts: providers.PIIRedactOpts{
 			Enabled:     cfg.PIIRedactEnabled,

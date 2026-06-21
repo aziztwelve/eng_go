@@ -138,6 +138,23 @@ service AIService {
   // на основе профиля пользователя (level, goal, pain_point).
   // Mock provider возвращает hard-coded список по level+goal.
   rpc SuggestFlashcards(SuggestFlashcardsRequest) returns (SuggestFlashcardsResponse);
+
+  // === TTS (on-demand озвучка) ===
+
+  // SynthesizeTTS — генерит аудио из текста через активный провайдер
+  // (OpenAI tts-1 → mp3 → MinIO) и возвращает публичный audio_url.
+  //
+  // Переиспользуемый endpoint: озвучка слов во флешкартах/словаре,
+  // backfill-скрипты, listening-шаги. Идемпотентность на уровне хранилища —
+  // ключ md5(text|voice|language), повторный синтез того же текста
+  // перезапишет тот же объект в MinIO.
+  rpc SynthesizeTTS(SynthesizeTTSRequest) returns (SynthesizeTTSResponse);
+
+  // === STT (speech-to-text) ===
+
+  // TranscribeAudio — расшифровка голосового сообщения в текст (Google STT).
+  // Без оценки произношения: просто audio → text для голосового ввода в чат.
+  rpc TranscribeAudio(TranscribeAudioRequest) returns (TranscribeAudioResponse);
 }
 
 // =====================================================================
@@ -558,4 +575,48 @@ message SuggestFlashcardsResponse {
   // Опциональная подсказка для UI: если suggestion-pool исчерпан —
   // фронт может показать «попробуйте позже» вместо ещё одной кнопки.
   bool exhausted = 2;
+}
+
+// =====================================================================
+// TTS (on-demand озвучка)
+// =====================================================================
+
+message SynthesizeTTSRequest {
+  string text     = 1;   // обязательно: что озвучить
+  string language = 2;   // 'en' | 'ru' | ... — для cache-key и оценки длительности
+  string voice    = 3;   // optional, provider-specific (alloy | nova | ...); пусто → default
+  // user_id — для квоты (QuotaKindVoice). Пусто → quota не проверяется
+  // (admin/backfill-путь). Gateway проставляет из JWT для клиентских вызовов.
+  string user_id  = 4;
+}
+
+message SynthesizeTTSResponse {
+  string audio_url   = 1;   // публичный URL (MinIO) — путь B (storage)
+  int32  duration_ms = 2;   // приблизительная длительность
+  double cost_usd    = 3;   // стоимость синтеза (для cost-аналитики)
+  // Путь A (inline): сырые байты аудио прямо в ответе, без storage.
+  // Используется для on-demand озвучки флешкарт (Google TTS). Если задан —
+  // audio_url пустой. В JSON через gateway сериализуется как base64.
+  bytes  audio_content = 4;
+  string mime_type     = 5;   // напр. "audio/mpeg"
+}
+
+// =====================================================================
+// STT (speech-to-text)
+// =====================================================================
+
+message TranscribeAudioRequest {
+  string user_id           = 1;  // для квоты (опц.); пусто → без квоты
+  bytes  audio             = 2;  // сырые байты записи (inline)
+  string mime_type         = 3;  // напр. "audio/amr-wb", "audio/wav"
+  string language          = 4;  // 'en' | 'en-US' | 'ru' | ...
+  // Google STT encoding: LINEAR16 | AMR_WB | OGG_OPUS | WEBM_OPUS | FLAC | ...
+  // Пусто → провайдер попробует вывести из mime_type.
+  string encoding          = 5;
+  int32  sample_rate_hertz = 6;  // напр. 16000
+}
+
+message TranscribeAudioResponse {
+  string text       = 1;  // распознанный текст
+  double confidence = 2;  // 0.0..1.0 (для будущей оценки; сейчас не используется)
 }
