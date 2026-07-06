@@ -126,6 +126,7 @@ func (a *App) initRouter(ctx context.Context) error {
 
 		tracks := v1.Group("/tracks")
 		{
+			tracks.GET("", trackHandler.ListTracks)
 			tracks.GET("/:id", trackHandler.GetTrack)
 		}
 
@@ -167,7 +168,14 @@ func (a *App) initRouter(ctx context.Context) error {
 			}
 
 			protected.POST("/courses/:id/enroll", courseHandler.EnrollCourse)
-			protected.GET("/tracks", trackHandler.ListTracks)
+
+			// === Персональный план треков (Phase 8) ===
+			me := protected.Group("/me")
+			{
+				me.GET("/tracks", trackHandler.GetMyTracks)
+				me.POST("/tracks/:id", trackHandler.AddMyTrack)
+				me.DELETE("/tracks/:id", trackHandler.RemoveMyTrack)
+			}
 
 			// Progress endpoints
 			progress := protected.Group("/progress")

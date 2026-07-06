@@ -34,4 +34,13 @@ type TrackRepository interface {
 	RemoveLesson(ctx context.Context, trackID, lessonID string) error
 	ListLessons(ctx context.Context, trackID string) ([]*model.Lesson, error)
 	ReorderLessons(ctx context.Context, trackID string, lessonOrder []string) error
+
+	// User plan (Phase 8) — персональный набор треков пользователя.
+	// SelectPlanCandidates подбирает опубликованные треки под профиль
+	// (language + level + goal), ранжированные: целевые выше универсальных.
+	SelectPlanCandidates(ctx context.Context, language, level, goal string) ([]*model.Track, error)
+	UpsertUserTrack(ctx context.Context, ut *model.UserTrack) error
+	ListUserTracks(ctx context.Context, userID string) ([]*model.UserTrack, error)
+	DeleteUserTrack(ctx context.Context, userID, trackID string) error
+	CountUserTracks(ctx context.Context, userID string) (int, error)
 }

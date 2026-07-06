@@ -30,6 +30,20 @@ func ToTrackProto(t *model.Track) *coursev1.Track {
 	}
 }
 
+// ToUserTrackProto конвертирует элемент персонального плана в protobuf.
+func ToUserTrackProto(ut *model.UserTrack) *coursev1.UserTrack {
+	if ut == nil {
+		return nil
+	}
+	return &coursev1.UserTrack{
+		Track:      ToTrackProto(ut.Track),
+		OrderIndex: ut.OrderIndex,
+		Status:     ut.Status,
+		Source:     ut.Source,
+		AddedAt:    timestamppb.New(ut.AddedAt),
+	}
+}
+
 // FromCreateTrackRequest строит модель из protobuf-запроса.
 func FromCreateTrackRequest(req *coursev1.CreateTrackRequest) *model.Track {
 	return &model.Track{

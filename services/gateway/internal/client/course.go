@@ -163,6 +163,26 @@ func (c *CourseClient) GetTrackByCode(ctx context.Context, req *coursev1.GetTrac
 	return c.client.GetTrackByCode(ctx, req)
 }
 
+// GenerateUserPlan подбирает и материализует персональный план треков юзера.
+func (c *CourseClient) GenerateUserPlan(ctx context.Context, req *coursev1.GenerateUserPlanRequest) (*coursev1.GenerateUserPlanResponse, error) {
+	return c.client.GenerateUserPlan(ctx, req)
+}
+
+// GetUserTracks возвращает персональный план треков юзера.
+func (c *CourseClient) GetUserTracks(ctx context.Context, req *coursev1.GetUserTracksRequest) (*coursev1.GetUserTracksResponse, error) {
+	return c.client.GetUserTracks(ctx, req)
+}
+
+// AddUserTrack добавляет трек в план юзера вручную.
+func (c *CourseClient) AddUserTrack(ctx context.Context, req *coursev1.AddUserTrackRequest) (*coursev1.AddUserTrackResponse, error) {
+	return c.client.AddUserTrack(ctx, req)
+}
+
+// RemoveUserTrack убирает трек из плана юзера.
+func (c *CourseClient) RemoveUserTrack(ctx context.Context, req *coursev1.RemoveUserTrackRequest) (*coursev1.RemoveUserTrackResponse, error) {
+	return c.client.RemoveUserTrack(ctx, req)
+}
+
 // CreateTrack создаёт новый трек
 func (c *CourseClient) CreateTrack(ctx context.Context, req *coursev1.CreateTrackRequest) (*coursev1.CreateTrackResponse, error) {
 	return c.client.CreateTrack(ctx, req)

@@ -113,6 +113,14 @@ service CourseService {
   // ReorderTrackLessons атомарно переустанавливает порядок уроков в треке
   rpc ReorderTrackLessons(ReorderTrackLessonsRequest) returns (ReorderTrackLessonsResponse);
 
+  // === Персональный план треков (Phase 8) ===
+  // Подбор и материализация треков под профиль (level + goal) в user_tracks.
+  // См. docs/tasks/phase-8-personalized-track-assignment.md.
+  rpc GenerateUserPlan(GenerateUserPlanRequest) returns (GenerateUserPlanResponse);
+  rpc GetUserTracks(GetUserTracksRequest) returns (GetUserTracksResponse);
+  rpc AddUserTrack(AddUserTrackRequest) returns (AddUserTrackResponse);
+  rpc RemoveUserTrack(RemoveUserTrackRequest) returns (RemoveUserTrackResponse);
+
   // === Vocabulary (Phase 2) ===
   // Словарь — слова с переводами для match_pairs / fill_blank / listening.
   rpc ListVocabulary(ListVocabularyRequest) returns (ListVocabularyResponse);
@@ -682,6 +690,54 @@ message ReorderTrackLessonsRequest {
 }
 
 message ReorderTrackLessonsResponse {
+  bool success = 1;
+}
+
+// === Персональный план треков (Phase 8) ===
+
+// UserTrack — элемент персонального плана пользователя.
+message UserTrack {
+  Track track = 1;
+  int32 order_index = 2;
+  string status = 3; // active | locked | completed
+  string source = 4; // onboarding | manual | recommend
+  google.protobuf.Timestamp added_at = 5;
+}
+
+message GenerateUserPlanRequest {
+  string user_id = 1;
+  string language = 2;
+  string level = 3;
+  string goal = 4; // одна главная цель (motivation)
+}
+
+message GenerateUserPlanResponse {
+  int32 tracks_assigned = 1;
+}
+
+message GetUserTracksRequest {
+  string user_id = 1;
+}
+
+message GetUserTracksResponse {
+  repeated UserTrack tracks = 1;
+}
+
+message AddUserTrackRequest {
+  string user_id = 1;
+  string track_id = 2;
+}
+
+message AddUserTrackResponse {
+  bool success = 1;
+}
+
+message RemoveUserTrackRequest {
+  string user_id = 1;
+  string track_id = 2;
+}
+
+message RemoveUserTrackResponse {
   bool success = 1;
 }
 

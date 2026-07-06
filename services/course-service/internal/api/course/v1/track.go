@@ -167,3 +167,54 @@ func (a *api) ReorderTrackLessons(ctx context.Context, req *coursev1.ReorderTrac
 	}
 	return &coursev1.ReorderTrackLessonsResponse{Success: true}, nil
 }
+
+// GenerateUserPlan подбирает треки под профиль (level + goal) и материализует
+// их в персональный план пользователя (user_tracks).
+func (a *api) GenerateUserPlan(ctx context.Context, req *coursev1.GenerateUserPlanRequest) (*coursev1.GenerateUserPlanResponse, error) {
+	if req.UserId == "" {
+		return nil, status.Error(codes.InvalidArgument, "user_id is required")
+	}
+	n, err := a.trackService.GenerateUserPlan(ctx, req.UserId, req.Language, req.Level, req.Goal)
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to generate user plan: %v", err)
+	}
+	return &coursev1.GenerateUserPlanResponse{TracksAssigned: int32(n)}, nil
+}
+
+// GetUserTracks возвращает персональный план пользователя.
+func (a *api) GetUserTracks(ctx context.Context, req *coursev1.GetUserTracksRequest) (*coursev1.GetUserTracksResponse, error) {
+	if req.UserId == "" {
+		return nil, status.Error(codes.InvalidArgument, "user_id is required")
+	}
+	list, err := a.trackService.GetUserTracks(ctx, req.UserId)
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to get user tracks: %v", err)
+	}
+	resp := &coursev1.GetUserTracksResponse{}
+	for _, ut := range list {
+		resp.Tracks = append(resp.Tracks, converter.ToUserTrackProto(ut))
+	}
+	return resp, nil
+}
+
+// AddUserTrack добавляет трек в план пользователя вручную.
+func (a *api) AddUserTrack(ctx context.Context, req *coursev1.AddUserTrackRequest) (*coursev1.AddUserTrackResponse, error) {
+	if req.UserId == "" || req.TrackId == "" {
+		return nil, status.Error(codes.InvalidArgument, "user_id and track_id are required")
+	}
+	if err := a.trackService.AddUserTrack(ctx, req.UserId, req.TrackId); err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to add user track: %v", err)
+	}
+	return &coursev1.AddUserTrackResponse{Success: true}, nil
+}
+
+// RemoveUserTrack убирает трек из плана пользователя.
+func (a *api) RemoveUserTrack(ctx context.Context, req *coursev1.RemoveUserTrackRequest) (*coursev1.RemoveUserTrackResponse, error) {
+	if req.UserId == "" || req.TrackId == "" {
+		return nil, status.Error(codes.InvalidArgument, "user_id and track_id are required")
+	}
+	if err := a.trackService.RemoveUserTrack(ctx, req.UserId, req.TrackId); err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to remove user track: %v", err)
+	}
+	return &coursev1.RemoveUserTrackResponse{Success: true}, nil
+}

@@ -23,6 +23,12 @@ type TrackService interface {
 	RemoveLessonFromTrack(ctx context.Context, trackID, lessonID string) error
 	ListTrackLessons(ctx context.Context, trackID string) ([]*model.Lesson, error)
 	ReorderTrackLessons(ctx context.Context, trackID string, lessonOrder []string) error
+
+	// User plan (Phase 8) — персональный набор треков.
+	GenerateUserPlan(ctx context.Context, userID, language, level, goal string) (int, error)
+	GetUserTracks(ctx context.Context, userID string) ([]*model.UserTrack, error)
+	AddUserTrack(ctx context.Context, userID, trackID string) error
+	RemoveUserTrack(ctx context.Context, userID, trackID string) error
 }
 
 type trackService struct {
@@ -103,4 +109,73 @@ func (s *trackService) ListTrackLessons(ctx context.Context, trackID string) ([]
 
 func (s *trackService) ReorderTrackLessons(ctx context.Context, trackID string, lessonOrder []string) error {
 	return s.repo.ReorderLessons(ctx, trackID, lessonOrder)
+}
+
+// GenerateUserPlan подбирает треки под профиль (level + goal) и материализует
+// их в user_tracks. Один активный трек (первый по рангу), остальные — locked.
+// Идемпотентно (UPSERT не сбрасывает completed/manual).
+func (s *trackService) GenerateUserPlan(ctx context.Context, userID, language, level, goal string) (int, error) {
+	if strings.TrimSpace(userID) == "" {
+		return 0, errors.New("user_id is required")
+	}
+	candidates, err := s.repo.SelectPlanCandidates(ctx, language, level, goal)
+	if err != nil {
+		return 0, err
+	}
+	assigned := 0
+	for i, t := range candidates {
+		status := model.UserTrackStatusLocked
+		if i == 0 {
+			status = model.UserTrackStatusActive // 1 активный трек за раз
+		}
+		ut := &model.UserTrack{
+			UserID:     userID,
+			Track:      t,
+			OrderIndex: int32(i),
+			Status:     status,
+			Source:     model.UserTrackSourceOnboarding,
+		}
+		if err := s.repo.UpsertUserTrack(ctx, ut); err != nil {
+			return assigned, err
+		}
+		assigned++
+	}
+	return assigned, nil
+}
+
+func (s *trackService) GetUserTracks(ctx context.Context, userID string) ([]*model.UserTrack, error) {
+	if strings.TrimSpace(userID) == "" {
+		return nil, errors.New("user_id is required")
+	}
+	return s.repo.ListUserTracks(ctx, userID)
+}
+
+// AddUserTrack добавляет трек в план вручную (в конец, активным).
+func (s *trackService) AddUserTrack(ctx context.Context, userID, trackID string) error {
+	if strings.TrimSpace(userID) == "" || strings.TrimSpace(trackID) == "" {
+		return errors.New("user_id and track_id are required")
+	}
+	t, err := s.repo.GetByID(ctx, trackID)
+	if err != nil {
+		return err
+	}
+	n, err := s.repo.CountUserTracks(ctx, userID)
+	if err != nil {
+		return err
+	}
+	ut := &model.UserTrack{
+		UserID:     userID,
+		Track:      t,
+		OrderIndex: int32(n),
+		Status:     model.UserTrackStatusActive,
+		Source:     model.UserTrackSourceManual,
+	}
+	return s.repo.UpsertUserTrack(ctx, ut)
+}
+
+func (s *trackService) RemoveUserTrack(ctx context.Context, userID, trackID string) error {
+	if strings.TrimSpace(userID) == "" || strings.TrimSpace(trackID) == "" {
+		return errors.New("user_id and track_id are required")
+	}
+	return s.repo.DeleteUserTrack(ctx, userID, trackID)
 }

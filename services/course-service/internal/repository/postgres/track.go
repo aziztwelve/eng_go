@@ -281,3 +281,128 @@ func (r *trackRepository) ReorderLessons(ctx context.Context, trackID string, le
 
 // ensure trackRepository uses pgxpool import to avoid unused error if file is moved
 var _ = (*pgxpool.Pool)(nil)
+
+// ============================================================
+// User plan (Phase 8) — персональный набор треков пользователя
+// ============================================================
+
+// SelectPlanCandidates подбирает опубликованные треки под профиль.
+// Если goal задан: фильтр (motivation пуст ИЛИ пересекается с целью),
+// целевые ранжируются выше универсальных. Если goal пустой — только level+language.
+func (r *trackRepository) SelectPlanCandidates(ctx context.Context, language, level, goal string) ([]*model.Track, error) {
+	var (
+		conds = []string{"is_published = true"}
+		args  []interface{}
+		pos   = 1
+	)
+	if language != "" {
+		conds = append(conds, fmt.Sprintf("language = $%d", pos))
+		args = append(args, language)
+		pos++
+	}
+	if level != "" {
+		conds = append(conds, fmt.Sprintf("UPPER(level) = UPPER($%d)", pos))
+		args = append(args, level)
+		pos++
+	}
+
+	orderBy := "sort_order ASC, title ASC"
+	if goal != "" {
+		// целевые (motivation && [goal]) ИЛИ универсальные (motivation = '{}')
+		conds = append(conds, fmt.Sprintf("(motivation = '{}' OR motivation && ARRAY[$%d]::text[])", pos))
+		// целевые выше универсальных
+		orderBy = fmt.Sprintf("(motivation && ARRAY[$%d]::text[]) DESC, sort_order ASC, title ASC", pos)
+		args = append(args, goal)
+		pos++
+	}
+
+	query := fmt.Sprintf(`SELECT %s FROM learning_tracks WHERE %s ORDER BY %s`,
+		trackSelectCols, strings.Join(conds, " AND "), orderBy)
+
+	rows, err := r.pool.Query(ctx, query, args...)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var tracks []*model.Track
+	for rows.Next() {
+		t, err := scanTrack(rows.Scan)
+		if err != nil {
+			return nil, err
+		}
+		tracks = append(tracks, t)
+	}
+	return tracks, rows.Err()
+}
+
+// UpsertUserTrack добавляет/обновляет трек в плане. Идемпотентно: не сбрасывает
+// уже completed-статус и не затирает manual-источник при повторной генерации.
+func (r *trackRepository) UpsertUserTrack(ctx context.Context, ut *model.UserTrack) error {
+	query := `
+		INSERT INTO user_tracks (user_id, track_id, order_index, status, source, added_at, updated_at)
+		VALUES ($1, $2, $3, $4, $5, NOW(), NOW())
+		ON CONFLICT (user_id, track_id) DO UPDATE SET
+			order_index = EXCLUDED.order_index,
+			status = CASE WHEN user_tracks.status = 'completed' THEN user_tracks.status ELSE EXCLUDED.status END,
+			source = CASE WHEN user_tracks.source = 'manual' THEN user_tracks.source ELSE EXCLUDED.source END,
+			updated_at = NOW()
+	`
+	_, err := r.pool.Exec(ctx, query, ut.UserID, ut.Track.ID, ut.OrderIndex, ut.Status, ut.Source)
+	return err
+}
+
+// ListUserTracks возвращает персональный план пользователя в порядке order_index.
+func (r *trackRepository) ListUserTracks(ctx context.Context, userID string) ([]*model.UserTrack, error) {
+	query := `
+		SELECT t.id, t.code, t.title, t.description, t.icon_url, t.language, t.level,
+		       t.track_type, t.is_published, t.sort_order, t.motivation, t.created_by, t.created_at, t.updated_at,
+		       ut.order_index, ut.status, ut.source, ut.added_at
+		FROM user_tracks ut
+		JOIN learning_tracks t ON t.id = ut.track_id
+		WHERE ut.user_id = $1
+		ORDER BY ut.order_index ASC
+	`
+	rows, err := r.pool.Query(ctx, query, userID)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var result []*model.UserTrack
+	for rows.Next() {
+		t := &model.Track{}
+		var description, iconURL, language, level, createdBy sql.NullString
+		ut := &model.UserTrack{UserID: userID, Track: t}
+		if err := rows.Scan(
+			&t.ID, &t.Code, &t.Title, &description, &iconURL, &language, &level,
+			&t.TrackType, &t.IsPublished, &t.SortOrder, &t.Motivation, &createdBy, &t.CreatedAt, &t.UpdatedAt,
+			&ut.OrderIndex, &ut.Status, &ut.Source, &ut.AddedAt,
+		); err != nil {
+			return nil, err
+		}
+		t.Description = description.String
+		t.IconURL = iconURL.String
+		t.Language = language.String
+		t.Level = level.String
+		t.CreatedBy = createdBy.String
+		if t.Motivation == nil {
+			t.Motivation = []string{}
+		}
+		result = append(result, ut)
+	}
+	return result, rows.Err()
+}
+
+// DeleteUserTrack убирает трек из плана пользователя.
+func (r *trackRepository) DeleteUserTrack(ctx context.Context, userID, trackID string) error {
+	_, err := r.pool.Exec(ctx, `DELETE FROM user_tracks WHERE user_id = $1 AND track_id = $2`, userID, trackID)
+	return err
+}
+
+// CountUserTracks возвращает число треков в плане (для ленивой генерации).
+func (r *trackRepository) CountUserTracks(ctx context.Context, userID string) (int, error) {
+	var n int
+	err := r.pool.QueryRow(ctx, `SELECT COUNT(*) FROM user_tracks WHERE user_id = $1`, userID).Scan(&n)
+	return n, err
+}

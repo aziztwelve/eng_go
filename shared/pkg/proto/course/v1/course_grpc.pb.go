@@ -52,6 +52,10 @@ const (
 	CourseService_AddLessonToTrack_FullMethodName         = "/course.v1.CourseService/AddLessonToTrack"
 	CourseService_RemoveLessonFromTrack_FullMethodName    = "/course.v1.CourseService/RemoveLessonFromTrack"
 	CourseService_ReorderTrackLessons_FullMethodName      = "/course.v1.CourseService/ReorderTrackLessons"
+	CourseService_GenerateUserPlan_FullMethodName         = "/course.v1.CourseService/GenerateUserPlan"
+	CourseService_GetUserTracks_FullMethodName            = "/course.v1.CourseService/GetUserTracks"
+	CourseService_AddUserTrack_FullMethodName             = "/course.v1.CourseService/AddUserTrack"
+	CourseService_RemoveUserTrack_FullMethodName          = "/course.v1.CourseService/RemoveUserTrack"
 	CourseService_ListVocabulary_FullMethodName           = "/course.v1.CourseService/ListVocabulary"
 	CourseService_GetVocabularyEntry_FullMethodName       = "/course.v1.CourseService/GetVocabularyEntry"
 	CourseService_CreateVocabularyEntry_FullMethodName    = "/course.v1.CourseService/CreateVocabularyEntry"
@@ -149,6 +153,13 @@ type CourseServiceClient interface {
 	RemoveLessonFromTrack(ctx context.Context, in *RemoveLessonFromTrackRequest, opts ...grpc.CallOption) (*RemoveLessonFromTrackResponse, error)
 	// ReorderTrackLessons атомарно переустанавливает порядок уроков в треке
 	ReorderTrackLessons(ctx context.Context, in *ReorderTrackLessonsRequest, opts ...grpc.CallOption) (*ReorderTrackLessonsResponse, error)
+	// === Персональный план треков (Phase 8) ===
+	// Подбор и материализация треков под профиль (level + goal) в user_tracks.
+	// См. docs/tasks/phase-8-personalized-track-assignment.md.
+	GenerateUserPlan(ctx context.Context, in *GenerateUserPlanRequest, opts ...grpc.CallOption) (*GenerateUserPlanResponse, error)
+	GetUserTracks(ctx context.Context, in *GetUserTracksRequest, opts ...grpc.CallOption) (*GetUserTracksResponse, error)
+	AddUserTrack(ctx context.Context, in *AddUserTrackRequest, opts ...grpc.CallOption) (*AddUserTrackResponse, error)
+	RemoveUserTrack(ctx context.Context, in *RemoveUserTrackRequest, opts ...grpc.CallOption) (*RemoveUserTrackResponse, error)
 	// === Vocabulary (Phase 2) ===
 	// Словарь — слова с переводами для match_pairs / fill_blank / listening.
 	ListVocabulary(ctx context.Context, in *ListVocabularyRequest, opts ...grpc.CallOption) (*ListVocabularyResponse, error)
@@ -520,6 +531,46 @@ func (c *courseServiceClient) ReorderTrackLessons(ctx context.Context, in *Reord
 	return out, nil
 }
 
+func (c *courseServiceClient) GenerateUserPlan(ctx context.Context, in *GenerateUserPlanRequest, opts ...grpc.CallOption) (*GenerateUserPlanResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(GenerateUserPlanResponse)
+	err := c.cc.Invoke(ctx, CourseService_GenerateUserPlan_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *courseServiceClient) GetUserTracks(ctx context.Context, in *GetUserTracksRequest, opts ...grpc.CallOption) (*GetUserTracksResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(GetUserTracksResponse)
+	err := c.cc.Invoke(ctx, CourseService_GetUserTracks_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *courseServiceClient) AddUserTrack(ctx context.Context, in *AddUserTrackRequest, opts ...grpc.CallOption) (*AddUserTrackResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(AddUserTrackResponse)
+	err := c.cc.Invoke(ctx, CourseService_AddUserTrack_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *courseServiceClient) RemoveUserTrack(ctx context.Context, in *RemoveUserTrackRequest, opts ...grpc.CallOption) (*RemoveUserTrackResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(RemoveUserTrackResponse)
+	err := c.cc.Invoke(ctx, CourseService_RemoveUserTrack_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *courseServiceClient) ListVocabulary(ctx context.Context, in *ListVocabularyRequest, opts ...grpc.CallOption) (*ListVocabularyResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(ListVocabularyResponse)
@@ -786,6 +837,13 @@ type CourseServiceServer interface {
 	RemoveLessonFromTrack(context.Context, *RemoveLessonFromTrackRequest) (*RemoveLessonFromTrackResponse, error)
 	// ReorderTrackLessons атомарно переустанавливает порядок уроков в треке
 	ReorderTrackLessons(context.Context, *ReorderTrackLessonsRequest) (*ReorderTrackLessonsResponse, error)
+	// === Персональный план треков (Phase 8) ===
+	// Подбор и материализация треков под профиль (level + goal) в user_tracks.
+	// См. docs/tasks/phase-8-personalized-track-assignment.md.
+	GenerateUserPlan(context.Context, *GenerateUserPlanRequest) (*GenerateUserPlanResponse, error)
+	GetUserTracks(context.Context, *GetUserTracksRequest) (*GetUserTracksResponse, error)
+	AddUserTrack(context.Context, *AddUserTrackRequest) (*AddUserTrackResponse, error)
+	RemoveUserTrack(context.Context, *RemoveUserTrackRequest) (*RemoveUserTrackResponse, error)
 	// === Vocabulary (Phase 2) ===
 	// Словарь — слова с переводами для match_pairs / fill_blank / listening.
 	ListVocabulary(context.Context, *ListVocabularyRequest) (*ListVocabularyResponse, error)
@@ -925,6 +983,18 @@ func (UnimplementedCourseServiceServer) RemoveLessonFromTrack(context.Context, *
 }
 func (UnimplementedCourseServiceServer) ReorderTrackLessons(context.Context, *ReorderTrackLessonsRequest) (*ReorderTrackLessonsResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method ReorderTrackLessons not implemented")
+}
+func (UnimplementedCourseServiceServer) GenerateUserPlan(context.Context, *GenerateUserPlanRequest) (*GenerateUserPlanResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method GenerateUserPlan not implemented")
+}
+func (UnimplementedCourseServiceServer) GetUserTracks(context.Context, *GetUserTracksRequest) (*GetUserTracksResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method GetUserTracks not implemented")
+}
+func (UnimplementedCourseServiceServer) AddUserTrack(context.Context, *AddUserTrackRequest) (*AddUserTrackResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method AddUserTrack not implemented")
+}
+func (UnimplementedCourseServiceServer) RemoveUserTrack(context.Context, *RemoveUserTrackRequest) (*RemoveUserTrackResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method RemoveUserTrack not implemented")
 }
 func (UnimplementedCourseServiceServer) ListVocabulary(context.Context, *ListVocabularyRequest) (*ListVocabularyResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method ListVocabulary not implemented")
@@ -1598,6 +1668,78 @@ func _CourseService_ReorderTrackLessons_Handler(srv interface{}, ctx context.Con
 	return interceptor(ctx, in, info, handler)
 }
 
+func _CourseService_GenerateUserPlan_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GenerateUserPlanRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).GenerateUserPlan(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_GenerateUserPlan_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).GenerateUserPlan(ctx, req.(*GenerateUserPlanRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CourseService_GetUserTracks_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetUserTracksRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).GetUserTracks(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_GetUserTracks_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).GetUserTracks(ctx, req.(*GetUserTracksRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CourseService_AddUserTrack_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AddUserTrackRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).AddUserTrack(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_AddUserTrack_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).AddUserTrack(ctx, req.(*AddUserTrackRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CourseService_RemoveUserTrack_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RemoveUserTrackRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).RemoveUserTrack(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_RemoveUserTrack_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).RemoveUserTrack(ctx, req.(*RemoveUserTrackRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _CourseService_ListVocabulary_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ListVocabularyRequest)
 	if err := dec(in); err != nil {
@@ -2078,6 +2220,22 @@ var CourseService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ReorderTrackLessons",
 			Handler:    _CourseService_ReorderTrackLessons_Handler,
+		},
+		{
+			MethodName: "GenerateUserPlan",
+			Handler:    _CourseService_GenerateUserPlan_Handler,
+		},
+		{
+			MethodName: "GetUserTracks",
+			Handler:    _CourseService_GetUserTracks_Handler,
+		},
+		{
+			MethodName: "AddUserTrack",
+			Handler:    _CourseService_AddUserTrack_Handler,
+		},
+		{
+			MethodName: "RemoveUserTrack",
+			Handler:    _CourseService_RemoveUserTrack_Handler,
 		},
 		{
 			MethodName: "ListVocabulary",
