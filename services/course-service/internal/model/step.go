@@ -24,6 +24,9 @@ const (
 	StepTypeFillBlank  StepType = "fill_blank"
 	StepTypeTapWords   StepType = "tap_words"
 	StepTypeStory      StepType = "story"
+
+	// Canonical package activity. Its subtype and payload live in content.
+	StepTypeActivity StepType = "activity"
 )
 
 // IsInteractive возвращает true для шагов, отправляющих ответ через
