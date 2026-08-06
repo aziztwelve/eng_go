@@ -42,16 +42,32 @@ def compile_activity(activity, lesson):
     words = lesson_words(lesson)
     phrases = [item["phrase"] for item in lesson.get("target_language", {}).get("phrases", [])]
 
-    if activity_type in {"warm_up", "context_story"}:
-        prompt = activity["content"].get("prompt") or activity["content"].get("story") or activity["instructions"]
-        correct = words[0] if words else "English"
-        options = unique([correct, *words[1:4], "English"])
+    if activity_type == "warm_up":
+        title_words = [word.strip(".,!?…").lower() for word in lesson["title"].split()]
+        correct = next((word for word in words if word.lower() in title_words), words[0] if words else "English")
+        options = unique([correct, *[word for word in words if word != correct][:3]])
         return "quiz", {
             **source,
-            "instruction": activity["instructions"],
-            "question": prompt,
+            "instruction": "Look at the lesson title and choose a word you will learn.",
+            "question": f"Which word is in the lesson title: '{lesson['title']}'?",
             "options": [{"text": option, "is_correct": option == correct} for option in options],
-            "explanation": activity["success_criteria"][0],
+            "explanation": f"'{correct}' is one of the key words for this lesson.",
+        }
+
+    if activity_type == "context_story":
+        mission = lesson.get("mission") or activity["content"].get("story") or activity["instructions"]
+        options = unique([
+            mission,
+            "Learn five new words.",
+            "Complete a long written essay.",
+            "Talk about a different topic.",
+        ])
+        return "quiz", {
+            **source,
+            "instruction": "Read the situation, then choose the lesson mission.",
+            "question": "What is your mission in this lesson?",
+            "options": [{"text": option, "is_correct": option == mission} for option in options],
+            "explanation": activity["content"].get("story", ""),
         }
 
     if activity_type == "vocabulary_input":
