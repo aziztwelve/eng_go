@@ -27,6 +27,98 @@ def stable_id(*parts):
     return str(uuid.uuid5(NAMESPACE, ":".join(parts)))
 
 
+def lesson_words(lesson):
+    return [item["word"] for item in lesson.get("target_language", {}).get("vocabulary", [])]
+
+
+def unique(values):
+    return list(dict.fromkeys(value for value in values if value))
+
+
+def compile_activity(activity, lesson):
+    """Compile canonical activity content into an existing mobile step type."""
+    activity_type = activity["type"]
+    source = {"activity_type": activity_type, "source_activity": activity}
+    words = lesson_words(lesson)
+    phrases = [item["phrase"] for item in lesson.get("target_language", {}).get("phrases", [])]
+
+    if activity_type in {"warm_up", "context_story"}:
+        prompt = activity["content"].get("prompt") or activity["content"].get("story") or activity["instructions"]
+        correct = words[0] if words else "English"
+        options = unique([correct, *words[1:4], "English"])
+        return "quiz", {
+            **source,
+            "instruction": activity["instructions"],
+            "question": prompt,
+            "options": [{"text": option, "is_correct": option == correct} for option in options],
+            "explanation": activity["success_criteria"][0],
+        }
+
+    if activity_type == "vocabulary_input":
+        pairs = []
+        for item in lesson.get("target_language", {}).get("vocabulary", []):
+            pairs.append({"left": item["word"], "right": item.get("meaning") or item["word"]})
+        return "match_pairs", {
+            **source,
+            "instruction": "Match each word with its meaning.",
+            "pairs": pairs,
+        }
+
+    if activity_type == "listening":
+        questions = activity["content"].get("questions", [])
+        question = questions[0] if questions else {"question": activity["instructions"], "answer": ""}
+        correct = question.get("answer", "")
+        options = unique([correct, *[item.get("answer", "") for item in questions[1:]], *phrases[:2]])
+        return "quiz", {
+            **source,
+            "instruction": activity["instructions"],
+            "question": question.get("question", activity["instructions"]),
+            "options": [{"text": option, "is_correct": option == correct} for option in options],
+            "explanation": activity["content"].get("script", ""),
+        }
+
+    if activity_type in {"repeat_after_me", "controlled_speaking"}:
+        models = activity["content"].get("models") or activity["content"].get("frames") or phrases
+        sentence = models[0] if models else ""
+        return "tap_words", {
+            **source,
+            "instruction": "Put the words in the correct order.",
+            "audio_text": sentence,
+            "word_bank": sentence.split(),
+            "correct_words": sentence.split(),
+        }
+
+    if activity_type == "pronunciation_drill":
+        sentence = (activity["content"].get("models") or phrases or [""])[0]
+        tokens = sentence.split()
+        answer = tokens[-1] if tokens else ""
+        template = " ".join(tokens[:-1] + ["___"]) if answer else sentence
+        return "fill_blank", {
+            **source,
+            "instruction": "Complete the phrase, then say it aloud.",
+            "sentence_template": template,
+            "correct_answer": answer,
+            "options": unique([answer, *words[:3]]),
+            "explanation": activity["content"].get("tip", ""),
+        }
+
+    if activity_type == "guided_dialogue":
+        dialogue = activity["content"].get("dialogue", [])
+        current = dialogue[0] if dialogue else {}
+        correct = current.get("text", "")
+        options = unique([correct, *[line.get("text", "") for line in dialogue[1:4]]])
+        return "quiz", {
+            **source,
+            "instruction": "Choose the next line in the dialogue.",
+            "question": f"What does {current.get('speaker', 'the speaker')} say?",
+            "options": [{"text": option, "is_correct": option == correct} for option in options],
+            "explanation": activity["content"].get("support", ""),
+        }
+
+    # AI roleplay and final voice mission keep their dedicated mobile UI.
+    return "activity", {**source, **activity}
+
+
 def generate_canonical_package_sql(data):
     package = data["package"]
     package_id = package["package_id"]
@@ -69,13 +161,13 @@ def generate_canonical_package_sql(data):
 
             for activity in lesson["lesson_flow"]:
                 activity_id = stable_id(package_id, track["track_id"], lesson["lesson_id"], activity["activity_id"])
-                payload = {"activity_type": activity["type"], **activity}
+                step_type, payload = compile_activity(activity, lesson)
                 lines.append(
                     "INSERT INTO courses.steps "
                     "(id, lesson_id, type, title, content, order_index, created_at, updated_at)\n"
-                    f"VALUES ('{activity_id}', '{lesson_id}', 'activity', '{esc(activity['title'])}', "
+                    f"VALUES ('{activity_id}', '{lesson_id}', '{step_type}', '{esc(activity['title'])}', "
                     f"'{json_sql(payload)}'::jsonb, {activity['order'] - 1}, NOW(), NOW())\n"
-                    "ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, content = EXCLUDED.content, "
+                    "ON CONFLICT (id) DO UPDATE SET type = EXCLUDED.type, title = EXCLUDED.title, content = EXCLUDED.content, "
                     "order_index = EXCLUDED.order_index, updated_at = NOW();"
                 )
 

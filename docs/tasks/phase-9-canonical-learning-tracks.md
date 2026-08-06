@@ -24,6 +24,8 @@ assessment, adaptive learning, analytics, rewards и activity payloads долж�
 4. Сохранять source metadata трека и урока в JSONB, полный activity payload в `steps.content`, добавив `activity_type`.
 5. Отображать activity в mobile через общий renderer и завершать её текущим `progress/steps/:id/complete`.
 6. Не отправлять `activity` в step-validation-service: в первом срезе это display/complete flow.
+7. Преобразовать все activity с существующим эквивалентом в текущие interactive
+   step types; `activity` оставить только для AI roleplay и voice mission.
 
 ## Контракт activity content
 
