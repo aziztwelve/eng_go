@@ -13,6 +13,7 @@ from pathlib import Path
 
 
 NAMESPACE = uuid.UUID("6ba7b810-9dad-11d1-80b4-00c04fd430c8")
+TRANSLATIONS_PATH = Path(__file__).parent / "cache" / "a1_study_ru.json"
 
 
 def esc(value):
@@ -35,7 +36,13 @@ def unique(values):
     return list(dict.fromkeys(value for value in values if value))
 
 
-def compile_activity(activity, lesson):
+def load_translations():
+    if not TRANSLATIONS_PATH.exists():
+        return {}
+    return json.loads(TRANSLATIONS_PATH.read_text(encoding="utf-8"))
+
+
+def compile_activity(activity, lesson, translations):
     """Compile canonical activity content into an existing mobile step type."""
     activity_type = activity["type"]
     source = {"activity_type": activity_type, "source_activity": activity}
@@ -48,24 +55,24 @@ def compile_activity(activity, lesson):
         options = unique([correct, *[word for word in words if word != correct][:3]])
         return "quiz", {
             **source,
-            "instruction": "Look at the lesson title and choose a word you will learn.",
-            "question": f"Which word is in the lesson title: '{lesson['title']}'?",
+            "instruction": "Посмотрите на название урока и выберите слово, которое будете изучать.",
+            "question": f"Какое слово есть в названии урока «{lesson['title']}»?",
             "options": [{"text": option, "is_correct": option == correct} for option in options],
-            "explanation": f"'{correct}' is one of the key words for this lesson.",
+            "explanation": f"«{correct}» - одно из ключевых слов этого урока.",
         }
 
     if activity_type == "context_story":
         mission = lesson.get("mission") or activity["content"].get("story") or activity["instructions"]
         options = unique([
             mission,
-            "Learn five new words.",
-            "Complete a long written essay.",
-            "Talk about a different topic.",
+            "Выучить пять новых слов.",
+            "Написать большое эссе.",
+            "Поговорить на другую тему.",
         ])
         return "quiz", {
             **source,
-            "instruction": "Read the situation, then choose the lesson mission.",
-            "question": "What is your mission in this lesson?",
+            "instruction": "Прочитайте ситуацию и выберите цель урока.",
+            "question": "Какая у вас цель в этом уроке?",
             "options": [{"text": option, "is_correct": option == mission} for option in options],
             "explanation": activity["content"].get("story", ""),
         }
@@ -73,10 +80,14 @@ def compile_activity(activity, lesson):
     if activity_type == "vocabulary_input":
         pairs = []
         for item in lesson.get("target_language", {}).get("vocabulary", []):
-            pairs.append({"left": item["word"], "right": item.get("meaning") or item["word"]})
+            word = item["word"]
+            pairs.append({
+                "left": word,
+                "right": translations.get(word.lower(), f"Значение слова «{word}»"),
+            })
         return "match_pairs", {
             **source,
-            "instruction": "Match each word with its meaning.",
+            "instruction": "Соедините английское слово с его значением.",
             "pairs": pairs,
         }
 
@@ -98,7 +109,7 @@ def compile_activity(activity, lesson):
         sentence = models[0] if models else ""
         return "tap_words", {
             **source,
-            "instruction": "Put the words in the correct order.",
+            "instruction": "Составьте предложение из слов в правильном порядке.",
             "audio_text": sentence,
             "word_bank": sentence.split(),
             "correct_words": sentence.split(),
@@ -111,7 +122,7 @@ def compile_activity(activity, lesson):
         template = " ".join(tokens[:-1] + ["___"]) if answer else sentence
         return "fill_blank", {
             **source,
-            "instruction": "Complete the phrase, then say it aloud.",
+            "instruction": "Вставьте пропущенное слово, затем произнесите фразу вслух.",
             "sentence_template": template,
             "correct_answer": answer,
             "options": unique([answer, *words[:3]]),
@@ -125,8 +136,8 @@ def compile_activity(activity, lesson):
         options = unique([correct, *[line.get("text", "") for line in dialogue[1:4]]])
         return "quiz", {
             **source,
-            "instruction": "Choose the next line in the dialogue.",
-            "question": f"What does {current.get('speaker', 'the speaker')} say?",
+            "instruction": "Выберите следующую реплику в диалоге.",
+            "question": f"Что говорит {current.get('speaker', 'собеседник')}?",
             "options": [{"text": option, "is_correct": option == correct} for option in options],
             "explanation": activity["content"].get("support", ""),
         }
@@ -139,6 +150,7 @@ def generate_canonical_package_sql(data):
     package = data["package"]
     package_id = package["package_id"]
     goal = package["goal"]
+    translations = load_translations()
     lines = [
         "-- Canonical learning package seed. Generated by import_tracks_from_json.py.",
         f"-- Package: {package_id}",
@@ -177,7 +189,7 @@ def generate_canonical_package_sql(data):
 
             for activity in lesson["lesson_flow"]:
                 activity_id = stable_id(package_id, track["track_id"], lesson["lesson_id"], activity["activity_id"])
-                step_type, payload = compile_activity(activity, lesson)
+                step_type, payload = compile_activity(activity, lesson, translations)
                 lines.append(
                     "INSERT INTO courses.steps "
                     "(id, lesson_id, type, title, content, order_index, created_at, updated_at)\n"
