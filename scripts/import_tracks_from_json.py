@@ -167,7 +167,15 @@ def compile_pilot_activity(activity, lesson, translations):
             "source_activity": activity,
         }
 
-    if activity_type in {"listening", "repeat_after_me", "pronunciation_drill", "guided_dialogue", "ai_roleplay", "real_world_mission"}:
+    if activity_type == "listening":
+        return "listening", {
+            "instruction": "Прослушайте короткий диалог и напишите то, что услышали.",
+            "audio_text": activity["content"].get("script", ""),
+            "language": "en",
+            "source_activity": activity,
+        }
+
+    if activity_type in {"repeat_after_me", "pronunciation_drill", "guided_dialogue", "ai_roleplay", "real_world_mission"}:
         return "activity", {
             "activity_type": activity_type,
             "source_activity": activity,
