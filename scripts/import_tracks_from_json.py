@@ -146,7 +146,62 @@ def compile_activity(activity, lesson, translations):
     return "activity", {**source, **activity}
 
 
-def generate_canonical_package_sql(data):
+def compile_pilot_activity(activity, lesson, translations):
+    """T01 pilot: use proven steps where they fit and preserve real speaking work."""
+    activity_type = activity["type"]
+    phrases = [item["phrase"] for item in lesson.get("target_language", {}).get("phrases", [])]
+
+    if activity_type in {"warm_up", "vocabulary_input"}:
+        return compile_activity(activity, lesson, translations)
+
+    if activity_type == "context_story":
+        return "text", {
+            "body": (
+                "<h2>Ситуация</h2>"
+                "<p>Вы в короткой учебной ситуации. Сначала послушайте модель, "
+                "затем используйте ключевые слова и фразы этого урока.</p>"
+                "<p><strong>Ваша задача:</strong> понять ситуацию и подготовиться "
+                "к короткому ответу по-английски.</p>"
+            ),
+            "reading_time_minutes": 1,
+            "source_activity": activity,
+        }
+
+    if activity_type in {"listening", "repeat_after_me", "pronunciation_drill", "guided_dialogue", "ai_roleplay", "real_world_mission"}:
+        return "activity", {
+            "activity_type": activity_type,
+            "source_activity": activity,
+            "target_phrases": phrases,
+            "target_vocabulary": lesson_words(lesson),
+            **activity,
+        }
+
+    if activity_type == "controlled_speaking":
+        models = activity["content"].get("frames") or []
+        sentence = models[0] if models else ""
+        # Alternate the two established sentence-builders across the pilot lessons.
+        if lesson["lesson_number"] % 2 == 0:
+            tokens = sentence.split()
+            answer = tokens[-1] if tokens else ""
+            return "fill_blank", {
+                "instruction": "Вставьте пропущенное слово, затем произнесите фразу вслух.",
+                "sentence_template": " ".join(tokens[:-1] + ["___"]),
+                "correct_answer": answer,
+                "options": unique([answer, *lesson_words(lesson)[:3]]),
+                "source_activity": activity,
+            }
+        return "tap_words", {
+            "instruction": "Составьте фразу из слов, затем произнесите её вслух.",
+            "audio_text": sentence,
+            "word_bank": sentence.split(),
+            "correct_words": sentence.split(),
+            "source_activity": activity,
+        }
+
+    return compile_activity(activity, lesson, translations)
+
+
+def generate_canonical_package_sql(data, selected_track_id=None, pilot=False):
     package = data["package"]
     package_id = package["package_id"]
     goal = package["goal"]
@@ -158,6 +213,8 @@ def generate_canonical_package_sql(data):
     ]
 
     for track in data["tracks"]:
+        if selected_track_id and track["track_id"] != selected_track_id:
+            continue
         track_id = stable_id(package_id, track["track_id"])
         track_metadata = {key: value for key, value in track.items() if key != "lessons"}
         source_metadata = {"package": package, "track": track_metadata}
@@ -189,7 +246,8 @@ def generate_canonical_package_sql(data):
 
             for activity in lesson["lesson_flow"]:
                 activity_id = stable_id(package_id, track["track_id"], lesson["lesson_id"], activity["activity_id"])
-                step_type, payload = compile_activity(activity, lesson, translations)
+                compiler = compile_pilot_activity if pilot else compile_activity
+                step_type, payload = compiler(activity, lesson, translations)
                 lines.append(
                     "INSERT INTO courses.steps "
                     "(id, lesson_id, type, title, content, order_index, created_at, updated_at)\n"
@@ -209,14 +267,14 @@ def generate_canonical_package_sql(data):
     return "\n\n".join(lines) + "\n"
 
 
-def generate_sql_from_json(json_file_path):
+def generate_sql_from_json(json_file_path, selected_track_id=None, pilot=False):
     """Генерирует SQL для импорта трека из JSON."""
     
     with open(json_file_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     
     if "package" in data and "tracks" in data:
-        return generate_canonical_package_sql(data)
+        return generate_canonical_package_sql(data, selected_track_id, pilot)
 
     track_info = data['track_info']
     lessons = data['lessons']
@@ -356,6 +414,8 @@ def main():
     
     args = sys.argv[1:]
     output = None
+    selected_track_id = None
+    pilot = False
     if "--output" in args:
         index = args.index("--output")
         if index == len(args) - 1:
@@ -363,6 +423,16 @@ def main():
             sys.exit(1)
         output = Path(args[index + 1])
         del args[index:index + 2]
+    if "--track" in args:
+        index = args.index("--track")
+        if index == len(args) - 1:
+            print("ERROR: --track requires a track ID", file=sys.stderr)
+            sys.exit(1)
+        selected_track_id = args[index + 1]
+        del args[index:index + 2]
+    if "--pilot" in args:
+        pilot = True
+        args.remove("--pilot")
     json_files = args
 
     if output and len(json_files) != 1:
@@ -373,7 +443,10 @@ def main():
         if not Path(json_files[0]).exists():
             print(f"ERROR: File not found: {json_files[0]}", file=sys.stderr)
             sys.exit(1)
-        output.write_text(generate_sql_from_json(json_files[0]), encoding="utf-8")
+        output.write_text(
+            generate_sql_from_json(json_files[0], selected_track_id, pilot),
+            encoding="utf-8",
+        )
         print(f"Written: {output}")
         return
     
