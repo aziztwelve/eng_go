@@ -8,6 +8,16 @@ import (
 	"github.com/elearning/ai-service/internal/providers"
 )
 
+type fakeSTTTranscriber struct {
+	text string
+}
+
+func (f fakeSTTTranscriber) Name() string { return "fake-google-stt" }
+
+func (f fakeSTTTranscriber) Transcribe(_ context.Context, _ []byte, _ providers.STTOptions) (string, float64, error) {
+	return f.text, 0.95, nil
+}
+
 func TestScorePronunciation_Perfect(t *testing.T) {
 	score, words, _ := scorePronunciation("Hello world", "hello world")
 	if score < 0.99 {
@@ -80,6 +90,24 @@ func TestCheckPronunciation_HappyPath(t *testing.T) {
 	}
 	if len(attempt.WordScores) != 2 {
 		t.Errorf("expected 2 word scores")
+	}
+}
+
+func TestCheckPronunciation_PrefersConfiguredSTT(t *testing.T) {
+	h := newHarness()
+	h.provider.stt = func(_ []byte, _ providers.TranscribeOptions) (*providers.TranscribeResponse, error) {
+		return nil, errors.New("general provider must not be used")
+	}
+	h.svc.sttTranscriber = fakeSTTTranscriber{text: "hello world"}
+
+	attempt, err := h.svc.CheckPronunciation(context.Background(), CheckPronunciationInput{
+		UserID: "u1", TargetText: "hello world", Audio: bytesPattern(1024), AudioMime: "audio/m4a", Language: "en",
+	})
+	if err != nil {
+		t.Fatalf("CheckPronunciation: %v", err)
+	}
+	if attempt.TranscribedText != "hello world" {
+		t.Fatalf("expected Google STT transcription, got %q", attempt.TranscribedText)
 	}
 }
 

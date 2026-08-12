@@ -20,7 +20,8 @@ type CheckPronunciationInput struct {
 	Language   string
 }
 
-// CheckPronunciation — STT через provider.Transcribe + word-level
+// CheckPronunciation — предпочитает отдельный Google STT, если он настроен;
+// иначе использует общий provider.Transcribe. Затем выполняет word-level
 // alignment (Levenshtein-on-words). На MVP без MinIO upload —
 // audio_url остаётся пустым.
 //
@@ -42,15 +43,30 @@ func (s *Service) CheckPronunciation(ctx context.Context, in CheckPronunciationI
 		return nil, err
 	}
 
-	stt, err := s.provider.Transcribe(ctx, in.Audio, providers.TranscribeOptions{
-		Language:  in.Language,
-		AudioMime: in.AudioMime,
-	})
-	if err != nil {
-		return nil, fmt.Errorf("%w: %v", ErrProviderFailed, err)
+	transcribedText := ""
+	costUSD := 0.0
+	if s.sttTranscriber != nil {
+		text, _, err := s.sttTranscriber.Transcribe(ctx, in.Audio, providers.STTOptions{
+			Language: in.Language,
+			MimeType: in.AudioMime,
+		})
+		if err != nil {
+			return nil, fmt.Errorf("%w: %v", ErrProviderFailed, err)
+		}
+		transcribedText = text
+	} else {
+		stt, err := s.provider.Transcribe(ctx, in.Audio, providers.TranscribeOptions{
+			Language:  in.Language,
+			AudioMime: in.AudioMime,
+		})
+		if err != nil {
+			return nil, fmt.Errorf("%w: %v", ErrProviderFailed, err)
+		}
+		transcribedText = stt.Text
+		costUSD = stt.CostUSD
 	}
 
-	score, wordScores, feedback := scorePronunciation(in.TargetText, stt.Text)
+	score, wordScores, feedback := scorePronunciation(in.TargetText, transcribedText)
 
 	var stepID *string
 	if in.StepID != "" {
@@ -63,12 +79,12 @@ func (s *Service) CheckPronunciation(ctx context.Context, in CheckPronunciationI
 		StepID:          stepID,
 		TargetText:      in.TargetText,
 		AudioMime:       in.AudioMime,
-		TranscribedText: stt.Text,
+		TranscribedText: transcribedText,
 		Language:        in.Language,
 		AccuracyScore:   score,
 		WordScores:      wordScores,
 		Feedback:        feedback,
-		CostUSD:         stt.CostUSD,
+		CostUSD:         costUSD,
 	}
 	if err := s.pronunciation.Create(ctx, attempt); err != nil {
 		return nil, fmt.Errorf("save attempt: %w", err)
@@ -85,11 +101,11 @@ func (s *Service) CheckPronunciation(ctx context.Context, in CheckPronunciationI
 // scorePronunciation — простой word-level alignment.
 //
 // Алгоритм MVP:
-//   1. Нормализуем target и transcribed (lowercase + strip пунктуации).
-//   2. Сплитим на слова.
-//   3. Для каждого target-слова находим best match в transcribed
-//      по Levenshtein-distance / max(len). 1.0 = exact match.
-//   4. Average — accuracy_score.
+//  1. Нормализуем target и transcribed (lowercase + strip пунктуации).
+//  2. Сплитим на слова.
+//  3. Для каждого target-слова находим best match в transcribed
+//     по Levenshtein-distance / max(len). 1.0 = exact match.
+//  4. Average — accuracy_score.
 //
 // Реальный pronunciation check (phonetic alignment) — Phase 5.X-real.
 func scorePronunciation(target, transcribed string) (float64, []model.WordScore, string) {
