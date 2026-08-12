@@ -290,10 +290,76 @@ func TestStory_PartialChoices(t *testing.T) {
 
 func TestRegistry_AllTypesRegistered(t *testing.T) {
 	r := NewDefaultRegistry()
-	for _, tp := range []string{"quiz", "translate", "match_pairs", "listening", "fill_blank", "tap_words", "story"} {
+	for _, tp := range []string{"quiz", "translate", "match_pairs", "match_pairs_voice", "listening", "listening_shadowing", "fill_blank", "tap_words", "story", "choose_definition", "listen_choose_word", "missing_word", "complete_chat"} {
 		if _, ok := r[tp]; !ok {
 			t.Fatalf("type %q not registered", tp)
 		}
+	}
+}
+
+func TestCompleteChat(t *testing.T) {
+	content := raw(t, map[string]interface{}{
+		"dialogue": []map[string]string{{"speaker": "Anna", "text": "What do you do today?"}},
+		"options": []map[string]interface{}{
+			{"id": "A", "text": "I go to school.", "is_correct": true},
+			{"id": "B", "text": "I travel.", "is_correct": false},
+		},
+		"explanation": "The answer completes the dialogue.",
+	})
+	got, err := (CompleteChatValidator{}).Validate(content, raw(t, map[string]string{"option_id": "A"}))
+	if err != nil || !got.IsCorrect {
+		t.Fatalf("expected correct answer, got result=%+v err=%v", got, err)
+	}
+}
+
+func TestMissingWord(t *testing.T) {
+	content := raw(t, map[string]string{
+		"sentence_template": "I ___ coffee every morning.",
+		"correct_answer":    "drink",
+		"hint_prefix":       "dr",
+		"explanation":       "The missing word is drink.",
+	})
+	got, err := (MissingWordValidator{}).Validate(content, raw(t, map[string]string{"text": "drink"}))
+	if err != nil || !got.IsCorrect {
+		t.Fatalf("expected correct answer, got result=%+v err=%v", got, err)
+	}
+}
+
+func TestListenChooseWord(t *testing.T) {
+	content := raw(t, map[string]interface{}{
+		"sentence_template": "I ___ coffee every morning.",
+		"audio_text":        "I drink coffee every morning.",
+		"language":          "en",
+		"options": []map[string]interface{}{
+			{"id": "A", "audio_text": "drink", "is_correct": true},
+			{"id": "B", "audio_text": "eat", "is_correct": false},
+		},
+		"explanation": "The missing word is drink.",
+	})
+	got, err := (ListenChooseWordValidator{}).Validate(content, raw(t, map[string]string{"option_id": "A"}))
+	if err != nil || !got.IsCorrect {
+		t.Fatalf("expected correct answer, got result=%+v err=%v", got, err)
+	}
+}
+
+func TestChooseDefinition(t *testing.T) {
+	content := raw(t, map[string]interface{}{
+		"word": "serendipity",
+		"options": []map[string]interface{}{
+			{"id": "A", "text": "A fortunate discovery by chance", "is_correct": true},
+			{"id": "B", "text": "A formal farewell", "is_correct": false},
+		},
+		"explanation": "Serendipity is a fortunate discovery by chance.",
+	})
+
+	got, err := (ChooseDefinitionValidator{}).Validate(content, raw(t, map[string]int{"index": 0}))
+	if err != nil || !got.IsCorrect || got.Score != 1 {
+		t.Fatalf("expected correct answer, got result=%+v err=%v", got, err)
+	}
+
+	got, err = (ChooseDefinitionValidator{}).Validate(content, raw(t, map[string]int{"index": 1}))
+	if err != nil || got.IsCorrect || got.Score != 0 {
+		t.Fatalf("expected wrong answer, got result=%+v err=%v", got, err)
 	}
 }
 

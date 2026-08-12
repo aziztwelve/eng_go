@@ -18,12 +18,18 @@ const (
 	StepTypeAIWriting StepType = "ai_writing"
 
 	// Phase 2 — интерактивные форматы.
-	StepTypeTranslate  StepType = "translate"
-	StepTypeMatchPairs StepType = "match_pairs"
-	StepTypeListening  StepType = "listening"
-	StepTypeFillBlank  StepType = "fill_blank"
-	StepTypeTapWords   StepType = "tap_words"
-	StepTypeStory      StepType = "story"
+	StepTypeTranslate          StepType = "translate"
+	StepTypeMatchPairs         StepType = "match_pairs"
+	StepTypeMatchPairsVoice    StepType = "match_pairs_voice"
+	StepTypeListening          StepType = "listening"
+	StepTypeListeningShadowing StepType = "listening_shadowing"
+	StepTypeFillBlank          StepType = "fill_blank"
+	StepTypeTapWords           StepType = "tap_words"
+	StepTypeStory              StepType = "story"
+	StepTypeChooseDefinition   StepType = "choose_definition"
+	StepTypeListenChooseWord   StepType = "listen_choose_word"
+	StepTypeMissingWord        StepType = "missing_word"
+	StepTypeCompleteChat       StepType = "complete_chat"
 
 	// Canonical package activity. Its subtype and payload live in content.
 	StepTypeActivity StepType = "activity"
@@ -37,10 +43,16 @@ func (t StepType) IsInteractive() bool {
 	case StepTypeQuiz,
 		StepTypeTranslate,
 		StepTypeMatchPairs,
+		StepTypeMatchPairsVoice,
 		StepTypeListening,
+		StepTypeListeningShadowing,
 		StepTypeFillBlank,
 		StepTypeTapWords,
-		StepTypeStory:
+		StepTypeStory,
+		StepTypeChooseDefinition,
+		StepTypeListenChooseWord,
+		StepTypeMissingWord,
+		StepTypeCompleteChat:
 		return true
 	}
 	return false

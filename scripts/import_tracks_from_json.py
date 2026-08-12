@@ -42,6 +42,53 @@ def load_translations():
     return json.loads(TRANSLATIONS_PATH.read_text(encoding="utf-8"))
 
 
+def normalize_track_import_v2(data):
+    """Convert the stable authoring contract into the legacy SQL import shape."""
+    track = data["track"]
+    native_language = track["native_language"]
+    title = track["title"].get(native_language) or track["title"].get("en")
+    description = track["description"].get(native_language) or track["description"].get("en")
+    lessons = []
+    for lesson in data["lessons"]:
+        lesson_title = lesson["title"].get(native_language) or lesson["title"].get("en")
+        steps = []
+        for step in lesson["steps"]:
+            step_title = step["title"].get(native_language) or step["title"].get("en")
+            instructions = step["instructions"].get(native_language) or step["instructions"].get("en")
+            content = {**step["data"], "instruction": instructions}
+            if step["type"] == "activity":
+                # The mobile activity renderer expects the canonical activity envelope.
+                content = {
+                    "activity_id": step["id"],
+                    "activity_type": step["data"]["activity_type"],
+                    "instructions": instructions,
+                    "estimated_seconds": step["estimated_seconds"],
+                    "success_criteria": step["data"].get("success_criteria", []),
+                    "content": {
+                        key: value
+                        for key, value in step["data"].items()
+                        if key not in {"activity_type", "success_criteria"}
+                    },
+                }
+            steps.append({"order_index": step["order"], "type": step["type"], "title": step_title, "content": content})
+        lessons.append({
+            "title": lesson_title,
+            "description": lesson["objective"].get(native_language) or lesson["objective"].get("en"),
+            "order_index": lesson["order"],
+            "estimated_duration_minutes": max(1, lesson["estimated_seconds"] // 60),
+            "steps": steps,
+        })
+    return {
+        "track_info": {
+            "code": track["code"], "title": title, "description": description,
+            "language": track["target_language"], "level": track["level"],
+            "goal": track["goal"], "track_type": track["track_type"],
+        },
+        "lessons": lessons,
+        "metadata": {"schema_version": data["schema_version"], "native_language": native_language, "tags": track.get("tags", [])},
+    }
+
+
 def compile_activity(activity, lesson, translations):
     """Compile canonical activity content into an existing mobile step type."""
     activity_type = activity["type"]
@@ -410,6 +457,9 @@ def generate_sql_from_json(json_file_path, selected_track_id=None, pilot=False, 
     
     with open(json_file_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
+
+    if data.get("schema_version") == "lingoiq.track.v2":
+        data = normalize_track_import_v2(data)
     
     if "package" in data and "tracks" in data:
         return generate_canonical_package_sql(data, selected_track_id, pilot, generated_pilot)
@@ -425,8 +475,8 @@ def generate_sql_from_json(json_file_path, selected_track_id=None, pilot=False, 
     sql_statements.append(f"""
 -- Трек: {track_info['title']}
 INSERT INTO courses.learning_tracks (
-    id, code, title, description, language, level, 
-    track_type, is_published, sort_order, created_at, updated_at
+    id, code, title, description, language, level,
+    track_type, motivation, is_published, sort_order, created_at, updated_at
 ) VALUES (
     '{track_id}',
     '{track_info['code']}',
@@ -435,6 +485,7 @@ INSERT INTO courses.learning_tracks (
     '{track_info['language']}',
     '{track_info['level']}',
     '{track_info['track_type']}',
+    ARRAY['{track_info['goal']}']::text[],
     true,
     0,
     NOW(),
@@ -442,6 +493,7 @@ INSERT INTO courses.learning_tracks (
 ) ON CONFLICT (code) DO UPDATE SET
     title = EXCLUDED.title,
     description = EXCLUDED.description,
+    motivation = EXCLUDED.motivation,
     updated_at = NOW()
 RETURNING id;
 """)

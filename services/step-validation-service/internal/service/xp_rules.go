@@ -10,17 +10,20 @@ import "github.com/elearning/step-validation-service/internal/model"
 // score >= 0.999 — perfect, для квиза дадим бонус.
 func xpForStep(stepType model.StepType, score float64) int {
 	switch stepType {
-	case model.StepTypeQuiz:
+	case model.StepTypeQuiz, model.StepTypeCompleteChat:
 		if score >= 0.999 {
 			return 30
 		}
 		return 20
-	case model.StepTypeListening, model.StepTypeStory:
+	case model.StepTypeListening, model.StepTypeListeningShadowing, model.StepTypeStory, model.StepTypeListenChooseWord:
 		return 20
 	case model.StepTypeTranslate,
 		model.StepTypeMatchPairs,
+		model.StepTypeMatchPairsVoice,
 		model.StepTypeFillBlank,
-		model.StepTypeTapWords:
+		model.StepTypeTapWords,
+		model.StepTypeChooseDefinition,
+		model.StepTypeMissingWord:
 		return 15
 	default:
 		return 10

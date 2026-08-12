@@ -51,13 +51,19 @@ type Registry map[string]Validator
 // (квиз + 6 phase-2). Можно подменять отдельные validator'ы в тестах.
 func NewDefaultRegistry() Registry {
 	return Registry{
-		"quiz":        QuizValidator{},
-		"translate":   TranslateValidator{},
-		"match_pairs": MatchPairsValidator{},
-		"listening":   ListeningValidator{},
-		"fill_blank":  FillBlankValidator{},
-		"tap_words":   TapWordsValidator{},
-		"story":       StoryValidator{},
+		"quiz":                QuizValidator{},
+		"translate":           TranslateValidator{},
+		"match_pairs":         MatchPairsValidator{},
+		"match_pairs_voice":   MatchPairsVoiceValidator{},
+		"listening":           ListeningValidator{},
+		"listening_shadowing": ListeningValidator{},
+		"fill_blank":          FillBlankValidator{},
+		"tap_words":           TapWordsValidator{},
+		"story":               StoryValidator{},
+		"choose_definition":   ChooseDefinitionValidator{},
+		"listen_choose_word":  ListenChooseWordValidator{},
+		"missing_word":        MissingWordValidator{},
+		"complete_chat":       CompleteChatValidator{},
 	}
 }
 
