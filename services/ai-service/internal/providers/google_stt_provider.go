@@ -189,7 +189,7 @@ func encodingFromMime(mime string) string {
 	case strings.Contains(m, "amr-wb") || strings.Contains(m, "amrwb"):
 		return "AMR_WB"
 	case strings.Contains(m, "3gpp") || strings.Contains(m, "3gp"):
-		return "AMR_NB"
+		return "AMR"
 	case strings.Contains(m, "amr"):
 		return "AMR"
 	case strings.Contains(m, "wav") || strings.Contains(m, "wave") || strings.Contains(m, "x-wav") || strings.Contains(m, "l16") || strings.Contains(m, "pcm"):
