@@ -109,6 +109,9 @@ func (p *GoogleSTTProvider) Transcribe(ctx context.Context, audio []byte, opts S
 	}
 	if opts.SampleRateHertz > 0 {
 		body.Config.SampleRateHertz = opts.SampleRateHertz
+	} else if body.Config.Encoding == "AMR" {
+		// Android 3GP low-quality recordings use AMR narrowband at 8 kHz.
+		body.Config.SampleRateHertz = 8000
 	}
 	body.Audio.Content = base64.StdEncoding.EncodeToString(audio)
 
