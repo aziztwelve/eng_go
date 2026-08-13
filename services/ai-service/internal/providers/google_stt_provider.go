@@ -32,7 +32,9 @@ type STTTranscriber interface {
 //
 // Endpoint: POST https://speech.googleapis.com/v1/speech:recognize?key=KEY
 // Тело: {config:{encoding, sampleRateHertz, languageCode, model,
-//        enableAutomaticPunctuation}, audio:{content: base64}}
+//
+//	enableAutomaticPunctuation}, audio:{content: base64}}
+//
 // Ответ: {results:[{alternatives:[{transcript, confidence}]}]}.
 //
 // Синхронный recognize — для коротких аудио (≤ 60 сек / 10 МБ), чего хватает
@@ -186,6 +188,8 @@ func encodingFromMime(mime string) string {
 	switch {
 	case strings.Contains(m, "amr-wb") || strings.Contains(m, "amrwb"):
 		return "AMR_WB"
+	case strings.Contains(m, "3gpp") || strings.Contains(m, "3gp"):
+		return "AMR_NB"
 	case strings.Contains(m, "amr"):
 		return "AMR"
 	case strings.Contains(m, "wav") || strings.Contains(m, "wave") || strings.Contains(m, "x-wav") || strings.Contains(m, "l16") || strings.Contains(m, "pcm"):
