@@ -2,6 +2,7 @@ package v1
 
 import (
 	"context"
+	"strings"
 
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -11,6 +12,29 @@ import (
 	"github.com/elearning/course-service/internal/repository"
 	coursev1 "github.com/elearning/shared/pkg/proto/course/v1"
 )
+
+// proficiencyLevelToTrackLevel маппит значения onboarding-профиля
+// (users.profiles.proficiency_level: beginner/a1/a2/b1/b2/just_for_fun) на
+// CEFR-уровень треков (learning_tracks.level: A1/A2/B1/B2/...).
+// Совпадает с логикой в course-service/seeds/008_personalized_tracks.sql.
+// Значения, уже являющиеся CEFR-кодом (A1, a1, ...), возвращаются как есть,
+// чтобы не ломать прямые вызовы с уровнем трека.
+func proficiencyLevelToTrackLevel(level string) string {
+	switch strings.ToLower(strings.TrimSpace(level)) {
+	case "beginner", "just_for_fun":
+		return "A1"
+	case "a1":
+		return "A1"
+	case "a2":
+		return "A2"
+	case "b1":
+		return "B1"
+	case "b2":
+		return "B2"
+	default:
+		return level
+	}
+}
 
 // ListTracks возвращает страницу треков с фильтрами.
 func (a *api) ListTracks(ctx context.Context, req *coursev1.ListTracksRequest) (*coursev1.ListTracksResponse, error) {
@@ -25,7 +49,7 @@ func (a *api) ListTracks(ctx context.Context, req *coursev1.ListTracksRequest) (
 		filters.Language = &v
 	}
 	if req.Level != nil {
-		v := req.Level.Value
+		v := proficiencyLevelToTrackLevel(req.Level.Value)
 		filters.Level = &v
 	}
 	if req.TrackType != nil {
