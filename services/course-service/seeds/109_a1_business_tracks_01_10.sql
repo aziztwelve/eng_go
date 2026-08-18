@@ -15,7 +15,7 @@ VALUES ('4c7ebf48-4849-5ccd-991b-b883c5b769c8', '32ec422d-a5f2-5e91-ad45-ac42830
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('8d3597ca-66e3-5efc-9b5f-2e50c7eb58b1', '32ec422d-a5f2-5e91-ad45-ac428306870b', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"name","right":"A simple workplace meaning of ''name''."},{"id":"P2","left":"work","right":"A simple workplace meaning of ''work''."},{"id":"P3","left":"company","right":"A simple workplace meaning of ''company''."},{"id":"P4","left":"job","right":"A simple workplace meaning of ''job''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('8d3597ca-66e3-5efc-9b5f-2e50c7eb58b1', '32ec422d-a5f2-5e91-ad45-ac428306870b', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"name","right":"the word used to call a person"},{"id":"P2","left":"work","right":"the job or tasks a person does"},{"id":"P3","left":"company","right":"a business where people work together"},{"id":"P4","left":"job","right":"the work a person does to earn money"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -31,7 +31,7 @@ VALUES ('48a6f3a1-58f8-5828-89d8-b90a3579262c', '32ec422d-a5f2-5e91-ad45-ac42830
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('62e87db4-48cb-5c53-84e3-f602926e0888', '32ec422d-a5f2-5e91-ad45-ac428306870b', 'Выберите рабочее значение', 'choose_definition', '{"word":"name","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''name''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''work''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''company''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''job''.","is_correct":false}],"explanation":"name: A simple workplace meaning of ''name''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('62e87db4-48cb-5c53-84e3-f602926e0888', '32ec422d-a5f2-5e91-ad45-ac428306870b', 'Выберите рабочее значение', 'choose_definition', '{"word":"name","language":"en","options":[{"id":"A","text":"the word used to call a person","is_correct":true},{"id":"B","text":"the job or tasks a person does","is_correct":false},{"id":"C","text":"a business where people work together","is_correct":false},{"id":"D","text":"the work a person does to earn money","is_correct":false}],"explanation":"name: the word used to call a person","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -83,7 +83,7 @@ VALUES ('c7320e69-2e14-5697-a1b9-ca340052ac5a', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('73040f45-b902-536b-8cd8-a96a00e8f20d', 'c7320e69-2e14-5697-a1b9-ca340052ac5a', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"company","right":"A simple workplace meaning of ''company''."},{"id":"P2","left":"job","right":"A simple workplace meaning of ''job''."},{"id":"P3","left":"team","right":"A simple workplace meaning of ''team''."},{"id":"P4","left":"office","right":"A simple workplace meaning of ''office''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('73040f45-b902-536b-8cd8-a96a00e8f20d', 'c7320e69-2e14-5697-a1b9-ca340052ac5a', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"company","right":"a business where people work together"},{"id":"P2","left":"job","right":"the work a person does to earn money"},{"id":"P3","left":"team","right":"a group of people who work together"},{"id":"P4","left":"office","right":"a room or building where people work"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -123,7 +123,7 @@ VALUES ('fec514b9-bbf0-54ee-aec5-bee66cda2198', '32c96112-142b-5742-b6ff-228ad0b
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('dcc5f9e0-483b-5fb5-a343-c118abad5e3c', '32c96112-142b-5742-b6ff-228ad0b30a75', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"job","right":"A simple workplace meaning of ''job''."},{"id":"P2","left":"team","right":"A simple workplace meaning of ''team''."},{"id":"P3","left":"office","right":"A simple workplace meaning of ''office''."},{"id":"P4","left":"manager","right":"A simple workplace meaning of ''manager''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('dcc5f9e0-483b-5fb5-a343-c118abad5e3c', '32c96112-142b-5742-b6ff-228ad0b30a75', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"job","right":"the work a person does to earn money"},{"id":"P2","left":"team","right":"a group of people who work together"},{"id":"P3","left":"office","right":"a room or building where people work"},{"id":"P4","left":"manager","right":"a person who leads a team at work"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -139,7 +139,7 @@ VALUES ('73eccfc0-2271-51ba-bbb2-518852c1f323', '32c96112-142b-5742-b6ff-228ad0b
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('4635d65d-4f05-59ff-af0b-6b350b60446e', '32c96112-142b-5742-b6ff-228ad0b30a75', 'Выберите рабочее значение', 'choose_definition', '{"word":"job","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''job''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''team''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''office''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''manager''.","is_correct":false}],"explanation":"job: A simple workplace meaning of ''job''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('4635d65d-4f05-59ff-af0b-6b350b60446e', '32c96112-142b-5742-b6ff-228ad0b30a75', 'Выберите рабочее значение', 'choose_definition', '{"word":"job","language":"en","options":[{"id":"A","text":"the work a person does to earn money","is_correct":true},{"id":"B","text":"a group of people who work together","is_correct":false},{"id":"C","text":"a room or building where people work","is_correct":false},{"id":"D","text":"a person who leads a team at work","is_correct":false}],"explanation":"job: the work a person does to earn money","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -207,7 +207,7 @@ VALUES ('13527b4f-e006-5406-b83d-1d569697f1ac', '50d8779e-a74c-59d9-90b8-9b3f4ad
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('826b27b8-2038-5987-b73d-73c7629c3d5a', '50d8779e-a74c-59d9-90b8-9b3f4ad6f4d8', 'Выберите рабочее значение', 'choose_definition', '{"word":"office","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''office''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''manager''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''colleague''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''new''.","is_correct":false}],"explanation":"office: A simple workplace meaning of ''office''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
+VALUES ('826b27b8-2038-5987-b73d-73c7629c3d5a', '50d8779e-a74c-59d9-90b8-9b3f4ad6f4d8', 'Выберите рабочее значение', 'choose_definition', '{"word":"office","language":"en","options":[{"id":"A","text":"a room or building where people work","is_correct":true},{"id":"B","text":"a person who leads a team at work","is_correct":false},{"id":"C","text":"a person you work with","is_correct":false},{"id":"D","text":"not there before; just started or arrived","is_correct":false}],"explanation":"office: a room or building where people work","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -227,7 +227,7 @@ VALUES ('030876b2-f67d-555c-88de-58b6480a72dd', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('ab4d21ab-3cda-57ee-886f-0c141b003b27', '030876b2-f67d-555c-88de-58b6480a72dd', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"manager","right":"A simple workplace meaning of ''manager''."},{"id":"P2","left":"colleague","right":"A simple workplace meaning of ''colleague''."},{"id":"P3","left":"new","right":"A simple workplace meaning of ''new''."},{"id":"P4","left":"hello","right":"A simple workplace meaning of ''hello''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('ab4d21ab-3cda-57ee-886f-0c141b003b27', '030876b2-f67d-555c-88de-58b6480a72dd', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"manager","right":"a person who leads a team at work"},{"id":"P2","left":"colleague","right":"a person you work with"},{"id":"P3","left":"new","right":"not there before; just started or arrived"},{"id":"P4","left":"hello","right":"a friendly word used to greet someone"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -283,7 +283,7 @@ VALUES ('14a33533-3a9c-52e1-8eda-3fcc0967259e', 'cba51f8f-a37d-5183-a146-3f10525
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('d3c48676-0611-5faa-a999-a631033b435d', 'cba51f8f-a37d-5183-a146-3f105257a082', 'Выберите рабочее значение', 'choose_definition', '{"word":"colleague","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''colleague''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''new''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''hello''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''name''.","is_correct":false}],"explanation":"colleague: A simple workplace meaning of ''colleague''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('d3c48676-0611-5faa-a999-a631033b435d', 'cba51f8f-a37d-5183-a146-3f105257a082', 'Выберите рабочее значение', 'choose_definition', '{"word":"colleague","language":"en","options":[{"id":"A","text":"a person you work with","is_correct":true},{"id":"B","text":"not there before; just started or arrived","is_correct":false},{"id":"C","text":"a friendly word used to greet someone","is_correct":false},{"id":"D","text":"the word used to call a person","is_correct":false}],"explanation":"colleague: a person you work with","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -299,7 +299,7 @@ VALUES ('b24df5ea-8f8e-56e1-a01b-87ce899f3769', NULL, 'Workplace Challenge: Intr
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('76aa7bfd-ab35-525c-b32a-1328887d16ac', 'b24df5ea-8f8e-56e1-a01b-87ce899f3769', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"new","right":"A simple workplace meaning of ''new''."},{"id":"P2","left":"hello","right":"A simple workplace meaning of ''hello''."},{"id":"P3","left":"name","right":"A simple workplace meaning of ''name''."},{"id":"P4","left":"work","right":"A simple workplace meaning of ''work''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('76aa7bfd-ab35-525c-b32a-1328887d16ac', 'b24df5ea-8f8e-56e1-a01b-87ce899f3769', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"new","right":"not there before; just started or arrived"},{"id":"P2","left":"hello","right":"a friendly word used to greet someone"},{"id":"P3","left":"name","right":"the word used to call a person"},{"id":"P4","left":"work","right":"the job or tasks a person does"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -379,7 +379,7 @@ VALUES ('892f51d7-2334-5a9a-a319-19b01c8c11e0', '3285b7d5-d249-5297-a264-1b7fc36
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('5c27ef88-0929-5f1b-8c0a-d7b2e637d1f4', '3285b7d5-d249-5297-a264-1b7fc3626e0e', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"job","right":"A simple workplace meaning of ''job''."},{"id":"P2","left":"department","right":"A simple workplace meaning of ''department''."},{"id":"P3","left":"sales","right":"A simple workplace meaning of ''sales''."},{"id":"P4","left":"office","right":"A simple workplace meaning of ''office''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('5c27ef88-0929-5f1b-8c0a-d7b2e637d1f4', '3285b7d5-d249-5297-a264-1b7fc3626e0e', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"job","right":"the work a person does to earn money"},{"id":"P2","left":"department","right":"one part of a company, like sales or IT"},{"id":"P3","left":"sales","right":"the part of a business that sells products"},{"id":"P4","left":"office","right":"a room or building where people work"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -395,7 +395,7 @@ VALUES ('85b923ea-1854-58ed-a867-1f7098bd6454', '3285b7d5-d249-5297-a264-1b7fc36
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('9c3605d0-2434-54d4-b0c5-2594ae6f1fee', '3285b7d5-d249-5297-a264-1b7fc3626e0e', 'Выберите рабочее значение', 'choose_definition', '{"word":"job","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''job''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''department''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''sales''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''office''.","is_correct":false}],"explanation":"job: A simple workplace meaning of ''job''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('9c3605d0-2434-54d4-b0c5-2594ae6f1fee', '3285b7d5-d249-5297-a264-1b7fc3626e0e', 'Выберите рабочее значение', 'choose_definition', '{"word":"job","language":"en","options":[{"id":"A","text":"the work a person does to earn money","is_correct":true},{"id":"B","text":"one part of a company, like sales or IT","is_correct":false},{"id":"C","text":"the part of a business that sells products","is_correct":false},{"id":"D","text":"a room or building where people work","is_correct":false}],"explanation":"job: the work a person does to earn money","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -447,7 +447,7 @@ VALUES ('d257c3bc-1f74-52c7-b612-80f68ce6bfb4', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('19cab04d-6229-5583-8646-647581def398', 'd257c3bc-1f74-52c7-b612-80f68ce6bfb4', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"sales","right":"A simple workplace meaning of ''sales''."},{"id":"P2","left":"office","right":"A simple workplace meaning of ''office''."},{"id":"P3","left":"manager","right":"A simple workplace meaning of ''manager''."},{"id":"P4","left":"assistant","right":"A simple workplace meaning of ''assistant''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('19cab04d-6229-5583-8646-647581def398', 'd257c3bc-1f74-52c7-b612-80f68ce6bfb4', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"sales","right":"the part of a business that sells products"},{"id":"P2","left":"office","right":"a room or building where people work"},{"id":"P3","left":"manager","right":"a person who leads a team at work"},{"id":"P4","left":"assistant","right":"a person who helps someone with their work"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -487,7 +487,7 @@ VALUES ('770080f3-9131-5d04-8e70-d861b4c6153c', 'b7fce779-812f-50e1-8f77-2809b4e
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('726ff961-7798-51a7-a17a-ae22c761fed2', 'b7fce779-812f-50e1-8f77-2809b4e5eedd', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"office","right":"A simple workplace meaning of ''office''."},{"id":"P2","left":"manager","right":"A simple workplace meaning of ''manager''."},{"id":"P3","left":"assistant","right":"A simple workplace meaning of ''assistant''."},{"id":"P4","left":"customer","right":"A simple workplace meaning of ''customer''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('726ff961-7798-51a7-a17a-ae22c761fed2', 'b7fce779-812f-50e1-8f77-2809b4e5eedd', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"office","right":"a room or building where people work"},{"id":"P2","left":"manager","right":"a person who leads a team at work"},{"id":"P3","left":"assistant","right":"a person who helps someone with their work"},{"id":"P4","left":"customer","right":"a person who buys something from a business"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -503,7 +503,7 @@ VALUES ('ab2d90c3-5beb-5bc4-92ad-d57cb9df5c61', 'b7fce779-812f-50e1-8f77-2809b4e
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('1e9568af-8f66-532c-840e-16e5116d4945', 'b7fce779-812f-50e1-8f77-2809b4e5eedd', 'Выберите рабочее значение', 'choose_definition', '{"word":"office","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''office''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''manager''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''assistant''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''customer''.","is_correct":false}],"explanation":"office: A simple workplace meaning of ''office''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('1e9568af-8f66-532c-840e-16e5116d4945', 'b7fce779-812f-50e1-8f77-2809b4e5eedd', 'Выберите рабочее значение', 'choose_definition', '{"word":"office","language":"en","options":[{"id":"A","text":"a room or building where people work","is_correct":true},{"id":"B","text":"a person who leads a team at work","is_correct":false},{"id":"C","text":"a person who helps someone with their work","is_correct":false},{"id":"D","text":"a person who buys something from a business","is_correct":false}],"explanation":"office: a room or building where people work","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -571,7 +571,7 @@ VALUES ('9eb13a2c-b32f-50d8-b78c-e571d82270b8', 'f3ca7b83-7e79-5139-98fd-0fcc1be
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('6c0885ed-efa3-5a38-b161-d06a74d4d357', 'f3ca7b83-7e79-5139-98fd-0fcc1be240b0', 'Выберите рабочее значение', 'choose_definition', '{"word":"assistant","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''assistant''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''customer''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''team''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''work''.","is_correct":false}],"explanation":"assistant: A simple workplace meaning of ''assistant''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
+VALUES ('6c0885ed-efa3-5a38-b161-d06a74d4d357', 'f3ca7b83-7e79-5139-98fd-0fcc1be240b0', 'Выберите рабочее значение', 'choose_definition', '{"word":"assistant","language":"en","options":[{"id":"A","text":"a person who helps someone with their work","is_correct":true},{"id":"B","text":"a person who buys something from a business","is_correct":false},{"id":"C","text":"a group of people who work together","is_correct":false},{"id":"D","text":"the job or tasks a person does","is_correct":false}],"explanation":"assistant: a person who helps someone with their work","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -591,7 +591,7 @@ VALUES ('18680adb-b776-5310-906d-abada97f36f0', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a21817ea-916d-5b98-b093-4ab075f48d4b', '18680adb-b776-5310-906d-abada97f36f0', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"customer","right":"A simple workplace meaning of ''customer''."},{"id":"P2","left":"team","right":"A simple workplace meaning of ''team''."},{"id":"P3","left":"work","right":"A simple workplace meaning of ''work''."},{"id":"P4","left":"company","right":"A simple workplace meaning of ''company''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('a21817ea-916d-5b98-b093-4ab075f48d4b', '18680adb-b776-5310-906d-abada97f36f0', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"customer","right":"a person who buys something from a business"},{"id":"P2","left":"team","right":"a group of people who work together"},{"id":"P3","left":"work","right":"the job or tasks a person does"},{"id":"P4","left":"company","right":"a business where people work together"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -647,7 +647,7 @@ VALUES ('42d88994-3d29-5e4d-b749-3a8d424d2814', 'e15003de-6d7f-5c09-b006-8251c03
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('2b0ea18b-be97-5205-8869-ff5d16879deb', 'e15003de-6d7f-5c09-b006-8251c0364b3d', 'Выберите рабочее значение', 'choose_definition', '{"word":"team","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''team''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''work''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''company''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''job''.","is_correct":false}],"explanation":"team: A simple workplace meaning of ''team''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('2b0ea18b-be97-5205-8869-ff5d16879deb', 'e15003de-6d7f-5c09-b006-8251c0364b3d', 'Выберите рабочее значение', 'choose_definition', '{"word":"team","language":"en","options":[{"id":"A","text":"a group of people who work together","is_correct":true},{"id":"B","text":"the job or tasks a person does","is_correct":false},{"id":"C","text":"a business where people work together","is_correct":false},{"id":"D","text":"the work a person does to earn money","is_correct":false}],"explanation":"team: a group of people who work together","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -663,7 +663,7 @@ VALUES ('aba53e81-94cf-5fa3-81e8-888f01690f2d', NULL, 'Workplace Challenge: Jobs
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('567a4a87-fac8-5767-8c4b-676dd4827870', 'aba53e81-94cf-5fa3-81e8-888f01690f2d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"work","right":"A simple workplace meaning of ''work''."},{"id":"P2","left":"company","right":"A simple workplace meaning of ''company''."},{"id":"P3","left":"job","right":"A simple workplace meaning of ''job''."},{"id":"P4","left":"department","right":"A simple workplace meaning of ''department''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('567a4a87-fac8-5767-8c4b-676dd4827870', 'aba53e81-94cf-5fa3-81e8-888f01690f2d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"work","right":"the job or tasks a person does"},{"id":"P2","left":"company","right":"a business where people work together"},{"id":"P3","left":"job","right":"the work a person does to earn money"},{"id":"P4","left":"department","right":"one part of a company, like sales or IT"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -743,7 +743,7 @@ VALUES ('d0079dba-f586-5526-b2cf-21d73c77b31d', '6ee02a21-f0f0-5d59-95ee-f6f95fb
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('053abc85-b5ed-51fa-bc67-dcbd498bec8e', '6ee02a21-f0f0-5d59-95ee-f6f95fbb5323', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"desk","right":"A simple workplace meaning of ''desk''."},{"id":"P2","left":"computer","right":"A simple workplace meaning of ''computer''."},{"id":"P3","left":"phone","right":"A simple workplace meaning of ''phone''."},{"id":"P4","left":"office","right":"A simple workplace meaning of ''office''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('053abc85-b5ed-51fa-bc67-dcbd498bec8e', '6ee02a21-f0f0-5d59-95ee-f6f95fbb5323', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"desk","right":"a table where you sit and work"},{"id":"P2","left":"computer","right":"a machine used for work, email, and the internet"},{"id":"P3","left":"phone","right":"a device used to call or message people"},{"id":"P4","left":"office","right":"a room or building where people work"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -759,7 +759,7 @@ VALUES ('15981831-4de8-5434-9c63-a7936eccc8ad', '6ee02a21-f0f0-5d59-95ee-f6f95fb
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('dc63f34c-65f7-5637-b16a-2fbe3a9fe6b3', '6ee02a21-f0f0-5d59-95ee-f6f95fbb5323', 'Выберите рабочее значение', 'choose_definition', '{"word":"desk","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''desk''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''computer''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''phone''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''office''.","is_correct":false}],"explanation":"desk: A simple workplace meaning of ''desk''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('dc63f34c-65f7-5637-b16a-2fbe3a9fe6b3', '6ee02a21-f0f0-5d59-95ee-f6f95fbb5323', 'Выберите рабочее значение', 'choose_definition', '{"word":"desk","language":"en","options":[{"id":"A","text":"a table where you sit and work","is_correct":true},{"id":"B","text":"a machine used for work, email, and the internet","is_correct":false},{"id":"C","text":"a device used to call or message people","is_correct":false},{"id":"D","text":"a room or building where people work","is_correct":false}],"explanation":"desk: a table where you sit and work","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -811,7 +811,7 @@ VALUES ('b8986f67-b79c-525d-9215-0fc3f218d05e', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('e9381496-5c07-5fb1-8947-b6adbe0de2d5', 'b8986f67-b79c-525d-9215-0fc3f218d05e', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"phone","right":"A simple workplace meaning of ''phone''."},{"id":"P2","left":"office","right":"A simple workplace meaning of ''office''."},{"id":"P3","left":"meeting","right":"A simple workplace meaning of ''meeting''."},{"id":"P4","left":"room","right":"A simple workplace meaning of ''room''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('e9381496-5c07-5fb1-8947-b6adbe0de2d5', 'b8986f67-b79c-525d-9215-0fc3f218d05e', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"phone","right":"a device used to call or message people"},{"id":"P2","left":"office","right":"a room or building where people work"},{"id":"P3","left":"meeting","right":"a time when people talk about work together"},{"id":"P4","left":"room","right":"a space inside a building with walls"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -851,7 +851,7 @@ VALUES ('50786506-8edc-57cb-a108-9683985a1b5a', '9c92f822-39c4-55f4-b6a7-f2addd1
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('f543c7e4-b931-564d-9d61-96923ba8b01f', '9c92f822-39c4-55f4-b6a7-f2addd16ca7d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"office","right":"A simple workplace meaning of ''office''."},{"id":"P2","left":"meeting","right":"A simple workplace meaning of ''meeting''."},{"id":"P3","left":"room","right":"A simple workplace meaning of ''room''."},{"id":"P4","left":"door","right":"A simple workplace meaning of ''door''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('f543c7e4-b931-564d-9d61-96923ba8b01f', '9c92f822-39c4-55f4-b6a7-f2addd16ca7d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"office","right":"a room or building where people work"},{"id":"P2","left":"meeting","right":"a time when people talk about work together"},{"id":"P3","left":"room","right":"a space inside a building with walls"},{"id":"P4","left":"door","right":"the part of a room you open to go in or out"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -867,7 +867,7 @@ VALUES ('e194977c-cbd3-5890-bba3-a961938b0513', '9c92f822-39c4-55f4-b6a7-f2addd1
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('894fc48d-ba23-5cbe-930e-0670c6592c4c', '9c92f822-39c4-55f4-b6a7-f2addd16ca7d', 'Выберите рабочее значение', 'choose_definition', '{"word":"office","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''office''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''meeting''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''room''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''door''.","is_correct":false}],"explanation":"office: A simple workplace meaning of ''office''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('894fc48d-ba23-5cbe-930e-0670c6592c4c', '9c92f822-39c4-55f4-b6a7-f2addd16ca7d', 'Выберите рабочее значение', 'choose_definition', '{"word":"office","language":"en","options":[{"id":"A","text":"a room or building where people work","is_correct":true},{"id":"B","text":"a time when people talk about work together","is_correct":false},{"id":"C","text":"a space inside a building with walls","is_correct":false},{"id":"D","text":"the part of a room you open to go in or out","is_correct":false}],"explanation":"office: a room or building where people work","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -935,7 +935,7 @@ VALUES ('3bf401d4-dfa6-5c5a-9bcb-906c8d191a83', '756b4075-ed04-5037-aadd-5d576bd
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('4b9f03b4-62c8-506c-bb0e-539a4588411d', '756b4075-ed04-5037-aadd-5d576bd34140', 'Выберите рабочее значение', 'choose_definition', '{"word":"room","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''room''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''door''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''printer''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''chair''.","is_correct":false}],"explanation":"room: A simple workplace meaning of ''room''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
+VALUES ('4b9f03b4-62c8-506c-bb0e-539a4588411d', '756b4075-ed04-5037-aadd-5d576bd34140', 'Выберите рабочее значение', 'choose_definition', '{"word":"room","language":"en","options":[{"id":"A","text":"a space inside a building with walls","is_correct":true},{"id":"B","text":"the part of a room you open to go in or out","is_correct":false},{"id":"C","text":"a machine that prints documents on paper","is_correct":false},{"id":"D","text":"a seat for one person to sit on","is_correct":false}],"explanation":"room: a space inside a building with walls","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -955,7 +955,7 @@ VALUES ('69bf5ed1-6c86-5900-9d0d-c4efee2e00be', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('532aa933-3120-5a43-aadb-b005d4b295a8', '69bf5ed1-6c86-5900-9d0d-c4efee2e00be', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"door","right":"A simple workplace meaning of ''door''."},{"id":"P2","left":"printer","right":"A simple workplace meaning of ''printer''."},{"id":"P3","left":"chair","right":"A simple workplace meaning of ''chair''."},{"id":"P4","left":"table","right":"A simple workplace meaning of ''table''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('532aa933-3120-5a43-aadb-b005d4b295a8', '69bf5ed1-6c86-5900-9d0d-c4efee2e00be', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"door","right":"the part of a room you open to go in or out"},{"id":"P2","left":"printer","right":"a machine that prints documents on paper"},{"id":"P3","left":"chair","right":"a seat for one person to sit on"},{"id":"P4","left":"table","right":"a piece of furniture used for meetings or work"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1011,7 +1011,7 @@ VALUES ('707099e7-5489-5ae1-a26c-2bfc1c0667a3', '3f7fa595-a422-52c9-8894-a7aa779
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a7576ff7-a742-5a7b-bb6d-f8edd9b0ea0e', '3f7fa595-a422-52c9-8894-a7aa779b9a28', 'Выберите рабочее значение', 'choose_definition', '{"word":"printer","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''printer''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''chair''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''table''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''desk''.","is_correct":false}],"explanation":"printer: A simple workplace meaning of ''printer''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('a7576ff7-a742-5a7b-bb6d-f8edd9b0ea0e', '3f7fa595-a422-52c9-8894-a7aa779b9a28', 'Выберите рабочее значение', 'choose_definition', '{"word":"printer","language":"en","options":[{"id":"A","text":"a machine that prints documents on paper","is_correct":true},{"id":"B","text":"a seat for one person to sit on","is_correct":false},{"id":"C","text":"a piece of furniture used for meetings or work","is_correct":false},{"id":"D","text":"a table where you sit and work","is_correct":false}],"explanation":"printer: a machine that prints documents on paper","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1027,7 +1027,7 @@ VALUES ('f77cd227-06f6-56ed-817f-0cf345d7be8f', NULL, 'Workplace Challenge: Work
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('fb39d728-3f03-5b46-9568-7fc3d2565d59', 'f77cd227-06f6-56ed-817f-0cf345d7be8f', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"chair","right":"A simple workplace meaning of ''chair''."},{"id":"P2","left":"table","right":"A simple workplace meaning of ''table''."},{"id":"P3","left":"desk","right":"A simple workplace meaning of ''desk''."},{"id":"P4","left":"computer","right":"A simple workplace meaning of ''computer''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('fb39d728-3f03-5b46-9568-7fc3d2565d59', 'f77cd227-06f6-56ed-817f-0cf345d7be8f', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"chair","right":"a seat for one person to sit on"},{"id":"P2","left":"table","right":"a piece of furniture used for meetings or work"},{"id":"P3","left":"desk","right":"a table where you sit and work"},{"id":"P4","left":"computer","right":"a machine used for work, email, and the internet"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1107,7 +1107,7 @@ VALUES ('edc19275-434d-5358-96a0-1127e1a1b2f4', '94c1aa25-73b8-5e12-a5fa-43b2a41
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('5045b74d-b24e-5db0-9731-6d0a25b53a8d', '94c1aa25-73b8-5e12-a5fa-43b2a4143cdf', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"start","right":"A simple workplace meaning of ''start''."},{"id":"P2","left":"finish","right":"A simple workplace meaning of ''finish''."},{"id":"P3","left":"email","right":"A simple workplace meaning of ''email''."},{"id":"P4","left":"call","right":"A simple workplace meaning of ''call''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('5045b74d-b24e-5db0-9731-6d0a25b53a8d', '94c1aa25-73b8-5e12-a5fa-43b2a4143cdf', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"start","right":"to begin doing something"},{"id":"P2","left":"finish","right":"to complete a task or job"},{"id":"P3","left":"email","right":"a written message sent on the computer"},{"id":"P4","left":"call","right":"to talk to someone using the phone"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1123,7 +1123,7 @@ VALUES ('0f6ba8ca-a9f1-5a36-b1fe-28a2b07c49f7', '94c1aa25-73b8-5e12-a5fa-43b2a41
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('0bb7c856-f61d-5922-9078-fbdd063c021c', '94c1aa25-73b8-5e12-a5fa-43b2a4143cdf', 'Выберите рабочее значение', 'choose_definition', '{"word":"start","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''start''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''finish''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''email''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''call''.","is_correct":false}],"explanation":"start: A simple workplace meaning of ''start''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('0bb7c856-f61d-5922-9078-fbdd063c021c', '94c1aa25-73b8-5e12-a5fa-43b2a4143cdf', 'Выберите рабочее значение', 'choose_definition', '{"word":"start","language":"en","options":[{"id":"A","text":"to begin doing something","is_correct":true},{"id":"B","text":"to complete a task or job","is_correct":false},{"id":"C","text":"a written message sent on the computer","is_correct":false},{"id":"D","text":"to talk to someone using the phone","is_correct":false}],"explanation":"start: to begin doing something","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1175,7 +1175,7 @@ VALUES ('883e7854-873e-52a3-949e-aeaa4c9c1cf7', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('29fcc7f1-b083-522a-8f93-7742118957cd', '883e7854-873e-52a3-949e-aeaa4c9c1cf7', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"email","right":"A simple workplace meaning of ''email''."},{"id":"P2","left":"call","right":"A simple workplace meaning of ''call''."},{"id":"P3","left":"meeting","right":"A simple workplace meaning of ''meeting''."},{"id":"P4","left":"lunch","right":"A simple workplace meaning of ''lunch''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('29fcc7f1-b083-522a-8f93-7742118957cd', '883e7854-873e-52a3-949e-aeaa4c9c1cf7', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"email","right":"a written message sent on the computer"},{"id":"P2","left":"call","right":"to talk to someone using the phone"},{"id":"P3","left":"meeting","right":"a time when people talk about work together"},{"id":"P4","left":"lunch","right":"a meal eaten in the middle of the day"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1215,7 +1215,7 @@ VALUES ('a43cc968-35c3-53d0-89f9-8449de86baa8', 'ceed390c-ac18-5ae3-8246-1f001a3
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('2756fb2b-9991-55b9-81c0-6385da113367', 'ceed390c-ac18-5ae3-8246-1f001a332b8a', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"call","right":"A simple workplace meaning of ''call''."},{"id":"P2","left":"meeting","right":"A simple workplace meaning of ''meeting''."},{"id":"P3","left":"lunch","right":"A simple workplace meaning of ''lunch''."},{"id":"P4","left":"morning","right":"A simple workplace meaning of ''morning''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('2756fb2b-9991-55b9-81c0-6385da113367', 'ceed390c-ac18-5ae3-8246-1f001a332b8a', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"call","right":"to talk to someone using the phone"},{"id":"P2","left":"meeting","right":"a time when people talk about work together"},{"id":"P3","left":"lunch","right":"a meal eaten in the middle of the day"},{"id":"P4","left":"morning","right":"the part of the day before midday"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1231,7 +1231,7 @@ VALUES ('8502de46-cfd2-59b8-9223-bac96dab3d9e', 'ceed390c-ac18-5ae3-8246-1f001a3
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('c66de4d8-3762-5a7d-b950-cb350823b474', 'ceed390c-ac18-5ae3-8246-1f001a332b8a', 'Выберите рабочее значение', 'choose_definition', '{"word":"call","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''call''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''meeting''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''lunch''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''morning''.","is_correct":false}],"explanation":"call: A simple workplace meaning of ''call''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('c66de4d8-3762-5a7d-b950-cb350823b474', 'ceed390c-ac18-5ae3-8246-1f001a332b8a', 'Выберите рабочее значение', 'choose_definition', '{"word":"call","language":"en","options":[{"id":"A","text":"to talk to someone using the phone","is_correct":true},{"id":"B","text":"a time when people talk about work together","is_correct":false},{"id":"C","text":"a meal eaten in the middle of the day","is_correct":false},{"id":"D","text":"the part of the day before midday","is_correct":false}],"explanation":"call: to talk to someone using the phone","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1299,7 +1299,7 @@ VALUES ('88365070-0ff9-53dd-bc91-1efeb19b194d', 'fbb92820-3cb5-5096-a902-79dc2d1
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('956b29ff-f19f-5cff-bcb1-d25c27b7b32e', 'fbb92820-3cb5-5096-a902-79dc2d10a485', 'Выберите рабочее значение', 'choose_definition', '{"word":"lunch","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''lunch''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''morning''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''afternoon''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''usually''.","is_correct":false}],"explanation":"lunch: A simple workplace meaning of ''lunch''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
+VALUES ('956b29ff-f19f-5cff-bcb1-d25c27b7b32e', 'fbb92820-3cb5-5096-a902-79dc2d10a485', 'Выберите рабочее значение', 'choose_definition', '{"word":"lunch","language":"en","options":[{"id":"A","text":"a meal eaten in the middle of the day","is_correct":true},{"id":"B","text":"the part of the day before midday","is_correct":false},{"id":"C","text":"the part of the day between midday and evening","is_correct":false},{"id":"D","text":"most of the time; almost always","is_correct":false}],"explanation":"lunch: a meal eaten in the middle of the day","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1319,7 +1319,7 @@ VALUES ('c3a6819b-91d6-5fba-95a2-ab1e71b57b03', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('669d34c9-13cd-5e37-94e9-666aadd7f142', 'c3a6819b-91d6-5fba-95a2-ab1e71b57b03', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"morning","right":"A simple workplace meaning of ''morning''."},{"id":"P2","left":"afternoon","right":"A simple workplace meaning of ''afternoon''."},{"id":"P3","left":"usually","right":"A simple workplace meaning of ''usually''."},{"id":"P4","left":"work","right":"A simple workplace meaning of ''work''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('669d34c9-13cd-5e37-94e9-666aadd7f142', 'c3a6819b-91d6-5fba-95a2-ab1e71b57b03', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"morning","right":"the part of the day before midday"},{"id":"P2","left":"afternoon","right":"the part of the day between midday and evening"},{"id":"P3","left":"usually","right":"most of the time; almost always"},{"id":"P4","left":"work","right":"the job or tasks a person does"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1375,7 +1375,7 @@ VALUES ('0d0d473a-5f59-5a37-a81a-cbfaa992417e', '1cd2a31d-0bee-52bf-9e28-fc9096e
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('45a0fbd1-1929-5146-9034-17943a4dcdad', '1cd2a31d-0bee-52bf-9e28-fc9096e22fa4', 'Выберите рабочее значение', 'choose_definition', '{"word":"afternoon","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''afternoon''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''usually''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''work''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''start''.","is_correct":false}],"explanation":"afternoon: A simple workplace meaning of ''afternoon''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('45a0fbd1-1929-5146-9034-17943a4dcdad', '1cd2a31d-0bee-52bf-9e28-fc9096e22fa4', 'Выберите рабочее значение', 'choose_definition', '{"word":"afternoon","language":"en","options":[{"id":"A","text":"the part of the day between midday and evening","is_correct":true},{"id":"B","text":"most of the time; almost always","is_correct":false},{"id":"C","text":"the job or tasks a person does","is_correct":false},{"id":"D","text":"to begin doing something","is_correct":false}],"explanation":"afternoon: the part of the day between midday and evening","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1391,7 +1391,7 @@ VALUES ('5476c099-e8dc-5e96-a586-8448793e6355', NULL, 'Workplace Challenge: Dail
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('7fba1598-aa31-57a9-bd0e-1f363ace4919', '5476c099-e8dc-5e96-a586-8448793e6355', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"usually","right":"A simple workplace meaning of ''usually''."},{"id":"P2","left":"work","right":"A simple workplace meaning of ''work''."},{"id":"P3","left":"start","right":"A simple workplace meaning of ''start''."},{"id":"P4","left":"finish","right":"A simple workplace meaning of ''finish''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('7fba1598-aa31-57a9-bd0e-1f363ace4919', '5476c099-e8dc-5e96-a586-8448793e6355', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"usually","right":"most of the time; almost always"},{"id":"P2","left":"work","right":"the job or tasks a person does"},{"id":"P3","left":"start","right":"to begin doing something"},{"id":"P4","left":"finish","right":"to complete a task or job"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1471,7 +1471,7 @@ VALUES ('e471251d-bf7f-547b-b5b6-c212b7cc2785', '41bffb09-4de2-5193-8ed5-3f73755
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('c7370a9a-c228-541b-a3d4-f73722fcfa9f', '41bffb09-4de2-5193-8ed5-3f73755283d1', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"please","right":"A simple workplace meaning of ''please''."},{"id":"P2","left":"help","right":"A simple workplace meaning of ''help''."},{"id":"P3","left":"send","right":"A simple workplace meaning of ''send''."},{"id":"P4","left":"open","right":"A simple workplace meaning of ''open''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('c7370a9a-c228-541b-a3d4-f73722fcfa9f', '41bffb09-4de2-5193-8ed5-3f73755283d1', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"please","right":"a polite word used when asking for something"},{"id":"P2","left":"help","right":"to do something useful for another person"},{"id":"P3","left":"send","right":"to make a message or item go to someone"},{"id":"P4","left":"open","right":"not closed; ready for people to enter or use"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1487,7 +1487,7 @@ VALUES ('dd73b620-3f03-5b02-82c1-7a9a4141d90c', '41bffb09-4de2-5193-8ed5-3f73755
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('82b10b18-87be-52c4-8585-8af32594252d', '41bffb09-4de2-5193-8ed5-3f73755283d1', 'Выберите рабочее значение', 'choose_definition', '{"word":"please","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''please''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''help''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''send''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''open''.","is_correct":false}],"explanation":"please: A simple workplace meaning of ''please''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('82b10b18-87be-52c4-8585-8af32594252d', '41bffb09-4de2-5193-8ed5-3f73755283d1', 'Выберите рабочее значение', 'choose_definition', '{"word":"please","language":"en","options":[{"id":"A","text":"a polite word used when asking for something","is_correct":true},{"id":"B","text":"to do something useful for another person","is_correct":false},{"id":"C","text":"to make a message or item go to someone","is_correct":false},{"id":"D","text":"not closed; ready for people to enter or use","is_correct":false}],"explanation":"please: a polite word used when asking for something","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1539,7 +1539,7 @@ VALUES ('f7ad2c3c-bc26-51b2-836a-e335c3d6f692', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a6c7b00f-7917-57dc-9d94-1cb54affa15d', 'f7ad2c3c-bc26-51b2-836a-e335c3d6f692', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"send","right":"A simple workplace meaning of ''send''."},{"id":"P2","left":"open","right":"A simple workplace meaning of ''open''."},{"id":"P3","left":"check","right":"A simple workplace meaning of ''check''."},{"id":"P4","left":"bring","right":"A simple workplace meaning of ''bring''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('a6c7b00f-7917-57dc-9d94-1cb54affa15d', 'f7ad2c3c-bc26-51b2-836a-e335c3d6f692', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"send","right":"to make a message or item go to someone"},{"id":"P2","left":"open","right":"not closed; ready for people to enter or use"},{"id":"P3","left":"check","right":"to look at something to make sure it is correct"},{"id":"P4","left":"bring","right":"to take something with you to a place"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1579,7 +1579,7 @@ VALUES ('5d2cb210-8420-5334-9aef-6424f45a8165', '8b0617f7-1742-5524-bc10-60286ab
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('7129a77e-788f-54a6-9aeb-3ba48ee089d5', '8b0617f7-1742-5524-bc10-60286ab4f11d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"open","right":"A simple workplace meaning of ''open''."},{"id":"P2","left":"check","right":"A simple workplace meaning of ''check''."},{"id":"P3","left":"bring","right":"A simple workplace meaning of ''bring''."},{"id":"P4","left":"wait","right":"A simple workplace meaning of ''wait''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('7129a77e-788f-54a6-9aeb-3ba48ee089d5', '8b0617f7-1742-5524-bc10-60286ab4f11d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"open","right":"not closed; ready for people to enter or use"},{"id":"P2","left":"check","right":"to look at something to make sure it is correct"},{"id":"P3","left":"bring","right":"to take something with you to a place"},{"id":"P4","left":"wait","right":"to stay somewhere until something happens"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1595,7 +1595,7 @@ VALUES ('5eb6a92a-a1ca-5ef5-83b6-fae6947b14d6', '8b0617f7-1742-5524-bc10-60286ab
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('2a94bde0-fe20-5bed-9a77-36943bd4d6ef', '8b0617f7-1742-5524-bc10-60286ab4f11d', 'Выберите рабочее значение', 'choose_definition', '{"word":"open","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''open''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''check''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''bring''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''wait''.","is_correct":false}],"explanation":"open: A simple workplace meaning of ''open''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('2a94bde0-fe20-5bed-9a77-36943bd4d6ef', '8b0617f7-1742-5524-bc10-60286ab4f11d', 'Выберите рабочее значение', 'choose_definition', '{"word":"open","language":"en","options":[{"id":"A","text":"not closed; ready for people to enter or use","is_correct":true},{"id":"B","text":"to look at something to make sure it is correct","is_correct":false},{"id":"C","text":"to take something with you to a place","is_correct":false},{"id":"D","text":"to stay somewhere until something happens","is_correct":false}],"explanation":"open: not closed; ready for people to enter or use","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1663,7 +1663,7 @@ VALUES ('524bb995-f524-5bc0-812a-309577ea04eb', 'a3a44341-4933-5ec6-867a-2a66821
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('ca3aaa1b-044e-5b02-81b4-531c2a1327c0', 'a3a44341-4933-5ec6-867a-2a6682136e03', 'Выберите рабочее значение', 'choose_definition', '{"word":"bring","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''bring''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''wait''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''can''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''could''.","is_correct":false}],"explanation":"bring: A simple workplace meaning of ''bring''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
+VALUES ('ca3aaa1b-044e-5b02-81b4-531c2a1327c0', 'a3a44341-4933-5ec6-867a-2a6682136e03', 'Выберите рабочее значение', 'choose_definition', '{"word":"bring","language":"en","options":[{"id":"A","text":"to take something with you to a place","is_correct":true},{"id":"B","text":"to stay somewhere until something happens","is_correct":false},{"id":"C","text":"to be able to do something","is_correct":false},{"id":"D","text":"a polite way to ask for something","is_correct":false}],"explanation":"bring: to take something with you to a place","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1683,7 +1683,7 @@ VALUES ('a6469585-36b2-5ae4-8c01-e308446c79d6', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('36c09e28-d21c-5237-853b-cb5fb0b98dc8', 'a6469585-36b2-5ae4-8c01-e308446c79d6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"wait","right":"A simple workplace meaning of ''wait''."},{"id":"P2","left":"can","right":"A simple workplace meaning of ''can''."},{"id":"P3","left":"could","right":"A simple workplace meaning of ''could''."},{"id":"P4","left":"sure","right":"A simple workplace meaning of ''sure''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('36c09e28-d21c-5237-853b-cb5fb0b98dc8', 'a6469585-36b2-5ae4-8c01-e308446c79d6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"wait","right":"to stay somewhere until something happens"},{"id":"P2","left":"can","right":"to be able to do something"},{"id":"P3","left":"could","right":"a polite way to ask for something"},{"id":"P4","left":"sure","right":"certain or confident about something"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1739,7 +1739,7 @@ VALUES ('1e66101d-acef-5ecf-807b-5c9e5db33624', 'd3b15df8-9ffc-58fc-9a13-7954a19
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('c0086636-78fd-5089-9464-c3c445b3b18a', 'd3b15df8-9ffc-58fc-9a13-7954a194dab5', 'Выберите рабочее значение', 'choose_definition', '{"word":"can","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''can''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''could''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''sure''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''please''.","is_correct":false}],"explanation":"can: A simple workplace meaning of ''can''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('c0086636-78fd-5089-9464-c3c445b3b18a', 'd3b15df8-9ffc-58fc-9a13-7954a194dab5', 'Выберите рабочее значение', 'choose_definition', '{"word":"can","language":"en","options":[{"id":"A","text":"to be able to do something","is_correct":true},{"id":"B","text":"a polite way to ask for something","is_correct":false},{"id":"C","text":"certain or confident about something","is_correct":false},{"id":"D","text":"a polite word used when asking for something","is_correct":false}],"explanation":"can: to be able to do something","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1755,7 +1755,7 @@ VALUES ('7fbcda39-ea33-5463-ba67-2985861c05d6', NULL, 'Workplace Challenge: Simp
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('75acfee9-87df-5a38-b1aa-2dc5f617b1ac', '7fbcda39-ea33-5463-ba67-2985861c05d6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"could","right":"A simple workplace meaning of ''could''."},{"id":"P2","left":"sure","right":"A simple workplace meaning of ''sure''."},{"id":"P3","left":"please","right":"A simple workplace meaning of ''please''."},{"id":"P4","left":"help","right":"A simple workplace meaning of ''help''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('75acfee9-87df-5a38-b1aa-2dc5f617b1ac', '7fbcda39-ea33-5463-ba67-2985861c05d6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"could","right":"a polite way to ask for something"},{"id":"P2","left":"sure","right":"certain or confident about something"},{"id":"P3","left":"please","right":"a polite word used when asking for something"},{"id":"P4","left":"help","right":"to do something useful for another person"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1835,7 +1835,7 @@ VALUES ('e891d583-96e5-5c2e-8488-ff0abfffa5d3', '38a65605-8be3-5c6f-a2d6-aceae53
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('e065d940-27d4-5401-a1c4-d397da377864', '38a65605-8be3-5c6f-a2d6-aceae53d82b2', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"call","right":"A simple workplace meaning of ''call''."},{"id":"P2","left":"phone","right":"A simple workplace meaning of ''phone''."},{"id":"P3","left":"speak","right":"A simple workplace meaning of ''speak''."},{"id":"P4","left":"message","right":"A simple workplace meaning of ''message''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('e065d940-27d4-5401-a1c4-d397da377864', '38a65605-8be3-5c6f-a2d6-aceae53d82b2', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"call","right":"to talk to someone using the phone"},{"id":"P2","left":"phone","right":"a device used to call or message people"},{"id":"P3","left":"speak","right":"to say words out loud"},{"id":"P4","left":"message","right":"a short piece of information sent to someone"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1851,7 +1851,7 @@ VALUES ('22bebe6a-bc8f-515c-bdb1-3b5aeb7ccd05', '38a65605-8be3-5c6f-a2d6-aceae53
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('38075d32-fe82-5554-815d-aea751bab430', '38a65605-8be3-5c6f-a2d6-aceae53d82b2', 'Выберите рабочее значение', 'choose_definition', '{"word":"call","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''call''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''phone''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''speak''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''message''.","is_correct":false}],"explanation":"call: A simple workplace meaning of ''call''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('38075d32-fe82-5554-815d-aea751bab430', '38a65605-8be3-5c6f-a2d6-aceae53d82b2', 'Выберите рабочее значение', 'choose_definition', '{"word":"call","language":"en","options":[{"id":"A","text":"to talk to someone using the phone","is_correct":true},{"id":"B","text":"a device used to call or message people","is_correct":false},{"id":"C","text":"to say words out loud","is_correct":false},{"id":"D","text":"a short piece of information sent to someone","is_correct":false}],"explanation":"call: to talk to someone using the phone","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1903,7 +1903,7 @@ VALUES ('8ab87691-4c1d-5d93-a7a8-0e187cda96e0', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('e44bfb58-4fce-5fcf-81e7-447f0280d78a', '8ab87691-4c1d-5d93-a7a8-0e187cda96e0', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"speak","right":"A simple workplace meaning of ''speak''."},{"id":"P2","left":"message","right":"A simple workplace meaning of ''message''."},{"id":"P3","left":"number","right":"A simple workplace meaning of ''number''."},{"id":"P4","left":"available","right":"A simple workplace meaning of ''available''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('e44bfb58-4fce-5fcf-81e7-447f0280d78a', '8ab87691-4c1d-5d93-a7a8-0e187cda96e0', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"speak","right":"to say words out loud"},{"id":"P2","left":"message","right":"a short piece of information sent to someone"},{"id":"P3","left":"number","right":"a figure used to count or contact someone"},{"id":"P4","left":"available","right":"free to talk or meet right now"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1943,7 +1943,7 @@ VALUES ('87817ffe-4559-5457-a817-9a2c6ece8b5a', '2225737d-2c58-5c5c-bb7c-6779dd2
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('5e590f73-7731-5350-9481-57af1c4bf22b', '2225737d-2c58-5c5c-bb7c-6779dd209c94', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"message","right":"A simple workplace meaning of ''message''."},{"id":"P2","left":"number","right":"A simple workplace meaning of ''number''."},{"id":"P3","left":"available","right":"A simple workplace meaning of ''available''."},{"id":"P4","left":"sorry","right":"A simple workplace meaning of ''sorry''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('5e590f73-7731-5350-9481-57af1c4bf22b', '2225737d-2c58-5c5c-bb7c-6779dd209c94', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"message","right":"a short piece of information sent to someone"},{"id":"P2","left":"number","right":"a figure used to count or contact someone"},{"id":"P3","left":"available","right":"free to talk or meet right now"},{"id":"P4","left":"sorry","right":"a word used to apologize"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1959,7 +1959,7 @@ VALUES ('5c98fb85-533e-5a32-aaba-19b00b201736', '2225737d-2c58-5c5c-bb7c-6779dd2
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('c71699df-0f35-5087-b9ff-8cbc03cd586b', '2225737d-2c58-5c5c-bb7c-6779dd209c94', 'Выберите рабочее значение', 'choose_definition', '{"word":"message","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''message''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''number''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''available''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''sorry''.","is_correct":false}],"explanation":"message: A simple workplace meaning of ''message''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('c71699df-0f35-5087-b9ff-8cbc03cd586b', '2225737d-2c58-5c5c-bb7c-6779dd209c94', 'Выберите рабочее значение', 'choose_definition', '{"word":"message","language":"en","options":[{"id":"A","text":"a short piece of information sent to someone","is_correct":true},{"id":"B","text":"a figure used to count or contact someone","is_correct":false},{"id":"C","text":"free to talk or meet right now","is_correct":false},{"id":"D","text":"a word used to apologize","is_correct":false}],"explanation":"message: a short piece of information sent to someone","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2027,7 +2027,7 @@ VALUES ('d7d057da-8e61-5fc1-81ab-b158af7b2761', '1213bfea-0c09-589d-a4d4-e658033
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('12bf4ed2-76a8-5088-a760-751563c9babe', '1213bfea-0c09-589d-a4d4-e6580334bfa3', 'Выберите рабочее значение', 'choose_definition', '{"word":"available","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''available''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''sorry''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''hello''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''later''.","is_correct":false}],"explanation":"available: A simple workplace meaning of ''available''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
+VALUES ('12bf4ed2-76a8-5088-a760-751563c9babe', '1213bfea-0c09-589d-a4d4-e6580334bfa3', 'Выберите рабочее значение', 'choose_definition', '{"word":"available","language":"en","options":[{"id":"A","text":"free to talk or meet right now","is_correct":true},{"id":"B","text":"a word used to apologize","is_correct":false},{"id":"C","text":"a friendly word used to greet someone","is_correct":false},{"id":"D","text":"at a time after now","is_correct":false}],"explanation":"available: free to talk or meet right now","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2047,7 +2047,7 @@ VALUES ('7a96226c-0baa-5368-90c3-9dc0d7883efb', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('83a83207-890b-5b98-a34f-495b5b050f7c', '7a96226c-0baa-5368-90c3-9dc0d7883efb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"sorry","right":"A simple workplace meaning of ''sorry''."},{"id":"P2","left":"hello","right":"A simple workplace meaning of ''hello''."},{"id":"P3","left":"later","right":"A simple workplace meaning of ''later''."},{"id":"P4","left":"thanks","right":"A simple workplace meaning of ''thanks''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('83a83207-890b-5b98-a34f-495b5b050f7c', '7a96226c-0baa-5368-90c3-9dc0d7883efb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"sorry","right":"a word used to apologize"},{"id":"P2","left":"hello","right":"a friendly word used to greet someone"},{"id":"P3","left":"later","right":"at a time after now"},{"id":"P4","left":"thanks","right":"a short way of saying you are grateful"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2103,7 +2103,7 @@ VALUES ('6a105456-a81d-5f0d-b991-f0f5c7cd848a', '7b04aa8a-d0dc-521f-823e-61f5141
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('f35eb707-e4aa-5ba0-b4c3-4da5dff1d769', '7b04aa8a-d0dc-521f-823e-61f514126d58', 'Выберите рабочее значение', 'choose_definition', '{"word":"hello","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''hello''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''later''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''thanks''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''call''.","is_correct":false}],"explanation":"hello: A simple workplace meaning of ''hello''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('f35eb707-e4aa-5ba0-b4c3-4da5dff1d769', '7b04aa8a-d0dc-521f-823e-61f514126d58', 'Выберите рабочее значение', 'choose_definition', '{"word":"hello","language":"en","options":[{"id":"A","text":"a friendly word used to greet someone","is_correct":true},{"id":"B","text":"at a time after now","is_correct":false},{"id":"C","text":"a short way of saying you are grateful","is_correct":false},{"id":"D","text":"to talk to someone using the phone","is_correct":false}],"explanation":"hello: a friendly word used to greet someone","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2119,7 +2119,7 @@ VALUES ('5c2804d7-b6e9-51d7-a1b7-232d933746c6', NULL, 'Workplace Challenge: Phon
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a995d9f6-ed90-56ec-bcd5-a6c777281c74', '5c2804d7-b6e9-51d7-a1b7-232d933746c6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"later","right":"A simple workplace meaning of ''later''."},{"id":"P2","left":"thanks","right":"A simple workplace meaning of ''thanks''."},{"id":"P3","left":"call","right":"A simple workplace meaning of ''call''."},{"id":"P4","left":"phone","right":"A simple workplace meaning of ''phone''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('a995d9f6-ed90-56ec-bcd5-a6c777281c74', '5c2804d7-b6e9-51d7-a1b7-232d933746c6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"later","right":"at a time after now"},{"id":"P2","left":"thanks","right":"a short way of saying you are grateful"},{"id":"P3","left":"call","right":"to talk to someone using the phone"},{"id":"P4","left":"phone","right":"a device used to call or message people"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2199,7 +2199,7 @@ VALUES ('ea2da36f-6ca3-5d8d-b05b-ac1615fb8651', '40eee8fe-caad-5cbb-8847-57f8fc2
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a6f92631-4818-5483-86c3-b47ecb984ab6', '40eee8fe-caad-5cbb-8847-57f8fc2cc099', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"email","right":"A simple workplace meaning of ''email''."},{"id":"P2","left":"message","right":"A simple workplace meaning of ''message''."},{"id":"P3","left":"subject","right":"A simple workplace meaning of ''subject''."},{"id":"P4","left":"send","right":"A simple workplace meaning of ''send''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('a6f92631-4818-5483-86c3-b47ecb984ab6', '40eee8fe-caad-5cbb-8847-57f8fc2cc099', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"email","right":"a written message sent on the computer"},{"id":"P2","left":"message","right":"a short piece of information sent to someone"},{"id":"P3","left":"subject","right":"the topic of an email or conversation"},{"id":"P4","left":"send","right":"to make a message or item go to someone"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2215,7 +2215,7 @@ VALUES ('807f16c7-7dee-5721-828b-ed245c30f617', '40eee8fe-caad-5cbb-8847-57f8fc2
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('4a85a406-e512-541c-9274-f1775ffc310e', '40eee8fe-caad-5cbb-8847-57f8fc2cc099', 'Выберите рабочее значение', 'choose_definition', '{"word":"email","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''email''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''message''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''subject''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''send''.","is_correct":false}],"explanation":"email: A simple workplace meaning of ''email''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('4a85a406-e512-541c-9274-f1775ffc310e', '40eee8fe-caad-5cbb-8847-57f8fc2cc099', 'Выберите рабочее значение', 'choose_definition', '{"word":"email","language":"en","options":[{"id":"A","text":"a written message sent on the computer","is_correct":true},{"id":"B","text":"a short piece of information sent to someone","is_correct":false},{"id":"C","text":"the topic of an email or conversation","is_correct":false},{"id":"D","text":"to make a message or item go to someone","is_correct":false}],"explanation":"email: a written message sent on the computer","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2267,7 +2267,7 @@ VALUES ('429be802-5bae-5c8c-aa81-9ae17ea76b79', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('fe3bac4f-8cbf-51d1-a35c-4639b603a2dd', '429be802-5bae-5c8c-aa81-9ae17ea76b79', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"subject","right":"A simple workplace meaning of ''subject''."},{"id":"P2","left":"send","right":"A simple workplace meaning of ''send''."},{"id":"P3","left":"reply","right":"A simple workplace meaning of ''reply''."},{"id":"P4","left":"please","right":"A simple workplace meaning of ''please''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('fe3bac4f-8cbf-51d1-a35c-4639b603a2dd', '429be802-5bae-5c8c-aa81-9ae17ea76b79', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"subject","right":"the topic of an email or conversation"},{"id":"P2","left":"send","right":"to make a message or item go to someone"},{"id":"P3","left":"reply","right":"an answer to a message or question"},{"id":"P4","left":"please","right":"a polite word used when asking for something"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2307,7 +2307,7 @@ VALUES ('005f14f3-50cb-5483-a4ea-97185f05cfb3', 'ebe1242e-9183-5b7d-bd1b-e3f4a68
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('ca230a22-0dc6-53ca-b222-2361c2d5247a', 'ebe1242e-9183-5b7d-bd1b-e3f4a684671a', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"send","right":"A simple workplace meaning of ''send''."},{"id":"P2","left":"reply","right":"A simple workplace meaning of ''reply''."},{"id":"P3","left":"please","right":"A simple workplace meaning of ''please''."},{"id":"P4","left":"thanks","right":"A simple workplace meaning of ''thanks''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('ca230a22-0dc6-53ca-b222-2361c2d5247a', 'ebe1242e-9183-5b7d-bd1b-e3f4a684671a', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"send","right":"to make a message or item go to someone"},{"id":"P2","left":"reply","right":"an answer to a message or question"},{"id":"P3","left":"please","right":"a polite word used when asking for something"},{"id":"P4","left":"thanks","right":"a short way of saying you are grateful"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2323,7 +2323,7 @@ VALUES ('11fdc6da-f732-5d31-8947-649dbb0601bd', 'ebe1242e-9183-5b7d-bd1b-e3f4a68
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('fcfd9252-ecad-5fab-bef7-486e4e4568b2', 'ebe1242e-9183-5b7d-bd1b-e3f4a684671a', 'Выберите рабочее значение', 'choose_definition', '{"word":"send","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''send''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''reply''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''please''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''thanks''.","is_correct":false}],"explanation":"send: A simple workplace meaning of ''send''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('fcfd9252-ecad-5fab-bef7-486e4e4568b2', 'ebe1242e-9183-5b7d-bd1b-e3f4a684671a', 'Выберите рабочее значение', 'choose_definition', '{"word":"send","language":"en","options":[{"id":"A","text":"to make a message or item go to someone","is_correct":true},{"id":"B","text":"an answer to a message or question","is_correct":false},{"id":"C","text":"a polite word used when asking for something","is_correct":false},{"id":"D","text":"a short way of saying you are grateful","is_correct":false}],"explanation":"send: to make a message or item go to someone","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2391,7 +2391,7 @@ VALUES ('91788d8d-62f7-5ca8-a071-4b8e9cb7b657', 'bca0d895-f6e4-560a-a994-0207cae
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('df879b65-8211-5c2b-b867-458574a8e72a', 'bca0d895-f6e4-560a-a994-0207caec7ec9', 'Выберите рабочее значение', 'choose_definition', '{"word":"please","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''please''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''thanks''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''today''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''tomorrow''.","is_correct":false}],"explanation":"please: A simple workplace meaning of ''please''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
+VALUES ('df879b65-8211-5c2b-b867-458574a8e72a', 'bca0d895-f6e4-560a-a994-0207caec7ec9', 'Выберите рабочее значение', 'choose_definition', '{"word":"please","language":"en","options":[{"id":"A","text":"a polite word used when asking for something","is_correct":true},{"id":"B","text":"a short way of saying you are grateful","is_correct":false},{"id":"C","text":"this current day","is_correct":false},{"id":"D","text":"the day after today","is_correct":false}],"explanation":"please: a polite word used when asking for something","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2411,7 +2411,7 @@ VALUES ('4409af6f-fcbb-5dd4-ad79-3b77d4e6f9a6', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('f6fc6a2f-5a54-5995-9686-9a2bd34af8e8', '4409af6f-fcbb-5dd4-ad79-3b77d4e6f9a6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"thanks","right":"A simple workplace meaning of ''thanks''."},{"id":"P2","left":"today","right":"A simple workplace meaning of ''today''."},{"id":"P3","left":"tomorrow","right":"A simple workplace meaning of ''tomorrow''."},{"id":"P4","left":"meeting","right":"A simple workplace meaning of ''meeting''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('f6fc6a2f-5a54-5995-9686-9a2bd34af8e8', '4409af6f-fcbb-5dd4-ad79-3b77d4e6f9a6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"thanks","right":"a short way of saying you are grateful"},{"id":"P2","left":"today","right":"this current day"},{"id":"P3","left":"tomorrow","right":"the day after today"},{"id":"P4","left":"meeting","right":"a time when people talk about work together"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2467,7 +2467,7 @@ VALUES ('0afa6690-c9ac-551e-bb49-b6b35cbb5c00', 'c6dd46b9-c52f-5e8f-97a8-0e94e89
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('8ff55768-af9a-55d9-ab53-08defb2ee9e5', 'c6dd46b9-c52f-5e8f-97a8-0e94e89d05ec', 'Выберите рабочее значение', 'choose_definition', '{"word":"today","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''today''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''tomorrow''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''meeting''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''email''.","is_correct":false}],"explanation":"today: A simple workplace meaning of ''today''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('8ff55768-af9a-55d9-ab53-08defb2ee9e5', 'c6dd46b9-c52f-5e8f-97a8-0e94e89d05ec', 'Выберите рабочее значение', 'choose_definition', '{"word":"today","language":"en","options":[{"id":"A","text":"this current day","is_correct":true},{"id":"B","text":"the day after today","is_correct":false},{"id":"C","text":"a time when people talk about work together","is_correct":false},{"id":"D","text":"a written message sent on the computer","is_correct":false}],"explanation":"today: this current day","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2483,7 +2483,7 @@ VALUES ('05cbb2d0-27a9-56ae-909b-2c34e6e62469', NULL, 'Workplace Challenge: Emai
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('b488f029-c5b7-5aac-8b4b-689d83558699', '05cbb2d0-27a9-56ae-909b-2c34e6e62469', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"tomorrow","right":"A simple workplace meaning of ''tomorrow''."},{"id":"P2","left":"meeting","right":"A simple workplace meaning of ''meeting''."},{"id":"P3","left":"email","right":"A simple workplace meaning of ''email''."},{"id":"P4","left":"message","right":"A simple workplace meaning of ''message''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('b488f029-c5b7-5aac-8b4b-689d83558699', '05cbb2d0-27a9-56ae-909b-2c34e6e62469', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"tomorrow","right":"the day after today"},{"id":"P2","left":"meeting","right":"a time when people talk about work together"},{"id":"P3","left":"email","right":"a written message sent on the computer"},{"id":"P4","left":"message","right":"a short piece of information sent to someone"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2563,7 +2563,7 @@ VALUES ('ce1bd306-c40b-5dcc-8ae6-2113557a9001', '9a5b4bef-1dc3-52aa-9841-e16d7ad
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('40d46a4d-85c8-571f-b04c-4acb838e74a1', '9a5b4bef-1dc3-52aa-9841-e16d7ad195c5', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"meeting","right":"A simple workplace meaning of ''meeting''."},{"id":"P2","left":"start","right":"A simple workplace meaning of ''start''."},{"id":"P3","left":"time","right":"A simple workplace meaning of ''time''."},{"id":"P4","left":"room","right":"A simple workplace meaning of ''room''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('40d46a4d-85c8-571f-b04c-4acb838e74a1', '9a5b4bef-1dc3-52aa-9841-e16d7ad195c5', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"meeting","right":"a time when people talk about work together"},{"id":"P2","left":"start","right":"to begin doing something"},{"id":"P3","left":"time","right":"the hour or moment when something happens"},{"id":"P4","left":"room","right":"a space inside a building with walls"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2579,7 +2579,7 @@ VALUES ('83deb934-c3c9-56ca-913f-5e4b8b3c3b4c', '9a5b4bef-1dc3-52aa-9841-e16d7ad
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('07107ca5-fbb1-51eb-b979-8e2a1a72dd8e', '9a5b4bef-1dc3-52aa-9841-e16d7ad195c5', 'Выберите рабочее значение', 'choose_definition', '{"word":"meeting","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''meeting''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''start''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''time''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''room''.","is_correct":false}],"explanation":"meeting: A simple workplace meaning of ''meeting''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('07107ca5-fbb1-51eb-b979-8e2a1a72dd8e', '9a5b4bef-1dc3-52aa-9841-e16d7ad195c5', 'Выберите рабочее значение', 'choose_definition', '{"word":"meeting","language":"en","options":[{"id":"A","text":"a time when people talk about work together","is_correct":true},{"id":"B","text":"to begin doing something","is_correct":false},{"id":"C","text":"the hour or moment when something happens","is_correct":false},{"id":"D","text":"a space inside a building with walls","is_correct":false}],"explanation":"meeting: a time when people talk about work together","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2631,7 +2631,7 @@ VALUES ('ec4ee030-e9dc-54d6-8c39-30034322883f', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('c3880345-b1ea-52c7-a956-5b08f61fa6c7', 'ec4ee030-e9dc-54d6-8c39-30034322883f', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"time","right":"A simple workplace meaning of ''time''."},{"id":"P2","left":"room","right":"A simple workplace meaning of ''room''."},{"id":"P3","left":"agenda","right":"A simple workplace meaning of ''agenda''."},{"id":"P4","left":"question","right":"A simple workplace meaning of ''question''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('c3880345-b1ea-52c7-a956-5b08f61fa6c7', 'ec4ee030-e9dc-54d6-8c39-30034322883f', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"time","right":"the hour or moment when something happens"},{"id":"P2","left":"room","right":"a space inside a building with walls"},{"id":"P3","left":"agenda","right":"a list of things to talk about in a meeting"},{"id":"P4","left":"question","right":"something you ask to get information"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2671,7 +2671,7 @@ VALUES ('f5595235-4bfc-58da-b519-e5b7c011c122', '07a68bea-54c1-59ef-9ded-714a005
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('204d5602-fedf-5766-a525-f68efa85a3b0', '07a68bea-54c1-59ef-9ded-714a0053566f', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"room","right":"A simple workplace meaning of ''room''."},{"id":"P2","left":"agenda","right":"A simple workplace meaning of ''agenda''."},{"id":"P3","left":"question","right":"A simple workplace meaning of ''question''."},{"id":"P4","left":"idea","right":"A simple workplace meaning of ''idea''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('204d5602-fedf-5766-a525-f68efa85a3b0', '07a68bea-54c1-59ef-9ded-714a0053566f', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"room","right":"a space inside a building with walls"},{"id":"P2","left":"agenda","right":"a list of things to talk about in a meeting"},{"id":"P3","left":"question","right":"something you ask to get information"},{"id":"P4","left":"idea","right":"a thought or plan you share with others"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2687,7 +2687,7 @@ VALUES ('b55c6ba5-6fc3-5073-99ac-4ec3651ef2f9', '07a68bea-54c1-59ef-9ded-714a005
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a08ae8ec-d855-5d78-8199-5fbe93f47e2d', '07a68bea-54c1-59ef-9ded-714a0053566f', 'Выберите рабочее значение', 'choose_definition', '{"word":"room","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''room''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''agenda''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''question''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''idea''.","is_correct":false}],"explanation":"room: A simple workplace meaning of ''room''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('a08ae8ec-d855-5d78-8199-5fbe93f47e2d', '07a68bea-54c1-59ef-9ded-714a0053566f', 'Выберите рабочее значение', 'choose_definition', '{"word":"room","language":"en","options":[{"id":"A","text":"a space inside a building with walls","is_correct":true},{"id":"B","text":"a list of things to talk about in a meeting","is_correct":false},{"id":"C","text":"something you ask to get information","is_correct":false},{"id":"D","text":"a thought or plan you share with others","is_correct":false}],"explanation":"room: a space inside a building with walls","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2755,7 +2755,7 @@ VALUES ('7eb40740-a410-548b-bd62-dcecd0c07b91', '946caa42-1d62-55b0-bfba-590c717
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('ee996eac-7800-5d74-ab45-01e96ef0b5dc', '946caa42-1d62-55b0-bfba-590c7170e812', 'Выберите рабочее значение', 'choose_definition', '{"word":"question","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''question''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''idea''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''agree''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''ready''.","is_correct":false}],"explanation":"question: A simple workplace meaning of ''question''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
+VALUES ('ee996eac-7800-5d74-ab45-01e96ef0b5dc', '946caa42-1d62-55b0-bfba-590c7170e812', 'Выберите рабочее значение', 'choose_definition', '{"word":"question","language":"en","options":[{"id":"A","text":"something you ask to get information","is_correct":true},{"id":"B","text":"a thought or plan you share with others","is_correct":false},{"id":"C","text":"to say yes, you think the same","is_correct":false},{"id":"D","text":"prepared to do or start something","is_correct":false}],"explanation":"question: something you ask to get information","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2775,7 +2775,7 @@ VALUES ('ac2b8198-afad-5b25-9289-b77909412a47', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('95b4f79a-4a1e-55d2-938f-6dd4015aefee', 'ac2b8198-afad-5b25-9289-b77909412a47', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"idea","right":"A simple workplace meaning of ''idea''."},{"id":"P2","left":"agree","right":"A simple workplace meaning of ''agree''."},{"id":"P3","left":"ready","right":"A simple workplace meaning of ''ready''."},{"id":"P4","left":"finish","right":"A simple workplace meaning of ''finish''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('95b4f79a-4a1e-55d2-938f-6dd4015aefee', 'ac2b8198-afad-5b25-9289-b77909412a47', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"idea","right":"a thought or plan you share with others"},{"id":"P2","left":"agree","right":"to say yes, you think the same"},{"id":"P3","left":"ready","right":"prepared to do or start something"},{"id":"P4","left":"finish","right":"to complete a task or job"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2831,7 +2831,7 @@ VALUES ('91c0fafd-eae5-5688-9172-6cf86bf7ec79', '56fed937-cad0-579b-8cba-54645b6
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('913de4b3-1521-59ec-a2ba-6488715047b0', '56fed937-cad0-579b-8cba-54645b6e5734', 'Выберите рабочее значение', 'choose_definition', '{"word":"agree","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''agree''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''ready''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''finish''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''meeting''.","is_correct":false}],"explanation":"agree: A simple workplace meaning of ''agree''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('913de4b3-1521-59ec-a2ba-6488715047b0', '56fed937-cad0-579b-8cba-54645b6e5734', 'Выберите рабочее значение', 'choose_definition', '{"word":"agree","language":"en","options":[{"id":"A","text":"to say yes, you think the same","is_correct":true},{"id":"B","text":"prepared to do or start something","is_correct":false},{"id":"C","text":"to complete a task or job","is_correct":false},{"id":"D","text":"a time when people talk about work together","is_correct":false}],"explanation":"agree: to say yes, you think the same","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2847,7 +2847,7 @@ VALUES ('f4d38a49-f4e8-51cd-919b-b41e61090bbb', NULL, 'Workplace Challenge: Meet
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('7ae1057c-aad1-522f-a3e9-c6660175f447', 'f4d38a49-f4e8-51cd-919b-b41e61090bbb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"ready","right":"A simple workplace meaning of ''ready''."},{"id":"P2","left":"finish","right":"A simple workplace meaning of ''finish''."},{"id":"P3","left":"meeting","right":"A simple workplace meaning of ''meeting''."},{"id":"P4","left":"start","right":"A simple workplace meaning of ''start''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('7ae1057c-aad1-522f-a3e9-c6660175f447', 'f4d38a49-f4e8-51cd-919b-b41e61090bbb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"ready","right":"prepared to do or start something"},{"id":"P2","left":"finish","right":"to complete a task or job"},{"id":"P3","left":"meeting","right":"a time when people talk about work together"},{"id":"P4","left":"start","right":"to begin doing something"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2927,7 +2927,7 @@ VALUES ('b8e40dd1-b87b-5164-98bf-28042f4bccc6', '6f6d3c62-efab-5721-87cc-c64f781
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('cd8f06a0-c00c-50f3-926a-822833d2c4a1', '6f6d3c62-efab-5721-87cc-c64f781763cc', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"customer","right":"A simple workplace meaning of ''customer''."},{"id":"P2","left":"help","right":"A simple workplace meaning of ''help''."},{"id":"P3","left":"need","right":"A simple workplace meaning of ''need''."},{"id":"P4","left":"want","right":"A simple workplace meaning of ''want''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('cd8f06a0-c00c-50f3-926a-822833d2c4a1', '6f6d3c62-efab-5721-87cc-c64f781763cc', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"customer","right":"a person who buys something from a business"},{"id":"P2","left":"help","right":"to do something useful for another person"},{"id":"P3","left":"need","right":"to require something important"},{"id":"P4","left":"want","right":"to wish to have or do something"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2943,7 +2943,7 @@ VALUES ('d0d0eed9-3ff9-5da3-9e2c-90738ae1bb8f', '6f6d3c62-efab-5721-87cc-c64f781
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('da3f02ad-c4f4-5e4a-b39c-ebb8bd8b749e', '6f6d3c62-efab-5721-87cc-c64f781763cc', 'Выберите рабочее значение', 'choose_definition', '{"word":"customer","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''customer''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''help''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''need''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''want''.","is_correct":false}],"explanation":"customer: A simple workplace meaning of ''customer''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('da3f02ad-c4f4-5e4a-b39c-ebb8bd8b749e', '6f6d3c62-efab-5721-87cc-c64f781763cc', 'Выберите рабочее значение', 'choose_definition', '{"word":"customer","language":"en","options":[{"id":"A","text":"a person who buys something from a business","is_correct":true},{"id":"B","text":"to do something useful for another person","is_correct":false},{"id":"C","text":"to require something important","is_correct":false},{"id":"D","text":"to wish to have or do something","is_correct":false}],"explanation":"customer: a person who buys something from a business","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2995,7 +2995,7 @@ VALUES ('a43510d7-5777-5bb3-8087-858562d6c118', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('db67355d-896c-5791-b8fe-4e60f10f32b2', 'a43510d7-5777-5bb3-8087-858562d6c118', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"need","right":"A simple workplace meaning of ''need''."},{"id":"P2","left":"want","right":"A simple workplace meaning of ''want''."},{"id":"P3","left":"price","right":"A simple workplace meaning of ''price''."},{"id":"P4","left":"order","right":"A simple workplace meaning of ''order''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('db67355d-896c-5791-b8fe-4e60f10f32b2', 'a43510d7-5777-5bb3-8087-858562d6c118', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"need","right":"to require something important"},{"id":"P2","left":"want","right":"to wish to have or do something"},{"id":"P3","left":"price","right":"the amount of money something costs"},{"id":"P4","left":"order","right":"a request to buy or get something"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3035,7 +3035,7 @@ VALUES ('609fd54d-07db-590a-a61d-c26512187a53', '689f9c94-215d-5222-80b5-511c0c1
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('e848a058-db3f-5b00-8ca1-8c4d5e73f9c8', '689f9c94-215d-5222-80b5-511c0c18876d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"want","right":"A simple workplace meaning of ''want''."},{"id":"P2","left":"price","right":"A simple workplace meaning of ''price''."},{"id":"P3","left":"order","right":"A simple workplace meaning of ''order''."},{"id":"P4","left":"problem","right":"A simple workplace meaning of ''problem''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('e848a058-db3f-5b00-8ca1-8c4d5e73f9c8', '689f9c94-215d-5222-80b5-511c0c18876d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"want","right":"to wish to have or do something"},{"id":"P2","left":"price","right":"the amount of money something costs"},{"id":"P3","left":"order","right":"a request to buy or get something"},{"id":"P4","left":"problem","right":"something that is wrong and needs a solution"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3051,7 +3051,7 @@ VALUES ('1e43f51b-e1cc-5561-ae07-9c18720e84f1', '689f9c94-215d-5222-80b5-511c0c1
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a7e804d6-e749-56e4-b276-4a10df8f9af9', '689f9c94-215d-5222-80b5-511c0c18876d', 'Выберите рабочее значение', 'choose_definition', '{"word":"want","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''want''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''price''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''order''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''problem''.","is_correct":false}],"explanation":"want: A simple workplace meaning of ''want''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('a7e804d6-e749-56e4-b276-4a10df8f9af9', '689f9c94-215d-5222-80b5-511c0c18876d', 'Выберите рабочее значение', 'choose_definition', '{"word":"want","language":"en","options":[{"id":"A","text":"to wish to have or do something","is_correct":true},{"id":"B","text":"the amount of money something costs","is_correct":false},{"id":"C","text":"a request to buy or get something","is_correct":false},{"id":"D","text":"something that is wrong and needs a solution","is_correct":false}],"explanation":"want: to wish to have or do something","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3119,7 +3119,7 @@ VALUES ('3a33fbdf-9532-57db-833f-4a35f7780275', 'ab4c5a9d-4de9-5b54-ad97-4ae3996
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('54efd6c4-3088-5269-9099-598de16632fe', 'ab4c5a9d-4de9-5b54-ad97-4ae3996cb819', 'Выберите рабочее значение', 'choose_definition', '{"word":"order","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''order''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''problem''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''please''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''sorry''.","is_correct":false}],"explanation":"order: A simple workplace meaning of ''order''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
+VALUES ('54efd6c4-3088-5269-9099-598de16632fe', 'ab4c5a9d-4de9-5b54-ad97-4ae3996cb819', 'Выберите рабочее значение', 'choose_definition', '{"word":"order","language":"en","options":[{"id":"A","text":"a request to buy or get something","is_correct":true},{"id":"B","text":"something that is wrong and needs a solution","is_correct":false},{"id":"C","text":"a polite word used when asking for something","is_correct":false},{"id":"D","text":"a word used to apologize","is_correct":false}],"explanation":"order: a request to buy or get something","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3139,7 +3139,7 @@ VALUES ('25d12337-42b8-5a95-a7cc-164cf622ddcb', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('d11399dd-b179-55e9-9c1a-e776b0d947e5', '25d12337-42b8-5a95-a7cc-164cf622ddcb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"problem","right":"A simple workplace meaning of ''problem''."},{"id":"P2","left":"please","right":"A simple workplace meaning of ''please''."},{"id":"P3","left":"sorry","right":"A simple workplace meaning of ''sorry''."},{"id":"P4","left":"thank","right":"A simple workplace meaning of ''thank''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('d11399dd-b179-55e9-9c1a-e776b0d947e5', '25d12337-42b8-5a95-a7cc-164cf622ddcb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"problem","right":"something that is wrong and needs a solution"},{"id":"P2","left":"please","right":"a polite word used when asking for something"},{"id":"P3","left":"sorry","right":"a word used to apologize"},{"id":"P4","left":"thank","right":"to show you are grateful"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3195,7 +3195,7 @@ VALUES ('0e4811eb-5f6b-542b-878c-2f71219ba2e5', 'db8a9144-a8b6-5b8a-a2f9-40cac95
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('3a878778-f526-5f4f-8a03-ac0aa37bb05a', 'db8a9144-a8b6-5b8a-a2f9-40cac95944b5', 'Выберите рабочее значение', 'choose_definition', '{"word":"please","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''please''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''sorry''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''thank''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''customer''.","is_correct":false}],"explanation":"please: A simple workplace meaning of ''please''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('3a878778-f526-5f4f-8a03-ac0aa37bb05a', 'db8a9144-a8b6-5b8a-a2f9-40cac95944b5', 'Выберите рабочее значение', 'choose_definition', '{"word":"please","language":"en","options":[{"id":"A","text":"a polite word used when asking for something","is_correct":true},{"id":"B","text":"a word used to apologize","is_correct":false},{"id":"C","text":"to show you are grateful","is_correct":false},{"id":"D","text":"a person who buys something from a business","is_correct":false}],"explanation":"please: a polite word used when asking for something","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3211,7 +3211,7 @@ VALUES ('276b273d-ae43-5027-85c8-f4cc91d48e5e', NULL, 'Workplace Challenge: Cust
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('4c04fe26-f62c-58e7-8395-e01e2b665ddb', '276b273d-ae43-5027-85c8-f4cc91d48e5e', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"sorry","right":"A simple workplace meaning of ''sorry''."},{"id":"P2","left":"thank","right":"A simple workplace meaning of ''thank''."},{"id":"P3","left":"customer","right":"A simple workplace meaning of ''customer''."},{"id":"P4","left":"help","right":"A simple workplace meaning of ''help''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('4c04fe26-f62c-58e7-8395-e01e2b665ddb', '276b273d-ae43-5027-85c8-f4cc91d48e5e', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"sorry","right":"a word used to apologize"},{"id":"P2","left":"thank","right":"to show you are grateful"},{"id":"P3","left":"customer","right":"a person who buys something from a business"},{"id":"P4","left":"help","right":"to do something useful for another person"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3291,7 +3291,7 @@ VALUES ('eba68bab-80f0-5385-b609-dc850b00892e', '62c87325-7140-5348-b0ab-3ce2834
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('6836e03f-fa9f-57e0-8efc-a16bbe452bd8', '62c87325-7140-5348-b0ab-3ce2834563d4', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"business","right":"A simple workplace meaning of ''business''."},{"id":"P2","left":"work","right":"A simple workplace meaning of ''work''."},{"id":"P3","left":"team","right":"A simple workplace meaning of ''team''."},{"id":"P4","left":"email","right":"A simple workplace meaning of ''email''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('6836e03f-fa9f-57e0-8efc-a16bbe452bd8', '62c87325-7140-5348-b0ab-3ce2834563d4', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"business","right":"work done to make or sell things or services"},{"id":"P2","left":"work","right":"the job or tasks a person does"},{"id":"P3","left":"team","right":"a group of people who work together"},{"id":"P4","left":"email","right":"a written message sent on the computer"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3307,7 +3307,7 @@ VALUES ('4f296e98-fd02-5406-8465-24e688771c26', '62c87325-7140-5348-b0ab-3ce2834
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('8bf04670-e7e1-5d54-8221-66ef3936538a', '62c87325-7140-5348-b0ab-3ce2834563d4', 'Выберите рабочее значение', 'choose_definition', '{"word":"business","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''business''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''work''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''team''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''email''.","is_correct":false}],"explanation":"business: A simple workplace meaning of ''business''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('8bf04670-e7e1-5d54-8221-66ef3936538a', '62c87325-7140-5348-b0ab-3ce2834563d4', 'Выберите рабочее значение', 'choose_definition', '{"word":"business","language":"en","options":[{"id":"A","text":"work done to make or sell things or services","is_correct":true},{"id":"B","text":"the job or tasks a person does","is_correct":false},{"id":"C","text":"a group of people who work together","is_correct":false},{"id":"D","text":"a written message sent on the computer","is_correct":false}],"explanation":"business: work done to make or sell things or services","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3359,7 +3359,7 @@ VALUES ('e816a5be-f55b-578f-af38-4084e65bfeeb', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('f8b33336-ee4d-53ca-8f93-18b830a37083', 'e816a5be-f55b-578f-af38-4084e65bfeeb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"team","right":"A simple workplace meaning of ''team''."},{"id":"P2","left":"email","right":"A simple workplace meaning of ''email''."},{"id":"P3","left":"call","right":"A simple workplace meaning of ''call''."},{"id":"P4","left":"meeting","right":"A simple workplace meaning of ''meeting''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('f8b33336-ee4d-53ca-8f93-18b830a37083', 'e816a5be-f55b-578f-af38-4084e65bfeeb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"team","right":"a group of people who work together"},{"id":"P2","left":"email","right":"a written message sent on the computer"},{"id":"P3","left":"call","right":"to talk to someone using the phone"},{"id":"P4","left":"meeting","right":"a time when people talk about work together"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3399,7 +3399,7 @@ VALUES ('fe47740a-23b3-57c0-8cf5-97b513cd8fb6', 'b4fb89ae-1e99-54ed-82f1-ec75c42
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('2fb97026-6eb5-548d-b8ba-c6b8c6f8d53b', 'b4fb89ae-1e99-54ed-82f1-ec75c42cd9ba', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"email","right":"A simple workplace meaning of ''email''."},{"id":"P2","left":"call","right":"A simple workplace meaning of ''call''."},{"id":"P3","left":"meeting","right":"A simple workplace meaning of ''meeting''."},{"id":"P4","left":"customer","right":"A simple workplace meaning of ''customer''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('2fb97026-6eb5-548d-b8ba-c6b8c6f8d53b', 'b4fb89ae-1e99-54ed-82f1-ec75c42cd9ba', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"email","right":"a written message sent on the computer"},{"id":"P2","left":"call","right":"to talk to someone using the phone"},{"id":"P3","left":"meeting","right":"a time when people talk about work together"},{"id":"P4","left":"customer","right":"a person who buys something from a business"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3415,7 +3415,7 @@ VALUES ('d7e8bc58-c48f-54e6-bcf6-1c1552a4b967', 'b4fb89ae-1e99-54ed-82f1-ec75c42
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('5975de11-6150-5553-ba42-4de62156cd1d', 'b4fb89ae-1e99-54ed-82f1-ec75c42cd9ba', 'Выберите рабочее значение', 'choose_definition', '{"word":"email","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''email''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''call''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''meeting''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''customer''.","is_correct":false}],"explanation":"email: A simple workplace meaning of ''email''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('5975de11-6150-5553-ba42-4de62156cd1d', 'b4fb89ae-1e99-54ed-82f1-ec75c42cd9ba', 'Выберите рабочее значение', 'choose_definition', '{"word":"email","language":"en","options":[{"id":"A","text":"a written message sent on the computer","is_correct":true},{"id":"B","text":"to talk to someone using the phone","is_correct":false},{"id":"C","text":"a time when people talk about work together","is_correct":false},{"id":"D","text":"a person who buys something from a business","is_correct":false}],"explanation":"email: a written message sent on the computer","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3483,7 +3483,7 @@ VALUES ('042152be-bd08-5156-a19c-db08d2b37592', '15ff68cf-4f5e-5b3a-b0b4-77206a6
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('11ac35f0-93c0-5b0f-a4f5-da574de1b4c3', '15ff68cf-4f5e-5b3a-b0b4-77206a6045e5', 'Выберите рабочее значение', 'choose_definition', '{"word":"meeting","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''meeting''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''customer''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''request''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''message''.","is_correct":false}],"explanation":"meeting: A simple workplace meaning of ''meeting''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
+VALUES ('11ac35f0-93c0-5b0f-a4f5-da574de1b4c3', '15ff68cf-4f5e-5b3a-b0b4-77206a6045e5', 'Выберите рабочее значение', 'choose_definition', '{"word":"meeting","language":"en","options":[{"id":"A","text":"a time when people talk about work together","is_correct":true},{"id":"B","text":"a person who buys something from a business","is_correct":false},{"id":"C","text":"a polite way of asking for something","is_correct":false},{"id":"D","text":"a short piece of information sent to someone","is_correct":false}],"explanation":"meeting: a time when people talk about work together","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3503,7 +3503,7 @@ VALUES ('af745cd6-5e7c-5d2e-83ac-2925d776f1fe', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('2d793fe4-20ee-5708-ae92-e638711cb541', 'af745cd6-5e7c-5d2e-83ac-2925d776f1fe', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"customer","right":"A simple workplace meaning of ''customer''."},{"id":"P2","left":"request","right":"A simple workplace meaning of ''request''."},{"id":"P3","left":"message","right":"A simple workplace meaning of ''message''."},{"id":"P4","left":"professional","right":"A simple workplace meaning of ''professional''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('2d793fe4-20ee-5708-ae92-e638711cb541', 'af745cd6-5e7c-5d2e-83ac-2925d776f1fe', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"customer","right":"a person who buys something from a business"},{"id":"P2","left":"request","right":"a polite way of asking for something"},{"id":"P3","left":"message","right":"a short piece of information sent to someone"},{"id":"P4","left":"professional","right":"relating to work done in a serious, skilled way"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3559,7 +3559,7 @@ VALUES ('c9e1d2c5-2ea1-5791-812c-6ea4124593e0', 'f2f39aee-a3bd-5978-ae54-573976b
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('40a2b662-b31c-562d-bfb3-b5d140c44d20', 'f2f39aee-a3bd-5978-ae54-573976b8dd03', 'Выберите рабочее значение', 'choose_definition', '{"word":"request","language":"en","options":[{"id":"A","text":"A simple workplace meaning of ''request''.","is_correct":true},{"id":"B","text":"A simple workplace meaning of ''message''.","is_correct":false},{"id":"C","text":"A simple workplace meaning of ''professional''.","is_correct":false},{"id":"D","text":"A simple workplace meaning of ''business''.","is_correct":false}],"explanation":"request: A simple workplace meaning of ''request''.","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
+VALUES ('40a2b662-b31c-562d-bfb3-b5d140c44d20', 'f2f39aee-a3bd-5978-ae54-573976b8dd03', 'Выберите рабочее значение', 'choose_definition', '{"word":"request","language":"en","options":[{"id":"A","text":"a polite way of asking for something","is_correct":true},{"id":"B","text":"a short piece of information sent to someone","is_correct":false},{"id":"C","text":"relating to work done in a serious, skilled way","is_correct":false},{"id":"D","text":"work done to make or sell things or services","is_correct":false}],"explanation":"request: a polite way of asking for something","instruction":"Выберите правильное значение рабочего слова."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3575,7 +3575,7 @@ VALUES ('069f1752-3751-55c6-9066-83ed8f70ecef', NULL, 'Workplace Challenge: A1 B
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('4289308b-f42c-5e28-becf-8a73d7865bf9', '069f1752-3751-55c6-9066-83ed8f70ecef', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"message","right":"A simple workplace meaning of ''message''."},{"id":"P2","left":"professional","right":"A simple workplace meaning of ''professional''."},{"id":"P3","left":"business","right":"A simple workplace meaning of ''business''."},{"id":"P4","left":"work","right":"A simple workplace meaning of ''work''."}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('4289308b-f42c-5e28-becf-8a73d7865bf9', '069f1752-3751-55c6-9066-83ed8f70ecef', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"message","right":"a short piece of information sent to someone"},{"id":"P2","left":"professional","right":"relating to work done in a serious, skilled way"},{"id":"P3","left":"business","right":"work done to make or sell things or services"},{"id":"P4","left":"work","right":"the job or tasks a person does"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
