@@ -106,7 +106,38 @@ simple professional introduction...») — это не вопрос-ситуац
   задания («услышь слово, найди его написание»).
 - `text`, `listening` — просто контент/аудио, логических ошибок не найдено.
 
-## Процесс фикса контента (применялся 3 раза, по одному на каждую проблему)
+## Проблема 3: track/lesson title и description были только на английском
+
+**Симптом:** эталонный пример пакета
+(`docs/TRACK_IMPORT_V2_MINIMAL_EXAMPLE.json`, трек `A1_GREETINGS`) показывает,
+что `track.title`, `track.description`, `lesson.title`, `lesson.objective`
+должны иметь **обе** локализации (`en` + `ru`), так как `native_language: ru`.
+В `A1_BUSINESS_ENGLISH_TRACKS_01_10_V2` у всех 10 треков и 100 уроков эти
+поля существовали только на `en`. `seed_sql()` в
+`normalize_business_tracks_v2.py` делает `title['ru'] or title['en']` —
+из-за отсутствия `ru` в БД сохранялся английский текст на экране трека и
+урока, хотя весь остальной UI-текст (инструкции внутри шагов) на русском.
+
+**Фикс:** добавлены `ru`-переводы для `track.title`/`description` (10 треков)
+и `lesson.title`/`objective` (100 уроков, по 10 на трек) — все они строго
+шаблонные (10 фиксированных типов урока × 10 тем трека), переведены
+программно по словарю. Итого 220 добавленных переводов
+(`scripts/add_russian_titles.py`).
+
+**Важно про регенерацию сида:** обычный путь
+(`normalize_business_tracks_v2.py`) перегенерирует V2-файлы **из
+одноязычного** `COMBINED.json`, что уничтожило бы добавленные `ru`-переводы
+при следующем запуске. Поэтому создан отдельный скрипт
+`scripts/regenerate_seed_from_v2.py`, который читает уже финальные,
+локализованные V2-файлы напрямую и вызывает ту же `seed_sql()`-функцию
+(тот же модуль, импортированный напрямую) — не трогая V2-файлы и не
+регенерируя их из COMBINED. Использовать именно его для всех последующих
+регенераций сида, если V2-файлы содержат правки, которых нет в COMBINED.
+
+**Коммит:** `0e9e80e` — `fix(course-service): add Russian
+title/description/objective to A1 Business tracks`.
+
+## Процесс фикса контента (применялся 4 раза, по одному на каждую проблему)
 
 1. Правится первоисточник:
    `tracks/A1_BUSINESS_ENGLISH_TRACKS_01_10_APP_ACTIVITIES_ONLY_COMBINED.json`
@@ -150,6 +181,8 @@ WHERE code LIKE 'A1_BUSINESS%';
 | `20a1fc0` | `match_pairs`: англ. определения → русский перевод (финальный фикс) |
 | `eb995c4` | `quiz`: `question`/`explanation` → логически обоснованный вопрос-ситуация |
 | `c5027ca` | `listening_shadowing.translation_hint`: objective → русский перевод фразы |
+| `708ed59` | `docs`: первая версия этого документа |
+| `0e9e80e` | `track`/`lesson` title, description, objective → добавлены `ru`-переводы |
 
 ## Скрипты (репозиторий `eng`, каталог `scripts/`, не в git)
 
@@ -158,6 +191,13 @@ WHERE code LIKE 'A1_BUSINESS%';
 - `fix_match_pairs_to_russian.py` — перевод `match_pairs.right` на русский.
 - `fix_quiz_questions.py` — переписывание `quiz.question`/`explanation`.
 - `fix_listening_shadowing_hints.py` — перевод `translation_hint`.
+- `add_russian_titles.py` — добавление `ru` в `track`/`lesson`
+  title/description/objective (только в V2-файлы, COMBINED не трогает).
+- `regenerate_seed_from_v2.py` — регенерация SQL-сида **напрямую из
+  V2-файлов** (не из COMBINED). Использовать вместо
+  `normalize_business_tracks_v2.py`, если V2-файлы содержат правки,
+  которых нет в COMBINED (например ручные переводы) — иначе они будут
+  потеряны при перегенерации V2 из одноязычного источника.
 
 Бэкапы исходных файлов до каждого фикса сохранены в `/tmp/A1_BUSINESS_*` и
 `/tmp/COMBINED_*.json` (временные, не в репозитории).
@@ -167,8 +207,11 @@ WHERE code LIKE 'A1_BUSINESS%';
 - БД: `SELECT ... WHERE content::text LIKE '%simple workplace meaning of%'`
   → 0 строк.
 - БД: `motivation = {work}` для всех 10 треков.
+- БД: `title`/`description` у всех 10 треков и `title` у уроков — на русском
+  (например `A1_BUSINESS_T01.title = "Представление себя на работе"`).
 - API: `GET /api/v1/tracks?motivation=work&limit=50` → все 10
-  `A1_BUSINESS_T01..T10` в ответе, `total: 337`.
+  `A1_BUSINESS_T01..T10` в ответе, `total: 337`, `title`/`description` на
+  русском.
 - API: `GET /health` → `{"status":"ok"}`.
 - Пример проверенного шага (`A1_BUSINESS_T01_L01`, шаг 2 `match_pairs`):
   `{"left": "name", "right": "имя"}`.
