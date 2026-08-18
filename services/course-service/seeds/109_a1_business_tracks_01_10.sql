@@ -15,7 +15,7 @@ VALUES ('4c7ebf48-4849-5ccd-991b-b883c5b769c8', '32ec422d-a5f2-5e91-ad45-ac42830
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('8d3597ca-66e3-5efc-9b5f-2e50c7eb58b1', '32ec422d-a5f2-5e91-ad45-ac428306870b', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"name","right":"the word used to call a person"},{"id":"P2","left":"work","right":"the job or tasks a person does"},{"id":"P3","left":"company","right":"a business where people work together"},{"id":"P4","left":"job","right":"the work a person does to earn money"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('8d3597ca-66e3-5efc-9b5f-2e50c7eb58b1', '32ec422d-a5f2-5e91-ad45-ac428306870b', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"name","right":"имя"},{"id":"P2","left":"work","right":"работа, работать"},{"id":"P3","left":"company","right":"компания"},{"id":"P4","left":"job","right":"работа, должность"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -83,7 +83,7 @@ VALUES ('c7320e69-2e14-5697-a1b9-ca340052ac5a', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('73040f45-b902-536b-8cd8-a96a00e8f20d', 'c7320e69-2e14-5697-a1b9-ca340052ac5a', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"company","right":"a business where people work together"},{"id":"P2","left":"job","right":"the work a person does to earn money"},{"id":"P3","left":"team","right":"a group of people who work together"},{"id":"P4","left":"office","right":"a room or building where people work"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('73040f45-b902-536b-8cd8-a96a00e8f20d', 'c7320e69-2e14-5697-a1b9-ca340052ac5a', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"company","right":"компания"},{"id":"P2","left":"job","right":"работа, должность"},{"id":"P3","left":"team","right":"команда"},{"id":"P4","left":"office","right":"офис"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -123,7 +123,7 @@ VALUES ('fec514b9-bbf0-54ee-aec5-bee66cda2198', '32c96112-142b-5742-b6ff-228ad0b
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('dcc5f9e0-483b-5fb5-a343-c118abad5e3c', '32c96112-142b-5742-b6ff-228ad0b30a75', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"job","right":"the work a person does to earn money"},{"id":"P2","left":"team","right":"a group of people who work together"},{"id":"P3","left":"office","right":"a room or building where people work"},{"id":"P4","left":"manager","right":"a person who leads a team at work"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('dcc5f9e0-483b-5fb5-a343-c118abad5e3c', '32c96112-142b-5742-b6ff-228ad0b30a75', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"job","right":"работа, должность"},{"id":"P2","left":"team","right":"команда"},{"id":"P3","left":"office","right":"офис"},{"id":"P4","left":"manager","right":"менеджер, руководитель"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -227,7 +227,7 @@ VALUES ('030876b2-f67d-555c-88de-58b6480a72dd', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('ab4d21ab-3cda-57ee-886f-0c141b003b27', '030876b2-f67d-555c-88de-58b6480a72dd', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"manager","right":"a person who leads a team at work"},{"id":"P2","left":"colleague","right":"a person you work with"},{"id":"P3","left":"new","right":"not there before; just started or arrived"},{"id":"P4","left":"hello","right":"a friendly word used to greet someone"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('ab4d21ab-3cda-57ee-886f-0c141b003b27', '030876b2-f67d-555c-88de-58b6480a72dd', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"manager","right":"менеджер, руководитель"},{"id":"P2","left":"colleague","right":"коллега"},{"id":"P3","left":"new","right":"новый"},{"id":"P4","left":"hello","right":"привет, здравствуйте"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -299,7 +299,7 @@ VALUES ('b24df5ea-8f8e-56e1-a01b-87ce899f3769', NULL, 'Workplace Challenge: Intr
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('76aa7bfd-ab35-525c-b32a-1328887d16ac', 'b24df5ea-8f8e-56e1-a01b-87ce899f3769', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"new","right":"not there before; just started or arrived"},{"id":"P2","left":"hello","right":"a friendly word used to greet someone"},{"id":"P3","left":"name","right":"the word used to call a person"},{"id":"P4","left":"work","right":"the job or tasks a person does"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('76aa7bfd-ab35-525c-b32a-1328887d16ac', 'b24df5ea-8f8e-56e1-a01b-87ce899f3769', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"new","right":"новый"},{"id":"P2","left":"hello","right":"привет, здравствуйте"},{"id":"P3","left":"name","right":"имя"},{"id":"P4","left":"work","right":"работа, работать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -379,7 +379,7 @@ VALUES ('892f51d7-2334-5a9a-a319-19b01c8c11e0', '3285b7d5-d249-5297-a264-1b7fc36
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('5c27ef88-0929-5f1b-8c0a-d7b2e637d1f4', '3285b7d5-d249-5297-a264-1b7fc3626e0e', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"job","right":"the work a person does to earn money"},{"id":"P2","left":"department","right":"one part of a company, like sales or IT"},{"id":"P3","left":"sales","right":"the part of a business that sells products"},{"id":"P4","left":"office","right":"a room or building where people work"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('5c27ef88-0929-5f1b-8c0a-d7b2e637d1f4', '3285b7d5-d249-5297-a264-1b7fc3626e0e', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"job","right":"работа, должность"},{"id":"P2","left":"department","right":"отдел"},{"id":"P3","left":"sales","right":"продажи"},{"id":"P4","left":"office","right":"офис"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -447,7 +447,7 @@ VALUES ('d257c3bc-1f74-52c7-b612-80f68ce6bfb4', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('19cab04d-6229-5583-8646-647581def398', 'd257c3bc-1f74-52c7-b612-80f68ce6bfb4', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"sales","right":"the part of a business that sells products"},{"id":"P2","left":"office","right":"a room or building where people work"},{"id":"P3","left":"manager","right":"a person who leads a team at work"},{"id":"P4","left":"assistant","right":"a person who helps someone with their work"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('19cab04d-6229-5583-8646-647581def398', 'd257c3bc-1f74-52c7-b612-80f68ce6bfb4', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"sales","right":"продажи"},{"id":"P2","left":"office","right":"офис"},{"id":"P3","left":"manager","right":"менеджер, руководитель"},{"id":"P4","left":"assistant","right":"помощник"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -487,7 +487,7 @@ VALUES ('770080f3-9131-5d04-8e70-d861b4c6153c', 'b7fce779-812f-50e1-8f77-2809b4e
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('726ff961-7798-51a7-a17a-ae22c761fed2', 'b7fce779-812f-50e1-8f77-2809b4e5eedd', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"office","right":"a room or building where people work"},{"id":"P2","left":"manager","right":"a person who leads a team at work"},{"id":"P3","left":"assistant","right":"a person who helps someone with their work"},{"id":"P4","left":"customer","right":"a person who buys something from a business"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('726ff961-7798-51a7-a17a-ae22c761fed2', 'b7fce779-812f-50e1-8f77-2809b4e5eedd', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"office","right":"офис"},{"id":"P2","left":"manager","right":"менеджер, руководитель"},{"id":"P3","left":"assistant","right":"помощник"},{"id":"P4","left":"customer","right":"клиент"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -591,7 +591,7 @@ VALUES ('18680adb-b776-5310-906d-abada97f36f0', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a21817ea-916d-5b98-b093-4ab075f48d4b', '18680adb-b776-5310-906d-abada97f36f0', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"customer","right":"a person who buys something from a business"},{"id":"P2","left":"team","right":"a group of people who work together"},{"id":"P3","left":"work","right":"the job or tasks a person does"},{"id":"P4","left":"company","right":"a business where people work together"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('a21817ea-916d-5b98-b093-4ab075f48d4b', '18680adb-b776-5310-906d-abada97f36f0', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"customer","right":"клиент"},{"id":"P2","left":"team","right":"команда"},{"id":"P3","left":"work","right":"работа, работать"},{"id":"P4","left":"company","right":"компания"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -663,7 +663,7 @@ VALUES ('aba53e81-94cf-5fa3-81e8-888f01690f2d', NULL, 'Workplace Challenge: Jobs
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('567a4a87-fac8-5767-8c4b-676dd4827870', 'aba53e81-94cf-5fa3-81e8-888f01690f2d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"work","right":"the job or tasks a person does"},{"id":"P2","left":"company","right":"a business where people work together"},{"id":"P3","left":"job","right":"the work a person does to earn money"},{"id":"P4","left":"department","right":"one part of a company, like sales or IT"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('567a4a87-fac8-5767-8c4b-676dd4827870', 'aba53e81-94cf-5fa3-81e8-888f01690f2d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"work","right":"работа, работать"},{"id":"P2","left":"company","right":"компания"},{"id":"P3","left":"job","right":"работа, должность"},{"id":"P4","left":"department","right":"отдел"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -743,7 +743,7 @@ VALUES ('d0079dba-f586-5526-b2cf-21d73c77b31d', '6ee02a21-f0f0-5d59-95ee-f6f95fb
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('053abc85-b5ed-51fa-bc67-dcbd498bec8e', '6ee02a21-f0f0-5d59-95ee-f6f95fbb5323', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"desk","right":"a table where you sit and work"},{"id":"P2","left":"computer","right":"a machine used for work, email, and the internet"},{"id":"P3","left":"phone","right":"a device used to call or message people"},{"id":"P4","left":"office","right":"a room or building where people work"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('053abc85-b5ed-51fa-bc67-dcbd498bec8e', '6ee02a21-f0f0-5d59-95ee-f6f95fbb5323', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"desk","right":"письменный стол"},{"id":"P2","left":"computer","right":"компьютер"},{"id":"P3","left":"phone","right":"телефон"},{"id":"P4","left":"office","right":"офис"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -811,7 +811,7 @@ VALUES ('b8986f67-b79c-525d-9215-0fc3f218d05e', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('e9381496-5c07-5fb1-8947-b6adbe0de2d5', 'b8986f67-b79c-525d-9215-0fc3f218d05e', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"phone","right":"a device used to call or message people"},{"id":"P2","left":"office","right":"a room or building where people work"},{"id":"P3","left":"meeting","right":"a time when people talk about work together"},{"id":"P4","left":"room","right":"a space inside a building with walls"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('e9381496-5c07-5fb1-8947-b6adbe0de2d5', 'b8986f67-b79c-525d-9215-0fc3f218d05e', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"phone","right":"телефон"},{"id":"P2","left":"office","right":"офис"},{"id":"P3","left":"meeting","right":"встреча, совещание"},{"id":"P4","left":"room","right":"комната, помещение"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -851,7 +851,7 @@ VALUES ('50786506-8edc-57cb-a108-9683985a1b5a', '9c92f822-39c4-55f4-b6a7-f2addd1
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('f543c7e4-b931-564d-9d61-96923ba8b01f', '9c92f822-39c4-55f4-b6a7-f2addd16ca7d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"office","right":"a room or building where people work"},{"id":"P2","left":"meeting","right":"a time when people talk about work together"},{"id":"P3","left":"room","right":"a space inside a building with walls"},{"id":"P4","left":"door","right":"the part of a room you open to go in or out"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('f543c7e4-b931-564d-9d61-96923ba8b01f', '9c92f822-39c4-55f4-b6a7-f2addd16ca7d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"office","right":"офис"},{"id":"P2","left":"meeting","right":"встреча, совещание"},{"id":"P3","left":"room","right":"комната, помещение"},{"id":"P4","left":"door","right":"дверь"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -955,7 +955,7 @@ VALUES ('69bf5ed1-6c86-5900-9d0d-c4efee2e00be', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('532aa933-3120-5a43-aadb-b005d4b295a8', '69bf5ed1-6c86-5900-9d0d-c4efee2e00be', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"door","right":"the part of a room you open to go in or out"},{"id":"P2","left":"printer","right":"a machine that prints documents on paper"},{"id":"P3","left":"chair","right":"a seat for one person to sit on"},{"id":"P4","left":"table","right":"a piece of furniture used for meetings or work"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('532aa933-3120-5a43-aadb-b005d4b295a8', '69bf5ed1-6c86-5900-9d0d-c4efee2e00be', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"door","right":"дверь"},{"id":"P2","left":"printer","right":"принтер"},{"id":"P3","left":"chair","right":"стул"},{"id":"P4","left":"table","right":"стол"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1027,7 +1027,7 @@ VALUES ('f77cd227-06f6-56ed-817f-0cf345d7be8f', NULL, 'Workplace Challenge: Work
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('fb39d728-3f03-5b46-9568-7fc3d2565d59', 'f77cd227-06f6-56ed-817f-0cf345d7be8f', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"chair","right":"a seat for one person to sit on"},{"id":"P2","left":"table","right":"a piece of furniture used for meetings or work"},{"id":"P3","left":"desk","right":"a table where you sit and work"},{"id":"P4","left":"computer","right":"a machine used for work, email, and the internet"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('fb39d728-3f03-5b46-9568-7fc3d2565d59', 'f77cd227-06f6-56ed-817f-0cf345d7be8f', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"chair","right":"стул"},{"id":"P2","left":"table","right":"стол"},{"id":"P3","left":"desk","right":"письменный стол"},{"id":"P4","left":"computer","right":"компьютер"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1107,7 +1107,7 @@ VALUES ('edc19275-434d-5358-96a0-1127e1a1b2f4', '94c1aa25-73b8-5e12-a5fa-43b2a41
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('5045b74d-b24e-5db0-9731-6d0a25b53a8d', '94c1aa25-73b8-5e12-a5fa-43b2a4143cdf', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"start","right":"to begin doing something"},{"id":"P2","left":"finish","right":"to complete a task or job"},{"id":"P3","left":"email","right":"a written message sent on the computer"},{"id":"P4","left":"call","right":"to talk to someone using the phone"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('5045b74d-b24e-5db0-9731-6d0a25b53a8d', '94c1aa25-73b8-5e12-a5fa-43b2a4143cdf', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"start","right":"начинать"},{"id":"P2","left":"finish","right":"заканчивать"},{"id":"P3","left":"email","right":"электронное письмо"},{"id":"P4","left":"call","right":"звонок, звонить"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1175,7 +1175,7 @@ VALUES ('883e7854-873e-52a3-949e-aeaa4c9c1cf7', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('29fcc7f1-b083-522a-8f93-7742118957cd', '883e7854-873e-52a3-949e-aeaa4c9c1cf7', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"email","right":"a written message sent on the computer"},{"id":"P2","left":"call","right":"to talk to someone using the phone"},{"id":"P3","left":"meeting","right":"a time when people talk about work together"},{"id":"P4","left":"lunch","right":"a meal eaten in the middle of the day"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('29fcc7f1-b083-522a-8f93-7742118957cd', '883e7854-873e-52a3-949e-aeaa4c9c1cf7', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"email","right":"электронное письмо"},{"id":"P2","left":"call","right":"звонок, звонить"},{"id":"P3","left":"meeting","right":"встреча, совещание"},{"id":"P4","left":"lunch","right":"обед"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1215,7 +1215,7 @@ VALUES ('a43cc968-35c3-53d0-89f9-8449de86baa8', 'ceed390c-ac18-5ae3-8246-1f001a3
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('2756fb2b-9991-55b9-81c0-6385da113367', 'ceed390c-ac18-5ae3-8246-1f001a332b8a', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"call","right":"to talk to someone using the phone"},{"id":"P2","left":"meeting","right":"a time when people talk about work together"},{"id":"P3","left":"lunch","right":"a meal eaten in the middle of the day"},{"id":"P4","left":"morning","right":"the part of the day before midday"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('2756fb2b-9991-55b9-81c0-6385da113367', 'ceed390c-ac18-5ae3-8246-1f001a332b8a', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"call","right":"звонок, звонить"},{"id":"P2","left":"meeting","right":"встреча, совещание"},{"id":"P3","left":"lunch","right":"обед"},{"id":"P4","left":"morning","right":"утро"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1319,7 +1319,7 @@ VALUES ('c3a6819b-91d6-5fba-95a2-ab1e71b57b03', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('669d34c9-13cd-5e37-94e9-666aadd7f142', 'c3a6819b-91d6-5fba-95a2-ab1e71b57b03', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"morning","right":"the part of the day before midday"},{"id":"P2","left":"afternoon","right":"the part of the day between midday and evening"},{"id":"P3","left":"usually","right":"most of the time; almost always"},{"id":"P4","left":"work","right":"the job or tasks a person does"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('669d34c9-13cd-5e37-94e9-666aadd7f142', 'c3a6819b-91d6-5fba-95a2-ab1e71b57b03', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"morning","right":"утро"},{"id":"P2","left":"afternoon","right":"день (после полудня)"},{"id":"P3","left":"usually","right":"обычно"},{"id":"P4","left":"work","right":"работа, работать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1391,7 +1391,7 @@ VALUES ('5476c099-e8dc-5e96-a586-8448793e6355', NULL, 'Workplace Challenge: Dail
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('7fba1598-aa31-57a9-bd0e-1f363ace4919', '5476c099-e8dc-5e96-a586-8448793e6355', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"usually","right":"most of the time; almost always"},{"id":"P2","left":"work","right":"the job or tasks a person does"},{"id":"P3","left":"start","right":"to begin doing something"},{"id":"P4","left":"finish","right":"to complete a task or job"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('7fba1598-aa31-57a9-bd0e-1f363ace4919', '5476c099-e8dc-5e96-a586-8448793e6355', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"usually","right":"обычно"},{"id":"P2","left":"work","right":"работа, работать"},{"id":"P3","left":"start","right":"начинать"},{"id":"P4","left":"finish","right":"заканчивать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1471,7 +1471,7 @@ VALUES ('e471251d-bf7f-547b-b5b6-c212b7cc2785', '41bffb09-4de2-5193-8ed5-3f73755
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('c7370a9a-c228-541b-a3d4-f73722fcfa9f', '41bffb09-4de2-5193-8ed5-3f73755283d1', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"please","right":"a polite word used when asking for something"},{"id":"P2","left":"help","right":"to do something useful for another person"},{"id":"P3","left":"send","right":"to make a message or item go to someone"},{"id":"P4","left":"open","right":"not closed; ready for people to enter or use"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('c7370a9a-c228-541b-a3d4-f73722fcfa9f', '41bffb09-4de2-5193-8ed5-3f73755283d1', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"please","right":"пожалуйста"},{"id":"P2","left":"help","right":"помощь, помогать"},{"id":"P3","left":"send","right":"отправлять"},{"id":"P4","left":"open","right":"открытый, открывать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1539,7 +1539,7 @@ VALUES ('f7ad2c3c-bc26-51b2-836a-e335c3d6f692', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a6c7b00f-7917-57dc-9d94-1cb54affa15d', 'f7ad2c3c-bc26-51b2-836a-e335c3d6f692', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"send","right":"to make a message or item go to someone"},{"id":"P2","left":"open","right":"not closed; ready for people to enter or use"},{"id":"P3","left":"check","right":"to look at something to make sure it is correct"},{"id":"P4","left":"bring","right":"to take something with you to a place"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('a6c7b00f-7917-57dc-9d94-1cb54affa15d', 'f7ad2c3c-bc26-51b2-836a-e335c3d6f692', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"send","right":"отправлять"},{"id":"P2","left":"open","right":"открытый, открывать"},{"id":"P3","left":"check","right":"проверять"},{"id":"P4","left":"bring","right":"приносить"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1579,7 +1579,7 @@ VALUES ('5d2cb210-8420-5334-9aef-6424f45a8165', '8b0617f7-1742-5524-bc10-60286ab
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('7129a77e-788f-54a6-9aeb-3ba48ee089d5', '8b0617f7-1742-5524-bc10-60286ab4f11d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"open","right":"not closed; ready for people to enter or use"},{"id":"P2","left":"check","right":"to look at something to make sure it is correct"},{"id":"P3","left":"bring","right":"to take something with you to a place"},{"id":"P4","left":"wait","right":"to stay somewhere until something happens"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('7129a77e-788f-54a6-9aeb-3ba48ee089d5', '8b0617f7-1742-5524-bc10-60286ab4f11d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"open","right":"открытый, открывать"},{"id":"P2","left":"check","right":"проверять"},{"id":"P3","left":"bring","right":"приносить"},{"id":"P4","left":"wait","right":"ждать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1683,7 +1683,7 @@ VALUES ('a6469585-36b2-5ae4-8c01-e308446c79d6', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('36c09e28-d21c-5237-853b-cb5fb0b98dc8', 'a6469585-36b2-5ae4-8c01-e308446c79d6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"wait","right":"to stay somewhere until something happens"},{"id":"P2","left":"can","right":"to be able to do something"},{"id":"P3","left":"could","right":"a polite way to ask for something"},{"id":"P4","left":"sure","right":"certain or confident about something"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('36c09e28-d21c-5237-853b-cb5fb0b98dc8', 'a6469585-36b2-5ae4-8c01-e308446c79d6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"wait","right":"ждать"},{"id":"P2","left":"can","right":"мочь"},{"id":"P3","left":"could","right":"мог бы (вежливая форма)"},{"id":"P4","left":"sure","right":"конечно, уверен"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1755,7 +1755,7 @@ VALUES ('7fbcda39-ea33-5463-ba67-2985861c05d6', NULL, 'Workplace Challenge: Simp
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('75acfee9-87df-5a38-b1aa-2dc5f617b1ac', '7fbcda39-ea33-5463-ba67-2985861c05d6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"could","right":"a polite way to ask for something"},{"id":"P2","left":"sure","right":"certain or confident about something"},{"id":"P3","left":"please","right":"a polite word used when asking for something"},{"id":"P4","left":"help","right":"to do something useful for another person"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('75acfee9-87df-5a38-b1aa-2dc5f617b1ac', '7fbcda39-ea33-5463-ba67-2985861c05d6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"could","right":"мог бы (вежливая форма)"},{"id":"P2","left":"sure","right":"конечно, уверен"},{"id":"P3","left":"please","right":"пожалуйста"},{"id":"P4","left":"help","right":"помощь, помогать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1835,7 +1835,7 @@ VALUES ('e891d583-96e5-5c2e-8488-ff0abfffa5d3', '38a65605-8be3-5c6f-a2d6-aceae53
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('e065d940-27d4-5401-a1c4-d397da377864', '38a65605-8be3-5c6f-a2d6-aceae53d82b2', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"call","right":"to talk to someone using the phone"},{"id":"P2","left":"phone","right":"a device used to call or message people"},{"id":"P3","left":"speak","right":"to say words out loud"},{"id":"P4","left":"message","right":"a short piece of information sent to someone"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('e065d940-27d4-5401-a1c4-d397da377864', '38a65605-8be3-5c6f-a2d6-aceae53d82b2', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"call","right":"звонок, звонить"},{"id":"P2","left":"phone","right":"телефон"},{"id":"P3","left":"speak","right":"говорить"},{"id":"P4","left":"message","right":"сообщение"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1903,7 +1903,7 @@ VALUES ('8ab87691-4c1d-5d93-a7a8-0e187cda96e0', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('e44bfb58-4fce-5fcf-81e7-447f0280d78a', '8ab87691-4c1d-5d93-a7a8-0e187cda96e0', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"speak","right":"to say words out loud"},{"id":"P2","left":"message","right":"a short piece of information sent to someone"},{"id":"P3","left":"number","right":"a figure used to count or contact someone"},{"id":"P4","left":"available","right":"free to talk or meet right now"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('e44bfb58-4fce-5fcf-81e7-447f0280d78a', '8ab87691-4c1d-5d93-a7a8-0e187cda96e0', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"speak","right":"говорить"},{"id":"P2","left":"message","right":"сообщение"},{"id":"P3","left":"number","right":"номер, число"},{"id":"P4","left":"available","right":"свободен, доступен"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1943,7 +1943,7 @@ VALUES ('87817ffe-4559-5457-a817-9a2c6ece8b5a', '2225737d-2c58-5c5c-bb7c-6779dd2
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('5e590f73-7731-5350-9481-57af1c4bf22b', '2225737d-2c58-5c5c-bb7c-6779dd209c94', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"message","right":"a short piece of information sent to someone"},{"id":"P2","left":"number","right":"a figure used to count or contact someone"},{"id":"P3","left":"available","right":"free to talk or meet right now"},{"id":"P4","left":"sorry","right":"a word used to apologize"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('5e590f73-7731-5350-9481-57af1c4bf22b', '2225737d-2c58-5c5c-bb7c-6779dd209c94', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"message","right":"сообщение"},{"id":"P2","left":"number","right":"номер, число"},{"id":"P3","left":"available","right":"свободен, доступен"},{"id":"P4","left":"sorry","right":"извините"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2047,7 +2047,7 @@ VALUES ('7a96226c-0baa-5368-90c3-9dc0d7883efb', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('83a83207-890b-5b98-a34f-495b5b050f7c', '7a96226c-0baa-5368-90c3-9dc0d7883efb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"sorry","right":"a word used to apologize"},{"id":"P2","left":"hello","right":"a friendly word used to greet someone"},{"id":"P3","left":"later","right":"at a time after now"},{"id":"P4","left":"thanks","right":"a short way of saying you are grateful"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('83a83207-890b-5b98-a34f-495b5b050f7c', '7a96226c-0baa-5368-90c3-9dc0d7883efb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"sorry","right":"извините"},{"id":"P2","left":"hello","right":"привет, здравствуйте"},{"id":"P3","left":"later","right":"позже"},{"id":"P4","left":"thanks","right":"спасибо"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2119,7 +2119,7 @@ VALUES ('5c2804d7-b6e9-51d7-a1b7-232d933746c6', NULL, 'Workplace Challenge: Phon
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a995d9f6-ed90-56ec-bcd5-a6c777281c74', '5c2804d7-b6e9-51d7-a1b7-232d933746c6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"later","right":"at a time after now"},{"id":"P2","left":"thanks","right":"a short way of saying you are grateful"},{"id":"P3","left":"call","right":"to talk to someone using the phone"},{"id":"P4","left":"phone","right":"a device used to call or message people"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('a995d9f6-ed90-56ec-bcd5-a6c777281c74', '5c2804d7-b6e9-51d7-a1b7-232d933746c6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"later","right":"позже"},{"id":"P2","left":"thanks","right":"спасибо"},{"id":"P3","left":"call","right":"звонок, звонить"},{"id":"P4","left":"phone","right":"телефон"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2199,7 +2199,7 @@ VALUES ('ea2da36f-6ca3-5d8d-b05b-ac1615fb8651', '40eee8fe-caad-5cbb-8847-57f8fc2
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a6f92631-4818-5483-86c3-b47ecb984ab6', '40eee8fe-caad-5cbb-8847-57f8fc2cc099', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"email","right":"a written message sent on the computer"},{"id":"P2","left":"message","right":"a short piece of information sent to someone"},{"id":"P3","left":"subject","right":"the topic of an email or conversation"},{"id":"P4","left":"send","right":"to make a message or item go to someone"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('a6f92631-4818-5483-86c3-b47ecb984ab6', '40eee8fe-caad-5cbb-8847-57f8fc2cc099', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"email","right":"электронное письмо"},{"id":"P2","left":"message","right":"сообщение"},{"id":"P3","left":"subject","right":"тема"},{"id":"P4","left":"send","right":"отправлять"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2267,7 +2267,7 @@ VALUES ('429be802-5bae-5c8c-aa81-9ae17ea76b79', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('fe3bac4f-8cbf-51d1-a35c-4639b603a2dd', '429be802-5bae-5c8c-aa81-9ae17ea76b79', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"subject","right":"the topic of an email or conversation"},{"id":"P2","left":"send","right":"to make a message or item go to someone"},{"id":"P3","left":"reply","right":"an answer to a message or question"},{"id":"P4","left":"please","right":"a polite word used when asking for something"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('fe3bac4f-8cbf-51d1-a35c-4639b603a2dd', '429be802-5bae-5c8c-aa81-9ae17ea76b79', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"subject","right":"тема"},{"id":"P2","left":"send","right":"отправлять"},{"id":"P3","left":"reply","right":"ответ"},{"id":"P4","left":"please","right":"пожалуйста"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2307,7 +2307,7 @@ VALUES ('005f14f3-50cb-5483-a4ea-97185f05cfb3', 'ebe1242e-9183-5b7d-bd1b-e3f4a68
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('ca230a22-0dc6-53ca-b222-2361c2d5247a', 'ebe1242e-9183-5b7d-bd1b-e3f4a684671a', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"send","right":"to make a message or item go to someone"},{"id":"P2","left":"reply","right":"an answer to a message or question"},{"id":"P3","left":"please","right":"a polite word used when asking for something"},{"id":"P4","left":"thanks","right":"a short way of saying you are grateful"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('ca230a22-0dc6-53ca-b222-2361c2d5247a', 'ebe1242e-9183-5b7d-bd1b-e3f4a684671a', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"send","right":"отправлять"},{"id":"P2","left":"reply","right":"ответ"},{"id":"P3","left":"please","right":"пожалуйста"},{"id":"P4","left":"thanks","right":"спасибо"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2411,7 +2411,7 @@ VALUES ('4409af6f-fcbb-5dd4-ad79-3b77d4e6f9a6', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('f6fc6a2f-5a54-5995-9686-9a2bd34af8e8', '4409af6f-fcbb-5dd4-ad79-3b77d4e6f9a6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"thanks","right":"a short way of saying you are grateful"},{"id":"P2","left":"today","right":"this current day"},{"id":"P3","left":"tomorrow","right":"the day after today"},{"id":"P4","left":"meeting","right":"a time when people talk about work together"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('f6fc6a2f-5a54-5995-9686-9a2bd34af8e8', '4409af6f-fcbb-5dd4-ad79-3b77d4e6f9a6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"thanks","right":"спасибо"},{"id":"P2","left":"today","right":"сегодня"},{"id":"P3","left":"tomorrow","right":"завтра"},{"id":"P4","left":"meeting","right":"встреча, совещание"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2483,7 +2483,7 @@ VALUES ('05cbb2d0-27a9-56ae-909b-2c34e6e62469', NULL, 'Workplace Challenge: Emai
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('b488f029-c5b7-5aac-8b4b-689d83558699', '05cbb2d0-27a9-56ae-909b-2c34e6e62469', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"tomorrow","right":"the day after today"},{"id":"P2","left":"meeting","right":"a time when people talk about work together"},{"id":"P3","left":"email","right":"a written message sent on the computer"},{"id":"P4","left":"message","right":"a short piece of information sent to someone"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('b488f029-c5b7-5aac-8b4b-689d83558699', '05cbb2d0-27a9-56ae-909b-2c34e6e62469', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"tomorrow","right":"завтра"},{"id":"P2","left":"meeting","right":"встреча, совещание"},{"id":"P3","left":"email","right":"электронное письмо"},{"id":"P4","left":"message","right":"сообщение"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2563,7 +2563,7 @@ VALUES ('ce1bd306-c40b-5dcc-8ae6-2113557a9001', '9a5b4bef-1dc3-52aa-9841-e16d7ad
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('40d46a4d-85c8-571f-b04c-4acb838e74a1', '9a5b4bef-1dc3-52aa-9841-e16d7ad195c5', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"meeting","right":"a time when people talk about work together"},{"id":"P2","left":"start","right":"to begin doing something"},{"id":"P3","left":"time","right":"the hour or moment when something happens"},{"id":"P4","left":"room","right":"a space inside a building with walls"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('40d46a4d-85c8-571f-b04c-4acb838e74a1', '9a5b4bef-1dc3-52aa-9841-e16d7ad195c5', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"meeting","right":"встреча, совещание"},{"id":"P2","left":"start","right":"начинать"},{"id":"P3","left":"time","right":"время"},{"id":"P4","left":"room","right":"комната, помещение"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2631,7 +2631,7 @@ VALUES ('ec4ee030-e9dc-54d6-8c39-30034322883f', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('c3880345-b1ea-52c7-a956-5b08f61fa6c7', 'ec4ee030-e9dc-54d6-8c39-30034322883f', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"time","right":"the hour or moment when something happens"},{"id":"P2","left":"room","right":"a space inside a building with walls"},{"id":"P3","left":"agenda","right":"a list of things to talk about in a meeting"},{"id":"P4","left":"question","right":"something you ask to get information"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('c3880345-b1ea-52c7-a956-5b08f61fa6c7', 'ec4ee030-e9dc-54d6-8c39-30034322883f', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"time","right":"время"},{"id":"P2","left":"room","right":"комната, помещение"},{"id":"P3","left":"agenda","right":"план встречи"},{"id":"P4","left":"question","right":"вопрос"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2671,7 +2671,7 @@ VALUES ('f5595235-4bfc-58da-b519-e5b7c011c122', '07a68bea-54c1-59ef-9ded-714a005
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('204d5602-fedf-5766-a525-f68efa85a3b0', '07a68bea-54c1-59ef-9ded-714a0053566f', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"room","right":"a space inside a building with walls"},{"id":"P2","left":"agenda","right":"a list of things to talk about in a meeting"},{"id":"P3","left":"question","right":"something you ask to get information"},{"id":"P4","left":"idea","right":"a thought or plan you share with others"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('204d5602-fedf-5766-a525-f68efa85a3b0', '07a68bea-54c1-59ef-9ded-714a0053566f', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"room","right":"комната, помещение"},{"id":"P2","left":"agenda","right":"план встречи"},{"id":"P3","left":"question","right":"вопрос"},{"id":"P4","left":"idea","right":"идея"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2775,7 +2775,7 @@ VALUES ('ac2b8198-afad-5b25-9289-b77909412a47', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('95b4f79a-4a1e-55d2-938f-6dd4015aefee', 'ac2b8198-afad-5b25-9289-b77909412a47', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"idea","right":"a thought or plan you share with others"},{"id":"P2","left":"agree","right":"to say yes, you think the same"},{"id":"P3","left":"ready","right":"prepared to do or start something"},{"id":"P4","left":"finish","right":"to complete a task or job"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('95b4f79a-4a1e-55d2-938f-6dd4015aefee', 'ac2b8198-afad-5b25-9289-b77909412a47', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"idea","right":"идея"},{"id":"P2","left":"agree","right":"соглашаться"},{"id":"P3","left":"ready","right":"готовый"},{"id":"P4","left":"finish","right":"заканчивать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2847,7 +2847,7 @@ VALUES ('f4d38a49-f4e8-51cd-919b-b41e61090bbb', NULL, 'Workplace Challenge: Meet
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('7ae1057c-aad1-522f-a3e9-c6660175f447', 'f4d38a49-f4e8-51cd-919b-b41e61090bbb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"ready","right":"prepared to do or start something"},{"id":"P2","left":"finish","right":"to complete a task or job"},{"id":"P3","left":"meeting","right":"a time when people talk about work together"},{"id":"P4","left":"start","right":"to begin doing something"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('7ae1057c-aad1-522f-a3e9-c6660175f447', 'f4d38a49-f4e8-51cd-919b-b41e61090bbb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"ready","right":"готовый"},{"id":"P2","left":"finish","right":"заканчивать"},{"id":"P3","left":"meeting","right":"встреча, совещание"},{"id":"P4","left":"start","right":"начинать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2927,7 +2927,7 @@ VALUES ('b8e40dd1-b87b-5164-98bf-28042f4bccc6', '6f6d3c62-efab-5721-87cc-c64f781
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('cd8f06a0-c00c-50f3-926a-822833d2c4a1', '6f6d3c62-efab-5721-87cc-c64f781763cc', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"customer","right":"a person who buys something from a business"},{"id":"P2","left":"help","right":"to do something useful for another person"},{"id":"P3","left":"need","right":"to require something important"},{"id":"P4","left":"want","right":"to wish to have or do something"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('cd8f06a0-c00c-50f3-926a-822833d2c4a1', '6f6d3c62-efab-5721-87cc-c64f781763cc', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"customer","right":"клиент"},{"id":"P2","left":"help","right":"помощь, помогать"},{"id":"P3","left":"need","right":"нужно, потребность"},{"id":"P4","left":"want","right":"хотеть"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2995,7 +2995,7 @@ VALUES ('a43510d7-5777-5bb3-8087-858562d6c118', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('db67355d-896c-5791-b8fe-4e60f10f32b2', 'a43510d7-5777-5bb3-8087-858562d6c118', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"need","right":"to require something important"},{"id":"P2","left":"want","right":"to wish to have or do something"},{"id":"P3","left":"price","right":"the amount of money something costs"},{"id":"P4","left":"order","right":"a request to buy or get something"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('db67355d-896c-5791-b8fe-4e60f10f32b2', 'a43510d7-5777-5bb3-8087-858562d6c118', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"need","right":"нужно, потребность"},{"id":"P2","left":"want","right":"хотеть"},{"id":"P3","left":"price","right":"цена"},{"id":"P4","left":"order","right":"заказ"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3035,7 +3035,7 @@ VALUES ('609fd54d-07db-590a-a61d-c26512187a53', '689f9c94-215d-5222-80b5-511c0c1
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('e848a058-db3f-5b00-8ca1-8c4d5e73f9c8', '689f9c94-215d-5222-80b5-511c0c18876d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"want","right":"to wish to have or do something"},{"id":"P2","left":"price","right":"the amount of money something costs"},{"id":"P3","left":"order","right":"a request to buy or get something"},{"id":"P4","left":"problem","right":"something that is wrong and needs a solution"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('e848a058-db3f-5b00-8ca1-8c4d5e73f9c8', '689f9c94-215d-5222-80b5-511c0c18876d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"want","right":"хотеть"},{"id":"P2","left":"price","right":"цена"},{"id":"P3","left":"order","right":"заказ"},{"id":"P4","left":"problem","right":"проблема"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3139,7 +3139,7 @@ VALUES ('25d12337-42b8-5a95-a7cc-164cf622ddcb', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('d11399dd-b179-55e9-9c1a-e776b0d947e5', '25d12337-42b8-5a95-a7cc-164cf622ddcb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"problem","right":"something that is wrong and needs a solution"},{"id":"P2","left":"please","right":"a polite word used when asking for something"},{"id":"P3","left":"sorry","right":"a word used to apologize"},{"id":"P4","left":"thank","right":"to show you are grateful"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('d11399dd-b179-55e9-9c1a-e776b0d947e5', '25d12337-42b8-5a95-a7cc-164cf622ddcb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"problem","right":"проблема"},{"id":"P2","left":"please","right":"пожалуйста"},{"id":"P3","left":"sorry","right":"извините"},{"id":"P4","left":"thank","right":"благодарить"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3211,7 +3211,7 @@ VALUES ('276b273d-ae43-5027-85c8-f4cc91d48e5e', NULL, 'Workplace Challenge: Cust
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('4c04fe26-f62c-58e7-8395-e01e2b665ddb', '276b273d-ae43-5027-85c8-f4cc91d48e5e', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"sorry","right":"a word used to apologize"},{"id":"P2","left":"thank","right":"to show you are grateful"},{"id":"P3","left":"customer","right":"a person who buys something from a business"},{"id":"P4","left":"help","right":"to do something useful for another person"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('4c04fe26-f62c-58e7-8395-e01e2b665ddb', '276b273d-ae43-5027-85c8-f4cc91d48e5e', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"sorry","right":"извините"},{"id":"P2","left":"thank","right":"благодарить"},{"id":"P3","left":"customer","right":"клиент"},{"id":"P4","left":"help","right":"помощь, помогать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3291,7 +3291,7 @@ VALUES ('eba68bab-80f0-5385-b609-dc850b00892e', '62c87325-7140-5348-b0ab-3ce2834
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('6836e03f-fa9f-57e0-8efc-a16bbe452bd8', '62c87325-7140-5348-b0ab-3ce2834563d4', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"business","right":"work done to make or sell things or services"},{"id":"P2","left":"work","right":"the job or tasks a person does"},{"id":"P3","left":"team","right":"a group of people who work together"},{"id":"P4","left":"email","right":"a written message sent on the computer"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('6836e03f-fa9f-57e0-8efc-a16bbe452bd8', '62c87325-7140-5348-b0ab-3ce2834563d4', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"business","right":"бизнес"},{"id":"P2","left":"work","right":"работа, работать"},{"id":"P3","left":"team","right":"команда"},{"id":"P4","left":"email","right":"электронное письмо"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3359,7 +3359,7 @@ VALUES ('e816a5be-f55b-578f-af38-4084e65bfeeb', NULL, 'Listen for Workplace Info
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('f8b33336-ee4d-53ca-8f93-18b830a37083', 'e816a5be-f55b-578f-af38-4084e65bfeeb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"team","right":"a group of people who work together"},{"id":"P2","left":"email","right":"a written message sent on the computer"},{"id":"P3","left":"call","right":"to talk to someone using the phone"},{"id":"P4","left":"meeting","right":"a time when people talk about work together"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('f8b33336-ee4d-53ca-8f93-18b830a37083', 'e816a5be-f55b-578f-af38-4084e65bfeeb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"team","right":"команда"},{"id":"P2","left":"email","right":"электронное письмо"},{"id":"P3","left":"call","right":"звонок, звонить"},{"id":"P4","left":"meeting","right":"встреча, совещание"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3399,7 +3399,7 @@ VALUES ('fe47740a-23b3-57c0-8cf5-97b513cd8fb6', 'b4fb89ae-1e99-54ed-82f1-ec75c42
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('2fb97026-6eb5-548d-b8ba-c6b8c6f8d53b', 'b4fb89ae-1e99-54ed-82f1-ec75c42cd9ba', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"email","right":"a written message sent on the computer"},{"id":"P2","left":"call","right":"to talk to someone using the phone"},{"id":"P3","left":"meeting","right":"a time when people talk about work together"},{"id":"P4","left":"customer","right":"a person who buys something from a business"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('2fb97026-6eb5-548d-b8ba-c6b8c6f8d53b', 'b4fb89ae-1e99-54ed-82f1-ec75c42cd9ba', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"email","right":"электронное письмо"},{"id":"P2","left":"call","right":"звонок, звонить"},{"id":"P3","left":"meeting","right":"встреча, совещание"},{"id":"P4","left":"customer","right":"клиент"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3503,7 +3503,7 @@ VALUES ('af745cd6-5e7c-5d2e-83ac-2925d776f1fe', NULL, 'Handle a Short Exchange: 
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('2d793fe4-20ee-5708-ae92-e638711cb541', 'af745cd6-5e7c-5d2e-83ac-2925d776f1fe', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"customer","right":"a person who buys something from a business"},{"id":"P2","left":"request","right":"a polite way of asking for something"},{"id":"P3","left":"message","right":"a short piece of information sent to someone"},{"id":"P4","left":"professional","right":"relating to work done in a serious, skilled way"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('2d793fe4-20ee-5708-ae92-e638711cb541', 'af745cd6-5e7c-5d2e-83ac-2925d776f1fe', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"customer","right":"клиент"},{"id":"P2","left":"request","right":"просьба, запрос"},{"id":"P3","left":"message","right":"сообщение"},{"id":"P4","left":"professional","right":"профессиональный"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3575,7 +3575,7 @@ VALUES ('069f1752-3751-55c6-9066-83ed8f70ecef', NULL, 'Workplace Challenge: A1 B
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('4289308b-f42c-5e28-becf-8a73d7865bf9', '069f1752-3751-55c6-9066-83ed8f70ecef', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"message","right":"a short piece of information sent to someone"},{"id":"P2","left":"professional","right":"relating to work done in a serious, skilled way"},{"id":"P3","left":"business","right":"work done to make or sell things or services"},{"id":"P4","left":"work","right":"the job or tasks a person does"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
+VALUES ('4289308b-f42c-5e28-becf-8a73d7865bf9', '069f1752-3751-55c6-9066-83ed8f70ecef', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"message","right":"сообщение"},{"id":"P2","left":"professional","right":"профессиональный"},{"id":"P3","left":"business","right":"бизнес"},{"id":"P4","left":"work","right":"работа, работать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
