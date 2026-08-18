@@ -27,7 +27,7 @@ VALUES ('ae9edcf8-45f7-5233-a310-df2f7441a49a', '32ec422d-a5f2-5e91-ad45-ac42830
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('48a6f3a1-58f8-5828-89d8-b90a3579262c', '32ec422d-a5f2-5e91-ad45-ac428306870b', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I work for a small company.","language":"en","min_accuracy":0.7,"translation_hint":"Recognize the key workplace words and phrases while practicing giving a simple professional introduction and understanding basic workplace introductions.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('48a6f3a1-58f8-5828-89d8-b90a3579262c', '32ec422d-a5f2-5e91-ad45-ac428306870b', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I work for a small company.","language":"en","min_accuracy":0.7,"translation_hint":"Я работаю в небольшой компании.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -99,7 +99,7 @@ VALUES ('c377902a-d9d2-5916-a56f-4d20b555ef95', 'c7320e69-2e14-5697-a1b9-ca34005
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('480080d9-5cef-55f4-9f2b-7904eca66b92', 'c7320e69-2e14-5697-a1b9-ca340052ac5a', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Nice to meet you.","language":"en","min_accuracy":0.7,"translation_hint":"Identify an important detail in short workplace audio while practicing giving a simple professional introduction and understanding basic workplace introductions.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('480080d9-5cef-55f4-9f2b-7904eca66b92', 'c7320e69-2e14-5697-a1b9-ca340052ac5a', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Nice to meet you.","language":"en","min_accuracy":0.7,"translation_hint":"Приятно познакомиться.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -167,7 +167,7 @@ VALUES ('f3c76682-71ad-567d-afb6-d70d3381848e', 'd68e6a9c-9bf9-58d2-966c-8ba64fe
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('222eff25-1c2c-52bd-b0d3-7eca352dce05', 'd68e6a9c-9bf9-58d2-966c-8ba64fea12da', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I work for a small company.","language":"en","min_accuracy":0.7,"translation_hint":"Repeat the workplace language clearly and politely while practicing giving a simple professional introduction and understanding basic workplace introductions.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('222eff25-1c2c-52bd-b0d3-7eca352dce05', 'd68e6a9c-9bf9-58d2-966c-8ba64fea12da', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I work for a small company.","language":"en","min_accuracy":0.7,"translation_hint":"Я работаю в небольшой компании.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -247,7 +247,7 @@ VALUES ('c6497350-f086-5545-8cac-7bdfa0fafd34', '030876b2-f67d-555c-88de-58b6480
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a0833dfb-516a-5d50-b11d-a05d7abba80a', '030876b2-f67d-555c-88de-58b6480a72dd', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Nice to meet you.","language":"en","min_accuracy":0.7,"translation_hint":"Respond appropriately in a two-person workplace interaction while practicing giving a simple professional introduction and understanding basic workplace introductions.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('a0833dfb-516a-5d50-b11d-a05d7abba80a', '030876b2-f67d-555c-88de-58b6480a72dd', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Nice to meet you.","language":"en","min_accuracy":0.7,"translation_hint":"Приятно познакомиться.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -319,7 +319,7 @@ VALUES ('17b7bd0f-d20d-50d5-936d-453b194d84c9', 'b24df5ea-8f8e-56e1-a01b-87ce899
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('c7387176-4ebe-518f-a801-36d3de48ed80', 'b24df5ea-8f8e-56e1-a01b-87ce899f3769', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I work for a small company.","language":"en","min_accuracy":0.7,"translation_hint":"Combine vocabulary, listening, and response skills while practicing giving a simple professional introduction and understanding basic workplace introductions.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('c7387176-4ebe-518f-a801-36d3de48ed80', 'b24df5ea-8f8e-56e1-a01b-87ce899f3769', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I work for a small company.","language":"en","min_accuracy":0.7,"translation_hint":"Я работаю в небольшой компании.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -347,7 +347,7 @@ VALUES ('a2ef5ea9-c866-502f-b5af-0807ee87fce0', '5ba96519-7d7c-5860-977a-22df734
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('9d00e267-f0b1-5419-bf5b-f212e6048129', '5ba96519-7d7c-5860-977a-22df7347df45', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I am new to the team.","language":"en","min_accuracy":0.7,"translation_hint":"Complete a practical beginner workplace mission while practicing giving a simple professional introduction and understanding basic workplace introductions.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('9d00e267-f0b1-5419-bf5b-f212e6048129', '5ba96519-7d7c-5860-977a-22df7347df45', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I am new to the team.","language":"en","min_accuracy":0.7,"translation_hint":"Я новичок в команде.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -391,7 +391,7 @@ VALUES ('534ab92c-f443-5199-94a7-f899571e568b', '3285b7d5-d249-5297-a264-1b7fc36
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('85b923ea-1854-58ed-a867-1f7098bd6454', '3285b7d5-d249-5297-a264-1b7fc3626e0e', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"She is an office assistant.","language":"en","min_accuracy":0.7,"translation_hint":"Recognize the key workplace words and phrases while practicing talking about basic job roles and where people work.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('85b923ea-1854-58ed-a867-1f7098bd6454', '3285b7d5-d249-5297-a264-1b7fc3626e0e', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"She is an office assistant.","language":"en","min_accuracy":0.7,"translation_hint":"Она офисный ассистент.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -463,7 +463,7 @@ VALUES ('526c5509-7014-5351-b7e8-68d8dc1abd24', 'd257c3bc-1f74-52c7-b612-80f68ce
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('845fec39-e598-5459-9749-79fc52a67e4e', 'd257c3bc-1f74-52c7-b612-80f68ce6bfb4', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Our manager works with the team.","language":"en","min_accuracy":0.7,"translation_hint":"Identify an important detail in short workplace audio while practicing talking about basic job roles and where people work.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('845fec39-e598-5459-9749-79fc52a67e4e', 'd257c3bc-1f74-52c7-b612-80f68ce6bfb4', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Our manager works with the team.","language":"en","min_accuracy":0.7,"translation_hint":"Наш менеджер работает с командой.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -531,7 +531,7 @@ VALUES ('e35a3e23-5bfd-5210-a647-6ec86363a230', '5fba3a1f-86d8-526d-be5f-b980b63
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('f2a3fc65-c8ed-5450-93cc-e54f00a661c4', '5fba3a1f-86d8-526d-be5f-b980b634cbd7', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"She is an office assistant.","language":"en","min_accuracy":0.7,"translation_hint":"Repeat the workplace language clearly and politely while practicing talking about basic job roles and where people work.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('f2a3fc65-c8ed-5450-93cc-e54f00a661c4', '5fba3a1f-86d8-526d-be5f-b980b634cbd7', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"She is an office assistant.","language":"en","min_accuracy":0.7,"translation_hint":"Она офисный ассистент.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -611,7 +611,7 @@ VALUES ('f159cceb-e87a-57e3-9469-7545c30e0459', '18680adb-b776-5310-906d-abada97
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('fa6f73bd-efbb-5ff6-b68a-4ec6eb4079e7', '18680adb-b776-5310-906d-abada97f36f0', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Our manager works with the team.","language":"en","min_accuracy":0.7,"translation_hint":"Respond appropriately in a two-person workplace interaction while practicing talking about basic job roles and where people work.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('fa6f73bd-efbb-5ff6-b68a-4ec6eb4079e7', '18680adb-b776-5310-906d-abada97f36f0', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Our manager works with the team.","language":"en","min_accuracy":0.7,"translation_hint":"Наш менеджер работает с командой.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -683,7 +683,7 @@ VALUES ('b146b1bf-5725-5fbb-8b88-de9d0cb859cb', 'aba53e81-94cf-5fa3-81e8-888f016
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a3acaaff-8e9e-5ebf-a26f-1f498cad9818', 'aba53e81-94cf-5fa3-81e8-888f01690f2d', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"She is an office assistant.","language":"en","min_accuracy":0.7,"translation_hint":"Combine vocabulary, listening, and response skills while practicing talking about basic job roles and where people work.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('a3acaaff-8e9e-5ebf-a26f-1f498cad9818', 'aba53e81-94cf-5fa3-81e8-888f01690f2d', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"She is an office assistant.","language":"en","min_accuracy":0.7,"translation_hint":"Она офисный ассистент.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -711,7 +711,7 @@ VALUES ('a743c2f5-d60c-50d9-a5cf-17d51cc6c9e2', '19026430-772d-55ff-b854-da3fae6
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('6d245ee1-bbea-5211-9d13-fb59f764efd6', '19026430-772d-55ff-b854-da3fae65e53e', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"He works with customers.","language":"en","min_accuracy":0.7,"translation_hint":"Complete a practical beginner workplace mission while practicing talking about basic job roles and where people work.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('6d245ee1-bbea-5211-9d13-fb59f764efd6', '19026430-772d-55ff-b854-da3fae65e53e', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"He works with customers.","language":"en","min_accuracy":0.7,"translation_hint":"Он работает с клиентами.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -755,7 +755,7 @@ VALUES ('78a9a9b7-cd52-55ea-b730-68a8f893166d', '6ee02a21-f0f0-5d59-95ee-f6f95fb
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('15981831-4de8-5434-9c63-a7936eccc8ad', '6ee02a21-f0f0-5d59-95ee-f6f95fbb5323', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"The meeting room is next to the office.","language":"en","min_accuracy":0.7,"translation_hint":"Recognize the key workplace words and phrases while practicing identifying common objects and locations in an office or workplace.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('15981831-4de8-5434-9c63-a7936eccc8ad', '6ee02a21-f0f0-5d59-95ee-f6f95fbb5323', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"The meeting room is next to the office.","language":"en","min_accuracy":0.7,"translation_hint":"Комната для совещаний рядом с офисом.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -827,7 +827,7 @@ VALUES ('c8a30a5c-4391-5d71-a334-c1c34fecca13', 'b8986f67-b79c-525d-9215-0fc3f21
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('c2f03fd9-76fa-5a59-b5b9-2fd2bdd67779', 'b8986f67-b79c-525d-9215-0fc3f218d05e', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Please put the file on the table.","language":"en","min_accuracy":0.7,"translation_hint":"Identify an important detail in short workplace audio while practicing identifying common objects and locations in an office or workplace.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('c2f03fd9-76fa-5a59-b5b9-2fd2bdd67779', 'b8986f67-b79c-525d-9215-0fc3f218d05e', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Please put the file on the table.","language":"en","min_accuracy":0.7,"translation_hint":"Пожалуйста, положите файл на стол.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -895,7 +895,7 @@ VALUES ('4a312485-7b63-52d9-9e5c-d12551d5e830', 'c62ed627-a701-5938-bb0e-86f4b89
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('539ef15c-551b-509e-ad98-e2e7d369eac1', 'c62ed627-a701-5938-bb0e-86f4b89d3b1a', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"The meeting room is next to the office.","language":"en","min_accuracy":0.7,"translation_hint":"Repeat the workplace language clearly and politely while practicing identifying common objects and locations in an office or workplace.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('539ef15c-551b-509e-ad98-e2e7d369eac1', 'c62ed627-a701-5938-bb0e-86f4b89d3b1a', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"The meeting room is next to the office.","language":"en","min_accuracy":0.7,"translation_hint":"Комната для совещаний рядом с офисом.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -975,7 +975,7 @@ VALUES ('4b580769-9afb-5467-8c0e-bfb3a19009e0', '69bf5ed1-6c86-5900-9d0d-c4efee2
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a9a50f48-4b43-5b1a-94b5-181e124dc93b', '69bf5ed1-6c86-5900-9d0d-c4efee2e00be', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Please put the file on the table.","language":"en","min_accuracy":0.7,"translation_hint":"Respond appropriately in a two-person workplace interaction while practicing identifying common objects and locations in an office or workplace.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('a9a50f48-4b43-5b1a-94b5-181e124dc93b', '69bf5ed1-6c86-5900-9d0d-c4efee2e00be', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Please put the file on the table.","language":"en","min_accuracy":0.7,"translation_hint":"Пожалуйста, положите файл на стол.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1047,7 +1047,7 @@ VALUES ('f2535012-5793-5f92-add4-8aaf08ebd7b8', 'f77cd227-06f6-56ed-817f-0cf345d
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('d3f93bb8-b7fb-566b-84f9-5dd3f2275da2', 'f77cd227-06f6-56ed-817f-0cf345d7be8f', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"The meeting room is next to the office.","language":"en","min_accuracy":0.7,"translation_hint":"Combine vocabulary, listening, and response skills while practicing identifying common objects and locations in an office or workplace.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('d3f93bb8-b7fb-566b-84f9-5dd3f2275da2', 'f77cd227-06f6-56ed-817f-0cf345d7be8f', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"The meeting room is next to the office.","language":"en","min_accuracy":0.7,"translation_hint":"Комната для совещаний рядом с офисом.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1075,7 +1075,7 @@ VALUES ('800cb35c-ad72-5e1b-a1be-f8c872ffd1f0', '3af7c25e-04ec-56d0-b6fb-a9d70bf
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('73f03b51-4c98-50fe-b5ce-456c26ee79a5', '3af7c25e-04ec-56d0-b6fb-a9d70bf49955', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"The printer is near the door.","language":"en","min_accuracy":0.7,"translation_hint":"Complete a practical beginner workplace mission while practicing identifying common objects and locations in an office or workplace.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('73f03b51-4c98-50fe-b5ce-456c26ee79a5', '3af7c25e-04ec-56d0-b6fb-a9d70bf49955', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"The printer is near the door.","language":"en","min_accuracy":0.7,"translation_hint":"Принтер рядом с дверью.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1119,7 +1119,7 @@ VALUES ('80572fe1-6b8a-5dac-91c9-32efd5006fbe', '94c1aa25-73b8-5e12-a5fa-43b2a41
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('0f6ba8ca-a9f1-5a36-b1fe-28a2b07c49f7', '94c1aa25-73b8-5e12-a5fa-43b2a4143cdf', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I check my email in the morning.","language":"en","min_accuracy":0.7,"translation_hint":"Recognize the key workplace words and phrases while practicing describing a simple workday and understanding routine workplace actions.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('0f6ba8ca-a9f1-5a36-b1fe-28a2b07c49f7', '94c1aa25-73b8-5e12-a5fa-43b2a4143cdf', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I check my email in the morning.","language":"en","min_accuracy":0.7,"translation_hint":"Я проверяю почту утром.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1191,7 +1191,7 @@ VALUES ('9525bab4-f83d-5000-abe3-adeaaf96c7cf', '883e7854-873e-52a3-949e-aeaa4c9
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('d1babb76-4027-5d28-a2cc-cf0d4d193c78', '883e7854-873e-52a3-949e-aeaa4c9c1cf7', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I finish work at five.","language":"en","min_accuracy":0.7,"translation_hint":"Identify an important detail in short workplace audio while practicing describing a simple workday and understanding routine workplace actions.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('d1babb76-4027-5d28-a2cc-cf0d4d193c78', '883e7854-873e-52a3-949e-aeaa4c9c1cf7', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I finish work at five.","language":"en","min_accuracy":0.7,"translation_hint":"Я заканчиваю работу в пять.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1259,7 +1259,7 @@ VALUES ('d6f3ffac-89d2-56e5-9dde-5e0e5e519a53', '9a106c27-688b-58f2-afb1-8edbe44
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('daac99fd-c7ad-5af0-bb06-a3afd39905b4', '9a106c27-688b-58f2-afb1-8edbe441465e', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I check my email in the morning.","language":"en","min_accuracy":0.7,"translation_hint":"Repeat the workplace language clearly and politely while practicing describing a simple workday and understanding routine workplace actions.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('daac99fd-c7ad-5af0-bb06-a3afd39905b4', '9a106c27-688b-58f2-afb1-8edbe441465e', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I check my email in the morning.","language":"en","min_accuracy":0.7,"translation_hint":"Я проверяю почту утром.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1339,7 +1339,7 @@ VALUES ('7a35260e-c3e9-5812-a48d-7cdab9a9d876', 'c3a6819b-91d6-5fba-95a2-ab1e71b
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('22e4592e-fa10-5d82-b1bb-4fe2abdd99bb', 'c3a6819b-91d6-5fba-95a2-ab1e71b57b03', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I finish work at five.","language":"en","min_accuracy":0.7,"translation_hint":"Respond appropriately in a two-person workplace interaction while practicing describing a simple workday and understanding routine workplace actions.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('22e4592e-fa10-5d82-b1bb-4fe2abdd99bb', 'c3a6819b-91d6-5fba-95a2-ab1e71b57b03', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I finish work at five.","language":"en","min_accuracy":0.7,"translation_hint":"Я заканчиваю работу в пять.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1411,7 +1411,7 @@ VALUES ('ca32cb32-c0f1-5bc3-b494-d8f4cc6f933c', '5476c099-e8dc-5e96-a586-8448793
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('c262a525-9976-54b6-9399-509735f94c53', '5476c099-e8dc-5e96-a586-8448793e6355', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I check my email in the morning.","language":"en","min_accuracy":0.7,"translation_hint":"Combine vocabulary, listening, and response skills while practicing describing a simple workday and understanding routine workplace actions.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('c262a525-9976-54b6-9399-509735f94c53', '5476c099-e8dc-5e96-a586-8448793e6355', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I check my email in the morning.","language":"en","min_accuracy":0.7,"translation_hint":"Я проверяю почту утром.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1439,7 +1439,7 @@ VALUES ('3eaea0ae-5f8f-56f4-8bc2-32e8fdc09c1e', '49da44f2-31d9-5210-b6c3-60fb24d
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('fe005aa2-e275-555d-81a5-292de50f429b', '49da44f2-31d9-5210-b6c3-60fb24d933b2', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"We have a meeting after lunch.","language":"en","min_accuracy":0.7,"translation_hint":"Complete a practical beginner workplace mission while practicing describing a simple workday and understanding routine workplace actions.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('fe005aa2-e275-555d-81a5-292de50f429b', '49da44f2-31d9-5210-b6c3-60fb24d933b2', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"We have a meeting after lunch.","language":"en","min_accuracy":0.7,"translation_hint":"У нас встреча после обеда.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1483,7 +1483,7 @@ VALUES ('601dad83-765e-5c04-a4e4-0e7202e858b5', '41bffb09-4de2-5193-8ed5-3f73755
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('dd73b620-3f03-5b02-82c1-7a9a4141d90c', '41bffb09-4de2-5193-8ed5-3f73755283d1', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Could you send the email?","language":"en","min_accuracy":0.7,"translation_hint":"Recognize the key workplace words and phrases while practicing making and responding to polite basic requests at work.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('dd73b620-3f03-5b02-82c1-7a9a4141d90c', '41bffb09-4de2-5193-8ed5-3f73755283d1', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Could you send the email?","language":"en","min_accuracy":0.7,"translation_hint":"Не могли бы вы отправить письмо?","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1555,7 +1555,7 @@ VALUES ('d96fd7b4-d0e6-5877-bbb7-29e978254a09', 'f7ad2c3c-bc26-51b2-836a-e335c3d
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('472bfaf5-682c-5c1b-bca6-489e70bf01ad', 'f7ad2c3c-bc26-51b2-836a-e335c3d6f692', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Sure, I can do that.","language":"en","min_accuracy":0.7,"translation_hint":"Identify an important detail in short workplace audio while practicing making and responding to polite basic requests at work.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('472bfaf5-682c-5c1b-bca6-489e70bf01ad', 'f7ad2c3c-bc26-51b2-836a-e335c3d6f692', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Sure, I can do that.","language":"en","min_accuracy":0.7,"translation_hint":"Конечно, я могу это сделать.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1623,7 +1623,7 @@ VALUES ('bd7d2c0b-1880-5536-bd6e-06d6701ace56', 'f528e43e-a65b-552e-8e3f-168392a
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('e47d2cc5-a694-5968-b096-99fe1961b2d9', 'f528e43e-a65b-552e-8e3f-168392a3892b', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Could you send the email?","language":"en","min_accuracy":0.7,"translation_hint":"Repeat the workplace language clearly and politely while practicing making and responding to polite basic requests at work.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('e47d2cc5-a694-5968-b096-99fe1961b2d9', 'f528e43e-a65b-552e-8e3f-168392a3892b', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Could you send the email?","language":"en","min_accuracy":0.7,"translation_hint":"Не могли бы вы отправить письмо?","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1703,7 +1703,7 @@ VALUES ('4a368bca-b0e2-50b1-bd02-162a4127e58d', 'a6469585-36b2-5ae4-8c01-e308446
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('f698c786-021e-5b75-927b-a190f6281e6f', 'a6469585-36b2-5ae4-8c01-e308446c79d6', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Sure, I can do that.","language":"en","min_accuracy":0.7,"translation_hint":"Respond appropriately in a two-person workplace interaction while practicing making and responding to polite basic requests at work.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('f698c786-021e-5b75-927b-a190f6281e6f', 'a6469585-36b2-5ae4-8c01-e308446c79d6', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Sure, I can do that.","language":"en","min_accuracy":0.7,"translation_hint":"Конечно, я могу это сделать.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1775,7 +1775,7 @@ VALUES ('d8207c6f-7606-51d2-a355-ed0857089a4b', '7fbcda39-ea33-5463-ba67-2985861
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('7d3cf269-2770-527a-b3ed-1dc9be6e102b', '7fbcda39-ea33-5463-ba67-2985861c05d6', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Could you send the email?","language":"en","min_accuracy":0.7,"translation_hint":"Combine vocabulary, listening, and response skills while practicing making and responding to polite basic requests at work.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('7d3cf269-2770-527a-b3ed-1dc9be6e102b', '7fbcda39-ea33-5463-ba67-2985861c05d6', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Could you send the email?","language":"en","min_accuracy":0.7,"translation_hint":"Не могли бы вы отправить письмо?","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1803,7 +1803,7 @@ VALUES ('e4742b67-2975-5f2f-99c8-f0a9739c2513', 'b557eecd-3dc8-5cc2-818d-c37e8a0
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a5f7f874-d8c5-58b7-9300-ca6e60589ccb', 'b557eecd-3dc8-5cc2-818d-c37e8a0f459a', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Please check this file.","language":"en","min_accuracy":0.7,"translation_hint":"Complete a practical beginner workplace mission while practicing making and responding to polite basic requests at work.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('a5f7f874-d8c5-58b7-9300-ca6e60589ccb', 'b557eecd-3dc8-5cc2-818d-c37e8a0f459a', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Please check this file.","language":"en","min_accuracy":0.7,"translation_hint":"Пожалуйста, проверьте этот файл.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1847,7 +1847,7 @@ VALUES ('dd6dcfba-be49-5fb0-9d09-79111446319a', '38a65605-8be3-5c6f-a2d6-aceae53
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('22bebe6a-bc8f-515c-bdb1-3b5aeb7ccd05', '38a65605-8be3-5c6f-a2d6-aceae53d82b2', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Can I speak to Maria, please?","language":"en","min_accuracy":0.7,"translation_hint":"Recognize the key workplace words and phrases while practicing handling very simple professional telephone exchanges.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('22bebe6a-bc8f-515c-bdb1-3b5aeb7ccd05', '38a65605-8be3-5c6f-a2d6-aceae53d82b2', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Can I speak to Maria, please?","language":"en","min_accuracy":0.7,"translation_hint":"Могу я поговорить с Марией, пожалуйста?","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1919,7 +1919,7 @@ VALUES ('d8a06f3d-a571-59c3-b89f-689af875ce63', '8ab87691-4c1d-5d93-a7a8-0e187cd
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('c95f915e-c1b8-5c65-aef0-40d3e812e712', '8ab87691-4c1d-5d93-a7a8-0e187cda96e0', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Can I leave a message?","language":"en","min_accuracy":0.7,"translation_hint":"Identify an important detail in short workplace audio while practicing handling very simple professional telephone exchanges.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('c95f915e-c1b8-5c65-aef0-40d3e812e712', '8ab87691-4c1d-5d93-a7a8-0e187cda96e0', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Can I leave a message?","language":"en","min_accuracy":0.7,"translation_hint":"Могу я оставить сообщение?","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1987,7 +1987,7 @@ VALUES ('6c69d68c-d04d-5b74-99b8-5e43dec2801e', 'f3d0440c-4af7-571b-bba9-b76c89a
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('41a5f3e4-be99-5dc7-8125-cc210ff37592', 'f3d0440c-4af7-571b-bba9-b76c89a308ce', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Can I speak to Maria, please?","language":"en","min_accuracy":0.7,"translation_hint":"Repeat the workplace language clearly and politely while practicing handling very simple professional telephone exchanges.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('41a5f3e4-be99-5dc7-8125-cc210ff37592', 'f3d0440c-4af7-571b-bba9-b76c89a308ce', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Can I speak to Maria, please?","language":"en","min_accuracy":0.7,"translation_hint":"Могу я поговорить с Марией, пожалуйста?","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2067,7 +2067,7 @@ VALUES ('cb6fa6ae-91f8-5f03-aa64-e0dbb6f67a01', '7a96226c-0baa-5368-90c3-9dc0d78
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('7054f2df-0a55-5e0d-ae86-87fd488e72a7', '7a96226c-0baa-5368-90c3-9dc0d7883efb', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Can I leave a message?","language":"en","min_accuracy":0.7,"translation_hint":"Respond appropriately in a two-person workplace interaction while practicing handling very simple professional telephone exchanges.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('7054f2df-0a55-5e0d-ae86-87fd488e72a7', '7a96226c-0baa-5368-90c3-9dc0d7883efb', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Can I leave a message?","language":"en","min_accuracy":0.7,"translation_hint":"Могу я оставить сообщение?","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2139,7 +2139,7 @@ VALUES ('cac90b0e-6540-58c7-8962-df1045a17935', '5c2804d7-b6e9-51d7-a1b7-232d933
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('b5728f96-123a-5df5-b909-bbceebc01e04', '5c2804d7-b6e9-51d7-a1b7-232d933746c6', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Can I speak to Maria, please?","language":"en","min_accuracy":0.7,"translation_hint":"Combine vocabulary, listening, and response skills while practicing handling very simple professional telephone exchanges.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('b5728f96-123a-5df5-b909-bbceebc01e04', '5c2804d7-b6e9-51d7-a1b7-232d933746c6', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Can I speak to Maria, please?","language":"en","min_accuracy":0.7,"translation_hint":"Могу я поговорить с Марией, пожалуйста?","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2167,7 +2167,7 @@ VALUES ('f52fdf36-b613-5c1d-88c5-cb0a6db967af', 'bffaac9f-95d8-55ae-b94a-9dc266a
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('7c4f2a5f-0dae-53e2-adfb-1df6e2fd851f', 'bffaac9f-95d8-55ae-b94a-9dc266aed170', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"She is not available right now.","language":"en","min_accuracy":0.7,"translation_hint":"Complete a practical beginner workplace mission while practicing handling very simple professional telephone exchanges.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('7c4f2a5f-0dae-53e2-adfb-1df6e2fd851f', 'bffaac9f-95d8-55ae-b94a-9dc266aed170', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"She is not available right now.","language":"en","min_accuracy":0.7,"translation_hint":"Она сейчас недоступна.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2211,7 +2211,7 @@ VALUES ('dfc61cf4-e28a-5f0b-999a-3e29d8b82502', '40eee8fe-caad-5cbb-8847-57f8fc2
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('807f16c7-7dee-5721-828b-ed245c30f617', '40eee8fe-caad-5cbb-8847-57f8fc2cc099', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"The meeting is tomorrow at ten.","language":"en","min_accuracy":0.7,"translation_hint":"Recognize the key workplace words and phrases while practicing reading and writing very short workplace emails and messages.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('807f16c7-7dee-5721-828b-ed245c30f617', '40eee8fe-caad-5cbb-8847-57f8fc2cc099', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"The meeting is tomorrow at ten.","language":"en","min_accuracy":0.7,"translation_hint":"Встреча завтра в десять.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2283,7 +2283,7 @@ VALUES ('dc847e08-1104-542f-bdcf-59e1a9e20886', '429be802-5bae-5c8c-aa81-9ae17ea
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('7decd848-01dd-5008-a398-52c5d1539914', '429be802-5bae-5c8c-aa81-9ae17ea76b79', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I will reply today.","language":"en","min_accuracy":0.7,"translation_hint":"Identify an important detail in short workplace audio while practicing reading and writing very short workplace emails and messages.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('7decd848-01dd-5008-a398-52c5d1539914', '429be802-5bae-5c8c-aa81-9ae17ea76b79', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I will reply today.","language":"en","min_accuracy":0.7,"translation_hint":"Я отвечу сегодня.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2351,7 +2351,7 @@ VALUES ('e8dd2e44-fb0c-5c67-8096-6b789780155b', '7ce14361-c233-503e-9c4d-c0565b5
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('2d378d98-be09-53aa-b04d-616e438cd868', '7ce14361-c233-503e-9c4d-c0565b57fbe6', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"The meeting is tomorrow at ten.","language":"en","min_accuracy":0.7,"translation_hint":"Repeat the workplace language clearly and politely while practicing reading and writing very short workplace emails and messages.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('2d378d98-be09-53aa-b04d-616e438cd868', '7ce14361-c233-503e-9c4d-c0565b57fbe6', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"The meeting is tomorrow at ten.","language":"en","min_accuracy":0.7,"translation_hint":"Встреча завтра в десять.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2431,7 +2431,7 @@ VALUES ('5c389add-467b-5f4c-81dd-9f714541644a', '4409af6f-fcbb-5dd4-ad79-3b77d4e
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('b686f142-76d0-5930-b3da-1ec6bc64bb90', '4409af6f-fcbb-5dd4-ad79-3b77d4e6f9a6', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I will reply today.","language":"en","min_accuracy":0.7,"translation_hint":"Respond appropriately in a two-person workplace interaction while practicing reading and writing very short workplace emails and messages.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('b686f142-76d0-5930-b3da-1ec6bc64bb90', '4409af6f-fcbb-5dd4-ad79-3b77d4e6f9a6', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I will reply today.","language":"en","min_accuracy":0.7,"translation_hint":"Я отвечу сегодня.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2503,7 +2503,7 @@ VALUES ('5866a8e9-0b01-5ba6-8ac0-e184bef6ae9d', '05cbb2d0-27a9-56ae-909b-2c34e6e
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('18e09764-865c-5136-97f1-41b45acc72d9', '05cbb2d0-27a9-56ae-909b-2c34e6e62469', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"The meeting is tomorrow at ten.","language":"en","min_accuracy":0.7,"translation_hint":"Combine vocabulary, listening, and response skills while practicing reading and writing very short workplace emails and messages.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('18e09764-865c-5136-97f1-41b45acc72d9', '05cbb2d0-27a9-56ae-909b-2c34e6e62469', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"The meeting is tomorrow at ten.","language":"en","min_accuracy":0.7,"translation_hint":"Встреча завтра в десять.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2531,7 +2531,7 @@ VALUES ('c53ca5fd-9a47-5bb4-86bb-fa939fd4428c', 'f45ab034-c043-5958-9b45-5ef5ee4
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('6faa3d74-9f41-5de3-bd6e-a78f24e2d382', 'f45ab034-c043-5958-9b45-5ef5ee43c8aa', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Thanks for your email.","language":"en","min_accuracy":0.7,"translation_hint":"Complete a practical beginner workplace mission while practicing reading and writing very short workplace emails and messages.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('6faa3d74-9f41-5de3-bd6e-a78f24e2d382', 'f45ab034-c043-5958-9b45-5ef5ee43c8aa', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Thanks for your email.","language":"en","min_accuracy":0.7,"translation_hint":"Спасибо за ваше письмо.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2575,7 +2575,7 @@ VALUES ('eb72787a-6537-592b-a9b9-de5f41a411d2', '9a5b4bef-1dc3-52aa-9841-e16d7ad
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('83deb934-c3c9-56ca-913f-5e4b8b3c3b4c', '9a5b4bef-1dc3-52aa-9841-e16d7ad195c5', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"We are in Meeting Room Two.","language":"en","min_accuracy":0.7,"translation_hint":"Recognize the key workplace words and phrases while practicing understanding and using simple language before and during a meeting.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('83deb934-c3c9-56ca-913f-5e4b8b3c3b4c', '9a5b4bef-1dc3-52aa-9841-e16d7ad195c5', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"We are in Meeting Room Two.","language":"en","min_accuracy":0.7,"translation_hint":"Мы во второй переговорной комнате.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2647,7 +2647,7 @@ VALUES ('1cb4bce9-3388-54c3-a769-86c84523ae48', 'ec4ee030-e9dc-54d6-8c39-3003432
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('fbcb3040-a47d-52c0-9dcd-4a4d8024c62f', 'ec4ee030-e9dc-54d6-8c39-30034322883f', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Yes, I agree.","language":"en","min_accuracy":0.7,"translation_hint":"Identify an important detail in short workplace audio while practicing understanding and using simple language before and during a meeting.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('fbcb3040-a47d-52c0-9dcd-4a4d8024c62f', 'ec4ee030-e9dc-54d6-8c39-30034322883f', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Yes, I agree.","language":"en","min_accuracy":0.7,"translation_hint":"Да, я согласен.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2715,7 +2715,7 @@ VALUES ('2dfba573-5a96-56d9-8f50-91d3b25e9108', '21f95f38-f2c8-5221-9160-89cc705
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('25f8d56b-8e22-5d75-a1e6-a99142f1577d', '21f95f38-f2c8-5221-9160-89cc7055a480', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"We are in Meeting Room Two.","language":"en","min_accuracy":0.7,"translation_hint":"Repeat the workplace language clearly and politely while practicing understanding and using simple language before and during a meeting.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('25f8d56b-8e22-5d75-a1e6-a99142f1577d', '21f95f38-f2c8-5221-9160-89cc7055a480', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"We are in Meeting Room Two.","language":"en","min_accuracy":0.7,"translation_hint":"Мы во второй переговорной комнате.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2795,7 +2795,7 @@ VALUES ('93dc89b8-0452-51bf-93fc-2023704eecb3', 'ac2b8198-afad-5b25-9289-b779094
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('50beb5f6-2b97-5e71-b62b-3c4da850b77e', 'ac2b8198-afad-5b25-9289-b77909412a47', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Yes, I agree.","language":"en","min_accuracy":0.7,"translation_hint":"Respond appropriately in a two-person workplace interaction while practicing understanding and using simple language before and during a meeting.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('50beb5f6-2b97-5e71-b62b-3c4da850b77e', 'ac2b8198-afad-5b25-9289-b77909412a47', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Yes, I agree.","language":"en","min_accuracy":0.7,"translation_hint":"Да, я согласен.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2867,7 +2867,7 @@ VALUES ('b2b60d4d-14ed-50e2-b3a0-f659260f0536', 'f4d38a49-f4e8-51cd-919b-b41e610
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('3c268796-e63c-5dfa-a399-18b798154aea', 'f4d38a49-f4e8-51cd-919b-b41e61090bbb', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"We are in Meeting Room Two.","language":"en","min_accuracy":0.7,"translation_hint":"Combine vocabulary, listening, and response skills while practicing understanding and using simple language before and during a meeting.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('3c268796-e63c-5dfa-a399-18b798154aea', 'f4d38a49-f4e8-51cd-919b-b41e61090bbb', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"We are in Meeting Room Two.","language":"en","min_accuracy":0.7,"translation_hint":"Мы во второй переговорной комнате.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2895,7 +2895,7 @@ VALUES ('9017ca81-3756-5dce-8e86-63dc6f858918', '49335d7f-a1f6-5230-8dd9-4bd2550
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('9427aaef-c6db-5e3d-9ed6-4701e907da13', '49335d7f-a1f6-5230-8dd9-4bd2550f58e0', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I have a question.","language":"en","min_accuracy":0.7,"translation_hint":"Complete a practical beginner workplace mission while practicing understanding and using simple language before and during a meeting.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('9427aaef-c6db-5e3d-9ed6-4701e907da13', '49335d7f-a1f6-5230-8dd9-4bd2550f58e0', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I have a question.","language":"en","min_accuracy":0.7,"translation_hint":"У меня есть вопрос.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2939,7 +2939,7 @@ VALUES ('546adb3a-ac5e-5d36-8993-c63214d25ba8', '6f6d3c62-efab-5721-87cc-c64f781
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('d0d0eed9-3ff9-5da3-9e2c-90738ae1bb8f', '6f6d3c62-efab-5721-87cc-c64f781763cc', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"What do you need?","language":"en","min_accuracy":0.7,"translation_hint":"Recognize the key workplace words and phrases while practicing using polite English in basic customer interactions.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('d0d0eed9-3ff9-5da3-9e2c-90738ae1bb8f', '6f6d3c62-efab-5721-87cc-c64f781763cc', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"What do you need?","language":"en","min_accuracy":0.7,"translation_hint":"Что вам нужно?","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3011,7 +3011,7 @@ VALUES ('c06cfb65-40cb-5666-9763-5f587f212579', 'a43510d7-5777-5bb3-8087-858562d
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('86dcbc8f-c572-5bbb-908d-fdc23552dc7f', 'a43510d7-5777-5bb3-8087-858562d6c118', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I am sorry about the problem.","language":"en","min_accuracy":0.7,"translation_hint":"Identify an important detail in short workplace audio while practicing using polite English in basic customer interactions.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('86dcbc8f-c572-5bbb-908d-fdc23552dc7f', 'a43510d7-5777-5bb3-8087-858562d6c118', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I am sorry about the problem.","language":"en","min_accuracy":0.7,"translation_hint":"Мне жаль из-за этой проблемы.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3079,7 +3079,7 @@ VALUES ('fa2ccf74-74cd-52e8-8211-efd6d155f875', 'f6e9e557-7774-5ba1-8070-99d13b9
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('01ca0709-c657-50bc-b40e-e40f90f4b374', 'f6e9e557-7774-5ba1-8070-99d13b9fdd29', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"What do you need?","language":"en","min_accuracy":0.7,"translation_hint":"Repeat the workplace language clearly and politely while practicing using polite English in basic customer interactions.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('01ca0709-c657-50bc-b40e-e40f90f4b374', 'f6e9e557-7774-5ba1-8070-99d13b9fdd29', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"What do you need?","language":"en","min_accuracy":0.7,"translation_hint":"Что вам нужно?","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3159,7 +3159,7 @@ VALUES ('840cfb3d-4948-559e-8fe3-ca3cfcaf6d75', '25d12337-42b8-5a95-a7cc-164cf62
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('308451bc-4b34-5db1-b9b4-97e94d435045', '25d12337-42b8-5a95-a7cc-164cf622ddcb', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I am sorry about the problem.","language":"en","min_accuracy":0.7,"translation_hint":"Respond appropriately in a two-person workplace interaction while practicing using polite English in basic customer interactions.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('308451bc-4b34-5db1-b9b4-97e94d435045', '25d12337-42b8-5a95-a7cc-164cf622ddcb', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"I am sorry about the problem.","language":"en","min_accuracy":0.7,"translation_hint":"Мне жаль из-за этой проблемы.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3231,7 +3231,7 @@ VALUES ('5ca5904b-b05f-5702-adc8-24ee5ac08e74', '276b273d-ae43-5027-85c8-f4cc91d
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('5e4e9cca-cf3d-5faf-bbb4-7db63eadb445', '276b273d-ae43-5027-85c8-f4cc91d48e5e', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"What do you need?","language":"en","min_accuracy":0.7,"translation_hint":"Combine vocabulary, listening, and response skills while practicing using polite English in basic customer interactions.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('5e4e9cca-cf3d-5faf-bbb4-7db63eadb445', '276b273d-ae43-5027-85c8-f4cc91d48e5e', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"What do you need?","language":"en","min_accuracy":0.7,"translation_hint":"Что вам нужно?","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3259,7 +3259,7 @@ VALUES ('e85b02f8-2015-5cb9-9eb6-104675c76017', '4a95f313-a9b8-505f-9281-b994ea5
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('cb290528-b9f6-58d7-b4d2-7d7bca650a27', '4a95f313-a9b8-505f-9281-b994ea547821', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Your order is ready.","language":"en","min_accuracy":0.7,"translation_hint":"Complete a practical beginner workplace mission while practicing using polite English in basic customer interactions.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('cb290528-b9f6-58d7-b4d2-7d7bca650a27', '4a95f313-a9b8-505f-9281-b994ea547821', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Your order is ready.","language":"en","min_accuracy":0.7,"translation_hint":"Ваш заказ готов.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3303,7 +3303,7 @@ VALUES ('f5150ae7-3859-5690-b2ac-3319dfaece87', '62c87325-7140-5348-b0ab-3ce2834
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('4f296e98-fd02-5406-8465-24e688771c26', '62c87325-7140-5348-b0ab-3ce2834563d4', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Could you send me the file, please?","language":"en","min_accuracy":0.7,"translation_hint":"Recognize the key workplace words and phrases while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('4f296e98-fd02-5406-8465-24e688771c26', '62c87325-7140-5348-b0ab-3ce2834563d4', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Could you send me the file, please?","language":"en","min_accuracy":0.7,"translation_hint":"Не могли бы вы отправить мне файл, пожалуйста?","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3375,7 +3375,7 @@ VALUES ('849b90ce-d3bf-5ade-8eb7-b7fa32d71e4f', 'e816a5be-f55b-578f-af38-4084e65
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('f19bb4a8-198d-5e1e-8059-1217e2525642', 'e816a5be-f55b-578f-af38-4084e65bfeeb', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Thank you for your help.","language":"en","min_accuracy":0.7,"translation_hint":"Identify an important detail in short workplace audio while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
+VALUES ('f19bb4a8-198d-5e1e-8059-1217e2525642', 'e816a5be-f55b-578f-af38-4084e65bfeeb', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Thank you for your help.","language":"en","min_accuracy":0.7,"translation_hint":"Спасибо за вашу помощь.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3443,7 +3443,7 @@ VALUES ('93752f09-a13f-56ad-9b34-c8ab0ac65f57', 'c9ee5099-f65b-5df4-aea7-abc00cd
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('d6bc87f3-f9f2-52bc-89e8-3fa6e75f91ac', 'c9ee5099-f65b-5df4-aea7-abc00cd6c7a3', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Could you send me the file, please?","language":"en","min_accuracy":0.7,"translation_hint":"Repeat the workplace language clearly and politely while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('d6bc87f3-f9f2-52bc-89e8-3fa6e75f91ac', 'c9ee5099-f65b-5df4-aea7-abc00cd6c7a3', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Could you send me the file, please?","language":"en","min_accuracy":0.7,"translation_hint":"Не могли бы вы отправить мне файл, пожалуйста?","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3523,7 +3523,7 @@ VALUES ('f05525e8-a374-5572-8701-56d2636b4d6f', 'af745cd6-5e7c-5d2e-83ac-2925d77
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('665df794-58c7-5f66-a58a-f7428272a604', 'af745cd6-5e7c-5d2e-83ac-2925d776f1fe', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Thank you for your help.","language":"en","min_accuracy":0.7,"translation_hint":"Respond appropriately in a two-person workplace interaction while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('665df794-58c7-5f66-a58a-f7428272a604', 'af745cd6-5e7c-5d2e-83ac-2925d776f1fe', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Thank you for your help.","language":"en","min_accuracy":0.7,"translation_hint":"Спасибо за вашу помощь.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3595,7 +3595,7 @@ VALUES ('921ee4ef-c49a-5213-9323-5da82eab7d1a', '069f1752-3751-55c6-9066-83ed8f7
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('0ec9fa61-ed71-5cf2-95ab-0546659f6caa', '069f1752-3751-55c6-9066-83ed8f70ecef', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Could you send me the file, please?","language":"en","min_accuracy":0.7,"translation_hint":"Combine vocabulary, listening, and response skills while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
+VALUES ('0ec9fa61-ed71-5cf2-95ab-0546659f6caa', '069f1752-3751-55c6-9066-83ed8f70ecef', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"Could you send me the file, please?","language":"en","min_accuracy":0.7,"translation_hint":"Не могли бы вы отправить мне файл, пожалуйста?","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3623,7 +3623,7 @@ VALUES ('30bea162-54bd-5c01-8590-c3c7a7597266', '76cae3a7-7604-548b-940c-94848c6
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('eb1f818f-a148-5f2e-83f2-41d49b8500bc', '76cae3a7-7604-548b-940c-94848c6efc66', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"The meeting starts at ten.","language":"en","min_accuracy":0.7,"translation_hint":"Complete a practical beginner workplace mission while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
+VALUES ('eb1f818f-a148-5f2e-83f2-41d49b8500bc', '76cae3a7-7604-548b-940c-94848c6efc66', 'Отработайте профессиональную речь', 'listening_shadowing', '{"audio_text":"The meeting starts at ten.","language":"en","min_accuracy":0.7,"translation_hint":"Встреча начинается в десять.","instruction":"Прослушайте и четко и вежливо повторите рабочую фразу."}'::jsonb, 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
