@@ -137,7 +137,26 @@ simple professional introduction...») — это не вопрос-ситуац
 **Коммит:** `0e9e80e` — `fix(course-service): add Russian
 title/description/objective to A1 Business tracks`.
 
-## Процесс фикса контента (применялся 4 раза, по одному на каждую проблему)
+## Проблема 4: `story` шаги не соответствовали структуре эталона (translation, choice.text)
+
+**Симптом:** при сверке с эталонным примером `A1_GREETINGS`
+(`docs/TRACK_IMPORT_V2_MINIMAL_EXAMPLE.json`) обнаружено структурное
+расхождение: у эталона `story.scenes[].dialogue` содержит поле
+`"translation"` (русский перевод реплики), а `story.scenes[].choice.text`
+— вопрос на русском. В `A1_BUSINESS_*` оба поля отсутствовали/были на
+английском.
+
+**Фикс:** добавлено поле `translation` для всех 40 `dialogue`-сцен
+(перевод переиспользован из словаря `fix_listening_shadowing_hints.py` —
+те же 30 model-фраз), и `choice.text` переведён на русский
+(`"What is the best professional response?"` →
+`"Какой ответ лучше всего подходит для рабочей ситуации?"`) во всех
+40 `story`-шагах.
+
+**Коммит:** `f6f330b` — `fix(course-service): align story steps with
+A1_GREETINGS reference structure`.
+
+## Процесс фикса контента (применялся 5 раз, по одному на каждую проблему)
 
 1. Правится первоисточник:
    `tracks/A1_BUSINESS_ENGLISH_TRACKS_01_10_APP_ACTIVITIES_ONLY_COMBINED.json`
@@ -183,6 +202,8 @@ WHERE code LIKE 'A1_BUSINESS%';
 | `c5027ca` | `listening_shadowing.translation_hint`: objective → русский перевод фразы |
 | `708ed59` | `docs`: первая версия этого документа |
 | `0e9e80e` | `track`/`lesson` title, description, objective → добавлены `ru`-переводы |
+| `1f894c7` | `docs`: обновление с проблемой 3 |
+| `f6f330b` | `story`: добавлен `dialogue.translation`, `choice.text` переведён на русский |
 
 ## Скрипты (репозиторий `eng`, каталог `scripts/`, не в git)
 
@@ -193,6 +214,9 @@ WHERE code LIKE 'A1_BUSINESS%';
 - `fix_listening_shadowing_hints.py` — перевод `translation_hint`.
 - `add_russian_titles.py` — добавление `ru` в `track`/`lesson`
   title/description/objective (только в V2-файлы, COMBINED не трогает).
+- `fix_story_localization.py` — добавление `dialogue.translation` и
+  перевод `choice.text` в `story`-шагах (переиспользует словарь из
+  `fix_listening_shadowing_hints.py`).
 - `regenerate_seed_from_v2.py` — регенерация SQL-сида **напрямую из
   V2-файлов** (не из COMBINED). Использовать вместо
   `normalize_business_tracks_v2.py`, если V2-файлы содержат правки,
