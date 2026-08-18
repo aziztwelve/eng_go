@@ -1,0 +1,240 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_GREETINGS",
+    "title": { "ru": "Слушаем и повторяем: приветствия", "en": "Listening and Shadowing: Greetings" },
+    "description": { "ru": "Слушайте фразы диктора и повторяйте их вслух.", "en": "Listen to the speaker and repeat the phrases aloud." },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "goal": "listening_shadowing",
+    "track_type": "thematic"
+  },
+  "lessons": [
+    {
+      "code": "A1_GREETINGS_L01",
+      "order": 1,
+      "title": { "ru": "Скажи привет", "en": "Say hello" },
+      "objective": { "ru": "Поздороваться и попрощаться.", "en": "Say hello and goodbye." },
+      "estimated_seconds": 435,
+      "steps": [
+        {
+          "id": "A1_GREETINGS_L01_TEXT_01",
+          "order": 1,
+          "type": "text",
+          "title": { "ru": "Новые слова", "en": "New words" },
+          "instructions": { "ru": "Прочитайте объяснение.", "en": "Read the explanation." },
+          "estimated_seconds": 20,
+          "data": {
+            "body": "Hello means \"привет\". Goodbye means \"до свидания\".",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_GREETINGS_L01_MATCH_01",
+          "order": 2,
+          "type": "match_pairs",
+          "title": { "ru": "Соедините пары", "en": "Match the pairs" },
+          "instructions": { "ru": "Соедините английские слова с переводом.", "en": "Match the English words with their translations." },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              { "id": "HELLO", "left": "Hello", "right": "привет" },
+              { "id": "GOODBYE", "left": "Goodbye", "right": "до свидания" }
+            ]
+          }
+        },
+        {
+          "id": "A1_GREETINGS_L01_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": { "ru": "Проверьте себя", "en": "Check yourself" },
+          "instructions": { "ru": "Выберите правильный ответ.", "en": "Choose the correct answer." },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Что означает Hello?",
+            "options": [
+              { "id": "A", "text": "Привет", "is_correct": true },
+              { "id": "B", "text": "Спасибо", "is_correct": false }
+            ],
+            "explanation": "Hello означает «привет» или «здравствуйте»."
+          }
+        },
+        {
+          "id": "A1_GREETINGS_L01_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": { "ru": "Переведите фразу", "en": "Translate the phrase" },
+          "instructions": { "ru": "Составьте перевод из слов.", "en": "Build the translation from the words." },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Привет!",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Hello!",
+            "word_bank": ["Hello", "Goodbye", "Thanks"]
+          }
+        },
+        {
+          "id": "A1_GREETINGS_L01_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": { "ru": "Заполните пропуск", "en": "Fill the blank" },
+          "instructions": { "ru": "Выберите подходящее слово.", "en": "Choose the word that fits." },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___, Anna!",
+            "correct_answer": "Hello",
+            "options": ["Hello", "Goodbye", "Thanks"]
+          }
+        },
+        {
+          "id": "A1_GREETINGS_L01_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": { "ru": "Соберите фразу", "en": "Build the phrase" },
+          "instructions": { "ru": "Расставьте слова в правильном порядке.", "en": "Put the words in the correct order." },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": ["Hello", "name", "is", "My"],
+            "correct_words": ["Hello", "My", "name", "is"]
+          }
+        },
+        {
+          "id": "A1_GREETINGS_L01_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": { "ru": "Послушайте", "en": "Listen" },
+          "instructions": { "ru": "Прослушайте фразу и напишите, что услышали.", "en": "Listen to the phrase and type what you hear." },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Hello, Anna!",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_GREETINGS_L01_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": { "ru": "Повторите за диктором", "en": "Repeat after the speaker" },
+          "instructions": { "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.", "en": "Listen to the phrase, record your repetition, and get pronunciation feedback." },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Hello, Anna!",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Привет, Анна!"
+          }
+        },
+        {
+          "id": "A1_GREETINGS_L01_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": { "ru": "Встреча с Анной", "en": "Meeting Anna" },
+          "instructions": { "ru": "Прочитайте историю и выберите ответ.", "en": "Read the story and choose an answer." },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Meeting Anna",
+            "scenes": [
+              { "type": "dialogue", "character": "Anna", "text": "Hello!", "translation": "Привет!" },
+              {
+                "type": "choice",
+                "text": "Как ответить Анне?",
+                "options": [
+                  { "text": "Hello!", "is_correct": true },
+                  { "text": "Goodbye!", "is_correct": false }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_GREETINGS_L01_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": { "ru": "Выберите определение", "en": "Choose the definition" },
+          "instructions": { "ru": "Выберите правильное значение слова.", "en": "Choose the correct meaning of the word." },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "hello",
+            "language": "en",
+            "options": [
+              { "id": "A", "text": "A greeting", "is_correct": true },
+              { "id": "B", "text": "A farewell", "is_correct": false },
+              { "id": "C", "text": "A question", "is_correct": false },
+              { "id": "D", "text": "A number", "is_correct": false }
+            ],
+            "explanation": "Hello is a greeting."
+          }
+        },
+        {
+          "id": "A1_GREETINGS_L01_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": { "ru": "Выберите услышанное слово", "en": "Choose the word you hear" },
+          "instructions": { "ru": "Прослушайте предложение и выберите пропущенное слово.", "en": "Listen to the sentence and choose the missing word." },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I ___ coffee every morning.",
+            "audio_text": "I drink coffee every morning.",
+            "language": "en",
+            "options": [
+              { "id": "A", "audio_text": "drink", "is_correct": true },
+              { "id": "B", "audio_text": "eat", "is_correct": false },
+              { "id": "C", "audio_text": "read", "is_correct": false }
+            ],
+            "explanation": "The missing word is drink."
+          }
+        },
+        {
+          "id": "A1_GREETINGS_L01_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": { "ru": "Впишите слово", "en": "Type the missing word" },
+          "instructions": { "ru": "Впишите пропущенное слово по подсказке.", "en": "Type the missing word using the hint." },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ coffee every morning.",
+            "correct_answer": "drink",
+            "hint_prefix": "dr",
+            "explanation": "The missing word is drink."
+          }
+        },
+        {
+          "id": "A1_GREETINGS_L01_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": { "ru": "Соедините звук и слово", "en": "Match the sound and word" },
+          "instructions": { "ru": "Прослушайте каждое слово и выберите его написание.", "en": "Listen to each word and choose its spelling." },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              { "id": "HELLO", "audio_text": "Hello", "text": "Hello" },
+              { "id": "GOODBYE", "audio_text": "Goodbye", "text": "Goodbye" }
+            ],
+            "explanation": "Listen carefully to the word before matching it."
+          }
+        },
+        {
+          "id": "A1_GREETINGS_L01_COMPLETE_CHAT_01",
+          "order": 14,
+          "type": "complete_chat",
+          "title": { "ru": "Завершите диалог", "en": "Complete the chat" },
+          "instructions": { "ru": "Выберите подходящую реплику.", "en": "Choose the reply that completes the dialogue." },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [{ "speaker": "Anna", "text": "What do you do today?" }],
+            "answer_speaker": "You",
+            "options": [
+              { "id": "A", "text": "I go to school.", "is_correct": true },
+              { "id": "B", "text": "I travel.", "is_correct": false },
+              { "id": "C", "text": "I work at night.", "is_correct": false }
+            ],
+            "explanation": "I go to school completes this dialogue."
+          }
+        }
+      ]
+    }
+  ]
+}
