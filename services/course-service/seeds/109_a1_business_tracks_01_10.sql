@@ -3,11 +3,11 @@
 BEGIN;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('09708d1d-8ed5-54d7-a724-d073822d582e', 'A1_BUSINESS_T01', 'Introducing Yourself at Work', 'An A1 Business English track focused on giving a simple professional introduction and understanding basic workplace introductions.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
+VALUES ('09708d1d-8ed5-54d7-a724-d073822d582e', 'A1_BUSINESS_T01', 'Представление себя на работе', 'Курс A1 по деловому английскому: простое профессиональное представление себя и понимание базовых рабочих знакомств.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('32ec422d-a5f2-5e91-ad45-ac428306870b', NULL, 'Learn the Workplace Language: Introducing Yourself at Work', 'Recognize the key workplace words and phrases while practicing giving a simple professional introduction and understanding basic workplace introductions.', 0, NOW(), NOW())
+VALUES ('32ec422d-a5f2-5e91-ad45-ac428306870b', NULL, 'Изучите рабочий язык: Представление себя на работе', 'Узнавать ключевые рабочие слова и фразы, тренируясь в простом профессиональном представлении себя и понимании базовых рабочих знакомств.', 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -43,7 +43,7 @@ VALUES ('09708d1d-8ed5-54d7-a724-d073822d582e', '32ec422d-a5f2-5e91-ad45-ac42830
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('42ef48c3-3d8f-52eb-ac93-536eeb928158', NULL, 'Build the Core Sentence: Introducing Yourself at Work', 'Produce a useful basic business sentence while practicing giving a simple professional introduction and understanding basic workplace introductions.', 1, NOW(), NOW())
+VALUES ('42ef48c3-3d8f-52eb-ac93-536eeb928158', NULL, 'Составьте основное предложение: Представление себя на работе', 'Составлять полезное простое деловое предложение, тренируясь в простом профессиональном представлении себя и понимании базовых рабочих знакомств.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -79,7 +79,7 @@ VALUES ('09708d1d-8ed5-54d7-a724-d073822d582e', '42ef48c3-3d8f-52eb-ac93-536eeb9
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('c7320e69-2e14-5697-a1b9-ca340052ac5a', NULL, 'Listen for Workplace Information: Introducing Yourself at Work', 'Identify an important detail in short workplace audio while practicing giving a simple professional introduction and understanding basic workplace introductions.', 2, NOW(), NOW())
+VALUES ('c7320e69-2e14-5697-a1b9-ca340052ac5a', NULL, 'Прослушайте рабочую информацию: Представление себя на работе', 'Определять важную деталь в коротком рабочем аудио, тренируясь в простом профессиональном представлении себя и понимании базовых рабочих знакомств.', 2, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -115,7 +115,7 @@ VALUES ('09708d1d-8ed5-54d7-a724-d073822d582e', 'c7320e69-2e14-5697-a1b9-ca34005
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('32c96112-142b-5742-b6ff-228ad0b30a75', NULL, 'Use Polite Professional English: Introducing Yourself at Work', 'Choose language appropriate for a simple workplace situation while practicing giving a simple professional introduction and understanding basic workplace introductions.', 3, NOW(), NOW())
+VALUES ('32c96112-142b-5742-b6ff-228ad0b30a75', NULL, 'Используйте вежливый деловой английский: Представление себя на работе', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь в простом профессиональном представлении себя и понимании базовых рабочих знакомств.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -151,7 +151,7 @@ VALUES ('09708d1d-8ed5-54d7-a724-d073822d582e', '32c96112-142b-5742-b6ff-228ad0b
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('d68e6a9c-9bf9-58d2-966c-8ba64fea12da', NULL, 'Practice the Spoken Model: Introducing Yourself at Work', 'Repeat the workplace language clearly and politely while practicing giving a simple professional introduction and understanding basic workplace introductions.', 4, NOW(), NOW())
+VALUES ('d68e6a9c-9bf9-58d2-966c-8ba64fea12da', NULL, 'Отработайте разговорную модель: Представление себя на работе', 'Чётко и вежливо повторять рабочие фразы, тренируясь в простом профессиональном представлении себя и понимании базовых рабочих знакомств.', 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -187,7 +187,7 @@ VALUES ('09708d1d-8ed5-54d7-a724-d073822d582e', 'd68e6a9c-9bf9-58d2-966c-8ba64fe
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('50d8779e-a74c-59d9-90b8-9b3f4ad6f4d8', NULL, 'Use the Language in Context: Introducing Yourself at Work', 'Apply the target language in a realistic work situation while practicing giving a simple professional introduction and understanding basic workplace introductions.', 5, NOW(), NOW())
+VALUES ('50d8779e-a74c-59d9-90b8-9b3f4ad6f4d8', NULL, 'Используйте язык в контексте: Представление себя на работе', 'Применять изучаемый язык в реальной рабочей ситуации, тренируясь в простом профессиональном представлении себя и понимании базовых рабочих знакомств.', 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -223,7 +223,7 @@ VALUES ('09708d1d-8ed5-54d7-a724-d073822d582e', '50d8779e-a74c-59d9-90b8-9b3f4ad
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('030876b2-f67d-555c-88de-58b6480a72dd', NULL, 'Handle a Short Exchange: Introducing Yourself at Work', 'Respond appropriately in a two-person workplace interaction while practicing giving a simple professional introduction and understanding basic workplace introductions.', 6, NOW(), NOW())
+VALUES ('030876b2-f67d-555c-88de-58b6480a72dd', NULL, 'Проведите короткий диалог: Представление себя на работе', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь в простом профессиональном представлении себя и понимании базовых рабочих знакомств.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -259,7 +259,7 @@ VALUES ('09708d1d-8ed5-54d7-a724-d073822d582e', '030876b2-f67d-555c-88de-58b6480
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('cba51f8f-a37d-5183-a146-3f105257a082', NULL, 'Work with Less Support: Introducing Yourself at Work', 'Complete the business task with fewer hints while practicing giving a simple professional introduction and understanding basic workplace introductions.', 7, NOW(), NOW())
+VALUES ('cba51f8f-a37d-5183-a146-3f105257a082', NULL, 'Работайте с меньшей поддержкой: Представление себя на работе', 'Выполнять деловое задание с меньшим количеством подсказок, тренируясь в простом профессиональном представлении себя и понимании базовых рабочих знакомств.', 7, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -295,7 +295,7 @@ VALUES ('09708d1d-8ed5-54d7-a724-d073822d582e', 'cba51f8f-a37d-5183-a146-3f10525
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('b24df5ea-8f8e-56e1-a01b-87ce899f3769', NULL, 'Workplace Challenge: Introducing Yourself at Work', 'Combine vocabulary, listening, and response skills while practicing giving a simple professional introduction and understanding basic workplace introductions.', 8, NOW(), NOW())
+VALUES ('b24df5ea-8f8e-56e1-a01b-87ce899f3769', NULL, 'Рабочее задание-испытание: Представление себя на работе', 'Сочетать словарный запас, навыки слушания и ответа, тренируясь в простом профессиональном представлении себя и понимании базовых рабочих знакомств.', 8, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -331,7 +331,7 @@ VALUES ('09708d1d-8ed5-54d7-a724-d073822d582e', 'b24df5ea-8f8e-56e1-a01b-87ce899
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('5ba96519-7d7c-5860-977a-22df7347df45', NULL, 'Track Business Mission: Introducing Yourself at Work', 'Complete a practical beginner workplace mission while practicing giving a simple professional introduction and understanding basic workplace introductions.', 9, NOW(), NOW())
+VALUES ('5ba96519-7d7c-5860-977a-22df7347df45', NULL, 'Итоговая деловая миссия трека: Представление себя на работе', 'Выполнить практическую рабочую миссию для начинающих, тренируясь в простом профессиональном представлении себя и понимании базовых рабочих знакомств.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -367,11 +367,11 @@ VALUES ('09708d1d-8ed5-54d7-a724-d073822d582e', '5ba96519-7d7c-5860-977a-22df734
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('f0c525fc-3565-5ab9-9306-c50c3b4d6298', 'A1_BUSINESS_T02', 'Jobs and Departments', 'An A1 Business English track focused on talking about basic job roles and where people work.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
+VALUES ('f0c525fc-3565-5ab9-9306-c50c3b4d6298', 'A1_BUSINESS_T02', 'Профессии и отделы', 'Курс A1 по деловому английскому: разговор о базовых должностях и о том, где работают люди.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('3285b7d5-d249-5297-a264-1b7fc3626e0e', NULL, 'Learn the Workplace Language: Jobs and Departments', 'Recognize the key workplace words and phrases while practicing talking about basic job roles and where people work.', 0, NOW(), NOW())
+VALUES ('3285b7d5-d249-5297-a264-1b7fc3626e0e', NULL, 'Изучите рабочий язык: Профессии и отделы', 'Узнавать ключевые рабочие слова и фразы, тренируясь говорить о базовых должностях и о том, где работают люди.', 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -407,7 +407,7 @@ VALUES ('f0c525fc-3565-5ab9-9306-c50c3b4d6298', '3285b7d5-d249-5297-a264-1b7fc36
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('af4871bd-13c4-59d1-81a0-0e5240360e0c', NULL, 'Build the Core Sentence: Jobs and Departments', 'Produce a useful basic business sentence while practicing talking about basic job roles and where people work.', 1, NOW(), NOW())
+VALUES ('af4871bd-13c4-59d1-81a0-0e5240360e0c', NULL, 'Составьте основное предложение: Профессии и отделы', 'Составлять полезное простое деловое предложение, тренируясь говорить о базовых должностях и о том, где работают люди.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -443,7 +443,7 @@ VALUES ('f0c525fc-3565-5ab9-9306-c50c3b4d6298', 'af4871bd-13c4-59d1-81a0-0e52403
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('d257c3bc-1f74-52c7-b612-80f68ce6bfb4', NULL, 'Listen for Workplace Information: Jobs and Departments', 'Identify an important detail in short workplace audio while practicing talking about basic job roles and where people work.', 2, NOW(), NOW())
+VALUES ('d257c3bc-1f74-52c7-b612-80f68ce6bfb4', NULL, 'Прослушайте рабочую информацию: Профессии и отделы', 'Определять важную деталь в коротком рабочем аудио, тренируясь говорить о базовых должностях и о том, где работают люди.', 2, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -479,7 +479,7 @@ VALUES ('f0c525fc-3565-5ab9-9306-c50c3b4d6298', 'd257c3bc-1f74-52c7-b612-80f68ce
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('b7fce779-812f-50e1-8f77-2809b4e5eedd', NULL, 'Use Polite Professional English: Jobs and Departments', 'Choose language appropriate for a simple workplace situation while practicing talking about basic job roles and where people work.', 3, NOW(), NOW())
+VALUES ('b7fce779-812f-50e1-8f77-2809b4e5eedd', NULL, 'Используйте вежливый деловой английский: Профессии и отделы', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь говорить о базовых должностях и о том, где работают люди.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -515,7 +515,7 @@ VALUES ('f0c525fc-3565-5ab9-9306-c50c3b4d6298', 'b7fce779-812f-50e1-8f77-2809b4e
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('5fba3a1f-86d8-526d-be5f-b980b634cbd7', NULL, 'Practice the Spoken Model: Jobs and Departments', 'Repeat the workplace language clearly and politely while practicing talking about basic job roles and where people work.', 4, NOW(), NOW())
+VALUES ('5fba3a1f-86d8-526d-be5f-b980b634cbd7', NULL, 'Отработайте разговорную модель: Профессии и отделы', 'Чётко и вежливо повторять рабочие фразы, тренируясь говорить о базовых должностях и о том, где работают люди.', 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -551,7 +551,7 @@ VALUES ('f0c525fc-3565-5ab9-9306-c50c3b4d6298', '5fba3a1f-86d8-526d-be5f-b980b63
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('f3ca7b83-7e79-5139-98fd-0fcc1be240b0', NULL, 'Use the Language in Context: Jobs and Departments', 'Apply the target language in a realistic work situation while practicing talking about basic job roles and where people work.', 5, NOW(), NOW())
+VALUES ('f3ca7b83-7e79-5139-98fd-0fcc1be240b0', NULL, 'Используйте язык в контексте: Профессии и отделы', 'Применять изучаемый язык в реальной рабочей ситуации, тренируясь говорить о базовых должностях и о том, где работают люди.', 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -587,7 +587,7 @@ VALUES ('f0c525fc-3565-5ab9-9306-c50c3b4d6298', 'f3ca7b83-7e79-5139-98fd-0fcc1be
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('18680adb-b776-5310-906d-abada97f36f0', NULL, 'Handle a Short Exchange: Jobs and Departments', 'Respond appropriately in a two-person workplace interaction while practicing talking about basic job roles and where people work.', 6, NOW(), NOW())
+VALUES ('18680adb-b776-5310-906d-abada97f36f0', NULL, 'Проведите короткий диалог: Профессии и отделы', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь говорить о базовых должностях и о том, где работают люди.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -623,7 +623,7 @@ VALUES ('f0c525fc-3565-5ab9-9306-c50c3b4d6298', '18680adb-b776-5310-906d-abada97
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('e15003de-6d7f-5c09-b006-8251c0364b3d', NULL, 'Work with Less Support: Jobs and Departments', 'Complete the business task with fewer hints while practicing talking about basic job roles and where people work.', 7, NOW(), NOW())
+VALUES ('e15003de-6d7f-5c09-b006-8251c0364b3d', NULL, 'Работайте с меньшей поддержкой: Профессии и отделы', 'Выполнять деловое задание с меньшим количеством подсказок, тренируясь говорить о базовых должностях и о том, где работают люди.', 7, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -659,7 +659,7 @@ VALUES ('f0c525fc-3565-5ab9-9306-c50c3b4d6298', 'e15003de-6d7f-5c09-b006-8251c03
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('aba53e81-94cf-5fa3-81e8-888f01690f2d', NULL, 'Workplace Challenge: Jobs and Departments', 'Combine vocabulary, listening, and response skills while practicing talking about basic job roles and where people work.', 8, NOW(), NOW())
+VALUES ('aba53e81-94cf-5fa3-81e8-888f01690f2d', NULL, 'Рабочее задание-испытание: Профессии и отделы', 'Сочетать словарный запас, навыки слушания и ответа, тренируясь говорить о базовых должностях и о том, где работают люди.', 8, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -695,7 +695,7 @@ VALUES ('f0c525fc-3565-5ab9-9306-c50c3b4d6298', 'aba53e81-94cf-5fa3-81e8-888f016
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('19026430-772d-55ff-b854-da3fae65e53e', NULL, 'Track Business Mission: Jobs and Departments', 'Complete a practical beginner workplace mission while practicing talking about basic job roles and where people work.', 9, NOW(), NOW())
+VALUES ('19026430-772d-55ff-b854-da3fae65e53e', NULL, 'Итоговая деловая миссия трека: Профессии и отделы', 'Выполнить практическую рабочую миссию для начинающих, тренируясь говорить о базовых должностях и о том, где работают люди.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -731,11 +731,11 @@ VALUES ('f0c525fc-3565-5ab9-9306-c50c3b4d6298', '19026430-772d-55ff-b854-da3fae6
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('947c921f-d92a-514a-91a4-ff3de64f4441', 'A1_BUSINESS_T03', 'Workplace Objects and Places', 'An A1 Business English track focused on identifying common objects and locations in an office or workplace.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
+VALUES ('947c921f-d92a-514a-91a4-ff3de64f4441', 'A1_BUSINESS_T03', 'Предметы и места на работе', 'Курс A1 по деловому английскому: обозначение распространённых предметов и мест в офисе или на рабочем месте.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('6ee02a21-f0f0-5d59-95ee-f6f95fbb5323', NULL, 'Learn the Workplace Language: Workplace Objects and Places', 'Recognize the key workplace words and phrases while practicing identifying common objects and locations in an office or workplace.', 0, NOW(), NOW())
+VALUES ('6ee02a21-f0f0-5d59-95ee-f6f95fbb5323', NULL, 'Изучите рабочий язык: Предметы и места на работе', 'Узнавать ключевые рабочие слова и фразы, тренируясь называть распространённые предметы и места в офисе или на рабочем месте.', 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -771,7 +771,7 @@ VALUES ('947c921f-d92a-514a-91a4-ff3de64f4441', '6ee02a21-f0f0-5d59-95ee-f6f95fb
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('09189a5c-5508-5205-bdf3-30b60d455836', NULL, 'Build the Core Sentence: Workplace Objects and Places', 'Produce a useful basic business sentence while practicing identifying common objects and locations in an office or workplace.', 1, NOW(), NOW())
+VALUES ('09189a5c-5508-5205-bdf3-30b60d455836', NULL, 'Составьте основное предложение: Предметы и места на работе', 'Составлять полезное простое деловое предложение, тренируясь называть распространённые предметы и места в офисе или на рабочем месте.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -807,7 +807,7 @@ VALUES ('947c921f-d92a-514a-91a4-ff3de64f4441', '09189a5c-5508-5205-bdf3-30b60d4
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('b8986f67-b79c-525d-9215-0fc3f218d05e', NULL, 'Listen for Workplace Information: Workplace Objects and Places', 'Identify an important detail in short workplace audio while practicing identifying common objects and locations in an office or workplace.', 2, NOW(), NOW())
+VALUES ('b8986f67-b79c-525d-9215-0fc3f218d05e', NULL, 'Прослушайте рабочую информацию: Предметы и места на работе', 'Определять важную деталь в коротком рабочем аудио, тренируясь называть распространённые предметы и места в офисе или на рабочем месте.', 2, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -843,7 +843,7 @@ VALUES ('947c921f-d92a-514a-91a4-ff3de64f4441', 'b8986f67-b79c-525d-9215-0fc3f21
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('9c92f822-39c4-55f4-b6a7-f2addd16ca7d', NULL, 'Use Polite Professional English: Workplace Objects and Places', 'Choose language appropriate for a simple workplace situation while practicing identifying common objects and locations in an office or workplace.', 3, NOW(), NOW())
+VALUES ('9c92f822-39c4-55f4-b6a7-f2addd16ca7d', NULL, 'Используйте вежливый деловой английский: Предметы и места на работе', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь называть распространённые предметы и места в офисе или на рабочем месте.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -879,7 +879,7 @@ VALUES ('947c921f-d92a-514a-91a4-ff3de64f4441', '9c92f822-39c4-55f4-b6a7-f2addd1
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('c62ed627-a701-5938-bb0e-86f4b89d3b1a', NULL, 'Practice the Spoken Model: Workplace Objects and Places', 'Repeat the workplace language clearly and politely while practicing identifying common objects and locations in an office or workplace.', 4, NOW(), NOW())
+VALUES ('c62ed627-a701-5938-bb0e-86f4b89d3b1a', NULL, 'Отработайте разговорную модель: Предметы и места на работе', 'Чётко и вежливо повторять рабочие фразы, тренируясь называть распространённые предметы и места в офисе или на рабочем месте.', 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -915,7 +915,7 @@ VALUES ('947c921f-d92a-514a-91a4-ff3de64f4441', 'c62ed627-a701-5938-bb0e-86f4b89
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('756b4075-ed04-5037-aadd-5d576bd34140', NULL, 'Use the Language in Context: Workplace Objects and Places', 'Apply the target language in a realistic work situation while practicing identifying common objects and locations in an office or workplace.', 5, NOW(), NOW())
+VALUES ('756b4075-ed04-5037-aadd-5d576bd34140', NULL, 'Используйте язык в контексте: Предметы и места на работе', 'Применять изучаемый язык в реальной рабочей ситуации, тренируясь называть распространённые предметы и места в офисе или на рабочем месте.', 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -951,7 +951,7 @@ VALUES ('947c921f-d92a-514a-91a4-ff3de64f4441', '756b4075-ed04-5037-aadd-5d576bd
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('69bf5ed1-6c86-5900-9d0d-c4efee2e00be', NULL, 'Handle a Short Exchange: Workplace Objects and Places', 'Respond appropriately in a two-person workplace interaction while practicing identifying common objects and locations in an office or workplace.', 6, NOW(), NOW())
+VALUES ('69bf5ed1-6c86-5900-9d0d-c4efee2e00be', NULL, 'Проведите короткий диалог: Предметы и места на работе', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь называть распространённые предметы и места в офисе или на рабочем месте.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -987,7 +987,7 @@ VALUES ('947c921f-d92a-514a-91a4-ff3de64f4441', '69bf5ed1-6c86-5900-9d0d-c4efee2
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('3f7fa595-a422-52c9-8894-a7aa779b9a28', NULL, 'Work with Less Support: Workplace Objects and Places', 'Complete the business task with fewer hints while practicing identifying common objects and locations in an office or workplace.', 7, NOW(), NOW())
+VALUES ('3f7fa595-a422-52c9-8894-a7aa779b9a28', NULL, 'Работайте с меньшей поддержкой: Предметы и места на работе', 'Выполнять деловое задание с меньшим количеством подсказок, тренируясь называть распространённые предметы и места в офисе или на рабочем месте.', 7, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1023,7 +1023,7 @@ VALUES ('947c921f-d92a-514a-91a4-ff3de64f4441', '3f7fa595-a422-52c9-8894-a7aa779
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('f77cd227-06f6-56ed-817f-0cf345d7be8f', NULL, 'Workplace Challenge: Workplace Objects and Places', 'Combine vocabulary, listening, and response skills while practicing identifying common objects and locations in an office or workplace.', 8, NOW(), NOW())
+VALUES ('f77cd227-06f6-56ed-817f-0cf345d7be8f', NULL, 'Рабочее задание-испытание: Предметы и места на работе', 'Сочетать словарный запас, навыки слушания и ответа, тренируясь называть распространённые предметы и места в офисе или на рабочем месте.', 8, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1059,7 +1059,7 @@ VALUES ('947c921f-d92a-514a-91a4-ff3de64f4441', 'f77cd227-06f6-56ed-817f-0cf345d
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('3af7c25e-04ec-56d0-b6fb-a9d70bf49955', NULL, 'Track Business Mission: Workplace Objects and Places', 'Complete a practical beginner workplace mission while practicing identifying common objects and locations in an office or workplace.', 9, NOW(), NOW())
+VALUES ('3af7c25e-04ec-56d0-b6fb-a9d70bf49955', NULL, 'Итоговая деловая миссия трека: Предметы и места на работе', 'Выполнить практическую рабочую миссию для начинающих, тренируясь называть распространённые предметы и места в офисе или на рабочем месте.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1095,11 +1095,11 @@ VALUES ('947c921f-d92a-514a-91a4-ff3de64f4441', '3af7c25e-04ec-56d0-b6fb-a9d70bf
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('efe453ec-9255-527e-8d97-824a40a9a366', 'A1_BUSINESS_T04', 'Daily Work Routines', 'An A1 Business English track focused on describing a simple workday and understanding routine workplace actions.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
+VALUES ('efe453ec-9255-527e-8d97-824a40a9a366', 'A1_BUSINESS_T04', 'Повседневный рабочий распорядок', 'Курс A1 по деловому английскому: описание простого рабочего дня и понимание обычных рабочих действий.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('94c1aa25-73b8-5e12-a5fa-43b2a4143cdf', NULL, 'Learn the Workplace Language: Daily Work Routines', 'Recognize the key workplace words and phrases while practicing describing a simple workday and understanding routine workplace actions.', 0, NOW(), NOW())
+VALUES ('94c1aa25-73b8-5e12-a5fa-43b2a4143cdf', NULL, 'Изучите рабочий язык: Повседневный рабочий распорядок', 'Узнавать ключевые рабочие слова и фразы, тренируясь описывать простой рабочий день и понимать обычные рабочие действия.', 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1135,7 +1135,7 @@ VALUES ('efe453ec-9255-527e-8d97-824a40a9a366', '94c1aa25-73b8-5e12-a5fa-43b2a41
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('822c5ef9-0045-5103-8a42-0bcb543a5deb', NULL, 'Build the Core Sentence: Daily Work Routines', 'Produce a useful basic business sentence while practicing describing a simple workday and understanding routine workplace actions.', 1, NOW(), NOW())
+VALUES ('822c5ef9-0045-5103-8a42-0bcb543a5deb', NULL, 'Составьте основное предложение: Повседневный рабочий распорядок', 'Составлять полезное простое деловое предложение, тренируясь описывать простой рабочий день и понимать обычные рабочие действия.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1171,7 +1171,7 @@ VALUES ('efe453ec-9255-527e-8d97-824a40a9a366', '822c5ef9-0045-5103-8a42-0bcb543
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('883e7854-873e-52a3-949e-aeaa4c9c1cf7', NULL, 'Listen for Workplace Information: Daily Work Routines', 'Identify an important detail in short workplace audio while practicing describing a simple workday and understanding routine workplace actions.', 2, NOW(), NOW())
+VALUES ('883e7854-873e-52a3-949e-aeaa4c9c1cf7', NULL, 'Прослушайте рабочую информацию: Повседневный рабочий распорядок', 'Определять важную деталь в коротком рабочем аудио, тренируясь описывать простой рабочий день и понимать обычные рабочие действия.', 2, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1207,7 +1207,7 @@ VALUES ('efe453ec-9255-527e-8d97-824a40a9a366', '883e7854-873e-52a3-949e-aeaa4c9
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('ceed390c-ac18-5ae3-8246-1f001a332b8a', NULL, 'Use Polite Professional English: Daily Work Routines', 'Choose language appropriate for a simple workplace situation while practicing describing a simple workday and understanding routine workplace actions.', 3, NOW(), NOW())
+VALUES ('ceed390c-ac18-5ae3-8246-1f001a332b8a', NULL, 'Используйте вежливый деловой английский: Повседневный рабочий распорядок', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь описывать простой рабочий день и понимать обычные рабочие действия.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1243,7 +1243,7 @@ VALUES ('efe453ec-9255-527e-8d97-824a40a9a366', 'ceed390c-ac18-5ae3-8246-1f001a3
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('9a106c27-688b-58f2-afb1-8edbe441465e', NULL, 'Practice the Spoken Model: Daily Work Routines', 'Repeat the workplace language clearly and politely while practicing describing a simple workday and understanding routine workplace actions.', 4, NOW(), NOW())
+VALUES ('9a106c27-688b-58f2-afb1-8edbe441465e', NULL, 'Отработайте разговорную модель: Повседневный рабочий распорядок', 'Чётко и вежливо повторять рабочие фразы, тренируясь описывать простой рабочий день и понимать обычные рабочие действия.', 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1279,7 +1279,7 @@ VALUES ('efe453ec-9255-527e-8d97-824a40a9a366', '9a106c27-688b-58f2-afb1-8edbe44
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('fbb92820-3cb5-5096-a902-79dc2d10a485', NULL, 'Use the Language in Context: Daily Work Routines', 'Apply the target language in a realistic work situation while practicing describing a simple workday and understanding routine workplace actions.', 5, NOW(), NOW())
+VALUES ('fbb92820-3cb5-5096-a902-79dc2d10a485', NULL, 'Используйте язык в контексте: Повседневный рабочий распорядок', 'Применять изучаемый язык в реальной рабочей ситуации, тренируясь описывать простой рабочий день и понимать обычные рабочие действия.', 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1315,7 +1315,7 @@ VALUES ('efe453ec-9255-527e-8d97-824a40a9a366', 'fbb92820-3cb5-5096-a902-79dc2d1
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('c3a6819b-91d6-5fba-95a2-ab1e71b57b03', NULL, 'Handle a Short Exchange: Daily Work Routines', 'Respond appropriately in a two-person workplace interaction while practicing describing a simple workday and understanding routine workplace actions.', 6, NOW(), NOW())
+VALUES ('c3a6819b-91d6-5fba-95a2-ab1e71b57b03', NULL, 'Проведите короткий диалог: Повседневный рабочий распорядок', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь описывать простой рабочий день и понимать обычные рабочие действия.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1351,7 +1351,7 @@ VALUES ('efe453ec-9255-527e-8d97-824a40a9a366', 'c3a6819b-91d6-5fba-95a2-ab1e71b
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('1cd2a31d-0bee-52bf-9e28-fc9096e22fa4', NULL, 'Work with Less Support: Daily Work Routines', 'Complete the business task with fewer hints while practicing describing a simple workday and understanding routine workplace actions.', 7, NOW(), NOW())
+VALUES ('1cd2a31d-0bee-52bf-9e28-fc9096e22fa4', NULL, 'Работайте с меньшей поддержкой: Повседневный рабочий распорядок', 'Выполнять деловое задание с меньшим количеством подсказок, тренируясь описывать простой рабочий день и понимать обычные рабочие действия.', 7, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1387,7 +1387,7 @@ VALUES ('efe453ec-9255-527e-8d97-824a40a9a366', '1cd2a31d-0bee-52bf-9e28-fc9096e
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('5476c099-e8dc-5e96-a586-8448793e6355', NULL, 'Workplace Challenge: Daily Work Routines', 'Combine vocabulary, listening, and response skills while practicing describing a simple workday and understanding routine workplace actions.', 8, NOW(), NOW())
+VALUES ('5476c099-e8dc-5e96-a586-8448793e6355', NULL, 'Рабочее задание-испытание: Повседневный рабочий распорядок', 'Сочетать словарный запас, навыки слушания и ответа, тренируясь описывать простой рабочий день и понимать обычные рабочие действия.', 8, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1423,7 +1423,7 @@ VALUES ('efe453ec-9255-527e-8d97-824a40a9a366', '5476c099-e8dc-5e96-a586-8448793
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('49da44f2-31d9-5210-b6c3-60fb24d933b2', NULL, 'Track Business Mission: Daily Work Routines', 'Complete a practical beginner workplace mission while practicing describing a simple workday and understanding routine workplace actions.', 9, NOW(), NOW())
+VALUES ('49da44f2-31d9-5210-b6c3-60fb24d933b2', NULL, 'Итоговая деловая миссия трека: Повседневный рабочий распорядок', 'Выполнить практическую рабочую миссию для начинающих, тренируясь описывать простой рабочий день и понимать обычные рабочие действия.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1459,11 +1459,11 @@ VALUES ('efe453ec-9255-527e-8d97-824a40a9a366', '49da44f2-31d9-5210-b6c3-60fb24d
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('47e14364-e91e-51b9-9e52-98d08216cf28', 'A1_BUSINESS_T05', 'Simple Workplace Requests', 'An A1 Business English track focused on making and responding to polite basic requests at work.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
+VALUES ('47e14364-e91e-51b9-9e52-98d08216cf28', 'A1_BUSINESS_T05', 'Простые рабочие просьбы', 'Курс A1 по деловому английскому: как просить о чём-то на работе и вежливо отвечать на такие просьбы.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('41bffb09-4de2-5193-8ed5-3f73755283d1', NULL, 'Learn the Workplace Language: Simple Workplace Requests', 'Recognize the key workplace words and phrases while practicing making and responding to polite basic requests at work.', 0, NOW(), NOW())
+VALUES ('41bffb09-4de2-5193-8ed5-3f73755283d1', NULL, 'Изучите рабочий язык: Простые рабочие просьбы', 'Узнавать ключевые рабочие слова и фразы, тренируясь просить о чём-то на работе и отвечать на такие просьбы.', 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1499,7 +1499,7 @@ VALUES ('47e14364-e91e-51b9-9e52-98d08216cf28', '41bffb09-4de2-5193-8ed5-3f73755
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('a23ebd10-f4c9-5e40-9ae2-5c827eca86a5', NULL, 'Build the Core Sentence: Simple Workplace Requests', 'Produce a useful basic business sentence while practicing making and responding to polite basic requests at work.', 1, NOW(), NOW())
+VALUES ('a23ebd10-f4c9-5e40-9ae2-5c827eca86a5', NULL, 'Составьте основное предложение: Простые рабочие просьбы', 'Составлять полезное простое деловое предложение, тренируясь просить о чём-то на работе и отвечать на такие просьбы.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1535,7 +1535,7 @@ VALUES ('47e14364-e91e-51b9-9e52-98d08216cf28', 'a23ebd10-f4c9-5e40-9ae2-5c827ec
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('f7ad2c3c-bc26-51b2-836a-e335c3d6f692', NULL, 'Listen for Workplace Information: Simple Workplace Requests', 'Identify an important detail in short workplace audio while practicing making and responding to polite basic requests at work.', 2, NOW(), NOW())
+VALUES ('f7ad2c3c-bc26-51b2-836a-e335c3d6f692', NULL, 'Прослушайте рабочую информацию: Простые рабочие просьбы', 'Определять важную деталь в коротком рабочем аудио, тренируясь просить о чём-то на работе и отвечать на такие просьбы.', 2, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1571,7 +1571,7 @@ VALUES ('47e14364-e91e-51b9-9e52-98d08216cf28', 'f7ad2c3c-bc26-51b2-836a-e335c3d
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('8b0617f7-1742-5524-bc10-60286ab4f11d', NULL, 'Use Polite Professional English: Simple Workplace Requests', 'Choose language appropriate for a simple workplace situation while practicing making and responding to polite basic requests at work.', 3, NOW(), NOW())
+VALUES ('8b0617f7-1742-5524-bc10-60286ab4f11d', NULL, 'Используйте вежливый деловой английский: Простые рабочие просьбы', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь просить о чём-то на работе и отвечать на такие просьбы.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1607,7 +1607,7 @@ VALUES ('47e14364-e91e-51b9-9e52-98d08216cf28', '8b0617f7-1742-5524-bc10-60286ab
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('f528e43e-a65b-552e-8e3f-168392a3892b', NULL, 'Practice the Spoken Model: Simple Workplace Requests', 'Repeat the workplace language clearly and politely while practicing making and responding to polite basic requests at work.', 4, NOW(), NOW())
+VALUES ('f528e43e-a65b-552e-8e3f-168392a3892b', NULL, 'Отработайте разговорную модель: Простые рабочие просьбы', 'Чётко и вежливо повторять рабочие фразы, тренируясь просить о чём-то на работе и отвечать на такие просьбы.', 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1643,7 +1643,7 @@ VALUES ('47e14364-e91e-51b9-9e52-98d08216cf28', 'f528e43e-a65b-552e-8e3f-168392a
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('a3a44341-4933-5ec6-867a-2a6682136e03', NULL, 'Use the Language in Context: Simple Workplace Requests', 'Apply the target language in a realistic work situation while practicing making and responding to polite basic requests at work.', 5, NOW(), NOW())
+VALUES ('a3a44341-4933-5ec6-867a-2a6682136e03', NULL, 'Используйте язык в контексте: Простые рабочие просьбы', 'Применять изучаемый язык в реальной рабочей ситуации, тренируясь просить о чём-то на работе и отвечать на такие просьбы.', 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1679,7 +1679,7 @@ VALUES ('47e14364-e91e-51b9-9e52-98d08216cf28', 'a3a44341-4933-5ec6-867a-2a66821
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('a6469585-36b2-5ae4-8c01-e308446c79d6', NULL, 'Handle a Short Exchange: Simple Workplace Requests', 'Respond appropriately in a two-person workplace interaction while practicing making and responding to polite basic requests at work.', 6, NOW(), NOW())
+VALUES ('a6469585-36b2-5ae4-8c01-e308446c79d6', NULL, 'Проведите короткий диалог: Простые рабочие просьбы', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь просить о чём-то на работе и отвечать на такие просьбы.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1715,7 +1715,7 @@ VALUES ('47e14364-e91e-51b9-9e52-98d08216cf28', 'a6469585-36b2-5ae4-8c01-e308446
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('d3b15df8-9ffc-58fc-9a13-7954a194dab5', NULL, 'Work with Less Support: Simple Workplace Requests', 'Complete the business task with fewer hints while practicing making and responding to polite basic requests at work.', 7, NOW(), NOW())
+VALUES ('d3b15df8-9ffc-58fc-9a13-7954a194dab5', NULL, 'Работайте с меньшей поддержкой: Простые рабочие просьбы', 'Выполнять деловое задание с меньшим количеством подсказок, тренируясь просить о чём-то на работе и отвечать на такие просьбы.', 7, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1751,7 +1751,7 @@ VALUES ('47e14364-e91e-51b9-9e52-98d08216cf28', 'd3b15df8-9ffc-58fc-9a13-7954a19
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('7fbcda39-ea33-5463-ba67-2985861c05d6', NULL, 'Workplace Challenge: Simple Workplace Requests', 'Combine vocabulary, listening, and response skills while practicing making and responding to polite basic requests at work.', 8, NOW(), NOW())
+VALUES ('7fbcda39-ea33-5463-ba67-2985861c05d6', NULL, 'Рабочее задание-испытание: Простые рабочие просьбы', 'Сочетать словарный запас, навыки слушания и ответа, тренируясь просить о чём-то на работе и отвечать на такие просьбы.', 8, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1787,7 +1787,7 @@ VALUES ('47e14364-e91e-51b9-9e52-98d08216cf28', '7fbcda39-ea33-5463-ba67-2985861
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('b557eecd-3dc8-5cc2-818d-c37e8a0f459a', NULL, 'Track Business Mission: Simple Workplace Requests', 'Complete a practical beginner workplace mission while practicing making and responding to polite basic requests at work.', 9, NOW(), NOW())
+VALUES ('b557eecd-3dc8-5cc2-818d-c37e8a0f459a', NULL, 'Итоговая деловая миссия трека: Простые рабочие просьбы', 'Выполнить практическую рабочую миссию для начинающих, тренируясь просить о чём-то на работе и отвечать на такие просьбы.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1823,11 +1823,11 @@ VALUES ('47e14364-e91e-51b9-9e52-98d08216cf28', 'b557eecd-3dc8-5cc2-818d-c37e8a0
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('7f0b3978-0a32-5683-bf29-19593f7f3a2d', 'A1_BUSINESS_T06', 'Phone Calls at Work', 'An A1 Business English track focused on handling very simple professional telephone exchanges.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
+VALUES ('7f0b3978-0a32-5683-bf29-19593f7f3a2d', 'A1_BUSINESS_T06', 'Телефонные звонки на работе', 'Курс A1 по деловому английскому: очень простые профессиональные разговоры по телефону.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('38a65605-8be3-5c6f-a2d6-aceae53d82b2', NULL, 'Learn the Workplace Language: Phone Calls at Work', 'Recognize the key workplace words and phrases while practicing handling very simple professional telephone exchanges.', 0, NOW(), NOW())
+VALUES ('38a65605-8be3-5c6f-a2d6-aceae53d82b2', NULL, 'Изучите рабочий язык: Телефонные звонки на работе', 'Узнавать ключевые рабочие слова и фразы, тренируясь вести очень простые профессиональные телефонные разговоры.', 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1863,7 +1863,7 @@ VALUES ('7f0b3978-0a32-5683-bf29-19593f7f3a2d', '38a65605-8be3-5c6f-a2d6-aceae53
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('bcab045e-ae8e-5367-b0c3-282a67278300', NULL, 'Build the Core Sentence: Phone Calls at Work', 'Produce a useful basic business sentence while practicing handling very simple professional telephone exchanges.', 1, NOW(), NOW())
+VALUES ('bcab045e-ae8e-5367-b0c3-282a67278300', NULL, 'Составьте основное предложение: Телефонные звонки на работе', 'Составлять полезное простое деловое предложение, тренируясь вести очень простые профессиональные телефонные разговоры.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1899,7 +1899,7 @@ VALUES ('7f0b3978-0a32-5683-bf29-19593f7f3a2d', 'bcab045e-ae8e-5367-b0c3-282a672
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('8ab87691-4c1d-5d93-a7a8-0e187cda96e0', NULL, 'Listen for Workplace Information: Phone Calls at Work', 'Identify an important detail in short workplace audio while practicing handling very simple professional telephone exchanges.', 2, NOW(), NOW())
+VALUES ('8ab87691-4c1d-5d93-a7a8-0e187cda96e0', NULL, 'Прослушайте рабочую информацию: Телефонные звонки на работе', 'Определять важную деталь в коротком рабочем аудио, тренируясь вести очень простые профессиональные телефонные разговоры.', 2, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1935,7 +1935,7 @@ VALUES ('7f0b3978-0a32-5683-bf29-19593f7f3a2d', '8ab87691-4c1d-5d93-a7a8-0e187cd
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('2225737d-2c58-5c5c-bb7c-6779dd209c94', NULL, 'Use Polite Professional English: Phone Calls at Work', 'Choose language appropriate for a simple workplace situation while practicing handling very simple professional telephone exchanges.', 3, NOW(), NOW())
+VALUES ('2225737d-2c58-5c5c-bb7c-6779dd209c94', NULL, 'Используйте вежливый деловой английский: Телефонные звонки на работе', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь вести очень простые профессиональные телефонные разговоры.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1971,7 +1971,7 @@ VALUES ('7f0b3978-0a32-5683-bf29-19593f7f3a2d', '2225737d-2c58-5c5c-bb7c-6779dd2
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('f3d0440c-4af7-571b-bba9-b76c89a308ce', NULL, 'Practice the Spoken Model: Phone Calls at Work', 'Repeat the workplace language clearly and politely while practicing handling very simple professional telephone exchanges.', 4, NOW(), NOW())
+VALUES ('f3d0440c-4af7-571b-bba9-b76c89a308ce', NULL, 'Отработайте разговорную модель: Телефонные звонки на работе', 'Чётко и вежливо повторять рабочие фразы, тренируясь вести очень простые профессиональные телефонные разговоры.', 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2007,7 +2007,7 @@ VALUES ('7f0b3978-0a32-5683-bf29-19593f7f3a2d', 'f3d0440c-4af7-571b-bba9-b76c89a
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('1213bfea-0c09-589d-a4d4-e6580334bfa3', NULL, 'Use the Language in Context: Phone Calls at Work', 'Apply the target language in a realistic work situation while practicing handling very simple professional telephone exchanges.', 5, NOW(), NOW())
+VALUES ('1213bfea-0c09-589d-a4d4-e6580334bfa3', NULL, 'Используйте язык в контексте: Телефонные звонки на работе', 'Применять изучаемый язык в реальной рабочей ситуации, тренируясь вести очень простые профессиональные телефонные разговоры.', 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2043,7 +2043,7 @@ VALUES ('7f0b3978-0a32-5683-bf29-19593f7f3a2d', '1213bfea-0c09-589d-a4d4-e658033
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('7a96226c-0baa-5368-90c3-9dc0d7883efb', NULL, 'Handle a Short Exchange: Phone Calls at Work', 'Respond appropriately in a two-person workplace interaction while practicing handling very simple professional telephone exchanges.', 6, NOW(), NOW())
+VALUES ('7a96226c-0baa-5368-90c3-9dc0d7883efb', NULL, 'Проведите короткий диалог: Телефонные звонки на работе', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь вести очень простые профессиональные телефонные разговоры.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2079,7 +2079,7 @@ VALUES ('7f0b3978-0a32-5683-bf29-19593f7f3a2d', '7a96226c-0baa-5368-90c3-9dc0d78
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('7b04aa8a-d0dc-521f-823e-61f514126d58', NULL, 'Work with Less Support: Phone Calls at Work', 'Complete the business task with fewer hints while practicing handling very simple professional telephone exchanges.', 7, NOW(), NOW())
+VALUES ('7b04aa8a-d0dc-521f-823e-61f514126d58', NULL, 'Работайте с меньшей поддержкой: Телефонные звонки на работе', 'Выполнять деловое задание с меньшим количеством подсказок, тренируясь вести очень простые профессиональные телефонные разговоры.', 7, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2115,7 +2115,7 @@ VALUES ('7f0b3978-0a32-5683-bf29-19593f7f3a2d', '7b04aa8a-d0dc-521f-823e-61f5141
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('5c2804d7-b6e9-51d7-a1b7-232d933746c6', NULL, 'Workplace Challenge: Phone Calls at Work', 'Combine vocabulary, listening, and response skills while practicing handling very simple professional telephone exchanges.', 8, NOW(), NOW())
+VALUES ('5c2804d7-b6e9-51d7-a1b7-232d933746c6', NULL, 'Рабочее задание-испытание: Телефонные звонки на работе', 'Сочетать словарный запас, навыки слушания и ответа, тренируясь вести очень простые профессиональные телефонные разговоры.', 8, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2151,7 +2151,7 @@ VALUES ('7f0b3978-0a32-5683-bf29-19593f7f3a2d', '5c2804d7-b6e9-51d7-a1b7-232d933
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('bffaac9f-95d8-55ae-b94a-9dc266aed170', NULL, 'Track Business Mission: Phone Calls at Work', 'Complete a practical beginner workplace mission while practicing handling very simple professional telephone exchanges.', 9, NOW(), NOW())
+VALUES ('bffaac9f-95d8-55ae-b94a-9dc266aed170', NULL, 'Итоговая деловая миссия трека: Телефонные звонки на работе', 'Выполнить практическую рабочую миссию для начинающих, тренируясь вести очень простые профессиональные телефонные разговоры.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2187,11 +2187,11 @@ VALUES ('7f0b3978-0a32-5683-bf29-19593f7f3a2d', 'bffaac9f-95d8-55ae-b94a-9dc266a
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('0f60b643-51be-5fe9-8708-45fa8a598f18', 'A1_BUSINESS_T07', 'Emails and Short Messages', 'An A1 Business English track focused on reading and writing very short workplace emails and messages.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
+VALUES ('0f60b643-51be-5fe9-8708-45fa8a598f18', 'A1_BUSINESS_T07', 'Письма и короткие сообщения', 'Курс A1 по деловому английскому: чтение и написание очень коротких рабочих писем и сообщений.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('40eee8fe-caad-5cbb-8847-57f8fc2cc099', NULL, 'Learn the Workplace Language: Emails and Short Messages', 'Recognize the key workplace words and phrases while practicing reading and writing very short workplace emails and messages.', 0, NOW(), NOW())
+VALUES ('40eee8fe-caad-5cbb-8847-57f8fc2cc099', NULL, 'Изучите рабочий язык: Письма и короткие сообщения', 'Узнавать ключевые рабочие слова и фразы, тренируясь читать и писать очень короткие рабочие письма и сообщения.', 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2227,7 +2227,7 @@ VALUES ('0f60b643-51be-5fe9-8708-45fa8a598f18', '40eee8fe-caad-5cbb-8847-57f8fc2
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('987355eb-107f-58c7-9cde-6583000e535a', NULL, 'Build the Core Sentence: Emails and Short Messages', 'Produce a useful basic business sentence while practicing reading and writing very short workplace emails and messages.', 1, NOW(), NOW())
+VALUES ('987355eb-107f-58c7-9cde-6583000e535a', NULL, 'Составьте основное предложение: Письма и короткие сообщения', 'Составлять полезное простое деловое предложение, тренируясь читать и писать очень короткие рабочие письма и сообщения.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2263,7 +2263,7 @@ VALUES ('0f60b643-51be-5fe9-8708-45fa8a598f18', '987355eb-107f-58c7-9cde-6583000
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('429be802-5bae-5c8c-aa81-9ae17ea76b79', NULL, 'Listen for Workplace Information: Emails and Short Messages', 'Identify an important detail in short workplace audio while practicing reading and writing very short workplace emails and messages.', 2, NOW(), NOW())
+VALUES ('429be802-5bae-5c8c-aa81-9ae17ea76b79', NULL, 'Прослушайте рабочую информацию: Письма и короткие сообщения', 'Определять важную деталь в коротком рабочем аудио, тренируясь читать и писать очень короткие рабочие письма и сообщения.', 2, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2299,7 +2299,7 @@ VALUES ('0f60b643-51be-5fe9-8708-45fa8a598f18', '429be802-5bae-5c8c-aa81-9ae17ea
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('ebe1242e-9183-5b7d-bd1b-e3f4a684671a', NULL, 'Use Polite Professional English: Emails and Short Messages', 'Choose language appropriate for a simple workplace situation while practicing reading and writing very short workplace emails and messages.', 3, NOW(), NOW())
+VALUES ('ebe1242e-9183-5b7d-bd1b-e3f4a684671a', NULL, 'Используйте вежливый деловой английский: Письма и короткие сообщения', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь читать и писать очень короткие рабочие письма и сообщения.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2335,7 +2335,7 @@ VALUES ('0f60b643-51be-5fe9-8708-45fa8a598f18', 'ebe1242e-9183-5b7d-bd1b-e3f4a68
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('7ce14361-c233-503e-9c4d-c0565b57fbe6', NULL, 'Practice the Spoken Model: Emails and Short Messages', 'Repeat the workplace language clearly and politely while practicing reading and writing very short workplace emails and messages.', 4, NOW(), NOW())
+VALUES ('7ce14361-c233-503e-9c4d-c0565b57fbe6', NULL, 'Отработайте разговорную модель: Письма и короткие сообщения', 'Чётко и вежливо повторять рабочие фразы, тренируясь читать и писать очень короткие рабочие письма и сообщения.', 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2371,7 +2371,7 @@ VALUES ('0f60b643-51be-5fe9-8708-45fa8a598f18', '7ce14361-c233-503e-9c4d-c0565b5
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('bca0d895-f6e4-560a-a994-0207caec7ec9', NULL, 'Use the Language in Context: Emails and Short Messages', 'Apply the target language in a realistic work situation while practicing reading and writing very short workplace emails and messages.', 5, NOW(), NOW())
+VALUES ('bca0d895-f6e4-560a-a994-0207caec7ec9', NULL, 'Используйте язык в контексте: Письма и короткие сообщения', 'Применять изучаемый язык в реальной рабочей ситуации, тренируясь читать и писать очень короткие рабочие письма и сообщения.', 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2407,7 +2407,7 @@ VALUES ('0f60b643-51be-5fe9-8708-45fa8a598f18', 'bca0d895-f6e4-560a-a994-0207cae
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('4409af6f-fcbb-5dd4-ad79-3b77d4e6f9a6', NULL, 'Handle a Short Exchange: Emails and Short Messages', 'Respond appropriately in a two-person workplace interaction while practicing reading and writing very short workplace emails and messages.', 6, NOW(), NOW())
+VALUES ('4409af6f-fcbb-5dd4-ad79-3b77d4e6f9a6', NULL, 'Проведите короткий диалог: Письма и короткие сообщения', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь читать и писать очень короткие рабочие письма и сообщения.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2443,7 +2443,7 @@ VALUES ('0f60b643-51be-5fe9-8708-45fa8a598f18', '4409af6f-fcbb-5dd4-ad79-3b77d4e
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('c6dd46b9-c52f-5e8f-97a8-0e94e89d05ec', NULL, 'Work with Less Support: Emails and Short Messages', 'Complete the business task with fewer hints while practicing reading and writing very short workplace emails and messages.', 7, NOW(), NOW())
+VALUES ('c6dd46b9-c52f-5e8f-97a8-0e94e89d05ec', NULL, 'Работайте с меньшей поддержкой: Письма и короткие сообщения', 'Выполнять деловое задание с меньшим количеством подсказок, тренируясь читать и писать очень короткие рабочие письма и сообщения.', 7, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2479,7 +2479,7 @@ VALUES ('0f60b643-51be-5fe9-8708-45fa8a598f18', 'c6dd46b9-c52f-5e8f-97a8-0e94e89
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('05cbb2d0-27a9-56ae-909b-2c34e6e62469', NULL, 'Workplace Challenge: Emails and Short Messages', 'Combine vocabulary, listening, and response skills while practicing reading and writing very short workplace emails and messages.', 8, NOW(), NOW())
+VALUES ('05cbb2d0-27a9-56ae-909b-2c34e6e62469', NULL, 'Рабочее задание-испытание: Письма и короткие сообщения', 'Сочетать словарный запас, навыки слушания и ответа, тренируясь читать и писать очень короткие рабочие письма и сообщения.', 8, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2515,7 +2515,7 @@ VALUES ('0f60b643-51be-5fe9-8708-45fa8a598f18', '05cbb2d0-27a9-56ae-909b-2c34e6e
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('f45ab034-c043-5958-9b45-5ef5ee43c8aa', NULL, 'Track Business Mission: Emails and Short Messages', 'Complete a practical beginner workplace mission while practicing reading and writing very short workplace emails and messages.', 9, NOW(), NOW())
+VALUES ('f45ab034-c043-5958-9b45-5ef5ee43c8aa', NULL, 'Итоговая деловая миссия трека: Письма и короткие сообщения', 'Выполнить практическую рабочую миссию для начинающих, тренируясь читать и писать очень короткие рабочие письма и сообщения.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2551,11 +2551,11 @@ VALUES ('0f60b643-51be-5fe9-8708-45fa8a598f18', 'f45ab034-c043-5958-9b45-5ef5ee4
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('7ce4ef3d-bba1-51b3-97ad-cd462a955a9e', 'A1_BUSINESS_T08', 'Meetings: Basic Language', 'An A1 Business English track focused on understanding and using simple language before and during a meeting.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
+VALUES ('7ce4ef3d-bba1-51b3-97ad-cd462a955a9e', 'A1_BUSINESS_T08', 'Встречи: базовый язык', 'Курс A1 по деловому английскому: понимание и использование простого языка до и во время встречи.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('9a5b4bef-1dc3-52aa-9841-e16d7ad195c5', NULL, 'Learn the Workplace Language: Meetings: Basic Language', 'Recognize the key workplace words and phrases while practicing understanding and using simple language before and during a meeting.', 0, NOW(), NOW())
+VALUES ('9a5b4bef-1dc3-52aa-9841-e16d7ad195c5', NULL, 'Изучите рабочий язык: Встречи: базовый язык', 'Узнавать ключевые рабочие слова и фразы, тренируясь понимать и использовать простой язык до и во время встречи.', 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2591,7 +2591,7 @@ VALUES ('7ce4ef3d-bba1-51b3-97ad-cd462a955a9e', '9a5b4bef-1dc3-52aa-9841-e16d7ad
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('9af364e0-fdbe-5133-9946-3093c1574838', NULL, 'Build the Core Sentence: Meetings: Basic Language', 'Produce a useful basic business sentence while practicing understanding and using simple language before and during a meeting.', 1, NOW(), NOW())
+VALUES ('9af364e0-fdbe-5133-9946-3093c1574838', NULL, 'Составьте основное предложение: Встречи: базовый язык', 'Составлять полезное простое деловое предложение, тренируясь понимать и использовать простой язык до и во время встречи.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2627,7 +2627,7 @@ VALUES ('7ce4ef3d-bba1-51b3-97ad-cd462a955a9e', '9af364e0-fdbe-5133-9946-3093c15
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('ec4ee030-e9dc-54d6-8c39-30034322883f', NULL, 'Listen for Workplace Information: Meetings: Basic Language', 'Identify an important detail in short workplace audio while practicing understanding and using simple language before and during a meeting.', 2, NOW(), NOW())
+VALUES ('ec4ee030-e9dc-54d6-8c39-30034322883f', NULL, 'Прослушайте рабочую информацию: Встречи: базовый язык', 'Определять важную деталь в коротком рабочем аудио, тренируясь понимать и использовать простой язык до и во время встречи.', 2, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2663,7 +2663,7 @@ VALUES ('7ce4ef3d-bba1-51b3-97ad-cd462a955a9e', 'ec4ee030-e9dc-54d6-8c39-3003432
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('07a68bea-54c1-59ef-9ded-714a0053566f', NULL, 'Use Polite Professional English: Meetings: Basic Language', 'Choose language appropriate for a simple workplace situation while practicing understanding and using simple language before and during a meeting.', 3, NOW(), NOW())
+VALUES ('07a68bea-54c1-59ef-9ded-714a0053566f', NULL, 'Используйте вежливый деловой английский: Встречи: базовый язык', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь понимать и использовать простой язык до и во время встречи.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2699,7 +2699,7 @@ VALUES ('7ce4ef3d-bba1-51b3-97ad-cd462a955a9e', '07a68bea-54c1-59ef-9ded-714a005
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('21f95f38-f2c8-5221-9160-89cc7055a480', NULL, 'Practice the Spoken Model: Meetings: Basic Language', 'Repeat the workplace language clearly and politely while practicing understanding and using simple language before and during a meeting.', 4, NOW(), NOW())
+VALUES ('21f95f38-f2c8-5221-9160-89cc7055a480', NULL, 'Отработайте разговорную модель: Встречи: базовый язык', 'Чётко и вежливо повторять рабочие фразы, тренируясь понимать и использовать простой язык до и во время встречи.', 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2735,7 +2735,7 @@ VALUES ('7ce4ef3d-bba1-51b3-97ad-cd462a955a9e', '21f95f38-f2c8-5221-9160-89cc705
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('946caa42-1d62-55b0-bfba-590c7170e812', NULL, 'Use the Language in Context: Meetings: Basic Language', 'Apply the target language in a realistic work situation while practicing understanding and using simple language before and during a meeting.', 5, NOW(), NOW())
+VALUES ('946caa42-1d62-55b0-bfba-590c7170e812', NULL, 'Используйте язык в контексте: Встречи: базовый язык', 'Применять изучаемый язык в реальной рабочей ситуации, тренируясь понимать и использовать простой язык до и во время встречи.', 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2771,7 +2771,7 @@ VALUES ('7ce4ef3d-bba1-51b3-97ad-cd462a955a9e', '946caa42-1d62-55b0-bfba-590c717
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('ac2b8198-afad-5b25-9289-b77909412a47', NULL, 'Handle a Short Exchange: Meetings: Basic Language', 'Respond appropriately in a two-person workplace interaction while practicing understanding and using simple language before and during a meeting.', 6, NOW(), NOW())
+VALUES ('ac2b8198-afad-5b25-9289-b77909412a47', NULL, 'Проведите короткий диалог: Встречи: базовый язык', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь понимать и использовать простой язык до и во время встречи.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2807,7 +2807,7 @@ VALUES ('7ce4ef3d-bba1-51b3-97ad-cd462a955a9e', 'ac2b8198-afad-5b25-9289-b779094
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('56fed937-cad0-579b-8cba-54645b6e5734', NULL, 'Work with Less Support: Meetings: Basic Language', 'Complete the business task with fewer hints while practicing understanding and using simple language before and during a meeting.', 7, NOW(), NOW())
+VALUES ('56fed937-cad0-579b-8cba-54645b6e5734', NULL, 'Работайте с меньшей поддержкой: Встречи: базовый язык', 'Выполнять деловое задание с меньшим количеством подсказок, тренируясь понимать и использовать простой язык до и во время встречи.', 7, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2843,7 +2843,7 @@ VALUES ('7ce4ef3d-bba1-51b3-97ad-cd462a955a9e', '56fed937-cad0-579b-8cba-54645b6
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('f4d38a49-f4e8-51cd-919b-b41e61090bbb', NULL, 'Workplace Challenge: Meetings: Basic Language', 'Combine vocabulary, listening, and response skills while practicing understanding and using simple language before and during a meeting.', 8, NOW(), NOW())
+VALUES ('f4d38a49-f4e8-51cd-919b-b41e61090bbb', NULL, 'Рабочее задание-испытание: Встречи: базовый язык', 'Сочетать словарный запас, навыки слушания и ответа, тренируясь понимать и использовать простой язык до и во время встречи.', 8, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2879,7 +2879,7 @@ VALUES ('7ce4ef3d-bba1-51b3-97ad-cd462a955a9e', 'f4d38a49-f4e8-51cd-919b-b41e610
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('49335d7f-a1f6-5230-8dd9-4bd2550f58e0', NULL, 'Track Business Mission: Meetings: Basic Language', 'Complete a practical beginner workplace mission while practicing understanding and using simple language before and during a meeting.', 9, NOW(), NOW())
+VALUES ('49335d7f-a1f6-5230-8dd9-4bd2550f58e0', NULL, 'Итоговая деловая миссия трека: Встречи: базовый язык', 'Выполнить практическую рабочую миссию для начинающих, тренируясь понимать и использовать простой язык до и во время встречи.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2915,11 +2915,11 @@ VALUES ('7ce4ef3d-bba1-51b3-97ad-cd462a955a9e', '49335d7f-a1f6-5230-8dd9-4bd2550
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('6022871e-0556-54b8-9e50-68fd2a24de15', 'A1_BUSINESS_T09', 'Customers and Simple Service', 'An A1 Business English track focused on using polite English in basic customer interactions.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
+VALUES ('6022871e-0556-54b8-9e50-68fd2a24de15', 'A1_BUSINESS_T09', 'Клиенты и простое обслуживание', 'Курс A1 по деловому английскому: вежливое общение с клиентами в простых рабочих ситуациях.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('6f6d3c62-efab-5721-87cc-c64f781763cc', NULL, 'Learn the Workplace Language: Customers and Simple Service', 'Recognize the key workplace words and phrases while practicing using polite English in basic customer interactions.', 0, NOW(), NOW())
+VALUES ('6f6d3c62-efab-5721-87cc-c64f781763cc', NULL, 'Изучите рабочий язык: Клиенты и простое обслуживание', 'Узнавать ключевые рабочие слова и фразы, тренируясь вежливо общаться с клиентами в простых рабочих ситуациях.', 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2955,7 +2955,7 @@ VALUES ('6022871e-0556-54b8-9e50-68fd2a24de15', '6f6d3c62-efab-5721-87cc-c64f781
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('ef5fbd38-e5b5-59e4-9777-3f57f08006d0', NULL, 'Build the Core Sentence: Customers and Simple Service', 'Produce a useful basic business sentence while practicing using polite English in basic customer interactions.', 1, NOW(), NOW())
+VALUES ('ef5fbd38-e5b5-59e4-9777-3f57f08006d0', NULL, 'Составьте основное предложение: Клиенты и простое обслуживание', 'Составлять полезное простое деловое предложение, тренируясь вежливо общаться с клиентами в простых рабочих ситуациях.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2991,7 +2991,7 @@ VALUES ('6022871e-0556-54b8-9e50-68fd2a24de15', 'ef5fbd38-e5b5-59e4-9777-3f57f08
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('a43510d7-5777-5bb3-8087-858562d6c118', NULL, 'Listen for Workplace Information: Customers and Simple Service', 'Identify an important detail in short workplace audio while practicing using polite English in basic customer interactions.', 2, NOW(), NOW())
+VALUES ('a43510d7-5777-5bb3-8087-858562d6c118', NULL, 'Прослушайте рабочую информацию: Клиенты и простое обслуживание', 'Определять важную деталь в коротком рабочем аудио, тренируясь вежливо общаться с клиентами в простых рабочих ситуациях.', 2, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3027,7 +3027,7 @@ VALUES ('6022871e-0556-54b8-9e50-68fd2a24de15', 'a43510d7-5777-5bb3-8087-858562d
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('689f9c94-215d-5222-80b5-511c0c18876d', NULL, 'Use Polite Professional English: Customers and Simple Service', 'Choose language appropriate for a simple workplace situation while practicing using polite English in basic customer interactions.', 3, NOW(), NOW())
+VALUES ('689f9c94-215d-5222-80b5-511c0c18876d', NULL, 'Используйте вежливый деловой английский: Клиенты и простое обслуживание', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь вежливо общаться с клиентами в простых рабочих ситуациях.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3063,7 +3063,7 @@ VALUES ('6022871e-0556-54b8-9e50-68fd2a24de15', '689f9c94-215d-5222-80b5-511c0c1
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('f6e9e557-7774-5ba1-8070-99d13b9fdd29', NULL, 'Practice the Spoken Model: Customers and Simple Service', 'Repeat the workplace language clearly and politely while practicing using polite English in basic customer interactions.', 4, NOW(), NOW())
+VALUES ('f6e9e557-7774-5ba1-8070-99d13b9fdd29', NULL, 'Отработайте разговорную модель: Клиенты и простое обслуживание', 'Чётко и вежливо повторять рабочие фразы, тренируясь вежливо общаться с клиентами в простых рабочих ситуациях.', 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3099,7 +3099,7 @@ VALUES ('6022871e-0556-54b8-9e50-68fd2a24de15', 'f6e9e557-7774-5ba1-8070-99d13b9
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('ab4c5a9d-4de9-5b54-ad97-4ae3996cb819', NULL, 'Use the Language in Context: Customers and Simple Service', 'Apply the target language in a realistic work situation while practicing using polite English in basic customer interactions.', 5, NOW(), NOW())
+VALUES ('ab4c5a9d-4de9-5b54-ad97-4ae3996cb819', NULL, 'Используйте язык в контексте: Клиенты и простое обслуживание', 'Применять изучаемый язык в реальной рабочей ситуации, тренируясь вежливо общаться с клиентами в простых рабочих ситуациях.', 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3135,7 +3135,7 @@ VALUES ('6022871e-0556-54b8-9e50-68fd2a24de15', 'ab4c5a9d-4de9-5b54-ad97-4ae3996
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('25d12337-42b8-5a95-a7cc-164cf622ddcb', NULL, 'Handle a Short Exchange: Customers and Simple Service', 'Respond appropriately in a two-person workplace interaction while practicing using polite English in basic customer interactions.', 6, NOW(), NOW())
+VALUES ('25d12337-42b8-5a95-a7cc-164cf622ddcb', NULL, 'Проведите короткий диалог: Клиенты и простое обслуживание', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь вежливо общаться с клиентами в простых рабочих ситуациях.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3171,7 +3171,7 @@ VALUES ('6022871e-0556-54b8-9e50-68fd2a24de15', '25d12337-42b8-5a95-a7cc-164cf62
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('db8a9144-a8b6-5b8a-a2f9-40cac95944b5', NULL, 'Work with Less Support: Customers and Simple Service', 'Complete the business task with fewer hints while practicing using polite English in basic customer interactions.', 7, NOW(), NOW())
+VALUES ('db8a9144-a8b6-5b8a-a2f9-40cac95944b5', NULL, 'Работайте с меньшей поддержкой: Клиенты и простое обслуживание', 'Выполнять деловое задание с меньшим количеством подсказок, тренируясь вежливо общаться с клиентами в простых рабочих ситуациях.', 7, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3207,7 +3207,7 @@ VALUES ('6022871e-0556-54b8-9e50-68fd2a24de15', 'db8a9144-a8b6-5b8a-a2f9-40cac95
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('276b273d-ae43-5027-85c8-f4cc91d48e5e', NULL, 'Workplace Challenge: Customers and Simple Service', 'Combine vocabulary, listening, and response skills while practicing using polite English in basic customer interactions.', 8, NOW(), NOW())
+VALUES ('276b273d-ae43-5027-85c8-f4cc91d48e5e', NULL, 'Рабочее задание-испытание: Клиенты и простое обслуживание', 'Сочетать словарный запас, навыки слушания и ответа, тренируясь вежливо общаться с клиентами в простых рабочих ситуациях.', 8, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3243,7 +3243,7 @@ VALUES ('6022871e-0556-54b8-9e50-68fd2a24de15', '276b273d-ae43-5027-85c8-f4cc91d
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('4a95f313-a9b8-505f-9281-b994ea547821', NULL, 'Track Business Mission: Customers and Simple Service', 'Complete a practical beginner workplace mission while practicing using polite English in basic customer interactions.', 9, NOW(), NOW())
+VALUES ('4a95f313-a9b8-505f-9281-b994ea547821', NULL, 'Итоговая деловая миссия трека: Клиенты и простое обслуживание', 'Выполнить практическую рабочую миссию для начинающих, тренируясь вежливо общаться с клиентами в простых рабочих ситуациях.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3279,11 +3279,11 @@ VALUES ('6022871e-0556-54b8-9e50-68fd2a24de15', '4a95f313-a9b8-505f-9281-b994ea5
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('3e134547-e488-5f22-84c5-487ec3fed79c', 'A1_BUSINESS_T10', 'A1 Business English Foundation Mission', 'An A1 Business English track focused on combining introductions, routines, requests, calls, messages, meetings, and customer language.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
+VALUES ('3e134547-e488-5f22-84c5-487ec3fed79c', 'A1_BUSINESS_T10', 'Итоговая деловая миссия уровня A1', 'Курс A1 по деловому английскому: объединение представлений, распорядка, просьб, звонков, сообщений, встреч и общения с клиентами.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('62c87325-7140-5348-b0ab-3ce2834563d4', NULL, 'Learn the Workplace Language: A1 Business English Foundation Mission', 'Recognize the key workplace words and phrases while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language.', 0, NOW(), NOW())
+VALUES ('62c87325-7140-5348-b0ab-3ce2834563d4', NULL, 'Изучите рабочий язык: Итоговая деловая миссия уровня A1', 'Узнавать ключевые рабочие слова и фразы, тренируясь объединять представления, распорядок, просьбы, звонки, сообщения, встречи и общение с клиентами.', 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3319,7 +3319,7 @@ VALUES ('3e134547-e488-5f22-84c5-487ec3fed79c', '62c87325-7140-5348-b0ab-3ce2834
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('ed8bac3b-5879-5022-8286-7e757385a291', NULL, 'Build the Core Sentence: A1 Business English Foundation Mission', 'Produce a useful basic business sentence while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language.', 1, NOW(), NOW())
+VALUES ('ed8bac3b-5879-5022-8286-7e757385a291', NULL, 'Составьте основное предложение: Итоговая деловая миссия уровня A1', 'Составлять полезное простое деловое предложение, тренируясь объединять представления, распорядок, просьбы, звонки, сообщения, встречи и общение с клиентами.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3355,7 +3355,7 @@ VALUES ('3e134547-e488-5f22-84c5-487ec3fed79c', 'ed8bac3b-5879-5022-8286-7e75738
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('e816a5be-f55b-578f-af38-4084e65bfeeb', NULL, 'Listen for Workplace Information: A1 Business English Foundation Mission', 'Identify an important detail in short workplace audio while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language.', 2, NOW(), NOW())
+VALUES ('e816a5be-f55b-578f-af38-4084e65bfeeb', NULL, 'Прослушайте рабочую информацию: Итоговая деловая миссия уровня A1', 'Определять важную деталь в коротком рабочем аудио, тренируясь объединять представления, распорядок, просьбы, звонки, сообщения, встречи и общение с клиентами.', 2, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3391,7 +3391,7 @@ VALUES ('3e134547-e488-5f22-84c5-487ec3fed79c', 'e816a5be-f55b-578f-af38-4084e65
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('b4fb89ae-1e99-54ed-82f1-ec75c42cd9ba', NULL, 'Use Polite Professional English: A1 Business English Foundation Mission', 'Choose language appropriate for a simple workplace situation while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language.', 3, NOW(), NOW())
+VALUES ('b4fb89ae-1e99-54ed-82f1-ec75c42cd9ba', NULL, 'Используйте вежливый деловой английский: Итоговая деловая миссия уровня A1', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь объединять представления, распорядок, просьбы, звонки, сообщения, встречи и общение с клиентами.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3427,7 +3427,7 @@ VALUES ('3e134547-e488-5f22-84c5-487ec3fed79c', 'b4fb89ae-1e99-54ed-82f1-ec75c42
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('c9ee5099-f65b-5df4-aea7-abc00cd6c7a3', NULL, 'Practice the Spoken Model: A1 Business English Foundation Mission', 'Repeat the workplace language clearly and politely while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language.', 4, NOW(), NOW())
+VALUES ('c9ee5099-f65b-5df4-aea7-abc00cd6c7a3', NULL, 'Отработайте разговорную модель: Итоговая деловая миссия уровня A1', 'Чётко и вежливо повторять рабочие фразы, тренируясь объединять представления, распорядок, просьбы, звонки, сообщения, встречи и общение с клиентами.', 4, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3463,7 +3463,7 @@ VALUES ('3e134547-e488-5f22-84c5-487ec3fed79c', 'c9ee5099-f65b-5df4-aea7-abc00cd
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('15ff68cf-4f5e-5b3a-b0b4-77206a6045e5', NULL, 'Use the Language in Context: A1 Business English Foundation Mission', 'Apply the target language in a realistic work situation while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language.', 5, NOW(), NOW())
+VALUES ('15ff68cf-4f5e-5b3a-b0b4-77206a6045e5', NULL, 'Используйте язык в контексте: Итоговая деловая миссия уровня A1', 'Применять изучаемый язык в реальной рабочей ситуации, тренируясь объединять представления, распорядок, просьбы, звонки, сообщения, встречи и общение с клиентами.', 5, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3499,7 +3499,7 @@ VALUES ('3e134547-e488-5f22-84c5-487ec3fed79c', '15ff68cf-4f5e-5b3a-b0b4-77206a6
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('af745cd6-5e7c-5d2e-83ac-2925d776f1fe', NULL, 'Handle a Short Exchange: A1 Business English Foundation Mission', 'Respond appropriately in a two-person workplace interaction while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language.', 6, NOW(), NOW())
+VALUES ('af745cd6-5e7c-5d2e-83ac-2925d776f1fe', NULL, 'Проведите короткий диалог: Итоговая деловая миссия уровня A1', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь объединять представления, распорядок, просьбы, звонки, сообщения, встречи и общение с клиентами.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3535,7 +3535,7 @@ VALUES ('3e134547-e488-5f22-84c5-487ec3fed79c', 'af745cd6-5e7c-5d2e-83ac-2925d77
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('f2f39aee-a3bd-5978-ae54-573976b8dd03', NULL, 'Work with Less Support: A1 Business English Foundation Mission', 'Complete the business task with fewer hints while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language.', 7, NOW(), NOW())
+VALUES ('f2f39aee-a3bd-5978-ae54-573976b8dd03', NULL, 'Работайте с меньшей поддержкой: Итоговая деловая миссия уровня A1', 'Выполнять деловое задание с меньшим количеством подсказок, тренируясь объединять представления, распорядок, просьбы, звонки, сообщения, встречи и общение с клиентами.', 7, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3571,7 +3571,7 @@ VALUES ('3e134547-e488-5f22-84c5-487ec3fed79c', 'f2f39aee-a3bd-5978-ae54-573976b
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('069f1752-3751-55c6-9066-83ed8f70ecef', NULL, 'Workplace Challenge: A1 Business English Foundation Mission', 'Combine vocabulary, listening, and response skills while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language.', 8, NOW(), NOW())
+VALUES ('069f1752-3751-55c6-9066-83ed8f70ecef', NULL, 'Рабочее задание-испытание: Итоговая деловая миссия уровня A1', 'Сочетать словарный запас, навыки слушания и ответа, тренируясь объединять представления, распорядок, просьбы, звонки, сообщения, встречи и общение с клиентами.', 8, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3607,7 +3607,7 @@ VALUES ('3e134547-e488-5f22-84c5-487ec3fed79c', '069f1752-3751-55c6-9066-83ed8f7
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
-VALUES ('76cae3a7-7604-548b-940c-94848c6efc66', NULL, 'Track Business Mission: A1 Business English Foundation Mission', 'Complete a practical beginner workplace mission while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language.', 9, NOW(), NOW())
+VALUES ('76cae3a7-7604-548b-940c-94848c6efc66', NULL, 'Итоговая деловая миссия трека: Итоговая деловая миссия уровня A1', 'Выполнить практическую рабочую миссию для начинающих, тренируясь объединять представления, распорядок, просьбы, звонки, сообщения, встречи и общение с клиентами.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
