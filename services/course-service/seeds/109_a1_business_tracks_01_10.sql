@@ -11,11 +11,7 @@ VALUES ('32ec422d-a5f2-5e91-ad45-ac428306870b', NULL, 'Изучите рабоч
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('4c7ebf48-4849-5ccd-991b-b883c5b769c8', '32ec422d-a5f2-5e91-ad45-ac428306870b', 'Изучите язык рабочего общения', 'text', '{"body":"Learn the Workplace Language: Introducing Yourself at Work. Workplace mission: Recognize the key workplace words and phrases while practicing giving a simple professional introduction and understanding basic workplace introductions. Models: Hello, my name is Anna. I work for a small company. I am new to the team.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('8d3597ca-66e3-5efc-9b5f-2e50c7eb58b1', '32ec422d-a5f2-5e91-ad45-ac428306870b', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"name","right":"имя"},{"id":"P2","left":"work","right":"работа, работать"},{"id":"P3","left":"company","right":"компания"},{"id":"P4","left":"job","right":"работа, должность"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('8d3597ca-66e3-5efc-9b5f-2e50c7eb58b1', '32ec422d-a5f2-5e91-ad45-ac428306870b', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"name","right":"имя"},{"id":"P2","left":"work","right":"работа, работать"},{"id":"P3","left":"company","right":"компания"},{"id":"P4","left":"job","right":"работа, должность"},{"id":"P5","left":"team","right":"команда"},{"id":"P6","left":"office","right":"офис"},{"id":"P7","left":"manager","right":"менеджер, руководитель"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -45,10 +41,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('42ef48c3-3d8f-52eb-ac93-536eeb928158', NULL, 'Составьте основное предложение: Представление себя на работе', 'Составлять полезное простое деловое предложение, тренируясь в простом профессиональном представлении себя и понимании базовых рабочих знакомств.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('e8bd6531-cb04-5904-b8ca-e83060af64d5', '42ef48c3-3d8f-52eb-ac93-536eeb928158', 'Изучите язык рабочего общения', 'text', '{"body":"Build the Core Sentence: Introducing Yourself at Work. Workplace mission: Produce a useful basic business sentence while practicing giving a simple professional introduction and understanding basic workplace introductions. Models: I work for a small company. I am new to the team. Nice to meet you.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('a5b090bc-d7cb-58c6-93fd-cc44ae27747a', '42ef48c3-3d8f-52eb-ac93-536eeb928158', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"I work for a small company.","word_bank":["I","work","for","a","small","company","company"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
@@ -83,10 +75,6 @@ VALUES ('c7320e69-2e14-5697-a1b9-ca340052ac5a', NULL, 'Прослушайте р
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('73040f45-b902-536b-8cd8-a96a00e8f20d', 'c7320e69-2e14-5697-a1b9-ca340052ac5a', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"company","right":"компания"},{"id":"P2","left":"job","right":"работа, должность"},{"id":"P3","left":"team","right":"команда"},{"id":"P4","left":"office","right":"офис"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('d82834e1-1a80-5cf9-9a45-d2bd237abd38', 'c7320e69-2e14-5697-a1b9-ca340052ac5a', 'Выберите профессиональный ответ', 'quiz', '{"question":"You just joined a team and want to explain your situation to a colleague. What do you say?","options":[{"id":"A","text":"I am new to the team.","is_correct":true},{"id":"B","text":"Nice to meet you.","is_correct":false},{"id":"C","text":"Hello, my name is Anna.","is_correct":false}],"explanation":"“I am new to the team.” tells a colleague you have just joined.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -117,14 +105,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('32c96112-142b-5742-b6ff-228ad0b30a75', NULL, 'Используйте вежливый деловой английский: Представление себя на работе', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь в простом профессиональном представлении себя и понимании базовых рабочих знакомств.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('fec514b9-bbf0-54ee-aec5-bee66cda2198', '32c96112-142b-5742-b6ff-228ad0b30a75', 'Изучите язык рабочего общения', 'text', '{"body":"Use Polite Professional English: Introducing Yourself at Work. Workplace mission: Choose language appropriate for a simple workplace situation while practicing giving a simple professional introduction and understanding basic workplace introductions. Models: Nice to meet you. Hello, my name is Anna. I work for a small company.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('dcc5f9e0-483b-5fb5-a343-c118abad5e3c', '32c96112-142b-5742-b6ff-228ad0b30a75', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"job","right":"работа, должность"},{"id":"P2","left":"team","right":"команда"},{"id":"P3","left":"office","right":"офис"},{"id":"P4","left":"manager","right":"менеджер, руководитель"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('4e0eb919-65c9-53d9-858d-a022bd5ca0b7', '32c96112-142b-5742-b6ff-228ad0b30a75', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"___ to meet you.","correct_answer":"Nice","options":["Nice","job","team"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 2, NOW(), NOW())
@@ -191,10 +171,6 @@ VALUES ('50d8779e-a74c-59d9-90b8-9b3f4ad6f4d8', NULL, 'Используйте я
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('4edc6f9c-7a2a-52cc-9664-11719c4e2882', '50d8779e-a74c-59d9-90b8-9b3f4ad6f4d8', 'Изучите язык рабочего общения', 'text', '{"body":"Use the Language in Context: Introducing Yourself at Work. Workplace mission: Apply the target language in a realistic work situation while practicing giving a simple professional introduction and understanding basic workplace introductions. Models: I work for a small company. I am new to the team. Nice to meet you.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('7325ff7e-9a0b-5256-8dc1-11ae11c4e0cb', '50d8779e-a74c-59d9-90b8-9b3f4ad6f4d8', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"I ___ for a small company.","correct_answer":"work","options":["work","office","manager"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -225,10 +201,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('030876b2-f67d-555c-88de-58b6480a72dd', NULL, 'Проведите короткий диалог: Представление себя на работе', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь в простом профессиональном представлении себя и понимании базовых рабочих знакомств.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('ab4d21ab-3cda-57ee-886f-0c141b003b27', '030876b2-f67d-555c-88de-58b6480a72dd', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"manager","right":"менеджер, руководитель"},{"id":"P2","left":"colleague","right":"коллега"},{"id":"P3","left":"new","right":"новый"},{"id":"P4","left":"hello","right":"привет, здравствуйте"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('46130eea-abad-5575-b6b0-81f02041c242', '030876b2-f67d-555c-88de-58b6480a72dd', 'Выберите профессиональный ответ', 'quiz', '{"question":"You just joined a team and want to explain your situation to a colleague. What do you say?","options":[{"id":"A","text":"I am new to the team.","is_correct":true},{"id":"B","text":"Nice to meet you.","is_correct":false},{"id":"C","text":"Hello, my name is Anna.","is_correct":false}],"explanation":"“I am new to the team.” tells a colleague you have just joined.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
@@ -263,10 +235,6 @@ VALUES ('cba51f8f-a37d-5183-a146-3f105257a082', NULL, 'Работайте с м�
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('c8c379a6-988a-571d-82bb-3763ed594bd1', 'cba51f8f-a37d-5183-a146-3f105257a082', 'Изучите язык рабочего общения', 'text', '{"body":"Work with Less Support: Introducing Yourself at Work. Workplace mission: Complete the business task with fewer hints while practicing giving a simple professional introduction and understanding basic workplace introductions. Models: Nice to meet you. Hello, my name is Anna. I work for a small company.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('fddd5459-7d8d-5393-a85b-97f2158d8d90', 'cba51f8f-a37d-5183-a146-3f105257a082', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"Nice to meet you.","word_bank":["Nice","to","meet","you","new"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -299,10 +267,6 @@ VALUES ('b24df5ea-8f8e-56e1-a01b-87ce899f3769', NULL, 'Рабочее задан
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('76aa7bfd-ab35-525c-b32a-1328887d16ac', 'b24df5ea-8f8e-56e1-a01b-87ce899f3769', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"new","right":"новый"},{"id":"P2","left":"hello","right":"привет, здравствуйте"},{"id":"P3","left":"name","right":"имя"},{"id":"P4","left":"work","right":"работа, работать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('2f7c0e20-80d8-5836-95e2-bc02cca8c3c9', 'b24df5ea-8f8e-56e1-a01b-87ce899f3769', 'Выберите профессиональный ответ', 'quiz', '{"question":"You meet a new colleague for the first time. How do you introduce yourself?","options":[{"id":"A","text":"Hello, my name is Anna.","is_correct":true},{"id":"B","text":"I work for a small company.","is_correct":false},{"id":"C","text":"I am new to the team.","is_correct":false}],"explanation":"“Hello, my name is Anna.” is a simple, polite self-introduction.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -333,10 +297,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('5ba96519-7d7c-5860-977a-22df7347df45', NULL, 'Итоговая деловая миссия трека: Представление себя на работе', 'Выполнить практическую рабочую миссию для начинающих, тренируясь в простом профессиональном представлении себя и понимании базовых рабочих знакомств.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('ffcc6672-ef4e-531d-b8cb-71885d0fa7a2', '5ba96519-7d7c-5860-977a-22df7347df45', 'Изучите язык рабочего общения', 'text', '{"body":"Track Business Mission: Introducing Yourself at Work. Workplace mission: Complete a practical beginner workplace mission while practicing giving a simple professional introduction and understanding basic workplace introductions. Models: I work for a small company. I am new to the team. Nice to meet you.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('29e37c13-a8ac-597c-97d4-13f637e92be8', '5ba96519-7d7c-5860-977a-22df7347df45', 'Выберите профессиональный ответ', 'quiz', '{"question":"A colleague asks where you work. What is the best answer?","options":[{"id":"A","text":"I work for a small company.","is_correct":true},{"id":"B","text":"I am new to the team.","is_correct":false},{"id":"C","text":"Nice to meet you.","is_correct":false}],"explanation":"“I work for a small company.” directly answers where you work.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
@@ -375,11 +335,7 @@ VALUES ('3285b7d5-d249-5297-a264-1b7fc3626e0e', NULL, 'Изучите рабоч
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('892f51d7-2334-5a9a-a319-19b01c8c11e0', '3285b7d5-d249-5297-a264-1b7fc3626e0e', 'Изучите язык рабочего общения', 'text', '{"body":"Learn the Workplace Language: Jobs and Departments. Workplace mission: Recognize the key workplace words and phrases while practicing talking about basic job roles and where people work. Models: I work in the sales department. She is an office assistant. He works with customers.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('5c27ef88-0929-5f1b-8c0a-d7b2e637d1f4', '3285b7d5-d249-5297-a264-1b7fc3626e0e', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"job","right":"работа, должность"},{"id":"P2","left":"department","right":"отдел"},{"id":"P3","left":"sales","right":"продажи"},{"id":"P4","left":"office","right":"офис"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('5c27ef88-0929-5f1b-8c0a-d7b2e637d1f4', '3285b7d5-d249-5297-a264-1b7fc3626e0e', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"job","right":"работа, должность"},{"id":"P2","left":"department","right":"отдел"},{"id":"P3","left":"sales","right":"продажи"},{"id":"P4","left":"office","right":"офис"},{"id":"P5","left":"manager","right":"менеджер, руководитель"},{"id":"P6","left":"assistant","right":"помощник"},{"id":"P7","left":"customer","right":"клиент"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -409,10 +365,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('af4871bd-13c4-59d1-81a0-0e5240360e0c', NULL, 'Составьте основное предложение: Профессии и отделы', 'Составлять полезное простое деловое предложение, тренируясь говорить о базовых должностях и о том, где работают люди.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('ac4344f7-ac1f-5d3d-8cb2-511a8a52e0f3', 'af4871bd-13c4-59d1-81a0-0e5240360e0c', 'Изучите язык рабочего общения', 'text', '{"body":"Build the Core Sentence: Jobs and Departments. Workplace mission: Produce a useful basic business sentence while practicing talking about basic job roles and where people work. Models: She is an office assistant. He works with customers. Our manager works with the team.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('05e2a985-198d-5dab-ac59-cc9eff202246', 'af4871bd-13c4-59d1-81a0-0e5240360e0c', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"She is an office assistant.","word_bank":["She","is","an","office","assistant","sales"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
@@ -447,10 +399,6 @@ VALUES ('d257c3bc-1f74-52c7-b612-80f68ce6bfb4', NULL, 'Прослушайте р
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('19cab04d-6229-5583-8646-647581def398', 'd257c3bc-1f74-52c7-b612-80f68ce6bfb4', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"sales","right":"продажи"},{"id":"P2","left":"office","right":"офис"},{"id":"P3","left":"manager","right":"менеджер, руководитель"},{"id":"P4","left":"assistant","right":"помощник"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('a5aaaace-64fb-5ea0-aad8-0d39c575059e', 'd257c3bc-1f74-52c7-b612-80f68ce6bfb4', 'Выберите профессиональный ответ', 'quiz', '{"question":"A colleague asks what a co-worker''s job involves. What do you say if that person talks to customers?","options":[{"id":"A","text":"He works with customers.","is_correct":true},{"id":"B","text":"Our manager works with the team.","is_correct":false},{"id":"C","text":"I work in the sales department.","is_correct":false}],"explanation":"“He works with customers.” describes a job that involves customers.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -481,14 +429,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('b7fce779-812f-50e1-8f77-2809b4e5eedd', NULL, 'Используйте вежливый деловой английский: Профессии и отделы', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь говорить о базовых должностях и о том, где работают люди.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('770080f3-9131-5d04-8e70-d861b4c6153c', 'b7fce779-812f-50e1-8f77-2809b4e5eedd', 'Изучите язык рабочего общения', 'text', '{"body":"Use Polite Professional English: Jobs and Departments. Workplace mission: Choose language appropriate for a simple workplace situation while practicing talking about basic job roles and where people work. Models: Our manager works with the team. I work in the sales department. She is an office assistant.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('726ff961-7798-51a7-a17a-ae22c761fed2', 'b7fce779-812f-50e1-8f77-2809b4e5eedd', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"office","right":"офис"},{"id":"P2","left":"manager","right":"менеджер, руководитель"},{"id":"P3","left":"assistant","right":"помощник"},{"id":"P4","left":"customer","right":"клиент"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('4b1c082a-976b-5994-aa8b-aea7dac3d9b8', 'b7fce779-812f-50e1-8f77-2809b4e5eedd', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"___ manager works with the team.","correct_answer":"Our","options":["Our","office","manager"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 2, NOW(), NOW())
@@ -555,10 +495,6 @@ VALUES ('f3ca7b83-7e79-5139-98fd-0fcc1be240b0', NULL, 'Используйте я
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('6a54350a-003f-5237-bcef-6ca1be1930dc', 'f3ca7b83-7e79-5139-98fd-0fcc1be240b0', 'Изучите язык рабочего общения', 'text', '{"body":"Use the Language in Context: Jobs and Departments. Workplace mission: Apply the target language in a realistic work situation while practicing talking about basic job roles and where people work. Models: She is an office assistant. He works with customers. Our manager works with the team.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('83d971fa-a08e-5e58-83f3-f488e963608f', 'f3ca7b83-7e79-5139-98fd-0fcc1be240b0', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"___ is an office assistant.","correct_answer":"She","options":["She","assistant","customer"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -589,10 +525,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('18680adb-b776-5310-906d-abada97f36f0', NULL, 'Проведите короткий диалог: Профессии и отделы', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь говорить о базовых должностях и о том, где работают люди.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a21817ea-916d-5b98-b093-4ab075f48d4b', '18680adb-b776-5310-906d-abada97f36f0', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"customer","right":"клиент"},{"id":"P2","left":"team","right":"команда"},{"id":"P3","left":"work","right":"работа, работать"},{"id":"P4","left":"company","right":"компания"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('6f013ff4-c07c-51c3-bc07-c6e024a5cbf7', '18680adb-b776-5310-906d-abada97f36f0', 'Выберите профессиональный ответ', 'quiz', '{"question":"A colleague asks what a co-worker''s job involves. What do you say if that person talks to customers?","options":[{"id":"A","text":"He works with customers.","is_correct":true},{"id":"B","text":"Our manager works with the team.","is_correct":false},{"id":"C","text":"I work in the sales department.","is_correct":false}],"explanation":"“He works with customers.” describes a job that involves customers.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
@@ -627,10 +559,6 @@ VALUES ('e15003de-6d7f-5c09-b006-8251c0364b3d', NULL, 'Работайте с м�
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('8525f4e5-dbf6-5ba6-8d4b-d59a851bb448', 'e15003de-6d7f-5c09-b006-8251c0364b3d', 'Изучите язык рабочего общения', 'text', '{"body":"Work with Less Support: Jobs and Departments. Workplace mission: Complete the business task with fewer hints while practicing talking about basic job roles and where people work. Models: Our manager works with the team. I work in the sales department. She is an office assistant.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('f612076f-971c-5644-baa8-e7034e60e1a9', 'e15003de-6d7f-5c09-b006-8251c0364b3d', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"Our manager works with the team.","word_bank":["Our","manager","works","with","the","team","work"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -663,10 +591,6 @@ VALUES ('aba53e81-94cf-5fa3-81e8-888f01690f2d', NULL, 'Рабочее задан
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('567a4a87-fac8-5767-8c4b-676dd4827870', 'aba53e81-94cf-5fa3-81e8-888f01690f2d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"work","right":"работа, работать"},{"id":"P2","left":"company","right":"компания"},{"id":"P3","left":"job","right":"работа, должность"},{"id":"P4","left":"department","right":"отдел"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('2c18fcca-86d4-547e-bc54-517903fd2d04', 'aba53e81-94cf-5fa3-81e8-888f01690f2d', 'Выберите профессиональный ответ', 'quiz', '{"question":"Someone asks which department you work in. What do you answer?","options":[{"id":"A","text":"I work in the sales department.","is_correct":true},{"id":"B","text":"She is an office assistant.","is_correct":false},{"id":"C","text":"He works with customers.","is_correct":false}],"explanation":"“I work in the sales department.” names your department.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -697,10 +621,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('19026430-772d-55ff-b854-da3fae65e53e', NULL, 'Итоговая деловая миссия трека: Профессии и отделы', 'Выполнить практическую рабочую миссию для начинающих, тренируясь говорить о базовых должностях и о том, где работают люди.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('5b4d0c92-240d-51c0-b673-85411b11ae4a', '19026430-772d-55ff-b854-da3fae65e53e', 'Изучите язык рабочего общения', 'text', '{"body":"Track Business Mission: Jobs and Departments. Workplace mission: Complete a practical beginner workplace mission while practicing talking about basic job roles and where people work. Models: She is an office assistant. He works with customers. Our manager works with the team.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('108ac601-412f-57d5-96b5-a6c79a8ff045', '19026430-772d-55ff-b854-da3fae65e53e', 'Выберите профессиональный ответ', 'quiz', '{"question":"Someone asks about a colleague''s job title. What do you say if she is an office assistant?","options":[{"id":"A","text":"She is an office assistant.","is_correct":true},{"id":"B","text":"He works with customers.","is_correct":false},{"id":"C","text":"Our manager works with the team.","is_correct":false}],"explanation":"“She is an office assistant.” states her job title directly.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
@@ -739,11 +659,7 @@ VALUES ('6ee02a21-f0f0-5d59-95ee-f6f95fbb5323', NULL, 'Изучите рабоч
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('d0079dba-f586-5526-b2cf-21d73c77b31d', '6ee02a21-f0f0-5d59-95ee-f6f95fbb5323', 'Изучите язык рабочего общения', 'text', '{"body":"Learn the Workplace Language: Workplace Objects and Places. Workplace mission: Recognize the key workplace words and phrases while practicing identifying common objects and locations in an office or workplace. Models: The computer is on the desk. The meeting room is next to the office. The printer is near the door.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('053abc85-b5ed-51fa-bc67-dcbd498bec8e', '6ee02a21-f0f0-5d59-95ee-f6f95fbb5323', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"desk","right":"письменный стол"},{"id":"P2","left":"computer","right":"компьютер"},{"id":"P3","left":"phone","right":"телефон"},{"id":"P4","left":"office","right":"офис"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('053abc85-b5ed-51fa-bc67-dcbd498bec8e', '6ee02a21-f0f0-5d59-95ee-f6f95fbb5323', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"desk","right":"письменный стол"},{"id":"P2","left":"computer","right":"компьютер"},{"id":"P3","left":"phone","right":"телефон"},{"id":"P4","left":"office","right":"офис"},{"id":"P5","left":"meeting","right":"встреча, совещание"},{"id":"P6","left":"room","right":"комната, помещение"},{"id":"P7","left":"door","right":"дверь"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -773,10 +689,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('09189a5c-5508-5205-bdf3-30b60d455836', NULL, 'Составьте основное предложение: Предметы и места на работе', 'Составлять полезное простое деловое предложение, тренируясь называть распространённые предметы и места в офисе или на рабочем месте.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('f5738fa4-8b21-5f77-85e8-fe20cd7f2026', '09189a5c-5508-5205-bdf3-30b60d455836', 'Изучите язык рабочего общения', 'text', '{"body":"Build the Core Sentence: Workplace Objects and Places. Workplace mission: Produce a useful basic business sentence while practicing identifying common objects and locations in an office or workplace. Models: The meeting room is next to the office. The printer is near the door. Please put the file on the table.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('37e18406-fb74-5d11-81d2-922109a2bf13', '09189a5c-5508-5205-bdf3-30b60d455836', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"The meeting room is next to the office.","word_bank":["The","meeting","room","is","next","to","the","office","phone"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
@@ -811,10 +723,6 @@ VALUES ('b8986f67-b79c-525d-9215-0fc3f218d05e', NULL, 'Прослушайте р
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('e9381496-5c07-5fb1-8947-b6adbe0de2d5', 'b8986f67-b79c-525d-9215-0fc3f218d05e', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"phone","right":"телефон"},{"id":"P2","left":"office","right":"офис"},{"id":"P3","left":"meeting","right":"встреча, совещание"},{"id":"P4","left":"room","right":"комната, помещение"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('153853b4-374b-58a3-919d-e0cd88177138', 'b8986f67-b79c-525d-9215-0fc3f218d05e', 'Выберите профессиональный ответ', 'quiz', '{"question":"A colleague asks where the printer is. What do you answer?","options":[{"id":"A","text":"The printer is near the door.","is_correct":true},{"id":"B","text":"Please put the file on the table.","is_correct":false},{"id":"C","text":"The computer is on the desk.","is_correct":false}],"explanation":"“The printer is near the door.” tells exactly where the printer is.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -845,14 +753,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('9c92f822-39c4-55f4-b6a7-f2addd16ca7d', NULL, 'Используйте вежливый деловой английский: Предметы и места на работе', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь называть распространённые предметы и места в офисе или на рабочем месте.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('50786506-8edc-57cb-a108-9683985a1b5a', '9c92f822-39c4-55f4-b6a7-f2addd16ca7d', 'Изучите язык рабочего общения', 'text', '{"body":"Use Polite Professional English: Workplace Objects and Places. Workplace mission: Choose language appropriate for a simple workplace situation while practicing identifying common objects and locations in an office or workplace. Models: Please put the file on the table. The computer is on the desk. The meeting room is next to the office.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('f543c7e4-b931-564d-9d61-96923ba8b01f', '9c92f822-39c4-55f4-b6a7-f2addd16ca7d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"office","right":"офис"},{"id":"P2","left":"meeting","right":"встреча, совещание"},{"id":"P3","left":"room","right":"комната, помещение"},{"id":"P4","left":"door","right":"дверь"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('81a8426f-10cc-557c-8a6b-e6096afcf0c0', '9c92f822-39c4-55f4-b6a7-f2addd16ca7d', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"___ put the file on the table.","correct_answer":"Please","options":["Please","office","meeting"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 2, NOW(), NOW())
@@ -919,10 +819,6 @@ VALUES ('756b4075-ed04-5037-aadd-5d576bd34140', NULL, 'Используйте я
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('b28bf8c8-0c0c-5030-953c-76031907af2c', '756b4075-ed04-5037-aadd-5d576bd34140', 'Изучите язык рабочего общения', 'text', '{"body":"Use the Language in Context: Workplace Objects and Places. Workplace mission: Apply the target language in a realistic work situation while practicing identifying common objects and locations in an office or workplace. Models: The meeting room is next to the office. The printer is near the door. Please put the file on the table.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('560ad538-76fd-521a-bd15-e2f02416d4af', '756b4075-ed04-5037-aadd-5d576bd34140', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"___ meeting room is next to the office.","correct_answer":"The","options":["The","room","door"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -953,10 +849,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('69bf5ed1-6c86-5900-9d0d-c4efee2e00be', NULL, 'Проведите короткий диалог: Предметы и места на работе', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь называть распространённые предметы и места в офисе или на рабочем месте.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('532aa933-3120-5a43-aadb-b005d4b295a8', '69bf5ed1-6c86-5900-9d0d-c4efee2e00be', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"door","right":"дверь"},{"id":"P2","left":"printer","right":"принтер"},{"id":"P3","left":"chair","right":"стул"},{"id":"P4","left":"table","right":"стол"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('20124c43-3692-59ab-821c-9d19f4bda635', '69bf5ed1-6c86-5900-9d0d-c4efee2e00be', 'Выберите профессиональный ответ', 'quiz', '{"question":"A colleague asks where the printer is. What do you answer?","options":[{"id":"A","text":"The printer is near the door.","is_correct":true},{"id":"B","text":"Please put the file on the table.","is_correct":false},{"id":"C","text":"The computer is on the desk.","is_correct":false}],"explanation":"“The printer is near the door.” tells exactly where the printer is.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
@@ -991,10 +883,6 @@ VALUES ('3f7fa595-a422-52c9-8894-a7aa779b9a28', NULL, 'Работайте с м�
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a1579107-b87a-51b0-acb9-4fb959a1f010', '3f7fa595-a422-52c9-8894-a7aa779b9a28', 'Изучите язык рабочего общения', 'text', '{"body":"Work with Less Support: Workplace Objects and Places. Workplace mission: Complete the business task with fewer hints while practicing identifying common objects and locations in an office or workplace. Models: Please put the file on the table. The computer is on the desk. The meeting room is next to the office.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('46416554-60f9-5c08-9d86-cd46152407d9', '3f7fa595-a422-52c9-8894-a7aa779b9a28', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"Please put the file on the table.","word_bank":["Please","put","the","file","on","the","table","chair"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -1027,10 +915,6 @@ VALUES ('f77cd227-06f6-56ed-817f-0cf345d7be8f', NULL, 'Рабочее задан
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('fb39d728-3f03-5b46-9568-7fc3d2565d59', 'f77cd227-06f6-56ed-817f-0cf345d7be8f', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"chair","right":"стул"},{"id":"P2","left":"table","right":"стол"},{"id":"P3","left":"desk","right":"письменный стол"},{"id":"P4","left":"computer","right":"компьютер"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('736b77a7-c40e-5db1-9fda-1203c21a30d4', 'f77cd227-06f6-56ed-817f-0cf345d7be8f', 'Выберите профессиональный ответ', 'quiz', '{"question":"A colleague asks where the computer is. What do you answer?","options":[{"id":"A","text":"The computer is on the desk.","is_correct":true},{"id":"B","text":"The meeting room is next to the office.","is_correct":false},{"id":"C","text":"The printer is near the door.","is_correct":false}],"explanation":"“The computer is on the desk.” tells exactly where the computer is.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -1061,10 +945,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('3af7c25e-04ec-56d0-b6fb-a9d70bf49955', NULL, 'Итоговая деловая миссия трека: Предметы и места на работе', 'Выполнить практическую рабочую миссию для начинающих, тренируясь называть распространённые предметы и места в офисе или на рабочем месте.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('9b0aff92-f8bb-5f40-938f-43cd176312f8', '3af7c25e-04ec-56d0-b6fb-a9d70bf49955', 'Изучите язык рабочего общения', 'text', '{"body":"Track Business Mission: Workplace Objects and Places. Workplace mission: Complete a practical beginner workplace mission while practicing identifying common objects and locations in an office or workplace. Models: The meeting room is next to the office. The printer is near the door. Please put the file on the table.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('1dee14ea-bf01-557f-8e6d-728a67c8d5ba', '3af7c25e-04ec-56d0-b6fb-a9d70bf49955', 'Выберите профессиональный ответ', 'quiz', '{"question":"A colleague asks where the meeting room is. What do you answer?","options":[{"id":"A","text":"The meeting room is next to the office.","is_correct":true},{"id":"B","text":"The printer is near the door.","is_correct":false},{"id":"C","text":"Please put the file on the table.","is_correct":false}],"explanation":"“The meeting room is next to the office.” tells exactly where the meeting room is.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
@@ -1103,11 +983,7 @@ VALUES ('94c1aa25-73b8-5e12-a5fa-43b2a4143cdf', NULL, 'Изучите рабоч
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('edc19275-434d-5358-96a0-1127e1a1b2f4', '94c1aa25-73b8-5e12-a5fa-43b2a4143cdf', 'Изучите язык рабочего общения', 'text', '{"body":"Learn the Workplace Language: Daily Work Routines. Workplace mission: Recognize the key workplace words and phrases while practicing describing a simple workday and understanding routine workplace actions. Models: I start work at nine. I check my email in the morning. We have a meeting after lunch.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('5045b74d-b24e-5db0-9731-6d0a25b53a8d', '94c1aa25-73b8-5e12-a5fa-43b2a4143cdf', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"start","right":"начинать"},{"id":"P2","left":"finish","right":"заканчивать"},{"id":"P3","left":"email","right":"электронное письмо"},{"id":"P4","left":"call","right":"звонок, звонить"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('5045b74d-b24e-5db0-9731-6d0a25b53a8d', '94c1aa25-73b8-5e12-a5fa-43b2a4143cdf', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"start","right":"начинать"},{"id":"P2","left":"finish","right":"заканчивать"},{"id":"P3","left":"email","right":"электронное письмо"},{"id":"P4","left":"call","right":"звонок, звонить"},{"id":"P5","left":"meeting","right":"встреча, совещание"},{"id":"P6","left":"lunch","right":"обед"},{"id":"P7","left":"morning","right":"утро"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1137,10 +1013,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('822c5ef9-0045-5103-8a42-0bcb543a5deb', NULL, 'Составьте основное предложение: Повседневный рабочий распорядок', 'Составлять полезное простое деловое предложение, тренируясь описывать простой рабочий день и понимать обычные рабочие действия.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('fdc90b5a-ecb1-5021-a010-3506f1526e33', '822c5ef9-0045-5103-8a42-0bcb543a5deb', 'Изучите язык рабочего общения', 'text', '{"body":"Build the Core Sentence: Daily Work Routines. Workplace mission: Produce a useful basic business sentence while practicing describing a simple workday and understanding routine workplace actions. Models: I check my email in the morning. We have a meeting after lunch. I finish work at five.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('26810644-5e7e-50f5-969f-bd4ef6e99cb8', '822c5ef9-0045-5103-8a42-0bcb543a5deb', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"I check my email in the morning.","word_bank":["I","check","my","email","in","the","morning","email"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
@@ -1175,10 +1047,6 @@ VALUES ('883e7854-873e-52a3-949e-aeaa4c9c1cf7', NULL, 'Прослушайте р
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('29fcc7f1-b083-522a-8f93-7742118957cd', '883e7854-873e-52a3-949e-aeaa4c9c1cf7', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"email","right":"электронное письмо"},{"id":"P2","left":"call","right":"звонок, звонить"},{"id":"P3","left":"meeting","right":"встреча, совещание"},{"id":"P4","left":"lunch","right":"обед"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('220f18b7-7146-5f71-9c9f-d47ba4ce158a', '883e7854-873e-52a3-949e-aeaa4c9c1cf7', 'Выберите профессиональный ответ', 'quiz', '{"question":"A colleague asks when the team meeting is today. What do you answer?","options":[{"id":"A","text":"We have a meeting after lunch.","is_correct":true},{"id":"B","text":"I finish work at five.","is_correct":false},{"id":"C","text":"I start work at nine.","is_correct":false}],"explanation":"“We have a meeting after lunch.” tells when the meeting happens.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -1209,14 +1077,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('ceed390c-ac18-5ae3-8246-1f001a332b8a', NULL, 'Используйте вежливый деловой английский: Повседневный рабочий распорядок', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь описывать простой рабочий день и понимать обычные рабочие действия.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a43cc968-35c3-53d0-89f9-8449de86baa8', 'ceed390c-ac18-5ae3-8246-1f001a332b8a', 'Изучите язык рабочего общения', 'text', '{"body":"Use Polite Professional English: Daily Work Routines. Workplace mission: Choose language appropriate for a simple workplace situation while practicing describing a simple workday and understanding routine workplace actions. Models: I finish work at five. I start work at nine. I check my email in the morning.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('2756fb2b-9991-55b9-81c0-6385da113367', 'ceed390c-ac18-5ae3-8246-1f001a332b8a', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"call","right":"звонок, звонить"},{"id":"P2","left":"meeting","right":"встреча, совещание"},{"id":"P3","left":"lunch","right":"обед"},{"id":"P4","left":"morning","right":"утро"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('75932f56-03e0-547c-9061-0fc0b5db2284', 'ceed390c-ac18-5ae3-8246-1f001a332b8a', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"I ___ work at five.","correct_answer":"finish","options":["finish","call","meeting"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 2, NOW(), NOW())
@@ -1283,10 +1143,6 @@ VALUES ('fbb92820-3cb5-5096-a902-79dc2d10a485', NULL, 'Используйте я
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('1074f587-e7a7-59bc-b712-95296fa6ad59', 'fbb92820-3cb5-5096-a902-79dc2d10a485', 'Изучите язык рабочего общения', 'text', '{"body":"Use the Language in Context: Daily Work Routines. Workplace mission: Apply the target language in a realistic work situation while practicing describing a simple workday and understanding routine workplace actions. Models: I check my email in the morning. We have a meeting after lunch. I finish work at five.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('3d392566-08a6-5e40-bbb8-8bd933099220', 'fbb92820-3cb5-5096-a902-79dc2d10a485', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"I ___ my email in the morning.","correct_answer":"check","options":["check","lunch","morning"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -1317,10 +1173,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('c3a6819b-91d6-5fba-95a2-ab1e71b57b03', NULL, 'Проведите короткий диалог: Повседневный рабочий распорядок', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь описывать простой рабочий день и понимать обычные рабочие действия.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('669d34c9-13cd-5e37-94e9-666aadd7f142', 'c3a6819b-91d6-5fba-95a2-ab1e71b57b03', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"morning","right":"утро"},{"id":"P2","left":"afternoon","right":"день (после полудня)"},{"id":"P3","left":"usually","right":"обычно"},{"id":"P4","left":"work","right":"работа, работать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('50385bf2-7acb-57c3-a3c9-f8952e83f695', 'c3a6819b-91d6-5fba-95a2-ab1e71b57b03', 'Выберите профессиональный ответ', 'quiz', '{"question":"A colleague asks when the team meeting is today. What do you answer?","options":[{"id":"A","text":"We have a meeting after lunch.","is_correct":true},{"id":"B","text":"I finish work at five.","is_correct":false},{"id":"C","text":"I start work at nine.","is_correct":false}],"explanation":"“We have a meeting after lunch.” tells when the meeting happens.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
@@ -1355,10 +1207,6 @@ VALUES ('1cd2a31d-0bee-52bf-9e28-fc9096e22fa4', NULL, 'Работайте с м�
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('d58d00e7-6514-5fc0-afaa-3ee5730d73c2', '1cd2a31d-0bee-52bf-9e28-fc9096e22fa4', 'Изучите язык рабочего общения', 'text', '{"body":"Work with Less Support: Daily Work Routines. Workplace mission: Complete the business task with fewer hints while practicing describing a simple workday and understanding routine workplace actions. Models: I finish work at five. I start work at nine. I check my email in the morning.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('451102fd-3e8b-55ab-8e69-4f85e49c85b3', '1cd2a31d-0bee-52bf-9e28-fc9096e22fa4', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"I finish work at five.","word_bank":["I","finish","work","at","five","usually"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -1391,10 +1239,6 @@ VALUES ('5476c099-e8dc-5e96-a586-8448793e6355', NULL, 'Рабочее задан
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('7fba1598-aa31-57a9-bd0e-1f363ace4919', '5476c099-e8dc-5e96-a586-8448793e6355', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"usually","right":"обычно"},{"id":"P2","left":"work","right":"работа, работать"},{"id":"P3","left":"start","right":"начинать"},{"id":"P4","left":"finish","right":"заканчивать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('b5664870-ec28-59e1-8722-b900ee66497b', '5476c099-e8dc-5e96-a586-8448793e6355', 'Выберите профессиональный ответ', 'quiz', '{"question":"A colleague asks what time you start work. What do you answer?","options":[{"id":"A","text":"I start work at nine.","is_correct":true},{"id":"B","text":"I check my email in the morning.","is_correct":false},{"id":"C","text":"We have a meeting after lunch.","is_correct":false}],"explanation":"“I start work at nine.” gives the exact start time.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -1425,10 +1269,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('49da44f2-31d9-5210-b6c3-60fb24d933b2', NULL, 'Итоговая деловая миссия трека: Повседневный рабочий распорядок', 'Выполнить практическую рабочую миссию для начинающих, тренируясь описывать простой рабочий день и понимать обычные рабочие действия.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('eecf53f9-d60e-5f06-855e-b37bfd493c0b', '49da44f2-31d9-5210-b6c3-60fb24d933b2', 'Изучите язык рабочего общения', 'text', '{"body":"Track Business Mission: Daily Work Routines. Workplace mission: Complete a practical beginner workplace mission while practicing describing a simple workday and understanding routine workplace actions. Models: I check my email in the morning. We have a meeting after lunch. I finish work at five.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('a6d5a09e-3c52-5066-8a9f-1bece4cd6a7f', '49da44f2-31d9-5210-b6c3-60fb24d933b2', 'Выберите профессиональный ответ', 'quiz', '{"question":"A colleague asks when you usually check your email. What do you answer?","options":[{"id":"A","text":"I check my email in the morning.","is_correct":true},{"id":"B","text":"We have a meeting after lunch.","is_correct":false},{"id":"C","text":"I finish work at five.","is_correct":false}],"explanation":"“I check my email in the morning.” describes your daily routine.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
@@ -1467,11 +1307,7 @@ VALUES ('41bffb09-4de2-5193-8ed5-3f73755283d1', NULL, 'Изучите рабоч
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('e471251d-bf7f-547b-b5b6-c212b7cc2785', '41bffb09-4de2-5193-8ed5-3f73755283d1', 'Изучите язык рабочего общения', 'text', '{"body":"Learn the Workplace Language: Simple Workplace Requests. Workplace mission: Recognize the key workplace words and phrases while practicing making and responding to polite basic requests at work. Models: Can you help me, please? Could you send the email? Please check this file.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('c7370a9a-c228-541b-a3d4-f73722fcfa9f', '41bffb09-4de2-5193-8ed5-3f73755283d1', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"please","right":"пожалуйста"},{"id":"P2","left":"help","right":"помощь, помогать"},{"id":"P3","left":"send","right":"отправлять"},{"id":"P4","left":"open","right":"открытый, открывать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('c7370a9a-c228-541b-a3d4-f73722fcfa9f', '41bffb09-4de2-5193-8ed5-3f73755283d1', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"please","right":"пожалуйста"},{"id":"P2","left":"help","right":"помощь, помогать"},{"id":"P3","left":"send","right":"отправлять"},{"id":"P4","left":"open","right":"открытый, открывать"},{"id":"P5","left":"check","right":"проверять"},{"id":"P6","left":"bring","right":"приносить"},{"id":"P7","left":"wait","right":"ждать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1501,10 +1337,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('a23ebd10-f4c9-5e40-9ae2-5c827eca86a5', NULL, 'Составьте основное предложение: Простые рабочие просьбы', 'Составлять полезное простое деловое предложение, тренируясь просить о чём-то на работе и отвечать на такие просьбы.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('5cceb191-a092-536a-b62f-dabd31514bee', 'a23ebd10-f4c9-5e40-9ae2-5c827eca86a5', 'Изучите язык рабочего общения', 'text', '{"body":"Build the Core Sentence: Simple Workplace Requests. Workplace mission: Produce a useful basic business sentence while practicing making and responding to polite basic requests at work. Models: Could you send the email? Please check this file. Sure, I can do that.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('6b8c88e9-1562-53d9-9231-40abd7a9752e', 'a23ebd10-f4c9-5e40-9ae2-5c827eca86a5', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"Could you send the email?","word_bank":["Could","you","send","the","email","send"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
@@ -1539,10 +1371,6 @@ VALUES ('f7ad2c3c-bc26-51b2-836a-e335c3d6f692', NULL, 'Прослушайте р
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a6c7b00f-7917-57dc-9d94-1cb54affa15d', 'f7ad2c3c-bc26-51b2-836a-e335c3d6f692', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"send","right":"отправлять"},{"id":"P2","left":"open","right":"открытый, открывать"},{"id":"P3","left":"check","right":"проверять"},{"id":"P4","left":"bring","right":"приносить"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('42361543-3b02-556f-9a4d-1bac5b51d941', 'f7ad2c3c-bc26-51b2-836a-e335c3d6f692', 'Выберите профессиональный ответ', 'quiz', '{"question":"You want a colleague to review a file. What do you say?","options":[{"id":"A","text":"Please check this file.","is_correct":true},{"id":"B","text":"Sure, I can do that.","is_correct":false},{"id":"C","text":"Can you help me, please?","is_correct":false}],"explanation":"“Please check this file.” is a clear, polite request to review a file.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -1573,14 +1401,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('8b0617f7-1742-5524-bc10-60286ab4f11d', NULL, 'Используйте вежливый деловой английский: Простые рабочие просьбы', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь просить о чём-то на работе и отвечать на такие просьбы.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('5d2cb210-8420-5334-9aef-6424f45a8165', '8b0617f7-1742-5524-bc10-60286ab4f11d', 'Изучите язык рабочего общения', 'text', '{"body":"Use Polite Professional English: Simple Workplace Requests. Workplace mission: Choose language appropriate for a simple workplace situation while practicing making and responding to polite basic requests at work. Models: Sure, I can do that. Can you help me, please? Could you send the email?","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('7129a77e-788f-54a6-9aeb-3ba48ee089d5', '8b0617f7-1742-5524-bc10-60286ab4f11d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"open","right":"открытый, открывать"},{"id":"P2","left":"check","right":"проверять"},{"id":"P3","left":"bring","right":"приносить"},{"id":"P4","left":"wait","right":"ждать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('386d1d72-846f-5846-9c3b-b552188a08c3', '8b0617f7-1742-5524-bc10-60286ab4f11d', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"___, I can do that.","correct_answer":"Sure","options":["Sure","open","check"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 2, NOW(), NOW())
@@ -1647,10 +1467,6 @@ VALUES ('a3a44341-4933-5ec6-867a-2a6682136e03', NULL, 'Используйте я
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('62e91ac5-a52b-5d00-8a05-0a881eb3305d', 'a3a44341-4933-5ec6-867a-2a6682136e03', 'Изучите язык рабочего общения', 'text', '{"body":"Use the Language in Context: Simple Workplace Requests. Workplace mission: Apply the target language in a realistic work situation while practicing making and responding to polite basic requests at work. Models: Could you send the email? Please check this file. Sure, I can do that.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('44298437-96e0-5c47-8ff8-ca00d89b06b4', 'a3a44341-4933-5ec6-867a-2a6682136e03', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"___ you send the email?","correct_answer":"Could","options":["Could","bring","wait"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -1681,10 +1497,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('a6469585-36b2-5ae4-8c01-e308446c79d6', NULL, 'Проведите короткий диалог: Простые рабочие просьбы', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь просить о чём-то на работе и отвечать на такие просьбы.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('36c09e28-d21c-5237-853b-cb5fb0b98dc8', 'a6469585-36b2-5ae4-8c01-e308446c79d6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"wait","right":"ждать"},{"id":"P2","left":"can","right":"мочь"},{"id":"P3","left":"could","right":"мог бы (вежливая форма)"},{"id":"P4","left":"sure","right":"конечно, уверен"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('b1d305a0-3a8a-554e-9890-5223bc1239e6', 'a6469585-36b2-5ae4-8c01-e308446c79d6', 'Выберите профессиональный ответ', 'quiz', '{"question":"You want a colleague to review a file. What do you say?","options":[{"id":"A","text":"Please check this file.","is_correct":true},{"id":"B","text":"Sure, I can do that.","is_correct":false},{"id":"C","text":"Can you help me, please?","is_correct":false}],"explanation":"“Please check this file.” is a clear, polite request to review a file.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
@@ -1719,10 +1531,6 @@ VALUES ('d3b15df8-9ffc-58fc-9a13-7954a194dab5', NULL, 'Работайте с м�
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('d863ea9d-d8d9-5b8f-9481-d8172a00ea66', 'd3b15df8-9ffc-58fc-9a13-7954a194dab5', 'Изучите язык рабочего общения', 'text', '{"body":"Work with Less Support: Simple Workplace Requests. Workplace mission: Complete the business task with fewer hints while practicing making and responding to polite basic requests at work. Models: Sure, I can do that. Can you help me, please? Could you send the email?","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('cc71cf86-523b-5456-b5bb-a44c1643c855', 'd3b15df8-9ffc-58fc-9a13-7954a194dab5', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"Sure, I can do that.","word_bank":["Sure","I","can","do","that","could"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -1755,10 +1563,6 @@ VALUES ('7fbcda39-ea33-5463-ba67-2985861c05d6', NULL, 'Рабочее задан
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('75acfee9-87df-5a38-b1aa-2dc5f617b1ac', '7fbcda39-ea33-5463-ba67-2985861c05d6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"could","right":"мог бы (вежливая форма)"},{"id":"P2","left":"sure","right":"конечно, уверен"},{"id":"P3","left":"please","right":"пожалуйста"},{"id":"P4","left":"help","right":"помощь, помогать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('67a4f41d-7964-561b-b696-0ac8fe8b3778', '7fbcda39-ea33-5463-ba67-2985861c05d6', 'Выберите профессиональный ответ', 'quiz', '{"question":"You need help from a colleague. What is a polite way to ask?","options":[{"id":"A","text":"Can you help me, please?","is_correct":true},{"id":"B","text":"Could you send the email?","is_correct":false},{"id":"C","text":"Please check this file.","is_correct":false}],"explanation":"“Can you help me, please?” is a simple, polite request for help.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -1789,10 +1593,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('b557eecd-3dc8-5cc2-818d-c37e8a0f459a', NULL, 'Итоговая деловая миссия трека: Простые рабочие просьбы', 'Выполнить практическую рабочую миссию для начинающих, тренируясь просить о чём-то на работе и отвечать на такие просьбы.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('6cec0349-9987-5ea1-bb72-2d2892bb3a9a', 'b557eecd-3dc8-5cc2-818d-c37e8a0f459a', 'Изучите язык рабочего общения', 'text', '{"body":"Track Business Mission: Simple Workplace Requests. Workplace mission: Complete a practical beginner workplace mission while practicing making and responding to polite basic requests at work. Models: Could you send the email? Please check this file. Sure, I can do that.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('7c0c1b8f-0d35-595a-ba1a-aadf1a64b85d', 'b557eecd-3dc8-5cc2-818d-c37e8a0f459a', 'Выберите профессиональный ответ', 'quiz', '{"question":"You want to politely ask a colleague to send an email. What do you say?","options":[{"id":"A","text":"Could you send the email?","is_correct":true},{"id":"B","text":"Please check this file.","is_correct":false},{"id":"C","text":"Sure, I can do that.","is_correct":false}],"explanation":"“Could you send the email?” is a polite request to send an email.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
@@ -1831,11 +1631,7 @@ VALUES ('38a65605-8be3-5c6f-a2d6-aceae53d82b2', NULL, 'Изучите рабоч
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('e891d583-96e5-5c2e-8488-ff0abfffa5d3', '38a65605-8be3-5c6f-a2d6-aceae53d82b2', 'Изучите язык рабочего общения', 'text', '{"body":"Learn the Workplace Language: Phone Calls at Work. Workplace mission: Recognize the key workplace words and phrases while practicing handling very simple professional telephone exchanges. Models: Hello, this is David from ABC Company. Can I speak to Maria, please? She is not available right now.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('e065d940-27d4-5401-a1c4-d397da377864', '38a65605-8be3-5c6f-a2d6-aceae53d82b2', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"call","right":"звонок, звонить"},{"id":"P2","left":"phone","right":"телефон"},{"id":"P3","left":"speak","right":"говорить"},{"id":"P4","left":"message","right":"сообщение"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('e065d940-27d4-5401-a1c4-d397da377864', '38a65605-8be3-5c6f-a2d6-aceae53d82b2', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"call","right":"звонок, звонить"},{"id":"P2","left":"phone","right":"телефон"},{"id":"P3","left":"speak","right":"говорить"},{"id":"P4","left":"message","right":"сообщение"},{"id":"P5","left":"number","right":"номер, число"},{"id":"P6","left":"available","right":"свободен, доступен"},{"id":"P7","left":"sorry","right":"извините"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -1865,10 +1661,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('bcab045e-ae8e-5367-b0c3-282a67278300', NULL, 'Составьте основное предложение: Телефонные звонки на работе', 'Составлять полезное простое деловое предложение, тренируясь вести очень простые профессиональные телефонные разговоры.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('d4c75126-2256-5858-97c0-23f1d2ce829b', 'bcab045e-ae8e-5367-b0c3-282a67278300', 'Изучите язык рабочего общения', 'text', '{"body":"Build the Core Sentence: Phone Calls at Work. Workplace mission: Produce a useful basic business sentence while practicing handling very simple professional telephone exchanges. Models: Can I speak to Maria, please? She is not available right now. Can I leave a message?","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('9b91aca2-2038-5863-8272-4905e908c994', 'bcab045e-ae8e-5367-b0c3-282a67278300', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"Can I speak to Maria, please?","word_bank":["Can","I","speak","to","Maria","please","speak"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
@@ -1903,10 +1695,6 @@ VALUES ('8ab87691-4c1d-5d93-a7a8-0e187cda96e0', NULL, 'Прослушайте р
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('e44bfb58-4fce-5fcf-81e7-447f0280d78a', '8ab87691-4c1d-5d93-a7a8-0e187cda96e0', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"speak","right":"говорить"},{"id":"P2","left":"message","right":"сообщение"},{"id":"P3","left":"number","right":"номер, число"},{"id":"P4","left":"available","right":"свободен, доступен"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('930d813b-444b-588b-9862-33554460554c', '8ab87691-4c1d-5d93-a7a8-0e187cda96e0', 'Выберите профессиональный ответ', 'quiz', '{"question":"A caller asks for Maria, but she is busy. What do you say?","options":[{"id":"A","text":"She is not available right now.","is_correct":true},{"id":"B","text":"Can I leave a message?","is_correct":false},{"id":"C","text":"Hello, this is David from ABC Company.","is_correct":false}],"explanation":"“She is not available right now.” politely explains that Maria cannot talk.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -1937,14 +1725,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('2225737d-2c58-5c5c-bb7c-6779dd209c94', NULL, 'Используйте вежливый деловой английский: Телефонные звонки на работе', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь вести очень простые профессиональные телефонные разговоры.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('87817ffe-4559-5457-a817-9a2c6ece8b5a', '2225737d-2c58-5c5c-bb7c-6779dd209c94', 'Изучите язык рабочего общения', 'text', '{"body":"Use Polite Professional English: Phone Calls at Work. Workplace mission: Choose language appropriate for a simple workplace situation while practicing handling very simple professional telephone exchanges. Models: Can I leave a message? Hello, this is David from ABC Company. Can I speak to Maria, please?","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('5e590f73-7731-5350-9481-57af1c4bf22b', '2225737d-2c58-5c5c-bb7c-6779dd209c94', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"message","right":"сообщение"},{"id":"P2","left":"number","right":"номер, число"},{"id":"P3","left":"available","right":"свободен, доступен"},{"id":"P4","left":"sorry","right":"извините"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('10198fab-f5aa-52e7-a04e-d032ac46abf3', '2225737d-2c58-5c5c-bb7c-6779dd209c94', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"___ I leave a message?","correct_answer":"Can","options":["Can","message","number"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 2, NOW(), NOW())
@@ -2011,10 +1791,6 @@ VALUES ('1213bfea-0c09-589d-a4d4-e6580334bfa3', NULL, 'Используйте я
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('cc794409-f8bd-55c5-bb03-f881d9e8b207', '1213bfea-0c09-589d-a4d4-e6580334bfa3', 'Изучите язык рабочего общения', 'text', '{"body":"Use the Language in Context: Phone Calls at Work. Workplace mission: Apply the target language in a realistic work situation while practicing handling very simple professional telephone exchanges. Models: Can I speak to Maria, please? She is not available right now. Can I leave a message?","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('f0999e30-9adb-594e-91a5-851ac2034c66', '1213bfea-0c09-589d-a4d4-e6580334bfa3', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"___ I speak to Maria, please?","correct_answer":"Can","options":["Can","available","sorry"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -2045,10 +1821,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('7a96226c-0baa-5368-90c3-9dc0d7883efb', NULL, 'Проведите короткий диалог: Телефонные звонки на работе', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь вести очень простые профессиональные телефонные разговоры.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('83a83207-890b-5b98-a34f-495b5b050f7c', '7a96226c-0baa-5368-90c3-9dc0d7883efb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"sorry","right":"извините"},{"id":"P2","left":"hello","right":"привет, здравствуйте"},{"id":"P3","left":"later","right":"позже"},{"id":"P4","left":"thanks","right":"спасибо"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('32c22f2c-e2a3-5d52-9d83-c6db400be21a', '7a96226c-0baa-5368-90c3-9dc0d7883efb', 'Выберите профессиональный ответ', 'quiz', '{"question":"A caller asks for Maria, but she is busy. What do you say?","options":[{"id":"A","text":"She is not available right now.","is_correct":true},{"id":"B","text":"Can I leave a message?","is_correct":false},{"id":"C","text":"Hello, this is David from ABC Company.","is_correct":false}],"explanation":"“She is not available right now.” politely explains that Maria cannot talk.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
@@ -2083,10 +1855,6 @@ VALUES ('7b04aa8a-d0dc-521f-823e-61f514126d58', NULL, 'Работайте с м�
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('d3feccfe-f41a-5a49-9fe0-d14b7f975ff9', '7b04aa8a-d0dc-521f-823e-61f514126d58', 'Изучите язык рабочего общения', 'text', '{"body":"Work with Less Support: Phone Calls at Work. Workplace mission: Complete the business task with fewer hints while practicing handling very simple professional telephone exchanges. Models: Can I leave a message? Hello, this is David from ABC Company. Can I speak to Maria, please?","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('feef0db4-f31c-5f1c-9c8b-b85571ab99f3', '7b04aa8a-d0dc-521f-823e-61f514126d58', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"Can I leave a message?","word_bank":["Can","I","leave","a","message","later"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -2119,10 +1887,6 @@ VALUES ('5c2804d7-b6e9-51d7-a1b7-232d933746c6', NULL, 'Рабочее задан
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a995d9f6-ed90-56ec-bcd5-a6c777281c74', '5c2804d7-b6e9-51d7-a1b7-232d933746c6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"later","right":"позже"},{"id":"P2","left":"thanks","right":"спасибо"},{"id":"P3","left":"call","right":"звонок, звонить"},{"id":"P4","left":"phone","right":"телефон"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('aea0d56d-c19f-51a0-a045-d7b5e663d666', '5c2804d7-b6e9-51d7-a1b7-232d933746c6', 'Выберите профессиональный ответ', 'quiz', '{"question":"You are calling a business partner and need to introduce yourself on the phone. What do you say?","options":[{"id":"A","text":"Hello, this is David from ABC Company.","is_correct":true},{"id":"B","text":"Can I speak to Maria, please?","is_correct":false},{"id":"C","text":"She is not available right now.","is_correct":false}],"explanation":"“Hello, this is David from ABC Company.” is a standard phone introduction.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -2153,10 +1917,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('bffaac9f-95d8-55ae-b94a-9dc266aed170', NULL, 'Итоговая деловая миссия трека: Телефонные звонки на работе', 'Выполнить практическую рабочую миссию для начинающих, тренируясь вести очень простые профессиональные телефонные разговоры.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('d778cbd3-3d49-5328-9f81-8eaa368af85f', 'bffaac9f-95d8-55ae-b94a-9dc266aed170', 'Изучите язык рабочего общения', 'text', '{"body":"Track Business Mission: Phone Calls at Work. Workplace mission: Complete a practical beginner workplace mission while practicing handling very simple professional telephone exchanges. Models: Can I speak to Maria, please? She is not available right now. Can I leave a message?","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('ef320ae0-fb48-5e83-b4d4-d6f15de58ad0', 'bffaac9f-95d8-55ae-b94a-9dc266aed170', 'Выберите профессиональный ответ', 'quiz', '{"question":"You call the office and want to talk to Maria. What do you say?","options":[{"id":"A","text":"Can I speak to Maria, please?","is_correct":true},{"id":"B","text":"She is not available right now.","is_correct":false},{"id":"C","text":"Can I leave a message?","is_correct":false}],"explanation":"“Can I speak to Maria, please?” is the polite way to ask for someone on the phone.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
@@ -2195,11 +1955,7 @@ VALUES ('40eee8fe-caad-5cbb-8847-57f8fc2cc099', NULL, 'Изучите рабоч
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('ea2da36f-6ca3-5d8d-b05b-ac1615fb8651', '40eee8fe-caad-5cbb-8847-57f8fc2cc099', 'Изучите язык рабочего общения', 'text', '{"body":"Learn the Workplace Language: Emails and Short Messages. Workplace mission: Recognize the key workplace words and phrases while practicing reading and writing very short workplace emails and messages. Models: Please send me the file. The meeting is tomorrow at ten. Thanks for your email.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('a6f92631-4818-5483-86c3-b47ecb984ab6', '40eee8fe-caad-5cbb-8847-57f8fc2cc099', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"email","right":"электронное письмо"},{"id":"P2","left":"message","right":"сообщение"},{"id":"P3","left":"subject","right":"тема"},{"id":"P4","left":"send","right":"отправлять"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('a6f92631-4818-5483-86c3-b47ecb984ab6', '40eee8fe-caad-5cbb-8847-57f8fc2cc099', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"email","right":"электронное письмо"},{"id":"P2","left":"message","right":"сообщение"},{"id":"P3","left":"subject","right":"тема"},{"id":"P4","left":"send","right":"отправлять"},{"id":"P5","left":"reply","right":"ответ"},{"id":"P6","left":"please","right":"пожалуйста"},{"id":"P7","left":"thanks","right":"спасибо"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2229,10 +1985,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('987355eb-107f-58c7-9cde-6583000e535a', NULL, 'Составьте основное предложение: Письма и короткие сообщения', 'Составлять полезное простое деловое предложение, тренируясь читать и писать очень короткие рабочие письма и сообщения.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('96880892-0390-5dc6-a8b5-177237b07232', '987355eb-107f-58c7-9cde-6583000e535a', 'Изучите язык рабочего общения', 'text', '{"body":"Build the Core Sentence: Emails and Short Messages. Workplace mission: Produce a useful basic business sentence while practicing reading and writing very short workplace emails and messages. Models: The meeting is tomorrow at ten. Thanks for your email. I will reply today.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('87c9c5b2-11ed-5420-b8af-a508aed8585f', '987355eb-107f-58c7-9cde-6583000e535a', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"The meeting is tomorrow at ten.","word_bank":["The","meeting","is","tomorrow","at","ten","subject"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
@@ -2267,10 +2019,6 @@ VALUES ('429be802-5bae-5c8c-aa81-9ae17ea76b79', NULL, 'Прослушайте р
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('fe3bac4f-8cbf-51d1-a35c-4639b603a2dd', '429be802-5bae-5c8c-aa81-9ae17ea76b79', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"subject","right":"тема"},{"id":"P2","left":"send","right":"отправлять"},{"id":"P3","left":"reply","right":"ответ"},{"id":"P4","left":"please","right":"пожалуйста"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('6011052e-0e86-5762-abcd-7a5218542cae', '429be802-5bae-5c8c-aa81-9ae17ea76b79', 'Выберите профессиональный ответ', 'quiz', '{"question":"You received an email from a colleague and want to reply politely. How do you start?","options":[{"id":"A","text":"Thanks for your email.","is_correct":true},{"id":"B","text":"I will reply today.","is_correct":false},{"id":"C","text":"Please send me the file.","is_correct":false}],"explanation":"“Thanks for your email.” is a polite way to start a reply.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -2301,14 +2049,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('ebe1242e-9183-5b7d-bd1b-e3f4a684671a', NULL, 'Используйте вежливый деловой английский: Письма и короткие сообщения', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь читать и писать очень короткие рабочие письма и сообщения.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('005f14f3-50cb-5483-a4ea-97185f05cfb3', 'ebe1242e-9183-5b7d-bd1b-e3f4a684671a', 'Изучите язык рабочего общения', 'text', '{"body":"Use Polite Professional English: Emails and Short Messages. Workplace mission: Choose language appropriate for a simple workplace situation while practicing reading and writing very short workplace emails and messages. Models: I will reply today. Please send me the file. The meeting is tomorrow at ten.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('ca230a22-0dc6-53ca-b222-2361c2d5247a', 'ebe1242e-9183-5b7d-bd1b-e3f4a684671a', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"send","right":"отправлять"},{"id":"P2","left":"reply","right":"ответ"},{"id":"P3","left":"please","right":"пожалуйста"},{"id":"P4","left":"thanks","right":"спасибо"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('cde9b033-10c7-5f72-a329-6c04751b5a70', 'ebe1242e-9183-5b7d-bd1b-e3f4a684671a', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"I ___ reply today.","correct_answer":"will","options":["will","send","reply"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 2, NOW(), NOW())
@@ -2375,10 +2115,6 @@ VALUES ('bca0d895-f6e4-560a-a994-0207caec7ec9', NULL, 'Используйте я
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('67b66f5e-1816-52df-acf7-5af7957461df', 'bca0d895-f6e4-560a-a994-0207caec7ec9', 'Изучите язык рабочего общения', 'text', '{"body":"Use the Language in Context: Emails and Short Messages. Workplace mission: Apply the target language in a realistic work situation while practicing reading and writing very short workplace emails and messages. Models: The meeting is tomorrow at ten. Thanks for your email. I will reply today.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('40659180-31dc-526f-a257-8d7f8a6359d2', 'bca0d895-f6e4-560a-a994-0207caec7ec9', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"___ meeting is tomorrow at ten.","correct_answer":"The","options":["The","please","thanks"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -2409,10 +2145,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('4409af6f-fcbb-5dd4-ad79-3b77d4e6f9a6', NULL, 'Проведите короткий диалог: Письма и короткие сообщения', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь читать и писать очень короткие рабочие письма и сообщения.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('f6fc6a2f-5a54-5995-9686-9a2bd34af8e8', '4409af6f-fcbb-5dd4-ad79-3b77d4e6f9a6', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"thanks","right":"спасибо"},{"id":"P2","left":"today","right":"сегодня"},{"id":"P3","left":"tomorrow","right":"завтра"},{"id":"P4","left":"meeting","right":"встреча, совещание"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('a88a1c00-71c4-5e77-8792-a919932494e9', '4409af6f-fcbb-5dd4-ad79-3b77d4e6f9a6', 'Выберите профессиональный ответ', 'quiz', '{"question":"You received an email from a colleague and want to reply politely. How do you start?","options":[{"id":"A","text":"Thanks for your email.","is_correct":true},{"id":"B","text":"I will reply today.","is_correct":false},{"id":"C","text":"Please send me the file.","is_correct":false}],"explanation":"“Thanks for your email.” is a polite way to start a reply.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
@@ -2447,10 +2179,6 @@ VALUES ('c6dd46b9-c52f-5e8f-97a8-0e94e89d05ec', NULL, 'Работайте с м�
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('b055095f-3cfe-51a6-9b14-e584052bc2a2', 'c6dd46b9-c52f-5e8f-97a8-0e94e89d05ec', 'Изучите язык рабочего общения', 'text', '{"body":"Work with Less Support: Emails and Short Messages. Workplace mission: Complete the business task with fewer hints while practicing reading and writing very short workplace emails and messages. Models: I will reply today. Please send me the file. The meeting is tomorrow at ten.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('79345dc4-27a5-5cc9-a064-e937e25f2f8b', 'c6dd46b9-c52f-5e8f-97a8-0e94e89d05ec', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"I will reply today.","word_bank":["I","will","reply","today","tomorrow"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -2483,10 +2211,6 @@ VALUES ('05cbb2d0-27a9-56ae-909b-2c34e6e62469', NULL, 'Рабочее задан
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('b488f029-c5b7-5aac-8b4b-689d83558699', '05cbb2d0-27a9-56ae-909b-2c34e6e62469', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"tomorrow","right":"завтра"},{"id":"P2","left":"meeting","right":"встреча, совещание"},{"id":"P3","left":"email","right":"электронное письмо"},{"id":"P4","left":"message","right":"сообщение"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('84a8602d-ac7e-5cf9-8835-4f3e34c416ff', '05cbb2d0-27a9-56ae-909b-2c34e6e62469', 'Выберите профессиональный ответ', 'quiz', '{"question":"You need a colleague to send you a document by email. What do you write?","options":[{"id":"A","text":"Please send me the file.","is_correct":true},{"id":"B","text":"The meeting is tomorrow at ten.","is_correct":false},{"id":"C","text":"Thanks for your email.","is_correct":false}],"explanation":"“Please send me the file.” is a clear, polite email request.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -2517,10 +2241,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('f45ab034-c043-5958-9b45-5ef5ee43c8aa', NULL, 'Итоговая деловая миссия трека: Письма и короткие сообщения', 'Выполнить практическую рабочую миссию для начинающих, тренируясь читать и писать очень короткие рабочие письма и сообщения.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('344ac461-2ad6-5c79-8d7e-09bd1cd40c7c', 'f45ab034-c043-5958-9b45-5ef5ee43c8aa', 'Изучите язык рабочего общения', 'text', '{"body":"Track Business Mission: Emails and Short Messages. Workplace mission: Complete a practical beginner workplace mission while practicing reading and writing very short workplace emails and messages. Models: The meeting is tomorrow at ten. Thanks for your email. I will reply today.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('c029fa05-ee4c-5afa-9992-1e2f1410fd6f', 'f45ab034-c043-5958-9b45-5ef5ee43c8aa', 'Выберите профессиональный ответ', 'quiz', '{"question":"You are writing an email to remind a colleague about the meeting time. What do you write?","options":[{"id":"A","text":"The meeting is tomorrow at ten.","is_correct":true},{"id":"B","text":"Thanks for your email.","is_correct":false},{"id":"C","text":"I will reply today.","is_correct":false}],"explanation":"“The meeting is tomorrow at ten.” gives the exact meeting time.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
@@ -2559,11 +2279,7 @@ VALUES ('9a5b4bef-1dc3-52aa-9841-e16d7ad195c5', NULL, 'Изучите рабоч
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('ce1bd306-c40b-5dcc-8ae6-2113557a9001', '9a5b4bef-1dc3-52aa-9841-e16d7ad195c5', 'Изучите язык рабочего общения', 'text', '{"body":"Learn the Workplace Language: Meetings: Basic Language. Workplace mission: Recognize the key workplace words and phrases while practicing understanding and using simple language before and during a meeting. Models: The meeting starts at ten. We are in Meeting Room Two. I have a question.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('40d46a4d-85c8-571f-b04c-4acb838e74a1', '9a5b4bef-1dc3-52aa-9841-e16d7ad195c5', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"meeting","right":"встреча, совещание"},{"id":"P2","left":"start","right":"начинать"},{"id":"P3","left":"time","right":"время"},{"id":"P4","left":"room","right":"комната, помещение"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('40d46a4d-85c8-571f-b04c-4acb838e74a1', '9a5b4bef-1dc3-52aa-9841-e16d7ad195c5', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"meeting","right":"встреча, совещание"},{"id":"P2","left":"start","right":"начинать"},{"id":"P3","left":"time","right":"время"},{"id":"P4","left":"room","right":"комната, помещение"},{"id":"P5","left":"agenda","right":"план встречи"},{"id":"P6","left":"question","right":"вопрос"},{"id":"P7","left":"idea","right":"идея"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2593,10 +2309,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('9af364e0-fdbe-5133-9946-3093c1574838', NULL, 'Составьте основное предложение: Встречи: базовый язык', 'Составлять полезное простое деловое предложение, тренируясь понимать и использовать простой язык до и во время встречи.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('abb38ec5-6037-53cb-9230-72073477cfdb', '9af364e0-fdbe-5133-9946-3093c1574838', 'Изучите язык рабочего общения', 'text', '{"body":"Build the Core Sentence: Meetings: Basic Language. Workplace mission: Produce a useful basic business sentence while practicing understanding and using simple language before and during a meeting. Models: We are in Meeting Room Two. I have a question. Yes, I agree.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('cef1ebcd-1264-5814-917b-b7e976caaf3c', '9af364e0-fdbe-5133-9946-3093c1574838', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"We are in Meeting Room Two.","word_bank":["We","are","in","Meeting","Room","Two","time"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
@@ -2631,10 +2343,6 @@ VALUES ('ec4ee030-e9dc-54d6-8c39-30034322883f', NULL, 'Прослушайте р
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('c3880345-b1ea-52c7-a956-5b08f61fa6c7', 'ec4ee030-e9dc-54d6-8c39-30034322883f', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"time","right":"время"},{"id":"P2","left":"room","right":"комната, помещение"},{"id":"P3","left":"agenda","right":"план встречи"},{"id":"P4","left":"question","right":"вопрос"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('8266dac8-28ae-5eba-9578-a16ab73ed10f', 'ec4ee030-e9dc-54d6-8c39-30034322883f', 'Выберите профессиональный ответ', 'quiz', '{"question":"During a meeting, you want to ask something. What do you say first?","options":[{"id":"A","text":"I have a question.","is_correct":true},{"id":"B","text":"Yes, I agree.","is_correct":false},{"id":"C","text":"The meeting starts at ten.","is_correct":false}],"explanation":"“I have a question.” is the simple way to signal you want to ask something.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -2665,14 +2373,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('07a68bea-54c1-59ef-9ded-714a0053566f', NULL, 'Используйте вежливый деловой английский: Встречи: базовый язык', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь понимать и использовать простой язык до и во время встречи.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('f5595235-4bfc-58da-b519-e5b7c011c122', '07a68bea-54c1-59ef-9ded-714a0053566f', 'Изучите язык рабочего общения', 'text', '{"body":"Use Polite Professional English: Meetings: Basic Language. Workplace mission: Choose language appropriate for a simple workplace situation while practicing understanding and using simple language before and during a meeting. Models: Yes, I agree. The meeting starts at ten. We are in Meeting Room Two.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('204d5602-fedf-5766-a525-f68efa85a3b0', '07a68bea-54c1-59ef-9ded-714a0053566f', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"room","right":"комната, помещение"},{"id":"P2","left":"agenda","right":"план встречи"},{"id":"P3","left":"question","right":"вопрос"},{"id":"P4","left":"idea","right":"идея"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('8f929b83-039e-571a-b430-23a3ffb0d56e', '07a68bea-54c1-59ef-9ded-714a0053566f', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"___, I agree.","correct_answer":"Yes","options":["Yes","room","agenda"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 2, NOW(), NOW())
@@ -2739,10 +2439,6 @@ VALUES ('946caa42-1d62-55b0-bfba-590c7170e812', NULL, 'Используйте я
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('82ba1be0-50fa-53e2-b3c4-dfd466fa302a', '946caa42-1d62-55b0-bfba-590c7170e812', 'Изучите язык рабочего общения', 'text', '{"body":"Use the Language in Context: Meetings: Basic Language. Workplace mission: Apply the target language in a realistic work situation while practicing understanding and using simple language before and during a meeting. Models: We are in Meeting Room Two. I have a question. Yes, I agree.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('ea114636-d090-5f78-a504-3b78b66fc2ad', '946caa42-1d62-55b0-bfba-590c7170e812', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"We ___ in Meeting Room Two.","correct_answer":"are","options":["are","question","idea"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -2773,10 +2469,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('ac2b8198-afad-5b25-9289-b77909412a47', NULL, 'Проведите короткий диалог: Встречи: базовый язык', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь понимать и использовать простой язык до и во время встречи.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('95b4f79a-4a1e-55d2-938f-6dd4015aefee', 'ac2b8198-afad-5b25-9289-b77909412a47', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"idea","right":"идея"},{"id":"P2","left":"agree","right":"соглашаться"},{"id":"P3","left":"ready","right":"готовый"},{"id":"P4","left":"finish","right":"заканчивать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('686b266c-e9df-5892-8124-2663d7c11666', 'ac2b8198-afad-5b25-9289-b77909412a47', 'Выберите профессиональный ответ', 'quiz', '{"question":"During a meeting, you want to ask something. What do you say first?","options":[{"id":"A","text":"I have a question.","is_correct":true},{"id":"B","text":"Yes, I agree.","is_correct":false},{"id":"C","text":"The meeting starts at ten.","is_correct":false}],"explanation":"“I have a question.” is the simple way to signal you want to ask something.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
@@ -2811,10 +2503,6 @@ VALUES ('56fed937-cad0-579b-8cba-54645b6e5734', NULL, 'Работайте с м�
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('ee9eb44a-6c24-5dcf-9af7-0edd8cad2f1a', '56fed937-cad0-579b-8cba-54645b6e5734', 'Изучите язык рабочего общения', 'text', '{"body":"Work with Less Support: Meetings: Basic Language. Workplace mission: Complete the business task with fewer hints while practicing understanding and using simple language before and during a meeting. Models: Yes, I agree. The meeting starts at ten. We are in Meeting Room Two.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('f37251f7-0fc9-5efc-bc2e-04760fcf7c59', '56fed937-cad0-579b-8cba-54645b6e5734', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"Yes, I agree.","word_bank":["Yes","I","agree","ready"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -2847,10 +2535,6 @@ VALUES ('f4d38a49-f4e8-51cd-919b-b41e61090bbb', NULL, 'Рабочее задан
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('7ae1057c-aad1-522f-a3e9-c6660175f447', 'f4d38a49-f4e8-51cd-919b-b41e61090bbb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"ready","right":"готовый"},{"id":"P2","left":"finish","right":"заканчивать"},{"id":"P3","left":"meeting","right":"встреча, совещание"},{"id":"P4","left":"start","right":"начинать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('613c627f-1b3b-5130-85f3-62b6b8c4c8c2', 'f4d38a49-f4e8-51cd-919b-b41e61090bbb', 'Выберите профессиональный ответ', 'quiz', '{"question":"A colleague asks when the meeting starts. What do you answer?","options":[{"id":"A","text":"The meeting starts at ten.","is_correct":true},{"id":"B","text":"We are in Meeting Room Two.","is_correct":false},{"id":"C","text":"I have a question.","is_correct":false}],"explanation":"“The meeting starts at ten.” gives the exact start time.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -2881,10 +2565,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('49335d7f-a1f6-5230-8dd9-4bd2550f58e0', NULL, 'Итоговая деловая миссия трека: Встречи: базовый язык', 'Выполнить практическую рабочую миссию для начинающих, тренируясь понимать и использовать простой язык до и во время встречи.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('c0de574a-7343-5234-9cac-77a47fa0474a', '49335d7f-a1f6-5230-8dd9-4bd2550f58e0', 'Изучите язык рабочего общения', 'text', '{"body":"Track Business Mission: Meetings: Basic Language. Workplace mission: Complete a practical beginner workplace mission while practicing understanding and using simple language before and during a meeting. Models: We are in Meeting Room Two. I have a question. Yes, I agree.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('c41bc276-43ff-577a-8c42-5d5362a128a9', '49335d7f-a1f6-5230-8dd9-4bd2550f58e0', 'Выберите профессиональный ответ', 'quiz', '{"question":"A colleague asks where the meeting is. What do you answer?","options":[{"id":"A","text":"We are in Meeting Room Two.","is_correct":true},{"id":"B","text":"I have a question.","is_correct":false},{"id":"C","text":"Yes, I agree.","is_correct":false}],"explanation":"“We are in Meeting Room Two.” tells exactly where the meeting is.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
@@ -2923,11 +2603,7 @@ VALUES ('6f6d3c62-efab-5721-87cc-c64f781763cc', NULL, 'Изучите рабоч
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('b8e40dd1-b87b-5164-98bf-28042f4bccc6', '6f6d3c62-efab-5721-87cc-c64f781763cc', 'Изучите язык рабочего общения', 'text', '{"body":"Learn the Workplace Language: Customers and Simple Service. Workplace mission: Recognize the key workplace words and phrases while practicing using polite English in basic customer interactions. Models: How can I help you? What do you need? Your order is ready.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('cd8f06a0-c00c-50f3-926a-822833d2c4a1', '6f6d3c62-efab-5721-87cc-c64f781763cc', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"customer","right":"клиент"},{"id":"P2","left":"help","right":"помощь, помогать"},{"id":"P3","left":"need","right":"нужно, потребность"},{"id":"P4","left":"want","right":"хотеть"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('cd8f06a0-c00c-50f3-926a-822833d2c4a1', '6f6d3c62-efab-5721-87cc-c64f781763cc', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"customer","right":"клиент"},{"id":"P2","left":"help","right":"помощь, помогать"},{"id":"P3","left":"need","right":"нужно, потребность"},{"id":"P4","left":"want","right":"хотеть"},{"id":"P5","left":"price","right":"цена"},{"id":"P6","left":"order","right":"заказ"},{"id":"P7","left":"problem","right":"проблема"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -2957,10 +2633,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('ef5fbd38-e5b5-59e4-9777-3f57f08006d0', NULL, 'Составьте основное предложение: Клиенты и простое обслуживание', 'Составлять полезное простое деловое предложение, тренируясь вежливо общаться с клиентами в простых рабочих ситуациях.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('6e087dd8-aa31-5902-9f55-5a4f42739e71', 'ef5fbd38-e5b5-59e4-9777-3f57f08006d0', 'Изучите язык рабочего общения', 'text', '{"body":"Build the Core Sentence: Customers and Simple Service. Workplace mission: Produce a useful basic business sentence while practicing using polite English in basic customer interactions. Models: What do you need? Your order is ready. I am sorry about the problem.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('e3898ce2-5670-5053-b08b-7b47e98ee9f0', 'ef5fbd38-e5b5-59e4-9777-3f57f08006d0', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"What do you need?","word_bank":["What","do","you","need","need"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
@@ -2995,10 +2667,6 @@ VALUES ('a43510d7-5777-5bb3-8087-858562d6c118', NULL, 'Прослушайте р
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('db67355d-896c-5791-b8fe-4e60f10f32b2', 'a43510d7-5777-5bb3-8087-858562d6c118', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"need","right":"нужно, потребность"},{"id":"P2","left":"want","right":"хотеть"},{"id":"P3","left":"price","right":"цена"},{"id":"P4","left":"order","right":"заказ"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('416463b4-0585-509c-b5ea-5c6039b2db5e', 'a43510d7-5777-5bb3-8087-858562d6c118', 'Выберите профессиональный ответ', 'quiz', '{"question":"You need to tell a customer that their order is ready to collect. What do you say?","options":[{"id":"A","text":"Your order is ready.","is_correct":true},{"id":"B","text":"I am sorry about the problem.","is_correct":false},{"id":"C","text":"How can I help you?","is_correct":false}],"explanation":"“Your order is ready.” gives the customer clear, useful information.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -3029,14 +2697,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('689f9c94-215d-5222-80b5-511c0c18876d', NULL, 'Используйте вежливый деловой английский: Клиенты и простое обслуживание', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь вежливо общаться с клиентами в простых рабочих ситуациях.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('609fd54d-07db-590a-a61d-c26512187a53', '689f9c94-215d-5222-80b5-511c0c18876d', 'Изучите язык рабочего общения', 'text', '{"body":"Use Polite Professional English: Customers and Simple Service. Workplace mission: Choose language appropriate for a simple workplace situation while practicing using polite English in basic customer interactions. Models: I am sorry about the problem. How can I help you? What do you need?","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('e848a058-db3f-5b00-8ca1-8c4d5e73f9c8', '689f9c94-215d-5222-80b5-511c0c18876d', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"want","right":"хотеть"},{"id":"P2","left":"price","right":"цена"},{"id":"P3","left":"order","right":"заказ"},{"id":"P4","left":"problem","right":"проблема"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('7cd203ef-e30c-50d5-ab19-33e5fabc292a', '689f9c94-215d-5222-80b5-511c0c18876d', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"I am ___ about the problem.","correct_answer":"sorry","options":["sorry","want","price"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 2, NOW(), NOW())
@@ -3103,10 +2763,6 @@ VALUES ('ab4c5a9d-4de9-5b54-ad97-4ae3996cb819', NULL, 'Используйте я
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('8c07959f-1123-5c46-ac0d-c9d5429f2260', 'ab4c5a9d-4de9-5b54-ad97-4ae3996cb819', 'Изучите язык рабочего общения', 'text', '{"body":"Use the Language in Context: Customers and Simple Service. Workplace mission: Apply the target language in a realistic work situation while practicing using polite English in basic customer interactions. Models: What do you need? Your order is ready. I am sorry about the problem.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('082a476b-90f0-5372-8acf-89eecc5aff06', 'ab4c5a9d-4de9-5b54-ad97-4ae3996cb819', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"___ do you need?","correct_answer":"What","options":["What","order","problem"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -3137,10 +2793,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('25d12337-42b8-5a95-a7cc-164cf622ddcb', NULL, 'Проведите короткий диалог: Клиенты и простое обслуживание', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь вежливо общаться с клиентами в простых рабочих ситуациях.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('d11399dd-b179-55e9-9c1a-e776b0d947e5', '25d12337-42b8-5a95-a7cc-164cf622ddcb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"problem","right":"проблема"},{"id":"P2","left":"please","right":"пожалуйста"},{"id":"P3","left":"sorry","right":"извините"},{"id":"P4","left":"thank","right":"благодарить"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('52092811-465a-5a30-9498-3ee626af8856', '25d12337-42b8-5a95-a7cc-164cf622ddcb', 'Выберите профессиональный ответ', 'quiz', '{"question":"You need to tell a customer that their order is ready to collect. What do you say?","options":[{"id":"A","text":"Your order is ready.","is_correct":true},{"id":"B","text":"I am sorry about the problem.","is_correct":false},{"id":"C","text":"How can I help you?","is_correct":false}],"explanation":"“Your order is ready.” gives the customer clear, useful information.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
@@ -3175,10 +2827,6 @@ VALUES ('db8a9144-a8b6-5b8a-a2f9-40cac95944b5', NULL, 'Работайте с м�
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('4b5865a5-053b-54a4-a33e-2dc7f95a23b5', 'db8a9144-a8b6-5b8a-a2f9-40cac95944b5', 'Изучите язык рабочего общения', 'text', '{"body":"Work with Less Support: Customers and Simple Service. Workplace mission: Complete the business task with fewer hints while practicing using polite English in basic customer interactions. Models: I am sorry about the problem. How can I help you? What do you need?","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('e5d096ab-b1b5-5bf6-9be0-130829caa8eb', 'db8a9144-a8b6-5b8a-a2f9-40cac95944b5', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"I am sorry about the problem.","word_bank":["I","am","sorry","about","the","problem","sorry"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -3211,10 +2859,6 @@ VALUES ('276b273d-ae43-5027-85c8-f4cc91d48e5e', NULL, 'Рабочее задан
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('4c04fe26-f62c-58e7-8395-e01e2b665ddb', '276b273d-ae43-5027-85c8-f4cc91d48e5e', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"sorry","right":"извините"},{"id":"P2","left":"thank","right":"благодарить"},{"id":"P3","left":"customer","right":"клиент"},{"id":"P4","left":"help","right":"помощь, помогать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('05d5ab54-85ff-5afd-ae9a-5263e96a164c', '276b273d-ae43-5027-85c8-f4cc91d48e5e', 'Выберите профессиональный ответ', 'quiz', '{"question":"A customer walks up to you. What do you say to offer help?","options":[{"id":"A","text":"How can I help you?","is_correct":true},{"id":"B","text":"What do you need?","is_correct":false},{"id":"C","text":"Your order is ready.","is_correct":false}],"explanation":"“How can I help you?” is the standard polite greeting to a customer.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -3245,10 +2889,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('4a95f313-a9b8-505f-9281-b994ea547821', NULL, 'Итоговая деловая миссия трека: Клиенты и простое обслуживание', 'Выполнить практическую рабочую миссию для начинающих, тренируясь вежливо общаться с клиентами в простых рабочих ситуациях.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('261faaf6-4a46-5d51-9e43-edb7295c2b45', '4a95f313-a9b8-505f-9281-b994ea547821', 'Изучите язык рабочего общения', 'text', '{"body":"Track Business Mission: Customers and Simple Service. Workplace mission: Complete a practical beginner workplace mission while practicing using polite English in basic customer interactions. Models: What do you need? Your order is ready. I am sorry about the problem.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('e6bbd5fb-fbdf-5651-80de-e495cb9e0191', '4a95f313-a9b8-505f-9281-b994ea547821', 'Выберите профессиональный ответ', 'quiz', '{"question":"A customer looks like they need help, and you want to ask what they need. What do you say?","options":[{"id":"A","text":"What do you need?","is_correct":true},{"id":"B","text":"Your order is ready.","is_correct":false},{"id":"C","text":"I am sorry about the problem.","is_correct":false}],"explanation":"“What do you need?” is a simple way to ask a customer what they need.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
@@ -3287,11 +2927,7 @@ VALUES ('62c87325-7140-5348-b0ab-3ce2834563d4', NULL, 'Изучите рабоч
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('eba68bab-80f0-5385-b609-dc850b00892e', '62c87325-7140-5348-b0ab-3ce2834563d4', 'Изучите язык рабочего общения', 'text', '{"body":"Learn the Workplace Language: A1 Business English Foundation Mission. Workplace mission: Recognize the key workplace words and phrases while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language. Models: Hello, I am new to the team. Could you send me the file, please? The meeting starts at ten.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('6836e03f-fa9f-57e0-8efc-a16bbe452bd8', '62c87325-7140-5348-b0ab-3ce2834563d4', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"business","right":"бизнес"},{"id":"P2","left":"work","right":"работа, работать"},{"id":"P3","left":"team","right":"команда"},{"id":"P4","left":"email","right":"электронное письмо"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
+VALUES ('6836e03f-fa9f-57e0-8efc-a16bbe452bd8', '62c87325-7140-5348-b0ab-3ce2834563d4', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"business","right":"бизнес"},{"id":"P2","left":"work","right":"работа, работать"},{"id":"P3","left":"team","right":"команда"},{"id":"P4","left":"email","right":"электронное письмо"},{"id":"P5","left":"call","right":"звонок, звонить"},{"id":"P6","left":"meeting","right":"встреча, совещание"},{"id":"P7","left":"customer","right":"клиент"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
@@ -3321,10 +2957,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('ed8bac3b-5879-5022-8286-7e757385a291', NULL, 'Составьте основное предложение: Итоговая деловая миссия уровня A1', 'Составлять полезное простое деловое предложение, тренируясь объединять представления, распорядок, просьбы, звонки, сообщения, встречи и общение с клиентами.', 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('1fe30ebd-af0d-5107-8d8a-f437c85b1eee', 'ed8bac3b-5879-5022-8286-7e757385a291', 'Изучите язык рабочего общения', 'text', '{"body":"Build the Core Sentence: A1 Business English Foundation Mission. Workplace mission: Produce a useful basic business sentence while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language. Models: Could you send me the file, please? The meeting starts at ten. Thank you for your help.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('9ad6614e-18b7-5738-af2e-622db6e6f1d1', 'ed8bac3b-5879-5022-8286-7e757385a291', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"Could you send me the file, please?","word_bank":["Could","you","send","me","the","file","please","team"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
@@ -3359,10 +2991,6 @@ VALUES ('e816a5be-f55b-578f-af38-4084e65bfeeb', NULL, 'Прослушайте р
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('f8b33336-ee4d-53ca-8f93-18b830a37083', 'e816a5be-f55b-578f-af38-4084e65bfeeb', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"team","right":"команда"},{"id":"P2","left":"email","right":"электронное письмо"},{"id":"P3","left":"call","right":"звонок, звонить"},{"id":"P4","left":"meeting","right":"встреча, совещание"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('42dec6c9-b0b9-5c07-8eea-ab2ee497ceba', 'e816a5be-f55b-578f-af38-4084e65bfeeb', 'Выберите профессиональный ответ', 'quiz', '{"question":"A colleague asks when the meeting starts. What do you answer?","options":[{"id":"A","text":"The meeting starts at ten.","is_correct":true},{"id":"B","text":"Thank you for your help.","is_correct":false},{"id":"C","text":"Hello, I am new to the team.","is_correct":false}],"explanation":"“The meeting starts at ten.” gives the exact start time.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -3393,14 +3021,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('b4fb89ae-1e99-54ed-82f1-ec75c42cd9ba', NULL, 'Используйте вежливый деловой английский: Итоговая деловая миссия уровня A1', 'Выбирать язык, подходящий для простой рабочей ситуации, тренируясь объединять представления, распорядок, просьбы, звонки, сообщения, встречи и общение с клиентами.', 3, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('fe47740a-23b3-57c0-8cf5-97b513cd8fb6', 'b4fb89ae-1e99-54ed-82f1-ec75c42cd9ba', 'Изучите язык рабочего общения', 'text', '{"body":"Use Polite Professional English: A1 Business English Foundation Mission. Workplace mission: Choose language appropriate for a simple workplace situation while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language. Models: Thank you for your help. Hello, I am new to the team. Could you send me the file, please?","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('2fb97026-6eb5-548d-b8ba-c6b8c6f8d53b', 'b4fb89ae-1e99-54ed-82f1-ec75c42cd9ba', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"email","right":"электронное письмо"},{"id":"P2","left":"call","right":"звонок, звонить"},{"id":"P3","left":"meeting","right":"встреча, совещание"},{"id":"P4","left":"customer","right":"клиент"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 1, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('019c4b57-513d-5265-8987-7cf11eaa6442', 'b4fb89ae-1e99-54ed-82f1-ec75c42cd9ba', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"___ you for your help.","correct_answer":"Thank","options":["Thank","email","call"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 2, NOW(), NOW())
@@ -3467,10 +3087,6 @@ VALUES ('15ff68cf-4f5e-5b3a-b0b4-77206a6045e5', NULL, 'Используйте я
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('79cb4081-6909-5e99-a258-e27fb2d2eb0b', '15ff68cf-4f5e-5b3a-b0b4-77206a6045e5', 'Изучите язык рабочего общения', 'text', '{"body":"Use the Language in Context: A1 Business English Foundation Mission. Workplace mission: Apply the target language in a realistic work situation while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language. Models: Could you send me the file, please? The meeting starts at ten. Thank you for your help.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('65ca20a3-efb2-5893-8a0f-514676eb8733', '15ff68cf-4f5e-5b3a-b0b4-77206a6045e5', 'Дополните рабочее предложение', 'fill_blank', '{"sentence_template":"___ you send me the file, please?","correct_answer":"Could","options":["Could","meeting","customer"],"instruction":"Выберите правильное пропущенное слово."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -3501,10 +3117,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('af745cd6-5e7c-5d2e-83ac-2925d776f1fe', NULL, 'Проведите короткий диалог: Итоговая деловая миссия уровня A1', 'Уместно отвечать в диалоге с коллегой на работе, тренируясь объединять представления, распорядок, просьбы, звонки, сообщения, встречи и общение с клиентами.', 6, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('2d793fe4-20ee-5708-ae92-e638711cb541', 'af745cd6-5e7c-5d2e-83ac-2925d776f1fe', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"customer","right":"клиент"},{"id":"P2","left":"request","right":"просьба, запрос"},{"id":"P3","left":"message","right":"сообщение"},{"id":"P4","left":"professional","right":"профессиональный"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('3ba897ef-3ab4-5c6b-aa3a-1f18e6f80bcb', 'af745cd6-5e7c-5d2e-83ac-2925d776f1fe', 'Выберите профессиональный ответ', 'quiz', '{"question":"A colleague asks when the meeting starts. What do you answer?","options":[{"id":"A","text":"The meeting starts at ten.","is_correct":true},{"id":"B","text":"Thank you for your help.","is_correct":false},{"id":"C","text":"Hello, I am new to the team.","is_correct":false}],"explanation":"“The meeting starts at ten.” gives the exact start time.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
@@ -3539,10 +3151,6 @@ VALUES ('f2f39aee-a3bd-5978-ae54-573976b8dd03', NULL, 'Работайте с м�
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('89fa50b3-7c09-5f7d-973a-acfae533af59', 'f2f39aee-a3bd-5978-ae54-573976b8dd03', 'Изучите язык рабочего общения', 'text', '{"body":"Work with Less Support: A1 Business English Foundation Mission. Workplace mission: Complete the business task with fewer hints while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language. Models: Thank you for your help. Hello, I am new to the team. Could you send me the file, please?","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('de031668-93bc-5f58-86f5-3f895ec2f661', 'f2f39aee-a3bd-5978-ae54-573976b8dd03', 'Составьте рабочую фразу', 'translate', '{"source_text":"Составьте подходящую английскую фразу для рабочей ситуации.","source_language":"ru","target_language":"en","correct_translation":"Thank you for your help.","word_bank":["Thank","you","for","your","help","message"],"instruction":"Составьте правильную английскую рабочую фразу."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -3575,10 +3183,6 @@ VALUES ('069f1752-3751-55c6-9066-83ed8f70ecef', NULL, 'Рабочее задан
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('4289308b-f42c-5e28-becf-8a73d7865bf9', '069f1752-3751-55c6-9066-83ed8f70ecef', 'Соедините рабочие слова', 'match_pairs', '{"pairs":[{"id":"P1","left":"message","right":"сообщение"},{"id":"P2","left":"professional","right":"профессиональный"},{"id":"P3","left":"business","right":"бизнес"},{"id":"P4","left":"work","right":"работа, работать"}],"instruction":"Соедините рабочие слова с их значениями."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('728b77e7-c5f2-5f93-aa98-0219e3355611', '069f1752-3751-55c6-9066-83ed8f70ecef', 'Выберите профессиональный ответ', 'quiz', '{"question":"You meet a colleague on your first day and want to introduce yourself. What do you say?","options":[{"id":"A","text":"Hello, I am new to the team.","is_correct":true},{"id":"B","text":"Could you send me the file, please?","is_correct":false},{"id":"C","text":"The meeting starts at ten.","is_correct":false}],"explanation":"“Hello, I am new to the team.” introduces you and explains your situation.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
@@ -3609,10 +3213,6 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
 VALUES ('76cae3a7-7604-548b-940c-94848c6efc66', NULL, 'Итоговая деловая миссия трека: Итоговая деловая миссия уровня A1', 'Выполнить практическую рабочую миссию для начинающих, тренируясь объединять представления, распорядок, просьбы, звонки, сообщения, встречи и общение с клиентами.', 9, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, order_index = EXCLUDED.order_index, updated_at = NOW();
-
-INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
-VALUES ('8e7d715a-8621-5c79-be11-bd342c4197d0', '76cae3a7-7604-548b-940c-94848c6efc66', 'Изучите язык рабочего общения', 'text', '{"body":"Track Business Mission: A1 Business English Foundation Mission. Workplace mission: Complete a practical beginner workplace mission while practicing combining introductions, routines, requests, calls, messages, meetings, and customer language. Models: Could you send me the file, please? The meeting starts at ten. Thank you for your help.","reading_time_minutes":1,"instruction":"Изучите ключевые фразы и обратите внимание на их использование на работе."}'::jsonb, 0, NOW(), NOW())
-ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, type = EXCLUDED.type, content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();
 
 INSERT INTO courses.steps (id, lesson_id, title, type, content, order_index, created_at, updated_at)
 VALUES ('29c15a85-5e05-5ba5-8dd2-21f4df5d321a', '76cae3a7-7604-548b-940c-94848c6efc66', 'Выберите профессиональный ответ', 'quiz', '{"question":"You want to politely ask a colleague to send you a file. What do you say?","options":[{"id":"A","text":"Could you send me the file, please?","is_correct":true},{"id":"B","text":"The meeting starts at ten.","is_correct":false},{"id":"C","text":"Thank you for your help.","is_correct":false}],"explanation":"“Could you send me the file, please?” is a polite request for a file.","instruction":"Выберите ответ, который лучше всего подходит к рабочей ситуации."}'::jsonb, 1, NOW(), NOW())
