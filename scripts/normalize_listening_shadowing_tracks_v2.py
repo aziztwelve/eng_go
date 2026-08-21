@@ -2,13 +2,15 @@
 """Convert the listening/shadowing authoring package to track-import v2."""
 
 import json
+import os
 from copy import deepcopy
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-SOURCE = ROOT / "tracks" / "A1_LISTENING_SHADOWING_TRACKS_01_10_APP_ACTIVITIES_ONLY_COMBINED.json"
-OUTPUT = ROOT / "tracks" / "A1_LISTENING_SHADOWING_TRACKS_01_10_V2"
+SOURCE = ROOT / os.environ.get("TRACK_SOURCE", "tracks/A1_LISTENING_SHADOWING_TRACKS_01_10_APP_ACTIVITIES_ONLY_COMBINED.json")
+OUTPUT = ROOT / os.environ.get("TRACK_OUTPUT", "tracks/A1_LISTENING_SHADOWING_TRACKS_01_10_V2")
+TRACK_GOAL = os.environ.get("TRACK_GOAL", "listening_shadowing")
 
 DATA_KEYS = {
     "text": {"body", "reading_time_minutes"},
@@ -156,7 +158,7 @@ def convert(source_track):
         for item in lesson.get("target_language", {}).get("vocabulary", []):
             if item.get("word") and item["word"] not in track_words:
                 track_words.append(item["word"])
-    return {"schema_version": "lingoiq.track.v2", "track": {"code": source_track["track_id"], "title": localized(source_track["title"]), "description": localized(source_track["description"]), "target_language": "en", "native_language": "ru", "level": source_track["level"], "goal": "listening_shadowing", "track_type": "thematic"}, "lessons": [normalize_lesson(lesson, track_words) for lesson in source_track["lessons"]]}
+    return {"schema_version": "lingoiq.track.v2", "track": {"code": source_track["track_id"], "title": localized(source_track["title"]), "description": localized(source_track["description"]), "target_language": "en", "native_language": "ru", "level": source_track["level"], "goal": TRACK_GOAL, "track_type": "thematic"}, "lessons": [normalize_lesson(lesson, track_words) for lesson in source_track["lessons"]]}
 
 
 def main():

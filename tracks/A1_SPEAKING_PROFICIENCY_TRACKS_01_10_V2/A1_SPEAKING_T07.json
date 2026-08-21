@@ -1,0 +1,4086 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_SPEAKING_T07",
+    "title": {
+      "en": "Talking About Likes and Dislikes",
+      "ru": "Talking About Likes and Dislikes"
+    },
+    "description": {
+      "en": "An A1 Speaking Proficiency track focused on expressing simple preferences.",
+      "ru": "An A1 Speaking Proficiency track focused on expressing simple preferences."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "goal": "speaking",
+    "track_type": "thematic"
+  },
+  "lessons": [
+    {
+      "code": "A1_SPEAKING_T07_L01",
+      "order": 1,
+      "title": {
+        "en": "Key Words and First Phrases: Talking About Likes and Dislikes",
+        "ru": "Key Words and First Phrases: Talking About Likes and Dislikes"
+      },
+      "objective": {
+        "en": "Learn the essential speaking language to practice expressing simple preferences.",
+        "ru": "Learn the essential speaking language to practice expressing simple preferences."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T07_L01_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each speaking word with its meaning.",
+            "ru": "Соедините слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "like",
+                "right": "A simple speaking meaning of 'like'."
+              },
+              {
+                "id": "P2",
+                "left": "love",
+                "right": "A simple speaking meaning of 'love'."
+              },
+              {
+                "id": "P3",
+                "left": "enjoy",
+                "right": "A simple speaking meaning of 'enjoy'."
+              },
+              {
+                "id": "P4",
+                "left": "favorite",
+                "right": "A simple speaking meaning of 'favorite'."
+              },
+              {
+                "id": "P5",
+                "left": "prefer",
+                "right": "Listening word: prefer."
+              },
+              {
+                "id": "P6",
+                "left": "food",
+                "right": "Listening word: food."
+              },
+              {
+                "id": "P7",
+                "left": "music",
+                "right": "Listening word: music."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L01_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the speaking language",
+            "ru": "Изучите разговорный язык"
+          },
+          "instructions": {
+            "en": "Read the model phrases and notice how they work in conversation.",
+            "ru": "Прочитайте модельные фразы и обратите внимание, как они используются в разговоре."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Key Words and First Phrases: Talking About Likes and Dislikes. Speaking mission: Learn the essential speaking language to practice expressing simple preferences. Models: I like this song. My favorite food is rice. I prefer tea to coffee.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L01_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose what to say",
+            "ru": "Выберите, что сказать"
+          },
+          "instructions": {
+            "en": "Choose the best spoken response.",
+            "ru": "Выберите лучший устный ответ."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Learn the essential speaking language to practice expressing simple preferences.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I like this song.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "My favorite food is rice.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I prefer tea to coffee.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I like this song.” directly supports the speaking mission."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L01_TRANSLATE_08",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I like this song.",
+            "word_bank": [
+              "I",
+              "like",
+              "this",
+              "song"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L01_FILL_BLANK_09",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ song.",
+            "correct_answer": "I",
+            "options": [
+              "I",
+              "like",
+              "love"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L01_TAP_WORDS_10",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I like this song.",
+            "word_bank": [
+              "song",
+              "this",
+              "like",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "like",
+              "this",
+              "song"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L01_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen to the model",
+            "ru": "Послушайте образец"
+          },
+          "instructions": {
+            "en": "Listen and type what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I like this song.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L01_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "My favorite food is rice.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Learn the essential speaking language to practice expressing simple preferences."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L01_STORY_11",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Key Words and First Phrases: Talking About Likes and Dislikes",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "I like this song."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "I like this song.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L01_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "like",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple speaking meaning of 'like'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple speaking meaning of 'love'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple speaking meaning of 'enjoy'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple speaking meaning of 'favorite'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "like: A simple speaking meaning of 'like'."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L01_LISTEN_CHOOSE_WORD_12",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ song.",
+            "audio_text": "I like this song.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "I",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "like",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L01_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ listening practice.",
+            "correct_answer": "am",
+            "hint_prefix": "am",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L01_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "like",
+                "text": "like"
+              },
+              {
+                "id": "V2",
+                "audio_text": "love",
+                "text": "love"
+              },
+              {
+                "id": "V3",
+                "audio_text": "enjoy",
+                "text": "enjoy"
+              },
+              {
+                "id": "V4",
+                "audio_text": "favorite",
+                "text": "favorite"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T07_L02",
+      "order": 2,
+      "title": {
+        "en": "Build Simple Sentences: Talking About Likes and Dislikes",
+        "ru": "Build Simple Sentences: Talking About Likes and Dislikes"
+      },
+      "objective": {
+        "en": "Build useful spoken sentences to practice expressing simple preferences.",
+        "ru": "Build useful spoken sentences to practice expressing simple preferences."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T07_L02_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "love",
+                "right": "Listening word: love."
+              },
+              {
+                "id": "P2",
+                "left": "enjoy",
+                "right": "Listening word: enjoy."
+              },
+              {
+                "id": "P3",
+                "left": "favorite",
+                "right": "Listening word: favorite."
+              },
+              {
+                "id": "P4",
+                "left": "prefer",
+                "right": "Listening word: prefer."
+              },
+              {
+                "id": "P5",
+                "left": "food",
+                "right": "Listening word: food."
+              },
+              {
+                "id": "P6",
+                "left": "like",
+                "right": "Listening word: like."
+              },
+              {
+                "id": "P7",
+                "left": "music",
+                "right": "Listening word: music."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L02_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the speaking language",
+            "ru": "Изучите разговорный язык"
+          },
+          "instructions": {
+            "en": "Read the model phrases and notice how they work in conversation.",
+            "ru": "Прочитайте модельные фразы и обратите внимание, как они используются в разговоре."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Build Simple Sentences: Talking About Likes and Dislikes. Speaking mission: Build useful spoken sentences to practice expressing simple preferences. Models: My favorite food is rice. I prefer tea to coffee. I like it because it is interesting.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L02_QUIZ_09",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: My favorite food is rice.",
+            "options": [
+              {
+                "id": "A",
+                "text": "My",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "love",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "enjoy",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L02_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Build the English phrase",
+            "ru": "Составьте английскую фразу"
+          },
+          "instructions": {
+            "en": "Build the spoken English phrase.",
+            "ru": "Составьте разговорную английскую фразу."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Переведите целевую фразу на английский.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "My favorite food is rice.",
+            "word_bank": [
+              "My",
+              "favorite",
+              "food",
+              "is",
+              "rice",
+              "enjoy"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L02_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the phrase",
+            "ru": "Завершите фразу"
+          },
+          "instructions": {
+            "en": "Choose the missing word.",
+            "ru": "Выберите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "My ___ food is rice.",
+            "correct_answer": "favorite",
+            "options": [
+              "favorite",
+              "love",
+              "enjoy"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L02_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in natural spoken order.",
+            "ru": "Расставьте слова в естественном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "rice",
+              "is",
+              "food",
+              "favorite",
+              "My"
+            ],
+            "correct_words": [
+              "My",
+              "favorite",
+              "food",
+              "is",
+              "rice"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L02_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen to the model",
+            "ru": "Послушайте образец"
+          },
+          "instructions": {
+            "en": "Listen and type what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "My favorite food is rice.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L02_LISTENING_SHADOWING_10",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "My favorite food is rice.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L02_STORY_11",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Build Simple Sentences: Talking About Likes and Dislikes",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "My favorite food is rice."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "My favorite food is rice.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L02_CHOOSE_DEFINITION_12",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "love",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'love'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L02_LISTEN_CHOOSE_WORD_13",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ rice.",
+            "audio_text": "My favorite food is rice.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "My",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "love",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L02_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Впишите слово"
+          },
+          "instructions": {
+            "en": "Type the missing word.",
+            "ru": "Впишите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "My ___ food is rice.",
+            "correct_answer": "favorite",
+            "hint_prefix": "fa",
+            "explanation": "The missing word is favorite."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L02_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "love",
+                "text": "love"
+              },
+              {
+                "id": "V2",
+                "audio_text": "enjoy",
+                "text": "enjoy"
+              },
+              {
+                "id": "V3",
+                "audio_text": "favorite",
+                "text": "favorite"
+              },
+              {
+                "id": "V4",
+                "audio_text": "prefer",
+                "text": "prefer"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T07_L03",
+      "order": 3,
+      "title": {
+        "en": "Ask and Answer: Talking About Likes and Dislikes",
+        "ru": "Ask and Answer: Talking About Likes and Dislikes"
+      },
+      "objective": {
+        "en": "Ask and answer a simple question to practice expressing simple preferences.",
+        "ru": "Ask and answer a simple question to practice expressing simple preferences."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T07_L03_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each speaking word with its meaning.",
+            "ru": "Соедините слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "enjoy",
+                "right": "A simple speaking meaning of 'enjoy'."
+              },
+              {
+                "id": "P2",
+                "left": "favorite",
+                "right": "A simple speaking meaning of 'favorite'."
+              },
+              {
+                "id": "P3",
+                "left": "prefer",
+                "right": "A simple speaking meaning of 'prefer'."
+              },
+              {
+                "id": "P4",
+                "left": "food",
+                "right": "A simple speaking meaning of 'food'."
+              },
+              {
+                "id": "P5",
+                "left": "music",
+                "right": "Listening word: music."
+              },
+              {
+                "id": "P6",
+                "left": "like",
+                "right": "Listening word: like."
+              },
+              {
+                "id": "P7",
+                "left": "love",
+                "right": "Listening word: love."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L03_TEXT_08",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: I prefer tea to coffee.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L03_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose what to say",
+            "ru": "Выберите, что сказать"
+          },
+          "instructions": {
+            "en": "Choose the best spoken response.",
+            "ru": "Выберите лучший устный ответ."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Ask and answer a simple question to practice expressing simple preferences.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I prefer tea to coffee.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I like it because it is interesting.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I like this song.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I prefer tea to coffee.” directly supports the speaking mission."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L03_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I prefer tea to coffee.",
+            "word_bank": [
+              "I",
+              "prefer",
+              "tea",
+              "to",
+              "coffee"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L03_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ coffee.",
+            "correct_answer": "I",
+            "options": [
+              "I",
+              "enjoy",
+              "favorite"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L03_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in natural spoken order.",
+            "ru": "Расставьте слова в естественном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "coffee",
+              "to",
+              "tea",
+              "prefer",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "prefer",
+              "tea",
+              "to",
+              "coffee"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L03_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I prefer tea to coffee.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L03_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I like it because it is interesting.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Ask and answer a simple question to practice expressing simple preferences."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L03_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Speaking situation",
+            "ru": "Разговорная ситуация"
+          },
+          "instructions": {
+            "en": "Read the situation and choose what you would say.",
+            "ru": "Прочитайте ситуацию и выберите, что вы скажете."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Ask and Answer: Talking About Likes and Dislikes",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Conversation Partner",
+                "text": "I prefer tea to coffee."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "I like it because it is interesting.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I like this song.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L03_CHOOSE_DEFINITION_12",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "enjoy",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'enjoy'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L03_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Послушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I ___ tea to coffee.",
+            "audio_text": "I prefer tea to coffee.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "prefer",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "enjoy",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "favorite",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is prefer."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L03_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ listening practice.",
+            "correct_answer": "am",
+            "hint_prefix": "am",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L03_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "enjoy",
+                "text": "enjoy"
+              },
+              {
+                "id": "V2",
+                "audio_text": "favorite",
+                "text": "favorite"
+              },
+              {
+                "id": "V3",
+                "audio_text": "prefer",
+                "text": "prefer"
+              },
+              {
+                "id": "V4",
+                "audio_text": "food",
+                "text": "food"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T07_L04",
+      "order": 4,
+      "title": {
+        "en": "Listen and Respond: Talking About Likes and Dislikes",
+        "ru": "Listen and Respond: Talking About Likes and Dislikes"
+      },
+      "objective": {
+        "en": "Understand and respond to a short exchange to practice expressing simple preferences.",
+        "ru": "Understand and respond to a short exchange to practice expressing simple preferences."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T07_L04_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each speaking word with its meaning.",
+            "ru": "Соедините слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "favorite",
+                "right": "A simple speaking meaning of 'favorite'."
+              },
+              {
+                "id": "P2",
+                "left": "prefer",
+                "right": "A simple speaking meaning of 'prefer'."
+              },
+              {
+                "id": "P3",
+                "left": "food",
+                "right": "A simple speaking meaning of 'food'."
+              },
+              {
+                "id": "P4",
+                "left": "music",
+                "right": "A simple speaking meaning of 'music'."
+              },
+              {
+                "id": "P5",
+                "left": "movie",
+                "right": "Listening word: movie."
+              },
+              {
+                "id": "P6",
+                "left": "like",
+                "right": "Listening word: like."
+              },
+              {
+                "id": "P7",
+                "left": "love",
+                "right": "Listening word: love."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L04_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the speaking language",
+            "ru": "Изучите разговорный язык"
+          },
+          "instructions": {
+            "en": "Read the model phrases and notice how they work in conversation.",
+            "ru": "Прочитайте модельные фразы и обратите внимание, как они используются в разговоре."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and Respond: Talking About Likes and Dislikes. Speaking mission: Understand and respond to a short exchange to practice expressing simple preferences. Models: I like it because it is interesting. I like this song. My favorite food is rice.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L04_QUIZ_08",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: I like it because it is interesting.",
+            "options": [
+              {
+                "id": "A",
+                "text": "like",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "favorite",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "prefer",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L04_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I like it because it is interesting.",
+            "word_bank": [
+              "I",
+              "like",
+              "it",
+              "because",
+              "it",
+              "is",
+              "interesting"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L04_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the phrase",
+            "ru": "Завершите фразу"
+          },
+          "instructions": {
+            "en": "Choose the missing word.",
+            "ru": "Выберите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ it because it is interesting.",
+            "correct_answer": "like",
+            "options": [
+              "like",
+              "favorite",
+              "prefer"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L04_TAP_WORDS_10",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I like it because it is interesting.",
+            "word_bank": [
+              "interesting",
+              "is",
+              "it",
+              "because",
+              "it",
+              "like",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "like",
+              "it",
+              "because",
+              "it",
+              "is",
+              "interesting"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L04_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen to the model",
+            "ru": "Послушайте образец"
+          },
+          "instructions": {
+            "en": "Listen and type what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I like it because it is interesting.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L04_LISTENING_SHADOWING_11",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I like it because it is interesting.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L04_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Listen and Respond: Talking About Likes and Dislikes",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "I like it because it is interesting."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "I like it because it is interesting.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L04_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "favorite",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple speaking meaning of 'favorite'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple speaking meaning of 'prefer'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple speaking meaning of 'food'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple speaking meaning of 'music'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "favorite: A simple speaking meaning of 'favorite'."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L04_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Послушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I ___ it because it is interesting.",
+            "audio_text": "I like it because it is interesting.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "like",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "favorite",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "prefer",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is like."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L04_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ listening practice.",
+            "correct_answer": "am",
+            "hint_prefix": "am",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L04_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "favorite",
+                "text": "favorite"
+              },
+              {
+                "id": "V2",
+                "audio_text": "prefer",
+                "text": "prefer"
+              },
+              {
+                "id": "V3",
+                "audio_text": "food",
+                "text": "food"
+              },
+              {
+                "id": "V4",
+                "audio_text": "music",
+                "text": "music"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T07_L05",
+      "order": 5,
+      "title": {
+        "en": "Speak Clearly: Talking About Likes and Dislikes",
+        "ru": "Speak Clearly: Talking About Likes and Dislikes"
+      },
+      "objective": {
+        "en": "Say the target phrases clearly to practice expressing simple preferences.",
+        "ru": "Say the target phrases clearly to practice expressing simple preferences."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T07_L05_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "prefer",
+                "right": "Listening word: prefer."
+              },
+              {
+                "id": "P2",
+                "left": "food",
+                "right": "Listening word: food."
+              },
+              {
+                "id": "P3",
+                "left": "music",
+                "right": "Listening word: music."
+              },
+              {
+                "id": "P4",
+                "left": "movie",
+                "right": "Listening word: movie."
+              },
+              {
+                "id": "P5",
+                "left": "sport",
+                "right": "Listening word: sport."
+              },
+              {
+                "id": "P6",
+                "left": "like",
+                "right": "Listening word: like."
+              },
+              {
+                "id": "P7",
+                "left": "love",
+                "right": "Listening word: love."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L05_TEXT_09",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: I like this song.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L05_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose what to say",
+            "ru": "Выберите, что сказать"
+          },
+          "instructions": {
+            "en": "Choose the best spoken response.",
+            "ru": "Выберите лучший устный ответ."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Say the target phrases clearly to practice expressing simple preferences.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I like this song.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "My favorite food is rice.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I prefer tea to coffee.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I like this song.” directly supports the speaking mission."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L05_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Build the English phrase",
+            "ru": "Составьте английскую фразу"
+          },
+          "instructions": {
+            "en": "Build the spoken English phrase.",
+            "ru": "Составьте разговорную английскую фразу."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Переведите целевую фразу на английский.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I like this song.",
+            "word_bank": [
+              "I",
+              "like",
+              "this",
+              "song",
+              "food"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L05_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ song.",
+            "correct_answer": "I",
+            "options": [
+              "I",
+              "prefer",
+              "food"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L05_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in natural spoken order.",
+            "ru": "Расставьте слова в естественном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "song",
+              "this",
+              "like",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "like",
+              "this",
+              "song"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L05_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I like this song.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L05_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "My favorite food is rice.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Say the target phrases clearly to practice expressing simple preferences."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L05_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Speak Clearly: Talking About Likes and Dislikes",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "I like this song."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "I like this song.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L05_CHOOSE_DEFINITION_13",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "prefer",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'prefer'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L05_LISTEN_CHOOSE_WORD_14",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ song.",
+            "audio_text": "I like this song.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "I",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "prefer",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L05_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Впишите слово"
+          },
+          "instructions": {
+            "en": "Type the missing word.",
+            "ru": "Впишите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ this song.",
+            "correct_answer": "like",
+            "hint_prefix": "li",
+            "explanation": "The missing word is like."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L05_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match sound and word",
+            "ru": "Соедините звук и слово"
+          },
+          "instructions": {
+            "en": "Listen and match each word to its spelling.",
+            "ru": "Прослушайте и соедините слово с написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "prefer",
+                "text": "prefer"
+              },
+              {
+                "id": "V2",
+                "audio_text": "food",
+                "text": "food"
+              },
+              {
+                "id": "V3",
+                "audio_text": "music",
+                "text": "music"
+              },
+              {
+                "id": "V4",
+                "audio_text": "movie",
+                "text": "movie"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T07_L06",
+      "order": 6,
+      "title": {
+        "en": "Use It in Context: Talking About Likes and Dislikes",
+        "ru": "Use It in Context: Talking About Likes and Dislikes"
+      },
+      "objective": {
+        "en": "Use the language in a realistic conversation to practice expressing simple preferences.",
+        "ru": "Use the language in a realistic conversation to practice expressing simple preferences."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T07_L06_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "food",
+                "right": "Listening word: food."
+              },
+              {
+                "id": "P2",
+                "left": "music",
+                "right": "Listening word: music."
+              },
+              {
+                "id": "P3",
+                "left": "movie",
+                "right": "Listening word: movie."
+              },
+              {
+                "id": "P4",
+                "left": "sport",
+                "right": "Listening word: sport."
+              },
+              {
+                "id": "P5",
+                "left": "because",
+                "right": "Listening word: because."
+              },
+              {
+                "id": "P6",
+                "left": "like",
+                "right": "Listening word: like."
+              },
+              {
+                "id": "P7",
+                "left": "love",
+                "right": "Listening word: love."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L06_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the speaking language",
+            "ru": "Изучите разговорный язык"
+          },
+          "instructions": {
+            "en": "Read the model phrases and notice how they work in conversation.",
+            "ru": "Прочитайте модельные фразы и обратите внимание, как они используются в разговоре."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Use It in Context: Talking About Likes and Dislikes. Speaking mission: Use the language in a realistic conversation to practice expressing simple preferences. Models: My favorite food is rice. I prefer tea to coffee. I like it because it is interesting.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L06_QUIZ_09",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: My favorite food is rice.",
+            "options": [
+              {
+                "id": "A",
+                "text": "My",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "food",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "music",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L06_TRANSLATE_10",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "My favorite food is rice.",
+            "word_bank": [
+              "My",
+              "favorite",
+              "food",
+              "is",
+              "rice"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L06_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the phrase",
+            "ru": "Завершите фразу"
+          },
+          "instructions": {
+            "en": "Choose the missing word.",
+            "ru": "Выберите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "My ___ food is rice.",
+            "correct_answer": "favorite",
+            "options": [
+              "favorite",
+              "food",
+              "music"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L06_TAP_WORDS_11",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "My favorite food is rice.",
+            "word_bank": [
+              "rice",
+              "is",
+              "food",
+              "favorite",
+              "My"
+            ],
+            "correct_words": [
+              "My",
+              "favorite",
+              "food",
+              "is",
+              "rice"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L06_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen to the model",
+            "ru": "Послушайте образец"
+          },
+          "instructions": {
+            "en": "Listen and type what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "My favorite food is rice.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L06_LISTENING_SHADOWING_12",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "My favorite food is rice.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L06_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Speaking situation",
+            "ru": "Разговорная ситуация"
+          },
+          "instructions": {
+            "en": "Read the situation and choose what you would say.",
+            "ru": "Прочитайте ситуацию и выберите, что вы скажете."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Use It in Context: Talking About Likes and Dislikes",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Conversation Partner",
+                "text": "My favorite food is rice."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "I prefer tea to coffee.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I like it because it is interesting.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L06_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "food",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple speaking meaning of 'food'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple speaking meaning of 'music'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple speaking meaning of 'movie'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple speaking meaning of 'sport'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "food: A simple speaking meaning of 'food'."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L06_LISTEN_CHOOSE_WORD_13",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ rice.",
+            "audio_text": "My favorite food is rice.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "My",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "food",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L06_MISSING_WORD_14",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ rice.",
+            "correct_answer": "My",
+            "hint_prefix": "my",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L06_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match sound and word",
+            "ru": "Соедините звук и слово"
+          },
+          "instructions": {
+            "en": "Listen and match each word to its spelling.",
+            "ru": "Прослушайте и соедините слово с написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "food",
+                "text": "food"
+              },
+              {
+                "id": "V2",
+                "audio_text": "music",
+                "text": "music"
+              },
+              {
+                "id": "V3",
+                "audio_text": "movie",
+                "text": "movie"
+              },
+              {
+                "id": "V4",
+                "audio_text": "sport",
+                "text": "sport"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T07_L07",
+      "order": 7,
+      "title": {
+        "en": "Build Your Response: Talking About Likes and Dislikes",
+        "ru": "Build Your Response: Talking About Likes and Dislikes"
+      },
+      "objective": {
+        "en": "Give a slightly fuller spoken response to practice expressing simple preferences.",
+        "ru": "Give a slightly fuller spoken response to practice expressing simple preferences."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T07_L07_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each speaking word with its meaning.",
+            "ru": "Соедините слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "music",
+                "right": "A simple speaking meaning of 'music'."
+              },
+              {
+                "id": "P2",
+                "left": "movie",
+                "right": "A simple speaking meaning of 'movie'."
+              },
+              {
+                "id": "P3",
+                "left": "sport",
+                "right": "A simple speaking meaning of 'sport'."
+              },
+              {
+                "id": "P4",
+                "left": "because",
+                "right": "A simple speaking meaning of 'because'."
+              },
+              {
+                "id": "P5",
+                "left": "like",
+                "right": "Listening word: like."
+              },
+              {
+                "id": "P6",
+                "left": "love",
+                "right": "Listening word: love."
+              },
+              {
+                "id": "P7",
+                "left": "enjoy",
+                "right": "Listening word: enjoy."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L07_TEXT_08",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: I prefer tea to coffee.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L07_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose what to say",
+            "ru": "Выберите, что сказать"
+          },
+          "instructions": {
+            "en": "Choose the best spoken response.",
+            "ru": "Выберите лучший устный ответ."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Give a slightly fuller spoken response to practice expressing simple preferences.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I prefer tea to coffee.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I like it because it is interesting.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I like this song.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I prefer tea to coffee.” directly supports the speaking mission."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L07_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I prefer tea to coffee.",
+            "word_bank": [
+              "I",
+              "prefer",
+              "tea",
+              "to",
+              "coffee"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L07_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ coffee.",
+            "correct_answer": "I",
+            "options": [
+              "I",
+              "music",
+              "movie"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L07_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in natural spoken order.",
+            "ru": "Расставьте слова в естественном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "coffee",
+              "to",
+              "tea",
+              "prefer",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "prefer",
+              "tea",
+              "to",
+              "coffee"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L07_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I prefer tea to coffee.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L07_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I like it because it is interesting.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Give a slightly fuller spoken response to practice expressing simple preferences."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L07_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Build Your Response: Talking About Likes and Dislikes",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "I prefer tea to coffee."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "I prefer tea to coffee.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L07_CHOOSE_DEFINITION_13",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "music",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'music'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L07_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Послушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I ___ tea to coffee.",
+            "audio_text": "I prefer tea to coffee.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "prefer",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "music",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "movie",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is prefer."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L07_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Впишите слово"
+          },
+          "instructions": {
+            "en": "Type the missing word.",
+            "ru": "Впишите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ tea to coffee.",
+            "correct_answer": "prefer",
+            "hint_prefix": "pr",
+            "explanation": "The missing word is prefer."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L07_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "music",
+                "text": "music"
+              },
+              {
+                "id": "V2",
+                "audio_text": "movie",
+                "text": "movie"
+              },
+              {
+                "id": "V3",
+                "audio_text": "sport",
+                "text": "sport"
+              },
+              {
+                "id": "V4",
+                "audio_text": "because",
+                "text": "because"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T07_L08",
+      "order": 8,
+      "title": {
+        "en": "Have a Short Conversation: Talking About Likes and Dislikes",
+        "ru": "Have a Short Conversation: Talking About Likes and Dislikes"
+      },
+      "objective": {
+        "en": "Complete a short conversation to practice expressing simple preferences.",
+        "ru": "Complete a short conversation to practice expressing simple preferences."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T07_L08_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "movie",
+                "right": "Listening word: movie."
+              },
+              {
+                "id": "P2",
+                "left": "sport",
+                "right": "Listening word: sport."
+              },
+              {
+                "id": "P3",
+                "left": "because",
+                "right": "Listening word: because."
+              },
+              {
+                "id": "P4",
+                "left": "like",
+                "right": "Listening word: like."
+              },
+              {
+                "id": "P5",
+                "left": "love",
+                "right": "Listening word: love."
+              },
+              {
+                "id": "P6",
+                "left": "enjoy",
+                "right": "Listening word: enjoy."
+              },
+              {
+                "id": "P7",
+                "left": "favorite",
+                "right": "Listening word: favorite."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L08_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the speaking language",
+            "ru": "Изучите разговорный язык"
+          },
+          "instructions": {
+            "en": "Read the model phrases and notice how they work in conversation.",
+            "ru": "Прочитайте модельные фразы и обратите внимание, как они используются в разговоре."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Have a Short Conversation: Talking About Likes and Dislikes. Speaking mission: Complete a short conversation to practice expressing simple preferences. Models: I like it because it is interesting. I like this song. My favorite food is rice.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L08_QUIZ_09",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: I like it because it is interesting.",
+            "options": [
+              {
+                "id": "A",
+                "text": "like",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "movie",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "sport",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L08_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Build the English phrase",
+            "ru": "Составьте английскую фразу"
+          },
+          "instructions": {
+            "en": "Build the spoken English phrase.",
+            "ru": "Составьте разговорную английскую фразу."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Переведите целевую фразу на английский.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I like it because it is interesting.",
+            "word_bank": [
+              "I",
+              "like",
+              "it",
+              "because",
+              "it",
+              "is",
+              "interesting",
+              "sport"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L08_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the phrase",
+            "ru": "Завершите фразу"
+          },
+          "instructions": {
+            "en": "Choose the missing word.",
+            "ru": "Выберите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ it because it is interesting.",
+            "correct_answer": "like",
+            "options": [
+              "like",
+              "movie",
+              "sport"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L08_TAP_WORDS_10",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I like it because it is interesting.",
+            "word_bank": [
+              "interesting",
+              "is",
+              "it",
+              "because",
+              "it",
+              "like",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "like",
+              "it",
+              "because",
+              "it",
+              "is",
+              "interesting"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L08_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen to the model",
+            "ru": "Послушайте образец"
+          },
+          "instructions": {
+            "en": "Listen and type what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I like it because it is interesting.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L08_LISTENING_SHADOWING_11",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I like it because it is interesting.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L08_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Speaking situation",
+            "ru": "Разговорная ситуация"
+          },
+          "instructions": {
+            "en": "Read the situation and choose what you would say.",
+            "ru": "Прочитайте ситуацию и выберите, что вы скажете."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Have a Short Conversation: Talking About Likes and Dislikes",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Conversation Partner",
+                "text": "I like it because it is interesting."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "I like this song.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "My favorite food is rice.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L08_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "movie",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple speaking meaning of 'movie'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple speaking meaning of 'sport'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple speaking meaning of 'because'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple speaking meaning of 'like'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "movie: A simple speaking meaning of 'movie'."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L08_LISTEN_CHOOSE_WORD_12",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ interesting.",
+            "audio_text": "I like it because it is interesting.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "I",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "movie",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L08_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ listening practice.",
+            "correct_answer": "am",
+            "hint_prefix": "am",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L08_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "movie",
+                "text": "movie"
+              },
+              {
+                "id": "V2",
+                "audio_text": "sport",
+                "text": "sport"
+              },
+              {
+                "id": "V3",
+                "audio_text": "because",
+                "text": "because"
+              },
+              {
+                "id": "V4",
+                "audio_text": "like",
+                "text": "like"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T07_L09",
+      "order": 9,
+      "title": {
+        "en": "Speak with Less Support: Talking About Likes and Dislikes",
+        "ru": "Speak with Less Support: Talking About Likes and Dislikes"
+      },
+      "objective": {
+        "en": "Communicate with less support to practice expressing simple preferences.",
+        "ru": "Communicate with less support to practice expressing simple preferences."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T07_L09_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each speaking word with its meaning.",
+            "ru": "Соедините слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "sport",
+                "right": "A simple speaking meaning of 'sport'."
+              },
+              {
+                "id": "P2",
+                "left": "because",
+                "right": "A simple speaking meaning of 'because'."
+              },
+              {
+                "id": "P3",
+                "left": "like",
+                "right": "A simple speaking meaning of 'like'."
+              },
+              {
+                "id": "P4",
+                "left": "love",
+                "right": "A simple speaking meaning of 'love'."
+              },
+              {
+                "id": "P5",
+                "left": "enjoy",
+                "right": "Listening word: enjoy."
+              },
+              {
+                "id": "P6",
+                "left": "favorite",
+                "right": "Listening word: favorite."
+              },
+              {
+                "id": "P7",
+                "left": "prefer",
+                "right": "Listening word: prefer."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L09_TEXT_08",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: I like this song.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L09_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose what to say",
+            "ru": "Выберите, что сказать"
+          },
+          "instructions": {
+            "en": "Choose the best spoken response.",
+            "ru": "Выберите лучший устный ответ."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Communicate with less support to practice expressing simple preferences.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I like this song.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "My favorite food is rice.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I prefer tea to coffee.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I like this song.” directly supports the speaking mission."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L09_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I like this song.",
+            "word_bank": [
+              "I",
+              "like",
+              "this",
+              "song"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L09_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ song.",
+            "correct_answer": "I",
+            "options": [
+              "I",
+              "sport",
+              "because"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L09_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in natural spoken order.",
+            "ru": "Расставьте слова в естественном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "song",
+              "this",
+              "like",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "like",
+              "this",
+              "song"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L09_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I like this song.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L09_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "My favorite food is rice.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Communicate with less support to practice expressing simple preferences."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L09_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Speak with Less Support: Talking About Likes and Dislikes",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "I like this song."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "I like this song.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L09_CHOOSE_DEFINITION_13",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "sport",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'sport'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L09_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Послушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I ___ this song.",
+            "audio_text": "I like this song.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "like",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "sport",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "because",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is like."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L09_MISSING_WORD_14",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ listening practice.",
+            "correct_answer": "am",
+            "hint_prefix": "am",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L09_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match sound and word",
+            "ru": "Соедините звук и слово"
+          },
+          "instructions": {
+            "en": "Listen and match each word to its spelling.",
+            "ru": "Прослушайте и соедините слово с написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "sport",
+                "text": "sport"
+              },
+              {
+                "id": "V2",
+                "audio_text": "because",
+                "text": "because"
+              },
+              {
+                "id": "V3",
+                "audio_text": "like",
+                "text": "like"
+              },
+              {
+                "id": "V4",
+                "audio_text": "love",
+                "text": "love"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T07_L10",
+      "order": 10,
+      "title": {
+        "en": "Track Speaking Mission: Talking About Likes and Dislikes",
+        "ru": "Track Speaking Mission: Talking About Likes and Dislikes"
+      },
+      "objective": {
+        "en": "Combine the track language in a final speaking mission to practice expressing simple preferences.",
+        "ru": "Combine the track language in a final speaking mission to practice expressing simple preferences."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T07_L10_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "because",
+                "right": "Listening word: because."
+              },
+              {
+                "id": "P2",
+                "left": "like",
+                "right": "Listening word: like."
+              },
+              {
+                "id": "P3",
+                "left": "love",
+                "right": "Listening word: love."
+              },
+              {
+                "id": "P4",
+                "left": "enjoy",
+                "right": "Listening word: enjoy."
+              },
+              {
+                "id": "P5",
+                "left": "favorite",
+                "right": "Listening word: favorite."
+              },
+              {
+                "id": "P6",
+                "left": "prefer",
+                "right": "Listening word: prefer."
+              },
+              {
+                "id": "P7",
+                "left": "food",
+                "right": "Listening word: food."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L10_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the speaking language",
+            "ru": "Изучите разговорный язык"
+          },
+          "instructions": {
+            "en": "Read the model phrases and notice how they work in conversation.",
+            "ru": "Прочитайте модельные фразы и обратите внимание, как они используются в разговоре."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Track Speaking Mission: Talking About Likes and Dislikes. Speaking mission: Combine the track language in a final speaking mission to practice expressing simple preferences. Models: My favorite food is rice. I prefer tea to coffee. I like it because it is interesting.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L10_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose what to say",
+            "ru": "Выберите, что сказать"
+          },
+          "instructions": {
+            "en": "Choose the best spoken response.",
+            "ru": "Выберите лучший устный ответ."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Combine the track language in a final speaking mission to practice expressing simple preferences.",
+            "options": [
+              {
+                "id": "A",
+                "text": "My favorite food is rice.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I prefer tea to coffee.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I like it because it is interesting.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“My favorite food is rice.” directly supports the speaking mission."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L10_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "My favorite food is rice.",
+            "word_bank": [
+              "My",
+              "favorite",
+              "food",
+              "is",
+              "rice"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L10_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ rice.",
+            "correct_answer": "My",
+            "options": [
+              "My",
+              "because",
+              "like"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L10_TAP_WORDS_11",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "My favorite food is rice.",
+            "word_bank": [
+              "rice",
+              "is",
+              "food",
+              "favorite",
+              "My"
+            ],
+            "correct_words": [
+              "My",
+              "favorite",
+              "food",
+              "is",
+              "rice"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L10_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen to the model",
+            "ru": "Послушайте образец"
+          },
+          "instructions": {
+            "en": "Listen and type what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "My favorite food is rice.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L10_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I prefer tea to coffee.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Combine the track language in a final speaking mission to practice expressing simple preferences."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L10_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Speaking situation",
+            "ru": "Разговорная ситуация"
+          },
+          "instructions": {
+            "en": "Read the situation and choose what you would say.",
+            "ru": "Прочитайте ситуацию и выберите, что вы скажете."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Track Speaking Mission: Talking About Likes and Dislikes",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Conversation Partner",
+                "text": "My favorite food is rice."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "I prefer tea to coffee.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I like it because it is interesting.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L10_CHOOSE_DEFINITION_12",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "because",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'because'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L10_LISTEN_CHOOSE_WORD_13",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ rice.",
+            "audio_text": "My favorite food is rice.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "My",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "because",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L10_MISSING_WORD_14",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ rice.",
+            "correct_answer": "My",
+            "hint_prefix": "my",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T07_L10_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match sound and word",
+            "ru": "Соедините звук и слово"
+          },
+          "instructions": {
+            "en": "Listen and match each word to its spelling.",
+            "ru": "Прослушайте и соедините слово с написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "because",
+                "text": "because"
+              },
+              {
+                "id": "V2",
+                "audio_text": "like",
+                "text": "like"
+              },
+              {
+                "id": "V3",
+                "audio_text": "love",
+                "text": "love"
+              },
+              {
+                "id": "V4",
+                "audio_text": "enjoy",
+                "text": "enjoy"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    }
+  ]
+}

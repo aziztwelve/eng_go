@@ -1,0 +1,4107 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_SPEAKING_T10",
+    "title": {
+      "en": "A1 Speaking Confidence Mission",
+      "ru": "A1 Speaking Confidence Mission"
+    },
+    "description": {
+      "en": "An A1 Speaking Proficiency track focused on combining basic speaking skills in a short conversation.",
+      "ru": "An A1 Speaking Proficiency track focused on combining basic speaking skills in a short conversation."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "goal": "speaking",
+    "track_type": "thematic"
+  },
+  "lessons": [
+    {
+      "code": "A1_SPEAKING_T10_L01",
+      "order": 1,
+      "title": {
+        "en": "Key Words and First Phrases: A1 Speaking Confidence Mission",
+        "ru": "Key Words and First Phrases: A1 Speaking Confidence Mission"
+      },
+      "objective": {
+        "en": "Learn the essential speaking language to practice combining basic speaking skills in a short conversation.",
+        "ru": "Learn the essential speaking language to practice combining basic speaking skills in a short conversation."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T10_L01_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each speaking word with its meaning.",
+            "ru": "Соедините слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "introduce",
+                "right": "A simple speaking meaning of 'introduce'."
+              },
+              {
+                "id": "P2",
+                "left": "question",
+                "right": "A simple speaking meaning of 'question'."
+              },
+              {
+                "id": "P3",
+                "left": "answer",
+                "right": "A simple speaking meaning of 'answer'."
+              },
+              {
+                "id": "P4",
+                "left": "routine",
+                "right": "A simple speaking meaning of 'routine'."
+              },
+              {
+                "id": "P5",
+                "left": "like",
+                "right": "Listening word: like."
+              },
+              {
+                "id": "P6",
+                "left": "conversation",
+                "right": "Listening word: conversation."
+              },
+              {
+                "id": "P7",
+                "left": "repeat",
+                "right": "Listening word: repeat."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L01_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the speaking language",
+            "ru": "Изучите разговорный язык"
+          },
+          "instructions": {
+            "en": "Read the model phrases and notice how they work in conversation.",
+            "ru": "Прочитайте модельные фразы и обратите внимание, как они используются в разговоре."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Key Words and First Phrases: A1 Speaking Confidence Mission. Speaking mission: Learn the essential speaking language to practice combining basic speaking skills in a short conversation. Models: Hello, my name is Alex. I study English every day. I like learning English because it is useful.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L01_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose what to say",
+            "ru": "Выберите, что сказать"
+          },
+          "instructions": {
+            "en": "Choose the best spoken response.",
+            "ru": "Выберите лучший устный ответ."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Learn the essential speaking language to practice combining basic speaking skills in a short conversation.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Hello, my name is Alex.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I study English every day.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I like learning English because it is useful.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Hello, my name is Alex.” directly supports the speaking mission."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L01_TRANSLATE_08",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Hello, my name is Alex.",
+            "word_bank": [
+              "Hello",
+              "my",
+              "name",
+              "is",
+              "Alex"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L01_FILL_BLANK_09",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ Alex.",
+            "correct_answer": "Hello",
+            "options": [
+              "Hello",
+              "introduce",
+              "question"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L01_TAP_WORDS_10",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "Hello, my name is Alex.",
+            "word_bank": [
+              "Alex",
+              "is",
+              "name",
+              "my",
+              "Hello"
+            ],
+            "correct_words": [
+              "Hello",
+              "my",
+              "name",
+              "is",
+              "Alex"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L01_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen to the model",
+            "ru": "Послушайте образец"
+          },
+          "instructions": {
+            "en": "Listen and type what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Hello, my name is Alex.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L01_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I study English every day.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Learn the essential speaking language to practice combining basic speaking skills in a short conversation."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L01_STORY_11",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Key Words and First Phrases: A1 Speaking Confidence Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "Hello, my name is Alex."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "Hello, my name is Alex.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L01_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "introduce",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple speaking meaning of 'introduce'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple speaking meaning of 'question'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple speaking meaning of 'answer'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple speaking meaning of 'routine'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "introduce: A simple speaking meaning of 'introduce'."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L01_LISTEN_CHOOSE_WORD_12",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ Alex.",
+            "audio_text": "Hello, my name is Alex.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Hello",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "introduce",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L01_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ Alex.",
+            "correct_answer": "Hello",
+            "hint_prefix": "he",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L01_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "introduce",
+                "text": "introduce"
+              },
+              {
+                "id": "V2",
+                "audio_text": "question",
+                "text": "question"
+              },
+              {
+                "id": "V3",
+                "audio_text": "answer",
+                "text": "answer"
+              },
+              {
+                "id": "V4",
+                "audio_text": "routine",
+                "text": "routine"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T10_L02",
+      "order": 2,
+      "title": {
+        "en": "Build Simple Sentences: A1 Speaking Confidence Mission",
+        "ru": "Build Simple Sentences: A1 Speaking Confidence Mission"
+      },
+      "objective": {
+        "en": "Build useful spoken sentences to practice combining basic speaking skills in a short conversation.",
+        "ru": "Build useful spoken sentences to practice combining basic speaking skills in a short conversation."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T10_L02_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "question",
+                "right": "Listening word: question."
+              },
+              {
+                "id": "P2",
+                "left": "answer",
+                "right": "Listening word: answer."
+              },
+              {
+                "id": "P3",
+                "left": "routine",
+                "right": "Listening word: routine."
+              },
+              {
+                "id": "P4",
+                "left": "like",
+                "right": "Listening word: like."
+              },
+              {
+                "id": "P5",
+                "left": "conversation",
+                "right": "Listening word: conversation."
+              },
+              {
+                "id": "P6",
+                "left": "introduce",
+                "right": "Listening word: introduce."
+              },
+              {
+                "id": "P7",
+                "left": "repeat",
+                "right": "Listening word: repeat."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L02_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the speaking language",
+            "ru": "Изучите разговорный язык"
+          },
+          "instructions": {
+            "en": "Read the model phrases and notice how they work in conversation.",
+            "ru": "Прочитайте модельные фразы и обратите внимание, как они используются в разговоре."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Build Simple Sentences: A1 Speaking Confidence Mission. Speaking mission: Build useful spoken sentences to practice combining basic speaking skills in a short conversation. Models: I study English every day. I like learning English because it is useful. Can you say that again, please?",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L02_QUIZ_09",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: I study English every day.",
+            "options": [
+              {
+                "id": "A",
+                "text": "study",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "question",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "answer",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L02_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Build the English phrase",
+            "ru": "Составьте английскую фразу"
+          },
+          "instructions": {
+            "en": "Build the spoken English phrase.",
+            "ru": "Составьте разговорную английскую фразу."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Переведите целевую фразу на английский.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I study English every day.",
+            "word_bank": [
+              "I",
+              "study",
+              "English",
+              "every",
+              "day",
+              "answer"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L02_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the phrase",
+            "ru": "Завершите фразу"
+          },
+          "instructions": {
+            "en": "Choose the missing word.",
+            "ru": "Выберите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ English every day.",
+            "correct_answer": "study",
+            "options": [
+              "study",
+              "question",
+              "answer"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L02_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in natural spoken order.",
+            "ru": "Расставьте слова в естественном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "day",
+              "every",
+              "English",
+              "study",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "study",
+              "English",
+              "every",
+              "day"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L02_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen to the model",
+            "ru": "Послушайте образец"
+          },
+          "instructions": {
+            "en": "Listen and type what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I study English every day.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L02_LISTENING_SHADOWING_10",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I study English every day.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L02_STORY_11",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Build Simple Sentences: A1 Speaking Confidence Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "I study English every day."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "I study English every day.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L02_CHOOSE_DEFINITION_12",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "question",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'question'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L02_LISTEN_CHOOSE_WORD_13",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ day.",
+            "audio_text": "I study English every day.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "I",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "question",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L02_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Впишите слово"
+          },
+          "instructions": {
+            "en": "Type the missing word.",
+            "ru": "Впишите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ English every day.",
+            "correct_answer": "study",
+            "hint_prefix": "st",
+            "explanation": "The missing word is study."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L02_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "question",
+                "text": "question"
+              },
+              {
+                "id": "V2",
+                "audio_text": "answer",
+                "text": "answer"
+              },
+              {
+                "id": "V3",
+                "audio_text": "routine",
+                "text": "routine"
+              },
+              {
+                "id": "V4",
+                "audio_text": "like",
+                "text": "like"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T10_L03",
+      "order": 3,
+      "title": {
+        "en": "Ask and Answer: A1 Speaking Confidence Mission",
+        "ru": "Ask and Answer: A1 Speaking Confidence Mission"
+      },
+      "objective": {
+        "en": "Ask and answer a simple question to practice combining basic speaking skills in a short conversation.",
+        "ru": "Ask and answer a simple question to practice combining basic speaking skills in a short conversation."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T10_L03_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each speaking word with its meaning.",
+            "ru": "Соедините слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "answer",
+                "right": "A simple speaking meaning of 'answer'."
+              },
+              {
+                "id": "P2",
+                "left": "routine",
+                "right": "A simple speaking meaning of 'routine'."
+              },
+              {
+                "id": "P3",
+                "left": "like",
+                "right": "A simple speaking meaning of 'like'."
+              },
+              {
+                "id": "P4",
+                "left": "conversation",
+                "right": "A simple speaking meaning of 'conversation'."
+              },
+              {
+                "id": "P5",
+                "left": "repeat",
+                "right": "Listening word: repeat."
+              },
+              {
+                "id": "P6",
+                "left": "introduce",
+                "right": "Listening word: introduce."
+              },
+              {
+                "id": "P7",
+                "left": "question",
+                "right": "Listening word: question."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L03_TEXT_08",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: I like learning English because it is useful.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L03_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose what to say",
+            "ru": "Выберите, что сказать"
+          },
+          "instructions": {
+            "en": "Choose the best spoken response.",
+            "ru": "Выберите лучший устный ответ."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Ask and answer a simple question to practice combining basic speaking skills in a short conversation.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I like learning English because it is useful.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Can you say that again, please?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Hello, my name is Alex.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I like learning English because it is useful.” directly supports the speaking mission."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L03_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I like learning English because it is useful.",
+            "word_bank": [
+              "I",
+              "like",
+              "learning",
+              "English",
+              "because",
+              "it",
+              "is",
+              "useful"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L03_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ useful.",
+            "correct_answer": "I",
+            "options": [
+              "I",
+              "answer",
+              "routine"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L03_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in natural spoken order.",
+            "ru": "Расставьте слова в естественном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "useful",
+              "is",
+              "it",
+              "because",
+              "English",
+              "learning",
+              "like",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "like",
+              "learning",
+              "English",
+              "because",
+              "it",
+              "is",
+              "useful"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L03_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I like learning English because it is useful.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L03_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Can you say that again, please?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Ask and answer a simple question to practice combining basic speaking skills in a short conversation."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L03_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Speaking situation",
+            "ru": "Разговорная ситуация"
+          },
+          "instructions": {
+            "en": "Read the situation and choose what you would say.",
+            "ru": "Прочитайте ситуацию и выберите, что вы скажете."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Ask and Answer: A1 Speaking Confidence Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Conversation Partner",
+                "text": "I like learning English because it is useful."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "Can you say that again, please?",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Hello, my name is Alex.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L03_CHOOSE_DEFINITION_12",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "answer",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'answer'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L03_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Послушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I ___ learning English because it is useful.",
+            "audio_text": "I like learning English because it is useful.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "like",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "answer",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "routine",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is like."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L03_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ listening practice.",
+            "correct_answer": "am",
+            "hint_prefix": "am",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L03_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "answer",
+                "text": "answer"
+              },
+              {
+                "id": "V2",
+                "audio_text": "routine",
+                "text": "routine"
+              },
+              {
+                "id": "V3",
+                "audio_text": "like",
+                "text": "like"
+              },
+              {
+                "id": "V4",
+                "audio_text": "conversation",
+                "text": "conversation"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T10_L04",
+      "order": 4,
+      "title": {
+        "en": "Listen and Respond: A1 Speaking Confidence Mission",
+        "ru": "Listen and Respond: A1 Speaking Confidence Mission"
+      },
+      "objective": {
+        "en": "Understand and respond to a short exchange to practice combining basic speaking skills in a short conversation.",
+        "ru": "Understand and respond to a short exchange to practice combining basic speaking skills in a short conversation."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T10_L04_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each speaking word with its meaning.",
+            "ru": "Соедините слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "routine",
+                "right": "A simple speaking meaning of 'routine'."
+              },
+              {
+                "id": "P2",
+                "left": "like",
+                "right": "A simple speaking meaning of 'like'."
+              },
+              {
+                "id": "P3",
+                "left": "conversation",
+                "right": "A simple speaking meaning of 'conversation'."
+              },
+              {
+                "id": "P4",
+                "left": "repeat",
+                "right": "A simple speaking meaning of 'repeat'."
+              },
+              {
+                "id": "P5",
+                "left": "explain",
+                "right": "Listening word: explain."
+              },
+              {
+                "id": "P6",
+                "left": "introduce",
+                "right": "Listening word: introduce."
+              },
+              {
+                "id": "P7",
+                "left": "question",
+                "right": "Listening word: question."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L04_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the speaking language",
+            "ru": "Изучите разговорный язык"
+          },
+          "instructions": {
+            "en": "Read the model phrases and notice how they work in conversation.",
+            "ru": "Прочитайте модельные фразы и обратите внимание, как они используются в разговоре."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and Respond: A1 Speaking Confidence Mission. Speaking mission: Understand and respond to a short exchange to practice combining basic speaking skills in a short conversation. Models: Can you say that again, please? Hello, my name is Alex. I study English every day.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L04_QUIZ_08",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: Can you say that again, please?",
+            "options": [
+              {
+                "id": "A",
+                "text": "Can",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "routine",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "like",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L04_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Can you say that again, please?",
+            "word_bank": [
+              "Can",
+              "you",
+              "say",
+              "that",
+              "again",
+              "please"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L04_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the phrase",
+            "ru": "Завершите фразу"
+          },
+          "instructions": {
+            "en": "Choose the missing word.",
+            "ru": "Выберите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Can you say ___ again, please?",
+            "correct_answer": "that",
+            "options": [
+              "that",
+              "routine",
+              "like"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L04_TAP_WORDS_10",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "Can you say that again, please?",
+            "word_bank": [
+              "please",
+              "again",
+              "that",
+              "say",
+              "you",
+              "Can"
+            ],
+            "correct_words": [
+              "Can",
+              "you",
+              "say",
+              "that",
+              "again",
+              "please"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L04_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen to the model",
+            "ru": "Послушайте образец"
+          },
+          "instructions": {
+            "en": "Listen and type what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Can you say that again, please?",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L04_LISTENING_SHADOWING_11",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "Can you say that again, please?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L04_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Listen and Respond: A1 Speaking Confidence Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "Can you say that again, please?"
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "Can you say that again, please?",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L04_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "routine",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple speaking meaning of 'routine'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple speaking meaning of 'like'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple speaking meaning of 'conversation'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple speaking meaning of 'repeat'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "routine: A simple speaking meaning of 'routine'."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L04_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Послушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "Can you say ___ again, please?",
+            "audio_text": "Can you say that again, please?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "that",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "routine",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "like",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is that."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L04_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ please.",
+            "correct_answer": "Can",
+            "hint_prefix": "ca",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L04_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "routine",
+                "text": "routine"
+              },
+              {
+                "id": "V2",
+                "audio_text": "like",
+                "text": "like"
+              },
+              {
+                "id": "V3",
+                "audio_text": "conversation",
+                "text": "conversation"
+              },
+              {
+                "id": "V4",
+                "audio_text": "repeat",
+                "text": "repeat"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T10_L05",
+      "order": 5,
+      "title": {
+        "en": "Speak Clearly: A1 Speaking Confidence Mission",
+        "ru": "Speak Clearly: A1 Speaking Confidence Mission"
+      },
+      "objective": {
+        "en": "Say the target phrases clearly to practice combining basic speaking skills in a short conversation.",
+        "ru": "Say the target phrases clearly to practice combining basic speaking skills in a short conversation."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T10_L05_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "like",
+                "right": "Listening word: like."
+              },
+              {
+                "id": "P2",
+                "left": "conversation",
+                "right": "Listening word: conversation."
+              },
+              {
+                "id": "P3",
+                "left": "repeat",
+                "right": "Listening word: repeat."
+              },
+              {
+                "id": "P4",
+                "left": "explain",
+                "right": "Listening word: explain."
+              },
+              {
+                "id": "P5",
+                "left": "speak",
+                "right": "Listening word: speak."
+              },
+              {
+                "id": "P6",
+                "left": "introduce",
+                "right": "Listening word: introduce."
+              },
+              {
+                "id": "P7",
+                "left": "question",
+                "right": "Listening word: question."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L05_TEXT_09",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: Hello, my name is Alex.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L05_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose what to say",
+            "ru": "Выберите, что сказать"
+          },
+          "instructions": {
+            "en": "Choose the best spoken response.",
+            "ru": "Выберите лучший устный ответ."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Say the target phrases clearly to practice combining basic speaking skills in a short conversation.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Hello, my name is Alex.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I study English every day.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I like learning English because it is useful.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Hello, my name is Alex.” directly supports the speaking mission."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L05_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Build the English phrase",
+            "ru": "Составьте английскую фразу"
+          },
+          "instructions": {
+            "en": "Build the spoken English phrase.",
+            "ru": "Составьте разговорную английскую фразу."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Переведите целевую фразу на английский.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Hello, my name is Alex.",
+            "word_bank": [
+              "Hello",
+              "my",
+              "name",
+              "is",
+              "Alex",
+              "conversation"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L05_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ Alex.",
+            "correct_answer": "Hello",
+            "options": [
+              "Hello",
+              "like",
+              "conversation"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L05_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in natural spoken order.",
+            "ru": "Расставьте слова в естественном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "Alex",
+              "is",
+              "name",
+              "my",
+              "Hello"
+            ],
+            "correct_words": [
+              "Hello",
+              "my",
+              "name",
+              "is",
+              "Alex"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L05_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "Hello, my name is Alex.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L05_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I study English every day.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Say the target phrases clearly to practice combining basic speaking skills in a short conversation."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L05_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Speak Clearly: A1 Speaking Confidence Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "Hello, my name is Alex."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "Hello, my name is Alex.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L05_CHOOSE_DEFINITION_13",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "like",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'like'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L05_LISTEN_CHOOSE_WORD_14",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ Alex.",
+            "audio_text": "Hello, my name is Alex.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Hello",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "like",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L05_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Впишите слово"
+          },
+          "instructions": {
+            "en": "Type the missing word.",
+            "ru": "Впишите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___, my name is Alex.",
+            "correct_answer": "Hello",
+            "hint_prefix": "He",
+            "explanation": "The missing word is Hello."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L05_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match sound and word",
+            "ru": "Соедините звук и слово"
+          },
+          "instructions": {
+            "en": "Listen and match each word to its spelling.",
+            "ru": "Прослушайте и соедините слово с написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "like",
+                "text": "like"
+              },
+              {
+                "id": "V2",
+                "audio_text": "conversation",
+                "text": "conversation"
+              },
+              {
+                "id": "V3",
+                "audio_text": "repeat",
+                "text": "repeat"
+              },
+              {
+                "id": "V4",
+                "audio_text": "explain",
+                "text": "explain"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T10_L06",
+      "order": 6,
+      "title": {
+        "en": "Use It in Context: A1 Speaking Confidence Mission",
+        "ru": "Use It in Context: A1 Speaking Confidence Mission"
+      },
+      "objective": {
+        "en": "Use the language in a realistic conversation to practice combining basic speaking skills in a short conversation.",
+        "ru": "Use the language in a realistic conversation to practice combining basic speaking skills in a short conversation."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T10_L06_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "conversation",
+                "right": "Listening word: conversation."
+              },
+              {
+                "id": "P2",
+                "left": "repeat",
+                "right": "Listening word: repeat."
+              },
+              {
+                "id": "P3",
+                "left": "explain",
+                "right": "Listening word: explain."
+              },
+              {
+                "id": "P4",
+                "left": "speak",
+                "right": "Listening word: speak."
+              },
+              {
+                "id": "P5",
+                "left": "confidence",
+                "right": "Listening word: confidence."
+              },
+              {
+                "id": "P6",
+                "left": "introduce",
+                "right": "Listening word: introduce."
+              },
+              {
+                "id": "P7",
+                "left": "question",
+                "right": "Listening word: question."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L06_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the speaking language",
+            "ru": "Изучите разговорный язык"
+          },
+          "instructions": {
+            "en": "Read the model phrases and notice how they work in conversation.",
+            "ru": "Прочитайте модельные фразы и обратите внимание, как они используются в разговоре."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Use It in Context: A1 Speaking Confidence Mission. Speaking mission: Use the language in a realistic conversation to practice combining basic speaking skills in a short conversation. Models: I study English every day. I like learning English because it is useful. Can you say that again, please?",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L06_QUIZ_09",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: I study English every day.",
+            "options": [
+              {
+                "id": "A",
+                "text": "study",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "conversation",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "repeat",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L06_TRANSLATE_10",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I study English every day.",
+            "word_bank": [
+              "I",
+              "study",
+              "English",
+              "every",
+              "day"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L06_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the phrase",
+            "ru": "Завершите фразу"
+          },
+          "instructions": {
+            "en": "Choose the missing word.",
+            "ru": "Выберите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ English every day.",
+            "correct_answer": "study",
+            "options": [
+              "study",
+              "conversation",
+              "repeat"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L06_TAP_WORDS_11",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I study English every day.",
+            "word_bank": [
+              "day",
+              "every",
+              "English",
+              "study",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "study",
+              "English",
+              "every",
+              "day"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L06_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen to the model",
+            "ru": "Послушайте образец"
+          },
+          "instructions": {
+            "en": "Listen and type what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I study English every day.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L06_LISTENING_SHADOWING_12",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I study English every day.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L06_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Speaking situation",
+            "ru": "Разговорная ситуация"
+          },
+          "instructions": {
+            "en": "Read the situation and choose what you would say.",
+            "ru": "Прочитайте ситуацию и выберите, что вы скажете."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Use It in Context: A1 Speaking Confidence Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Conversation Partner",
+                "text": "I study English every day."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "I like learning English because it is useful.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Can you say that again, please?",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L06_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "conversation",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple speaking meaning of 'conversation'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple speaking meaning of 'repeat'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple speaking meaning of 'explain'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple speaking meaning of 'speak'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "conversation: A simple speaking meaning of 'conversation'."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L06_LISTEN_CHOOSE_WORD_13",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ day.",
+            "audio_text": "I study English every day.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "I",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "conversation",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L06_MISSING_WORD_14",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ listening practice.",
+            "correct_answer": "am",
+            "hint_prefix": "am",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L06_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match sound and word",
+            "ru": "Соедините звук и слово"
+          },
+          "instructions": {
+            "en": "Listen and match each word to its spelling.",
+            "ru": "Прослушайте и соедините слово с написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "conversation",
+                "text": "conversation"
+              },
+              {
+                "id": "V2",
+                "audio_text": "repeat",
+                "text": "repeat"
+              },
+              {
+                "id": "V3",
+                "audio_text": "explain",
+                "text": "explain"
+              },
+              {
+                "id": "V4",
+                "audio_text": "speak",
+                "text": "speak"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T10_L07",
+      "order": 7,
+      "title": {
+        "en": "Build Your Response: A1 Speaking Confidence Mission",
+        "ru": "Build Your Response: A1 Speaking Confidence Mission"
+      },
+      "objective": {
+        "en": "Give a slightly fuller spoken response to practice combining basic speaking skills in a short conversation.",
+        "ru": "Give a slightly fuller spoken response to practice combining basic speaking skills in a short conversation."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T10_L07_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each speaking word with its meaning.",
+            "ru": "Соедините слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "repeat",
+                "right": "A simple speaking meaning of 'repeat'."
+              },
+              {
+                "id": "P2",
+                "left": "explain",
+                "right": "A simple speaking meaning of 'explain'."
+              },
+              {
+                "id": "P3",
+                "left": "speak",
+                "right": "A simple speaking meaning of 'speak'."
+              },
+              {
+                "id": "P4",
+                "left": "confidence",
+                "right": "A simple speaking meaning of 'confidence'."
+              },
+              {
+                "id": "P5",
+                "left": "introduce",
+                "right": "Listening word: introduce."
+              },
+              {
+                "id": "P6",
+                "left": "question",
+                "right": "Listening word: question."
+              },
+              {
+                "id": "P7",
+                "left": "answer",
+                "right": "Listening word: answer."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L07_TEXT_08",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: I like learning English because it is useful.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L07_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose what to say",
+            "ru": "Выберите, что сказать"
+          },
+          "instructions": {
+            "en": "Choose the best spoken response.",
+            "ru": "Выберите лучший устный ответ."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Give a slightly fuller spoken response to practice combining basic speaking skills in a short conversation.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I like learning English because it is useful.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Can you say that again, please?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Hello, my name is Alex.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I like learning English because it is useful.” directly supports the speaking mission."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L07_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I like learning English because it is useful.",
+            "word_bank": [
+              "I",
+              "like",
+              "learning",
+              "English",
+              "because",
+              "it",
+              "is",
+              "useful"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L07_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ useful.",
+            "correct_answer": "I",
+            "options": [
+              "I",
+              "repeat",
+              "explain"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L07_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in natural spoken order.",
+            "ru": "Расставьте слова в естественном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "useful",
+              "is",
+              "it",
+              "because",
+              "English",
+              "learning",
+              "like",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "like",
+              "learning",
+              "English",
+              "because",
+              "it",
+              "is",
+              "useful"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L07_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I like learning English because it is useful.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L07_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Can you say that again, please?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Give a slightly fuller spoken response to practice combining basic speaking skills in a short conversation."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L07_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Build Your Response: A1 Speaking Confidence Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "I like learning English because it is useful."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "I like learning English because it is useful.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L07_CHOOSE_DEFINITION_13",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "repeat",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'repeat'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L07_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Послушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I ___ learning English because it is useful.",
+            "audio_text": "I like learning English because it is useful.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "like",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "repeat",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "explain",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is like."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L07_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Впишите слово"
+          },
+          "instructions": {
+            "en": "Type the missing word.",
+            "ru": "Впишите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ learning English because it is useful.",
+            "correct_answer": "like",
+            "hint_prefix": "li",
+            "explanation": "The missing word is like."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L07_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "repeat",
+                "text": "repeat"
+              },
+              {
+                "id": "V2",
+                "audio_text": "explain",
+                "text": "explain"
+              },
+              {
+                "id": "V3",
+                "audio_text": "speak",
+                "text": "speak"
+              },
+              {
+                "id": "V4",
+                "audio_text": "confidence",
+                "text": "confidence"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T10_L08",
+      "order": 8,
+      "title": {
+        "en": "Have a Short Conversation: A1 Speaking Confidence Mission",
+        "ru": "Have a Short Conversation: A1 Speaking Confidence Mission"
+      },
+      "objective": {
+        "en": "Complete a short conversation to practice combining basic speaking skills in a short conversation.",
+        "ru": "Complete a short conversation to practice combining basic speaking skills in a short conversation."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T10_L08_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "explain",
+                "right": "Listening word: explain."
+              },
+              {
+                "id": "P2",
+                "left": "speak",
+                "right": "Listening word: speak."
+              },
+              {
+                "id": "P3",
+                "left": "confidence",
+                "right": "Listening word: confidence."
+              },
+              {
+                "id": "P4",
+                "left": "introduce",
+                "right": "Listening word: introduce."
+              },
+              {
+                "id": "P5",
+                "left": "question",
+                "right": "Listening word: question."
+              },
+              {
+                "id": "P6",
+                "left": "answer",
+                "right": "Listening word: answer."
+              },
+              {
+                "id": "P7",
+                "left": "routine",
+                "right": "Listening word: routine."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L08_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the speaking language",
+            "ru": "Изучите разговорный язык"
+          },
+          "instructions": {
+            "en": "Read the model phrases and notice how they work in conversation.",
+            "ru": "Прочитайте модельные фразы и обратите внимание, как они используются в разговоре."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Have a Short Conversation: A1 Speaking Confidence Mission. Speaking mission: Complete a short conversation to practice combining basic speaking skills in a short conversation. Models: Can you say that again, please? Hello, my name is Alex. I study English every day.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L08_QUIZ_09",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: Can you say that again, please?",
+            "options": [
+              {
+                "id": "A",
+                "text": "Can",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "explain",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "speak",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L08_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Build the English phrase",
+            "ru": "Составьте английскую фразу"
+          },
+          "instructions": {
+            "en": "Build the spoken English phrase.",
+            "ru": "Составьте разговорную английскую фразу."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Переведите целевую фразу на английский.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Can you say that again, please?",
+            "word_bank": [
+              "Can",
+              "you",
+              "say",
+              "that",
+              "again",
+              "please",
+              "speak"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L08_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the phrase",
+            "ru": "Завершите фразу"
+          },
+          "instructions": {
+            "en": "Choose the missing word.",
+            "ru": "Выберите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Can you say ___ again, please?",
+            "correct_answer": "that",
+            "options": [
+              "that",
+              "explain",
+              "speak"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L08_TAP_WORDS_10",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "Can you say that again, please?",
+            "word_bank": [
+              "please",
+              "again",
+              "that",
+              "say",
+              "you",
+              "Can"
+            ],
+            "correct_words": [
+              "Can",
+              "you",
+              "say",
+              "that",
+              "again",
+              "please"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L08_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen to the model",
+            "ru": "Послушайте образец"
+          },
+          "instructions": {
+            "en": "Listen and type what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Can you say that again, please?",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L08_LISTENING_SHADOWING_11",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "Can you say that again, please?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L08_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Speaking situation",
+            "ru": "Разговорная ситуация"
+          },
+          "instructions": {
+            "en": "Read the situation and choose what you would say.",
+            "ru": "Прочитайте ситуацию и выберите, что вы скажете."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Have a Short Conversation: A1 Speaking Confidence Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Conversation Partner",
+                "text": "Can you say that again, please?"
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "Hello, my name is Alex.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I study English every day.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L08_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "explain",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple speaking meaning of 'explain'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple speaking meaning of 'speak'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple speaking meaning of 'confidence'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple speaking meaning of 'introduce'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "explain: A simple speaking meaning of 'explain'."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L08_LISTEN_CHOOSE_WORD_12",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ please.",
+            "audio_text": "Can you say that again, please?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Can",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "explain",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L08_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ please.",
+            "correct_answer": "Can",
+            "hint_prefix": "ca",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L08_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "explain",
+                "text": "explain"
+              },
+              {
+                "id": "V2",
+                "audio_text": "speak",
+                "text": "speak"
+              },
+              {
+                "id": "V3",
+                "audio_text": "confidence",
+                "text": "confidence"
+              },
+              {
+                "id": "V4",
+                "audio_text": "introduce",
+                "text": "introduce"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T10_L09",
+      "order": 9,
+      "title": {
+        "en": "Speak with Less Support: A1 Speaking Confidence Mission",
+        "ru": "Speak with Less Support: A1 Speaking Confidence Mission"
+      },
+      "objective": {
+        "en": "Communicate with less support to practice combining basic speaking skills in a short conversation.",
+        "ru": "Communicate with less support to practice combining basic speaking skills in a short conversation."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T10_L09_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each speaking word with its meaning.",
+            "ru": "Соедините слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "speak",
+                "right": "A simple speaking meaning of 'speak'."
+              },
+              {
+                "id": "P2",
+                "left": "confidence",
+                "right": "A simple speaking meaning of 'confidence'."
+              },
+              {
+                "id": "P3",
+                "left": "introduce",
+                "right": "A simple speaking meaning of 'introduce'."
+              },
+              {
+                "id": "P4",
+                "left": "question",
+                "right": "A simple speaking meaning of 'question'."
+              },
+              {
+                "id": "P5",
+                "left": "answer",
+                "right": "Listening word: answer."
+              },
+              {
+                "id": "P6",
+                "left": "routine",
+                "right": "Listening word: routine."
+              },
+              {
+                "id": "P7",
+                "left": "like",
+                "right": "Listening word: like."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L09_TEXT_08",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: Hello, my name is Alex.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L09_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose what to say",
+            "ru": "Выберите, что сказать"
+          },
+          "instructions": {
+            "en": "Choose the best spoken response.",
+            "ru": "Выберите лучший устный ответ."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Communicate with less support to practice combining basic speaking skills in a short conversation.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Hello, my name is Alex.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I study English every day.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I like learning English because it is useful.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Hello, my name is Alex.” directly supports the speaking mission."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L09_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Hello, my name is Alex.",
+            "word_bank": [
+              "Hello",
+              "my",
+              "name",
+              "is",
+              "Alex"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L09_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ Alex.",
+            "correct_answer": "Hello",
+            "options": [
+              "Hello",
+              "speak",
+              "confidence"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L09_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in natural spoken order.",
+            "ru": "Расставьте слова в естественном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "Alex",
+              "is",
+              "name",
+              "my",
+              "Hello"
+            ],
+            "correct_words": [
+              "Hello",
+              "my",
+              "name",
+              "is",
+              "Alex"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L09_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "Hello, my name is Alex.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L09_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I study English every day.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Communicate with less support to practice combining basic speaking skills in a short conversation."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L09_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Speak with Less Support: A1 Speaking Confidence Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "Hello, my name is Alex."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "Hello, my name is Alex.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L09_CHOOSE_DEFINITION_13",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "speak",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'speak'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L09_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Послушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___, my name is Alex.",
+            "audio_text": "Hello, my name is Alex.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Hello",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "speak",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "confidence",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Hello."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L09_MISSING_WORD_14",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ Alex.",
+            "correct_answer": "Hello",
+            "hint_prefix": "he",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L09_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match sound and word",
+            "ru": "Соедините звук и слово"
+          },
+          "instructions": {
+            "en": "Listen and match each word to its spelling.",
+            "ru": "Прослушайте и соедините слово с написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "speak",
+                "text": "speak"
+              },
+              {
+                "id": "V2",
+                "audio_text": "confidence",
+                "text": "confidence"
+              },
+              {
+                "id": "V3",
+                "audio_text": "introduce",
+                "text": "introduce"
+              },
+              {
+                "id": "V4",
+                "audio_text": "question",
+                "text": "question"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T10_L10",
+      "order": 10,
+      "title": {
+        "en": "Track Speaking Mission: A1 Speaking Confidence Mission",
+        "ru": "Track Speaking Mission: A1 Speaking Confidence Mission"
+      },
+      "objective": {
+        "en": "Combine the track language in a final speaking mission to practice combining basic speaking skills in a short conversation.",
+        "ru": "Combine the track language in a final speaking mission to practice combining basic speaking skills in a short conversation."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T10_L10_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "confidence",
+                "right": "Listening word: confidence."
+              },
+              {
+                "id": "P2",
+                "left": "introduce",
+                "right": "Listening word: introduce."
+              },
+              {
+                "id": "P3",
+                "left": "question",
+                "right": "Listening word: question."
+              },
+              {
+                "id": "P4",
+                "left": "answer",
+                "right": "Listening word: answer."
+              },
+              {
+                "id": "P5",
+                "left": "routine",
+                "right": "Listening word: routine."
+              },
+              {
+                "id": "P6",
+                "left": "like",
+                "right": "Listening word: like."
+              },
+              {
+                "id": "P7",
+                "left": "conversation",
+                "right": "Listening word: conversation."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L10_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the speaking language",
+            "ru": "Изучите разговорный язык"
+          },
+          "instructions": {
+            "en": "Read the model phrases and notice how they work in conversation.",
+            "ru": "Прочитайте модельные фразы и обратите внимание, как они используются в разговоре."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Track Speaking Mission: A1 Speaking Confidence Mission. Speaking mission: Combine the track language in a final speaking mission to practice combining basic speaking skills in a short conversation. Models: I study English every day. I like learning English because it is useful. Can you say that again, please?",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L10_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose what to say",
+            "ru": "Выберите, что сказать"
+          },
+          "instructions": {
+            "en": "Choose the best spoken response.",
+            "ru": "Выберите лучший устный ответ."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Combine the track language in a final speaking mission to practice combining basic speaking skills in a short conversation.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I study English every day.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I like learning English because it is useful.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Can you say that again, please?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I study English every day.” directly supports the speaking mission."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L10_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I study English every day.",
+            "word_bank": [
+              "I",
+              "study",
+              "English",
+              "every",
+              "day"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L10_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ day.",
+            "correct_answer": "I",
+            "options": [
+              "I",
+              "confidence",
+              "introduce"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L10_TAP_WORDS_11",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I study English every day.",
+            "word_bank": [
+              "day",
+              "every",
+              "English",
+              "study",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "study",
+              "English",
+              "every",
+              "day"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L10_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen to the model",
+            "ru": "Послушайте образец"
+          },
+          "instructions": {
+            "en": "Listen and type what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I study English every day.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L10_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I like learning English because it is useful.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Combine the track language in a final speaking mission to practice combining basic speaking skills in a short conversation."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L10_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Speaking situation",
+            "ru": "Разговорная ситуация"
+          },
+          "instructions": {
+            "en": "Read the situation and choose what you would say.",
+            "ru": "Прочитайте ситуацию и выберите, что вы скажете."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Track Speaking Mission: A1 Speaking Confidence Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Conversation Partner",
+                "text": "I study English every day."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "I like learning English because it is useful.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Can you say that again, please?",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L10_CHOOSE_DEFINITION_12",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "confidence",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'confidence'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L10_LISTEN_CHOOSE_WORD_13",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ day.",
+            "audio_text": "I study English every day.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "I",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "confidence",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L10_MISSING_WORD_14",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ listening practice.",
+            "correct_answer": "am",
+            "hint_prefix": "am",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T10_L10_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match sound and word",
+            "ru": "Соедините звук и слово"
+          },
+          "instructions": {
+            "en": "Listen and match each word to its spelling.",
+            "ru": "Прослушайте и соедините слово с написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "confidence",
+                "text": "confidence"
+              },
+              {
+                "id": "V2",
+                "audio_text": "introduce",
+                "text": "introduce"
+              },
+              {
+                "id": "V3",
+                "audio_text": "question",
+                "text": "question"
+              },
+              {
+                "id": "V4",
+                "audio_text": "answer",
+                "text": "answer"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    }
+  ]
+}

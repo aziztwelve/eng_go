@@ -1,0 +1,4137 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_SPEAKING_T05",
+    "title": {
+      "en": "Answering with More Than One Word",
+      "ru": "Answering with More Than One Word"
+    },
+    "description": {
+      "en": "An A1 Speaking Proficiency track focused on giving short complete answers instead of one-word replies.",
+      "ru": "An A1 Speaking Proficiency track focused on giving short complete answers instead of one-word replies."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "goal": "speaking",
+    "track_type": "thematic"
+  },
+  "lessons": [
+    {
+      "code": "A1_SPEAKING_T05_L01",
+      "order": 1,
+      "title": {
+        "en": "Key Words and First Phrases: Answering with More Than One Word",
+        "ru": "Key Words and First Phrases: Answering with More Than One Word"
+      },
+      "objective": {
+        "en": "Learn the essential speaking language to practice giving short complete answers instead of one-word replies.",
+        "ru": "Learn the essential speaking language to practice giving short complete answers instead of one-word replies."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T05_L01_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each speaking word with its meaning.",
+            "ru": "Соедините слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "because",
+                "right": "A simple speaking meaning of 'because'."
+              },
+              {
+                "id": "P2",
+                "left": "and",
+                "right": "A simple speaking meaning of 'and'."
+              },
+              {
+                "id": "P3",
+                "left": "but",
+                "right": "A simple speaking meaning of 'but'."
+              },
+              {
+                "id": "P4",
+                "left": "also",
+                "right": "A simple speaking meaning of 'also'."
+              },
+              {
+                "id": "P5",
+                "left": "yes",
+                "right": "Listening word: yes."
+              },
+              {
+                "id": "P6",
+                "left": "no",
+                "right": "Listening word: no."
+              },
+              {
+                "id": "P7",
+                "left": "think",
+                "right": "Listening word: think."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L01_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the speaking language",
+            "ru": "Изучите разговорный язык"
+          },
+          "instructions": {
+            "en": "Read the model phrases and notice how they work in conversation.",
+            "ru": "Прочитайте модельные фразы и обратите внимание, как они используются в разговоре."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Key Words and First Phrases: Answering with More Than One Word. Speaking mission: Learn the essential speaking language to practice giving short complete answers instead of one-word replies. Models: Yes, I do. I like it. No, I do not, because I am busy. I like tea, but I prefer coffee.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L01_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose what to say",
+            "ru": "Выберите, что сказать"
+          },
+          "instructions": {
+            "en": "Choose the best spoken response.",
+            "ru": "Выберите лучший устный ответ."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Learn the essential speaking language to practice giving short complete answers instead of one-word replies.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Yes, I do. I like it.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "No, I do not, because I am busy.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I like tea, but I prefer coffee.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Yes, I do. I like it.” directly supports the speaking mission."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L01_TRANSLATE_08",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Yes, I do. I like it.",
+            "word_bank": [
+              "Yes",
+              "I",
+              "do",
+              "I",
+              "like",
+              "it"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L01_FILL_BLANK_09",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ it.",
+            "correct_answer": "Yes",
+            "options": [
+              "Yes",
+              "because",
+              "and"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L01_TAP_WORDS_10",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "Yes, I do. I like it.",
+            "word_bank": [
+              "it",
+              "like",
+              "I",
+              "do",
+              "I",
+              "Yes"
+            ],
+            "correct_words": [
+              "Yes",
+              "I",
+              "do",
+              "I",
+              "like",
+              "it"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L01_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen to the model",
+            "ru": "Послушайте образец"
+          },
+          "instructions": {
+            "en": "Listen and type what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Yes, I do. I like it.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L01_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "No, I do not, because I am busy.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Learn the essential speaking language to practice giving short complete answers instead of one-word replies."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L01_STORY_11",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Key Words and First Phrases: Answering with More Than One Word",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "Yes, I do. I like it."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "Yes, I do. I like it.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L01_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "because",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple speaking meaning of 'because'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple speaking meaning of 'and'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple speaking meaning of 'but'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple speaking meaning of 'also'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "because: A simple speaking meaning of 'because'."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L01_LISTEN_CHOOSE_WORD_12",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ it.",
+            "audio_text": "Yes, I do. I like it.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Yes",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "because",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L01_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ it.",
+            "correct_answer": "Yes",
+            "hint_prefix": "ye",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L01_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "because",
+                "text": "because"
+              },
+              {
+                "id": "V2",
+                "audio_text": "and",
+                "text": "and"
+              },
+              {
+                "id": "V3",
+                "audio_text": "but",
+                "text": "but"
+              },
+              {
+                "id": "V4",
+                "audio_text": "also",
+                "text": "also"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T05_L02",
+      "order": 2,
+      "title": {
+        "en": "Build Simple Sentences: Answering with More Than One Word",
+        "ru": "Build Simple Sentences: Answering with More Than One Word"
+      },
+      "objective": {
+        "en": "Build useful spoken sentences to practice giving short complete answers instead of one-word replies.",
+        "ru": "Build useful spoken sentences to practice giving short complete answers instead of one-word replies."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T05_L02_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "and",
+                "right": "Listening word: and."
+              },
+              {
+                "id": "P2",
+                "left": "but",
+                "right": "Listening word: but."
+              },
+              {
+                "id": "P3",
+                "left": "also",
+                "right": "Listening word: also."
+              },
+              {
+                "id": "P4",
+                "left": "yes",
+                "right": "Listening word: yes."
+              },
+              {
+                "id": "P5",
+                "left": "no",
+                "right": "Listening word: no."
+              },
+              {
+                "id": "P6",
+                "left": "because",
+                "right": "Listening word: because."
+              },
+              {
+                "id": "P7",
+                "left": "think",
+                "right": "Listening word: think."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L02_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the speaking language",
+            "ru": "Изучите разговорный язык"
+          },
+          "instructions": {
+            "en": "Read the model phrases and notice how they work in conversation.",
+            "ru": "Прочитайте модельные фразы и обратите внимание, как они используются в разговоре."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Build Simple Sentences: Answering with More Than One Word. Speaking mission: Build useful spoken sentences to practice giving short complete answers instead of one-word replies. Models: No, I do not, because I am busy. I like tea, but I prefer coffee. I also study English at home.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L02_QUIZ_09",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: No, I do not, because I am busy.",
+            "options": [
+              {
+                "id": "A",
+                "text": "No",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "and",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "but",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L02_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Build the English phrase",
+            "ru": "Составьте английскую фразу"
+          },
+          "instructions": {
+            "en": "Build the spoken English phrase.",
+            "ru": "Составьте разговорную английскую фразу."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Переведите целевую фразу на английский.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "No, I do not, because I am busy.",
+            "word_bank": [
+              "No",
+              "I",
+              "do",
+              "not",
+              "because",
+              "I",
+              "am",
+              "busy",
+              "but"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L02_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the phrase",
+            "ru": "Завершите фразу"
+          },
+          "instructions": {
+            "en": "Choose the missing word.",
+            "ru": "Выберите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "No, I do not, ___ I am busy.",
+            "correct_answer": "because",
+            "options": [
+              "because",
+              "and",
+              "but"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L02_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in natural spoken order.",
+            "ru": "Расставьте слова в естественном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "busy",
+              "am",
+              "I",
+              "because",
+              "not",
+              "do",
+              "I",
+              "No"
+            ],
+            "correct_words": [
+              "No",
+              "I",
+              "do",
+              "not",
+              "because",
+              "I",
+              "am",
+              "busy"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L02_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen to the model",
+            "ru": "Послушайте образец"
+          },
+          "instructions": {
+            "en": "Listen and type what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "No, I do not, because I am busy.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L02_LISTENING_SHADOWING_10",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "No, I do not, because I am busy.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L02_STORY_11",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Build Simple Sentences: Answering with More Than One Word",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "No, I do not, because I am busy."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "No, I do not, because I am busy.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L02_CHOOSE_DEFINITION_12",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "and",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'and'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L02_LISTEN_CHOOSE_WORD_13",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ busy.",
+            "audio_text": "No, I do not, because I am busy.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "No",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "and",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L02_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Впишите слово"
+          },
+          "instructions": {
+            "en": "Type the missing word.",
+            "ru": "Впишите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "No, I do not, ___ I am busy.",
+            "correct_answer": "because",
+            "hint_prefix": "be",
+            "explanation": "The missing word is because."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L02_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "and",
+                "text": "and"
+              },
+              {
+                "id": "V2",
+                "audio_text": "but",
+                "text": "but"
+              },
+              {
+                "id": "V3",
+                "audio_text": "also",
+                "text": "also"
+              },
+              {
+                "id": "V4",
+                "audio_text": "yes",
+                "text": "yes"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T05_L03",
+      "order": 3,
+      "title": {
+        "en": "Ask and Answer: Answering with More Than One Word",
+        "ru": "Ask and Answer: Answering with More Than One Word"
+      },
+      "objective": {
+        "en": "Ask and answer a simple question to practice giving short complete answers instead of one-word replies.",
+        "ru": "Ask and answer a simple question to practice giving short complete answers instead of one-word replies."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T05_L03_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each speaking word with its meaning.",
+            "ru": "Соедините слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "but",
+                "right": "A simple speaking meaning of 'but'."
+              },
+              {
+                "id": "P2",
+                "left": "also",
+                "right": "A simple speaking meaning of 'also'."
+              },
+              {
+                "id": "P3",
+                "left": "yes",
+                "right": "A simple speaking meaning of 'yes'."
+              },
+              {
+                "id": "P4",
+                "left": "no",
+                "right": "A simple speaking meaning of 'no'."
+              },
+              {
+                "id": "P5",
+                "left": "think",
+                "right": "Listening word: think."
+              },
+              {
+                "id": "P6",
+                "left": "because",
+                "right": "Listening word: because."
+              },
+              {
+                "id": "P7",
+                "left": "and",
+                "right": "Listening word: and."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L03_TEXT_08",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: I like tea, but I prefer coffee.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L03_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose what to say",
+            "ru": "Выберите, что сказать"
+          },
+          "instructions": {
+            "en": "Choose the best spoken response.",
+            "ru": "Выберите лучший устный ответ."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Ask and answer a simple question to practice giving short complete answers instead of one-word replies.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I like tea, but I prefer coffee.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I also study English at home.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Yes, I do. I like it.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I like tea, but I prefer coffee.” directly supports the speaking mission."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L03_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I like tea, but I prefer coffee.",
+            "word_bank": [
+              "I",
+              "like",
+              "tea",
+              "but",
+              "I",
+              "prefer",
+              "coffee"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L03_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ coffee.",
+            "correct_answer": "I",
+            "options": [
+              "I",
+              "but",
+              "also"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L03_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in natural spoken order.",
+            "ru": "Расставьте слова в естественном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "coffee",
+              "prefer",
+              "I",
+              "but",
+              "tea",
+              "like",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "like",
+              "tea",
+              "but",
+              "I",
+              "prefer",
+              "coffee"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L03_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I like tea, but I prefer coffee.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L03_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I also study English at home.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Ask and answer a simple question to practice giving short complete answers instead of one-word replies."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L03_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Speaking situation",
+            "ru": "Разговорная ситуация"
+          },
+          "instructions": {
+            "en": "Read the situation and choose what you would say.",
+            "ru": "Прочитайте ситуацию и выберите, что вы скажете."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Ask and Answer: Answering with More Than One Word",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Conversation Partner",
+                "text": "I like tea, but I prefer coffee."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "I also study English at home.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Yes, I do. I like it.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L03_CHOOSE_DEFINITION_12",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "but",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'but'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L03_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Послушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I ___ tea, but I prefer coffee.",
+            "audio_text": "I like tea, but I prefer coffee.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "like",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "but",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "also",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is like."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L03_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ listening practice.",
+            "correct_answer": "am",
+            "hint_prefix": "am",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L03_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "but",
+                "text": "but"
+              },
+              {
+                "id": "V2",
+                "audio_text": "also",
+                "text": "also"
+              },
+              {
+                "id": "V3",
+                "audio_text": "yes",
+                "text": "yes"
+              },
+              {
+                "id": "V4",
+                "audio_text": "no",
+                "text": "no"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T05_L04",
+      "order": 4,
+      "title": {
+        "en": "Listen and Respond: Answering with More Than One Word",
+        "ru": "Listen and Respond: Answering with More Than One Word"
+      },
+      "objective": {
+        "en": "Understand and respond to a short exchange to practice giving short complete answers instead of one-word replies.",
+        "ru": "Understand and respond to a short exchange to practice giving short complete answers instead of one-word replies."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T05_L04_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each speaking word with its meaning.",
+            "ru": "Соедините слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "also",
+                "right": "A simple speaking meaning of 'also'."
+              },
+              {
+                "id": "P2",
+                "left": "yes",
+                "right": "A simple speaking meaning of 'yes'."
+              },
+              {
+                "id": "P3",
+                "left": "no",
+                "right": "A simple speaking meaning of 'no'."
+              },
+              {
+                "id": "P4",
+                "left": "think",
+                "right": "A simple speaking meaning of 'think'."
+              },
+              {
+                "id": "P5",
+                "left": "want",
+                "right": "Listening word: want."
+              },
+              {
+                "id": "P6",
+                "left": "because",
+                "right": "Listening word: because."
+              },
+              {
+                "id": "P7",
+                "left": "and",
+                "right": "Listening word: and."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L04_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the speaking language",
+            "ru": "Изучите разговорный язык"
+          },
+          "instructions": {
+            "en": "Read the model phrases and notice how they work in conversation.",
+            "ru": "Прочитайте модельные фразы и обратите внимание, как они используются в разговоре."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and Respond: Answering with More Than One Word. Speaking mission: Understand and respond to a short exchange to practice giving short complete answers instead of one-word replies. Models: I also study English at home. Yes, I do. I like it. No, I do not, because I am busy.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L04_QUIZ_08",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: I also study English at home.",
+            "options": [
+              {
+                "id": "A",
+                "text": "also",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "yes",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "no",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L04_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I also study English at home.",
+            "word_bank": [
+              "I",
+              "also",
+              "study",
+              "English",
+              "at",
+              "home"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L04_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the phrase",
+            "ru": "Завершите фразу"
+          },
+          "instructions": {
+            "en": "Choose the missing word.",
+            "ru": "Выберите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ study English at home.",
+            "correct_answer": "also",
+            "options": [
+              "also",
+              "yes",
+              "no"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L04_TAP_WORDS_10",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I also study English at home.",
+            "word_bank": [
+              "home",
+              "at",
+              "English",
+              "study",
+              "also",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "also",
+              "study",
+              "English",
+              "at",
+              "home"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L04_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen to the model",
+            "ru": "Послушайте образец"
+          },
+          "instructions": {
+            "en": "Listen and type what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I also study English at home.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L04_LISTENING_SHADOWING_11",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I also study English at home.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L04_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Listen and Respond: Answering with More Than One Word",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "I also study English at home."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "I also study English at home.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L04_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "also",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple speaking meaning of 'also'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple speaking meaning of 'yes'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple speaking meaning of 'no'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple speaking meaning of 'think'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "also: A simple speaking meaning of 'also'."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L04_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Послушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I ___ study English at home.",
+            "audio_text": "I also study English at home.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "also",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "yes",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "no",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is also."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L04_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ listening practice.",
+            "correct_answer": "am",
+            "hint_prefix": "am",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L04_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "also",
+                "text": "also"
+              },
+              {
+                "id": "V2",
+                "audio_text": "yes",
+                "text": "yes"
+              },
+              {
+                "id": "V3",
+                "audio_text": "no",
+                "text": "no"
+              },
+              {
+                "id": "V4",
+                "audio_text": "think",
+                "text": "think"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T05_L05",
+      "order": 5,
+      "title": {
+        "en": "Speak Clearly: Answering with More Than One Word",
+        "ru": "Speak Clearly: Answering with More Than One Word"
+      },
+      "objective": {
+        "en": "Say the target phrases clearly to practice giving short complete answers instead of one-word replies.",
+        "ru": "Say the target phrases clearly to practice giving short complete answers instead of one-word replies."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T05_L05_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "yes",
+                "right": "Listening word: yes."
+              },
+              {
+                "id": "P2",
+                "left": "no",
+                "right": "Listening word: no."
+              },
+              {
+                "id": "P3",
+                "left": "think",
+                "right": "Listening word: think."
+              },
+              {
+                "id": "P4",
+                "left": "want",
+                "right": "Listening word: want."
+              },
+              {
+                "id": "P5",
+                "left": "need",
+                "right": "Listening word: need."
+              },
+              {
+                "id": "P6",
+                "left": "because",
+                "right": "Listening word: because."
+              },
+              {
+                "id": "P7",
+                "left": "and",
+                "right": "Listening word: and."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L05_TEXT_09",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: Yes, I do. I like it.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L05_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose what to say",
+            "ru": "Выберите, что сказать"
+          },
+          "instructions": {
+            "en": "Choose the best spoken response.",
+            "ru": "Выберите лучший устный ответ."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Say the target phrases clearly to practice giving short complete answers instead of one-word replies.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Yes, I do. I like it.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "No, I do not, because I am busy.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I like tea, but I prefer coffee.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Yes, I do. I like it.” directly supports the speaking mission."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L05_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Build the English phrase",
+            "ru": "Составьте английскую фразу"
+          },
+          "instructions": {
+            "en": "Build the spoken English phrase.",
+            "ru": "Составьте разговорную английскую фразу."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Переведите целевую фразу на английский.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Yes, I do. I like it.",
+            "word_bank": [
+              "Yes",
+              "I",
+              "do",
+              "I",
+              "like",
+              "it",
+              "no"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L05_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ it.",
+            "correct_answer": "Yes",
+            "options": [
+              "Yes",
+              "yes",
+              "no"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L05_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in natural spoken order.",
+            "ru": "Расставьте слова в естественном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "it",
+              "like",
+              "I",
+              "do",
+              "I",
+              "Yes"
+            ],
+            "correct_words": [
+              "Yes",
+              "I",
+              "do",
+              "I",
+              "like",
+              "it"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L05_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "Yes, I do. I like it.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L05_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "No, I do not, because I am busy.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Say the target phrases clearly to practice giving short complete answers instead of one-word replies."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L05_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Speak Clearly: Answering with More Than One Word",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "Yes, I do. I like it."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "Yes, I do. I like it.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L05_CHOOSE_DEFINITION_13",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "yes",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'yes'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L05_LISTEN_CHOOSE_WORD_14",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ it.",
+            "audio_text": "Yes, I do. I like it.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Yes",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "yes",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L05_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Впишите слово"
+          },
+          "instructions": {
+            "en": "Type the missing word.",
+            "ru": "Впишите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Yes, I do. I ___ it.",
+            "correct_answer": "like",
+            "hint_prefix": "li",
+            "explanation": "The missing word is like."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L05_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match sound and word",
+            "ru": "Соедините звук и слово"
+          },
+          "instructions": {
+            "en": "Listen and match each word to its spelling.",
+            "ru": "Прослушайте и соедините слово с написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "yes",
+                "text": "yes"
+              },
+              {
+                "id": "V2",
+                "audio_text": "no",
+                "text": "no"
+              },
+              {
+                "id": "V3",
+                "audio_text": "think",
+                "text": "think"
+              },
+              {
+                "id": "V4",
+                "audio_text": "want",
+                "text": "want"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T05_L06",
+      "order": 6,
+      "title": {
+        "en": "Use It in Context: Answering with More Than One Word",
+        "ru": "Use It in Context: Answering with More Than One Word"
+      },
+      "objective": {
+        "en": "Use the language in a realistic conversation to practice giving short complete answers instead of one-word replies.",
+        "ru": "Use the language in a realistic conversation to practice giving short complete answers instead of one-word replies."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T05_L06_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "no",
+                "right": "Listening word: no."
+              },
+              {
+                "id": "P2",
+                "left": "think",
+                "right": "Listening word: think."
+              },
+              {
+                "id": "P3",
+                "left": "want",
+                "right": "Listening word: want."
+              },
+              {
+                "id": "P4",
+                "left": "need",
+                "right": "Listening word: need."
+              },
+              {
+                "id": "P5",
+                "left": "prefer",
+                "right": "Listening word: prefer."
+              },
+              {
+                "id": "P6",
+                "left": "because",
+                "right": "Listening word: because."
+              },
+              {
+                "id": "P7",
+                "left": "and",
+                "right": "Listening word: and."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L06_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the speaking language",
+            "ru": "Изучите разговорный язык"
+          },
+          "instructions": {
+            "en": "Read the model phrases and notice how they work in conversation.",
+            "ru": "Прочитайте модельные фразы и обратите внимание, как они используются в разговоре."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Use It in Context: Answering with More Than One Word. Speaking mission: Use the language in a realistic conversation to practice giving short complete answers instead of one-word replies. Models: No, I do not, because I am busy. I like tea, but I prefer coffee. I also study English at home.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L06_QUIZ_09",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: No, I do not, because I am busy.",
+            "options": [
+              {
+                "id": "A",
+                "text": "No",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "think",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "want",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L06_TRANSLATE_10",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "No, I do not, because I am busy.",
+            "word_bank": [
+              "No",
+              "I",
+              "do",
+              "not",
+              "because",
+              "I",
+              "am",
+              "busy"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L06_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the phrase",
+            "ru": "Завершите фразу"
+          },
+          "instructions": {
+            "en": "Choose the missing word.",
+            "ru": "Выберите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "No, I do not, ___ I am busy.",
+            "correct_answer": "because",
+            "options": [
+              "because",
+              "no",
+              "think"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L06_TAP_WORDS_11",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "No, I do not, because I am busy.",
+            "word_bank": [
+              "busy",
+              "am",
+              "I",
+              "because",
+              "not",
+              "do",
+              "I",
+              "No"
+            ],
+            "correct_words": [
+              "No",
+              "I",
+              "do",
+              "not",
+              "because",
+              "I",
+              "am",
+              "busy"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L06_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen to the model",
+            "ru": "Послушайте образец"
+          },
+          "instructions": {
+            "en": "Listen and type what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "No, I do not, because I am busy.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L06_LISTENING_SHADOWING_12",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "No, I do not, because I am busy.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L06_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Speaking situation",
+            "ru": "Разговорная ситуация"
+          },
+          "instructions": {
+            "en": "Read the situation and choose what you would say.",
+            "ru": "Прочитайте ситуацию и выберите, что вы скажете."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Use It in Context: Answering with More Than One Word",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Conversation Partner",
+                "text": "No, I do not, because I am busy."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "I like tea, but I prefer coffee.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I also study English at home.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L06_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "no",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple speaking meaning of 'no'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple speaking meaning of 'think'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple speaking meaning of 'want'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple speaking meaning of 'need'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "no: A simple speaking meaning of 'no'."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L06_LISTEN_CHOOSE_WORD_13",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ busy.",
+            "audio_text": "No, I do not, because I am busy.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "No",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "no",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L06_MISSING_WORD_14",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ busy.",
+            "correct_answer": "No",
+            "hint_prefix": "no",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L06_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match sound and word",
+            "ru": "Соедините звук и слово"
+          },
+          "instructions": {
+            "en": "Listen and match each word to its spelling.",
+            "ru": "Прослушайте и соедините слово с написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "no",
+                "text": "no"
+              },
+              {
+                "id": "V2",
+                "audio_text": "think",
+                "text": "think"
+              },
+              {
+                "id": "V3",
+                "audio_text": "want",
+                "text": "want"
+              },
+              {
+                "id": "V4",
+                "audio_text": "need",
+                "text": "need"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T05_L07",
+      "order": 7,
+      "title": {
+        "en": "Build Your Response: Answering with More Than One Word",
+        "ru": "Build Your Response: Answering with More Than One Word"
+      },
+      "objective": {
+        "en": "Give a slightly fuller spoken response to practice giving short complete answers instead of one-word replies.",
+        "ru": "Give a slightly fuller spoken response to practice giving short complete answers instead of one-word replies."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T05_L07_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each speaking word with its meaning.",
+            "ru": "Соедините слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "think",
+                "right": "A simple speaking meaning of 'think'."
+              },
+              {
+                "id": "P2",
+                "left": "want",
+                "right": "A simple speaking meaning of 'want'."
+              },
+              {
+                "id": "P3",
+                "left": "need",
+                "right": "A simple speaking meaning of 'need'."
+              },
+              {
+                "id": "P4",
+                "left": "prefer",
+                "right": "A simple speaking meaning of 'prefer'."
+              },
+              {
+                "id": "P5",
+                "left": "because",
+                "right": "Listening word: because."
+              },
+              {
+                "id": "P6",
+                "left": "and",
+                "right": "Listening word: and."
+              },
+              {
+                "id": "P7",
+                "left": "but",
+                "right": "Listening word: but."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L07_TEXT_08",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: I like tea, but I prefer coffee.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L07_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose what to say",
+            "ru": "Выберите, что сказать"
+          },
+          "instructions": {
+            "en": "Choose the best spoken response.",
+            "ru": "Выберите лучший устный ответ."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Give a slightly fuller spoken response to practice giving short complete answers instead of one-word replies.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I like tea, but I prefer coffee.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I also study English at home.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Yes, I do. I like it.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I like tea, but I prefer coffee.” directly supports the speaking mission."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L07_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I like tea, but I prefer coffee.",
+            "word_bank": [
+              "I",
+              "like",
+              "tea",
+              "but",
+              "I",
+              "prefer",
+              "coffee"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L07_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ coffee.",
+            "correct_answer": "I",
+            "options": [
+              "I",
+              "think",
+              "want"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L07_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in natural spoken order.",
+            "ru": "Расставьте слова в естественном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "coffee",
+              "prefer",
+              "I",
+              "but",
+              "tea",
+              "like",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "like",
+              "tea",
+              "but",
+              "I",
+              "prefer",
+              "coffee"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L07_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I like tea, but I prefer coffee.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L07_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I also study English at home.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Give a slightly fuller spoken response to practice giving short complete answers instead of one-word replies."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L07_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Build Your Response: Answering with More Than One Word",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "I like tea, but I prefer coffee."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "I like tea, but I prefer coffee.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L07_CHOOSE_DEFINITION_13",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "think",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'think'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L07_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Послушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I ___ tea, but I prefer coffee.",
+            "audio_text": "I like tea, but I prefer coffee.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "like",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "think",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "want",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is like."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L07_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Впишите слово"
+          },
+          "instructions": {
+            "en": "Type the missing word.",
+            "ru": "Впишите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ tea, but I prefer coffee.",
+            "correct_answer": "like",
+            "hint_prefix": "li",
+            "explanation": "The missing word is like."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L07_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "think",
+                "text": "think"
+              },
+              {
+                "id": "V2",
+                "audio_text": "want",
+                "text": "want"
+              },
+              {
+                "id": "V3",
+                "audio_text": "need",
+                "text": "need"
+              },
+              {
+                "id": "V4",
+                "audio_text": "prefer",
+                "text": "prefer"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T05_L08",
+      "order": 8,
+      "title": {
+        "en": "Have a Short Conversation: Answering with More Than One Word",
+        "ru": "Have a Short Conversation: Answering with More Than One Word"
+      },
+      "objective": {
+        "en": "Complete a short conversation to practice giving short complete answers instead of one-word replies.",
+        "ru": "Complete a short conversation to practice giving short complete answers instead of one-word replies."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T05_L08_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "want",
+                "right": "Listening word: want."
+              },
+              {
+                "id": "P2",
+                "left": "need",
+                "right": "Listening word: need."
+              },
+              {
+                "id": "P3",
+                "left": "prefer",
+                "right": "Listening word: prefer."
+              },
+              {
+                "id": "P4",
+                "left": "because",
+                "right": "Listening word: because."
+              },
+              {
+                "id": "P5",
+                "left": "and",
+                "right": "Listening word: and."
+              },
+              {
+                "id": "P6",
+                "left": "but",
+                "right": "Listening word: but."
+              },
+              {
+                "id": "P7",
+                "left": "also",
+                "right": "Listening word: also."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L08_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the speaking language",
+            "ru": "Изучите разговорный язык"
+          },
+          "instructions": {
+            "en": "Read the model phrases and notice how they work in conversation.",
+            "ru": "Прочитайте модельные фразы и обратите внимание, как они используются в разговоре."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Have a Short Conversation: Answering with More Than One Word. Speaking mission: Complete a short conversation to practice giving short complete answers instead of one-word replies. Models: I also study English at home. Yes, I do. I like it. No, I do not, because I am busy.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L08_QUIZ_09",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: I also study English at home.",
+            "options": [
+              {
+                "id": "A",
+                "text": "also",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "want",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "need",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L08_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Build the English phrase",
+            "ru": "Составьте английскую фразу"
+          },
+          "instructions": {
+            "en": "Build the spoken English phrase.",
+            "ru": "Составьте разговорную английскую фразу."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Переведите целевую фразу на английский.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I also study English at home.",
+            "word_bank": [
+              "I",
+              "also",
+              "study",
+              "English",
+              "at",
+              "home",
+              "need"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L08_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the phrase",
+            "ru": "Завершите фразу"
+          },
+          "instructions": {
+            "en": "Choose the missing word.",
+            "ru": "Выберите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ study English at home.",
+            "correct_answer": "also",
+            "options": [
+              "also",
+              "want",
+              "need"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L08_TAP_WORDS_10",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I also study English at home.",
+            "word_bank": [
+              "home",
+              "at",
+              "English",
+              "study",
+              "also",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "also",
+              "study",
+              "English",
+              "at",
+              "home"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L08_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen to the model",
+            "ru": "Послушайте образец"
+          },
+          "instructions": {
+            "en": "Listen and type what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I also study English at home.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L08_LISTENING_SHADOWING_11",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I also study English at home.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L08_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Speaking situation",
+            "ru": "Разговорная ситуация"
+          },
+          "instructions": {
+            "en": "Read the situation and choose what you would say.",
+            "ru": "Прочитайте ситуацию и выберите, что вы скажете."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Have a Short Conversation: Answering with More Than One Word",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Conversation Partner",
+                "text": "I also study English at home."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "Yes, I do. I like it.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "No, I do not, because I am busy.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L08_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "want",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple speaking meaning of 'want'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple speaking meaning of 'need'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple speaking meaning of 'prefer'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple speaking meaning of 'because'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "want: A simple speaking meaning of 'want'."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L08_LISTEN_CHOOSE_WORD_12",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ home.",
+            "audio_text": "I also study English at home.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "I",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "want",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L08_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ listening practice.",
+            "correct_answer": "am",
+            "hint_prefix": "am",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L08_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "want",
+                "text": "want"
+              },
+              {
+                "id": "V2",
+                "audio_text": "need",
+                "text": "need"
+              },
+              {
+                "id": "V3",
+                "audio_text": "prefer",
+                "text": "prefer"
+              },
+              {
+                "id": "V4",
+                "audio_text": "because",
+                "text": "because"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T05_L09",
+      "order": 9,
+      "title": {
+        "en": "Speak with Less Support: Answering with More Than One Word",
+        "ru": "Speak with Less Support: Answering with More Than One Word"
+      },
+      "objective": {
+        "en": "Communicate with less support to practice giving short complete answers instead of one-word replies.",
+        "ru": "Communicate with less support to practice giving short complete answers instead of one-word replies."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T05_L09_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each speaking word with its meaning.",
+            "ru": "Соедините слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "need",
+                "right": "A simple speaking meaning of 'need'."
+              },
+              {
+                "id": "P2",
+                "left": "prefer",
+                "right": "A simple speaking meaning of 'prefer'."
+              },
+              {
+                "id": "P3",
+                "left": "because",
+                "right": "A simple speaking meaning of 'because'."
+              },
+              {
+                "id": "P4",
+                "left": "and",
+                "right": "A simple speaking meaning of 'and'."
+              },
+              {
+                "id": "P5",
+                "left": "but",
+                "right": "Listening word: but."
+              },
+              {
+                "id": "P6",
+                "left": "also",
+                "right": "Listening word: also."
+              },
+              {
+                "id": "P7",
+                "left": "yes",
+                "right": "Listening word: yes."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L09_TEXT_08",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: Yes, I do. I like it.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L09_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose what to say",
+            "ru": "Выберите, что сказать"
+          },
+          "instructions": {
+            "en": "Choose the best spoken response.",
+            "ru": "Выберите лучший устный ответ."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Communicate with less support to practice giving short complete answers instead of one-word replies.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Yes, I do. I like it.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "No, I do not, because I am busy.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I like tea, but I prefer coffee.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Yes, I do. I like it.” directly supports the speaking mission."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L09_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Yes, I do. I like it.",
+            "word_bank": [
+              "Yes",
+              "I",
+              "do",
+              "I",
+              "like",
+              "it"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L09_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ it.",
+            "correct_answer": "Yes",
+            "options": [
+              "Yes",
+              "need",
+              "prefer"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L09_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in natural spoken order.",
+            "ru": "Расставьте слова в естественном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "it",
+              "like",
+              "I",
+              "do",
+              "I",
+              "Yes"
+            ],
+            "correct_words": [
+              "Yes",
+              "I",
+              "do",
+              "I",
+              "like",
+              "it"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L09_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "Yes, I do. I like it.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L09_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "No, I do not, because I am busy.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Communicate with less support to practice giving short complete answers instead of one-word replies."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L09_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Speak with Less Support: Answering with More Than One Word",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "Yes, I do. I like it."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "Yes, I do. I like it.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L09_CHOOSE_DEFINITION_13",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "need",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'need'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L09_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Послушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "Yes, I do. I ___ it.",
+            "audio_text": "Yes, I do. I like it.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "like",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "need",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "prefer",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is like."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L09_MISSING_WORD_14",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ it.",
+            "correct_answer": "Yes",
+            "hint_prefix": "ye",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L09_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match sound and word",
+            "ru": "Соедините звук и слово"
+          },
+          "instructions": {
+            "en": "Listen and match each word to its spelling.",
+            "ru": "Прослушайте и соедините слово с написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "need",
+                "text": "need"
+              },
+              {
+                "id": "V2",
+                "audio_text": "prefer",
+                "text": "prefer"
+              },
+              {
+                "id": "V3",
+                "audio_text": "because",
+                "text": "because"
+              },
+              {
+                "id": "V4",
+                "audio_text": "and",
+                "text": "and"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_SPEAKING_T05_L10",
+      "order": 10,
+      "title": {
+        "en": "Track Speaking Mission: Answering with More Than One Word",
+        "ru": "Track Speaking Mission: Answering with More Than One Word"
+      },
+      "objective": {
+        "en": "Combine the track language in a final speaking mission to practice giving short complete answers instead of one-word replies.",
+        "ru": "Combine the track language in a final speaking mission to practice giving short complete answers instead of one-word replies."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_SPEAKING_T05_L10_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "prefer",
+                "right": "Listening word: prefer."
+              },
+              {
+                "id": "P2",
+                "left": "because",
+                "right": "Listening word: because."
+              },
+              {
+                "id": "P3",
+                "left": "and",
+                "right": "Listening word: and."
+              },
+              {
+                "id": "P4",
+                "left": "but",
+                "right": "Listening word: but."
+              },
+              {
+                "id": "P5",
+                "left": "also",
+                "right": "Listening word: also."
+              },
+              {
+                "id": "P6",
+                "left": "yes",
+                "right": "Listening word: yes."
+              },
+              {
+                "id": "P7",
+                "left": "no",
+                "right": "Listening word: no."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L10_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the speaking language",
+            "ru": "Изучите разговорный язык"
+          },
+          "instructions": {
+            "en": "Read the model phrases and notice how they work in conversation.",
+            "ru": "Прочитайте модельные фразы и обратите внимание, как они используются в разговоре."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Track Speaking Mission: Answering with More Than One Word. Speaking mission: Combine the track language in a final speaking mission to practice giving short complete answers instead of one-word replies. Models: No, I do not, because I am busy. I like tea, but I prefer coffee. I also study English at home.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L10_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose what to say",
+            "ru": "Выберите, что сказать"
+          },
+          "instructions": {
+            "en": "Choose the best spoken response.",
+            "ru": "Выберите лучший устный ответ."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Combine the track language in a final speaking mission to practice giving short complete answers instead of one-word replies.",
+            "options": [
+              {
+                "id": "A",
+                "text": "No, I do not, because I am busy.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I like tea, but I prefer coffee.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I also study English at home.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“No, I do not, because I am busy.” directly supports the speaking mission."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L10_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "No, I do not, because I am busy.",
+            "word_bank": [
+              "No",
+              "I",
+              "do",
+              "not",
+              "because",
+              "I",
+              "am",
+              "busy"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L10_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ busy.",
+            "correct_answer": "No",
+            "options": [
+              "No",
+              "prefer",
+              "because"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L10_TAP_WORDS_11",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "No, I do not, because I am busy.",
+            "word_bank": [
+              "busy",
+              "am",
+              "I",
+              "because",
+              "not",
+              "do",
+              "I",
+              "No"
+            ],
+            "correct_words": [
+              "No",
+              "I",
+              "do",
+              "not",
+              "because",
+              "I",
+              "am",
+              "busy"
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L10_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen to the model",
+            "ru": "Послушайте образец"
+          },
+          "instructions": {
+            "en": "Listen and type what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "No, I do not, because I am busy.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L10_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I like tea, but I prefer coffee.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Combine the track language in a final speaking mission to practice giving short complete answers instead of one-word replies."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L10_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Speaking situation",
+            "ru": "Разговорная ситуация"
+          },
+          "instructions": {
+            "en": "Read the situation and choose what you would say.",
+            "ru": "Прочитайте ситуацию и выберите, что вы скажете."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Track Speaking Mission: Answering with More Than One Word",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Conversation Partner",
+                "text": "No, I do not, because I am busy."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "I like tea, but I prefer coffee.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I also study English at home.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L10_CHOOSE_DEFINITION_12",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "prefer",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'prefer'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L10_LISTEN_CHOOSE_WORD_13",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ busy.",
+            "audio_text": "No, I do not, because I am busy.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "No",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "prefer",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L10_MISSING_WORD_14",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ busy.",
+            "correct_answer": "No",
+            "hint_prefix": "no",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_SPEAKING_T05_L10_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match sound and word",
+            "ru": "Соедините звук и слово"
+          },
+          "instructions": {
+            "en": "Listen and match each word to its spelling.",
+            "ru": "Прослушайте и соедините слово с написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "prefer",
+                "text": "prefer"
+              },
+              {
+                "id": "V2",
+                "audio_text": "because",
+                "text": "because"
+              },
+              {
+                "id": "V3",
+                "audio_text": "and",
+                "text": "and"
+              },
+              {
+                "id": "V4",
+                "audio_text": "but",
+                "text": "but"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    }
+  ]
+}
