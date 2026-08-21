@@ -25,8 +25,26 @@ Production uses the dedicated Compose project in
 `.env`. Caddy proxies `https://api.lingoiq.online/audio/*` to the MinIO S3 API;
 the public path includes the `audio` bucket name.
 
-Caddy must be attached to `elearning-net` so it can reach
-`audio-minio:9000`; the MinIO host port remains bound to `127.0.0.1` only.
+Caddy must be attached to the external Docker network `elearning-net` so it
+can reach `audio-minio:9000`; the MinIO host port remains bound to
+`127.0.0.1` only. Add this network to the Caddy Compose project:
+
+```yaml
+services:
+  caddy:
+    networks:
+      - default
+      - elearning-net
+
+networks:
+  elearning-net:
+    external: true
+    name: elearning-net
+```
+
+Then recreate Caddy with `docker compose up -d`. Do not rely on a one-off
+`docker network connect`, because that connection disappears when the
+container is recreated.
 
 Start or update storage:
 
