@@ -1,0 +1,4535 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_EXAM_PREP_T02",
+    "title": {
+      "en": "Vocabulary Questions",
+      "ru": "Vocabulary Questions"
+    },
+    "description": {
+      "en": "An A1 Exams track focused on recognizing basic A1 vocabulary in exam-style tasks.",
+      "ru": "An A1 Exams track focused on recognizing basic A1 vocabulary in exam-style tasks."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "goal": "study",
+    "track_type": "thematic"
+  },
+  "lessons": [
+    {
+      "code": "A1_EXAM_PREP_T02_L01",
+      "order": 1,
+      "title": {
+        "en": "Learn the Task: Vocabulary Questions",
+        "ru": "Learn the Task: Vocabulary Questions"
+      },
+      "objective": {
+        "en": "Understand the exam task and key language while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+        "ru": "Understand the exam task and key language while practicing recognizing basic A1 vocabulary in exam-style tasks."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T02_L01_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "word",
+                "right": "A simple exam meaning of 'word'."
+              },
+              {
+                "id": "P2",
+                "left": "meaning",
+                "right": "A simple exam meaning of 'meaning'."
+              },
+              {
+                "id": "P3",
+                "left": "picture",
+                "right": "A simple exam meaning of 'picture'."
+              },
+              {
+                "id": "P4",
+                "left": "person",
+                "right": "A simple exam meaning of 'person'."
+              },
+              {
+                "id": "P5",
+                "left": "place",
+                "right": "Exam word: place."
+              },
+              {
+                "id": "P6",
+                "left": "food",
+                "right": "Exam word: food."
+              },
+              {
+                "id": "P7",
+                "left": "home",
+                "right": "Exam word: home."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L01_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Learn the Task: Vocabulary Questions. Exam mission: Understand the exam task and key language while practicing recognizing basic A1 vocabulary in exam-style tasks. Models: What does this word mean? Choose the correct picture. Match the word and the meaning.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L01_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Understand the exam task and key language while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What does this word mean?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Choose the correct picture.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Match the word and the meaning.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What does this word mean?” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L01_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "word",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "word",
+            "word_bank": [
+              "word"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L01_FILL_BLANK_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L01_TAP_WORDS_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "mean",
+              "word",
+              "this",
+              "does",
+              "What"
+            ],
+            "correct_words": [
+              "What",
+              "does",
+              "this",
+              "word",
+              "mean"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L01_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "What does this word mean?",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-cc87532b0e97953101ba92d5.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L01_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Choose the correct picture.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Understand the exam task and key language while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-404bccadc93f1c58ca2b3171.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L01_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Learn the Task: Vocabulary Questions",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "What does this word mean?"
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L01_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "word",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'word'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'meaning'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'picture'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'person'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "word: A simple exam meaning of 'word'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L01_LISTEN_CHOOSE_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ mean.",
+            "audio_text": "What does this word mean?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "What",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "word",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "meaning",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is What."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L01_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L01_MATCH_PAIRS_VOICE_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "word",
+                "text": "word",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-33b7a3f2148de49a58649c3f.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "meaning",
+                "text": "meaning",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-52224d204a04af617fff8c06.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "picture",
+                "text": "picture",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-69907cb8dbc965014b0a2d15.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "person",
+                "text": "person",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-234be6d2b0bb628a8de21bcd.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L01_COMPLETE_CHAT_01",
+          "order": 14,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "What does this word mean?"
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Choose the correct picture.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Match the word and the meaning.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Choose the correct picture.” is the best response."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T02_L02",
+      "order": 2,
+      "title": {
+        "en": "Practice the Format: Vocabulary Questions",
+        "ru": "Practice the Format: Vocabulary Questions"
+      },
+      "objective": {
+        "en": "Complete a guided exam-style item while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+        "ru": "Complete a guided exam-style item while practicing recognizing basic A1 vocabulary in exam-style tasks."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T02_L02_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "meaning",
+                "right": "Exam word: meaning."
+              },
+              {
+                "id": "P2",
+                "left": "picture",
+                "right": "Exam word: picture."
+              },
+              {
+                "id": "P3",
+                "left": "person",
+                "right": "Exam word: person."
+              },
+              {
+                "id": "P4",
+                "left": "place",
+                "right": "Exam word: place."
+              },
+              {
+                "id": "P5",
+                "left": "food",
+                "right": "Exam word: food."
+              },
+              {
+                "id": "P6",
+                "left": "word",
+                "right": "Exam word: word."
+              },
+              {
+                "id": "P7",
+                "left": "home",
+                "right": "Exam word: home."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L02_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Practice the Format: Vocabulary Questions. Exam mission: Complete a guided exam-style item while practicing recognizing basic A1 vocabulary in exam-style tasks. Models: Choose the correct picture. Match the word and the meaning. Which answer is correct?",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L02_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Build the exam answer",
+            "ru": "Составьте экзаменационный ответ"
+          },
+          "instructions": {
+            "en": "Build the correct English answer.",
+            "ru": "Составьте правильный ответ на английском."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте правильную английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Choose the correct picture.",
+            "word_bank": [
+              "Choose",
+              "the",
+              "correct",
+              "picture",
+              "picture"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L02_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ the correct picture.",
+            "correct_answer": "Choose",
+            "options": [
+              "Choose",
+              "meaning",
+              "picture"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L02_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "picture",
+              "correct",
+              "the",
+              "Choose"
+            ],
+            "correct_words": [
+              "Choose",
+              "the",
+              "correct",
+              "picture"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L02_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Choose the correct picture.",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-404bccadc93f1c58ca2b3171.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L02_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Practice the Format: Vocabulary Questions",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "Choose the correct picture."
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L02_LISTEN_CHOOSE_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ picture.",
+            "audio_text": "Choose the correct picture.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Choose",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "meaning",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "picture",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Choose."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L02_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Введите пропущенное слово"
+          },
+          "instructions": {
+            "en": "Type the correct missing word.",
+            "ru": "Введите правильное пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ the correct picture.",
+            "correct_answer": "Choose",
+            "hint_prefix": "C",
+            "explanation": "The missing word is Choose."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L02_MATCH_PAIRS_VOICE_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "meaning",
+                "text": "meaning",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-52224d204a04af617fff8c06.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "picture",
+                "text": "picture",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-69907cb8dbc965014b0a2d15.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "person",
+                "text": "person",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-234be6d2b0bb628a8de21bcd.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "place",
+                "text": "place",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-de68f9d8d80389e082a00eda.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L02_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Choose the correct picture."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Match the word and the meaning.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Which answer is correct?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is meaning.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Match the word and the meaning.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L02_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "meaning",
+                "right": "Exam word: meaning."
+              },
+              {
+                "id": "P2",
+                "left": "picture",
+                "right": "Exam word: picture."
+              },
+              {
+                "id": "P3",
+                "left": "person",
+                "right": "Exam word: person."
+              },
+              {
+                "id": "P4",
+                "left": "place",
+                "right": "Exam word: place."
+              },
+              {
+                "id": "P5",
+                "left": "food",
+                "right": "Exam word: food."
+              },
+              {
+                "id": "P6",
+                "left": "word",
+                "right": "Exam word: word."
+              },
+              {
+                "id": "P7",
+                "left": "home",
+                "right": "Exam word: home."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L02_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "meaning",
+                "right": "Exam word: meaning."
+              },
+              {
+                "id": "P2",
+                "left": "picture",
+                "right": "Exam word: picture."
+              },
+              {
+                "id": "P3",
+                "left": "person",
+                "right": "Exam word: person."
+              },
+              {
+                "id": "P4",
+                "left": "place",
+                "right": "Exam word: place."
+              },
+              {
+                "id": "P5",
+                "left": "food",
+                "right": "Exam word: food."
+              },
+              {
+                "id": "P6",
+                "left": "word",
+                "right": "Exam word: word."
+              },
+              {
+                "id": "P7",
+                "left": "home",
+                "right": "Exam word: home."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T02_L03",
+      "order": 3,
+      "title": {
+        "en": "Choose the Answer: Vocabulary Questions",
+        "ru": "Choose the Answer: Vocabulary Questions"
+      },
+      "objective": {
+        "en": "Select the correct response while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+        "ru": "Select the correct response while practicing recognizing basic A1 vocabulary in exam-style tasks."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T02_L03_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "picture",
+                "right": "A simple exam meaning of 'picture'."
+              },
+              {
+                "id": "P2",
+                "left": "person",
+                "right": "A simple exam meaning of 'person'."
+              },
+              {
+                "id": "P3",
+                "left": "place",
+                "right": "A simple exam meaning of 'place'."
+              },
+              {
+                "id": "P4",
+                "left": "food",
+                "right": "A simple exam meaning of 'food'."
+              },
+              {
+                "id": "P5",
+                "left": "home",
+                "right": "Exam word: home."
+              },
+              {
+                "id": "P6",
+                "left": "word",
+                "right": "Exam word: word."
+              },
+              {
+                "id": "P7",
+                "left": "meaning",
+                "right": "Exam word: meaning."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L03_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Select the correct response while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Match the word and the meaning.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Which answer is correct?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What does this word mean?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Match the word and the meaning.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L03_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "picture",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "picture",
+            "word_bank": [
+              "picture"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L03_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L03_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "meaning",
+              "the",
+              "and",
+              "word",
+              "the",
+              "Match"
+            ],
+            "correct_words": [
+              "Match",
+              "the",
+              "word",
+              "and",
+              "the",
+              "meaning"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L03_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Which answer is correct?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Select the correct response while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-cab77bbd7c8677868c91f17c.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L03_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Choose the Answer: Vocabulary Questions",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "Match the word and the meaning."
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "Which answer is correct?",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "What does this word mean?",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L03_LISTEN_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ the word and the meaning.",
+            "audio_text": "Match the word and the meaning.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Match",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "picture",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "person",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Match."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L03_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L03_MATCH_PAIRS_VOICE_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "picture",
+                "text": "picture",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-69907cb8dbc965014b0a2d15.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "person",
+                "text": "person",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-234be6d2b0bb628a8de21bcd.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "place",
+                "text": "place",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-de68f9d8d80389e082a00eda.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "food",
+                "text": "food",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-9e4819db7b1f4438db594611.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L03_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Match the word and the meaning."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Which answer is correct?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "What does this word mean?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is picture.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Which answer is correct?” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L03_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Select the correct response while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Match the word and the meaning.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Which answer is correct?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What does this word mean?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Match the word and the meaning.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L03_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Select the correct response while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Match the word and the meaning.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Which answer is correct?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What does this word mean?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Match the word and the meaning.” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T02_L04",
+      "order": 4,
+      "title": {
+        "en": "Work Under Light Time Pressure: Vocabulary Questions",
+        "ru": "Work Under Light Time Pressure: Vocabulary Questions"
+      },
+      "objective": {
+        "en": "Answer efficiently without rushing while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+        "ru": "Answer efficiently without rushing while practicing recognizing basic A1 vocabulary in exam-style tasks."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T02_L04_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "person",
+                "right": "A simple exam meaning of 'person'."
+              },
+              {
+                "id": "P2",
+                "left": "place",
+                "right": "A simple exam meaning of 'place'."
+              },
+              {
+                "id": "P3",
+                "left": "food",
+                "right": "A simple exam meaning of 'food'."
+              },
+              {
+                "id": "P4",
+                "left": "home",
+                "right": "A simple exam meaning of 'home'."
+              },
+              {
+                "id": "P5",
+                "left": "school",
+                "right": "Exam word: school."
+              },
+              {
+                "id": "P6",
+                "left": "word",
+                "right": "Exam word: word."
+              },
+              {
+                "id": "P7",
+                "left": "meaning",
+                "right": "Exam word: meaning."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L04_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Work Under Light Time Pressure: Vocabulary Questions. Exam mission: Answer efficiently without rushing while practicing recognizing basic A1 vocabulary in exam-style tasks. Models: Which answer is correct? What does this word mean? Choose the correct picture.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L04_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "person",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "person",
+            "word_bank": [
+              "person"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L04_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ answer is correct?",
+            "correct_answer": "Which",
+            "options": [
+              "Which",
+              "person",
+              "place"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L04_TAP_WORDS_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "correct",
+              "is",
+              "answer",
+              "Which"
+            ],
+            "correct_words": [
+              "Which",
+              "answer",
+              "is",
+              "correct"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L04_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Which answer is correct?",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-cab77bbd7c8677868c91f17c.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L04_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Work Under Light Time Pressure: Vocabulary Questions",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "Which answer is correct?"
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L04_DEFINITION_01",
+          "order": 8,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "person",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'person'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'place'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'food'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'home'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "person: A simple exam meaning of 'person'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L04_LISTEN_WORD_01",
+          "order": 9,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ answer is correct?",
+            "audio_text": "Which answer is correct?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Which",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "person",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "place",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Which."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L04_MISSING_WORD_01",
+          "order": 10,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L04_MATCH_PAIRS_VOICE_01",
+          "order": 11,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "person",
+                "text": "person",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-234be6d2b0bb628a8de21bcd.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "place",
+                "text": "place",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-de68f9d8d80389e082a00eda.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "food",
+                "text": "food",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-9e4819db7b1f4438db594611.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "home",
+                "text": "home",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-deba2f2990b5b0fccb27953d.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L04_COMPLETE_CHAT_01",
+          "order": 12,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Which answer is correct?"
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "What does this word mean?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Choose the correct picture.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is person.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What does this word mean?” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L04_QUIZ_EXTRA_01",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "person",
+                "right": "A simple exam meaning of 'person'."
+              },
+              {
+                "id": "P2",
+                "left": "place",
+                "right": "A simple exam meaning of 'place'."
+              },
+              {
+                "id": "P3",
+                "left": "food",
+                "right": "A simple exam meaning of 'food'."
+              },
+              {
+                "id": "P4",
+                "left": "home",
+                "right": "A simple exam meaning of 'home'."
+              },
+              {
+                "id": "P5",
+                "left": "school",
+                "right": "Exam word: school."
+              },
+              {
+                "id": "P6",
+                "left": "word",
+                "right": "Exam word: word."
+              },
+              {
+                "id": "P7",
+                "left": "meaning",
+                "right": "Exam word: meaning."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T02_L05",
+      "order": 5,
+      "title": {
+        "en": "Check Accuracy: Vocabulary Questions",
+        "ru": "Check Accuracy: Vocabulary Questions"
+      },
+      "objective": {
+        "en": "Notice and correct a common beginner error while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+        "ru": "Notice and correct a common beginner error while practicing recognizing basic A1 vocabulary in exam-style tasks."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T02_L05_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "place",
+                "right": "Exam word: place."
+              },
+              {
+                "id": "P2",
+                "left": "food",
+                "right": "Exam word: food."
+              },
+              {
+                "id": "P3",
+                "left": "home",
+                "right": "Exam word: home."
+              },
+              {
+                "id": "P4",
+                "left": "school",
+                "right": "Exam word: school."
+              },
+              {
+                "id": "P5",
+                "left": "work",
+                "right": "Exam word: work."
+              },
+              {
+                "id": "P6",
+                "left": "word",
+                "right": "Exam word: word."
+              },
+              {
+                "id": "P7",
+                "left": "meaning",
+                "right": "Exam word: meaning."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L05_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Notice and correct a common beginner error while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What does this word mean?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Choose the correct picture.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Match the word and the meaning.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What does this word mean?” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L05_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Build the exam answer",
+            "ru": "Составьте экзаменационный ответ"
+          },
+          "instructions": {
+            "en": "Build the correct English answer.",
+            "ru": "Составьте правильный ответ на английском."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте правильную английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "What does this word mean?",
+            "word_bank": [
+              "What",
+              "does",
+              "this",
+              "word",
+              "mean",
+              "food"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L05_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L05_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "mean",
+              "word",
+              "this",
+              "does",
+              "What"
+            ],
+            "correct_words": [
+              "What",
+              "does",
+              "this",
+              "word",
+              "mean"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L05_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Choose the correct picture.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Notice and correct a common beginner error while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-404bccadc93f1c58ca2b3171.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L05_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Check Accuracy: Vocabulary Questions",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "What does this word mean?"
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L05_LISTEN_CHOOSE_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ mean.",
+            "audio_text": "What does this word mean?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "What",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "place",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "food",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is What."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L05_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Введите пропущенное слово"
+          },
+          "instructions": {
+            "en": "Type the correct missing word.",
+            "ru": "Введите правильное пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ does this word mean?",
+            "correct_answer": "What",
+            "hint_prefix": "W",
+            "explanation": "The missing word is What."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L05_VOICE_MATCH_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "place",
+                "text": "place",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-de68f9d8d80389e082a00eda.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "food",
+                "text": "food",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-9e4819db7b1f4438db594611.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "home",
+                "text": "home",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-deba2f2990b5b0fccb27953d.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "school",
+                "text": "school",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-d5149207ef80ad1765237d7f.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L05_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "What does this word mean?"
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Choose the correct picture.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Match the word and the meaning.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is place.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Choose the correct picture.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L05_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Notice and correct a common beginner error while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What does this word mean?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Choose the correct picture.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Match the word and the meaning.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What does this word mean?” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L05_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Notice and correct a common beginner error while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What does this word mean?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Choose the correct picture.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Match the word and the meaning.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What does this word mean?” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T02_L06",
+      "order": 6,
+      "title": {
+        "en": "Use the Skill in Context: Vocabulary Questions",
+        "ru": "Use the Skill in Context: Vocabulary Questions"
+      },
+      "objective": {
+        "en": "Apply the exam skill to a realistic item while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+        "ru": "Apply the exam skill to a realistic item while practicing recognizing basic A1 vocabulary in exam-style tasks."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T02_L06_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "food",
+                "right": "Exam word: food."
+              },
+              {
+                "id": "P2",
+                "left": "home",
+                "right": "Exam word: home."
+              },
+              {
+                "id": "P3",
+                "left": "school",
+                "right": "Exam word: school."
+              },
+              {
+                "id": "P4",
+                "left": "work",
+                "right": "Exam word: work."
+              },
+              {
+                "id": "P5",
+                "left": "correct",
+                "right": "Exam word: correct."
+              },
+              {
+                "id": "P6",
+                "left": "word",
+                "right": "Exam word: word."
+              },
+              {
+                "id": "P7",
+                "left": "meaning",
+                "right": "Exam word: meaning."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L06_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Use the Skill in Context: Vocabulary Questions. Exam mission: Apply the exam skill to a realistic item while practicing recognizing basic A1 vocabulary in exam-style tasks. Models: Choose the correct picture. Match the word and the meaning. Which answer is correct?",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L06_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "food",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "food",
+            "word_bank": [
+              "food"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L06_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ the correct picture.",
+            "correct_answer": "Choose",
+            "options": [
+              "Choose",
+              "food",
+              "home"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L06_TAP_WORDS_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "picture",
+              "correct",
+              "the",
+              "Choose"
+            ],
+            "correct_words": [
+              "Choose",
+              "the",
+              "correct",
+              "picture"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L06_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Choose the correct picture.",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-404bccadc93f1c58ca2b3171.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L06_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Use the Skill in Context: Vocabulary Questions",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "Choose the correct picture."
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "Match the word and the meaning.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Which answer is correct?",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L06_DEFINITION_01",
+          "order": 8,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "food",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'food'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'home'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'school'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'work'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "food: A simple exam meaning of 'food'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L06_LISTEN_CHOOSE_WORD_01",
+          "order": 9,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ picture.",
+            "audio_text": "Choose the correct picture.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Choose",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "food",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "home",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Choose."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L06_MISSING_WORD_01",
+          "order": 10,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L06_VOICE_MATCH_01",
+          "order": 11,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "food",
+                "text": "food",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-9e4819db7b1f4438db594611.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "home",
+                "text": "home",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-deba2f2990b5b0fccb27953d.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "school",
+                "text": "school",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-d5149207ef80ad1765237d7f.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "work",
+                "text": "work",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-7d3b1e4774c627bdaa1ca6d0.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L06_COMPLETE_CHAT_01",
+          "order": 12,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Choose the correct picture."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Match the word and the meaning.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Which answer is correct?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is food.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Match the word and the meaning.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L06_QUIZ_EXTRA_01",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "food",
+                "right": "Exam word: food."
+              },
+              {
+                "id": "P2",
+                "left": "home",
+                "right": "Exam word: home."
+              },
+              {
+                "id": "P3",
+                "left": "school",
+                "right": "Exam word: school."
+              },
+              {
+                "id": "P4",
+                "left": "work",
+                "right": "Exam word: work."
+              },
+              {
+                "id": "P5",
+                "left": "correct",
+                "right": "Exam word: correct."
+              },
+              {
+                "id": "P6",
+                "left": "word",
+                "right": "Exam word: word."
+              },
+              {
+                "id": "P7",
+                "left": "meaning",
+                "right": "Exam word: meaning."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T02_L07",
+      "order": 7,
+      "title": {
+        "en": "Build Independence: Vocabulary Questions",
+        "ru": "Build Independence: Vocabulary Questions"
+      },
+      "objective": {
+        "en": "Complete the task with less support while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+        "ru": "Complete the task with less support while practicing recognizing basic A1 vocabulary in exam-style tasks."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T02_L07_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "home",
+                "right": "A simple exam meaning of 'home'."
+              },
+              {
+                "id": "P2",
+                "left": "school",
+                "right": "A simple exam meaning of 'school'."
+              },
+              {
+                "id": "P3",
+                "left": "work",
+                "right": "A simple exam meaning of 'work'."
+              },
+              {
+                "id": "P4",
+                "left": "correct",
+                "right": "A simple exam meaning of 'correct'."
+              },
+              {
+                "id": "P5",
+                "left": "word",
+                "right": "Exam word: word."
+              },
+              {
+                "id": "P6",
+                "left": "meaning",
+                "right": "Exam word: meaning."
+              },
+              {
+                "id": "P7",
+                "left": "picture",
+                "right": "Exam word: picture."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L07_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete the task with less support while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Match the word and the meaning.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Which answer is correct?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What does this word mean?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Match the word and the meaning.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L07_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "home",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "home",
+            "word_bank": [
+              "home"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L07_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L07_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "meaning",
+              "the",
+              "and",
+              "word",
+              "the",
+              "Match"
+            ],
+            "correct_words": [
+              "Match",
+              "the",
+              "word",
+              "and",
+              "the",
+              "meaning"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L07_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Which answer is correct?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Complete the task with less support while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-cab77bbd7c8677868c91f17c.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L07_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Build Independence: Vocabulary Questions",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "Match the word and the meaning."
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L07_LISTEN_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ the word and the meaning.",
+            "audio_text": "Match the word and the meaning.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Match",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "home",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "school",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Match."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L07_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Введите пропущенное слово"
+          },
+          "instructions": {
+            "en": "Type the correct missing word.",
+            "ru": "Введите правильное пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ the word and the meaning.",
+            "correct_answer": "Match",
+            "hint_prefix": "M",
+            "explanation": "The missing word is Match."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L07_MATCH_PAIRS_VOICE_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "home",
+                "text": "home",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-deba2f2990b5b0fccb27953d.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "school",
+                "text": "school",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-d5149207ef80ad1765237d7f.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "work",
+                "text": "work",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-7d3b1e4774c627bdaa1ca6d0.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "correct",
+                "text": "correct",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-07e15f64c8a6a9e370a696a7.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L07_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Match the word and the meaning."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Which answer is correct?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "What does this word mean?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is home.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Which answer is correct?” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L07_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete the task with less support while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Match the word and the meaning.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Which answer is correct?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What does this word mean?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Match the word and the meaning.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L07_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete the task with less support while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Match the word and the meaning.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Which answer is correct?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What does this word mean?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Match the word and the meaning.” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T02_L08",
+      "order": 8,
+      "title": {
+        "en": "Mixed Practice: Vocabulary Questions",
+        "ru": "Mixed Practice: Vocabulary Questions"
+      },
+      "objective": {
+        "en": "Combine this skill with another a1 exam skill while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+        "ru": "Combine this skill with another a1 exam skill while practicing recognizing basic A1 vocabulary in exam-style tasks."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T02_L08_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "school",
+                "right": "Exam word: school."
+              },
+              {
+                "id": "P2",
+                "left": "work",
+                "right": "Exam word: work."
+              },
+              {
+                "id": "P3",
+                "left": "correct",
+                "right": "Exam word: correct."
+              },
+              {
+                "id": "P4",
+                "left": "word",
+                "right": "Exam word: word."
+              },
+              {
+                "id": "P5",
+                "left": "meaning",
+                "right": "Exam word: meaning."
+              },
+              {
+                "id": "P6",
+                "left": "picture",
+                "right": "Exam word: picture."
+              },
+              {
+                "id": "P7",
+                "left": "person",
+                "right": "Exam word: person."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L08_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Mixed Practice: Vocabulary Questions. Exam mission: Combine this skill with another a1 exam skill while practicing recognizing basic A1 vocabulary in exam-style tasks. Models: Which answer is correct? What does this word mean? Choose the correct picture.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L08_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Build the exam answer",
+            "ru": "Составьте экзаменационный ответ"
+          },
+          "instructions": {
+            "en": "Build the correct English answer.",
+            "ru": "Составьте правильный ответ на английском."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте правильную английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Which answer is correct?",
+            "word_bank": [
+              "Which",
+              "answer",
+              "is",
+              "correct",
+              "work"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L08_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ answer is correct?",
+            "correct_answer": "Which",
+            "options": [
+              "Which",
+              "school",
+              "work"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L08_TAP_WORDS_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "correct",
+              "is",
+              "answer",
+              "Which"
+            ],
+            "correct_words": [
+              "Which",
+              "answer",
+              "is",
+              "correct"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L08_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Which answer is correct?",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-cab77bbd7c8677868c91f17c.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L08_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Mixed Practice: Vocabulary Questions",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "Which answer is correct?"
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "What does this word mean?",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Choose the correct picture.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L08_DEFINITION_01",
+          "order": 8,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "school",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'school'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'work'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'correct'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'word'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "school: A simple exam meaning of 'school'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L08_LISTEN_CHOOSE_WORD_01",
+          "order": 9,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ correct.",
+            "audio_text": "Which answer is correct?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Which",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "school",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "work",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Which."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L08_MISSING_WORD_01",
+          "order": 10,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L08_MATCH_PAIRS_VOICE_01",
+          "order": 11,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "school",
+                "text": "school",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-d5149207ef80ad1765237d7f.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "work",
+                "text": "work",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-7d3b1e4774c627bdaa1ca6d0.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "correct",
+                "text": "correct",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-07e15f64c8a6a9e370a696a7.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "word",
+                "text": "word",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-33b7a3f2148de49a58649c3f.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L08_COMPLETE_CHAT_01",
+          "order": 12,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Which answer is correct?"
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "What does this word mean?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Choose the correct picture.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is school.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What does this word mean?” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L08_QUIZ_EXTRA_01",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "school",
+                "right": "Exam word: school."
+              },
+              {
+                "id": "P2",
+                "left": "work",
+                "right": "Exam word: work."
+              },
+              {
+                "id": "P3",
+                "left": "correct",
+                "right": "Exam word: correct."
+              },
+              {
+                "id": "P4",
+                "left": "word",
+                "right": "Exam word: word."
+              },
+              {
+                "id": "P5",
+                "left": "meaning",
+                "right": "Exam word: meaning."
+              },
+              {
+                "id": "P6",
+                "left": "picture",
+                "right": "Exam word: picture."
+              },
+              {
+                "id": "P7",
+                "left": "person",
+                "right": "Exam word: person."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T02_L09",
+      "order": 9,
+      "title": {
+        "en": "Mini Test: Vocabulary Questions",
+        "ru": "Mini Test: Vocabulary Questions"
+      },
+      "objective": {
+        "en": "Complete a short test-style challenge while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+        "ru": "Complete a short test-style challenge while practicing recognizing basic A1 vocabulary in exam-style tasks."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T02_L09_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "work",
+                "right": "A simple exam meaning of 'work'."
+              },
+              {
+                "id": "P2",
+                "left": "correct",
+                "right": "A simple exam meaning of 'correct'."
+              },
+              {
+                "id": "P3",
+                "left": "word",
+                "right": "A simple exam meaning of 'word'."
+              },
+              {
+                "id": "P4",
+                "left": "meaning",
+                "right": "A simple exam meaning of 'meaning'."
+              },
+              {
+                "id": "P5",
+                "left": "picture",
+                "right": "Exam word: picture."
+              },
+              {
+                "id": "P6",
+                "left": "person",
+                "right": "Exam word: person."
+              },
+              {
+                "id": "P7",
+                "left": "place",
+                "right": "Exam word: place."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L09_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete a short test-style challenge while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What does this word mean?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Choose the correct picture.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Match the word and the meaning.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What does this word mean?” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L09_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "work",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "work",
+            "word_bank": [
+              "work"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L09_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L09_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "mean",
+              "word",
+              "this",
+              "does",
+              "What"
+            ],
+            "correct_words": [
+              "What",
+              "does",
+              "this",
+              "word",
+              "mean"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L09_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Choose the correct picture.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Complete a short test-style challenge while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-404bccadc93f1c58ca2b3171.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L09_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Mini Test: Vocabulary Questions",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "What does this word mean?"
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L09_LISTEN_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ does this word mean?",
+            "audio_text": "What does this word mean?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "What",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "work",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "correct",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is What."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L09_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L09_VOICE_MATCH_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "work",
+                "text": "work",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-7d3b1e4774c627bdaa1ca6d0.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "correct",
+                "text": "correct",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-07e15f64c8a6a9e370a696a7.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "word",
+                "text": "word",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-33b7a3f2148de49a58649c3f.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "meaning",
+                "text": "meaning",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-52224d204a04af617fff8c06.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L09_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "What does this word mean?"
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Choose the correct picture.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Match the word and the meaning.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is work.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Choose the correct picture.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L09_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete a short test-style challenge while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What does this word mean?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Choose the correct picture.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Match the word and the meaning.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What does this word mean?” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L09_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete a short test-style challenge while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What does this word mean?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Choose the correct picture.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Match the word and the meaning.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What does this word mean?” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T02_L10",
+      "order": 10,
+      "title": {
+        "en": "Track Exam Mission: Vocabulary Questions",
+        "ru": "Track Exam Mission: Vocabulary Questions"
+      },
+      "objective": {
+        "en": "Combine the track skills in a final exam mission while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+        "ru": "Combine the track skills in a final exam mission while practicing recognizing basic A1 vocabulary in exam-style tasks."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T02_L10_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "correct",
+                "right": "Exam word: correct."
+              },
+              {
+                "id": "P2",
+                "left": "word",
+                "right": "Exam word: word."
+              },
+              {
+                "id": "P3",
+                "left": "meaning",
+                "right": "Exam word: meaning."
+              },
+              {
+                "id": "P4",
+                "left": "picture",
+                "right": "Exam word: picture."
+              },
+              {
+                "id": "P5",
+                "left": "person",
+                "right": "Exam word: person."
+              },
+              {
+                "id": "P6",
+                "left": "place",
+                "right": "Exam word: place."
+              },
+              {
+                "id": "P7",
+                "left": "food",
+                "right": "Exam word: food."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L10_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Track Exam Mission: Vocabulary Questions. Exam mission: Combine the track skills in a final exam mission while practicing recognizing basic A1 vocabulary in exam-style tasks. Models: Choose the correct picture. Match the word and the meaning. Which answer is correct?",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L10_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Combine the track skills in a final exam mission while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Choose the correct picture.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Match the word and the meaning.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Which answer is correct?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Choose the correct picture.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L10_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "correct",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "correct",
+            "word_bank": [
+              "correct"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L10_FILL_BLANK_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L10_TAP_WORDS_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "picture",
+              "correct",
+              "the",
+              "Choose"
+            ],
+            "correct_words": [
+              "Choose",
+              "the",
+              "correct",
+              "picture"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L10_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Choose the correct picture.",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-404bccadc93f1c58ca2b3171.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L10_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Match the word and the meaning.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Combine the track skills in a final exam mission while practicing recognizing basic A1 vocabulary in exam-style tasks.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-883883724c898eb7bdc1f20c.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L10_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Track Exam Mission: Vocabulary Questions",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "Choose the correct picture."
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "Match the word and the meaning.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Which answer is correct?",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L10_LISTEN_CHOOSE_WORD_01",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ picture.",
+            "audio_text": "Choose the correct picture.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Choose",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "correct",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "word",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Choose."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L10_MISSING_WORD_01",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L10_VOICE_MATCH_01",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "correct",
+                "text": "correct",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-07e15f64c8a6a9e370a696a7.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "word",
+                "text": "word",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-33b7a3f2148de49a58649c3f.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "meaning",
+                "text": "meaning",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-52224d204a04af617fff8c06.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "picture",
+                "text": "picture",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-69907cb8dbc965014b0a2d15.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T02_L10_COMPLETE_CHAT_01",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Choose the correct picture."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Match the word and the meaning.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Which answer is correct?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is correct.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Match the word and the meaning.” is the best response."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4528 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_EXAM_PREP_T06",
+    "title": {
+      "en": "Reading for Details",
+      "ru": "Reading for Details"
+    },
+    "description": {
+      "en": "An A1 Exams track focused on finding names, times, places, and facts in short texts.",
+      "ru": "An A1 Exams track focused on finding names, times, places, and facts in short texts."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "goal": "study",
+    "track_type": "thematic"
+  },
+  "lessons": [
+    {
+      "code": "A1_EXAM_PREP_T06_L01",
+      "order": 1,
+      "title": {
+        "en": "Learn the Task: Reading for Details",
+        "ru": "Learn the Task: Reading for Details"
+      },
+      "objective": {
+        "en": "Understand the exam task and key language while practicing finding names, times, places, and facts in short texts.",
+        "ru": "Understand the exam task and key language while practicing finding names, times, places, and facts in short texts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T06_L01_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "name",
+                "right": "A simple exam meaning of 'name'."
+              },
+              {
+                "id": "P2",
+                "left": "time",
+                "right": "A simple exam meaning of 'time'."
+              },
+              {
+                "id": "P3",
+                "left": "place",
+                "right": "A simple exam meaning of 'place'."
+              },
+              {
+                "id": "P4",
+                "left": "age",
+                "right": "A simple exam meaning of 'age'."
+              },
+              {
+                "id": "P5",
+                "left": "job",
+                "right": "Exam word: job."
+              },
+              {
+                "id": "P6",
+                "left": "city",
+                "right": "Exam word: city."
+              },
+              {
+                "id": "P7",
+                "left": "number",
+                "right": "Exam word: number."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L01_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Learn the Task: Reading for Details. Exam mission: Understand the exam task and key language while practicing finding names, times, places, and facts in short texts. Models: What is her name? Where does he live? What time does the class start?",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L01_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Understand the exam task and key language while practicing finding names, times, places, and facts in short texts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What is her name?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Where does he live?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What time does the class start?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What is her name?” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L01_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "name",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "name",
+            "word_bank": [
+              "name"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L01_FILL_BLANK_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L01_TAP_WORDS_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "name",
+              "her",
+              "is",
+              "What"
+            ],
+            "correct_words": [
+              "What",
+              "is",
+              "her",
+              "name"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L01_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "What is her name?",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-ce30d6491dcc1efbe89fae5f.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L01_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Where does he live?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Understand the exam task and key language while practicing finding names, times, places, and facts in short texts.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-44f52c1dcd3749ec0fd3ea95.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L01_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Learn the Task: Reading for Details",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "What is her name?"
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L01_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "name",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'name'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'time'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'place'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'age'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "name: A simple exam meaning of 'name'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L01_LISTEN_CHOOSE_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ name.",
+            "audio_text": "What is her name?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "What",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "name",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "time",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is What."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L01_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L01_MATCH_PAIRS_VOICE_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "name",
+                "text": "name",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-a89ab00365cd1b76f1770696.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "time",
+                "text": "time",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-4c2d708ad688079dc503cad1.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "place",
+                "text": "place",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-de68f9d8d80389e082a00eda.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "age",
+                "text": "age",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-9432ab6a7771c707e2d5c6cc.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L01_COMPLETE_CHAT_01",
+          "order": 14,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "What is her name?"
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Where does he live?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "What time does the class start?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is name.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Where does he live?” is the best response."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T06_L02",
+      "order": 2,
+      "title": {
+        "en": "Practice the Format: Reading for Details",
+        "ru": "Practice the Format: Reading for Details"
+      },
+      "objective": {
+        "en": "Complete a guided exam-style item while practicing finding names, times, places, and facts in short texts.",
+        "ru": "Complete a guided exam-style item while practicing finding names, times, places, and facts in short texts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T06_L02_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "time",
+                "right": "Exam word: time."
+              },
+              {
+                "id": "P2",
+                "left": "place",
+                "right": "Exam word: place."
+              },
+              {
+                "id": "P3",
+                "left": "age",
+                "right": "Exam word: age."
+              },
+              {
+                "id": "P4",
+                "left": "job",
+                "right": "Exam word: job."
+              },
+              {
+                "id": "P5",
+                "left": "city",
+                "right": "Exam word: city."
+              },
+              {
+                "id": "P6",
+                "left": "name",
+                "right": "Exam word: name."
+              },
+              {
+                "id": "P7",
+                "left": "number",
+                "right": "Exam word: number."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L02_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Practice the Format: Reading for Details. Exam mission: Complete a guided exam-style item while practicing finding names, times, places, and facts in short texts. Models: Where does he live? What time does the class start? How old is Anna?",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L02_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Build the exam answer",
+            "ru": "Составьте экзаменационный ответ"
+          },
+          "instructions": {
+            "en": "Build the correct English answer.",
+            "ru": "Составьте правильный ответ на английском."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте правильную английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Where does he live?",
+            "word_bank": [
+              "Where",
+              "does",
+              "he",
+              "live",
+              "place"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L02_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ does he live?",
+            "correct_answer": "Where",
+            "options": [
+              "Where",
+              "time",
+              "place"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L02_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "live",
+              "he",
+              "does",
+              "Where"
+            ],
+            "correct_words": [
+              "Where",
+              "does",
+              "he",
+              "live"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L02_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Where does he live?",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-44f52c1dcd3749ec0fd3ea95.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L02_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Practice the Format: Reading for Details",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "Where does he live?"
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L02_LISTEN_CHOOSE_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ live.",
+            "audio_text": "Where does he live?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Where",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "time",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "place",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Where."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L02_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Введите пропущенное слово"
+          },
+          "instructions": {
+            "en": "Type the correct missing word.",
+            "ru": "Введите правильное пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ does he live?",
+            "correct_answer": "Where",
+            "hint_prefix": "W",
+            "explanation": "The missing word is Where."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L02_MATCH_PAIRS_VOICE_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "time",
+                "text": "time",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-4c2d708ad688079dc503cad1.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "place",
+                "text": "place",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-de68f9d8d80389e082a00eda.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "age",
+                "text": "age",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-9432ab6a7771c707e2d5c6cc.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "job",
+                "text": "job",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-81c1ec9112a73d438c7ae55c.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L02_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Where does he live?"
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "What time does the class start?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "How old is Anna?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is time.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What time does the class start?” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L02_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "time",
+                "right": "Exam word: time."
+              },
+              {
+                "id": "P2",
+                "left": "place",
+                "right": "Exam word: place."
+              },
+              {
+                "id": "P3",
+                "left": "age",
+                "right": "Exam word: age."
+              },
+              {
+                "id": "P4",
+                "left": "job",
+                "right": "Exam word: job."
+              },
+              {
+                "id": "P5",
+                "left": "city",
+                "right": "Exam word: city."
+              },
+              {
+                "id": "P6",
+                "left": "name",
+                "right": "Exam word: name."
+              },
+              {
+                "id": "P7",
+                "left": "number",
+                "right": "Exam word: number."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L02_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "time",
+                "right": "Exam word: time."
+              },
+              {
+                "id": "P2",
+                "left": "place",
+                "right": "Exam word: place."
+              },
+              {
+                "id": "P3",
+                "left": "age",
+                "right": "Exam word: age."
+              },
+              {
+                "id": "P4",
+                "left": "job",
+                "right": "Exam word: job."
+              },
+              {
+                "id": "P5",
+                "left": "city",
+                "right": "Exam word: city."
+              },
+              {
+                "id": "P6",
+                "left": "name",
+                "right": "Exam word: name."
+              },
+              {
+                "id": "P7",
+                "left": "number",
+                "right": "Exam word: number."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T06_L03",
+      "order": 3,
+      "title": {
+        "en": "Choose the Answer: Reading for Details",
+        "ru": "Choose the Answer: Reading for Details"
+      },
+      "objective": {
+        "en": "Select the correct response while practicing finding names, times, places, and facts in short texts.",
+        "ru": "Select the correct response while practicing finding names, times, places, and facts in short texts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T06_L03_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "place",
+                "right": "A simple exam meaning of 'place'."
+              },
+              {
+                "id": "P2",
+                "left": "age",
+                "right": "A simple exam meaning of 'age'."
+              },
+              {
+                "id": "P3",
+                "left": "job",
+                "right": "A simple exam meaning of 'job'."
+              },
+              {
+                "id": "P4",
+                "left": "city",
+                "right": "A simple exam meaning of 'city'."
+              },
+              {
+                "id": "P5",
+                "left": "number",
+                "right": "Exam word: number."
+              },
+              {
+                "id": "P6",
+                "left": "name",
+                "right": "Exam word: name."
+              },
+              {
+                "id": "P7",
+                "left": "time",
+                "right": "Exam word: time."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L03_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Select the correct response while practicing finding names, times, places, and facts in short texts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What time does the class start?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "How old is Anna?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What is her name?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What time does the class start?” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L03_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "place",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "place",
+            "word_bank": [
+              "place"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L03_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L03_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "start",
+              "class",
+              "the",
+              "does",
+              "time",
+              "What"
+            ],
+            "correct_words": [
+              "What",
+              "time",
+              "does",
+              "the",
+              "class",
+              "start"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L03_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "How old is Anna?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Select the correct response while practicing finding names, times, places, and facts in short texts.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-c23734f22bef49e8dff8577b.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L03_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Choose the Answer: Reading for Details",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "What time does the class start?"
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "How old is Anna?",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "What is her name?",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L03_LISTEN_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ time does the class start?",
+            "audio_text": "What time does the class start?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "What",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "place",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "age",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is What."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L03_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L03_MATCH_PAIRS_VOICE_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "place",
+                "text": "place",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-de68f9d8d80389e082a00eda.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "age",
+                "text": "age",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-9432ab6a7771c707e2d5c6cc.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "job",
+                "text": "job",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-81c1ec9112a73d438c7ae55c.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "city",
+                "text": "city",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-caf4684240ab00906b6937d3.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L03_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "What time does the class start?"
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "How old is Anna?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "What is her name?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is place.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“How old is Anna?” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L03_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Select the correct response while practicing finding names, times, places, and facts in short texts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What time does the class start?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "How old is Anna?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What is her name?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What time does the class start?” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L03_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Select the correct response while practicing finding names, times, places, and facts in short texts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What time does the class start?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "How old is Anna?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What is her name?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What time does the class start?” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T06_L04",
+      "order": 4,
+      "title": {
+        "en": "Work Under Light Time Pressure: Reading for Details",
+        "ru": "Work Under Light Time Pressure: Reading for Details"
+      },
+      "objective": {
+        "en": "Answer efficiently without rushing while practicing finding names, times, places, and facts in short texts.",
+        "ru": "Answer efficiently without rushing while practicing finding names, times, places, and facts in short texts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T06_L04_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "age",
+                "right": "A simple exam meaning of 'age'."
+              },
+              {
+                "id": "P2",
+                "left": "job",
+                "right": "A simple exam meaning of 'job'."
+              },
+              {
+                "id": "P3",
+                "left": "city",
+                "right": "A simple exam meaning of 'city'."
+              },
+              {
+                "id": "P4",
+                "left": "number",
+                "right": "A simple exam meaning of 'number'."
+              },
+              {
+                "id": "P5",
+                "left": "when",
+                "right": "Exam word: when."
+              },
+              {
+                "id": "P6",
+                "left": "name",
+                "right": "Exam word: name."
+              },
+              {
+                "id": "P7",
+                "left": "time",
+                "right": "Exam word: time."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L04_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Work Under Light Time Pressure: Reading for Details. Exam mission: Answer efficiently without rushing while practicing finding names, times, places, and facts in short texts. Models: How old is Anna? What is her name? Where does he live?",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L04_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "age",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "age",
+            "word_bank": [
+              "age"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L04_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ old is Anna?",
+            "correct_answer": "How",
+            "options": [
+              "How",
+              "age",
+              "job"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L04_TAP_WORDS_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "Anna",
+              "is",
+              "old",
+              "How"
+            ],
+            "correct_words": [
+              "How",
+              "old",
+              "is",
+              "Anna"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L04_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "How old is Anna?",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-c23734f22bef49e8dff8577b.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L04_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Work Under Light Time Pressure: Reading for Details",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "How old is Anna?"
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L04_DEFINITION_01",
+          "order": 8,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "age",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'age'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'job'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'city'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'number'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "age: A simple exam meaning of 'age'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L04_LISTEN_WORD_01",
+          "order": 9,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ old is Anna?",
+            "audio_text": "How old is Anna?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "How",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "age",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "job",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is How."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L04_MISSING_WORD_01",
+          "order": 10,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L04_MATCH_PAIRS_VOICE_01",
+          "order": 11,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "age",
+                "text": "age",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-9432ab6a7771c707e2d5c6cc.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "job",
+                "text": "job",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-81c1ec9112a73d438c7ae55c.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "city",
+                "text": "city",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-caf4684240ab00906b6937d3.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "number",
+                "text": "number",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-4a8624e87af7b902ee756536.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L04_COMPLETE_CHAT_01",
+          "order": 12,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "How old is Anna?"
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "What is her name?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Where does he live?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is age.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What is her name?” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L04_QUIZ_EXTRA_01",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "age",
+                "right": "A simple exam meaning of 'age'."
+              },
+              {
+                "id": "P2",
+                "left": "job",
+                "right": "A simple exam meaning of 'job'."
+              },
+              {
+                "id": "P3",
+                "left": "city",
+                "right": "A simple exam meaning of 'city'."
+              },
+              {
+                "id": "P4",
+                "left": "number",
+                "right": "A simple exam meaning of 'number'."
+              },
+              {
+                "id": "P5",
+                "left": "when",
+                "right": "Exam word: when."
+              },
+              {
+                "id": "P6",
+                "left": "name",
+                "right": "Exam word: name."
+              },
+              {
+                "id": "P7",
+                "left": "time",
+                "right": "Exam word: time."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T06_L05",
+      "order": 5,
+      "title": {
+        "en": "Check Accuracy: Reading for Details",
+        "ru": "Check Accuracy: Reading for Details"
+      },
+      "objective": {
+        "en": "Notice and correct a common beginner error while practicing finding names, times, places, and facts in short texts.",
+        "ru": "Notice and correct a common beginner error while practicing finding names, times, places, and facts in short texts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T06_L05_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "job",
+                "right": "Exam word: job."
+              },
+              {
+                "id": "P2",
+                "left": "city",
+                "right": "Exam word: city."
+              },
+              {
+                "id": "P3",
+                "left": "number",
+                "right": "Exam word: number."
+              },
+              {
+                "id": "P4",
+                "left": "when",
+                "right": "Exam word: when."
+              },
+              {
+                "id": "P5",
+                "left": "where",
+                "right": "Exam word: where."
+              },
+              {
+                "id": "P6",
+                "left": "name",
+                "right": "Exam word: name."
+              },
+              {
+                "id": "P7",
+                "left": "time",
+                "right": "Exam word: time."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L05_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Notice and correct a common beginner error while practicing finding names, times, places, and facts in short texts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What is her name?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Where does he live?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What time does the class start?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What is her name?” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L05_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Build the exam answer",
+            "ru": "Составьте экзаменационный ответ"
+          },
+          "instructions": {
+            "en": "Build the correct English answer.",
+            "ru": "Составьте правильный ответ на английском."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте правильную английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "What is her name?",
+            "word_bank": [
+              "What",
+              "is",
+              "her",
+              "name",
+              "city"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L05_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L05_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "name",
+              "her",
+              "is",
+              "What"
+            ],
+            "correct_words": [
+              "What",
+              "is",
+              "her",
+              "name"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L05_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Where does he live?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Notice and correct a common beginner error while practicing finding names, times, places, and facts in short texts.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-44f52c1dcd3749ec0fd3ea95.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L05_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Check Accuracy: Reading for Details",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "What is her name?"
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L05_LISTEN_CHOOSE_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ name.",
+            "audio_text": "What is her name?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "What",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "job",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "city",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is What."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L05_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Введите пропущенное слово"
+          },
+          "instructions": {
+            "en": "Type the correct missing word.",
+            "ru": "Введите правильное пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ is her name?",
+            "correct_answer": "What",
+            "hint_prefix": "W",
+            "explanation": "The missing word is What."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L05_VOICE_MATCH_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "job",
+                "text": "job",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-81c1ec9112a73d438c7ae55c.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "city",
+                "text": "city",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-caf4684240ab00906b6937d3.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "number",
+                "text": "number",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-4a8624e87af7b902ee756536.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "when",
+                "text": "when",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-b8966520172fcd8ee24abcb8.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L05_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "What is her name?"
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Where does he live?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "What time does the class start?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is job.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Where does he live?” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L05_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Notice and correct a common beginner error while practicing finding names, times, places, and facts in short texts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What is her name?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Where does he live?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What time does the class start?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What is her name?” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L05_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Notice and correct a common beginner error while practicing finding names, times, places, and facts in short texts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What is her name?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Where does he live?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What time does the class start?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What is her name?” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T06_L06",
+      "order": 6,
+      "title": {
+        "en": "Use the Skill in Context: Reading for Details",
+        "ru": "Use the Skill in Context: Reading for Details"
+      },
+      "objective": {
+        "en": "Apply the exam skill to a realistic item while practicing finding names, times, places, and facts in short texts.",
+        "ru": "Apply the exam skill to a realistic item while practicing finding names, times, places, and facts in short texts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T06_L06_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "city",
+                "right": "Exam word: city."
+              },
+              {
+                "id": "P2",
+                "left": "number",
+                "right": "Exam word: number."
+              },
+              {
+                "id": "P3",
+                "left": "when",
+                "right": "Exam word: when."
+              },
+              {
+                "id": "P4",
+                "left": "where",
+                "right": "Exam word: where."
+              },
+              {
+                "id": "P5",
+                "left": "detail",
+                "right": "Exam word: detail."
+              },
+              {
+                "id": "P6",
+                "left": "name",
+                "right": "Exam word: name."
+              },
+              {
+                "id": "P7",
+                "left": "time",
+                "right": "Exam word: time."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L06_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Use the Skill in Context: Reading for Details. Exam mission: Apply the exam skill to a realistic item while practicing finding names, times, places, and facts in short texts. Models: Where does he live? What time does the class start? How old is Anna?",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L06_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "city",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "city",
+            "word_bank": [
+              "city"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L06_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ does he live?",
+            "correct_answer": "Where",
+            "options": [
+              "Where",
+              "city",
+              "number"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L06_TAP_WORDS_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "live",
+              "he",
+              "does",
+              "Where"
+            ],
+            "correct_words": [
+              "Where",
+              "does",
+              "he",
+              "live"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L06_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Where does he live?",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-44f52c1dcd3749ec0fd3ea95.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L06_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Use the Skill in Context: Reading for Details",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "Where does he live?"
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "What time does the class start?",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "How old is Anna?",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L06_DEFINITION_01",
+          "order": 8,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "city",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'city'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'number'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'when'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'where'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "city: A simple exam meaning of 'city'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L06_LISTEN_CHOOSE_WORD_01",
+          "order": 9,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ live.",
+            "audio_text": "Where does he live?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Where",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "city",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "number",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Where."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L06_MISSING_WORD_01",
+          "order": 10,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L06_VOICE_MATCH_01",
+          "order": 11,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "city",
+                "text": "city",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-caf4684240ab00906b6937d3.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "number",
+                "text": "number",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-4a8624e87af7b902ee756536.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "when",
+                "text": "when",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-b8966520172fcd8ee24abcb8.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "where",
+                "text": "where",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-efe64262e0fd1f92a36ac165.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L06_COMPLETE_CHAT_01",
+          "order": 12,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Where does he live?"
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "What time does the class start?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "How old is Anna?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is city.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What time does the class start?” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L06_QUIZ_EXTRA_01",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "city",
+                "right": "Exam word: city."
+              },
+              {
+                "id": "P2",
+                "left": "number",
+                "right": "Exam word: number."
+              },
+              {
+                "id": "P3",
+                "left": "when",
+                "right": "Exam word: when."
+              },
+              {
+                "id": "P4",
+                "left": "where",
+                "right": "Exam word: where."
+              },
+              {
+                "id": "P5",
+                "left": "detail",
+                "right": "Exam word: detail."
+              },
+              {
+                "id": "P6",
+                "left": "name",
+                "right": "Exam word: name."
+              },
+              {
+                "id": "P7",
+                "left": "time",
+                "right": "Exam word: time."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T06_L07",
+      "order": 7,
+      "title": {
+        "en": "Build Independence: Reading for Details",
+        "ru": "Build Independence: Reading for Details"
+      },
+      "objective": {
+        "en": "Complete the task with less support while practicing finding names, times, places, and facts in short texts.",
+        "ru": "Complete the task with less support while practicing finding names, times, places, and facts in short texts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T06_L07_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "number",
+                "right": "A simple exam meaning of 'number'."
+              },
+              {
+                "id": "P2",
+                "left": "when",
+                "right": "A simple exam meaning of 'when'."
+              },
+              {
+                "id": "P3",
+                "left": "where",
+                "right": "A simple exam meaning of 'where'."
+              },
+              {
+                "id": "P4",
+                "left": "detail",
+                "right": "A simple exam meaning of 'detail'."
+              },
+              {
+                "id": "P5",
+                "left": "name",
+                "right": "Exam word: name."
+              },
+              {
+                "id": "P6",
+                "left": "time",
+                "right": "Exam word: time."
+              },
+              {
+                "id": "P7",
+                "left": "place",
+                "right": "Exam word: place."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L07_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete the task with less support while practicing finding names, times, places, and facts in short texts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What time does the class start?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "How old is Anna?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What is her name?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What time does the class start?” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L07_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "number",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "number",
+            "word_bank": [
+              "number"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L07_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L07_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "start",
+              "class",
+              "the",
+              "does",
+              "time",
+              "What"
+            ],
+            "correct_words": [
+              "What",
+              "time",
+              "does",
+              "the",
+              "class",
+              "start"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L07_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "How old is Anna?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Complete the task with less support while practicing finding names, times, places, and facts in short texts.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-c23734f22bef49e8dff8577b.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L07_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Build Independence: Reading for Details",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "What time does the class start?"
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L07_LISTEN_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ time does the class start?",
+            "audio_text": "What time does the class start?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "What",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "number",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "when",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is What."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L07_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Введите пропущенное слово"
+          },
+          "instructions": {
+            "en": "Type the correct missing word.",
+            "ru": "Введите правильное пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ time does the class start?",
+            "correct_answer": "What",
+            "hint_prefix": "W",
+            "explanation": "The missing word is What."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L07_MATCH_PAIRS_VOICE_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "number",
+                "text": "number",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-4a8624e87af7b902ee756536.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "when",
+                "text": "when",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-b8966520172fcd8ee24abcb8.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "where",
+                "text": "where",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-efe64262e0fd1f92a36ac165.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "detail",
+                "text": "detail",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-7f37f8eca36ddea6a7c1f519.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L07_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "What time does the class start?"
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "How old is Anna?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "What is her name?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is number.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“How old is Anna?” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L07_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete the task with less support while practicing finding names, times, places, and facts in short texts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What time does the class start?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "How old is Anna?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What is her name?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What time does the class start?” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L07_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete the task with less support while practicing finding names, times, places, and facts in short texts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What time does the class start?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "How old is Anna?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What is her name?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What time does the class start?” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T06_L08",
+      "order": 8,
+      "title": {
+        "en": "Mixed Practice: Reading for Details",
+        "ru": "Mixed Practice: Reading for Details"
+      },
+      "objective": {
+        "en": "Combine this skill with another a1 exam skill while practicing finding names, times, places, and facts in short texts.",
+        "ru": "Combine this skill with another a1 exam skill while practicing finding names, times, places, and facts in short texts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T06_L08_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "when",
+                "right": "Exam word: when."
+              },
+              {
+                "id": "P2",
+                "left": "where",
+                "right": "Exam word: where."
+              },
+              {
+                "id": "P3",
+                "left": "detail",
+                "right": "Exam word: detail."
+              },
+              {
+                "id": "P4",
+                "left": "name",
+                "right": "Exam word: name."
+              },
+              {
+                "id": "P5",
+                "left": "time",
+                "right": "Exam word: time."
+              },
+              {
+                "id": "P6",
+                "left": "place",
+                "right": "Exam word: place."
+              },
+              {
+                "id": "P7",
+                "left": "age",
+                "right": "Exam word: age."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L08_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Mixed Practice: Reading for Details. Exam mission: Combine this skill with another a1 exam skill while practicing finding names, times, places, and facts in short texts. Models: How old is Anna? What is her name? Where does he live?",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L08_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Build the exam answer",
+            "ru": "Составьте экзаменационный ответ"
+          },
+          "instructions": {
+            "en": "Build the correct English answer.",
+            "ru": "Составьте правильный ответ на английском."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте правильную английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "How old is Anna?",
+            "word_bank": [
+              "How",
+              "old",
+              "is",
+              "Anna",
+              "where"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L08_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ old is Anna?",
+            "correct_answer": "How",
+            "options": [
+              "How",
+              "when",
+              "where"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L08_TAP_WORDS_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "Anna",
+              "is",
+              "old",
+              "How"
+            ],
+            "correct_words": [
+              "How",
+              "old",
+              "is",
+              "Anna"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L08_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "How old is Anna?",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-c23734f22bef49e8dff8577b.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L08_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Mixed Practice: Reading for Details",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "How old is Anna?"
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "What is her name?",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Where does he live?",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L08_DEFINITION_01",
+          "order": 8,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "when",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'when'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'where'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'detail'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'name'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "when: A simple exam meaning of 'when'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L08_LISTEN_CHOOSE_WORD_01",
+          "order": 9,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ Anna.",
+            "audio_text": "How old is Anna?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "How",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "when",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "where",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is How."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L08_MISSING_WORD_01",
+          "order": 10,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L08_MATCH_PAIRS_VOICE_01",
+          "order": 11,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "when",
+                "text": "when",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-b8966520172fcd8ee24abcb8.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "where",
+                "text": "where",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-efe64262e0fd1f92a36ac165.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "detail",
+                "text": "detail",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-7f37f8eca36ddea6a7c1f519.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "name",
+                "text": "name",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-a89ab00365cd1b76f1770696.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L08_COMPLETE_CHAT_01",
+          "order": 12,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "How old is Anna?"
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "What is her name?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Where does he live?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is when.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What is her name?” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L08_QUIZ_EXTRA_01",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "when",
+                "right": "Exam word: when."
+              },
+              {
+                "id": "P2",
+                "left": "where",
+                "right": "Exam word: where."
+              },
+              {
+                "id": "P3",
+                "left": "detail",
+                "right": "Exam word: detail."
+              },
+              {
+                "id": "P4",
+                "left": "name",
+                "right": "Exam word: name."
+              },
+              {
+                "id": "P5",
+                "left": "time",
+                "right": "Exam word: time."
+              },
+              {
+                "id": "P6",
+                "left": "place",
+                "right": "Exam word: place."
+              },
+              {
+                "id": "P7",
+                "left": "age",
+                "right": "Exam word: age."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T06_L09",
+      "order": 9,
+      "title": {
+        "en": "Mini Test: Reading for Details",
+        "ru": "Mini Test: Reading for Details"
+      },
+      "objective": {
+        "en": "Complete a short test-style challenge while practicing finding names, times, places, and facts in short texts.",
+        "ru": "Complete a short test-style challenge while practicing finding names, times, places, and facts in short texts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T06_L09_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "where",
+                "right": "A simple exam meaning of 'where'."
+              },
+              {
+                "id": "P2",
+                "left": "detail",
+                "right": "A simple exam meaning of 'detail'."
+              },
+              {
+                "id": "P3",
+                "left": "name",
+                "right": "A simple exam meaning of 'name'."
+              },
+              {
+                "id": "P4",
+                "left": "time",
+                "right": "A simple exam meaning of 'time'."
+              },
+              {
+                "id": "P5",
+                "left": "place",
+                "right": "Exam word: place."
+              },
+              {
+                "id": "P6",
+                "left": "age",
+                "right": "Exam word: age."
+              },
+              {
+                "id": "P7",
+                "left": "job",
+                "right": "Exam word: job."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L09_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete a short test-style challenge while practicing finding names, times, places, and facts in short texts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What is her name?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Where does he live?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What time does the class start?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What is her name?” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L09_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "where",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "where",
+            "word_bank": [
+              "where"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L09_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L09_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "name",
+              "her",
+              "is",
+              "What"
+            ],
+            "correct_words": [
+              "What",
+              "is",
+              "her",
+              "name"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L09_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Where does he live?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Complete a short test-style challenge while practicing finding names, times, places, and facts in short texts.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-44f52c1dcd3749ec0fd3ea95.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L09_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Mini Test: Reading for Details",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "What is her name?"
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L09_LISTEN_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ is her name?",
+            "audio_text": "What is her name?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "What",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "where",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "detail",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is What."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L09_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L09_VOICE_MATCH_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "where",
+                "text": "where",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-efe64262e0fd1f92a36ac165.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "detail",
+                "text": "detail",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-7f37f8eca36ddea6a7c1f519.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "name",
+                "text": "name",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-a89ab00365cd1b76f1770696.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "time",
+                "text": "time",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-4c2d708ad688079dc503cad1.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L09_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "What is her name?"
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Where does he live?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "What time does the class start?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is where.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Where does he live?” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L09_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete a short test-style challenge while practicing finding names, times, places, and facts in short texts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What is her name?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Where does he live?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What time does the class start?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What is her name?” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L09_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete a short test-style challenge while practicing finding names, times, places, and facts in short texts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What is her name?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Where does he live?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What time does the class start?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What is her name?” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T06_L10",
+      "order": 10,
+      "title": {
+        "en": "Track Exam Mission: Reading for Details",
+        "ru": "Track Exam Mission: Reading for Details"
+      },
+      "objective": {
+        "en": "Combine the track skills in a final exam mission while practicing finding names, times, places, and facts in short texts.",
+        "ru": "Combine the track skills in a final exam mission while practicing finding names, times, places, and facts in short texts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T06_L10_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "detail",
+                "right": "Exam word: detail."
+              },
+              {
+                "id": "P2",
+                "left": "name",
+                "right": "Exam word: name."
+              },
+              {
+                "id": "P3",
+                "left": "time",
+                "right": "Exam word: time."
+              },
+              {
+                "id": "P4",
+                "left": "place",
+                "right": "Exam word: place."
+              },
+              {
+                "id": "P5",
+                "left": "age",
+                "right": "Exam word: age."
+              },
+              {
+                "id": "P6",
+                "left": "job",
+                "right": "Exam word: job."
+              },
+              {
+                "id": "P7",
+                "left": "city",
+                "right": "Exam word: city."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L10_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Track Exam Mission: Reading for Details. Exam mission: Combine the track skills in a final exam mission while practicing finding names, times, places, and facts in short texts. Models: Where does he live? What time does the class start? How old is Anna?",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L10_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Combine the track skills in a final exam mission while practicing finding names, times, places, and facts in short texts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Where does he live?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "What time does the class start?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "How old is Anna?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Where does he live?” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L10_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "detail",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "detail",
+            "word_bank": [
+              "detail"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L10_FILL_BLANK_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L10_TAP_WORDS_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "live",
+              "he",
+              "does",
+              "Where"
+            ],
+            "correct_words": [
+              "Where",
+              "does",
+              "he",
+              "live"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L10_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Where does he live?",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-44f52c1dcd3749ec0fd3ea95.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L10_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "What time does the class start?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Combine the track skills in a final exam mission while practicing finding names, times, places, and facts in short texts.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-8fc8222666c4eacd4a953875.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L10_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Track Exam Mission: Reading for Details",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "Where does he live?"
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "What time does the class start?",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "How old is Anna?",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L10_LISTEN_CHOOSE_WORD_01",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ live.",
+            "audio_text": "Where does he live?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Where",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "detail",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "name",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Where."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L10_MISSING_WORD_01",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L10_VOICE_MATCH_01",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "detail",
+                "text": "detail",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-7f37f8eca36ddea6a7c1f519.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "name",
+                "text": "name",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-a89ab00365cd1b76f1770696.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "time",
+                "text": "time",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-4c2d708ad688079dc503cad1.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "place",
+                "text": "place",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-de68f9d8d80389e082a00eda.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T06_L10_COMPLETE_CHAT_01",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Where does he live?"
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "What time does the class start?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "How old is Anna?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is detail.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What time does the class start?” is the best response."
+          }
+        }
+      ]
+    }
+  ]
+}

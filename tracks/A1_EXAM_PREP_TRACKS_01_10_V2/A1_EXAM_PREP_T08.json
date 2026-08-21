@@ -1,0 +1,4553 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_EXAM_PREP_T08",
+    "title": {
+      "en": "Writing Short Answers",
+      "ru": "Writing Short Answers"
+    },
+    "description": {
+      "en": "An A1 Exams track focused on producing simple A1 written answers for test prompts.",
+      "ru": "An A1 Exams track focused on producing simple A1 written answers for test prompts."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "goal": "study",
+    "track_type": "thematic"
+  },
+  "lessons": [
+    {
+      "code": "A1_EXAM_PREP_T08_L01",
+      "order": 1,
+      "title": {
+        "en": "Learn the Task: Writing Short Answers",
+        "ru": "Learn the Task: Writing Short Answers"
+      },
+      "objective": {
+        "en": "Understand the exam task and key language while practicing producing simple A1 written answers for test prompts.",
+        "ru": "Understand the exam task and key language while practicing producing simple A1 written answers for test prompts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T08_L01_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "write",
+                "right": "A simple exam meaning of 'write'."
+              },
+              {
+                "id": "P2",
+                "left": "sentence",
+                "right": "A simple exam meaning of 'sentence'."
+              },
+              {
+                "id": "P3",
+                "left": "answer",
+                "right": "A simple exam meaning of 'answer'."
+              },
+              {
+                "id": "P4",
+                "left": "name",
+                "right": "A simple exam meaning of 'name'."
+              },
+              {
+                "id": "P5",
+                "left": "family",
+                "right": "Exam word: family."
+              },
+              {
+                "id": "P6",
+                "left": "home",
+                "right": "Exam word: home."
+              },
+              {
+                "id": "P7",
+                "left": "study",
+                "right": "Exam word: study."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L01_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Learn the Task: Writing Short Answers. Exam mission: Understand the exam task and key language while practicing producing simple A1 written answers for test prompts. Models: My name is Sara. I live in a small city. I study English every day.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L01_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Understand the exam task and key language while practicing producing simple A1 written answers for test prompts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "My name is Sara.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I live in a small city.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I study English every day.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“My name is Sara.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L01_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "write",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "write",
+            "word_bank": [
+              "write"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L01_FILL_BLANK_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L01_TAP_WORDS_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "Sara",
+              "is",
+              "name",
+              "My"
+            ],
+            "correct_words": [
+              "My",
+              "name",
+              "is",
+              "Sara"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L01_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "My name is Sara.",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-dc120707f216ef034f157fe7.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L01_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I live in a small city.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Understand the exam task and key language while practicing producing simple A1 written answers for test prompts.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-31c73f3ac01c7959156a8ef2.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L01_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Learn the Task: Writing Short Answers",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "My name is Sara."
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L01_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "write",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'write'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'sentence'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'answer'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'name'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "write: A simple exam meaning of 'write'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L01_LISTEN_CHOOSE_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ Sara.",
+            "audio_text": "My name is Sara.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "My",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "write",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "sentence",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is My."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L01_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L01_MATCH_PAIRS_VOICE_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "write",
+                "text": "write",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-d17ba72d6e4c868626423608.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "sentence",
+                "text": "sentence",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-16725af54f6b0a9c8f531a46.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "answer",
+                "text": "answer",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-38f86fd6b36b8c546c9c4770.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "name",
+                "text": "name",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-a89ab00365cd1b76f1770696.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L01_COMPLETE_CHAT_01",
+          "order": 14,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "My name is Sara."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "I live in a small city.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I study English every day.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is write.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I live in a small city.” is the best response."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T08_L02",
+      "order": 2,
+      "title": {
+        "en": "Practice the Format: Writing Short Answers",
+        "ru": "Practice the Format: Writing Short Answers"
+      },
+      "objective": {
+        "en": "Complete a guided exam-style item while practicing producing simple A1 written answers for test prompts.",
+        "ru": "Complete a guided exam-style item while practicing producing simple A1 written answers for test prompts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T08_L02_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "sentence",
+                "right": "Exam word: sentence."
+              },
+              {
+                "id": "P2",
+                "left": "answer",
+                "right": "Exam word: answer."
+              },
+              {
+                "id": "P3",
+                "left": "name",
+                "right": "Exam word: name."
+              },
+              {
+                "id": "P4",
+                "left": "family",
+                "right": "Exam word: family."
+              },
+              {
+                "id": "P5",
+                "left": "home",
+                "right": "Exam word: home."
+              },
+              {
+                "id": "P6",
+                "left": "write",
+                "right": "Exam word: write."
+              },
+              {
+                "id": "P7",
+                "left": "study",
+                "right": "Exam word: study."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L02_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Practice the Format: Writing Short Answers. Exam mission: Complete a guided exam-style item while practicing producing simple A1 written answers for test prompts. Models: I live in a small city. I study English every day. I like English because it is useful.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L02_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Build the exam answer",
+            "ru": "Составьте экзаменационный ответ"
+          },
+          "instructions": {
+            "en": "Build the correct English answer.",
+            "ru": "Составьте правильный ответ на английском."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте правильную английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I live in a small city.",
+            "word_bank": [
+              "I",
+              "live",
+              "in",
+              "a",
+              "small",
+              "city",
+              "answer"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L02_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ in a small city.",
+            "correct_answer": "live",
+            "options": [
+              "live",
+              "sentence",
+              "answer"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L02_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "city",
+              "small",
+              "a",
+              "in",
+              "live",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "live",
+              "in",
+              "a",
+              "small",
+              "city"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L02_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "I live in a small city.",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-31c73f3ac01c7959156a8ef2.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L02_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Practice the Format: Writing Short Answers",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "I live in a small city."
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L02_LISTEN_CHOOSE_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ city.",
+            "audio_text": "I live in a small city.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "live",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "sentence",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "answer",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is live."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L02_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Введите пропущенное слово"
+          },
+          "instructions": {
+            "en": "Type the correct missing word.",
+            "ru": "Введите правильное пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ in a small city.",
+            "correct_answer": "live",
+            "hint_prefix": "l",
+            "explanation": "The missing word is live."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L02_MATCH_PAIRS_VOICE_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "sentence",
+                "text": "sentence",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-16725af54f6b0a9c8f531a46.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "answer",
+                "text": "answer",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-38f86fd6b36b8c546c9c4770.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "name",
+                "text": "name",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-a89ab00365cd1b76f1770696.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "family",
+                "text": "family",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-82d37b1c06af7a0a5b8411b0.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L02_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "I live in a small city."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "I study English every day.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I like English because it is useful.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is sentence.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I study English every day.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L02_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "sentence",
+                "right": "Exam word: sentence."
+              },
+              {
+                "id": "P2",
+                "left": "answer",
+                "right": "Exam word: answer."
+              },
+              {
+                "id": "P3",
+                "left": "name",
+                "right": "Exam word: name."
+              },
+              {
+                "id": "P4",
+                "left": "family",
+                "right": "Exam word: family."
+              },
+              {
+                "id": "P5",
+                "left": "home",
+                "right": "Exam word: home."
+              },
+              {
+                "id": "P6",
+                "left": "write",
+                "right": "Exam word: write."
+              },
+              {
+                "id": "P7",
+                "left": "study",
+                "right": "Exam word: study."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L02_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "sentence",
+                "right": "Exam word: sentence."
+              },
+              {
+                "id": "P2",
+                "left": "answer",
+                "right": "Exam word: answer."
+              },
+              {
+                "id": "P3",
+                "left": "name",
+                "right": "Exam word: name."
+              },
+              {
+                "id": "P4",
+                "left": "family",
+                "right": "Exam word: family."
+              },
+              {
+                "id": "P5",
+                "left": "home",
+                "right": "Exam word: home."
+              },
+              {
+                "id": "P6",
+                "left": "write",
+                "right": "Exam word: write."
+              },
+              {
+                "id": "P7",
+                "left": "study",
+                "right": "Exam word: study."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T08_L03",
+      "order": 3,
+      "title": {
+        "en": "Choose the Answer: Writing Short Answers",
+        "ru": "Choose the Answer: Writing Short Answers"
+      },
+      "objective": {
+        "en": "Select the correct response while practicing producing simple A1 written answers for test prompts.",
+        "ru": "Select the correct response while practicing producing simple A1 written answers for test prompts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T08_L03_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "answer",
+                "right": "A simple exam meaning of 'answer'."
+              },
+              {
+                "id": "P2",
+                "left": "name",
+                "right": "A simple exam meaning of 'name'."
+              },
+              {
+                "id": "P3",
+                "left": "family",
+                "right": "A simple exam meaning of 'family'."
+              },
+              {
+                "id": "P4",
+                "left": "home",
+                "right": "A simple exam meaning of 'home'."
+              },
+              {
+                "id": "P5",
+                "left": "study",
+                "right": "Exam word: study."
+              },
+              {
+                "id": "P6",
+                "left": "write",
+                "right": "Exam word: write."
+              },
+              {
+                "id": "P7",
+                "left": "sentence",
+                "right": "Exam word: sentence."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L03_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Select the correct response while practicing producing simple A1 written answers for test prompts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I study English every day.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I like English because it is useful.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My name is Sara.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I study English every day.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L03_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "answer",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "answer",
+            "word_bank": [
+              "answer"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L03_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L03_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "day",
+              "every",
+              "English",
+              "study",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "study",
+              "English",
+              "every",
+              "day"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L03_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I like English because it is useful.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Select the correct response while practicing producing simple A1 written answers for test prompts.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-b6d66c98b255a9112c01bb7d.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L03_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Choose the Answer: Writing Short Answers",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "I study English every day."
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "I like English because it is useful.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "My name is Sara.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L03_LISTEN_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I ___ English every day.",
+            "audio_text": "I study English every day.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "study",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "answer",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "name",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is study."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L03_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L03_MATCH_PAIRS_VOICE_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "answer",
+                "text": "answer",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-38f86fd6b36b8c546c9c4770.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "name",
+                "text": "name",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-a89ab00365cd1b76f1770696.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "family",
+                "text": "family",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-82d37b1c06af7a0a5b8411b0.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "home",
+                "text": "home",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-deba2f2990b5b0fccb27953d.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L03_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "I study English every day."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "I like English because it is useful.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "My name is Sara.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is answer.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I like English because it is useful.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L03_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Select the correct response while practicing producing simple A1 written answers for test prompts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I study English every day.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I like English because it is useful.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My name is Sara.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I study English every day.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L03_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Select the correct response while practicing producing simple A1 written answers for test prompts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I study English every day.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I like English because it is useful.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My name is Sara.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I study English every day.” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T08_L04",
+      "order": 4,
+      "title": {
+        "en": "Work Under Light Time Pressure: Writing Short Answers",
+        "ru": "Work Under Light Time Pressure: Writing Short Answers"
+      },
+      "objective": {
+        "en": "Answer efficiently without rushing while practicing producing simple A1 written answers for test prompts.",
+        "ru": "Answer efficiently without rushing while practicing producing simple A1 written answers for test prompts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T08_L04_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "name",
+                "right": "A simple exam meaning of 'name'."
+              },
+              {
+                "id": "P2",
+                "left": "family",
+                "right": "A simple exam meaning of 'family'."
+              },
+              {
+                "id": "P3",
+                "left": "home",
+                "right": "A simple exam meaning of 'home'."
+              },
+              {
+                "id": "P4",
+                "left": "study",
+                "right": "A simple exam meaning of 'study'."
+              },
+              {
+                "id": "P5",
+                "left": "work",
+                "right": "Exam word: work."
+              },
+              {
+                "id": "P6",
+                "left": "write",
+                "right": "Exam word: write."
+              },
+              {
+                "id": "P7",
+                "left": "sentence",
+                "right": "Exam word: sentence."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L04_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Work Under Light Time Pressure: Writing Short Answers. Exam mission: Answer efficiently without rushing while practicing producing simple A1 written answers for test prompts. Models: I like English because it is useful. My name is Sara. I live in a small city.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L04_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "name",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "name",
+            "word_bank": [
+              "name"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L04_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ English because it is useful.",
+            "correct_answer": "like",
+            "options": [
+              "like",
+              "name",
+              "family"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L04_TAP_WORDS_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "useful",
+              "is",
+              "it",
+              "because",
+              "English",
+              "like",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "like",
+              "English",
+              "because",
+              "it",
+              "is",
+              "useful"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L04_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "I like English because it is useful.",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-b6d66c98b255a9112c01bb7d.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L04_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Work Under Light Time Pressure: Writing Short Answers",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "I like English because it is useful."
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L04_DEFINITION_01",
+          "order": 8,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "name",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'name'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'family'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'home'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'study'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "name: A simple exam meaning of 'name'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L04_LISTEN_WORD_01",
+          "order": 9,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I ___ English because it is useful.",
+            "audio_text": "I like English because it is useful.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "like",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "name",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "family",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is like."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L04_MISSING_WORD_01",
+          "order": 10,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L04_MATCH_PAIRS_VOICE_01",
+          "order": 11,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "name",
+                "text": "name",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-a89ab00365cd1b76f1770696.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "family",
+                "text": "family",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-82d37b1c06af7a0a5b8411b0.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "home",
+                "text": "home",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-deba2f2990b5b0fccb27953d.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "study",
+                "text": "study",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-3d8a74e11b09bfc5f754824c.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L04_COMPLETE_CHAT_01",
+          "order": 12,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "I like English because it is useful."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "My name is Sara.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I live in a small city.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is name.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“My name is Sara.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L04_QUIZ_EXTRA_01",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "name",
+                "right": "A simple exam meaning of 'name'."
+              },
+              {
+                "id": "P2",
+                "left": "family",
+                "right": "A simple exam meaning of 'family'."
+              },
+              {
+                "id": "P3",
+                "left": "home",
+                "right": "A simple exam meaning of 'home'."
+              },
+              {
+                "id": "P4",
+                "left": "study",
+                "right": "A simple exam meaning of 'study'."
+              },
+              {
+                "id": "P5",
+                "left": "work",
+                "right": "Exam word: work."
+              },
+              {
+                "id": "P6",
+                "left": "write",
+                "right": "Exam word: write."
+              },
+              {
+                "id": "P7",
+                "left": "sentence",
+                "right": "Exam word: sentence."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T08_L05",
+      "order": 5,
+      "title": {
+        "en": "Check Accuracy: Writing Short Answers",
+        "ru": "Check Accuracy: Writing Short Answers"
+      },
+      "objective": {
+        "en": "Notice and correct a common beginner error while practicing producing simple A1 written answers for test prompts.",
+        "ru": "Notice and correct a common beginner error while practicing producing simple A1 written answers for test prompts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T08_L05_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "family",
+                "right": "Exam word: family."
+              },
+              {
+                "id": "P2",
+                "left": "home",
+                "right": "Exam word: home."
+              },
+              {
+                "id": "P3",
+                "left": "study",
+                "right": "Exam word: study."
+              },
+              {
+                "id": "P4",
+                "left": "work",
+                "right": "Exam word: work."
+              },
+              {
+                "id": "P5",
+                "left": "like",
+                "right": "Exam word: like."
+              },
+              {
+                "id": "P6",
+                "left": "write",
+                "right": "Exam word: write."
+              },
+              {
+                "id": "P7",
+                "left": "sentence",
+                "right": "Exam word: sentence."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L05_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Notice and correct a common beginner error while practicing producing simple A1 written answers for test prompts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "My name is Sara.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I live in a small city.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I study English every day.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“My name is Sara.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L05_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Build the exam answer",
+            "ru": "Составьте экзаменационный ответ"
+          },
+          "instructions": {
+            "en": "Build the correct English answer.",
+            "ru": "Составьте правильный ответ на английском."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте правильную английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "My name is Sara.",
+            "word_bank": [
+              "My",
+              "name",
+              "is",
+              "Sara",
+              "home"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L05_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L05_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "Sara",
+              "is",
+              "name",
+              "My"
+            ],
+            "correct_words": [
+              "My",
+              "name",
+              "is",
+              "Sara"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L05_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I live in a small city.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Notice and correct a common beginner error while practicing producing simple A1 written answers for test prompts.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-31c73f3ac01c7959156a8ef2.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L05_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Check Accuracy: Writing Short Answers",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "My name is Sara."
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L05_LISTEN_CHOOSE_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ Sara.",
+            "audio_text": "My name is Sara.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "My",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "family",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "home",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is My."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L05_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Введите пропущенное слово"
+          },
+          "instructions": {
+            "en": "Type the correct missing word.",
+            "ru": "Введите правильное пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "My ___ is Sara.",
+            "correct_answer": "name",
+            "hint_prefix": "n",
+            "explanation": "The missing word is name."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L05_VOICE_MATCH_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "family",
+                "text": "family",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-82d37b1c06af7a0a5b8411b0.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "home",
+                "text": "home",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-deba2f2990b5b0fccb27953d.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "study",
+                "text": "study",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-3d8a74e11b09bfc5f754824c.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "work",
+                "text": "work",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-7d3b1e4774c627bdaa1ca6d0.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L05_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "My name is Sara."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "I live in a small city.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I study English every day.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is family.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I live in a small city.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L05_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Notice and correct a common beginner error while practicing producing simple A1 written answers for test prompts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "My name is Sara.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I live in a small city.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I study English every day.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“My name is Sara.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L05_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Notice and correct a common beginner error while practicing producing simple A1 written answers for test prompts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "My name is Sara.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I live in a small city.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I study English every day.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“My name is Sara.” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T08_L06",
+      "order": 6,
+      "title": {
+        "en": "Use the Skill in Context: Writing Short Answers",
+        "ru": "Use the Skill in Context: Writing Short Answers"
+      },
+      "objective": {
+        "en": "Apply the exam skill to a realistic item while practicing producing simple A1 written answers for test prompts.",
+        "ru": "Apply the exam skill to a realistic item while practicing producing simple A1 written answers for test prompts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T08_L06_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "home",
+                "right": "Exam word: home."
+              },
+              {
+                "id": "P2",
+                "left": "study",
+                "right": "Exam word: study."
+              },
+              {
+                "id": "P3",
+                "left": "work",
+                "right": "Exam word: work."
+              },
+              {
+                "id": "P4",
+                "left": "like",
+                "right": "Exam word: like."
+              },
+              {
+                "id": "P5",
+                "left": "because",
+                "right": "Exam word: because."
+              },
+              {
+                "id": "P6",
+                "left": "write",
+                "right": "Exam word: write."
+              },
+              {
+                "id": "P7",
+                "left": "sentence",
+                "right": "Exam word: sentence."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L06_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Use the Skill in Context: Writing Short Answers. Exam mission: Apply the exam skill to a realistic item while practicing producing simple A1 written answers for test prompts. Models: I live in a small city. I study English every day. I like English because it is useful.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L06_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "home",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "home",
+            "word_bank": [
+              "home"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L06_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ in a small city.",
+            "correct_answer": "live",
+            "options": [
+              "live",
+              "home",
+              "study"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L06_TAP_WORDS_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "city",
+              "small",
+              "a",
+              "in",
+              "live",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "live",
+              "in",
+              "a",
+              "small",
+              "city"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L06_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "I live in a small city.",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-31c73f3ac01c7959156a8ef2.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L06_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Use the Skill in Context: Writing Short Answers",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "I live in a small city."
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "I study English every day.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I like English because it is useful.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L06_DEFINITION_01",
+          "order": 8,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "home",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'home'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'study'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'work'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'like'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "home: A simple exam meaning of 'home'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L06_LISTEN_CHOOSE_WORD_01",
+          "order": 9,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ city.",
+            "audio_text": "I live in a small city.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "live",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "home",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "study",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is live."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L06_MISSING_WORD_01",
+          "order": 10,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L06_VOICE_MATCH_01",
+          "order": 11,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "home",
+                "text": "home",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-deba2f2990b5b0fccb27953d.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "study",
+                "text": "study",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-3d8a74e11b09bfc5f754824c.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "work",
+                "text": "work",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-7d3b1e4774c627bdaa1ca6d0.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "like",
+                "text": "like",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-5b1f16025815d818b5bc4315.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L06_COMPLETE_CHAT_01",
+          "order": 12,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "I live in a small city."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "I study English every day.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I like English because it is useful.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is home.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I study English every day.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L06_QUIZ_EXTRA_01",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "home",
+                "right": "Exam word: home."
+              },
+              {
+                "id": "P2",
+                "left": "study",
+                "right": "Exam word: study."
+              },
+              {
+                "id": "P3",
+                "left": "work",
+                "right": "Exam word: work."
+              },
+              {
+                "id": "P4",
+                "left": "like",
+                "right": "Exam word: like."
+              },
+              {
+                "id": "P5",
+                "left": "because",
+                "right": "Exam word: because."
+              },
+              {
+                "id": "P6",
+                "left": "write",
+                "right": "Exam word: write."
+              },
+              {
+                "id": "P7",
+                "left": "sentence",
+                "right": "Exam word: sentence."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T08_L07",
+      "order": 7,
+      "title": {
+        "en": "Build Independence: Writing Short Answers",
+        "ru": "Build Independence: Writing Short Answers"
+      },
+      "objective": {
+        "en": "Complete the task with less support while practicing producing simple A1 written answers for test prompts.",
+        "ru": "Complete the task with less support while practicing producing simple A1 written answers for test prompts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T08_L07_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "study",
+                "right": "A simple exam meaning of 'study'."
+              },
+              {
+                "id": "P2",
+                "left": "work",
+                "right": "A simple exam meaning of 'work'."
+              },
+              {
+                "id": "P3",
+                "left": "like",
+                "right": "A simple exam meaning of 'like'."
+              },
+              {
+                "id": "P4",
+                "left": "because",
+                "right": "A simple exam meaning of 'because'."
+              },
+              {
+                "id": "P5",
+                "left": "write",
+                "right": "Exam word: write."
+              },
+              {
+                "id": "P6",
+                "left": "sentence",
+                "right": "Exam word: sentence."
+              },
+              {
+                "id": "P7",
+                "left": "answer",
+                "right": "Exam word: answer."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L07_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete the task with less support while practicing producing simple A1 written answers for test prompts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I study English every day.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I like English because it is useful.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My name is Sara.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I study English every day.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L07_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "study",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "study",
+            "word_bank": [
+              "study"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L07_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L07_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "day",
+              "every",
+              "English",
+              "study",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "study",
+              "English",
+              "every",
+              "day"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L07_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I like English because it is useful.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Complete the task with less support while practicing producing simple A1 written answers for test prompts.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-b6d66c98b255a9112c01bb7d.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L07_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Build Independence: Writing Short Answers",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "I study English every day."
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L07_LISTEN_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I ___ English every day.",
+            "audio_text": "I study English every day.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "study",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "work",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "like",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is study."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L07_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Введите пропущенное слово"
+          },
+          "instructions": {
+            "en": "Type the correct missing word.",
+            "ru": "Введите правильное пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ English every day.",
+            "correct_answer": "study",
+            "hint_prefix": "s",
+            "explanation": "The missing word is study."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L07_MATCH_PAIRS_VOICE_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "study",
+                "text": "study",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-3d8a74e11b09bfc5f754824c.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "work",
+                "text": "work",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-7d3b1e4774c627bdaa1ca6d0.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "like",
+                "text": "like",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-5b1f16025815d818b5bc4315.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "because",
+                "text": "because",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-d220ae2d8c2318cd81152f11.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L07_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "I study English every day."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "I like English because it is useful.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "My name is Sara.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is study.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I like English because it is useful.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L07_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete the task with less support while practicing producing simple A1 written answers for test prompts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I study English every day.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I like English because it is useful.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My name is Sara.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I study English every day.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L07_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete the task with less support while practicing producing simple A1 written answers for test prompts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I study English every day.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I like English because it is useful.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My name is Sara.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I study English every day.” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T08_L08",
+      "order": 8,
+      "title": {
+        "en": "Mixed Practice: Writing Short Answers",
+        "ru": "Mixed Practice: Writing Short Answers"
+      },
+      "objective": {
+        "en": "Combine this skill with another a1 exam skill while practicing producing simple A1 written answers for test prompts.",
+        "ru": "Combine this skill with another a1 exam skill while practicing producing simple A1 written answers for test prompts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T08_L08_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "work",
+                "right": "Exam word: work."
+              },
+              {
+                "id": "P2",
+                "left": "like",
+                "right": "Exam word: like."
+              },
+              {
+                "id": "P3",
+                "left": "because",
+                "right": "Exam word: because."
+              },
+              {
+                "id": "P4",
+                "left": "write",
+                "right": "Exam word: write."
+              },
+              {
+                "id": "P5",
+                "left": "sentence",
+                "right": "Exam word: sentence."
+              },
+              {
+                "id": "P6",
+                "left": "answer",
+                "right": "Exam word: answer."
+              },
+              {
+                "id": "P7",
+                "left": "name",
+                "right": "Exam word: name."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L08_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Mixed Practice: Writing Short Answers. Exam mission: Combine this skill with another a1 exam skill while practicing producing simple A1 written answers for test prompts. Models: I like English because it is useful. My name is Sara. I live in a small city.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L08_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Build the exam answer",
+            "ru": "Составьте экзаменационный ответ"
+          },
+          "instructions": {
+            "en": "Build the correct English answer.",
+            "ru": "Составьте правильный ответ на английском."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте правильную английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I like English because it is useful.",
+            "word_bank": [
+              "I",
+              "like",
+              "English",
+              "because",
+              "it",
+              "is",
+              "useful",
+              "like"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L08_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ English because it is useful.",
+            "correct_answer": "like",
+            "options": [
+              "like",
+              "work",
+              "because"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L08_TAP_WORDS_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "useful",
+              "is",
+              "it",
+              "because",
+              "English",
+              "like",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "like",
+              "English",
+              "because",
+              "it",
+              "is",
+              "useful"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L08_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "I like English because it is useful.",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-b6d66c98b255a9112c01bb7d.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L08_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Mixed Practice: Writing Short Answers",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "I like English because it is useful."
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "My name is Sara.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I live in a small city.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L08_DEFINITION_01",
+          "order": 8,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "work",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'work'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'like'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'because'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'write'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "work: A simple exam meaning of 'work'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L08_LISTEN_CHOOSE_WORD_01",
+          "order": 9,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ useful.",
+            "audio_text": "I like English because it is useful.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "like",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "work",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "because",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is like."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L08_MISSING_WORD_01",
+          "order": 10,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L08_MATCH_PAIRS_VOICE_01",
+          "order": 11,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "work",
+                "text": "work",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-7d3b1e4774c627bdaa1ca6d0.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "like",
+                "text": "like",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-5b1f16025815d818b5bc4315.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "because",
+                "text": "because",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-d220ae2d8c2318cd81152f11.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "write",
+                "text": "write",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-d17ba72d6e4c868626423608.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L08_COMPLETE_CHAT_01",
+          "order": 12,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "I like English because it is useful."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "My name is Sara.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I live in a small city.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is work.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“My name is Sara.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L08_QUIZ_EXTRA_01",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "work",
+                "right": "Exam word: work."
+              },
+              {
+                "id": "P2",
+                "left": "like",
+                "right": "Exam word: like."
+              },
+              {
+                "id": "P3",
+                "left": "because",
+                "right": "Exam word: because."
+              },
+              {
+                "id": "P4",
+                "left": "write",
+                "right": "Exam word: write."
+              },
+              {
+                "id": "P5",
+                "left": "sentence",
+                "right": "Exam word: sentence."
+              },
+              {
+                "id": "P6",
+                "left": "answer",
+                "right": "Exam word: answer."
+              },
+              {
+                "id": "P7",
+                "left": "name",
+                "right": "Exam word: name."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T08_L09",
+      "order": 9,
+      "title": {
+        "en": "Mini Test: Writing Short Answers",
+        "ru": "Mini Test: Writing Short Answers"
+      },
+      "objective": {
+        "en": "Complete a short test-style challenge while practicing producing simple A1 written answers for test prompts.",
+        "ru": "Complete a short test-style challenge while practicing producing simple A1 written answers for test prompts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T08_L09_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "like",
+                "right": "A simple exam meaning of 'like'."
+              },
+              {
+                "id": "P2",
+                "left": "because",
+                "right": "A simple exam meaning of 'because'."
+              },
+              {
+                "id": "P3",
+                "left": "write",
+                "right": "A simple exam meaning of 'write'."
+              },
+              {
+                "id": "P4",
+                "left": "sentence",
+                "right": "A simple exam meaning of 'sentence'."
+              },
+              {
+                "id": "P5",
+                "left": "answer",
+                "right": "Exam word: answer."
+              },
+              {
+                "id": "P6",
+                "left": "name",
+                "right": "Exam word: name."
+              },
+              {
+                "id": "P7",
+                "left": "family",
+                "right": "Exam word: family."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L09_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete a short test-style challenge while practicing producing simple A1 written answers for test prompts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "My name is Sara.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I live in a small city.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I study English every day.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“My name is Sara.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L09_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "like",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "like",
+            "word_bank": [
+              "like"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L09_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L09_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "Sara",
+              "is",
+              "name",
+              "My"
+            ],
+            "correct_words": [
+              "My",
+              "name",
+              "is",
+              "Sara"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L09_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I live in a small city.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Complete a short test-style challenge while practicing producing simple A1 written answers for test prompts.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-31c73f3ac01c7959156a8ef2.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L09_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Mini Test: Writing Short Answers",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "My name is Sara."
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L09_LISTEN_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "My ___ is Sara.",
+            "audio_text": "My name is Sara.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "name",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "like",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "because",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is name."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L09_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L09_VOICE_MATCH_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "like",
+                "text": "like",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-5b1f16025815d818b5bc4315.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "because",
+                "text": "because",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-d220ae2d8c2318cd81152f11.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "write",
+                "text": "write",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-d17ba72d6e4c868626423608.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "sentence",
+                "text": "sentence",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-16725af54f6b0a9c8f531a46.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L09_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "My name is Sara."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "I live in a small city.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I study English every day.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is like.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I live in a small city.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L09_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete a short test-style challenge while practicing producing simple A1 written answers for test prompts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "My name is Sara.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I live in a small city.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I study English every day.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“My name is Sara.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L09_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete a short test-style challenge while practicing producing simple A1 written answers for test prompts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "My name is Sara.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I live in a small city.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I study English every day.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“My name is Sara.” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T08_L10",
+      "order": 10,
+      "title": {
+        "en": "Track Exam Mission: Writing Short Answers",
+        "ru": "Track Exam Mission: Writing Short Answers"
+      },
+      "objective": {
+        "en": "Combine the track skills in a final exam mission while practicing producing simple A1 written answers for test prompts.",
+        "ru": "Combine the track skills in a final exam mission while practicing producing simple A1 written answers for test prompts."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T08_L10_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "because",
+                "right": "Exam word: because."
+              },
+              {
+                "id": "P2",
+                "left": "write",
+                "right": "Exam word: write."
+              },
+              {
+                "id": "P3",
+                "left": "sentence",
+                "right": "Exam word: sentence."
+              },
+              {
+                "id": "P4",
+                "left": "answer",
+                "right": "Exam word: answer."
+              },
+              {
+                "id": "P5",
+                "left": "name",
+                "right": "Exam word: name."
+              },
+              {
+                "id": "P6",
+                "left": "family",
+                "right": "Exam word: family."
+              },
+              {
+                "id": "P7",
+                "left": "home",
+                "right": "Exam word: home."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L10_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Track Exam Mission: Writing Short Answers. Exam mission: Combine the track skills in a final exam mission while practicing producing simple A1 written answers for test prompts. Models: I live in a small city. I study English every day. I like English because it is useful.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L10_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Combine the track skills in a final exam mission while practicing producing simple A1 written answers for test prompts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I live in a small city.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I study English every day.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I like English because it is useful.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I live in a small city.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L10_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "because",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "because",
+            "word_bank": [
+              "because"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L10_FILL_BLANK_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L10_TAP_WORDS_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "city",
+              "small",
+              "a",
+              "in",
+              "live",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "live",
+              "in",
+              "a",
+              "small",
+              "city"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L10_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "I live in a small city.",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-31c73f3ac01c7959156a8ef2.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L10_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I study English every day.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Combine the track skills in a final exam mission while practicing producing simple A1 written answers for test prompts.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-24bb26c886ad46259ec50188.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L10_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Track Exam Mission: Writing Short Answers",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "I live in a small city."
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "I study English every day.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I like English because it is useful.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L10_LISTEN_CHOOSE_WORD_01",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ city.",
+            "audio_text": "I live in a small city.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "live",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "because",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "write",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is live."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L10_MISSING_WORD_01",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L10_VOICE_MATCH_01",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "because",
+                "text": "because",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-d220ae2d8c2318cd81152f11.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "write",
+                "text": "write",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-d17ba72d6e4c868626423608.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "sentence",
+                "text": "sentence",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-16725af54f6b0a9c8f531a46.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "answer",
+                "text": "answer",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-38f86fd6b36b8c546c9c4770.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T08_L10_COMPLETE_CHAT_01",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "I live in a small city."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "I study English every day.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I like English because it is useful.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is because.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I study English every day.” is the best response."
+          }
+        }
+      ]
+    }
+  ]
+}

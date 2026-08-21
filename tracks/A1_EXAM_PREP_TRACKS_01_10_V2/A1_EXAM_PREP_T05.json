@@ -1,0 +1,4527 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_EXAM_PREP_T05",
+    "title": {
+      "en": "Reading for the Main Idea",
+      "ru": "Reading for the Main Idea"
+    },
+    "description": {
+      "en": "An A1 Exams track focused on finding the main meaning in a short A1 text.",
+      "ru": "An A1 Exams track focused on finding the main meaning in a short A1 text."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "goal": "study",
+    "track_type": "thematic"
+  },
+  "lessons": [
+    {
+      "code": "A1_EXAM_PREP_T05_L01",
+      "order": 1,
+      "title": {
+        "en": "Learn the Task: Reading for the Main Idea",
+        "ru": "Learn the Task: Reading for the Main Idea"
+      },
+      "objective": {
+        "en": "Understand the exam task and key language while practicing finding the main meaning in a short A1 text.",
+        "ru": "Understand the exam task and key language while practicing finding the main meaning in a short A1 text."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T05_L01_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "read",
+                "right": "A simple exam meaning of 'read'."
+              },
+              {
+                "id": "P2",
+                "left": "text",
+                "right": "A simple exam meaning of 'text'."
+              },
+              {
+                "id": "P3",
+                "left": "main",
+                "right": "A simple exam meaning of 'main'."
+              },
+              {
+                "id": "P4",
+                "left": "idea",
+                "right": "A simple exam meaning of 'idea'."
+              },
+              {
+                "id": "P5",
+                "left": "about",
+                "right": "Exam word: about."
+              },
+              {
+                "id": "P6",
+                "left": "person",
+                "right": "Exam word: person."
+              },
+              {
+                "id": "P7",
+                "left": "family",
+                "right": "Exam word: family."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L01_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Learn the Task: Reading for the Main Idea. Exam mission: Understand the exam task and key language while practicing finding the main meaning in a short A1 text. Models: Read the short text. What is the text about? Choose the best answer.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L01_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Understand the exam task and key language while practicing finding the main meaning in a short A1 text.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Read the short text.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "What is the text about?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Choose the best answer.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Read the short text.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L01_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "read",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "read",
+            "word_bank": [
+              "read"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L01_FILL_BLANK_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L01_TAP_WORDS_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "text",
+              "short",
+              "the",
+              "Read"
+            ],
+            "correct_words": [
+              "Read",
+              "the",
+              "short",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L01_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Read the short text.",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-074db4e115a5d255dadfb5ea.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L01_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "What is the text about?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Understand the exam task and key language while practicing finding the main meaning in a short A1 text.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-ea49e3b501d571f65424837b.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L01_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Learn the Task: Reading for the Main Idea",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "Read the short text."
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L01_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "read",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'read'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'text'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'main'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'idea'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "read: A simple exam meaning of 'read'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L01_LISTEN_CHOOSE_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ text.",
+            "audio_text": "Read the short text.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Read",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "text",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "main",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Read."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L01_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L01_MATCH_PAIRS_VOICE_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "read",
+                "text": "read",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-ecc0bccce4b2f8d7820f0604.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "text",
+                "text": "text",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-41d7110c98c31510955d56d6.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "main",
+                "text": "main",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-593d2c26bfc4ba2a5d79b244.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "idea",
+                "text": "idea",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-7cb8799b6a7e7ba5964e573e.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L01_COMPLETE_CHAT_01",
+          "order": 14,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Read the short text."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "What is the text about?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Choose the best answer.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is read.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What is the text about?” is the best response."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T05_L02",
+      "order": 2,
+      "title": {
+        "en": "Practice the Format: Reading for the Main Idea",
+        "ru": "Practice the Format: Reading for the Main Idea"
+      },
+      "objective": {
+        "en": "Complete a guided exam-style item while practicing finding the main meaning in a short A1 text.",
+        "ru": "Complete a guided exam-style item while practicing finding the main meaning in a short A1 text."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T05_L02_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "text",
+                "right": "Exam word: text."
+              },
+              {
+                "id": "P2",
+                "left": "main",
+                "right": "Exam word: main."
+              },
+              {
+                "id": "P3",
+                "left": "idea",
+                "right": "Exam word: idea."
+              },
+              {
+                "id": "P4",
+                "left": "about",
+                "right": "Exam word: about."
+              },
+              {
+                "id": "P5",
+                "left": "person",
+                "right": "Exam word: person."
+              },
+              {
+                "id": "P6",
+                "left": "read",
+                "right": "Exam word: read."
+              },
+              {
+                "id": "P7",
+                "left": "family",
+                "right": "Exam word: family."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L02_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Practice the Format: Reading for the Main Idea. Exam mission: Complete a guided exam-style item while practicing finding the main meaning in a short A1 text. Models: What is the text about? Choose the best answer. Find the main idea.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L02_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Build the exam answer",
+            "ru": "Составьте экзаменационный ответ"
+          },
+          "instructions": {
+            "en": "Build the correct English answer.",
+            "ru": "Составьте правильный ответ на английском."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте правильную английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "What is the text about?",
+            "word_bank": [
+              "What",
+              "is",
+              "the",
+              "text",
+              "about",
+              "main"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L02_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ is the text about?",
+            "correct_answer": "What",
+            "options": [
+              "What",
+              "text",
+              "main"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L02_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "about",
+              "text",
+              "the",
+              "is",
+              "What"
+            ],
+            "correct_words": [
+              "What",
+              "is",
+              "the",
+              "text",
+              "about"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L02_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "What is the text about?",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-ea49e3b501d571f65424837b.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L02_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Practice the Format: Reading for the Main Idea",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "What is the text about?"
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L02_LISTEN_CHOOSE_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ about.",
+            "audio_text": "What is the text about?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "What",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "text",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "main",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is What."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L02_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Введите пропущенное слово"
+          },
+          "instructions": {
+            "en": "Type the correct missing word.",
+            "ru": "Введите правильное пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ is the text about?",
+            "correct_answer": "What",
+            "hint_prefix": "W",
+            "explanation": "The missing word is What."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L02_MATCH_PAIRS_VOICE_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "text",
+                "text": "text",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-41d7110c98c31510955d56d6.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "main",
+                "text": "main",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-593d2c26bfc4ba2a5d79b244.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "idea",
+                "text": "idea",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-7cb8799b6a7e7ba5964e573e.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "about",
+                "text": "about",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-32aadb05391464d0896a00c9.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L02_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "What is the text about?"
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Choose the best answer.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Find the main idea.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is text.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Choose the best answer.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L02_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "text",
+                "right": "Exam word: text."
+              },
+              {
+                "id": "P2",
+                "left": "main",
+                "right": "Exam word: main."
+              },
+              {
+                "id": "P3",
+                "left": "idea",
+                "right": "Exam word: idea."
+              },
+              {
+                "id": "P4",
+                "left": "about",
+                "right": "Exam word: about."
+              },
+              {
+                "id": "P5",
+                "left": "person",
+                "right": "Exam word: person."
+              },
+              {
+                "id": "P6",
+                "left": "read",
+                "right": "Exam word: read."
+              },
+              {
+                "id": "P7",
+                "left": "family",
+                "right": "Exam word: family."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L02_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "text",
+                "right": "Exam word: text."
+              },
+              {
+                "id": "P2",
+                "left": "main",
+                "right": "Exam word: main."
+              },
+              {
+                "id": "P3",
+                "left": "idea",
+                "right": "Exam word: idea."
+              },
+              {
+                "id": "P4",
+                "left": "about",
+                "right": "Exam word: about."
+              },
+              {
+                "id": "P5",
+                "left": "person",
+                "right": "Exam word: person."
+              },
+              {
+                "id": "P6",
+                "left": "read",
+                "right": "Exam word: read."
+              },
+              {
+                "id": "P7",
+                "left": "family",
+                "right": "Exam word: family."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T05_L03",
+      "order": 3,
+      "title": {
+        "en": "Choose the Answer: Reading for the Main Idea",
+        "ru": "Choose the Answer: Reading for the Main Idea"
+      },
+      "objective": {
+        "en": "Select the correct response while practicing finding the main meaning in a short A1 text.",
+        "ru": "Select the correct response while practicing finding the main meaning in a short A1 text."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T05_L03_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "main",
+                "right": "A simple exam meaning of 'main'."
+              },
+              {
+                "id": "P2",
+                "left": "idea",
+                "right": "A simple exam meaning of 'idea'."
+              },
+              {
+                "id": "P3",
+                "left": "about",
+                "right": "A simple exam meaning of 'about'."
+              },
+              {
+                "id": "P4",
+                "left": "person",
+                "right": "A simple exam meaning of 'person'."
+              },
+              {
+                "id": "P5",
+                "left": "family",
+                "right": "Exam word: family."
+              },
+              {
+                "id": "P6",
+                "left": "read",
+                "right": "Exam word: read."
+              },
+              {
+                "id": "P7",
+                "left": "text",
+                "right": "Exam word: text."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L03_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Select the correct response while practicing finding the main meaning in a short A1 text.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Choose the best answer.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Find the main idea.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Read the short text.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Choose the best answer.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L03_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "main",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "main",
+            "word_bank": [
+              "main"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L03_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L03_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "answer",
+              "best",
+              "the",
+              "Choose"
+            ],
+            "correct_words": [
+              "Choose",
+              "the",
+              "best",
+              "answer"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L03_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Find the main idea.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Select the correct response while practicing finding the main meaning in a short A1 text.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-e55a51e5495c1bac3b251896.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L03_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Choose the Answer: Reading for the Main Idea",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "Choose the best answer."
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "Find the main idea.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Read the short text.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L03_LISTEN_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ the best answer.",
+            "audio_text": "Choose the best answer.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Choose",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "main",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "idea",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Choose."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L03_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L03_MATCH_PAIRS_VOICE_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "main",
+                "text": "main",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-593d2c26bfc4ba2a5d79b244.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "idea",
+                "text": "idea",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-7cb8799b6a7e7ba5964e573e.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "about",
+                "text": "about",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-32aadb05391464d0896a00c9.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "person",
+                "text": "person",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-234be6d2b0bb628a8de21bcd.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L03_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Choose the best answer."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Find the main idea.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Read the short text.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is main.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Find the main idea.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L03_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Select the correct response while practicing finding the main meaning in a short A1 text.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Choose the best answer.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Find the main idea.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Read the short text.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Choose the best answer.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L03_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Select the correct response while practicing finding the main meaning in a short A1 text.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Choose the best answer.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Find the main idea.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Read the short text.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Choose the best answer.” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T05_L04",
+      "order": 4,
+      "title": {
+        "en": "Work Under Light Time Pressure: Reading for the Main Idea",
+        "ru": "Work Under Light Time Pressure: Reading for the Main Idea"
+      },
+      "objective": {
+        "en": "Answer efficiently without rushing while practicing finding the main meaning in a short A1 text.",
+        "ru": "Answer efficiently without rushing while practicing finding the main meaning in a short A1 text."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T05_L04_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "idea",
+                "right": "A simple exam meaning of 'idea'."
+              },
+              {
+                "id": "P2",
+                "left": "about",
+                "right": "A simple exam meaning of 'about'."
+              },
+              {
+                "id": "P3",
+                "left": "person",
+                "right": "A simple exam meaning of 'person'."
+              },
+              {
+                "id": "P4",
+                "left": "family",
+                "right": "A simple exam meaning of 'family'."
+              },
+              {
+                "id": "P5",
+                "left": "day",
+                "right": "Exam word: day."
+              },
+              {
+                "id": "P6",
+                "left": "read",
+                "right": "Exam word: read."
+              },
+              {
+                "id": "P7",
+                "left": "text",
+                "right": "Exam word: text."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L04_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Work Under Light Time Pressure: Reading for the Main Idea. Exam mission: Answer efficiently without rushing while practicing finding the main meaning in a short A1 text. Models: Find the main idea. Read the short text. What is the text about?",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L04_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "idea",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "idea",
+            "word_bank": [
+              "idea"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L04_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ the main idea.",
+            "correct_answer": "Find",
+            "options": [
+              "Find",
+              "idea",
+              "about"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L04_TAP_WORDS_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "idea",
+              "main",
+              "the",
+              "Find"
+            ],
+            "correct_words": [
+              "Find",
+              "the",
+              "main",
+              "idea"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L04_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Find the main idea.",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-e55a51e5495c1bac3b251896.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L04_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Work Under Light Time Pressure: Reading for the Main Idea",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "Find the main idea."
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L04_DEFINITION_01",
+          "order": 8,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "idea",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'idea'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'about'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'person'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'family'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "idea: A simple exam meaning of 'idea'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L04_LISTEN_WORD_01",
+          "order": 9,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ the main idea.",
+            "audio_text": "Find the main idea.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Find",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "idea",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "about",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Find."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L04_MISSING_WORD_01",
+          "order": 10,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L04_MATCH_PAIRS_VOICE_01",
+          "order": 11,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "idea",
+                "text": "idea",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-7cb8799b6a7e7ba5964e573e.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "about",
+                "text": "about",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-32aadb05391464d0896a00c9.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "person",
+                "text": "person",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-234be6d2b0bb628a8de21bcd.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "family",
+                "text": "family",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-82d37b1c06af7a0a5b8411b0.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L04_COMPLETE_CHAT_01",
+          "order": 12,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Find the main idea."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Read the short text.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "What is the text about?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is idea.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Read the short text.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L04_QUIZ_EXTRA_01",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "idea",
+                "right": "A simple exam meaning of 'idea'."
+              },
+              {
+                "id": "P2",
+                "left": "about",
+                "right": "A simple exam meaning of 'about'."
+              },
+              {
+                "id": "P3",
+                "left": "person",
+                "right": "A simple exam meaning of 'person'."
+              },
+              {
+                "id": "P4",
+                "left": "family",
+                "right": "A simple exam meaning of 'family'."
+              },
+              {
+                "id": "P5",
+                "left": "day",
+                "right": "Exam word: day."
+              },
+              {
+                "id": "P6",
+                "left": "read",
+                "right": "Exam word: read."
+              },
+              {
+                "id": "P7",
+                "left": "text",
+                "right": "Exam word: text."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T05_L05",
+      "order": 5,
+      "title": {
+        "en": "Check Accuracy: Reading for the Main Idea",
+        "ru": "Check Accuracy: Reading for the Main Idea"
+      },
+      "objective": {
+        "en": "Notice and correct a common beginner error while practicing finding the main meaning in a short A1 text.",
+        "ru": "Notice and correct a common beginner error while practicing finding the main meaning in a short A1 text."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T05_L05_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "about",
+                "right": "Exam word: about."
+              },
+              {
+                "id": "P2",
+                "left": "person",
+                "right": "Exam word: person."
+              },
+              {
+                "id": "P3",
+                "left": "family",
+                "right": "Exam word: family."
+              },
+              {
+                "id": "P4",
+                "left": "day",
+                "right": "Exam word: day."
+              },
+              {
+                "id": "P5",
+                "left": "place",
+                "right": "Exam word: place."
+              },
+              {
+                "id": "P6",
+                "left": "read",
+                "right": "Exam word: read."
+              },
+              {
+                "id": "P7",
+                "left": "text",
+                "right": "Exam word: text."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L05_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Notice and correct a common beginner error while practicing finding the main meaning in a short A1 text.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Read the short text.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "What is the text about?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Choose the best answer.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Read the short text.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L05_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Build the exam answer",
+            "ru": "Составьте экзаменационный ответ"
+          },
+          "instructions": {
+            "en": "Build the correct English answer.",
+            "ru": "Составьте правильный ответ на английском."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте правильную английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Read the short text.",
+            "word_bank": [
+              "Read",
+              "the",
+              "short",
+              "text",
+              "person"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L05_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L05_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "text",
+              "short",
+              "the",
+              "Read"
+            ],
+            "correct_words": [
+              "Read",
+              "the",
+              "short",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L05_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "What is the text about?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Notice and correct a common beginner error while practicing finding the main meaning in a short A1 text.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-ea49e3b501d571f65424837b.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L05_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Check Accuracy: Reading for the Main Idea",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "Read the short text."
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L05_LISTEN_CHOOSE_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ text.",
+            "audio_text": "Read the short text.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Read",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "about",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "person",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Read."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L05_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Введите пропущенное слово"
+          },
+          "instructions": {
+            "en": "Type the correct missing word.",
+            "ru": "Введите правильное пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ the short text.",
+            "correct_answer": "Read",
+            "hint_prefix": "R",
+            "explanation": "The missing word is Read."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L05_VOICE_MATCH_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "about",
+                "text": "about",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-32aadb05391464d0896a00c9.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "person",
+                "text": "person",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-234be6d2b0bb628a8de21bcd.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "family",
+                "text": "family",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-82d37b1c06af7a0a5b8411b0.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "day",
+                "text": "day",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-6b9ac348fc65bd991767b4da.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L05_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Read the short text."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "What is the text about?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Choose the best answer.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is about.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What is the text about?” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L05_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Notice and correct a common beginner error while practicing finding the main meaning in a short A1 text.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Read the short text.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "What is the text about?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Choose the best answer.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Read the short text.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L05_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Notice and correct a common beginner error while practicing finding the main meaning in a short A1 text.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Read the short text.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "What is the text about?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Choose the best answer.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Read the short text.” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T05_L06",
+      "order": 6,
+      "title": {
+        "en": "Use the Skill in Context: Reading for the Main Idea",
+        "ru": "Use the Skill in Context: Reading for the Main Idea"
+      },
+      "objective": {
+        "en": "Apply the exam skill to a realistic item while practicing finding the main meaning in a short A1 text.",
+        "ru": "Apply the exam skill to a realistic item while practicing finding the main meaning in a short A1 text."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T05_L06_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "person",
+                "right": "Exam word: person."
+              },
+              {
+                "id": "P2",
+                "left": "family",
+                "right": "Exam word: family."
+              },
+              {
+                "id": "P3",
+                "left": "day",
+                "right": "Exam word: day."
+              },
+              {
+                "id": "P4",
+                "left": "place",
+                "right": "Exam word: place."
+              },
+              {
+                "id": "P5",
+                "left": "answer",
+                "right": "Exam word: answer."
+              },
+              {
+                "id": "P6",
+                "left": "read",
+                "right": "Exam word: read."
+              },
+              {
+                "id": "P7",
+                "left": "text",
+                "right": "Exam word: text."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L06_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Use the Skill in Context: Reading for the Main Idea. Exam mission: Apply the exam skill to a realistic item while practicing finding the main meaning in a short A1 text. Models: What is the text about? Choose the best answer. Find the main idea.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L06_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "person",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "person",
+            "word_bank": [
+              "person"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L06_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ is the text about?",
+            "correct_answer": "What",
+            "options": [
+              "What",
+              "person",
+              "family"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L06_TAP_WORDS_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "about",
+              "text",
+              "the",
+              "is",
+              "What"
+            ],
+            "correct_words": [
+              "What",
+              "is",
+              "the",
+              "text",
+              "about"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L06_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "What is the text about?",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-ea49e3b501d571f65424837b.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L06_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Use the Skill in Context: Reading for the Main Idea",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "What is the text about?"
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "Choose the best answer.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Find the main idea.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L06_DEFINITION_01",
+          "order": 8,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "person",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'person'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'family'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'day'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'place'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "person: A simple exam meaning of 'person'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L06_LISTEN_CHOOSE_WORD_01",
+          "order": 9,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ about.",
+            "audio_text": "What is the text about?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "What",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "person",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "family",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is What."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L06_MISSING_WORD_01",
+          "order": 10,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L06_VOICE_MATCH_01",
+          "order": 11,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "person",
+                "text": "person",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-234be6d2b0bb628a8de21bcd.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "family",
+                "text": "family",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-82d37b1c06af7a0a5b8411b0.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "day",
+                "text": "day",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-6b9ac348fc65bd991767b4da.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "place",
+                "text": "place",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-de68f9d8d80389e082a00eda.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L06_COMPLETE_CHAT_01",
+          "order": 12,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "What is the text about?"
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Choose the best answer.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Find the main idea.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is person.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Choose the best answer.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L06_QUIZ_EXTRA_01",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "person",
+                "right": "Exam word: person."
+              },
+              {
+                "id": "P2",
+                "left": "family",
+                "right": "Exam word: family."
+              },
+              {
+                "id": "P3",
+                "left": "day",
+                "right": "Exam word: day."
+              },
+              {
+                "id": "P4",
+                "left": "place",
+                "right": "Exam word: place."
+              },
+              {
+                "id": "P5",
+                "left": "answer",
+                "right": "Exam word: answer."
+              },
+              {
+                "id": "P6",
+                "left": "read",
+                "right": "Exam word: read."
+              },
+              {
+                "id": "P7",
+                "left": "text",
+                "right": "Exam word: text."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T05_L07",
+      "order": 7,
+      "title": {
+        "en": "Build Independence: Reading for the Main Idea",
+        "ru": "Build Independence: Reading for the Main Idea"
+      },
+      "objective": {
+        "en": "Complete the task with less support while practicing finding the main meaning in a short A1 text.",
+        "ru": "Complete the task with less support while practicing finding the main meaning in a short A1 text."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T05_L07_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "family",
+                "right": "A simple exam meaning of 'family'."
+              },
+              {
+                "id": "P2",
+                "left": "day",
+                "right": "A simple exam meaning of 'day'."
+              },
+              {
+                "id": "P3",
+                "left": "place",
+                "right": "A simple exam meaning of 'place'."
+              },
+              {
+                "id": "P4",
+                "left": "answer",
+                "right": "A simple exam meaning of 'answer'."
+              },
+              {
+                "id": "P5",
+                "left": "read",
+                "right": "Exam word: read."
+              },
+              {
+                "id": "P6",
+                "left": "text",
+                "right": "Exam word: text."
+              },
+              {
+                "id": "P7",
+                "left": "main",
+                "right": "Exam word: main."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L07_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete the task with less support while practicing finding the main meaning in a short A1 text.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Choose the best answer.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Find the main idea.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Read the short text.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Choose the best answer.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L07_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "family",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "family",
+            "word_bank": [
+              "family"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L07_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L07_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "answer",
+              "best",
+              "the",
+              "Choose"
+            ],
+            "correct_words": [
+              "Choose",
+              "the",
+              "best",
+              "answer"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L07_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Find the main idea.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Complete the task with less support while practicing finding the main meaning in a short A1 text.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-e55a51e5495c1bac3b251896.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L07_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Build Independence: Reading for the Main Idea",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "Choose the best answer."
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L07_LISTEN_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ the best answer.",
+            "audio_text": "Choose the best answer.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Choose",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "family",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "day",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Choose."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L07_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Введите пропущенное слово"
+          },
+          "instructions": {
+            "en": "Type the correct missing word.",
+            "ru": "Введите правильное пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ the best answer.",
+            "correct_answer": "Choose",
+            "hint_prefix": "C",
+            "explanation": "The missing word is Choose."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L07_MATCH_PAIRS_VOICE_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "family",
+                "text": "family",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-82d37b1c06af7a0a5b8411b0.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "day",
+                "text": "day",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-6b9ac348fc65bd991767b4da.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "place",
+                "text": "place",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-de68f9d8d80389e082a00eda.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "answer",
+                "text": "answer",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-38f86fd6b36b8c546c9c4770.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L07_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Choose the best answer."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Find the main idea.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Read the short text.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is family.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Find the main idea.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L07_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete the task with less support while practicing finding the main meaning in a short A1 text.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Choose the best answer.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Find the main idea.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Read the short text.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Choose the best answer.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L07_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete the task with less support while practicing finding the main meaning in a short A1 text.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Choose the best answer.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Find the main idea.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Read the short text.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Choose the best answer.” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T05_L08",
+      "order": 8,
+      "title": {
+        "en": "Mixed Practice: Reading for the Main Idea",
+        "ru": "Mixed Practice: Reading for the Main Idea"
+      },
+      "objective": {
+        "en": "Combine this skill with another a1 exam skill while practicing finding the main meaning in a short A1 text.",
+        "ru": "Combine this skill with another a1 exam skill while practicing finding the main meaning in a short A1 text."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T05_L08_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "day",
+                "right": "Exam word: day."
+              },
+              {
+                "id": "P2",
+                "left": "place",
+                "right": "Exam word: place."
+              },
+              {
+                "id": "P3",
+                "left": "answer",
+                "right": "Exam word: answer."
+              },
+              {
+                "id": "P4",
+                "left": "read",
+                "right": "Exam word: read."
+              },
+              {
+                "id": "P5",
+                "left": "text",
+                "right": "Exam word: text."
+              },
+              {
+                "id": "P6",
+                "left": "main",
+                "right": "Exam word: main."
+              },
+              {
+                "id": "P7",
+                "left": "idea",
+                "right": "Exam word: idea."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L08_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Mixed Practice: Reading for the Main Idea. Exam mission: Combine this skill with another a1 exam skill while practicing finding the main meaning in a short A1 text. Models: Find the main idea. Read the short text. What is the text about?",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L08_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Build the exam answer",
+            "ru": "Составьте экзаменационный ответ"
+          },
+          "instructions": {
+            "en": "Build the correct English answer.",
+            "ru": "Составьте правильный ответ на английском."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте правильную английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Find the main idea.",
+            "word_bank": [
+              "Find",
+              "the",
+              "main",
+              "idea",
+              "place"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L08_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ the main idea.",
+            "correct_answer": "Find",
+            "options": [
+              "Find",
+              "day",
+              "place"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L08_TAP_WORDS_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "idea",
+              "main",
+              "the",
+              "Find"
+            ],
+            "correct_words": [
+              "Find",
+              "the",
+              "main",
+              "idea"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L08_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Find the main idea.",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-e55a51e5495c1bac3b251896.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L08_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Mixed Practice: Reading for the Main Idea",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "Find the main idea."
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "Read the short text.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "What is the text about?",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L08_DEFINITION_01",
+          "order": 8,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "day",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'day'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'place'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'answer'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'read'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "day: A simple exam meaning of 'day'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L08_LISTEN_CHOOSE_WORD_01",
+          "order": 9,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ idea.",
+            "audio_text": "Find the main idea.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Find",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "day",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "place",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Find."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L08_MISSING_WORD_01",
+          "order": 10,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L08_MATCH_PAIRS_VOICE_01",
+          "order": 11,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "day",
+                "text": "day",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-6b9ac348fc65bd991767b4da.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "place",
+                "text": "place",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-de68f9d8d80389e082a00eda.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "answer",
+                "text": "answer",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-38f86fd6b36b8c546c9c4770.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "read",
+                "text": "read",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-ecc0bccce4b2f8d7820f0604.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L08_COMPLETE_CHAT_01",
+          "order": 12,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Find the main idea."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Read the short text.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "What is the text about?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is day.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Read the short text.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L08_QUIZ_EXTRA_01",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "day",
+                "right": "Exam word: day."
+              },
+              {
+                "id": "P2",
+                "left": "place",
+                "right": "Exam word: place."
+              },
+              {
+                "id": "P3",
+                "left": "answer",
+                "right": "Exam word: answer."
+              },
+              {
+                "id": "P4",
+                "left": "read",
+                "right": "Exam word: read."
+              },
+              {
+                "id": "P5",
+                "left": "text",
+                "right": "Exam word: text."
+              },
+              {
+                "id": "P6",
+                "left": "main",
+                "right": "Exam word: main."
+              },
+              {
+                "id": "P7",
+                "left": "idea",
+                "right": "Exam word: idea."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T05_L09",
+      "order": 9,
+      "title": {
+        "en": "Mini Test: Reading for the Main Idea",
+        "ru": "Mini Test: Reading for the Main Idea"
+      },
+      "objective": {
+        "en": "Complete a short test-style challenge while practicing finding the main meaning in a short A1 text.",
+        "ru": "Complete a short test-style challenge while practicing finding the main meaning in a short A1 text."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T05_L09_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "place",
+                "right": "A simple exam meaning of 'place'."
+              },
+              {
+                "id": "P2",
+                "left": "answer",
+                "right": "A simple exam meaning of 'answer'."
+              },
+              {
+                "id": "P3",
+                "left": "read",
+                "right": "A simple exam meaning of 'read'."
+              },
+              {
+                "id": "P4",
+                "left": "text",
+                "right": "A simple exam meaning of 'text'."
+              },
+              {
+                "id": "P5",
+                "left": "main",
+                "right": "Exam word: main."
+              },
+              {
+                "id": "P6",
+                "left": "idea",
+                "right": "Exam word: idea."
+              },
+              {
+                "id": "P7",
+                "left": "about",
+                "right": "Exam word: about."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L09_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete a short test-style challenge while practicing finding the main meaning in a short A1 text.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Read the short text.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "What is the text about?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Choose the best answer.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Read the short text.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L09_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "place",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "place",
+            "word_bank": [
+              "place"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L09_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L09_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "text",
+              "short",
+              "the",
+              "Read"
+            ],
+            "correct_words": [
+              "Read",
+              "the",
+              "short",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L09_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "What is the text about?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Complete a short test-style challenge while practicing finding the main meaning in a short A1 text.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-ea49e3b501d571f65424837b.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L09_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Mini Test: Reading for the Main Idea",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "Read the short text."
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L09_LISTEN_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ the short text.",
+            "audio_text": "Read the short text.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Read",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "place",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "answer",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Read."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L09_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L09_VOICE_MATCH_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "place",
+                "text": "place",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-de68f9d8d80389e082a00eda.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "answer",
+                "text": "answer",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-38f86fd6b36b8c546c9c4770.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "read",
+                "text": "read",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-ecc0bccce4b2f8d7820f0604.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "text",
+                "text": "text",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-41d7110c98c31510955d56d6.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L09_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Read the short text."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "What is the text about?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Choose the best answer.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is place.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What is the text about?” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L09_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete a short test-style challenge while practicing finding the main meaning in a short A1 text.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Read the short text.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "What is the text about?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Choose the best answer.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Read the short text.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L09_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete a short test-style challenge while practicing finding the main meaning in a short A1 text.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Read the short text.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "What is the text about?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Choose the best answer.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Read the short text.” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T05_L10",
+      "order": 10,
+      "title": {
+        "en": "Track Exam Mission: Reading for the Main Idea",
+        "ru": "Track Exam Mission: Reading for the Main Idea"
+      },
+      "objective": {
+        "en": "Combine the track skills in a final exam mission while practicing finding the main meaning in a short A1 text.",
+        "ru": "Combine the track skills in a final exam mission while practicing finding the main meaning in a short A1 text."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T05_L10_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "answer",
+                "right": "Exam word: answer."
+              },
+              {
+                "id": "P2",
+                "left": "read",
+                "right": "Exam word: read."
+              },
+              {
+                "id": "P3",
+                "left": "text",
+                "right": "Exam word: text."
+              },
+              {
+                "id": "P4",
+                "left": "main",
+                "right": "Exam word: main."
+              },
+              {
+                "id": "P5",
+                "left": "idea",
+                "right": "Exam word: idea."
+              },
+              {
+                "id": "P6",
+                "left": "about",
+                "right": "Exam word: about."
+              },
+              {
+                "id": "P7",
+                "left": "person",
+                "right": "Exam word: person."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L10_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Track Exam Mission: Reading for the Main Idea. Exam mission: Combine the track skills in a final exam mission while practicing finding the main meaning in a short A1 text. Models: What is the text about? Choose the best answer. Find the main idea.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L10_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Combine the track skills in a final exam mission while practicing finding the main meaning in a short A1 text.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What is the text about?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Choose the best answer.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Find the main idea.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“What is the text about?” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L10_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "answer",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "answer",
+            "word_bank": [
+              "answer"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L10_FILL_BLANK_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L10_TAP_WORDS_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "about",
+              "text",
+              "the",
+              "is",
+              "What"
+            ],
+            "correct_words": [
+              "What",
+              "is",
+              "the",
+              "text",
+              "about"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L10_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "What is the text about?",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-ea49e3b501d571f65424837b.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L10_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Choose the best answer.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Combine the track skills in a final exam mission while practicing finding the main meaning in a short A1 text.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-3b2dbdc06a4af8530aaca768.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L10_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Track Exam Mission: Reading for the Main Idea",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "What is the text about?"
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "Choose the best answer.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Find the main idea.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L10_LISTEN_CHOOSE_WORD_01",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ about.",
+            "audio_text": "What is the text about?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "What",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "answer",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "read",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is What."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L10_MISSING_WORD_01",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L10_VOICE_MATCH_01",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "answer",
+                "text": "answer",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-38f86fd6b36b8c546c9c4770.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "read",
+                "text": "read",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-ecc0bccce4b2f8d7820f0604.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "text",
+                "text": "text",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-41d7110c98c31510955d56d6.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "main",
+                "text": "main",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-593d2c26bfc4ba2a5d79b244.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T05_L10_COMPLETE_CHAT_01",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "What is the text about?"
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Choose the best answer.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Find the main idea.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is answer.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Choose the best answer.” is the best response."
+          }
+        }
+      ]
+    }
+  ]
+}

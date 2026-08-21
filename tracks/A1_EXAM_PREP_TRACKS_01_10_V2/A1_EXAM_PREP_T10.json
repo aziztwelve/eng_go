@@ -1,0 +1,4524 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_EXAM_PREP_T10",
+    "title": {
+      "en": "A1 Exam Skills Foundation Mission",
+      "ru": "A1 Exam Skills Foundation Mission"
+    },
+    "description": {
+      "en": "An A1 Exams track focused on combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+      "ru": "An A1 Exams track focused on combining instructions, vocabulary, grammar, reading, listening, writing, and speaking."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "goal": "study",
+    "track_type": "thematic"
+  },
+  "lessons": [
+    {
+      "code": "A1_EXAM_PREP_T10_L01",
+      "order": 1,
+      "title": {
+        "en": "Learn the Task: A1 Exam Skills Foundation Mission",
+        "ru": "Learn the Task: A1 Exam Skills Foundation Mission"
+      },
+      "objective": {
+        "en": "Understand the exam task and key language while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+        "ru": "Understand the exam task and key language while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T10_L01_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "exam",
+                "right": "A simple exam meaning of 'exam'."
+              },
+              {
+                "id": "P2",
+                "left": "instruction",
+                "right": "A simple exam meaning of 'instruction'."
+              },
+              {
+                "id": "P3",
+                "left": "vocabulary",
+                "right": "A simple exam meaning of 'vocabulary'."
+              },
+              {
+                "id": "P4",
+                "left": "grammar",
+                "right": "A simple exam meaning of 'grammar'."
+              },
+              {
+                "id": "P5",
+                "left": "reading",
+                "right": "Exam word: reading."
+              },
+              {
+                "id": "P6",
+                "left": "listening",
+                "right": "Exam word: listening."
+              },
+              {
+                "id": "P7",
+                "left": "writing",
+                "right": "Exam word: writing."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L01_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Learn the Task: A1 Exam Skills Foundation Mission. Exam mission: Understand the exam task and key language while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking. Models: Read the instructions first. Check your answer carefully. Listen for the important information.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L01_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Understand the exam task and key language while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Read the instructions first.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Check your answer carefully.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Listen for the important information.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Read the instructions first.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L01_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "exam",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "exam",
+            "word_bank": [
+              "exam"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L01_FILL_BLANK_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L01_TAP_WORDS_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "first",
+              "instructions",
+              "the",
+              "Read"
+            ],
+            "correct_words": [
+              "Read",
+              "the",
+              "instructions",
+              "first"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L01_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Read the instructions first.",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-b0b9c1164b52e10bb399eaf8.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L01_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Check your answer carefully.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Understand the exam task and key language while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-bb5717e711bc3cf51b698db1.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L01_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Learn the Task: A1 Exam Skills Foundation Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "Read the instructions first."
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L01_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "exam",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'exam'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'instruction'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'vocabulary'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'grammar'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "exam: A simple exam meaning of 'exam'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L01_LISTEN_CHOOSE_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ first.",
+            "audio_text": "Read the instructions first.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Read",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "exam",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "instruction",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Read."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L01_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L01_MATCH_PAIRS_VOICE_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "exam",
+                "text": "exam",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-a0959372e4df8f1e0c99d8b5.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "instruction",
+                "text": "instruction",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-266c15245946ade72b6a1524.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "vocabulary",
+                "text": "vocabulary",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-9595c87c07df9c7970b71c7a.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "grammar",
+                "text": "grammar",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-0b3d2a4f3c61465bbc88b5b5.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L01_COMPLETE_CHAT_01",
+          "order": 14,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Read the instructions first."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Check your answer carefully.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Listen for the important information.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is exam.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Check your answer carefully.” is the best response."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T10_L02",
+      "order": 2,
+      "title": {
+        "en": "Practice the Format: A1 Exam Skills Foundation Mission",
+        "ru": "Practice the Format: A1 Exam Skills Foundation Mission"
+      },
+      "objective": {
+        "en": "Complete a guided exam-style item while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+        "ru": "Complete a guided exam-style item while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T10_L02_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "instruction",
+                "right": "Exam word: instruction."
+              },
+              {
+                "id": "P2",
+                "left": "vocabulary",
+                "right": "Exam word: vocabulary."
+              },
+              {
+                "id": "P3",
+                "left": "grammar",
+                "right": "Exam word: grammar."
+              },
+              {
+                "id": "P4",
+                "left": "reading",
+                "right": "Exam word: reading."
+              },
+              {
+                "id": "P5",
+                "left": "listening",
+                "right": "Exam word: listening."
+              },
+              {
+                "id": "P6",
+                "left": "exam",
+                "right": "Exam word: exam."
+              },
+              {
+                "id": "P7",
+                "left": "writing",
+                "right": "Exam word: writing."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L02_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Practice the Format: A1 Exam Skills Foundation Mission. Exam mission: Complete a guided exam-style item while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking. Models: Check your answer carefully. Listen for the important information. Give a complete answer.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L02_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Build the exam answer",
+            "ru": "Составьте экзаменационный ответ"
+          },
+          "instructions": {
+            "en": "Build the correct English answer.",
+            "ru": "Составьте правильный ответ на английском."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте правильную английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Check your answer carefully.",
+            "word_bank": [
+              "Check",
+              "your",
+              "answer",
+              "carefully",
+              "vocabulary"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L02_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ your answer carefully.",
+            "correct_answer": "Check",
+            "options": [
+              "Check",
+              "instruction",
+              "vocabulary"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L02_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "carefully",
+              "answer",
+              "your",
+              "Check"
+            ],
+            "correct_words": [
+              "Check",
+              "your",
+              "answer",
+              "carefully"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L02_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Check your answer carefully.",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-bb5717e711bc3cf51b698db1.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L02_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Practice the Format: A1 Exam Skills Foundation Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "Check your answer carefully."
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L02_LISTEN_CHOOSE_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ carefully.",
+            "audio_text": "Check your answer carefully.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Check",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "instruction",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "vocabulary",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Check."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L02_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Введите пропущенное слово"
+          },
+          "instructions": {
+            "en": "Type the correct missing word.",
+            "ru": "Введите правильное пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ your answer carefully.",
+            "correct_answer": "Check",
+            "hint_prefix": "C",
+            "explanation": "The missing word is Check."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L02_MATCH_PAIRS_VOICE_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "instruction",
+                "text": "instruction",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-266c15245946ade72b6a1524.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "vocabulary",
+                "text": "vocabulary",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-9595c87c07df9c7970b71c7a.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "grammar",
+                "text": "grammar",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-0b3d2a4f3c61465bbc88b5b5.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "reading",
+                "text": "reading",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-f2b4962a77f466db6c0565a6.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L02_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Check your answer carefully."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Listen for the important information.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Give a complete answer.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is instruction.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Listen for the important information.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L02_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "instruction",
+                "right": "Exam word: instruction."
+              },
+              {
+                "id": "P2",
+                "left": "vocabulary",
+                "right": "Exam word: vocabulary."
+              },
+              {
+                "id": "P3",
+                "left": "grammar",
+                "right": "Exam word: grammar."
+              },
+              {
+                "id": "P4",
+                "left": "reading",
+                "right": "Exam word: reading."
+              },
+              {
+                "id": "P5",
+                "left": "listening",
+                "right": "Exam word: listening."
+              },
+              {
+                "id": "P6",
+                "left": "exam",
+                "right": "Exam word: exam."
+              },
+              {
+                "id": "P7",
+                "left": "writing",
+                "right": "Exam word: writing."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L02_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "instruction",
+                "right": "Exam word: instruction."
+              },
+              {
+                "id": "P2",
+                "left": "vocabulary",
+                "right": "Exam word: vocabulary."
+              },
+              {
+                "id": "P3",
+                "left": "grammar",
+                "right": "Exam word: grammar."
+              },
+              {
+                "id": "P4",
+                "left": "reading",
+                "right": "Exam word: reading."
+              },
+              {
+                "id": "P5",
+                "left": "listening",
+                "right": "Exam word: listening."
+              },
+              {
+                "id": "P6",
+                "left": "exam",
+                "right": "Exam word: exam."
+              },
+              {
+                "id": "P7",
+                "left": "writing",
+                "right": "Exam word: writing."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T10_L03",
+      "order": 3,
+      "title": {
+        "en": "Choose the Answer: A1 Exam Skills Foundation Mission",
+        "ru": "Choose the Answer: A1 Exam Skills Foundation Mission"
+      },
+      "objective": {
+        "en": "Select the correct response while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+        "ru": "Select the correct response while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T10_L03_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "vocabulary",
+                "right": "A simple exam meaning of 'vocabulary'."
+              },
+              {
+                "id": "P2",
+                "left": "grammar",
+                "right": "A simple exam meaning of 'grammar'."
+              },
+              {
+                "id": "P3",
+                "left": "reading",
+                "right": "A simple exam meaning of 'reading'."
+              },
+              {
+                "id": "P4",
+                "left": "listening",
+                "right": "A simple exam meaning of 'listening'."
+              },
+              {
+                "id": "P5",
+                "left": "writing",
+                "right": "Exam word: writing."
+              },
+              {
+                "id": "P6",
+                "left": "exam",
+                "right": "Exam word: exam."
+              },
+              {
+                "id": "P7",
+                "left": "instruction",
+                "right": "Exam word: instruction."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L03_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Select the correct response while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Listen for the important information.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Give a complete answer.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Read the instructions first.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Listen for the important information.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L03_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "vocabulary",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "vocabulary",
+            "word_bank": [
+              "vocabulary"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L03_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L03_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "information",
+              "important",
+              "the",
+              "for",
+              "Listen"
+            ],
+            "correct_words": [
+              "Listen",
+              "for",
+              "the",
+              "important",
+              "information"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L03_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Give a complete answer.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Select the correct response while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-d5cf31c392a172a6783bf323.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L03_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Choose the Answer: A1 Exam Skills Foundation Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "Listen for the important information."
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "Give a complete answer.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Read the instructions first.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L03_LISTEN_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ for the important information.",
+            "audio_text": "Listen for the important information.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Listen",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "vocabulary",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "grammar",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Listen."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L03_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L03_MATCH_PAIRS_VOICE_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "vocabulary",
+                "text": "vocabulary",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-9595c87c07df9c7970b71c7a.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "grammar",
+                "text": "grammar",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-0b3d2a4f3c61465bbc88b5b5.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "reading",
+                "text": "reading",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-f2b4962a77f466db6c0565a6.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "listening",
+                "text": "listening",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-3e1f40044421f03b9cf92acc.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L03_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Listen for the important information."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Give a complete answer.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Read the instructions first.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is vocabulary.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Give a complete answer.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L03_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Select the correct response while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Listen for the important information.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Give a complete answer.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Read the instructions first.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Listen for the important information.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L03_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Select the correct response while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Listen for the important information.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Give a complete answer.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Read the instructions first.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Listen for the important information.” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T10_L04",
+      "order": 4,
+      "title": {
+        "en": "Work Under Light Time Pressure: A1 Exam Skills Foundation Mission",
+        "ru": "Work Under Light Time Pressure: A1 Exam Skills Foundation Mission"
+      },
+      "objective": {
+        "en": "Answer efficiently without rushing while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+        "ru": "Answer efficiently without rushing while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T10_L04_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "grammar",
+                "right": "A simple exam meaning of 'grammar'."
+              },
+              {
+                "id": "P2",
+                "left": "reading",
+                "right": "A simple exam meaning of 'reading'."
+              },
+              {
+                "id": "P3",
+                "left": "listening",
+                "right": "A simple exam meaning of 'listening'."
+              },
+              {
+                "id": "P4",
+                "left": "writing",
+                "right": "A simple exam meaning of 'writing'."
+              },
+              {
+                "id": "P5",
+                "left": "speaking",
+                "right": "Exam word: speaking."
+              },
+              {
+                "id": "P6",
+                "left": "exam",
+                "right": "Exam word: exam."
+              },
+              {
+                "id": "P7",
+                "left": "instruction",
+                "right": "Exam word: instruction."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L04_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Work Under Light Time Pressure: A1 Exam Skills Foundation Mission. Exam mission: Answer efficiently without rushing while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking. Models: Give a complete answer. Read the instructions first. Check your answer carefully.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L04_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "grammar",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "grammar",
+            "word_bank": [
+              "grammar"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L04_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ a complete answer.",
+            "correct_answer": "Give",
+            "options": [
+              "Give",
+              "grammar",
+              "reading"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L04_TAP_WORDS_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "answer",
+              "complete",
+              "a",
+              "Give"
+            ],
+            "correct_words": [
+              "Give",
+              "a",
+              "complete",
+              "answer"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L04_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Give a complete answer.",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-d5cf31c392a172a6783bf323.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L04_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Work Under Light Time Pressure: A1 Exam Skills Foundation Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "Give a complete answer."
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L04_DEFINITION_01",
+          "order": 8,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "grammar",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'grammar'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'reading'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'listening'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'writing'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "grammar: A simple exam meaning of 'grammar'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L04_LISTEN_WORD_01",
+          "order": 9,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ a complete answer.",
+            "audio_text": "Give a complete answer.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Give",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "grammar",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "reading",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Give."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L04_MISSING_WORD_01",
+          "order": 10,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L04_MATCH_PAIRS_VOICE_01",
+          "order": 11,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "grammar",
+                "text": "grammar",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-0b3d2a4f3c61465bbc88b5b5.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "reading",
+                "text": "reading",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-f2b4962a77f466db6c0565a6.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "listening",
+                "text": "listening",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-3e1f40044421f03b9cf92acc.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "writing",
+                "text": "writing",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-63b5cb43becb06c90eb2d5cc.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L04_COMPLETE_CHAT_01",
+          "order": 12,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Give a complete answer."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Read the instructions first.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Check your answer carefully.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is grammar.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Read the instructions first.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L04_QUIZ_EXTRA_01",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "grammar",
+                "right": "A simple exam meaning of 'grammar'."
+              },
+              {
+                "id": "P2",
+                "left": "reading",
+                "right": "A simple exam meaning of 'reading'."
+              },
+              {
+                "id": "P3",
+                "left": "listening",
+                "right": "A simple exam meaning of 'listening'."
+              },
+              {
+                "id": "P4",
+                "left": "writing",
+                "right": "A simple exam meaning of 'writing'."
+              },
+              {
+                "id": "P5",
+                "left": "speaking",
+                "right": "Exam word: speaking."
+              },
+              {
+                "id": "P6",
+                "left": "exam",
+                "right": "Exam word: exam."
+              },
+              {
+                "id": "P7",
+                "left": "instruction",
+                "right": "Exam word: instruction."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T10_L05",
+      "order": 5,
+      "title": {
+        "en": "Check Accuracy: A1 Exam Skills Foundation Mission",
+        "ru": "Check Accuracy: A1 Exam Skills Foundation Mission"
+      },
+      "objective": {
+        "en": "Notice and correct a common beginner error while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+        "ru": "Notice and correct a common beginner error while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T10_L05_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "reading",
+                "right": "Exam word: reading."
+              },
+              {
+                "id": "P2",
+                "left": "listening",
+                "right": "Exam word: listening."
+              },
+              {
+                "id": "P3",
+                "left": "writing",
+                "right": "Exam word: writing."
+              },
+              {
+                "id": "P4",
+                "left": "speaking",
+                "right": "Exam word: speaking."
+              },
+              {
+                "id": "P5",
+                "left": "answer",
+                "right": "Exam word: answer."
+              },
+              {
+                "id": "P6",
+                "left": "exam",
+                "right": "Exam word: exam."
+              },
+              {
+                "id": "P7",
+                "left": "instruction",
+                "right": "Exam word: instruction."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L05_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Notice and correct a common beginner error while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Read the instructions first.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Check your answer carefully.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Listen for the important information.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Read the instructions first.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L05_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Build the exam answer",
+            "ru": "Составьте экзаменационный ответ"
+          },
+          "instructions": {
+            "en": "Build the correct English answer.",
+            "ru": "Составьте правильный ответ на английском."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте правильную английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Read the instructions first.",
+            "word_bank": [
+              "Read",
+              "the",
+              "instructions",
+              "first",
+              "listening"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L05_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L05_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "first",
+              "instructions",
+              "the",
+              "Read"
+            ],
+            "correct_words": [
+              "Read",
+              "the",
+              "instructions",
+              "first"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L05_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Check your answer carefully.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Notice and correct a common beginner error while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-bb5717e711bc3cf51b698db1.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L05_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Check Accuracy: A1 Exam Skills Foundation Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "Read the instructions first."
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L05_LISTEN_CHOOSE_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ first.",
+            "audio_text": "Read the instructions first.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Read",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "reading",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "listening",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Read."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L05_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Введите пропущенное слово"
+          },
+          "instructions": {
+            "en": "Type the correct missing word.",
+            "ru": "Введите правильное пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ the instructions first.",
+            "correct_answer": "Read",
+            "hint_prefix": "R",
+            "explanation": "The missing word is Read."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L05_VOICE_MATCH_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "reading",
+                "text": "reading",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-f2b4962a77f466db6c0565a6.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "listening",
+                "text": "listening",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-3e1f40044421f03b9cf92acc.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "writing",
+                "text": "writing",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-63b5cb43becb06c90eb2d5cc.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "speaking",
+                "text": "speaking",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-5f33616130e04523c7271359.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L05_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Read the instructions first."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Check your answer carefully.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Listen for the important information.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is reading.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Check your answer carefully.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L05_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Notice and correct a common beginner error while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Read the instructions first.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Check your answer carefully.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Listen for the important information.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Read the instructions first.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L05_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Notice and correct a common beginner error while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Read the instructions first.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Check your answer carefully.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Listen for the important information.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Read the instructions first.” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T10_L06",
+      "order": 6,
+      "title": {
+        "en": "Use the Skill in Context: A1 Exam Skills Foundation Mission",
+        "ru": "Use the Skill in Context: A1 Exam Skills Foundation Mission"
+      },
+      "objective": {
+        "en": "Apply the exam skill to a realistic item while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+        "ru": "Apply the exam skill to a realistic item while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T10_L06_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "listening",
+                "right": "Exam word: listening."
+              },
+              {
+                "id": "P2",
+                "left": "writing",
+                "right": "Exam word: writing."
+              },
+              {
+                "id": "P3",
+                "left": "speaking",
+                "right": "Exam word: speaking."
+              },
+              {
+                "id": "P4",
+                "left": "answer",
+                "right": "Exam word: answer."
+              },
+              {
+                "id": "P5",
+                "left": "check",
+                "right": "Exam word: check."
+              },
+              {
+                "id": "P6",
+                "left": "exam",
+                "right": "Exam word: exam."
+              },
+              {
+                "id": "P7",
+                "left": "instruction",
+                "right": "Exam word: instruction."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L06_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Use the Skill in Context: A1 Exam Skills Foundation Mission. Exam mission: Apply the exam skill to a realistic item while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking. Models: Check your answer carefully. Listen for the important information. Give a complete answer.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L06_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "listening",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "listening",
+            "word_bank": [
+              "listening"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L06_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ your answer carefully.",
+            "correct_answer": "Check",
+            "options": [
+              "Check",
+              "listening",
+              "writing"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L06_TAP_WORDS_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "carefully",
+              "answer",
+              "your",
+              "Check"
+            ],
+            "correct_words": [
+              "Check",
+              "your",
+              "answer",
+              "carefully"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L06_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Check your answer carefully.",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-bb5717e711bc3cf51b698db1.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L06_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Use the Skill in Context: A1 Exam Skills Foundation Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "Check your answer carefully."
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "Listen for the important information.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Give a complete answer.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L06_DEFINITION_01",
+          "order": 8,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "listening",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'listening'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'writing'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'speaking'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'answer'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "listening: A simple exam meaning of 'listening'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L06_LISTEN_CHOOSE_WORD_01",
+          "order": 9,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ carefully.",
+            "audio_text": "Check your answer carefully.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Check",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "listening",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "writing",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Check."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L06_MISSING_WORD_01",
+          "order": 10,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L06_VOICE_MATCH_01",
+          "order": 11,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "listening",
+                "text": "listening",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-3e1f40044421f03b9cf92acc.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "writing",
+                "text": "writing",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-63b5cb43becb06c90eb2d5cc.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "speaking",
+                "text": "speaking",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-5f33616130e04523c7271359.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "answer",
+                "text": "answer",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-38f86fd6b36b8c546c9c4770.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L06_COMPLETE_CHAT_01",
+          "order": 12,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Check your answer carefully."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Listen for the important information.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Give a complete answer.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is listening.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Listen for the important information.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L06_QUIZ_EXTRA_01",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "listening",
+                "right": "Exam word: listening."
+              },
+              {
+                "id": "P2",
+                "left": "writing",
+                "right": "Exam word: writing."
+              },
+              {
+                "id": "P3",
+                "left": "speaking",
+                "right": "Exam word: speaking."
+              },
+              {
+                "id": "P4",
+                "left": "answer",
+                "right": "Exam word: answer."
+              },
+              {
+                "id": "P5",
+                "left": "check",
+                "right": "Exam word: check."
+              },
+              {
+                "id": "P6",
+                "left": "exam",
+                "right": "Exam word: exam."
+              },
+              {
+                "id": "P7",
+                "left": "instruction",
+                "right": "Exam word: instruction."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T10_L07",
+      "order": 7,
+      "title": {
+        "en": "Build Independence: A1 Exam Skills Foundation Mission",
+        "ru": "Build Independence: A1 Exam Skills Foundation Mission"
+      },
+      "objective": {
+        "en": "Complete the task with less support while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+        "ru": "Complete the task with less support while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T10_L07_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "writing",
+                "right": "A simple exam meaning of 'writing'."
+              },
+              {
+                "id": "P2",
+                "left": "speaking",
+                "right": "A simple exam meaning of 'speaking'."
+              },
+              {
+                "id": "P3",
+                "left": "answer",
+                "right": "A simple exam meaning of 'answer'."
+              },
+              {
+                "id": "P4",
+                "left": "check",
+                "right": "A simple exam meaning of 'check'."
+              },
+              {
+                "id": "P5",
+                "left": "exam",
+                "right": "Exam word: exam."
+              },
+              {
+                "id": "P6",
+                "left": "instruction",
+                "right": "Exam word: instruction."
+              },
+              {
+                "id": "P7",
+                "left": "vocabulary",
+                "right": "Exam word: vocabulary."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L07_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete the task with less support while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Listen for the important information.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Give a complete answer.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Read the instructions first.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Listen for the important information.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L07_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "writing",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "writing",
+            "word_bank": [
+              "writing"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L07_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L07_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "information",
+              "important",
+              "the",
+              "for",
+              "Listen"
+            ],
+            "correct_words": [
+              "Listen",
+              "for",
+              "the",
+              "important",
+              "information"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L07_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Give a complete answer.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Complete the task with less support while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-d5cf31c392a172a6783bf323.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L07_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Build Independence: A1 Exam Skills Foundation Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "Listen for the important information."
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L07_LISTEN_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ for the important information.",
+            "audio_text": "Listen for the important information.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Listen",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "writing",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "speaking",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Listen."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L07_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Введите пропущенное слово"
+          },
+          "instructions": {
+            "en": "Type the correct missing word.",
+            "ru": "Введите правильное пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ for the important information.",
+            "correct_answer": "Listen",
+            "hint_prefix": "L",
+            "explanation": "The missing word is Listen."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L07_MATCH_PAIRS_VOICE_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "writing",
+                "text": "writing",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-63b5cb43becb06c90eb2d5cc.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "speaking",
+                "text": "speaking",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-5f33616130e04523c7271359.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "answer",
+                "text": "answer",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-38f86fd6b36b8c546c9c4770.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "check",
+                "text": "check",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-6878e38981e5a7d3e38a0638.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L07_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Listen for the important information."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Give a complete answer.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Read the instructions first.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is writing.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Give a complete answer.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L07_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete the task with less support while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Listen for the important information.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Give a complete answer.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Read the instructions first.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Listen for the important information.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L07_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete the task with less support while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Listen for the important information.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Give a complete answer.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Read the instructions first.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Listen for the important information.” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T10_L08",
+      "order": 8,
+      "title": {
+        "en": "Mixed Practice: A1 Exam Skills Foundation Mission",
+        "ru": "Mixed Practice: A1 Exam Skills Foundation Mission"
+      },
+      "objective": {
+        "en": "Combine this skill with another a1 exam skill while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+        "ru": "Combine this skill with another a1 exam skill while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T10_L08_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "speaking",
+                "right": "Exam word: speaking."
+              },
+              {
+                "id": "P2",
+                "left": "answer",
+                "right": "Exam word: answer."
+              },
+              {
+                "id": "P3",
+                "left": "check",
+                "right": "Exam word: check."
+              },
+              {
+                "id": "P4",
+                "left": "exam",
+                "right": "Exam word: exam."
+              },
+              {
+                "id": "P5",
+                "left": "instruction",
+                "right": "Exam word: instruction."
+              },
+              {
+                "id": "P6",
+                "left": "vocabulary",
+                "right": "Exam word: vocabulary."
+              },
+              {
+                "id": "P7",
+                "left": "grammar",
+                "right": "Exam word: grammar."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L08_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Mixed Practice: A1 Exam Skills Foundation Mission. Exam mission: Combine this skill with another a1 exam skill while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking. Models: Give a complete answer. Read the instructions first. Check your answer carefully.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L08_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Build the exam answer",
+            "ru": "Составьте экзаменационный ответ"
+          },
+          "instructions": {
+            "en": "Build the correct English answer.",
+            "ru": "Составьте правильный ответ на английском."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте правильную английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Give a complete answer.",
+            "word_bank": [
+              "Give",
+              "a",
+              "complete",
+              "answer",
+              "answer"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L08_FILL_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete the answer",
+            "ru": "Дополните ответ"
+          },
+          "instructions": {
+            "en": "Choose the word that correctly completes the sentence.",
+            "ru": "Выберите слово, которое правильно завершает предложение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ a complete answer.",
+            "correct_answer": "Give",
+            "options": [
+              "Give",
+              "speaking",
+              "answer"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L08_TAP_WORDS_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "answer",
+              "complete",
+              "a",
+              "Give"
+            ],
+            "correct_words": [
+              "Give",
+              "a",
+              "complete",
+              "answer"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L08_LISTENING_01",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Give a complete answer.",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-d5cf31c392a172a6783bf323.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L08_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Mixed Practice: A1 Exam Skills Foundation Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "Give a complete answer."
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "Read the instructions first.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Check your answer carefully.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L08_DEFINITION_01",
+          "order": 8,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning.",
+            "ru": "Выберите правильное значение."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "speaking",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple exam meaning of 'speaking'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple exam meaning of 'answer'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple exam meaning of 'check'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple exam meaning of 'exam'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "speaking: A simple exam meaning of 'speaking'."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L08_LISTEN_CHOOSE_WORD_01",
+          "order": 9,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ answer.",
+            "audio_text": "Give a complete answer.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Give",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "speaking",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "answer",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Give."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L08_MISSING_WORD_01",
+          "order": 10,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L08_MATCH_PAIRS_VOICE_01",
+          "order": 11,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "speaking",
+                "text": "speaking",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-5f33616130e04523c7271359.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "answer",
+                "text": "answer",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-38f86fd6b36b8c546c9c4770.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "check",
+                "text": "check",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-6878e38981e5a7d3e38a0638.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "exam",
+                "text": "exam",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-a0959372e4df8f1e0c99d8b5.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L08_COMPLETE_CHAT_01",
+          "order": 12,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Give a complete answer."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Read the instructions first.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Check your answer carefully.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is speaking.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Read the instructions first.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L08_QUIZ_EXTRA_01",
+          "order": 13,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "speaking",
+                "right": "Exam word: speaking."
+              },
+              {
+                "id": "P2",
+                "left": "answer",
+                "right": "Exam word: answer."
+              },
+              {
+                "id": "P3",
+                "left": "check",
+                "right": "Exam word: check."
+              },
+              {
+                "id": "P4",
+                "left": "exam",
+                "right": "Exam word: exam."
+              },
+              {
+                "id": "P5",
+                "left": "instruction",
+                "right": "Exam word: instruction."
+              },
+              {
+                "id": "P6",
+                "left": "vocabulary",
+                "right": "Exam word: vocabulary."
+              },
+              {
+                "id": "P7",
+                "left": "grammar",
+                "right": "Exam word: grammar."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T10_L09",
+      "order": 9,
+      "title": {
+        "en": "Mini Test: A1 Exam Skills Foundation Mission",
+        "ru": "Mini Test: A1 Exam Skills Foundation Mission"
+      },
+      "objective": {
+        "en": "Complete a short test-style challenge while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+        "ru": "Complete a short test-style challenge while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T10_L09_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "answer",
+                "right": "A simple exam meaning of 'answer'."
+              },
+              {
+                "id": "P2",
+                "left": "check",
+                "right": "A simple exam meaning of 'check'."
+              },
+              {
+                "id": "P3",
+                "left": "exam",
+                "right": "A simple exam meaning of 'exam'."
+              },
+              {
+                "id": "P4",
+                "left": "instruction",
+                "right": "A simple exam meaning of 'instruction'."
+              },
+              {
+                "id": "P5",
+                "left": "vocabulary",
+                "right": "Exam word: vocabulary."
+              },
+              {
+                "id": "P6",
+                "left": "grammar",
+                "right": "Exam word: grammar."
+              },
+              {
+                "id": "P7",
+                "left": "reading",
+                "right": "Exam word: reading."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L09_QUIZ_01",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete a short test-style challenge while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Read the instructions first.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Check your answer carefully.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Listen for the important information.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Read the instructions first.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L09_TRANSLATE_01",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "answer",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "answer",
+            "word_bank": [
+              "answer"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L09_FILL_BLANK_01",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L09_TAP_01",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the words in correct English order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "first",
+              "instructions",
+              "the",
+              "Read"
+            ],
+            "correct_words": [
+              "Read",
+              "the",
+              "instructions",
+              "first"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L09_SHADOWING_01",
+          "order": 6,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Check your answer carefully.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Complete a short test-style challenge while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-bb5717e711bc3cf51b698db1.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L09_STORY_01",
+          "order": 7,
+          "type": "story",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Mini Test: A1 Exam Skills Foundation Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Examiner",
+                "text": "Read the instructions first."
+              },
+              {
+                "type": "choice",
+                "text": "What should the learner do?",
+                "options": [
+                  {
+                    "text": "Read the question carefully.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Ignore the task.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L09_LISTEN_WORD_01",
+          "order": 8,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Listen and choose",
+            "ru": "Прослушайте и выберите"
+          },
+          "instructions": {
+            "en": "Listen and choose the missing word.",
+            "ru": "Прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ the instructions first.",
+            "audio_text": "Read the instructions first.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Read",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "answer",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "check",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Read."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L09_MISSING_WORD_01",
+          "order": 9,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L09_VOICE_MATCH_01",
+          "order": 10,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "answer",
+                "text": "answer",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-38f86fd6b36b8c546c9c4770.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "check",
+                "text": "check",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-6878e38981e5a7d3e38a0638.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "exam",
+                "text": "exam",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-a0959372e4df8f1e0c99d8b5.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "instruction",
+                "text": "instruction",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-266c15245946ade72b6a1524.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L09_COMPLETE_CHAT_01",
+          "order": 11,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Read the instructions first."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Check your answer carefully.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Listen for the important information.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is answer.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Check your answer carefully.” is the best response."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L09_QUIZ_EXTRA_01",
+          "order": 12,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete a short test-style challenge while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Read the instructions first.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Check your answer carefully.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Listen for the important information.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Read the instructions first.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L09_QUIZ_EXTRA_02",
+          "order": 13,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Complete a short test-style challenge while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Read the instructions first.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Check your answer carefully.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Listen for the important information.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Read the instructions first.” best matches the task."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_EXAM_PREP_T10_L10",
+      "order": 10,
+      "title": {
+        "en": "Track Exam Mission: A1 Exam Skills Foundation Mission",
+        "ru": "Track Exam Mission: A1 Exam Skills Foundation Mission"
+      },
+      "objective": {
+        "en": "Combine the track skills in a final exam mission while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+        "ru": "Combine the track skills in a final exam mission while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_EXAM_PREP_T10_L10_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match exam words",
+            "ru": "Соедините экзаменационные слова"
+          },
+          "instructions": {
+            "en": "Match each key word with its meaning.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "check",
+                "right": "Exam word: check."
+              },
+              {
+                "id": "P2",
+                "left": "exam",
+                "right": "Exam word: exam."
+              },
+              {
+                "id": "P3",
+                "left": "instruction",
+                "right": "Exam word: instruction."
+              },
+              {
+                "id": "P4",
+                "left": "vocabulary",
+                "right": "Exam word: vocabulary."
+              },
+              {
+                "id": "P5",
+                "left": "grammar",
+                "right": "Exam word: grammar."
+              },
+              {
+                "id": "P6",
+                "left": "reading",
+                "right": "Exam word: reading."
+              },
+              {
+                "id": "P7",
+                "left": "listening",
+                "right": "Exam word: listening."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L10_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the exam skill",
+            "ru": "Изучите экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Read the task language and notice what the test asks you to do.",
+            "ru": "Прочитайте формулировку и определите, что требуется сделать."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Track Exam Mission: A1 Exam Skills Foundation Mission. Exam mission: Combine the track skills in a final exam mission while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking. Models: Check your answer carefully. Listen for the important information. Give a complete answer.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L10_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Choose the correct answer",
+            "ru": "Выберите правильный ответ"
+          },
+          "instructions": {
+            "en": "Read carefully and choose the best answer.",
+            "ru": "Внимательно прочитайте и выберите лучший ответ."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "Combine the track skills in a final exam mission while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Check your answer carefully.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Listen for the important information.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Give a complete answer.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Check your answer carefully.” best matches the task."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L10_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "check",
+            "source_language": "en",
+            "target_language": "en",
+            "correct_translation": "check",
+            "word_bank": [
+              "check"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L10_FILL_BLANK_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "answer",
+            "options": [
+              "answer",
+              "question",
+              "text"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L10_TAP_WORDS_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "carefully",
+              "answer",
+              "your",
+              "Check"
+            ],
+            "correct_words": [
+              "Check",
+              "your",
+              "answer",
+              "carefully"
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L10_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen and answer",
+            "ru": "Прослушайте и ответьте"
+          },
+          "instructions": {
+            "en": "Listen carefully and type what you hear.",
+            "ru": "Внимательно прослушайте и напишите услышанное."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Check your answer carefully.",
+            "language": "en",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-bb5717e711bc3cf51b698db1.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L10_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice the spoken answer",
+            "ru": "Отработайте устный ответ"
+          },
+          "instructions": {
+            "en": "Listen and repeat the model clearly.",
+            "ru": "Прослушайте и четко повторите образец."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Listen for the important information.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Combine the track skills in a final exam mission while practicing combining instructions, vocabulary, grammar, reading, listening, writing, and speaking.",
+            "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-2823e895f818c974708ed05c.mp3"
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L10_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Exam situation",
+            "ru": "Экзаменационная ситуация"
+          },
+          "instructions": {
+            "en": "Read the short test situation and choose the correct response.",
+            "ru": "Прочитайте ситуацию и выберите правильный ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Track Exam Mission: A1 Exam Skills Foundation Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Exam Prompt",
+                "text": "Check your answer carefully."
+              },
+              {
+                "type": "choice",
+                "text": "Choose the best response.",
+                "options": [
+                  {
+                    "text": "Listen for the important information.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Give a complete answer.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L10_LISTEN_CHOOSE_WORD_01",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ carefully.",
+            "audio_text": "Check your answer carefully.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Check",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "exam",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "instruction",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Check."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L10_MISSING_WORD_01",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the exam skill",
+            "ru": "Отработайте экзаменационный навык"
+          },
+          "instructions": {
+            "en": "Practice this A1 study skill carefully.",
+            "ru": "Внимательно отработайте этот навык A1."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I study the ___.",
+            "correct_answer": "question",
+            "hint_prefix": "qu",
+            "explanation": "The missing word is question."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L10_VOICE_MATCH_01",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and answer",
+            "ru": "Соедините аудио и ответ"
+          },
+          "instructions": {
+            "en": "Listen and match each spoken word with its written form.",
+            "ru": "Прослушайте и соедините слово с его написанием."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "check",
+                "text": "check",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-6878e38981e5a7d3e38a0638.mp3"
+              },
+              {
+                "id": "V2",
+                "audio_text": "exam",
+                "text": "exam",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-a0959372e4df8f1e0c99d8b5.mp3"
+              },
+              {
+                "id": "V3",
+                "audio_text": "instruction",
+                "text": "instruction",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-266c15245946ade72b6a1524.mp3"
+              },
+              {
+                "id": "V4",
+                "audio_text": "vocabulary",
+                "text": "vocabulary",
+                "audio_url": "https://lingoiq.online/audio/a1-exam-prep/en-9595c87c07df9c7970b71c7a.mp3"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        },
+        {
+          "id": "A1_EXAM_PREP_T10_L10_COMPLETE_CHAT_01",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "en": "Complete the test exchange",
+            "ru": "Завершите тестовый диалог"
+          },
+          "instructions": {
+            "en": "Choose the response that correctly completes the exchange.",
+            "ru": "Выберите ответ, который правильно завершает диалог."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Examiner",
+                "text": "Check your answer carefully."
+              }
+            ],
+            "answer_speaker": "Learner",
+            "options": [
+              {
+                "id": "A",
+                "text": "Listen for the important information.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Give a complete answer.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My answer is check.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Listen for the important information.” is the best response."
+          }
+        }
+      ]
+    }
+  ]
+}
