@@ -10,8 +10,8 @@ JSON-файла трека (`lingoiq.track.v2`) описан в
 
 ## 1. Структура папки пакета
 
-Пакет треков — это директория `tracks/{PACKAGE_NAME}_V2/` (вне этого
-репозитория, в `eng/tracks/`), содержащая один JSON-файл на трек:
+Пакет треков — это директория `tracks/{PACKAGE_NAME}_V2/` в backend-
+репозитории, содержащая один JSON-файл на трек:
 
 ```
 tracks/{PACKAGE_NAME}_V2/
@@ -111,7 +111,119 @@ tracks/{PACKAGE_NAME}_V2/
 4. Прогнать `scripts/import_tracks_from_json.py` для каждого файла и
    просмотреть сгенерированный SQL перед применением к БД.
 
-## 6. Пример референса
+## 6. TTS, STT и аудиоматериалы
+
+Создание корректных JSON-файлов не завершает подготовку пакета. Перед
+публикацией необходимо обработать все голосовые механики и убедиться, что
+они поддерживаются backend и клиентами.
+
+### TTS (Text-to-Speech)
+
+Для каждого `audio_text`, которому schema соответствующего типа разрешает
+постоянный `audio_url`, необходимо:
+
+1. Собрать уникальные пары `(language, audio_text)`, чтобы одинаковые фразы
+   не синтезировались повторно.
+2. Сгенерировать реальный MP3 через настроенный TTS provider.
+3. Загрузить MP3 в production object storage (MinIO bucket `audio`), а не в
+   Git и не в `eng_next/public/`.
+4. Записать стабильный публичный HTTPS URL обратно в соответствующее поле
+   `audio_url` JSON-файла.
+5. Повторно провалидировать JSON по schema и только после этого генерировать
+   SQL seed.
+
+Production URL имеет вид:
+
+```text
+https://api.lingoiq.online/audio/{PACKAGE_SLUG}/{FILE}.mp3
+```
+
+Для пакетного синтеза используется `scripts/backfill_track_tts.py`; полный
+порядок запуска и настройки MinIO описан в
+[`13-track-deployment-workflow.md`](./13-track-deployment-workflow.md).
+
+Не каждый `audio_text` допускает `audio_url`. Например,
+`listen_choose_word` по текущей schema использует runtime TTS. Нельзя
+добавлять поле, запрещённое schema, даже если клиент технически умеет
+проигрывать аудио.
+
+### STT (Speech-to-Text) и проверка произношения
+
+STT-файлы или транскрипции **не генерируются заранее** вместе с пакетом.
+Для типов, принимающих речь пользователя (`listening_shadowing` и будущие
+pronunciation/speaking mechanics), в JSON хранятся эталонный `audio_text`,
+`language` и порог точности (`min_accuracy`), если он предусмотрен типом.
+
+Перед публикацией нужно проверить runtime pipeline на реальном устройстве:
+
+1. Клиент записывает аудио в поддерживаемом Android/iOS формате.
+2. Запись отправляется в pronunciation/STT endpoint.
+3. Backend возвращает непустой `transcribed_text` и оценку точности.
+4. Результат проходит обычный submit/validation pipeline шага.
+5. Ошибка STT не завершает шаг как правильный.
+
+### Проверка голосовых типов
+
+Для каждого `steps[].type` должны существовать JSON Schema, DB/backend
+support, validator для интерактивных шагов, mobile renderer и web renderer,
+если трек доступен в web. Для голосовых типов также должна быть настроена
+TTS/STT integration. Неизвестный тип нельзя молча заменять на `quiz`,
+`text` или другой поддерживаемый тип.
+
+## 7. Обязательная загрузка пакета
+
+После генерации пакет должен быть доведён до production, а не оставлен
+только локально. Последовательность обязательна:
+
+1. Добавить пакет и связанные инструменты в backend Git, сделать commit и
+   push в `dev`.
+2. Убедиться, что MP3 находятся в MinIO, а не в Git.
+3. Обновить серверный backend через `git pull --ff-only origin dev`.
+4. На сервере повторно валидировать каждый JSON по schema.
+5. Для каждого JSON запустить `scripts/import_tracks_from_json.py`,
+   просмотреть SQL и применить его с `ON_ERROR_STOP=1`.
+6. При конфликте `track.code` не удалять существующий трек автоматически:
+   проверить тему, связи и пользовательский прогресс; для другого контента
+   назначить новый уникальный code.
+7. Проверить количество треков, уроков, шагов и `audio_url` в БД.
+8. Проверить каталог и detail API с уроками.
+9. Проверить несколько URL: HTTP 200, ненулевой размер,
+   `Content-Type: audio/mpeg`.
+10. Проверить mobile на физическом устройстве: открытие трека,
+    воспроизведение TTS, запись речи, STT и submit ответа.
+
+Трек готов только после успешной загрузки файлов пакета, импорта в БД и
+smoke-проверки API, TTS, STT и клиентских renderer-ов.
+
+## 8. Git-flow и разделение ответственности
+
+- `eng_go`: JSON-пакеты, schema/import/backfill tools и deployment docs.
+- MinIO bucket `audio`: generated MP3; бинарники не коммитятся в Git.
+- `eng_mob`: mobile renderers и recording/playback integration.
+- `eng_next`: web renderers; generated MP3 не хранятся в `public/`.
+
+Каждый репозиторий коммитится и пушится в `dev` отдельно. На сервере нельзя
+сначала вручную копировать versioned-файлы, а затем делать pull: сначала
+commit/push, затем `git pull --ff-only`, затем assets и импорт данных.
+Подробный runbook: [`13-track-deployment-workflow.md`](./13-track-deployment-workflow.md).
+
+## 9. Финальная проверка production
+
+```text
+[ ] JSON проходит TRACK_IMPORT_V2.schema.json
+[ ] В каждом уроке 13–15 шагов, первый match_pairs с 7 парами
+[ ] track.goal входит в onboarding goals
+[ ] Все step types поддержаны backend/mobile/web
+[ ] TTS MP3 загружены в MinIO, разрешённые audio_url заполнены
+[ ] STT/pronunciation проверен на реальном устройстве
+[ ] Все JSON импортированы в БД без ошибок
+[ ] Каталог и detail API возвращают новые треки и уроки
+[ ] Несколько audio_url отвечают 200 и audio/mpeg
+[ ] Старые треки и пользовательский прогресс не повреждены
+[ ] Backend health отвечает 200
+```
+
+## 10. Пример референса
 
 Эталонный однoурочный трек с полным набором из 13 типов шагов:
 [`TRACK_IMPORT_V2_MINIMAL_EXAMPLE.json`](../TRACK_IMPORT_V2_MINIMAL_EXAMPLE.json)
