@@ -1,0 +1,4061 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_CAREER_T03",
+    "title": {
+      "en": "My Workday",
+      "ru": "My Workday"
+    },
+    "description": {
+      "en": "An A1 career-English speaking track that helps learners talk about schedules, routines, attendance, breaks, and daily tasks.",
+      "ru": "An A1 career-English speaking track that helps learners talk about schedules, routines, attendance, breaks, and daily tasks."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "goal": "work",
+    "track_type": "thematic"
+  },
+  "lessons": [
+    {
+      "code": "A1_CAREER_T03_L01",
+      "order": 1,
+      "title": {
+        "en": "What Time Do You Start?",
+        "ru": "What Time Do You Start?"
+      },
+      "objective": {
+        "en": "Say when your workday starts and ends.",
+        "ru": "Say when your workday starts and ends."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_CAREER_T03_L01_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each lesson word with its meaning.",
+            "ru": "Соедините каждое слово с его значением."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "start",
+                "right": "A simple A1 meaning for 'start'."
+              },
+              {
+                "id": "P2",
+                "left": "finish",
+                "right": "A simple A1 meaning for 'finish'."
+              },
+              {
+                "id": "P3",
+                "left": "morning",
+                "right": "A simple A1 meaning for 'morning'."
+              },
+              {
+                "id": "P4",
+                "left": "afternoon",
+                "right": "A simple A1 meaning for 'afternoon'."
+              },
+              {
+                "id": "P5",
+                "left": "time",
+                "right": "Listening word: time."
+              },
+              {
+                "id": "P6",
+                "left": "arrive",
+                "right": "Listening word: arrive."
+              },
+              {
+                "id": "P7",
+                "left": "check",
+                "right": "Listening word: check."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L01_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the language",
+            "ru": "Изучите язык"
+          },
+          "instructions": {
+            "en": "Read the explanation and examples.",
+            "ru": "Прочитайте объяснение и примеры."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "What Time Do You Start?. Mission: Say when your workday starts and ends. Key phrases: I start at nine. What time do you finish? I finish at five.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L01_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Check yourself",
+            "ru": "Проверьте себя"
+          },
+          "instructions": {
+            "en": "Choose the phrase that best fits the lesson mission.",
+            "ru": "Выберите фразу, которая лучше всего подходит к заданию урока."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Which phrase best helps you to: Say when your workday starts and ends.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I start at nine.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "What time do you finish?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I finish at five.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I start at nine.” directly supports this lesson mission."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L01_TRANSLATE_08",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I start at nine.",
+            "word_bank": [
+              "I",
+              "start",
+              "at",
+              "nine"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L01_FILL_BLANK_09",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ nine.",
+            "correct_answer": "I",
+            "options": [
+              "I",
+              "start",
+              "finish"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L01_TAP_WORDS_10",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I start at nine.",
+            "word_bank": [
+              "nine",
+              "at",
+              "start",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "start",
+              "at",
+              "nine"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L01_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen",
+            "ru": "Послушайте"
+          },
+          "instructions": {
+            "en": "Listen to the phrase and type what you hear.",
+            "ru": "Прослушайте фразу и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I start at nine.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L01_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Repeat after the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "What time do you finish?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Say when your workday starts and ends."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L01_STORY_11",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "What Time Do You Start?",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "I start at nine."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "I start at nine.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L01_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the definition",
+            "ru": "Выберите определение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning of the word.",
+            "ru": "Выберите правильное значение слова."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "start",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple A1 meaning for 'start'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple A1 meaning for 'finish'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple A1 meaning for 'morning'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple A1 meaning for 'afternoon'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "start: A simple A1 meaning for 'start'."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L01_LISTEN_CHOOSE_WORD_12",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ nine.",
+            "audio_text": "I start at nine.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "I",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "start",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L01_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ listening practice.",
+            "correct_answer": "am",
+            "hint_prefix": "am",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L01_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "start",
+                "text": "start"
+              },
+              {
+                "id": "V2",
+                "audio_text": "finish",
+                "text": "finish"
+              },
+              {
+                "id": "V3",
+                "audio_text": "morning",
+                "text": "morning"
+              },
+              {
+                "id": "V4",
+                "audio_text": "afternoon",
+                "text": "afternoon"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_CAREER_T03_L02",
+      "order": 2,
+      "title": {
+        "en": "My Morning Routine",
+        "ru": "My Morning Routine"
+      },
+      "objective": {
+        "en": "Describe a simple morning work routine.",
+        "ru": "Describe a simple morning work routine."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_CAREER_T03_L02_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "arrive",
+                "right": "Listening word: arrive."
+              },
+              {
+                "id": "P2",
+                "left": "check",
+                "right": "Listening word: check."
+              },
+              {
+                "id": "P3",
+                "left": "email",
+                "right": "Listening word: email."
+              },
+              {
+                "id": "P4",
+                "left": "plan",
+                "right": "Listening word: plan."
+              },
+              {
+                "id": "P5",
+                "left": "begin",
+                "right": "Listening word: begin."
+              },
+              {
+                "id": "P6",
+                "left": "start",
+                "right": "Listening word: start."
+              },
+              {
+                "id": "P7",
+                "left": "finish",
+                "right": "Listening word: finish."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L02_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the language",
+            "ru": "Изучите язык"
+          },
+          "instructions": {
+            "en": "Read the explanation and examples.",
+            "ru": "Прочитайте объяснение и примеры."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "My Morning Routine. Mission: Describe a simple morning work routine. Key phrases: I arrive at eight. I check my email. Then I start work.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L02_QUIZ_09",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: I arrive at eight.",
+            "options": [
+              {
+                "id": "A",
+                "text": "arrive",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "check",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "email",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L02_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Translate the phrase",
+            "ru": "Переведите фразу"
+          },
+          "instructions": {
+            "en": "Build the English translation from the words.",
+            "ru": "Составьте английский перевод из слов."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Я прихожу в восемь.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I arrive at eight.",
+            "word_bank": [
+              "I",
+              "arrive",
+              "at",
+              "eight",
+              "check"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L02_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Fill the blank",
+            "ru": "Заполните пропуск"
+          },
+          "instructions": {
+            "en": "Choose the word that fits.",
+            "ru": "Выберите подходящее слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ at eight.",
+            "correct_answer": "arrive",
+            "options": [
+              "arrive",
+              "check",
+              "email"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L02_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the phrase",
+            "ru": "Соберите фразу"
+          },
+          "instructions": {
+            "en": "Put the words in the correct order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "eight",
+              "at",
+              "arrive",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "arrive",
+              "at",
+              "eight"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L02_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen",
+            "ru": "Послушайте"
+          },
+          "instructions": {
+            "en": "Listen to the phrase and type what you hear.",
+            "ru": "Прослушайте фразу и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I arrive at eight.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L02_LISTENING_SHADOWING_10",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I arrive at eight.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L02_STORY_11",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "My Morning Routine",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "I arrive at eight."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "I arrive at eight.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L02_CHOOSE_DEFINITION_12",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "arrive",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'arrive'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L02_LISTEN_CHOOSE_WORD_13",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ eight.",
+            "audio_text": "I arrive at eight.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "I",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "arrive",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L02_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Впишите слово"
+          },
+          "instructions": {
+            "en": "Type the missing word using the hint.",
+            "ru": "Впишите пропущенное слово по подсказке."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ at eight.",
+            "correct_answer": "arrive",
+            "hint_prefix": "ar",
+            "explanation": "The missing word is arrive."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L02_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "arrive",
+                "text": "arrive"
+              },
+              {
+                "id": "V2",
+                "audio_text": "check",
+                "text": "check"
+              },
+              {
+                "id": "V3",
+                "audio_text": "email",
+                "text": "email"
+              },
+              {
+                "id": "V4",
+                "audio_text": "plan",
+                "text": "plan"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_CAREER_T03_L03",
+      "order": 3,
+      "title": {
+        "en": "Today's Tasks",
+        "ru": "Today's Tasks"
+      },
+      "objective": {
+        "en": "Say what tasks you have today.",
+        "ru": "Say what tasks you have today."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_CAREER_T03_L03_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each lesson word with its meaning.",
+            "ru": "Соедините каждое слово с его значением."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "task",
+                "right": "A simple A1 meaning for 'task'."
+              },
+              {
+                "id": "P2",
+                "left": "list",
+                "right": "A simple A1 meaning for 'list'."
+              },
+              {
+                "id": "P3",
+                "left": "call",
+                "right": "A simple A1 meaning for 'call'."
+              },
+              {
+                "id": "P4",
+                "left": "report",
+                "right": "A simple A1 meaning for 'report'."
+              },
+              {
+                "id": "P5",
+                "left": "meeting",
+                "right": "Listening word: meeting."
+              },
+              {
+                "id": "P6",
+                "left": "start",
+                "right": "Listening word: start."
+              },
+              {
+                "id": "P7",
+                "left": "finish",
+                "right": "Listening word: finish."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L03_TEXT_08",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: I have three tasks.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L03_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Check yourself",
+            "ru": "Проверьте себя"
+          },
+          "instructions": {
+            "en": "Choose the phrase that best fits the lesson mission.",
+            "ru": "Выберите фразу, которая лучше всего подходит к заданию урока."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Which phrase best helps you to: Say what tasks you have today.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I have three tasks.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I need to make a call.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "The meeting is today.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I have three tasks.” directly supports this lesson mission."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L03_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I have three tasks.",
+            "word_bank": [
+              "I",
+              "have",
+              "three",
+              "tasks"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L03_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ tasks.",
+            "correct_answer": "I",
+            "options": [
+              "I",
+              "task",
+              "list"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L03_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the phrase",
+            "ru": "Соберите фразу"
+          },
+          "instructions": {
+            "en": "Put the words in the correct order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "tasks",
+              "three",
+              "have",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "have",
+              "three",
+              "tasks"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L03_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I have three tasks.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L03_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Repeat after the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I need to make a call.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Say what tasks you have today."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L03_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Today's Tasks",
+            "ru": "Ситуация на работе"
+          },
+          "instructions": {
+            "en": "Read the workplace scene and choose the best reply.",
+            "ru": "Прочитайте рабочую ситуацию и выберите лучший ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Today's Tasks",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Coworker",
+                "text": "I have three tasks."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "I need to make a call.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "The meeting is today.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L03_CHOOSE_DEFINITION_12",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "task",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'task'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L03_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Choose the word you hear",
+            "ru": "Выберите услышанное слово"
+          },
+          "instructions": {
+            "en": "Listen to the sentence and choose the missing word.",
+            "ru": "Прослушайте предложение и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I ___ three tasks.",
+            "audio_text": "I have three tasks.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "have",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "task",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "list",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is have."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L03_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ listening practice.",
+            "correct_answer": "am",
+            "hint_prefix": "am",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L03_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "task",
+                "text": "task"
+              },
+              {
+                "id": "V2",
+                "audio_text": "list",
+                "text": "list"
+              },
+              {
+                "id": "V3",
+                "audio_text": "call",
+                "text": "call"
+              },
+              {
+                "id": "V4",
+                "audio_text": "report",
+                "text": "report"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_CAREER_T03_L04",
+      "order": 4,
+      "title": {
+        "en": "Taking a Break",
+        "ru": "Taking a Break"
+      },
+      "objective": {
+        "en": "Ask about and talk about break time.",
+        "ru": "Ask about and talk about break time."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_CAREER_T03_L04_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each lesson word with its meaning.",
+            "ru": "Соедините каждое слово с его значением."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "break",
+                "right": "A simple A1 meaning for 'break'."
+              },
+              {
+                "id": "P2",
+                "left": "lunch",
+                "right": "A simple A1 meaning for 'lunch'."
+              },
+              {
+                "id": "P3",
+                "left": "coffee",
+                "right": "A simple A1 meaning for 'coffee'."
+              },
+              {
+                "id": "P4",
+                "left": "rest",
+                "right": "A simple A1 meaning for 'rest'."
+              },
+              {
+                "id": "P5",
+                "left": "minutes",
+                "right": "Listening word: minutes."
+              },
+              {
+                "id": "P6",
+                "left": "start",
+                "right": "Listening word: start."
+              },
+              {
+                "id": "P7",
+                "left": "finish",
+                "right": "Listening word: finish."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L04_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the language",
+            "ru": "Изучите язык"
+          },
+          "instructions": {
+            "en": "Read the explanation and examples.",
+            "ru": "Прочитайте объяснение и примеры."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Taking a Break. Mission: Ask about and talk about break time. Key phrases: When is the break? I have lunch at one. Let's take a short break.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L04_QUIZ_08",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: When is the break?",
+            "options": [
+              {
+                "id": "A",
+                "text": "When",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "break",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "lunch",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L04_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "When is the break?",
+            "word_bank": [
+              "When",
+              "is",
+              "the",
+              "break"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L04_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Fill the blank",
+            "ru": "Заполните пропуск"
+          },
+          "instructions": {
+            "en": "Choose the word that fits.",
+            "ru": "Выберите подходящее слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ is the break?",
+            "correct_answer": "When",
+            "options": [
+              "When",
+              "break",
+              "lunch"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L04_TAP_WORDS_10",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "When is the break?",
+            "word_bank": [
+              "break",
+              "the",
+              "is",
+              "When"
+            ],
+            "correct_words": [
+              "When",
+              "is",
+              "the",
+              "break"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L04_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen",
+            "ru": "Послушайте"
+          },
+          "instructions": {
+            "en": "Listen to the phrase and type what you hear.",
+            "ru": "Прослушайте фразу и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "When is the break?",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L04_LISTENING_SHADOWING_11",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "When is the break?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L04_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Taking a Break",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "When is the break?"
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "When is the break?",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L04_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the definition",
+            "ru": "Выберите определение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning of the word.",
+            "ru": "Выберите правильное значение слова."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "break",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple A1 meaning for 'break'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple A1 meaning for 'lunch'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple A1 meaning for 'coffee'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple A1 meaning for 'rest'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "break: A simple A1 meaning for 'break'."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L04_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Choose the word you hear",
+            "ru": "Выберите услышанное слово"
+          },
+          "instructions": {
+            "en": "Listen to the sentence and choose the missing word.",
+            "ru": "Прослушайте предложение и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ is the break?",
+            "audio_text": "When is the break?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "When",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "break",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "lunch",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is When."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L04_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ break.",
+            "correct_answer": "When",
+            "hint_prefix": "wh",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L04_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "break",
+                "text": "break"
+              },
+              {
+                "id": "V2",
+                "audio_text": "lunch",
+                "text": "lunch"
+              },
+              {
+                "id": "V3",
+                "audio_text": "coffee",
+                "text": "coffee"
+              },
+              {
+                "id": "V4",
+                "audio_text": "rest",
+                "text": "rest"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_CAREER_T03_L05",
+      "order": 5,
+      "title": {
+        "en": "Being on Time",
+        "ru": "Being on Time"
+      },
+      "objective": {
+        "en": "Talk about being early, on time, or late.",
+        "ru": "Talk about being early, on time, or late."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_CAREER_T03_L05_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "early",
+                "right": "Listening word: early."
+              },
+              {
+                "id": "P2",
+                "left": "late",
+                "right": "Listening word: late."
+              },
+              {
+                "id": "P3",
+                "left": "on time",
+                "right": "Listening word: on time."
+              },
+              {
+                "id": "P4",
+                "left": "traffic",
+                "right": "Listening word: traffic."
+              },
+              {
+                "id": "P5",
+                "left": "sorry",
+                "right": "Listening word: sorry."
+              },
+              {
+                "id": "P6",
+                "left": "start",
+                "right": "Listening word: start."
+              },
+              {
+                "id": "P7",
+                "left": "finish",
+                "right": "Listening word: finish."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L05_TEXT_09",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: I am on time.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L05_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Check yourself",
+            "ru": "Проверьте себя"
+          },
+          "instructions": {
+            "en": "Choose the phrase that best fits the lesson mission.",
+            "ru": "Выберите фразу, которая лучше всего подходит к заданию урока."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Which phrase best helps you to: Talk about being early, on time, or late.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I am on time.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Sorry, I am late.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "There was traffic.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I am on time.” directly supports this lesson mission."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L05_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Translate the phrase",
+            "ru": "Переведите фразу"
+          },
+          "instructions": {
+            "en": "Build the English translation from the words.",
+            "ru": "Составьте английский перевод из слов."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Я вовремя.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I am on time.",
+            "word_bank": [
+              "I",
+              "am",
+              "on",
+              "time",
+              "early",
+              "late"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L05_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ time.",
+            "correct_answer": "I",
+            "options": [
+              "I",
+              "early",
+              "late"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L05_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the phrase",
+            "ru": "Соберите фразу"
+          },
+          "instructions": {
+            "en": "Put the words in the correct order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "time",
+              "on",
+              "am",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "am",
+              "on",
+              "time"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L05_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I am on time.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L05_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Repeat after the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Sorry, I am late.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Talk about being early, on time, or late."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L05_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Being on Time",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "I am on time."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "I am on time.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L05_CHOOSE_DEFINITION_13",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "early",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'early'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L05_LISTEN_CHOOSE_WORD_14",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ time.",
+            "audio_text": "I am on time.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "I",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "early",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L05_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Впишите слово"
+          },
+          "instructions": {
+            "en": "Type the missing word using the hint.",
+            "ru": "Впишите пропущенное слово по подсказке."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I am on ___.",
+            "correct_answer": "time",
+            "hint_prefix": "ti",
+            "explanation": "The missing word is time."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L05_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match the sound and word",
+            "ru": "Соедините звук и слово"
+          },
+          "instructions": {
+            "en": "Listen to each word and choose its written form.",
+            "ru": "Прослушайте каждое слово и выберите его написание."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "early",
+                "text": "early"
+              },
+              {
+                "id": "V2",
+                "audio_text": "late",
+                "text": "late"
+              },
+              {
+                "id": "V3",
+                "audio_text": "on time",
+                "text": "on time"
+              },
+              {
+                "id": "V4",
+                "audio_text": "traffic",
+                "text": "traffic"
+              }
+            ],
+            "explanation": "Listen carefully before matching the audio to the written word."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_CAREER_T03_L06",
+      "order": 6,
+      "title": {
+        "en": "Calling in Sick",
+        "ru": "Calling in Sick"
+      },
+      "objective": {
+        "en": "Tell a manager you are sick and cannot work.",
+        "ru": "Tell a manager you are sick and cannot work."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_CAREER_T03_L06_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "sick",
+                "right": "Listening word: sick."
+              },
+              {
+                "id": "P2",
+                "left": "fever",
+                "right": "Listening word: fever."
+              },
+              {
+                "id": "P3",
+                "left": "today",
+                "right": "Listening word: today."
+              },
+              {
+                "id": "P4",
+                "left": "rest",
+                "right": "Listening word: rest."
+              },
+              {
+                "id": "P5",
+                "left": "tomorrow",
+                "right": "Listening word: tomorrow."
+              },
+              {
+                "id": "P6",
+                "left": "start",
+                "right": "Listening word: start."
+              },
+              {
+                "id": "P7",
+                "left": "finish",
+                "right": "Listening word: finish."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L06_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the language",
+            "ru": "Изучите язык"
+          },
+          "instructions": {
+            "en": "Read the explanation and examples.",
+            "ru": "Прочитайте объяснение и примеры."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Calling in Sick. Mission: Tell a manager you are sick and cannot work. Key phrases: I am sick today. I cannot come to work. I hope to return tomorrow.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L06_QUIZ_09",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: I am sick today.",
+            "options": [
+              {
+                "id": "A",
+                "text": "am",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "sick",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "fever",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L06_TRANSLATE_10",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I am sick today.",
+            "word_bank": [
+              "I",
+              "am",
+              "sick",
+              "today"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L06_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Fill the blank",
+            "ru": "Заполните пропуск"
+          },
+          "instructions": {
+            "en": "Choose the word that fits.",
+            "ru": "Выберите подходящее слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I am ___ today.",
+            "correct_answer": "sick",
+            "options": [
+              "sick",
+              "fever",
+              "today"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L06_TAP_WORDS_11",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I am sick today.",
+            "word_bank": [
+              "today",
+              "sick",
+              "am",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "am",
+              "sick",
+              "today"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L06_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen",
+            "ru": "Послушайте"
+          },
+          "instructions": {
+            "en": "Listen to the phrase and type what you hear.",
+            "ru": "Прослушайте фразу и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I am sick today.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L06_LISTENING_SHADOWING_12",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I am sick today.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L06_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Calling in Sick",
+            "ru": "Ситуация на работе"
+          },
+          "instructions": {
+            "en": "Read the workplace scene and choose the best reply.",
+            "ru": "Прочитайте рабочую ситуацию и выберите лучший ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Calling in Sick",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Coworker",
+                "text": "I am sick today."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "I cannot come to work.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I hope to return tomorrow.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L06_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the definition",
+            "ru": "Выберите определение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning of the word.",
+            "ru": "Выберите правильное значение слова."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "sick",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple A1 meaning for 'sick'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple A1 meaning for 'fever'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple A1 meaning for 'today'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple A1 meaning for 'rest'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "sick: A simple A1 meaning for 'sick'."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L06_LISTEN_CHOOSE_WORD_13",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ today.",
+            "audio_text": "I am sick today.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "I",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "sick",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L06_MISSING_WORD_14",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ listening practice.",
+            "correct_answer": "am",
+            "hint_prefix": "am",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L06_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match the sound and word",
+            "ru": "Соедините звук и слово"
+          },
+          "instructions": {
+            "en": "Listen to each word and choose its written form.",
+            "ru": "Прослушайте каждое слово и выберите его написание."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "sick",
+                "text": "sick"
+              },
+              {
+                "id": "V2",
+                "audio_text": "fever",
+                "text": "fever"
+              },
+              {
+                "id": "V3",
+                "audio_text": "today",
+                "text": "today"
+              },
+              {
+                "id": "V4",
+                "audio_text": "rest",
+                "text": "rest"
+              }
+            ],
+            "explanation": "Listen carefully before matching the audio to the written word."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_CAREER_T03_L07",
+      "order": 7,
+      "title": {
+        "en": "Changing a Shift",
+        "ru": "Changing a Shift"
+      },
+      "objective": {
+        "en": "Ask to change a work shift.",
+        "ru": "Ask to change a work shift."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_CAREER_T03_L07_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each lesson word with its meaning.",
+            "ru": "Соедините каждое слово с его значением."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "shift",
+                "right": "A simple A1 meaning for 'shift'."
+              },
+              {
+                "id": "P2",
+                "left": "change",
+                "right": "A simple A1 meaning for 'change'."
+              },
+              {
+                "id": "P3",
+                "left": "morning",
+                "right": "A simple A1 meaning for 'morning'."
+              },
+              {
+                "id": "P4",
+                "left": "evening",
+                "right": "A simple A1 meaning for 'evening'."
+              },
+              {
+                "id": "P5",
+                "left": "cover",
+                "right": "Listening word: cover."
+              },
+              {
+                "id": "P6",
+                "left": "start",
+                "right": "Listening word: start."
+              },
+              {
+                "id": "P7",
+                "left": "finish",
+                "right": "Listening word: finish."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L07_TEXT_08",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: Can I change my shift?",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L07_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Check yourself",
+            "ru": "Проверьте себя"
+          },
+          "instructions": {
+            "en": "Choose the phrase that best fits the lesson mission.",
+            "ru": "Выберите фразу, которая лучше всего подходит к заданию урока."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Which phrase best helps you to: Ask to change a work shift.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Can I change my shift?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Can you cover for me?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I can work in the evening.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Can I change my shift?” directly supports this lesson mission."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L07_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Can I change my shift?",
+            "word_bank": [
+              "Can",
+              "I",
+              "change",
+              "my",
+              "shift"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L07_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ shift.",
+            "correct_answer": "Can",
+            "options": [
+              "Can",
+              "shift",
+              "change"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L07_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the phrase",
+            "ru": "Соберите фразу"
+          },
+          "instructions": {
+            "en": "Put the words in the correct order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "shift",
+              "my",
+              "change",
+              "I",
+              "Can"
+            ],
+            "correct_words": [
+              "Can",
+              "I",
+              "change",
+              "my",
+              "shift"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L07_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "Can I change my shift?",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L07_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Repeat after the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Can you cover for me?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Ask to change a work shift."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L07_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Changing a Shift",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "Can I change my shift?"
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "Can I change my shift?",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L07_CHOOSE_DEFINITION_13",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "shift",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'shift'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L07_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Choose the word you hear",
+            "ru": "Выберите услышанное слово"
+          },
+          "instructions": {
+            "en": "Listen to the sentence and choose the missing word.",
+            "ru": "Прослушайте предложение и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "Can I ___ my shift?",
+            "audio_text": "Can I change my shift?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "change",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "shift",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "morning",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is change."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L07_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the missing word",
+            "ru": "Впишите слово"
+          },
+          "instructions": {
+            "en": "Type the missing word using the hint.",
+            "ru": "Впишите пропущенное слово по подсказке."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Can I ___ my shift?",
+            "correct_answer": "change",
+            "hint_prefix": "ch",
+            "explanation": "The missing word is change."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L07_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "shift",
+                "text": "shift"
+              },
+              {
+                "id": "V2",
+                "audio_text": "change",
+                "text": "change"
+              },
+              {
+                "id": "V3",
+                "audio_text": "morning",
+                "text": "morning"
+              },
+              {
+                "id": "V4",
+                "audio_text": "evening",
+                "text": "evening"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_CAREER_T03_L08",
+      "order": 8,
+      "title": {
+        "en": "Finishing a Task",
+        "ru": "Finishing a Task"
+      },
+      "objective": {
+        "en": "Say whether a task is finished.",
+        "ru": "Say whether a task is finished."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_CAREER_T03_L08_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "finish",
+                "right": "Listening word: finish."
+              },
+              {
+                "id": "P2",
+                "left": "ready",
+                "right": "Listening word: ready."
+              },
+              {
+                "id": "P3",
+                "left": "almost",
+                "right": "Listening word: almost."
+              },
+              {
+                "id": "P4",
+                "left": "check",
+                "right": "Listening word: check."
+              },
+              {
+                "id": "P5",
+                "left": "send",
+                "right": "Listening word: send."
+              },
+              {
+                "id": "P6",
+                "left": "start",
+                "right": "Listening word: start."
+              },
+              {
+                "id": "P7",
+                "left": "morning",
+                "right": "Listening word: morning."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L08_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the language",
+            "ru": "Изучите язык"
+          },
+          "instructions": {
+            "en": "Read the explanation and examples.",
+            "ru": "Прочитайте объяснение и примеры."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Finishing a Task. Mission: Say whether a task is finished. Key phrases: The task is finished. It is almost ready. Please check it.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L08_QUIZ_09",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: The task is finished.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "finish",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "ready",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L08_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Translate the phrase",
+            "ru": "Переведите фразу"
+          },
+          "instructions": {
+            "en": "Build the English translation from the words.",
+            "ru": "Составьте английский перевод из слов."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Задание закончено.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "The task is finished.",
+            "word_bank": [
+              "The",
+              "task",
+              "is",
+              "finished",
+              "finish",
+              "ready"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L08_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Fill the blank",
+            "ru": "Заполните пропуск"
+          },
+          "instructions": {
+            "en": "Choose the word that fits.",
+            "ru": "Выберите подходящее слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "The ___ is finished.",
+            "correct_answer": "task",
+            "options": [
+              "task",
+              "finish",
+              "ready"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L08_TAP_WORDS_10",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "The task is finished.",
+            "word_bank": [
+              "finished",
+              "is",
+              "task",
+              "The"
+            ],
+            "correct_words": [
+              "The",
+              "task",
+              "is",
+              "finished"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L08_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen",
+            "ru": "Послушайте"
+          },
+          "instructions": {
+            "en": "Listen to the phrase and type what you hear.",
+            "ru": "Прослушайте фразу и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "The task is finished.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L08_LISTENING_SHADOWING_11",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "The task is finished.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L08_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Finishing a Task",
+            "ru": "Ситуация на работе"
+          },
+          "instructions": {
+            "en": "Read the workplace scene and choose the best reply.",
+            "ru": "Прочитайте рабочую ситуацию и выберите лучший ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Finishing a Task",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Coworker",
+                "text": "The task is finished."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "It is almost ready.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Please check it.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L08_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the definition",
+            "ru": "Выберите определение"
+          },
+          "instructions": {
+            "en": "Choose the correct meaning of the word.",
+            "ru": "Выберите правильное значение слова."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "finish",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple A1 meaning for 'finish'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple A1 meaning for 'ready'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple A1 meaning for 'almost'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple A1 meaning for 'check'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "finish: A simple A1 meaning for 'finish'."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L08_LISTEN_CHOOSE_WORD_12",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ finished.",
+            "audio_text": "The task is finished.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "The",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "finish",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L08_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ finished.",
+            "correct_answer": "The",
+            "hint_prefix": "th",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L08_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "finish",
+                "text": "finish"
+              },
+              {
+                "id": "V2",
+                "audio_text": "ready",
+                "text": "ready"
+              },
+              {
+                "id": "V3",
+                "audio_text": "almost",
+                "text": "almost"
+              },
+              {
+                "id": "V4",
+                "audio_text": "check",
+                "text": "check"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_CAREER_T03_L09",
+      "order": 9,
+      "title": {
+        "en": "Before I Go Home",
+        "ru": "Before I Go Home"
+      },
+      "objective": {
+        "en": "Describe end-of-day actions.",
+        "ru": "Describe end-of-day actions."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_CAREER_T03_L09_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each lesson word with its meaning.",
+            "ru": "Соедините каждое слово с его значением."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "save",
+                "right": "A simple A1 meaning for 'save'."
+              },
+              {
+                "id": "P2",
+                "left": "close",
+                "right": "A simple A1 meaning for 'close'."
+              },
+              {
+                "id": "P3",
+                "left": "clean",
+                "right": "A simple A1 meaning for 'clean'."
+              },
+              {
+                "id": "P4",
+                "left": "tomorrow",
+                "right": "A simple A1 meaning for 'tomorrow'."
+              },
+              {
+                "id": "P5",
+                "left": "leave",
+                "right": "Listening word: leave."
+              },
+              {
+                "id": "P6",
+                "left": "start",
+                "right": "Listening word: start."
+              },
+              {
+                "id": "P7",
+                "left": "finish",
+                "right": "Listening word: finish."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L09_TEXT_08",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: I save my work.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L09_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Check yourself",
+            "ru": "Проверьте себя"
+          },
+          "instructions": {
+            "en": "Choose the phrase that best fits the lesson mission.",
+            "ru": "Выберите фразу, которая лучше всего подходит к заданию урока."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Which phrase best helps you to: Describe end-of-day actions.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I save my work.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I close the office.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Then I go home.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“I save my work.” directly supports this lesson mission."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L09_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I save my work.",
+            "word_bank": [
+              "I",
+              "save",
+              "my",
+              "work"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L09_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ work.",
+            "correct_answer": "I",
+            "options": [
+              "I",
+              "save",
+              "close"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L09_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Build the phrase",
+            "ru": "Соберите фразу"
+          },
+          "instructions": {
+            "en": "Put the words in the correct order.",
+            "ru": "Расставьте слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "work",
+              "my",
+              "save",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "save",
+              "my",
+              "work"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L09_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "I save my work.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L09_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Repeat after the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I close the office.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Describe end-of-day actions."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L09_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Before I Go Home",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "I save my work."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "I save my work.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L09_CHOOSE_DEFINITION_13",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "save",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'save'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L09_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Choose the word you hear",
+            "ru": "Выберите услышанное слово"
+          },
+          "instructions": {
+            "en": "Listen to the sentence and choose the missing word.",
+            "ru": "Прослушайте предложение и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I ___ my work.",
+            "audio_text": "I save my work.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "save",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "close",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "clean",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is save."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L09_MISSING_WORD_14",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ listening practice.",
+            "correct_answer": "am",
+            "hint_prefix": "am",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L09_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match the sound and word",
+            "ru": "Соедините звук и слово"
+          },
+          "instructions": {
+            "en": "Listen to each word and choose its written form.",
+            "ru": "Прослушайте каждое слово и выберите его написание."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "save",
+                "text": "save"
+              },
+              {
+                "id": "V2",
+                "audio_text": "close",
+                "text": "close"
+              },
+              {
+                "id": "V3",
+                "audio_text": "clean",
+                "text": "clean"
+              },
+              {
+                "id": "V4",
+                "audio_text": "tomorrow",
+                "text": "tomorrow"
+              }
+            ],
+            "explanation": "Listen carefully before matching the audio to the written word."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_CAREER_T03_L10",
+      "order": 10,
+      "title": {
+        "en": "My Full Workday",
+        "ru": "My Full Workday"
+      },
+      "objective": {
+        "en": "Describe a complete workday in order.",
+        "ru": "Describe a complete workday in order."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_CAREER_T03_L10_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "first",
+                "right": "Listening word: first."
+              },
+              {
+                "id": "P2",
+                "left": "then",
+                "right": "Listening word: then."
+              },
+              {
+                "id": "P3",
+                "left": "after",
+                "right": "Listening word: after."
+              },
+              {
+                "id": "P4",
+                "left": "finally",
+                "right": "Listening word: finally."
+              },
+              {
+                "id": "P5",
+                "left": "routine",
+                "right": "Listening word: routine."
+              },
+              {
+                "id": "P6",
+                "left": "start",
+                "right": "Listening word: start."
+              },
+              {
+                "id": "P7",
+                "left": "finish",
+                "right": "Listening word: finish."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L10_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Learn the language",
+            "ru": "Изучите язык"
+          },
+          "instructions": {
+            "en": "Read the explanation and examples.",
+            "ru": "Прочитайте объяснение и примеры."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "My Full Workday. Mission: Describe a complete workday in order. Key phrases: First, I check my tasks. Then, I work with my team. Finally, I go home.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L10_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Check yourself",
+            "ru": "Проверьте себя"
+          },
+          "instructions": {
+            "en": "Choose the phrase that best fits the lesson mission.",
+            "ru": "Выберите фразу, которая лучше всего подходит к заданию урока."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Which phrase best helps you to: Describe a complete workday in order.",
+            "options": [
+              {
+                "id": "A",
+                "text": "First, I check my tasks.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Then, I work with my team.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Finally, I go home.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“First, I check my tasks.” directly supports this lesson mission."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L10_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "First, I check my tasks.",
+            "word_bank": [
+              "First",
+              "I",
+              "check",
+              "my",
+              "tasks"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L10_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ tasks.",
+            "correct_answer": "First",
+            "options": [
+              "First",
+              "first",
+              "then"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L10_TAP_WORDS_11",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "First, I check my tasks.",
+            "word_bank": [
+              "tasks",
+              "my",
+              "check",
+              "I",
+              "First"
+            ],
+            "correct_words": [
+              "First",
+              "I",
+              "check",
+              "my",
+              "tasks"
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L10_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen",
+            "ru": "Послушайте"
+          },
+          "instructions": {
+            "en": "Listen to the phrase and type what you hear.",
+            "ru": "Прослушайте фразу и напишите, что услышали."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "First, I check my tasks.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L10_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Repeat after the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, record your repetition, and get pronunciation feedback.",
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Then, I work with my team.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Describe a complete workday in order."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L10_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "My Full Workday",
+            "ru": "Ситуация на работе"
+          },
+          "instructions": {
+            "en": "Read the workplace scene and choose the best reply.",
+            "ru": "Прочитайте рабочую ситуацию и выберите лучший ответ."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "My Full Workday",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Coworker",
+                "text": "First, I check my tasks."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "Then, I work with my team.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Finally, I go home.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L10_CHOOSE_DEFINITION_12",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "first",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'first'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L10_LISTEN_CHOOSE_WORD_13",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ tasks.",
+            "audio_text": "First, I check my tasks.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "First",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "first",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L10_MISSING_WORD_14",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ tasks.",
+            "correct_answer": "First",
+            "hint_prefix": "fi",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_CAREER_T03_L10_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match the sound and word",
+            "ru": "Соедините звук и слово"
+          },
+          "instructions": {
+            "en": "Listen to each word and choose its written form.",
+            "ru": "Прослушайте каждое слово и выберите его написание."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "first",
+                "text": "first"
+              },
+              {
+                "id": "V2",
+                "audio_text": "then",
+                "text": "then"
+              },
+              {
+                "id": "V3",
+                "audio_text": "after",
+                "text": "after"
+              },
+              {
+                "id": "V4",
+                "audio_text": "finally",
+                "text": "finally"
+              }
+            ],
+            "explanation": "Listen carefully before matching the audio to the written word."
+          }
+        }
+      ]
+    }
+  ]
+}
