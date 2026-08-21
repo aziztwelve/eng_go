@@ -1,0 +1,4262 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_STUDY_T03",
+    "title": {
+      "en": "My School Life",
+      "ru": "My School Life"
+    },
+    "description": {
+      "en": "A practical A1 track for talking about school places, subjects, schedules, teachers, and favorite classes through short spoken exchanges.",
+      "ru": "A practical A1 track for talking about school places, subjects, schedules, teachers, and favorite classes through short spoken exchanges."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "goal": "study",
+    "track_type": "thematic"
+  },
+  "lessons": [
+    {
+      "code": "A1_STUDY_T03_L01",
+      "order": 1,
+      "title": {
+        "en": "Places at School",
+        "ru": "Places at School"
+      },
+      "objective": {
+        "en": "Name and locate important school places.",
+        "ru": "Name and locate important school places."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_STUDY_T03_L01_MATCH_PAIRS_V2",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each study word with its meaning.",
+            "ru": "Соедините учебные слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "library",
+                "right": "A simple A1 meaning for 'library'."
+              },
+              {
+                "id": "P2",
+                "left": "office",
+                "right": "A simple A1 meaning for 'office'."
+              },
+              {
+                "id": "P3",
+                "left": "cafeteria",
+                "right": "A simple A1 meaning for 'cafeteria'."
+              },
+              {
+                "id": "P4",
+                "left": "lab",
+                "right": "A simple A1 meaning for 'lab'."
+              },
+              {
+                "id": "P5",
+                "left": "classroom",
+                "right": "A simple A1 meaning for 'classroom'."
+              },
+              {
+                "id": "P6",
+                "left": "math",
+                "right": "A study word: math."
+              },
+              {
+                "id": "P7",
+                "left": "science",
+                "right": "A study word: science."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L01_TEXT_V2",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "body": "Places at School. Name and locate important school places. Useful language: This is the library. The office is upstairs. Where is the lab?",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L01_QUIZ_V2",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "question": "Name and locate important school places.",
+            "options": [
+              {
+                "id": "A",
+                "text": "This is the library.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "The office is upstairs.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Where is the lab?",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "This is the library. The office is upstairs. Where is the lab?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct option best supports the lesson mission."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L01_TRANSLATE_V2",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "This is the library. The office is upstairs. Where is the lab?",
+            "word_bank": [
+              "This",
+              "is",
+              "the",
+              "library",
+              "The",
+              "office",
+              "is",
+              "upstairs",
+              "Where",
+              "is",
+              "the",
+              "lab"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L01_FILL_BLANK_V2",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ is the library",
+            "correct_answer": "This",
+            "options": [
+              "This",
+              "library",
+              "office"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L01_TAP_WORDS_V2",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "The office is upstairs.",
+            "word_bank": [
+              "upstairs",
+              "is",
+              "office",
+              "The"
+            ],
+            "correct_words": [
+              "The",
+              "office",
+              "is",
+              "upstairs"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L01_LISTENING_V2",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Where is the lab?",
+            "language": "en",
+            "translation_hint": "Name and locate important school places."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L01_LISTENING_SHADOWING_V2",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Repeat after the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "This is the library. The office is upstairs. Where is the lab?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Name and locate important school places."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L01_STORY_V2",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "title": "Places at School",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Teacher / Classmate",
+                "text": "This is the library."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "The office is upstairs.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "library",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L01_CHOOSE_DEFINITION_V2",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "word": "library",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple A1 meaning for 'library'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple A1 meaning for 'office'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple A1 meaning for 'cafeteria'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple A1 meaning for 'lab'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "library: A simple A1 meaning for 'library'."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L01_LISTEN_CHOOSE_WORD_V2",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ is the lab",
+            "audio_text": "Where is the lab?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Where",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "office",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L01_MISSING_WORD_V2",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ is the library The office is upstairs Where is the lab",
+            "correct_answer": "This",
+            "hint_prefix": "th",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L01_MATCH_PAIRS_VOICE_V2",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "library",
+                "text": "library"
+              },
+              {
+                "id": "V2",
+                "audio_text": "office",
+                "text": "office"
+              },
+              {
+                "id": "V3",
+                "audio_text": "cafeteria",
+                "text": "cafeteria"
+              },
+              {
+                "id": "V4",
+                "audio_text": "lab",
+                "text": "lab"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_STUDY_T03_L02",
+      "order": 2,
+      "title": {
+        "en": "My Subjects",
+        "ru": "My Subjects"
+      },
+      "objective": {
+        "en": "Name school subjects and say what you study.",
+        "ru": "Name school subjects and say what you study."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_STUDY_T03_L02_MATCH_PAIRS_V2",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each study word with its meaning.",
+            "ru": "Соедините учебные слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "math",
+                "right": "A simple A1 meaning for 'math'."
+              },
+              {
+                "id": "P2",
+                "left": "science",
+                "right": "A simple A1 meaning for 'science'."
+              },
+              {
+                "id": "P3",
+                "left": "history",
+                "right": "A simple A1 meaning for 'history'."
+              },
+              {
+                "id": "P4",
+                "left": "English",
+                "right": "A simple A1 meaning for 'English'."
+              },
+              {
+                "id": "P5",
+                "left": "art",
+                "right": "A simple A1 meaning for 'art'."
+              },
+              {
+                "id": "P6",
+                "left": "library",
+                "right": "A study word: library."
+              },
+              {
+                "id": "P7",
+                "left": "office",
+                "right": "A study word: office."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L02_TEXT_V2",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "body": "My Subjects. Name school subjects and say what you study. Useful language: I study English. We have math today. Do you study science?",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L02_QUIZ_V2",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "question": "Name school subjects and say what you study.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I study English.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "We have math today.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Do you study science?",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "I study English. We have math today. Do you study science?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct option best supports the lesson mission."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L02_TRANSLATE_V2",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I study English. We have math today. Do you study science?",
+            "word_bank": [
+              "I",
+              "study",
+              "English",
+              "We",
+              "have",
+              "math",
+              "today",
+              "Do",
+              "you",
+              "study",
+              "science"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L02_FILL_BLANK_V2",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ study English",
+            "correct_answer": "I",
+            "options": [
+              "I",
+              "math",
+              "science"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L02_TAP_WORDS_V2",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "We have math today.",
+            "word_bank": [
+              "today",
+              "math",
+              "have",
+              "We"
+            ],
+            "correct_words": [
+              "We",
+              "have",
+              "math",
+              "today"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L02_LISTENING_V2",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Do you study science?",
+            "language": "en",
+            "translation_hint": "Name school subjects and say what you study."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L02_LISTENING_SHADOWING_V2",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Repeat after the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I study English. We have math today. Do you study science?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Name school subjects and say what you study."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L02_STORY_V2",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "title": "My Subjects",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Teacher / Classmate",
+                "text": "I study English."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "We have math today.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "math",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L02_CHOOSE_DEFINITION_V2",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "word": "math",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple A1 meaning for 'math'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple A1 meaning for 'science'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple A1 meaning for 'history'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple A1 meaning for 'English'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "math: A simple A1 meaning for 'math'."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L02_LISTEN_CHOOSE_WORD_V2",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ you study science",
+            "audio_text": "Do you study science?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Do",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "science",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L02_MISSING_WORD_V2",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "I ___ English We have math today Do you study science",
+            "correct_answer": "study",
+            "hint_prefix": "st",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L02_MATCH_PAIRS_VOICE_V2",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "math",
+                "text": "math"
+              },
+              {
+                "id": "V2",
+                "audio_text": "science",
+                "text": "science"
+              },
+              {
+                "id": "V3",
+                "audio_text": "history",
+                "text": "history"
+              },
+              {
+                "id": "V4",
+                "audio_text": "English",
+                "text": "English"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_STUDY_T03_L03",
+      "order": 3,
+      "title": {
+        "en": "Days of the Week",
+        "ru": "Days of the Week"
+      },
+      "objective": {
+        "en": "Say which classes happen on different days.",
+        "ru": "Say which classes happen on different days."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_STUDY_T03_L03_MATCH_PAIRS_V2",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each study word with its meaning.",
+            "ru": "Соедините учебные слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "Monday",
+                "right": "A simple A1 meaning for 'Monday'."
+              },
+              {
+                "id": "P2",
+                "left": "Tuesday",
+                "right": "A simple A1 meaning for 'Tuesday'."
+              },
+              {
+                "id": "P3",
+                "left": "Wednesday",
+                "right": "A simple A1 meaning for 'Wednesday'."
+              },
+              {
+                "id": "P4",
+                "left": "Thursday",
+                "right": "A simple A1 meaning for 'Thursday'."
+              },
+              {
+                "id": "P5",
+                "left": "Friday",
+                "right": "A simple A1 meaning for 'Friday'."
+              },
+              {
+                "id": "P6",
+                "left": "library",
+                "right": "A study word: library."
+              },
+              {
+                "id": "P7",
+                "left": "office",
+                "right": "A study word: office."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L03_TEXT_V2",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "body": "Days of the Week. Say which classes happen on different days. Useful language: English is on Monday. We have art on Friday. What do you have today?",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L03_QUIZ_V2",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "question": "Say which classes happen on different days.",
+            "options": [
+              {
+                "id": "A",
+                "text": "English is on Monday.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "We have art on Friday.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What do you have today?",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "English is on Monday. We have art on Friday. What do you have today?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct option best supports the lesson mission."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L03_TRANSLATE_V2",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "English is on Monday. We have art on Friday. What do you have today?",
+            "word_bank": [
+              "English",
+              "is",
+              "on",
+              "Monday",
+              "We",
+              "have",
+              "art",
+              "on",
+              "Friday",
+              "What",
+              "do",
+              "you",
+              "have",
+              "today"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L03_FILL_BLANK_V2",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ is on Monday",
+            "correct_answer": "English",
+            "options": [
+              "English",
+              "Monday",
+              "Tuesday"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L03_TAP_WORDS_V2",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "We have art on Friday.",
+            "word_bank": [
+              "Friday",
+              "on",
+              "art",
+              "have",
+              "We"
+            ],
+            "correct_words": [
+              "We",
+              "have",
+              "art",
+              "on",
+              "Friday"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L03_LISTENING_V2",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "What do you have today?",
+            "language": "en",
+            "translation_hint": "Say which classes happen on different days."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L03_LISTENING_SHADOWING_V2",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Repeat after the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "English is on Monday. We have art on Friday. What do you have today?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Say which classes happen on different days."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L03_STORY_V2",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "title": "Days of the Week",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Teacher / Classmate",
+                "text": "English is on Monday."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "We have art on Friday.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Monday",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L03_CHOOSE_DEFINITION_V2",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "word": "Monday",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple A1 meaning for 'Monday'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple A1 meaning for 'Tuesday'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple A1 meaning for 'Wednesday'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple A1 meaning for 'Thursday'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Monday: A simple A1 meaning for 'Monday'."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L03_LISTEN_CHOOSE_WORD_V2",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ do you have today",
+            "audio_text": "What do you have today?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "What",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "Tuesday",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L03_MISSING_WORD_V2",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ is on Monday We have art on Friday What do you have today",
+            "correct_answer": "English",
+            "hint_prefix": "en",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L03_MATCH_PAIRS_VOICE_V2",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "Monday",
+                "text": "Monday"
+              },
+              {
+                "id": "V2",
+                "audio_text": "Tuesday",
+                "text": "Tuesday"
+              },
+              {
+                "id": "V3",
+                "audio_text": "Wednesday",
+                "text": "Wednesday"
+              },
+              {
+                "id": "V4",
+                "audio_text": "Thursday",
+                "text": "Thursday"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_STUDY_T03_L04",
+      "order": 4,
+      "title": {
+        "en": "What Time Is Class?",
+        "ru": "What Time Is Class?"
+      },
+      "objective": {
+        "en": "Ask and say class times.",
+        "ru": "Ask and say class times."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_STUDY_T03_L04_MATCH_PAIRS_V2",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each study word with its meaning.",
+            "ru": "Соедините учебные слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "time",
+                "right": "A simple A1 meaning for 'time'."
+              },
+              {
+                "id": "P2",
+                "left": "start",
+                "right": "A simple A1 meaning for 'start'."
+              },
+              {
+                "id": "P3",
+                "left": "finish",
+                "right": "A simple A1 meaning for 'finish'."
+              },
+              {
+                "id": "P4",
+                "left": "morning",
+                "right": "A simple A1 meaning for 'morning'."
+              },
+              {
+                "id": "P5",
+                "left": "afternoon",
+                "right": "A simple A1 meaning for 'afternoon'."
+              },
+              {
+                "id": "P6",
+                "left": "library",
+                "right": "A study word: library."
+              },
+              {
+                "id": "P7",
+                "left": "office",
+                "right": "A study word: office."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L04_TEXT_V2",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "body": "What Time Is Class?. Ask and say class times. Useful language: What time does class start? It starts at nine. It finishes at ten.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L04_QUIZ_V2",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "question": "Ask and say class times.",
+            "options": [
+              {
+                "id": "A",
+                "text": "What time does class start?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "It starts at nine.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "It finishes at ten.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "What time does class start? It starts at nine. It finishes at ten.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct option best supports the lesson mission."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L04_TRANSLATE_V2",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "What time does class start? It starts at nine. It finishes at ten.",
+            "word_bank": [
+              "What",
+              "time",
+              "does",
+              "class",
+              "start",
+              "It",
+              "starts",
+              "at",
+              "nine",
+              "It",
+              "finishes",
+              "at",
+              "ten"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L04_FILL_BLANK_V2",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ time does class start",
+            "correct_answer": "What",
+            "options": [
+              "What",
+              "time",
+              "start"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L04_TAP_WORDS_V2",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "It starts at nine.",
+            "word_bank": [
+              "nine",
+              "at",
+              "starts",
+              "It"
+            ],
+            "correct_words": [
+              "It",
+              "starts",
+              "at",
+              "nine"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L04_LISTENING_V2",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "It finishes at ten.",
+            "language": "en",
+            "translation_hint": "Ask and say class times."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L04_LISTENING_SHADOWING_V2",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Repeat after the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "What time does class start? It starts at nine. It finishes at ten.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Ask and say class times."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L04_STORY_V2",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "title": "What Time Is Class?",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Teacher / Classmate",
+                "text": "What time does class start?"
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "It starts at nine.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "time",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L04_CHOOSE_DEFINITION_V2",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "word": "time",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple A1 meaning for 'time'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple A1 meaning for 'start'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple A1 meaning for 'finish'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple A1 meaning for 'morning'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "time: A simple A1 meaning for 'time'."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L04_LISTEN_CHOOSE_WORD_V2",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ finishes at ten",
+            "audio_text": "It finishes at ten.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "It",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "start",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L04_MISSING_WORD_V2",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ time does class start It starts at nine It finishes at ten",
+            "correct_answer": "What",
+            "hint_prefix": "wh",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L04_MATCH_PAIRS_VOICE_V2",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "time",
+                "text": "time"
+              },
+              {
+                "id": "V2",
+                "audio_text": "start",
+                "text": "start"
+              },
+              {
+                "id": "V3",
+                "audio_text": "finish",
+                "text": "finish"
+              },
+              {
+                "id": "V4",
+                "audio_text": "morning",
+                "text": "morning"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_STUDY_T03_L05",
+      "order": 5,
+      "title": {
+        "en": "My Teacher",
+        "ru": "My Teacher"
+      },
+      "objective": {
+        "en": "Describe a teacher with simple language.",
+        "ru": "Describe a teacher with simple language."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_STUDY_T03_L05_MATCH_PAIRS_V2",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each study word with its meaning.",
+            "ru": "Соедините учебные слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "kind",
+                "right": "A simple A1 meaning for 'kind'."
+              },
+              {
+                "id": "P2",
+                "left": "helpful",
+                "right": "A simple A1 meaning for 'helpful'."
+              },
+              {
+                "id": "P3",
+                "left": "strict",
+                "right": "A simple A1 meaning for 'strict'."
+              },
+              {
+                "id": "P4",
+                "left": "funny",
+                "right": "A simple A1 meaning for 'funny'."
+              },
+              {
+                "id": "P5",
+                "left": "patient",
+                "right": "A simple A1 meaning for 'patient'."
+              },
+              {
+                "id": "P6",
+                "left": "library",
+                "right": "A study word: library."
+              },
+              {
+                "id": "P7",
+                "left": "office",
+                "right": "A study word: office."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L05_TEXT_V2",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "body": "My Teacher. Describe a teacher with simple language. Useful language: My teacher is kind. She is very helpful. He teaches science.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L05_QUIZ_V2",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "question": "Describe a teacher with simple language.",
+            "options": [
+              {
+                "id": "A",
+                "text": "My teacher is kind.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "She is very helpful.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "He teaches science.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "My teacher is kind. She is very helpful. He teaches science.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct option best supports the lesson mission."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L05_TRANSLATE_V2",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "My teacher is kind. She is very helpful. He teaches science.",
+            "word_bank": [
+              "My",
+              "teacher",
+              "is",
+              "kind",
+              "She",
+              "is",
+              "very",
+              "helpful",
+              "He",
+              "teaches",
+              "science"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L05_FILL_BLANK_V2",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ teacher is kind",
+            "correct_answer": "My",
+            "options": [
+              "My",
+              "kind",
+              "helpful"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L05_TAP_WORDS_V2",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "She is very helpful.",
+            "word_bank": [
+              "helpful",
+              "very",
+              "is",
+              "She"
+            ],
+            "correct_words": [
+              "She",
+              "is",
+              "very",
+              "helpful"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L05_LISTENING_V2",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "He teaches science.",
+            "language": "en",
+            "translation_hint": "Describe a teacher with simple language."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L05_LISTENING_SHADOWING_V2",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Repeat after the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "My teacher is kind. She is very helpful. He teaches science.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Describe a teacher with simple language."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L05_STORY_V2",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "title": "My Teacher",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Teacher / Classmate",
+                "text": "My teacher is kind."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "She is very helpful.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "kind",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L05_CHOOSE_DEFINITION_V2",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "word": "kind",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple A1 meaning for 'kind'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple A1 meaning for 'helpful'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple A1 meaning for 'strict'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple A1 meaning for 'funny'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "kind: A simple A1 meaning for 'kind'."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L05_LISTEN_CHOOSE_WORD_V2",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ teaches science",
+            "audio_text": "He teaches science.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "He",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "helpful",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L05_MISSING_WORD_V2",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ teacher is kind She is very helpful He teaches science",
+            "correct_answer": "My",
+            "hint_prefix": "my",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L05_MATCH_PAIRS_VOICE_V2",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "kind",
+                "text": "kind"
+              },
+              {
+                "id": "V2",
+                "audio_text": "helpful",
+                "text": "helpful"
+              },
+              {
+                "id": "V3",
+                "audio_text": "strict",
+                "text": "strict"
+              },
+              {
+                "id": "V4",
+                "audio_text": "funny",
+                "text": "funny"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_STUDY_T03_L06",
+      "order": 6,
+      "title": {
+        "en": "My Favorite Class",
+        "ru": "My Favorite Class"
+      },
+      "objective": {
+        "en": "Say which subject you like and why.",
+        "ru": "Say which subject you like and why."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_STUDY_T03_L06_MATCH_PAIRS_V2",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each study word with its meaning.",
+            "ru": "Соедините учебные слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "favorite",
+                "right": "A simple A1 meaning for 'favorite'."
+              },
+              {
+                "id": "P2",
+                "left": "easy",
+                "right": "A simple A1 meaning for 'easy'."
+              },
+              {
+                "id": "P3",
+                "left": "difficult",
+                "right": "A simple A1 meaning for 'difficult'."
+              },
+              {
+                "id": "P4",
+                "left": "interesting",
+                "right": "A simple A1 meaning for 'interesting'."
+              },
+              {
+                "id": "P5",
+                "left": "useful",
+                "right": "A simple A1 meaning for 'useful'."
+              },
+              {
+                "id": "P6",
+                "left": "library",
+                "right": "A study word: library."
+              },
+              {
+                "id": "P7",
+                "left": "office",
+                "right": "A study word: office."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L06_TEXT_V2",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "body": "My Favorite Class. Say which subject you like and why. Useful language: My favorite subject is English. I like it because it is useful. Math is difficult for me.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L06_QUIZ_V2",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "question": "Say which subject you like and why.",
+            "options": [
+              {
+                "id": "A",
+                "text": "My favorite subject is English.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I like it because it is useful.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Math is difficult for me.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "My favorite subject is English. I like it because it is useful. Math is difficult for me.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct option best supports the lesson mission."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L06_TRANSLATE_V2",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "My favorite subject is English. I like it because it is useful. Math is difficult for me.",
+            "word_bank": [
+              "My",
+              "favorite",
+              "subject",
+              "is",
+              "English",
+              "I",
+              "like",
+              "it",
+              "because",
+              "it",
+              "is",
+              "useful",
+              "Math",
+              "is",
+              "difficult",
+              "for",
+              "me"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L06_FILL_BLANK_V2",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ favorite subject is English",
+            "correct_answer": "My",
+            "options": [
+              "My",
+              "favorite",
+              "easy"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L06_TAP_WORDS_V2",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I like it because it is useful.",
+            "word_bank": [
+              "useful",
+              "is",
+              "it",
+              "because",
+              "it",
+              "like",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "like",
+              "it",
+              "because",
+              "it",
+              "is",
+              "useful"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L06_LISTENING_V2",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Math is difficult for me.",
+            "language": "en",
+            "translation_hint": "Say which subject you like and why."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L06_LISTENING_SHADOWING_V2",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Repeat after the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "My favorite subject is English. I like it because it is useful. Math is difficult for me.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Say which subject you like and why."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L06_STORY_V2",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "title": "My Favorite Class",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Teacher / Classmate",
+                "text": "My favorite subject is English."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "I like it because it is useful.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "favorite",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L06_CHOOSE_DEFINITION_V2",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "word": "favorite",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple A1 meaning for 'favorite'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple A1 meaning for 'easy'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple A1 meaning for 'difficult'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple A1 meaning for 'interesting'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "favorite: A simple A1 meaning for 'favorite'."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L06_LISTEN_CHOOSE_WORD_V2",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ is difficult for me",
+            "audio_text": "Math is difficult for me.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Math",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "easy",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L06_MISSING_WORD_V2",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ favorite subject is English I like it because it is useful Math is difficult for me",
+            "correct_answer": "My",
+            "hint_prefix": "my",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L06_MATCH_PAIRS_VOICE_V2",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "favorite",
+                "text": "favorite"
+              },
+              {
+                "id": "V2",
+                "audio_text": "easy",
+                "text": "easy"
+              },
+              {
+                "id": "V3",
+                "audio_text": "difficult",
+                "text": "difficult"
+              },
+              {
+                "id": "V4",
+                "audio_text": "interesting",
+                "text": "interesting"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_STUDY_T03_L07",
+      "order": 7,
+      "title": {
+        "en": "My Timetable",
+        "ru": "My Timetable"
+      },
+      "objective": {
+        "en": "Describe a simple weekly timetable.",
+        "ru": "Describe a simple weekly timetable."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_STUDY_T03_L07_MATCH_PAIRS_V2",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each study word with its meaning.",
+            "ru": "Соедините учебные слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "schedule",
+                "right": "A simple A1 meaning for 'schedule'."
+              },
+              {
+                "id": "P2",
+                "left": "lesson",
+                "right": "A simple A1 meaning for 'lesson'."
+              },
+              {
+                "id": "P3",
+                "left": "break",
+                "right": "A simple A1 meaning for 'break'."
+              },
+              {
+                "id": "P4",
+                "left": "lunch",
+                "right": "A simple A1 meaning for 'lunch'."
+              },
+              {
+                "id": "P5",
+                "left": "period",
+                "right": "A simple A1 meaning for 'period'."
+              },
+              {
+                "id": "P6",
+                "left": "library",
+                "right": "A study word: library."
+              },
+              {
+                "id": "P7",
+                "left": "office",
+                "right": "A study word: office."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L07_TEXT_V2",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "body": "My Timetable. Describe a simple weekly timetable. Useful language: I have three lessons today. Lunch is at twelve. We have a break at ten.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L07_QUIZ_V2",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "question": "Describe a simple weekly timetable.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I have three lessons today.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Lunch is at twelve.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "We have a break at ten.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "I have three lessons today. Lunch is at twelve. We have a break at ten.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct option best supports the lesson mission."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L07_TRANSLATE_V2",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I have three lessons today. Lunch is at twelve. We have a break at ten.",
+            "word_bank": [
+              "I",
+              "have",
+              "three",
+              "lessons",
+              "today",
+              "Lunch",
+              "is",
+              "at",
+              "twelve",
+              "We",
+              "have",
+              "a",
+              "break",
+              "at",
+              "ten"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L07_FILL_BLANK_V2",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ have three lessons today",
+            "correct_answer": "I",
+            "options": [
+              "I",
+              "schedule",
+              "lesson"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L07_TAP_WORDS_V2",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Lunch is at twelve.",
+            "word_bank": [
+              "twelve",
+              "at",
+              "is",
+              "Lunch"
+            ],
+            "correct_words": [
+              "Lunch",
+              "is",
+              "at",
+              "twelve"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L07_LISTENING_V2",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "We have a break at ten.",
+            "language": "en",
+            "translation_hint": "Describe a simple weekly timetable."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L07_LISTENING_SHADOWING_V2",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Repeat after the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I have three lessons today. Lunch is at twelve. We have a break at ten.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Describe a simple weekly timetable."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L07_STORY_V2",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "title": "My Timetable",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Teacher / Classmate",
+                "text": "I have three lessons today."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "Lunch is at twelve.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "schedule",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L07_CHOOSE_DEFINITION_V2",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "word": "schedule",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple A1 meaning for 'schedule'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple A1 meaning for 'lesson'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple A1 meaning for 'break'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple A1 meaning for 'lunch'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "schedule: A simple A1 meaning for 'schedule'."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L07_LISTEN_CHOOSE_WORD_V2",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ have a break at ten",
+            "audio_text": "We have a break at ten.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "We",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "lesson",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L07_MISSING_WORD_V2",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "I ___ three lessons today Lunch is at twelve We have a break at ten",
+            "correct_answer": "have",
+            "hint_prefix": "ha",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L07_MATCH_PAIRS_VOICE_V2",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "schedule",
+                "text": "schedule"
+              },
+              {
+                "id": "V2",
+                "audio_text": "lesson",
+                "text": "lesson"
+              },
+              {
+                "id": "V3",
+                "audio_text": "break",
+                "text": "break"
+              },
+              {
+                "id": "V4",
+                "audio_text": "lunch",
+                "text": "lunch"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_STUDY_T03_L08",
+      "order": 8,
+      "title": {
+        "en": "Before and After Class",
+        "ru": "Before and After Class"
+      },
+      "objective": {
+        "en": "Talk about activities around class time.",
+        "ru": "Talk about activities around class time."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_STUDY_T03_L08_MATCH_PAIRS_V2",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each study word with its meaning.",
+            "ru": "Соедините учебные слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "before",
+                "right": "A simple A1 meaning for 'before'."
+              },
+              {
+                "id": "P2",
+                "left": "after",
+                "right": "A simple A1 meaning for 'after'."
+              },
+              {
+                "id": "P3",
+                "left": "arrive",
+                "right": "A simple A1 meaning for 'arrive'."
+              },
+              {
+                "id": "P4",
+                "left": "leave",
+                "right": "A simple A1 meaning for 'leave'."
+              },
+              {
+                "id": "P5",
+                "left": "study",
+                "right": "A simple A1 meaning for 'study'."
+              },
+              {
+                "id": "P6",
+                "left": "library",
+                "right": "A study word: library."
+              },
+              {
+                "id": "P7",
+                "left": "office",
+                "right": "A study word: office."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L08_TEXT_V2",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "body": "Before and After Class. Talk about activities around class time. Useful language: I arrive before class. I study after school. I leave at three.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L08_QUIZ_V2",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "question": "Talk about activities around class time.",
+            "options": [
+              {
+                "id": "A",
+                "text": "I arrive before class.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I study after school.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I leave at three.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "I arrive before class. I study after school. I leave at three.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct option best supports the lesson mission."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L08_TRANSLATE_V2",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I arrive before class. I study after school. I leave at three.",
+            "word_bank": [
+              "I",
+              "arrive",
+              "before",
+              "class",
+              "I",
+              "study",
+              "after",
+              "school",
+              "I",
+              "leave",
+              "at",
+              "three"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L08_FILL_BLANK_V2",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ arrive before class",
+            "correct_answer": "I",
+            "options": [
+              "I",
+              "before",
+              "after"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L08_TAP_WORDS_V2",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I study after school.",
+            "word_bank": [
+              "school",
+              "after",
+              "study",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "study",
+              "after",
+              "school"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L08_LISTENING_V2",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I leave at three.",
+            "language": "en",
+            "translation_hint": "Talk about activities around class time."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L08_LISTENING_SHADOWING_V2",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Repeat after the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I arrive before class. I study after school. I leave at three.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Talk about activities around class time."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L08_STORY_V2",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "title": "Before and After Class",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Teacher / Classmate",
+                "text": "I arrive before class."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "I study after school.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "before",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L08_CHOOSE_DEFINITION_V2",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "word": "before",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple A1 meaning for 'before'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple A1 meaning for 'after'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple A1 meaning for 'arrive'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple A1 meaning for 'leave'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "before: A simple A1 meaning for 'before'."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L08_LISTEN_CHOOSE_WORD_V2",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ leave at three",
+            "audio_text": "I leave at three.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "I",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "after",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L08_MISSING_WORD_V2",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "I ___ before class I study after school I leave at three",
+            "correct_answer": "arrive",
+            "hint_prefix": "ar",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L08_MATCH_PAIRS_VOICE_V2",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "before",
+                "text": "before"
+              },
+              {
+                "id": "V2",
+                "audio_text": "after",
+                "text": "after"
+              },
+              {
+                "id": "V3",
+                "audio_text": "arrive",
+                "text": "arrive"
+              },
+              {
+                "id": "V4",
+                "audio_text": "leave",
+                "text": "leave"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_STUDY_T03_L09",
+      "order": 9,
+      "title": {
+        "en": "Ask About School",
+        "ru": "Ask About School"
+      },
+      "objective": {
+        "en": "Ask a classmate questions about school life.",
+        "ru": "Ask a classmate questions about school life."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_STUDY_T03_L09_MATCH_PAIRS_V2",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each study word with its meaning.",
+            "ru": "Соедините учебные слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "which",
+                "right": "A simple A1 meaning for 'which'."
+              },
+              {
+                "id": "P2",
+                "left": "when",
+                "right": "A simple A1 meaning for 'when'."
+              },
+              {
+                "id": "P3",
+                "left": "where",
+                "right": "A simple A1 meaning for 'where'."
+              },
+              {
+                "id": "P4",
+                "left": "who",
+                "right": "A simple A1 meaning for 'who'."
+              },
+              {
+                "id": "P5",
+                "left": "why",
+                "right": "A simple A1 meaning for 'why'."
+              },
+              {
+                "id": "P6",
+                "left": "library",
+                "right": "A study word: library."
+              },
+              {
+                "id": "P7",
+                "left": "office",
+                "right": "A study word: office."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L09_TEXT_V2",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "body": "Ask About School. Ask a classmate questions about school life. Useful language: Which class do you like? When is your English class? Who is your teacher?",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L09_QUIZ_V2",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "question": "Ask a classmate questions about school life.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Which class do you like?",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "When is your English class?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Who is your teacher?",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "Which class do you like? When is your English class? Who is your teacher?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct option best supports the lesson mission."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L09_TRANSLATE_V2",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Which class do you like? When is your English class? Who is your teacher?",
+            "word_bank": [
+              "Which",
+              "class",
+              "do",
+              "you",
+              "like",
+              "When",
+              "is",
+              "your",
+              "English",
+              "class",
+              "Who",
+              "is",
+              "your",
+              "teacher"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L09_FILL_BLANK_V2",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ class do you like",
+            "correct_answer": "Which",
+            "options": [
+              "Which",
+              "when",
+              "where"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L09_TAP_WORDS_V2",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "When is your English class?",
+            "word_bank": [
+              "class",
+              "English",
+              "your",
+              "is",
+              "When"
+            ],
+            "correct_words": [
+              "When",
+              "is",
+              "your",
+              "English",
+              "class"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L09_LISTENING_V2",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Who is your teacher?",
+            "language": "en",
+            "translation_hint": "Ask a classmate questions about school life."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L09_LISTENING_SHADOWING_V2",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Repeat after the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Which class do you like? When is your English class? Who is your teacher?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Ask a classmate questions about school life."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L09_STORY_V2",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "title": "Ask About School",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Teacher / Classmate",
+                "text": "Which class do you like?"
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "When is your English class?",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "which",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L09_CHOOSE_DEFINITION_V2",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "word": "which",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple A1 meaning for 'which'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple A1 meaning for 'when'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple A1 meaning for 'where'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple A1 meaning for 'who'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "which: A simple A1 meaning for 'which'."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L09_LISTEN_CHOOSE_WORD_V2",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ is your teacher",
+            "audio_text": "Who is your teacher?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Who",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "when",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L09_MISSING_WORD_V2",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ class do you like When is your English class Who is your teacher",
+            "correct_answer": "Which",
+            "hint_prefix": "wh",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L09_MATCH_PAIRS_VOICE_V2",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "which",
+                "text": "which"
+              },
+              {
+                "id": "V2",
+                "audio_text": "when",
+                "text": "when"
+              },
+              {
+                "id": "V3",
+                "audio_text": "where",
+                "text": "where"
+              },
+              {
+                "id": "V4",
+                "audio_text": "who",
+                "text": "who"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_STUDY_T03_L10",
+      "order": 10,
+      "title": {
+        "en": "School Tour Mission",
+        "ru": "School Tour Mission"
+      },
+      "objective": {
+        "en": "Give a short spoken tour of school life.",
+        "ru": "Give a short spoken tour of school life."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_STUDY_T03_L10_MATCH_PAIRS_V2",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match the pairs",
+            "ru": "Соедините пары"
+          },
+          "instructions": {
+            "en": "Match each study word with its meaning.",
+            "ru": "Соедините учебные слова с их значениями."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "tour",
+                "right": "A simple A1 meaning for 'tour'."
+              },
+              {
+                "id": "P2",
+                "left": "building",
+                "right": "A simple A1 meaning for 'building'."
+              },
+              {
+                "id": "P3",
+                "left": "subject",
+                "right": "A simple A1 meaning for 'subject'."
+              },
+              {
+                "id": "P4",
+                "left": "schedule",
+                "right": "A simple A1 meaning for 'schedule'."
+              },
+              {
+                "id": "P5",
+                "left": "favorite",
+                "right": "A simple A1 meaning for 'favorite'."
+              },
+              {
+                "id": "P6",
+                "left": "library",
+                "right": "A study word: library."
+              },
+              {
+                "id": "P7",
+                "left": "office",
+                "right": "A study word: office."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L10_TEXT_V2",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "body": "School Tour Mission. Give a short spoken tour of school life. Useful language: Welcome to my school. This is our library. My favorite class is...",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L10_QUIZ_V2",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "question": "Give a short spoken tour of school life.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Welcome to my school.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "This is our library.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My favorite class is...",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "Welcome to my school. This is our library. My favorite class is...",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct option best supports the lesson mission."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L10_TRANSLATE_V2",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Welcome to my school. This is our library. My favorite class is...",
+            "word_bank": [
+              "Welcome",
+              "to",
+              "my",
+              "school",
+              "This",
+              "is",
+              "our",
+              "library",
+              "My",
+              "favorite",
+              "class",
+              "is"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L10_FILL_BLANK_V2",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ to my school",
+            "correct_answer": "Welcome",
+            "options": [
+              "Welcome",
+              "tour",
+              "building"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L10_TAP_WORDS_V2",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "This is our library.",
+            "word_bank": [
+              "library",
+              "our",
+              "is",
+              "This"
+            ],
+            "correct_words": [
+              "This",
+              "is",
+              "our",
+              "library"
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L10_LISTENING_V2",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "My favorite class is...",
+            "language": "en",
+            "translation_hint": "Give a short spoken tour of school life."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L10_LISTENING_SHADOWING_V2",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Repeat after the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Welcome to my school. This is our library. My favorite class is...",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Give a short spoken tour of school life."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L10_STORY_V2",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "title": "School Tour Mission",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Teacher / Classmate",
+                "text": "Welcome to my school."
+              },
+              {
+                "type": "choice",
+                "text": "What should you say next?",
+                "options": [
+                  {
+                    "text": "This is our library.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "tour",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L10_CHOOSE_DEFINITION_V2",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "word": "tour",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple A1 meaning for 'tour'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple A1 meaning for 'building'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple A1 meaning for 'subject'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple A1 meaning for 'schedule'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "tour: A simple A1 meaning for 'tour'."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L10_LISTEN_CHOOSE_WORD_V2",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ favorite class is",
+            "audio_text": "My favorite class is...",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "My",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "building",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L10_MISSING_WORD_V2",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "sentence_template": "___ to my school This is our library My favorite class is",
+            "correct_answer": "Welcome",
+            "hint_prefix": "we",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_STUDY_T03_L10_MATCH_PAIRS_VOICE_V2",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice the study language",
+            "ru": "Практика учебного языка"
+          },
+          "instructions": {
+            "en": "Complete the activity using the lesson target language.",
+            "ru": "Выполните задание, используя язык урока."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "tour",
+                "text": "tour"
+              },
+              {
+                "id": "V2",
+                "audio_text": "building",
+                "text": "building"
+              },
+              {
+                "id": "V3",
+                "audio_text": "subject",
+                "text": "subject"
+              },
+              {
+                "id": "V4",
+                "audio_text": "schedule",
+                "text": "schedule"
+              }
+            ],
+            "explanation": "Listen carefully before matching."
+          }
+        }
+      ]
+    }
+  ]
+}
