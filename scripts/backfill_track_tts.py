@@ -12,8 +12,8 @@ import urllib.request
 
 
 PACKAGE = pathlib.Path(os.environ.get("TRACK_PACKAGE", "tracks/A1_EXAM_PREP_TRACKS_01_10_V2"))
-OUTPUT = pathlib.Path(os.environ.get("AUDIO_OUTPUT", "/var/www/html/eng_next2/public/audio/a1-exam-prep"))
-PUBLIC_BASE = os.environ.get("PUBLIC_AUDIO_BASE", "https://lingoiq.online/audio/a1-exam-prep")
+OUTPUT = pathlib.Path(os.environ["AUDIO_OUTPUT"]) if os.environ.get("AUDIO_OUTPUT") else None
+PUBLIC_BASE = os.environ.get("PUBLIC_AUDIO_BASE", "https://api.lingoiq.online/audio/a1-exam-prep")
 API_KEY = os.environ["GOOGLE_TTS_API_KEY"]
 
 
@@ -44,7 +44,22 @@ def synthesize(language, text):
 
 
 def main():
-    OUTPUT.mkdir(parents=True, exist_ok=True)
+    s3 = None
+    bucket = os.environ.get("S3_BUCKET")
+    if bucket:
+        import boto3
+
+        s3 = boto3.client(
+            "s3",
+            endpoint_url=os.environ["S3_ENDPOINT"],
+            aws_access_key_id=os.environ["S3_ACCESS_KEY"],
+            aws_secret_access_key=os.environ["S3_SECRET_KEY"],
+            region_name=os.environ.get("S3_REGION", "us-east-1"),
+        )
+    elif OUTPUT:
+        OUTPUT.mkdir(parents=True, exist_ok=True)
+    else:
+        raise RuntimeError("set S3_BUCKET or AUDIO_OUTPUT")
     texts = {}
     documents = []
     for path in sorted(PACKAGE.glob("*.json")):
@@ -69,10 +84,24 @@ def main():
     for index, (key, _) in enumerate(sorted(texts.items()), 1):
         language, text = key
         name = audio_name(language, text)
-        target = OUTPUT / name
-        if not target.exists():
-            target.write_bytes(synthesize(language, text))
-            time.sleep(0.05)
+        object_key = "a1-exam-prep/" + name
+        if s3:
+            try:
+                s3.head_object(Bucket=bucket, Key=object_key)
+            except Exception:
+                s3.put_object(
+                    Bucket=bucket,
+                    Key=object_key,
+                    Body=synthesize(language, text),
+                    ContentType="audio/mpeg",
+                    CacheControl="public, max-age=31536000, immutable",
+                )
+                time.sleep(0.05)
+        else:
+            target = OUTPUT / name
+            if not target.exists():
+                target.write_bytes(synthesize(language, text))
+                time.sleep(0.05)
         texts[key] = f"{PUBLIC_BASE}/{name}"
         print(f"audio {index}/{len(texts)} {language} {name}")
 

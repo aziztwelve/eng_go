@@ -1,0 +1,58 @@
+{
+    email admin@lingoiq.online
+}
+
+api.lingoiq.online, api2.lingoiq.online {
+    encode gzip zstd
+
+    @health path /health /api/v1/healthz
+    handle @health {
+        reverse_proxy host.docker.internal:8080
+    }
+
+    # Public audio objects live in the dedicated MinIO `audio` bucket.
+    # The bucket name remains in the URL: /audio/<object-key>.
+    @audio path /audio/*
+    handle @audio {
+        reverse_proxy audio-minio:9000
+    }
+
+    reverse_proxy host.docker.internal:8080 {
+        header_up X-Real-IP {remote_host}
+    }
+
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains"
+        X-Content-Type-Options "nosniff"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        -Server
+    }
+
+    log {
+        output stdout
+        format json
+    }
+}
+
+lingoiq.online, app.lingoiq.online, web.lingoiq.online, app2.lingoiq.online {
+    encode gzip zstd
+
+    @next_static path /_next/static/*
+    header @next_static Cache-Control "public, max-age=31536000, immutable"
+
+    reverse_proxy host.docker.internal:3001 {
+        header_up X-Real-IP {remote_host}
+    }
+
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains"
+        X-Content-Type-Options "nosniff"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        -Server
+    }
+
+    log {
+        output stdout
+        format json
+    }
+}
