@@ -123,8 +123,19 @@ def normalize_lesson(lesson, track_words):
     for item in lesson["lesson_flow"]:
         if item["type"] not in DATA_KEYS:
             continue
-        step = deepcopy(item)
-        step["data"] = {k: v for k, v in step.get("data", {}).items() if k in DATA_KEYS[step["type"]]}
+        if item["type"] == "listening" and "content" in item:
+            step = {
+                "id": f'{lesson["lesson_id"]}_LISTENING_01',
+                "order": 0,
+                "type": "listening",
+                "title": localized(item.get("title", "Listen carefully")),
+                "instructions": localized(item.get("instructions", "Listen and type what you hear.")),
+                "estimated_seconds": item.get("estimated_seconds", 40),
+                "data": {"audio_text": item["content"]["script"], "language": "en"},
+            }
+        else:
+            step = deepcopy(item)
+            step["data"] = {k: v for k, v in step.get("data", {}).items() if k in DATA_KEYS[step["type"]]}
         if step["type"] == "missing_word" and len(step["data"].get("correct_answer", "")) < 2:
             step["data"]["correct_answer"] = "am"
             step["data"]["hint_prefix"] = "am"
