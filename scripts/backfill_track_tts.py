@@ -14,6 +14,7 @@ import urllib.request
 PACKAGE = pathlib.Path(os.environ.get("TRACK_PACKAGE", "tracks/A1_EXAM_PREP_TRACKS_01_10_V2"))
 OUTPUT = pathlib.Path(os.environ["AUDIO_OUTPUT"]) if os.environ.get("AUDIO_OUTPUT") else None
 PUBLIC_BASE = os.environ.get("PUBLIC_AUDIO_BASE", "https://api.lingoiq.online/audio/a1-exam-prep")
+S3_PREFIX = os.environ.get("S3_PREFIX", PUBLIC_BASE.rstrip("/").rsplit("/", 1)[-1]).strip("/")
 API_KEY = os.environ["GOOGLE_TTS_API_KEY"]
 
 
@@ -84,7 +85,7 @@ def main():
     for index, (key, _) in enumerate(sorted(texts.items()), 1):
         language, text = key
         name = audio_name(language, text)
-        object_key = "a1-exam-prep/" + name
+        object_key = f"{S3_PREFIX}/{name}"
         if s3:
             try:
                 s3.head_object(Bucket=bucket, Key=object_key)

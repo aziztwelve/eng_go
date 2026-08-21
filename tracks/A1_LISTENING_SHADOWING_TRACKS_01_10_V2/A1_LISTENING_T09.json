@@ -1,0 +1,4083 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_LISTENING_T09",
+    "title": {
+      "en": "Hearing Key Words",
+      "ru": "Hearing Key Words"
+    },
+    "description": {
+      "en": "An A1 Listening & Shadowing track focused on identifying important words in short spoken messages.",
+      "ru": "An A1 Listening & Shadowing track focused on identifying important words in short spoken messages."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "goal": "listening_shadowing",
+    "track_type": "thematic"
+  },
+  "lessons": [
+    {
+      "code": "A1_LISTENING_T09_L01",
+      "order": 1,
+      "title": {
+        "en": "Hear the Key Words: Hearing Key Words",
+        "ru": "Hear the Key Words: Hearing Key Words"
+      },
+      "objective": {
+        "en": "Recognize the essential sounds and words while practicing identifying important words in short spoken messages.",
+        "ru": "Recognize the essential sounds and words while practicing identifying important words in short spoken messages."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_LISTENING_T09_L01_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match sound words and meanings",
+            "ru": "Соедините слова и значения"
+          },
+          "instructions": {
+            "en": "Match the key listening words with their meanings.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "key",
+                "right": "A simple meaning of 'key'."
+              },
+              {
+                "id": "P2",
+                "left": "word",
+                "right": "A simple meaning of 'word'."
+              },
+              {
+                "id": "P3",
+                "left": "important",
+                "right": "A simple meaning of 'important'."
+              },
+              {
+                "id": "P4",
+                "left": "place",
+                "right": "A simple meaning of 'place'."
+              },
+              {
+                "id": "P5",
+                "left": "time",
+                "right": "Listening word: time."
+              },
+              {
+                "id": "P6",
+                "left": "name",
+                "right": "Listening word: name."
+              },
+              {
+                "id": "P7",
+                "left": "number",
+                "right": "Listening word: number."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L01_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Prepare your ears",
+            "ru": "Подготовьтесь к прослушиванию"
+          },
+          "instructions": {
+            "en": "Read the key language before listening.",
+            "ru": "Прочитайте ключевые фразы перед прослушиванием."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "body": "Hear the Key Words: Hearing Key Words. Listening mission: Recognize the essential sounds and words while practicing identifying important words in short spoken messages. Listen for: The meeting is tomorrow at ten. Please bring your book. The bus is number twelve.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L01_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Listen for the meaning",
+            "ru": "Определите значение"
+          },
+          "instructions": {
+            "en": "Choose the phrase that best matches the listening goal.",
+            "ru": "Выберите фразу, которая лучше всего соответствует цели."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Recognize the essential sounds and words while practicing identifying important words in short spoken messages.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The meeting is tomorrow at ten.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Please bring your book.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "The bus is number twelve.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“The meeting is tomorrow at ten.” best matches the listening target."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L01_TRANSLATE_08",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "The meeting is tomorrow at ten.",
+            "word_bank": [
+              "The",
+              "meeting",
+              "is",
+              "tomorrow",
+              "at",
+              "ten"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L01_FILL_BLANK_09",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ ten.",
+            "correct_answer": "The",
+            "options": [
+              "The",
+              "key",
+              "word"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L01_TAP_WORDS_10",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "The meeting is tomorrow at ten.",
+            "word_bank": [
+              "ten",
+              "at",
+              "tomorrow",
+              "is",
+              "meeting",
+              "The"
+            ],
+            "correct_words": [
+              "The",
+              "meeting",
+              "is",
+              "tomorrow",
+              "at",
+              "ten"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L01_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen carefully",
+            "ru": "Слушайте внимательно"
+          },
+          "instructions": {
+            "en": "Listen and type exactly what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "The meeting is tomorrow at ten.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L01_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, then speak with the model's rhythm and stress.",
+            "ru": "Прослушайте и повторите ритм и ударение диктора."
+          },
+          "estimated_seconds": 65,
+          "data": {
+            "audio_text": "Please bring your book.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Recognize the essential sounds and words while practicing identifying important words in short spoken messages."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L01_STORY_11",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Hear the Key Words: Hearing Key Words",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "The meeting is tomorrow at ten."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "The meeting is tomorrow at ten.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L01_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the meaning of the key word.",
+            "ru": "Выберите значение ключевого слова."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "key",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple meaning of 'key'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple meaning of 'word'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple meaning of 'important'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple meaning of 'place'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "key: A simple meaning of 'key'."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L01_LISTEN_CHOOSE_WORD_12",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ ten.",
+            "audio_text": "The meeting is tomorrow at ten.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "The",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "key",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L01_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ ten.",
+            "correct_answer": "The",
+            "hint_prefix": "th",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L01_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "key",
+                "text": "key"
+              },
+              {
+                "id": "V2",
+                "audio_text": "word",
+                "text": "word"
+              },
+              {
+                "id": "V3",
+                "audio_text": "important",
+                "text": "important"
+              },
+              {
+                "id": "V4",
+                "audio_text": "place",
+                "text": "place"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_LISTENING_T09_L02",
+      "order": 2,
+      "title": {
+        "en": "Hear the Sentence Pattern: Hearing Key Words",
+        "ru": "Hear the Sentence Pattern: Hearing Key Words"
+      },
+      "objective": {
+        "en": "Recognize a useful spoken sentence while practicing identifying important words in short spoken messages.",
+        "ru": "Recognize a useful spoken sentence while practicing identifying important words in short spoken messages."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_LISTENING_T09_L02_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "word",
+                "right": "Listening word: word."
+              },
+              {
+                "id": "P2",
+                "left": "important",
+                "right": "Listening word: important."
+              },
+              {
+                "id": "P3",
+                "left": "place",
+                "right": "Listening word: place."
+              },
+              {
+                "id": "P4",
+                "left": "time",
+                "right": "Listening word: time."
+              },
+              {
+                "id": "P5",
+                "left": "name",
+                "right": "Listening word: name."
+              },
+              {
+                "id": "P6",
+                "left": "key",
+                "right": "Listening word: key."
+              },
+              {
+                "id": "P7",
+                "left": "number",
+                "right": "Listening word: number."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L02_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Prepare your ears",
+            "ru": "Подготовьтесь к прослушиванию"
+          },
+          "instructions": {
+            "en": "Read the key language before listening.",
+            "ru": "Прочитайте ключевые фразы перед прослушиванием."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "body": "Hear the Sentence Pattern: Hearing Key Words. Listening mission: Recognize a useful spoken sentence while practicing identifying important words in short spoken messages. Listen for: Please bring your book. The bus is number twelve. Meet me at the station.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L02_QUIZ_09",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: Please bring your book.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Please",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "word",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "important",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L02_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Recognize the English phrase",
+            "ru": "Узнайте английскую фразу"
+          },
+          "instructions": {
+            "en": "Build the English phrase you are preparing to hear.",
+            "ru": "Составьте английскую фразу, которую вы услышите."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте целевую английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Please bring your book.",
+            "word_bank": [
+              "Please",
+              "bring",
+              "your",
+              "book",
+              "important"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L02_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete what you hear",
+            "ru": "Дополните услышанное"
+          },
+          "instructions": {
+            "en": "Choose the missing word.",
+            "ru": "Выберите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ bring your book.",
+            "correct_answer": "Please",
+            "options": [
+              "Please",
+              "word",
+              "important"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L02_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Rebuild the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the heard words in the correct order.",
+            "ru": "Расставьте услышанные слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "book",
+              "your",
+              "bring",
+              "Please"
+            ],
+            "correct_words": [
+              "Please",
+              "bring",
+              "your",
+              "book"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L02_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen carefully",
+            "ru": "Слушайте внимательно"
+          },
+          "instructions": {
+            "en": "Listen and type exactly what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Please bring your book.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L02_LISTENING_SHADOWING_10",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "Please bring your book.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L02_STORY_11",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Hear the Sentence Pattern: Hearing Key Words",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "Please bring your book."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "Please bring your book.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L02_CHOOSE_DEFINITION_12",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "word",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'word'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L02_LISTEN_CHOOSE_WORD_13",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ book.",
+            "audio_text": "Please bring your book.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Please",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "word",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L02_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the word you heard",
+            "ru": "Введите услышанное слово"
+          },
+          "instructions": {
+            "en": "Type the missing word from the audio.",
+            "ru": "Введите пропущенное слово из аудио."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ bring your book.",
+            "correct_answer": "Please",
+            "hint_prefix": "P",
+            "explanation": "The missing word is Please."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L02_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "word",
+                "text": "word"
+              },
+              {
+                "id": "V2",
+                "audio_text": "important",
+                "text": "important"
+              },
+              {
+                "id": "V3",
+                "audio_text": "place",
+                "text": "place"
+              },
+              {
+                "id": "V4",
+                "audio_text": "time",
+                "text": "time"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_LISTENING_T09_L03",
+      "order": 3,
+      "title": {
+        "en": "Listen for the Answer: Hearing Key Words",
+        "ru": "Listen for the Answer: Hearing Key Words"
+      },
+      "objective": {
+        "en": "Identify key information in a short question or answer while practicing identifying important words in short spoken messages.",
+        "ru": "Identify key information in a short question or answer while practicing identifying important words in short spoken messages."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_LISTENING_T09_L03_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match sound words and meanings",
+            "ru": "Соедините слова и значения"
+          },
+          "instructions": {
+            "en": "Match the key listening words with their meanings.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "important",
+                "right": "A simple meaning of 'important'."
+              },
+              {
+                "id": "P2",
+                "left": "place",
+                "right": "A simple meaning of 'place'."
+              },
+              {
+                "id": "P3",
+                "left": "time",
+                "right": "A simple meaning of 'time'."
+              },
+              {
+                "id": "P4",
+                "left": "name",
+                "right": "A simple meaning of 'name'."
+              },
+              {
+                "id": "P5",
+                "left": "number",
+                "right": "Listening word: number."
+              },
+              {
+                "id": "P6",
+                "left": "key",
+                "right": "Listening word: key."
+              },
+              {
+                "id": "P7",
+                "left": "word",
+                "right": "Listening word: word."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L03_TEXT_08",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: The bus is number twelve.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L03_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Listen for the meaning",
+            "ru": "Определите значение"
+          },
+          "instructions": {
+            "en": "Choose the phrase that best matches the listening goal.",
+            "ru": "Выберите фразу, которая лучше всего соответствует цели."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Identify key information in a short question or answer while practicing identifying important words in short spoken messages.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The bus is number twelve.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Meet me at the station.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "The meeting is tomorrow at ten.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“The bus is number twelve.” best matches the listening target."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L03_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "The bus is number twelve.",
+            "word_bank": [
+              "The",
+              "bus",
+              "is",
+              "number",
+              "twelve"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L03_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ twelve.",
+            "correct_answer": "The",
+            "options": [
+              "The",
+              "important",
+              "place"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L03_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Rebuild the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the heard words in the correct order.",
+            "ru": "Расставьте услышанные слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "twelve",
+              "number",
+              "is",
+              "bus",
+              "The"
+            ],
+            "correct_words": [
+              "The",
+              "bus",
+              "is",
+              "number",
+              "twelve"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L03_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "The bus is number twelve.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L03_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, then speak with the model's rhythm and stress.",
+            "ru": "Прослушайте и повторите ритм и ударение диктора."
+          },
+          "estimated_seconds": 65,
+          "data": {
+            "audio_text": "Meet me at the station.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Identify key information in a short question or answer while practicing identifying important words in short spoken messages."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L03_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Listen in context",
+            "ru": "Слушайте в контексте"
+          },
+          "instructions": {
+            "en": "Follow the short situation and choose the best continuation.",
+            "ru": "Прослушайте ситуацию и выберите лучшее продолжение."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Listen for the Answer: Hearing Key Words",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "The bus is number twelve."
+              },
+              {
+                "type": "choice",
+                "text": "What do you hear or expect next?",
+                "options": [
+                  {
+                    "text": "Meet me at the station.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "The meeting is tomorrow at ten.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L03_CHOOSE_DEFINITION_12",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "important",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'important'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L03_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Choose the word you hear",
+            "ru": "Выберите услышанное слово"
+          },
+          "instructions": {
+            "en": "Listen closely and choose the missing word.",
+            "ru": "Внимательно прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "The bus is ___ twelve.",
+            "audio_text": "The bus is number twelve.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "number",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "important",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "place",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is number."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L03_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ twelve.",
+            "correct_answer": "The",
+            "hint_prefix": "th",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L03_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "important",
+                "text": "important"
+              },
+              {
+                "id": "V2",
+                "audio_text": "place",
+                "text": "place"
+              },
+              {
+                "id": "V3",
+                "audio_text": "time",
+                "text": "time"
+              },
+              {
+                "id": "V4",
+                "audio_text": "name",
+                "text": "name"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_LISTENING_T09_L04",
+      "order": 4,
+      "title": {
+        "en": "Listen for Meaning: Hearing Key Words",
+        "ru": "Listen for Meaning: Hearing Key Words"
+      },
+      "objective": {
+        "en": "Understand the main meaning of a short utterance while practicing identifying important words in short spoken messages.",
+        "ru": "Understand the main meaning of a short utterance while practicing identifying important words in short spoken messages."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_LISTENING_T09_L04_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match sound words and meanings",
+            "ru": "Соедините слова и значения"
+          },
+          "instructions": {
+            "en": "Match the key listening words with their meanings.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "place",
+                "right": "A simple meaning of 'place'."
+              },
+              {
+                "id": "P2",
+                "left": "time",
+                "right": "A simple meaning of 'time'."
+              },
+              {
+                "id": "P3",
+                "left": "name",
+                "right": "A simple meaning of 'name'."
+              },
+              {
+                "id": "P4",
+                "left": "number",
+                "right": "A simple meaning of 'number'."
+              },
+              {
+                "id": "P5",
+                "left": "today",
+                "right": "Listening word: today."
+              },
+              {
+                "id": "P6",
+                "left": "key",
+                "right": "Listening word: key."
+              },
+              {
+                "id": "P7",
+                "left": "word",
+                "right": "Listening word: word."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L04_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Prepare your ears",
+            "ru": "Подготовьтесь к прослушиванию"
+          },
+          "instructions": {
+            "en": "Read the key language before listening.",
+            "ru": "Прочитайте ключевые фразы перед прослушиванием."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "body": "Listen for Meaning: Hearing Key Words. Listening mission: Understand the main meaning of a short utterance while practicing identifying important words in short spoken messages. Listen for: Meet me at the station. The meeting is tomorrow at ten. Please bring your book.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L04_QUIZ_08",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: Meet me at the station.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Meet",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "place",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "time",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L04_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Meet me at the station.",
+            "word_bank": [
+              "Meet",
+              "me",
+              "at",
+              "the",
+              "station"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L04_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete what you hear",
+            "ru": "Дополните услышанное"
+          },
+          "instructions": {
+            "en": "Choose the missing word.",
+            "ru": "Выберите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ me at the station.",
+            "correct_answer": "Meet",
+            "options": [
+              "Meet",
+              "place",
+              "time"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L04_TAP_WORDS_10",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "Meet me at the station.",
+            "word_bank": [
+              "station",
+              "the",
+              "at",
+              "me",
+              "Meet"
+            ],
+            "correct_words": [
+              "Meet",
+              "me",
+              "at",
+              "the",
+              "station"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L04_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen carefully",
+            "ru": "Слушайте внимательно"
+          },
+          "instructions": {
+            "en": "Listen and type exactly what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Meet me at the station.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L04_LISTENING_SHADOWING_11",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "Meet me at the station.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L04_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Listen for Meaning: Hearing Key Words",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "Meet me at the station."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "Meet me at the station.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L04_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the meaning of the key word.",
+            "ru": "Выберите значение ключевого слова."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "place",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple meaning of 'place'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple meaning of 'time'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple meaning of 'name'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple meaning of 'number'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "place: A simple meaning of 'place'."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L04_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Choose the word you hear",
+            "ru": "Выберите услышанное слово"
+          },
+          "instructions": {
+            "en": "Listen closely and choose the missing word.",
+            "ru": "Внимательно прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ me at the station.",
+            "audio_text": "Meet me at the station.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Meet",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "place",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "time",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is Meet."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L04_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ station.",
+            "correct_answer": "Meet",
+            "hint_prefix": "me",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L04_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "place",
+                "text": "place"
+              },
+              {
+                "id": "V2",
+                "audio_text": "time",
+                "text": "time"
+              },
+              {
+                "id": "V3",
+                "audio_text": "name",
+                "text": "name"
+              },
+              {
+                "id": "V4",
+                "audio_text": "number",
+                "text": "number"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_LISTENING_T09_L05",
+      "order": 5,
+      "title": {
+        "en": "Shadow the Model: Hearing Key Words",
+        "ru": "Shadow the Model: Hearing Key Words"
+      },
+      "objective": {
+        "en": "Repeat the model with clear sounds and stress while practicing identifying important words in short spoken messages.",
+        "ru": "Repeat the model with clear sounds and stress while practicing identifying important words in short spoken messages."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_LISTENING_T09_L05_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "time",
+                "right": "Listening word: time."
+              },
+              {
+                "id": "P2",
+                "left": "name",
+                "right": "Listening word: name."
+              },
+              {
+                "id": "P3",
+                "left": "number",
+                "right": "Listening word: number."
+              },
+              {
+                "id": "P4",
+                "left": "today",
+                "right": "Listening word: today."
+              },
+              {
+                "id": "P5",
+                "left": "tomorrow",
+                "right": "Listening word: tomorrow."
+              },
+              {
+                "id": "P6",
+                "left": "key",
+                "right": "Listening word: key."
+              },
+              {
+                "id": "P7",
+                "left": "word",
+                "right": "Listening word: word."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L05_TEXT_09",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: The meeting is tomorrow at ten.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L05_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Listen for the meaning",
+            "ru": "Определите значение"
+          },
+          "instructions": {
+            "en": "Choose the phrase that best matches the listening goal.",
+            "ru": "Выберите фразу, которая лучше всего соответствует цели."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Repeat the model with clear sounds and stress while practicing identifying important words in short spoken messages.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The meeting is tomorrow at ten.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Please bring your book.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "The bus is number twelve.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“The meeting is tomorrow at ten.” best matches the listening target."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L05_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Recognize the English phrase",
+            "ru": "Узнайте английскую фразу"
+          },
+          "instructions": {
+            "en": "Build the English phrase you are preparing to hear.",
+            "ru": "Составьте английскую фразу, которую вы услышите."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте целевую английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "The meeting is tomorrow at ten.",
+            "word_bank": [
+              "The",
+              "meeting",
+              "is",
+              "tomorrow",
+              "at",
+              "ten",
+              "name"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L05_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ ten.",
+            "correct_answer": "The",
+            "options": [
+              "The",
+              "time",
+              "name"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L05_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Rebuild the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the heard words in the correct order.",
+            "ru": "Расставьте услышанные слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "ten",
+              "at",
+              "tomorrow",
+              "is",
+              "meeting",
+              "The"
+            ],
+            "correct_words": [
+              "The",
+              "meeting",
+              "is",
+              "tomorrow",
+              "at",
+              "ten"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L05_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "The meeting is tomorrow at ten.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L05_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, then speak with the model's rhythm and stress.",
+            "ru": "Прослушайте и повторите ритм и ударение диктора."
+          },
+          "estimated_seconds": 65,
+          "data": {
+            "audio_text": "Please bring your book.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the model with clear sounds and stress while practicing identifying important words in short spoken messages."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L05_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Shadow the Model: Hearing Key Words",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "The meeting is tomorrow at ten."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "The meeting is tomorrow at ten.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L05_CHOOSE_DEFINITION_13",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "time",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'time'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L05_LISTEN_CHOOSE_WORD_14",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ ten.",
+            "audio_text": "The meeting is tomorrow at ten.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "The",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "time",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L05_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the word you heard",
+            "ru": "Введите услышанное слово"
+          },
+          "instructions": {
+            "en": "Type the missing word from the audio.",
+            "ru": "Введите пропущенное слово из аудио."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "The ___ is tomorrow at ten.",
+            "correct_answer": "meeting",
+            "hint_prefix": "m",
+            "explanation": "The missing word is meeting."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L05_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and word",
+            "ru": "Соедините аудио и слово"
+          },
+          "instructions": {
+            "en": "Listen and match each audio item to the written word.",
+            "ru": "Прослушайте и соедините аудио с написанным словом."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "time",
+                "text": "time"
+              },
+              {
+                "id": "V2",
+                "audio_text": "name",
+                "text": "name"
+              },
+              {
+                "id": "V3",
+                "audio_text": "number",
+                "text": "number"
+              },
+              {
+                "id": "V4",
+                "audio_text": "today",
+                "text": "today"
+              }
+            ],
+            "explanation": "Focus on the sound before looking at the spelling."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_LISTENING_T09_L06",
+      "order": 6,
+      "title": {
+        "en": "Listen in Context: Hearing Key Words",
+        "ru": "Listen in Context: Hearing Key Words"
+      },
+      "objective": {
+        "en": "Understand the language in a realistic listening situation while practicing identifying important words in short spoken messages.",
+        "ru": "Understand the language in a realistic listening situation while practicing identifying important words in short spoken messages."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_LISTENING_T09_L06_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "name",
+                "right": "Listening word: name."
+              },
+              {
+                "id": "P2",
+                "left": "number",
+                "right": "Listening word: number."
+              },
+              {
+                "id": "P3",
+                "left": "today",
+                "right": "Listening word: today."
+              },
+              {
+                "id": "P4",
+                "left": "tomorrow",
+                "right": "Listening word: tomorrow."
+              },
+              {
+                "id": "P5",
+                "left": "listen",
+                "right": "Listening word: listen."
+              },
+              {
+                "id": "P6",
+                "left": "key",
+                "right": "Listening word: key."
+              },
+              {
+                "id": "P7",
+                "left": "word",
+                "right": "Listening word: word."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L06_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Prepare your ears",
+            "ru": "Подготовьтесь к прослушиванию"
+          },
+          "instructions": {
+            "en": "Read the key language before listening.",
+            "ru": "Прочитайте ключевые фразы перед прослушиванием."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "body": "Listen in Context: Hearing Key Words. Listening mission: Understand the language in a realistic listening situation while practicing identifying important words in short spoken messages. Listen for: Please bring your book. The bus is number twelve. Meet me at the station.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L06_QUIZ_09",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: Please bring your book.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Please",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "name",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "number",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L06_TRANSLATE_10",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Please bring your book.",
+            "word_bank": [
+              "Please",
+              "bring",
+              "your",
+              "book"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L06_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete what you hear",
+            "ru": "Дополните услышанное"
+          },
+          "instructions": {
+            "en": "Choose the missing word.",
+            "ru": "Выберите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ bring your book.",
+            "correct_answer": "Please",
+            "options": [
+              "Please",
+              "name",
+              "number"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L06_TAP_WORDS_11",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "Please bring your book.",
+            "word_bank": [
+              "book",
+              "your",
+              "bring",
+              "Please"
+            ],
+            "correct_words": [
+              "Please",
+              "bring",
+              "your",
+              "book"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L06_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen carefully",
+            "ru": "Слушайте внимательно"
+          },
+          "instructions": {
+            "en": "Listen and type exactly what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Please bring your book.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L06_LISTENING_SHADOWING_12",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "Please bring your book.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L06_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Listen in context",
+            "ru": "Слушайте в контексте"
+          },
+          "instructions": {
+            "en": "Follow the short situation and choose the best continuation.",
+            "ru": "Прослушайте ситуацию и выберите лучшее продолжение."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Listen in Context: Hearing Key Words",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "Please bring your book."
+              },
+              {
+                "type": "choice",
+                "text": "What do you hear or expect next?",
+                "options": [
+                  {
+                    "text": "The bus is number twelve.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Meet me at the station.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L06_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the meaning of the key word.",
+            "ru": "Выберите значение ключевого слова."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "name",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple meaning of 'name'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple meaning of 'number'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple meaning of 'today'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple meaning of 'tomorrow'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "name: A simple meaning of 'name'."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L06_LISTEN_CHOOSE_WORD_13",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ book.",
+            "audio_text": "Please bring your book.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Please",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "name",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L06_MISSING_WORD_14",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ book.",
+            "correct_answer": "Please",
+            "hint_prefix": "pl",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L06_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and word",
+            "ru": "Соедините аудио и слово"
+          },
+          "instructions": {
+            "en": "Listen and match each audio item to the written word.",
+            "ru": "Прослушайте и соедините аудио с написанным словом."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "name",
+                "text": "name"
+              },
+              {
+                "id": "V2",
+                "audio_text": "number",
+                "text": "number"
+              },
+              {
+                "id": "V3",
+                "audio_text": "today",
+                "text": "today"
+              },
+              {
+                "id": "V4",
+                "audio_text": "tomorrow",
+                "text": "tomorrow"
+              }
+            ],
+            "explanation": "Focus on the sound before looking at the spelling."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_LISTENING_T09_L07",
+      "order": 7,
+      "title": {
+        "en": "Notice the Missing Sound or Word: Hearing Key Words",
+        "ru": "Notice the Missing Sound or Word: Hearing Key Words"
+      },
+      "objective": {
+        "en": "Listen closely for an important word while practicing identifying important words in short spoken messages.",
+        "ru": "Listen closely for an important word while practicing identifying important words in short spoken messages."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_LISTENING_T09_L07_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match sound words and meanings",
+            "ru": "Соедините слова и значения"
+          },
+          "instructions": {
+            "en": "Match the key listening words with their meanings.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "number",
+                "right": "A simple meaning of 'number'."
+              },
+              {
+                "id": "P2",
+                "left": "today",
+                "right": "A simple meaning of 'today'."
+              },
+              {
+                "id": "P3",
+                "left": "tomorrow",
+                "right": "A simple meaning of 'tomorrow'."
+              },
+              {
+                "id": "P4",
+                "left": "listen",
+                "right": "A simple meaning of 'listen'."
+              },
+              {
+                "id": "P5",
+                "left": "key",
+                "right": "Listening word: key."
+              },
+              {
+                "id": "P6",
+                "left": "word",
+                "right": "Listening word: word."
+              },
+              {
+                "id": "P7",
+                "left": "important",
+                "right": "Listening word: important."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L07_TEXT_08",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: The bus is number twelve.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L07_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Listen for the meaning",
+            "ru": "Определите значение"
+          },
+          "instructions": {
+            "en": "Choose the phrase that best matches the listening goal.",
+            "ru": "Выберите фразу, которая лучше всего соответствует цели."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Listen closely for an important word while practicing identifying important words in short spoken messages.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The bus is number twelve.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Meet me at the station.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "The meeting is tomorrow at ten.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“The bus is number twelve.” best matches the listening target."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L07_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "The bus is number twelve.",
+            "word_bank": [
+              "The",
+              "bus",
+              "is",
+              "number",
+              "twelve"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L07_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ twelve.",
+            "correct_answer": "The",
+            "options": [
+              "The",
+              "number",
+              "today"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L07_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Rebuild the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the heard words in the correct order.",
+            "ru": "Расставьте услышанные слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "twelve",
+              "number",
+              "is",
+              "bus",
+              "The"
+            ],
+            "correct_words": [
+              "The",
+              "bus",
+              "is",
+              "number",
+              "twelve"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L07_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "The bus is number twelve.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L07_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, then speak with the model's rhythm and stress.",
+            "ru": "Прослушайте и повторите ритм и ударение диктора."
+          },
+          "estimated_seconds": 65,
+          "data": {
+            "audio_text": "Meet me at the station.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Listen closely for an important word while practicing identifying important words in short spoken messages."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L07_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Notice the Missing Sound or Word: Hearing Key Words",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "The bus is number twelve."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "The bus is number twelve.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L07_CHOOSE_DEFINITION_13",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "number",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'number'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L07_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Choose the word you hear",
+            "ru": "Выберите услышанное слово"
+          },
+          "instructions": {
+            "en": "Listen closely and choose the missing word.",
+            "ru": "Внимательно прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "The bus is ___ twelve.",
+            "audio_text": "The bus is number twelve.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "number",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "today",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "tomorrow",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is number."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L07_MISSING_WORD_01",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Type the word you heard",
+            "ru": "Введите услышанное слово"
+          },
+          "instructions": {
+            "en": "Type the missing word from the audio.",
+            "ru": "Введите пропущенное слово из аудио."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "The bus is ___ twelve.",
+            "correct_answer": "number",
+            "hint_prefix": "n",
+            "explanation": "The missing word is number."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L07_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "number",
+                "text": "number"
+              },
+              {
+                "id": "V2",
+                "audio_text": "today",
+                "text": "today"
+              },
+              {
+                "id": "V3",
+                "audio_text": "tomorrow",
+                "text": "tomorrow"
+              },
+              {
+                "id": "V4",
+                "audio_text": "listen",
+                "text": "listen"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_LISTENING_T09_L08",
+      "order": 8,
+      "title": {
+        "en": "Follow a Short Conversation: Hearing Key Words",
+        "ru": "Follow a Short Conversation: Hearing Key Words"
+      },
+      "objective": {
+        "en": "Understand a short multi-turn exchange while practicing identifying important words in short spoken messages.",
+        "ru": "Understand a short multi-turn exchange while practicing identifying important words in short spoken messages."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_LISTENING_T09_L08_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "today",
+                "right": "Listening word: today."
+              },
+              {
+                "id": "P2",
+                "left": "tomorrow",
+                "right": "Listening word: tomorrow."
+              },
+              {
+                "id": "P3",
+                "left": "listen",
+                "right": "Listening word: listen."
+              },
+              {
+                "id": "P4",
+                "left": "key",
+                "right": "Listening word: key."
+              },
+              {
+                "id": "P5",
+                "left": "word",
+                "right": "Listening word: word."
+              },
+              {
+                "id": "P6",
+                "left": "important",
+                "right": "Listening word: important."
+              },
+              {
+                "id": "P7",
+                "left": "place",
+                "right": "Listening word: place."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L08_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Prepare your ears",
+            "ru": "Подготовьтесь к прослушиванию"
+          },
+          "instructions": {
+            "en": "Read the key language before listening.",
+            "ru": "Прочитайте ключевые фразы перед прослушиванием."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "body": "Follow a Short Conversation: Hearing Key Words. Listening mission: Understand a short multi-turn exchange while practicing identifying important words in short spoken messages. Listen for: Meet me at the station. The meeting is tomorrow at ten. Please bring your book.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L08_QUIZ_09",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "question": "What should you do when you hear: Meet me at the station.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Meet",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "today",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "tomorrow",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Listen for the key phrase and choose the best answer."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L08_TRANSLATE_01",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Recognize the English phrase",
+            "ru": "Узнайте английскую фразу"
+          },
+          "instructions": {
+            "en": "Build the English phrase you are preparing to hear.",
+            "ru": "Составьте английскую фразу, которую вы услышите."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте целевую английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Meet me at the station.",
+            "word_bank": [
+              "Meet",
+              "me",
+              "at",
+              "the",
+              "station",
+              "tomorrow"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L08_FILL_01",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Complete what you hear",
+            "ru": "Дополните услышанное"
+          },
+          "instructions": {
+            "en": "Choose the missing word.",
+            "ru": "Выберите пропущенное слово."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ me at the station.",
+            "correct_answer": "Meet",
+            "options": [
+              "Meet",
+              "today",
+              "tomorrow"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L08_TAP_WORDS_10",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "Meet me at the station.",
+            "word_bank": [
+              "station",
+              "the",
+              "at",
+              "me",
+              "Meet"
+            ],
+            "correct_words": [
+              "Meet",
+              "me",
+              "at",
+              "the",
+              "station"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L08_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen carefully",
+            "ru": "Слушайте внимательно"
+          },
+          "instructions": {
+            "en": "Listen and type exactly what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Meet me at the station.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L08_LISTENING_SHADOWING_11",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "Meet me at the station.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat the phrase with the same rhythm."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L08_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Listen in context",
+            "ru": "Слушайте в контексте"
+          },
+          "instructions": {
+            "en": "Follow the short situation and choose the best continuation.",
+            "ru": "Прослушайте ситуацию и выберите лучшее продолжение."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Follow a Short Conversation: Hearing Key Words",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "Meet me at the station."
+              },
+              {
+                "type": "choice",
+                "text": "What do you hear or expect next?",
+                "options": [
+                  {
+                    "text": "The meeting is tomorrow at ten.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Please bring your book.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L08_DEFINITION_01",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Choose the meaning",
+            "ru": "Выберите значение"
+          },
+          "instructions": {
+            "en": "Choose the meaning of the key word.",
+            "ru": "Выберите значение ключевого слова."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "word": "today",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "A simple meaning of 'today'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A simple meaning of 'tomorrow'.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "A simple meaning of 'listen'.",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "A simple meaning of 'key'.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "today: A simple meaning of 'today'."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L08_LISTEN_CHOOSE_WORD_12",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ station.",
+            "audio_text": "Meet me at the station.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Meet",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "today",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L08_MISSING_WORD_13",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ station.",
+            "correct_answer": "Meet",
+            "hint_prefix": "me",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L08_MATCH_PAIRS_VOICE_14",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "today",
+                "text": "today"
+              },
+              {
+                "id": "V2",
+                "audio_text": "tomorrow",
+                "text": "tomorrow"
+              },
+              {
+                "id": "V3",
+                "audio_text": "listen",
+                "text": "listen"
+              },
+              {
+                "id": "V4",
+                "audio_text": "key",
+                "text": "key"
+              }
+            ],
+            "explanation": "Listen before matching."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_LISTENING_T09_L09",
+      "order": 9,
+      "title": {
+        "en": "Shadow with Less Support: Hearing Key Words",
+        "ru": "Shadow with Less Support: Hearing Key Words"
+      },
+      "objective": {
+        "en": "Repeat longer language with less text support while practicing identifying important words in short spoken messages.",
+        "ru": "Repeat longer language with less text support while practicing identifying important words in short spoken messages."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_LISTENING_T09_L09_MATCH_01",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Match sound words and meanings",
+            "ru": "Соедините слова и значения"
+          },
+          "instructions": {
+            "en": "Match the key listening words with their meanings.",
+            "ru": "Соедините ключевые слова с их значениями."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "tomorrow",
+                "right": "A simple meaning of 'tomorrow'."
+              },
+              {
+                "id": "P2",
+                "left": "listen",
+                "right": "A simple meaning of 'listen'."
+              },
+              {
+                "id": "P3",
+                "left": "key",
+                "right": "A simple meaning of 'key'."
+              },
+              {
+                "id": "P4",
+                "left": "word",
+                "right": "A simple meaning of 'word'."
+              },
+              {
+                "id": "P5",
+                "left": "important",
+                "right": "Listening word: important."
+              },
+              {
+                "id": "P6",
+                "left": "place",
+                "right": "Listening word: place."
+              },
+              {
+                "id": "P7",
+                "left": "time",
+                "right": "Listening word: time."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L09_TEXT_08",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "body": "Listen and notice the key phrase: The meeting is tomorrow at ten.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L09_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Listen for the meaning",
+            "ru": "Определите значение"
+          },
+          "instructions": {
+            "en": "Choose the phrase that best matches the listening goal.",
+            "ru": "Выберите фразу, которая лучше всего соответствует цели."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Repeat longer language with less text support while practicing identifying important words in short spoken messages.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The meeting is tomorrow at ten.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Please bring your book.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "The bus is number twelve.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“The meeting is tomorrow at ten.” best matches the listening target."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L09_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "The meeting is tomorrow at ten.",
+            "word_bank": [
+              "The",
+              "meeting",
+              "is",
+              "tomorrow",
+              "at",
+              "ten"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L09_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ ten.",
+            "correct_answer": "The",
+            "options": [
+              "The",
+              "tomorrow",
+              "listen"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L09_TAP_01",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Rebuild the sentence",
+            "ru": "Соберите предложение"
+          },
+          "instructions": {
+            "en": "Put the heard words in the correct order.",
+            "ru": "Расставьте услышанные слова в правильном порядке."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "ten",
+              "at",
+              "tomorrow",
+              "is",
+              "meeting",
+              "The"
+            ],
+            "correct_words": [
+              "The",
+              "meeting",
+              "is",
+              "tomorrow",
+              "at",
+              "ten"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L09_LISTENING_11",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "The meeting is tomorrow at ten.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L09_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, then speak with the model's rhythm and stress.",
+            "ru": "Прослушайте и повторите ритм и ударение диктора."
+          },
+          "estimated_seconds": 65,
+          "data": {
+            "audio_text": "Please bring your book.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Repeat longer language with less text support while practicing identifying important words in short spoken messages."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L09_STORY_12",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "title": "Shadow with Less Support: Hearing Key Words",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "The meeting is tomorrow at ten."
+              },
+              {
+                "type": "choice",
+                "text": "What did you hear?",
+                "options": [
+                  {
+                    "text": "The meeting is tomorrow at ten.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "I did not listen.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L09_CHOOSE_DEFINITION_13",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "tomorrow",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'tomorrow'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L09_LISTEN_WORD_01",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Choose the word you hear",
+            "ru": "Выберите услышанное слово"
+          },
+          "instructions": {
+            "en": "Listen closely and choose the missing word.",
+            "ru": "Внимательно прослушайте и выберите пропущенное слово."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "The ___ is tomorrow at ten.",
+            "audio_text": "The meeting is tomorrow at ten.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "meeting",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "tomorrow",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "listen",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is meeting."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L09_MISSING_WORD_14",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ ten.",
+            "correct_answer": "The",
+            "hint_prefix": "th",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L09_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and word",
+            "ru": "Соедините аудио и слово"
+          },
+          "instructions": {
+            "en": "Listen and match each audio item to the written word.",
+            "ru": "Прослушайте и соедините аудио с написанным словом."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "tomorrow",
+                "text": "tomorrow"
+              },
+              {
+                "id": "V2",
+                "audio_text": "listen",
+                "text": "listen"
+              },
+              {
+                "id": "V3",
+                "audio_text": "key",
+                "text": "key"
+              },
+              {
+                "id": "V4",
+                "audio_text": "word",
+                "text": "word"
+              }
+            ],
+            "explanation": "Focus on the sound before looking at the spelling."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_LISTENING_T09_L10",
+      "order": 10,
+      "title": {
+        "en": "Track Listening Mission: Hearing Key Words",
+        "ru": "Track Listening Mission: Hearing Key Words"
+      },
+      "objective": {
+        "en": "Combine listening comprehension and shadowing in a final mission while practicing identifying important words in short spoken messages.",
+        "ru": "Combine listening comprehension and shadowing in a final mission while practicing identifying important words in short spoken messages."
+      },
+      "estimated_seconds": 720,
+      "steps": [
+        {
+          "id": "A1_LISTENING_T09_L10_MATCH_PAIRS_08",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "listen",
+                "right": "Listening word: listen."
+              },
+              {
+                "id": "P2",
+                "left": "key",
+                "right": "Listening word: key."
+              },
+              {
+                "id": "P3",
+                "left": "word",
+                "right": "Listening word: word."
+              },
+              {
+                "id": "P4",
+                "left": "important",
+                "right": "Listening word: important."
+              },
+              {
+                "id": "P5",
+                "left": "place",
+                "right": "Listening word: place."
+              },
+              {
+                "id": "P6",
+                "left": "time",
+                "right": "Listening word: time."
+              },
+              {
+                "id": "P7",
+                "left": "name",
+                "right": "Listening word: name."
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L10_TEXT_01",
+          "order": 2,
+          "type": "text",
+          "title": {
+            "en": "Prepare your ears",
+            "ru": "Подготовьтесь к прослушиванию"
+          },
+          "instructions": {
+            "en": "Read the key language before listening.",
+            "ru": "Прочитайте ключевые фразы перед прослушиванием."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "body": "Track Listening Mission: Hearing Key Words. Listening mission: Combine listening comprehension and shadowing in a final mission while practicing identifying important words in short spoken messages. Listen for: Please bring your book. The bus is number twelve. Meet me at the station.",
+            "reading_time_minutes": 1
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L10_QUIZ_01",
+          "order": 3,
+          "type": "quiz",
+          "title": {
+            "en": "Listen for the meaning",
+            "ru": "Определите значение"
+          },
+          "instructions": {
+            "en": "Choose the phrase that best matches the listening goal.",
+            "ru": "Выберите фразу, которая лучше всего соответствует цели."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "question": "Combine listening comprehension and shadowing in a final mission while practicing identifying important words in short spoken messages.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Please bring your book.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "The bus is number twelve.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Meet me at the station.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Please bring your book.” best matches the listening target."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L10_TRANSLATE_09",
+          "order": 4,
+          "type": "translate",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Составьте английскую фразу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Please bring your book.",
+            "word_bank": [
+              "Please",
+              "bring",
+              "your",
+              "book"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L10_FILL_BLANK_10",
+          "order": 5,
+          "type": "fill_blank",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ book.",
+            "correct_answer": "Please",
+            "options": [
+              "Please",
+              "listen",
+              "key"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L10_TAP_WORDS_11",
+          "order": 6,
+          "type": "tap_words",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "audio_text": "Please bring your book.",
+            "word_bank": [
+              "book",
+              "your",
+              "bring",
+              "Please"
+            ],
+            "correct_words": [
+              "Please",
+              "bring",
+              "your",
+              "book"
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L10_LISTENING_01",
+          "order": 7,
+          "type": "listening",
+          "title": {
+            "en": "Listen carefully",
+            "ru": "Слушайте внимательно"
+          },
+          "instructions": {
+            "en": "Listen and type exactly what you hear.",
+            "ru": "Прослушайте и напишите, что услышали."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "audio_text": "Please bring your book.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L10_SHADOWING_01",
+          "order": 8,
+          "type": "listening_shadowing",
+          "title": {
+            "en": "Shadow the speaker",
+            "ru": "Повторите за диктором"
+          },
+          "instructions": {
+            "en": "Listen, then speak with the model's rhythm and stress.",
+            "ru": "Прослушайте и повторите ритм и ударение диктора."
+          },
+          "estimated_seconds": 65,
+          "data": {
+            "audio_text": "The bus is number twelve.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Combine listening comprehension and shadowing in a final mission while practicing identifying important words in short spoken messages."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L10_STORY_01",
+          "order": 9,
+          "type": "story",
+          "title": {
+            "en": "Listen in context",
+            "ru": "Слушайте в контексте"
+          },
+          "instructions": {
+            "en": "Follow the short situation and choose the best continuation.",
+            "ru": "Прослушайте ситуацию и выберите лучшее продолжение."
+          },
+          "estimated_seconds": 45,
+          "data": {
+            "title": "Track Listening Mission: Hearing Key Words",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Speaker A",
+                "text": "Please bring your book."
+              },
+              {
+                "type": "choice",
+                "text": "What do you hear or expect next?",
+                "options": [
+                  {
+                    "text": "The bus is number twelve.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Meet me at the station.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L10_CHOOSE_DEFINITION_12",
+          "order": 10,
+          "type": "choose_definition",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "listen",
+            "options": [
+              {
+                "id": "A",
+                "text": "A listening meaning of 'listen'.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "A different word.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the meaning you heard."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L10_LISTEN_CHOOSE_WORD_13",
+          "order": 11,
+          "type": "listen_choose_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ book.",
+            "audio_text": "Please bring your book.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Please",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "listen",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the word you hear."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L10_MISSING_WORD_14",
+          "order": 12,
+          "type": "missing_word",
+          "title": {
+            "en": "Practice listening",
+            "ru": "Практика аудирования"
+          },
+          "instructions": {
+            "en": "Practice this listening skill carefully.",
+            "ru": "Внимательно отработайте этот навык аудирования."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ book.",
+            "correct_answer": "Please",
+            "hint_prefix": "pl",
+            "explanation": "Type the missing word."
+          }
+        },
+        {
+          "id": "A1_LISTENING_T09_L10_VOICE_MATCH_01",
+          "order": 13,
+          "type": "match_pairs_voice",
+          "title": {
+            "en": "Match audio and word",
+            "ru": "Соедините аудио и слово"
+          },
+          "instructions": {
+            "en": "Listen and match each audio item to the written word.",
+            "ru": "Прослушайте и соедините аудио с написанным словом."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "listen",
+                "text": "listen"
+              },
+              {
+                "id": "V2",
+                "audio_text": "key",
+                "text": "key"
+              },
+              {
+                "id": "V3",
+                "audio_text": "word",
+                "text": "word"
+              },
+              {
+                "id": "V4",
+                "audio_text": "important",
+                "text": "important"
+              }
+            ],
+            "explanation": "Focus on the sound before looking at the spelling."
+          }
+        }
+      ]
+    }
+  ]
+}

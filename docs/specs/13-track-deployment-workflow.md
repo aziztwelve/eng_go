@@ -64,6 +64,7 @@ set +a
 TRACK_PACKAGE="$PWD/tracks/A1_EXAM_PREP_TRACKS_01_10_V2" \
 S3_ENDPOINT=http://localhost:9010 \
 S3_BUCKET=audio \
+S3_PREFIX=a1-exam-prep \
 S3_ACCESS_KEY="$MINIO_ROOT_USER" \
 S3_SECRET_KEY="$MINIO_ROOT_PASSWORD" \
 PUBLIC_AUDIO_BASE=https://api.lingoiq.online/audio/a1-exam-prep \
