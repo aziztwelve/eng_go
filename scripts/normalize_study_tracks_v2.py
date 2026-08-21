@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 SOURCE = ROOT / "tracks" / "A1_STUDY_TRACKS_01_10_APP_ACTIVITIES_ONLY_COMBINED.json"
-OUTPUT = Path(__file__).resolve().parents[1] / "tracks" / "A1_STUDY_TRACKS_01_10_V2"
+OUTPUT = Path(__file__).resolve().parents[1] / "tracks" / "A1_STUDY_V2_TRACKS_01_10_V2"
 
 STEP_TYPES = (
     "match_pairs", "text", "quiz", "translate", "fill_blank", "tap_words",
@@ -27,6 +27,11 @@ def localized(value):
     if isinstance(value, dict):
         return value
     return {"en": value, "ru": value}
+
+
+def v2_code(code):
+    """Avoid collisions with the already published legacy A1 Study package."""
+    return code.replace("A1_STUDY_T", "A1_STUDY_V2_T", 1)
 
 
 def clean_tokens(text):
@@ -90,7 +95,7 @@ def make_step(step_type, lesson, words, phrases, index):
         "ru": "Выполните задание, используя язык урока.",
     }
     step = {
-        "id": f'{lesson["lesson_id"]}_{step_type.upper()}_V2',
+        "id": f'{lesson["code"]}_{step_type.upper()}_V2',
         "order": index + 1,
         "type": step_type,
         "title": title,
@@ -143,11 +148,12 @@ def convert_track(source_track):
     track_words = [item["word"] for lesson in source_track["lessons"] for item in lesson.get("target_language", {}).get("vocabulary", []) if item.get("word")]
     lessons = []
     for source_lesson in source_track["lessons"]:
-        words = lesson_words(source_lesson, track_words)
-        phrases = lesson_phrases(source_lesson)
-        steps = [make_step(step_type, source_lesson, words, phrases, index) for index, step_type in enumerate(STEP_TYPES)]
-        lessons.append({"code": source_lesson["lesson_id"], "order": source_lesson["lesson_number"], "title": localized(source_lesson["title"]), "objective": localized(source_lesson["mission"]), "estimated_seconds": source_lesson["duration_minutes"] * 60, "steps": steps})
-    return {"schema_version": "lingoiq.track.v2", "track": {"code": source_track["track_id"], "title": localized(source_track["title"]), "description": localized(source_track["description"]), "target_language": "en", "native_language": "ru", "level": source_track["level"], "goal": source_track["goal"], "track_type": "thematic"}, "lessons": lessons}
+        lesson = {**source_lesson, "code": v2_code(source_lesson["lesson_id"])}
+        words = lesson_words(lesson, track_words)
+        phrases = lesson_phrases(lesson)
+        steps = [make_step(step_type, lesson, words, phrases, index) for index, step_type in enumerate(STEP_TYPES)]
+        lessons.append({"code": lesson["code"], "order": lesson["lesson_number"], "title": localized(lesson["title"]), "objective": localized(lesson["mission"]), "estimated_seconds": lesson["duration_minutes"] * 60, "steps": steps})
+    return {"schema_version": "lingoiq.track.v2", "track": {"code": v2_code(source_track["track_id"]), "title": localized(source_track["title"]), "description": localized(source_track["description"]), "target_language": "en", "native_language": "ru", "level": source_track["level"], "goal": source_track["goal"], "track_type": "thematic"}, "lessons": lessons}
 
 
 def main():
