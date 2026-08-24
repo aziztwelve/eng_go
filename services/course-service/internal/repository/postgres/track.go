@@ -427,11 +427,11 @@ func (r *trackRepository) ListVocabulary(ctx context.Context, trackID, userID, s
 	query := fmt.Sprintf(`SELECT v.id, v.language, v.word, v.translation, v.target_language,
 		v.audio_url, v.image_url, v.level, v.pos, v.transcription, v.definition, v.example_sentence,
 		v.created_at, v.updated_at, tv.lesson_id, tv.first_seen_order,
-		CASE WHEN $%d = '' THEN false ELSE EXISTS (
-			SELECT 1 FROM user_flashcards f WHERE f.user_id = $%d AND f.vocabulary_id = v.id AND f.archived_at IS NULL
-		) END
+		EXISTS (
+			SELECT 1 FROM user_flashcards f WHERE f.user_id = NULLIF($%d, '')::uuid AND f.vocabulary_id = v.id AND f.archived_at IS NULL
+		)
 		FROM track_vocabulary tv JOIN vocabulary v ON v.id = tv.vocabulary_id
-		WHERE %s ORDER BY tv.first_seen_order, v.id LIMIT $%d OFFSET $%d`, pos, pos, where, pos+1, pos+2)
+		WHERE %s ORDER BY tv.first_seen_order, v.id LIMIT $%d OFFSET $%d`, pos, where, pos+1, pos+2)
 	args = append(args, userID, limit, offset)
 	rows, err := r.pool.Query(ctx, query, args...)
 	if err != nil {
