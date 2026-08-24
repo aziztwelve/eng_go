@@ -1,7 +1,7 @@
 # Деплой local → server (backend + mobile)
 
 Runbook: как залить изменения в git и развернуть backend на сервере.
-Последний прогон: 2026-06-21.
+Актуальный стандарт разработки также описан в `../../../docs/development-workflow.md`.
 
 ---
 
@@ -11,10 +11,10 @@ Runbook: как залить изменения в git и развернуть b
 |---|---|
 | Backend (Go, монорепо) | локально `microservices-course/elearning` → git `git@github.com:aziztwelve/eng_go.git` (ветка `dev`) |
 | Mobile (React Native) | локально `eng_mob` → git `git@github.com:aziztwelve/eng_mob.git` (ветка `dev`) |
-| Сервер | `root@178.104.217.201` (Hetzner, Ubuntu) |
+| Сервер | `root@167.233.103.233` (Hetzner, Ubuntu) |
 | Backend на сервере | `/var/www/html/elearning` (ветка `dev`) |
-| Публичный API | `https://178-104-217-201.sslip.io/api/v1` |
-| TLS / reverse-proxy | контейнер `vpn-caddy` → проксирует домен на host `172.19.0.1:8080` (gateway), авто-TLS Let's Encrypt |
+| Публичный API | `https://api.lingoiq.online/api/v1` |
+| TLS / reverse-proxy | контейнер `lingoiq-caddy` в `/opt/caddy` → проксирует `api.lingoiq.online` на gateway `:8080`, авто-TLS Let's Encrypt |
 
 **Важно:** Go-сервисы запущены как обычные процессы на хосте (НЕ в Docker).
 В Docker крутится только инфраструктура: `elearning-postgres` (5435), `elearning-redis` (6379),
@@ -65,9 +65,9 @@ git push origin dev
 ## 2. Деплой backend на сервере
 
 ```bash
-ssh root@178.104.217.201
+ssh root@167.233.103.233
 cd /var/www/html/elearning
-export PATH=$PATH:/usr/local/go/bin:/root/go/bin   # go1.25, task
+export PATH=$PATH:/usr/local/go/bin:/root/go/bin   # Go 1.24.4
 ```
 
 ### 2.1 Обновить код
@@ -88,7 +88,8 @@ git log --oneline -3
 
 ### 2.2 Собрать
 ```bash
-task build-all     # go build всех 12 сервисов в ./bin/
+# На сервере Task отсутствует. Использовать явные go build-команды из
+# ../../../docs/development-workflow.md, чтобы собрать все 12 сервисов в ./bin/.
 ```
 Новый AI-код (Google STT/TTS) использует stdlib `net/http` — новых тяжёлых зависимостей нет,
 `go mod tidy` обычно не требуется. Если build падает на go.sum — `go mod tidy` в проблемном сервисе.
@@ -182,7 +183,7 @@ NOTIFICATIONS_SERVICE_ADDR=localhost:50072
 > ```bash
 > # локально, из microservices-course/elearning
 > grep -E '^GOOGLE_TTS_API_KEY=' deploy/compose/ai/.env.local \
->  | ssh root@178.104.217.201 'F=/var/www/html/elearning/deploy/compose/ai/.env; L=$(cat); \
+>  | ssh root@167.233.103.233 'F=/var/www/html/elearning/deploy/compose/ai/.env; L=$(cat); \
 >      cp "$F" "$F.bak.$(date +%s)"; sed -i "/^GOOGLE_TTS_API_KEY=/d" "$F"; printf "%s\n" "$L" >> "$F"'
 > ```
 > После правки env нужного сервиса — перезапустить именно его (см. §2.3).
@@ -198,21 +199,21 @@ NOTIFICATIONS_SERVICE_ADDR=localhost:50072
 
 ```bash
 # health (локально на сервере и публично)
-ssh root@178.104.217.201 'curl -s -o /dev/null -w "%{http_code}\n" http://localhost:8080/health'
-curl -s -o /dev/null -w "%{http_code}\n" https://178-104-217-201.sslip.io/health        # 200
+ssh root@167.233.103.233 'curl -s -o /dev/null -w "%{http_code}\n" http://localhost:8080/health'
+curl -s -o /dev/null -w "%{http_code}\n" https://api.lingoiq.online/health        # 200
 
 # маршруты /api/v1 (401 = маршрут есть, нужна авторизация; сам /api/v1 = 404, это префикс)
-B=https://178-104-217-201.sslip.io/api/v1
+B=https://api.lingoiq.online/api/v1
 for e in /tracks /auth/me /ai/conversations; do
   echo "$e -> $(curl -s -o /dev/null -w '%{http_code}' "$B$e")"; done
 curl -s -o /dev/null -w "login -> %{http_code}\n" -X POST "$B/auth/login" -H "Content-Type: application/json" -d '{}'  # 400
 
 # ошибки в логах сервисов
-ssh root@178.104.217.201 'for f in /var/www/html/elearning/logs/*.log; do
+ssh root@167.233.103.233 'for f in /var/www/html/elearning/logs/*.log; do
   e=$(grep -iE "error|panic|fatal|refused|dial tcp" "$f" | tail -2); [ -n "$e" ] && { echo "--- $f ---"; echo "$e"; }; done'
 
 # Kafka: топик, consumer group, lag
-ssh root@178.104.217.201 'docker exec elearning-redpanda rpk topic list; \
+ssh root@167.233.103.233 'docker exec elearning-redpanda rpk topic list; \
   docker exec elearning-redpanda rpk group describe social-xp-consumer | grep -E "STATE|TOTAL-LAG|xp.gained"'
 ```
 
@@ -223,14 +224,14 @@ ssh root@178.104.217.201 'docker exec elearning-redpanda rpk topic list; \
 Проверяет цепочку: `complete step → course → gamification.AddXP → Kafka(xp.gained) → social consumer`.
 
 ```bash
-B=https://178-104-217-201.sslip.io/api/v1
+B=https://api.lingoiq.online/api/v1
 
 # 1) гость (нужен device_id)
 RESP=$(curl -s -X POST "$B/auth/guest" -H "Content-Type: application/json" -d "{\"device_id\":\"e2e-$(date +%s)\"}")
 TOKEN=$(echo "$RESP" | python3 -c "import sys,json;print(json.load(sys.stdin)['access_token'])")
 
 # 2) взять step_id и его course_id из БД (creds из course env)
-ssh root@178.104.217.201 'cd /var/www/html/elearning; set -a; . deploy/compose/course/.env; set +a;
+ssh root@167.233.103.233 'cd /var/www/html/elearning; set -a; . deploy/compose/course/.env; set +a;
   docker exec -e PGPASSWORD="$POSTGRES_PASSWORD" elearning-postgres psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -At -F" | " \
    -c "SELECT s.id, m.course_id FROM courses.steps s JOIN courses.lessons l ON s.lesson_id=l.id JOIN courses.modules m ON l.module_id=m.id LIMIT 1;"'
 # => STEP, COURSE
@@ -242,8 +243,8 @@ curl -s -X POST "$B/progress/steps/$STEP/complete" -H "Authorization: Bearer $TO
 
 # 4) проверить XP и Kafka
 curl -s -H "Authorization: Bearer $TOKEN" "$B/gamification/xp/history"     # transactions с amount
-ssh root@178.104.217.201 'docker exec elearning-redpanda rpk topic describe xp.gained -p | tail -2'  # HIGH-WATERMARK растёт
-ssh root@178.104.217.201 'docker exec elearning-redpanda rpk group describe social-xp-consumer | grep -E "TOTAL-LAG|xp.gained"'  # LAG=0
+ssh root@167.233.103.233 'docker exec elearning-redpanda rpk topic describe xp.gained -p | tail -2'  # HIGH-WATERMARK растёт
+ssh root@167.233.103.233 'docker exec elearning-redpanda rpk group describe social-xp-consumer | grep -E "TOTAL-LAG|xp.gained"'  # LAG=0
 ```
 
 Результат прошлого прогона: enroll `201`, complete `200`, XP `+100` (enroll) и `+10` (step),

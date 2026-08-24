@@ -19,62 +19,64 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	CourseService_ListCourses_FullMethodName              = "/course.v1.CourseService/ListCourses"
-	CourseService_GetCourse_FullMethodName                = "/course.v1.CourseService/GetCourse"
-	CourseService_GetLesson_FullMethodName                = "/course.v1.CourseService/GetLesson"
-	CourseService_GetStepContent_FullMethodName           = "/course.v1.CourseService/GetStepContent"
-	CourseService_EnrollUser_FullMethodName               = "/course.v1.CourseService/EnrollUser"
-	CourseService_CheckAccess_FullMethodName              = "/course.v1.CourseService/CheckAccess"
-	CourseService_CreateCourse_FullMethodName             = "/course.v1.CourseService/CreateCourse"
-	CourseService_UpdateCourse_FullMethodName             = "/course.v1.CourseService/UpdateCourse"
-	CourseService_DeleteCourse_FullMethodName             = "/course.v1.CourseService/DeleteCourse"
-	CourseService_PublishCourse_FullMethodName            = "/course.v1.CourseService/PublishCourse"
-	CourseService_CreateModule_FullMethodName             = "/course.v1.CourseService/CreateModule"
-	CourseService_UpdateModule_FullMethodName             = "/course.v1.CourseService/UpdateModule"
-	CourseService_DeleteModule_FullMethodName             = "/course.v1.CourseService/DeleteModule"
-	CourseService_CreateLesson_FullMethodName             = "/course.v1.CourseService/CreateLesson"
-	CourseService_UpdateLesson_FullMethodName             = "/course.v1.CourseService/UpdateLesson"
-	CourseService_DeleteLesson_FullMethodName             = "/course.v1.CourseService/DeleteLesson"
-	CourseService_CreateStep_FullMethodName               = "/course.v1.CourseService/CreateStep"
-	CourseService_UpdateStep_FullMethodName               = "/course.v1.CourseService/UpdateStep"
-	CourseService_DeleteStep_FullMethodName               = "/course.v1.CourseService/DeleteStep"
-	CourseService_MarkStepComplete_FullMethodName         = "/course.v1.CourseService/MarkStepComplete"
-	CourseService_GetStepProgress_FullMethodName          = "/course.v1.CourseService/GetStepProgress"
-	CourseService_GetLessonProgress_FullMethodName        = "/course.v1.CourseService/GetLessonProgress"
-	CourseService_GetCourseProgress_FullMethodName        = "/course.v1.CourseService/GetCourseProgress"
-	CourseService_ListTracks_FullMethodName               = "/course.v1.CourseService/ListTracks"
-	CourseService_GetTrack_FullMethodName                 = "/course.v1.CourseService/GetTrack"
-	CourseService_GetTrackByCode_FullMethodName           = "/course.v1.CourseService/GetTrackByCode"
-	CourseService_CreateTrack_FullMethodName              = "/course.v1.CourseService/CreateTrack"
-	CourseService_UpdateTrack_FullMethodName              = "/course.v1.CourseService/UpdateTrack"
-	CourseService_DeleteTrack_FullMethodName              = "/course.v1.CourseService/DeleteTrack"
-	CourseService_PublishTrack_FullMethodName             = "/course.v1.CourseService/PublishTrack"
-	CourseService_AddLessonToTrack_FullMethodName         = "/course.v1.CourseService/AddLessonToTrack"
-	CourseService_RemoveLessonFromTrack_FullMethodName    = "/course.v1.CourseService/RemoveLessonFromTrack"
-	CourseService_ReorderTrackLessons_FullMethodName      = "/course.v1.CourseService/ReorderTrackLessons"
-	CourseService_GenerateUserPlan_FullMethodName         = "/course.v1.CourseService/GenerateUserPlan"
-	CourseService_GetUserTracks_FullMethodName            = "/course.v1.CourseService/GetUserTracks"
-	CourseService_AddUserTrack_FullMethodName             = "/course.v1.CourseService/AddUserTrack"
-	CourseService_RemoveUserTrack_FullMethodName          = "/course.v1.CourseService/RemoveUserTrack"
-	CourseService_ListVocabulary_FullMethodName           = "/course.v1.CourseService/ListVocabulary"
-	CourseService_GetVocabularyEntry_FullMethodName       = "/course.v1.CourseService/GetVocabularyEntry"
-	CourseService_CreateVocabularyEntry_FullMethodName    = "/course.v1.CourseService/CreateVocabularyEntry"
-	CourseService_UpdateVocabularyEntry_FullMethodName    = "/course.v1.CourseService/UpdateVocabularyEntry"
-	CourseService_DeleteVocabularyEntry_FullMethodName    = "/course.v1.CourseService/DeleteVocabularyEntry"
-	CourseService_BulkCreateVocabulary_FullMethodName     = "/course.v1.CourseService/BulkCreateVocabulary"
-	CourseService_SynthesizeTTS_FullMethodName            = "/course.v1.CourseService/SynthesizeTTS"
-	CourseService_GetTTSByText_FullMethodName             = "/course.v1.CourseService/GetTTSByText"
-	CourseService_ListFlashcards_FullMethodName           = "/course.v1.CourseService/ListFlashcards"
-	CourseService_GetFlashcard_FullMethodName             = "/course.v1.CourseService/GetFlashcard"
-	CourseService_CreateFlashcard_FullMethodName          = "/course.v1.CourseService/CreateFlashcard"
-	CourseService_UpdateFlashcard_FullMethodName          = "/course.v1.CourseService/UpdateFlashcard"
-	CourseService_ArchiveFlashcard_FullMethodName         = "/course.v1.CourseService/ArchiveFlashcard"
-	CourseService_BulkCreateFlashcards_FullMethodName     = "/course.v1.CourseService/BulkCreateFlashcards"
-	CourseService_AddVocabularyAsFlashcard_FullMethodName = "/course.v1.CourseService/AddVocabularyAsFlashcard"
-	CourseService_GetFlashcardStats_FullMethodName        = "/course.v1.CourseService/GetFlashcardStats"
-	CourseService_PinForToday_FullMethodName              = "/course.v1.CourseService/PinForToday"
-	CourseService_UnpinFromToday_FullMethodName           = "/course.v1.CourseService/UnpinFromToday"
-	CourseService_ListTodayQueue_FullMethodName           = "/course.v1.CourseService/ListTodayQueue"
+	CourseService_ListCourses_FullMethodName                    = "/course.v1.CourseService/ListCourses"
+	CourseService_GetCourse_FullMethodName                      = "/course.v1.CourseService/GetCourse"
+	CourseService_GetLesson_FullMethodName                      = "/course.v1.CourseService/GetLesson"
+	CourseService_GetStepContent_FullMethodName                 = "/course.v1.CourseService/GetStepContent"
+	CourseService_EnrollUser_FullMethodName                     = "/course.v1.CourseService/EnrollUser"
+	CourseService_CheckAccess_FullMethodName                    = "/course.v1.CourseService/CheckAccess"
+	CourseService_CreateCourse_FullMethodName                   = "/course.v1.CourseService/CreateCourse"
+	CourseService_UpdateCourse_FullMethodName                   = "/course.v1.CourseService/UpdateCourse"
+	CourseService_DeleteCourse_FullMethodName                   = "/course.v1.CourseService/DeleteCourse"
+	CourseService_PublishCourse_FullMethodName                  = "/course.v1.CourseService/PublishCourse"
+	CourseService_CreateModule_FullMethodName                   = "/course.v1.CourseService/CreateModule"
+	CourseService_UpdateModule_FullMethodName                   = "/course.v1.CourseService/UpdateModule"
+	CourseService_DeleteModule_FullMethodName                   = "/course.v1.CourseService/DeleteModule"
+	CourseService_CreateLesson_FullMethodName                   = "/course.v1.CourseService/CreateLesson"
+	CourseService_UpdateLesson_FullMethodName                   = "/course.v1.CourseService/UpdateLesson"
+	CourseService_DeleteLesson_FullMethodName                   = "/course.v1.CourseService/DeleteLesson"
+	CourseService_CreateStep_FullMethodName                     = "/course.v1.CourseService/CreateStep"
+	CourseService_UpdateStep_FullMethodName                     = "/course.v1.CourseService/UpdateStep"
+	CourseService_DeleteStep_FullMethodName                     = "/course.v1.CourseService/DeleteStep"
+	CourseService_MarkStepComplete_FullMethodName               = "/course.v1.CourseService/MarkStepComplete"
+	CourseService_GetStepProgress_FullMethodName                = "/course.v1.CourseService/GetStepProgress"
+	CourseService_GetLessonProgress_FullMethodName              = "/course.v1.CourseService/GetLessonProgress"
+	CourseService_GetCourseProgress_FullMethodName              = "/course.v1.CourseService/GetCourseProgress"
+	CourseService_ListTracks_FullMethodName                     = "/course.v1.CourseService/ListTracks"
+	CourseService_GetTrack_FullMethodName                       = "/course.v1.CourseService/GetTrack"
+	CourseService_GetTrackByCode_FullMethodName                 = "/course.v1.CourseService/GetTrackByCode"
+	CourseService_CreateTrack_FullMethodName                    = "/course.v1.CourseService/CreateTrack"
+	CourseService_UpdateTrack_FullMethodName                    = "/course.v1.CourseService/UpdateTrack"
+	CourseService_DeleteTrack_FullMethodName                    = "/course.v1.CourseService/DeleteTrack"
+	CourseService_PublishTrack_FullMethodName                   = "/course.v1.CourseService/PublishTrack"
+	CourseService_AddLessonToTrack_FullMethodName               = "/course.v1.CourseService/AddLessonToTrack"
+	CourseService_RemoveLessonFromTrack_FullMethodName          = "/course.v1.CourseService/RemoveLessonFromTrack"
+	CourseService_ReorderTrackLessons_FullMethodName            = "/course.v1.CourseService/ReorderTrackLessons"
+	CourseService_GenerateUserPlan_FullMethodName               = "/course.v1.CourseService/GenerateUserPlan"
+	CourseService_GetUserTracks_FullMethodName                  = "/course.v1.CourseService/GetUserTracks"
+	CourseService_AddUserTrack_FullMethodName                   = "/course.v1.CourseService/AddUserTrack"
+	CourseService_RemoveUserTrack_FullMethodName                = "/course.v1.CourseService/RemoveUserTrack"
+	CourseService_ListVocabulary_FullMethodName                 = "/course.v1.CourseService/ListVocabulary"
+	CourseService_GetVocabularyEntry_FullMethodName             = "/course.v1.CourseService/GetVocabularyEntry"
+	CourseService_CreateVocabularyEntry_FullMethodName          = "/course.v1.CourseService/CreateVocabularyEntry"
+	CourseService_UpdateVocabularyEntry_FullMethodName          = "/course.v1.CourseService/UpdateVocabularyEntry"
+	CourseService_DeleteVocabularyEntry_FullMethodName          = "/course.v1.CourseService/DeleteVocabularyEntry"
+	CourseService_BulkCreateVocabulary_FullMethodName           = "/course.v1.CourseService/BulkCreateVocabulary"
+	CourseService_SynthesizeTTS_FullMethodName                  = "/course.v1.CourseService/SynthesizeTTS"
+	CourseService_GetTTSByText_FullMethodName                   = "/course.v1.CourseService/GetTTSByText"
+	CourseService_ListFlashcards_FullMethodName                 = "/course.v1.CourseService/ListFlashcards"
+	CourseService_GetFlashcard_FullMethodName                   = "/course.v1.CourseService/GetFlashcard"
+	CourseService_CreateFlashcard_FullMethodName                = "/course.v1.CourseService/CreateFlashcard"
+	CourseService_UpdateFlashcard_FullMethodName                = "/course.v1.CourseService/UpdateFlashcard"
+	CourseService_ArchiveFlashcard_FullMethodName               = "/course.v1.CourseService/ArchiveFlashcard"
+	CourseService_BulkCreateFlashcards_FullMethodName           = "/course.v1.CourseService/BulkCreateFlashcards"
+	CourseService_AddVocabularyAsFlashcard_FullMethodName       = "/course.v1.CourseService/AddVocabularyAsFlashcard"
+	CourseService_GetFlashcardStats_FullMethodName              = "/course.v1.CourseService/GetFlashcardStats"
+	CourseService_PinForToday_FullMethodName                    = "/course.v1.CourseService/PinForToday"
+	CourseService_UnpinFromToday_FullMethodName                 = "/course.v1.CourseService/UnpinFromToday"
+	CourseService_ListTodayQueue_FullMethodName                 = "/course.v1.CourseService/ListTodayQueue"
+	CourseService_ListTrackVocabulary_FullMethodName            = "/course.v1.CourseService/ListTrackVocabulary"
+	CourseService_AddTrackVocabularyAsFlashcards_FullMethodName = "/course.v1.CourseService/AddTrackVocabularyAsFlashcards"
 )
 
 // CourseServiceClient is the client API for CourseService service.
@@ -191,6 +193,8 @@ type CourseServiceClient interface {
 	PinForToday(ctx context.Context, in *PinForTodayRequest, opts ...grpc.CallOption) (*PinForTodayResponse, error)
 	UnpinFromToday(ctx context.Context, in *UnpinFromTodayRequest, opts ...grpc.CallOption) (*UnpinFromTodayResponse, error)
 	ListTodayQueue(ctx context.Context, in *ListTodayQueueRequest, opts ...grpc.CallOption) (*ListTodayQueueResponse, error)
+	ListTrackVocabulary(ctx context.Context, in *ListTrackVocabularyRequest, opts ...grpc.CallOption) (*ListTrackVocabularyResponse, error)
+	AddTrackVocabularyAsFlashcards(ctx context.Context, in *AddTrackVocabularyAsFlashcardsRequest, opts ...grpc.CallOption) (*AddTrackVocabularyAsFlashcardsResponse, error)
 }
 
 type courseServiceClient struct {
@@ -761,6 +765,26 @@ func (c *courseServiceClient) ListTodayQueue(ctx context.Context, in *ListTodayQ
 	return out, nil
 }
 
+func (c *courseServiceClient) ListTrackVocabulary(ctx context.Context, in *ListTrackVocabularyRequest, opts ...grpc.CallOption) (*ListTrackVocabularyResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ListTrackVocabularyResponse)
+	err := c.cc.Invoke(ctx, CourseService_ListTrackVocabulary_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *courseServiceClient) AddTrackVocabularyAsFlashcards(ctx context.Context, in *AddTrackVocabularyAsFlashcardsRequest, opts ...grpc.CallOption) (*AddTrackVocabularyAsFlashcardsResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(AddTrackVocabularyAsFlashcardsResponse)
+	err := c.cc.Invoke(ctx, CourseService_AddTrackVocabularyAsFlashcards_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // CourseServiceServer is the server API for CourseService service.
 // All implementations must embed UnimplementedCourseServiceServer
 // for forward compatibility.
@@ -875,6 +899,8 @@ type CourseServiceServer interface {
 	PinForToday(context.Context, *PinForTodayRequest) (*PinForTodayResponse, error)
 	UnpinFromToday(context.Context, *UnpinFromTodayRequest) (*UnpinFromTodayResponse, error)
 	ListTodayQueue(context.Context, *ListTodayQueueRequest) (*ListTodayQueueResponse, error)
+	ListTrackVocabulary(context.Context, *ListTrackVocabularyRequest) (*ListTrackVocabularyResponse, error)
+	AddTrackVocabularyAsFlashcards(context.Context, *AddTrackVocabularyAsFlashcardsRequest) (*AddTrackVocabularyAsFlashcardsResponse, error)
 	mustEmbedUnimplementedCourseServiceServer()
 }
 
@@ -1052,6 +1078,12 @@ func (UnimplementedCourseServiceServer) UnpinFromToday(context.Context, *UnpinFr
 }
 func (UnimplementedCourseServiceServer) ListTodayQueue(context.Context, *ListTodayQueueRequest) (*ListTodayQueueResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method ListTodayQueue not implemented")
+}
+func (UnimplementedCourseServiceServer) ListTrackVocabulary(context.Context, *ListTrackVocabularyRequest) (*ListTrackVocabularyResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method ListTrackVocabulary not implemented")
+}
+func (UnimplementedCourseServiceServer) AddTrackVocabularyAsFlashcards(context.Context, *AddTrackVocabularyAsFlashcardsRequest) (*AddTrackVocabularyAsFlashcardsResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method AddTrackVocabularyAsFlashcards not implemented")
 }
 func (UnimplementedCourseServiceServer) mustEmbedUnimplementedCourseServiceServer() {}
 func (UnimplementedCourseServiceServer) testEmbeddedByValue()                       {}
@@ -2082,6 +2114,42 @@ func _CourseService_ListTodayQueue_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
+func _CourseService_ListTrackVocabulary_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListTrackVocabularyRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).ListTrackVocabulary(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_ListTrackVocabulary_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).ListTrackVocabulary(ctx, req.(*ListTrackVocabularyRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CourseService_AddTrackVocabularyAsFlashcards_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AddTrackVocabularyAsFlashcardsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).AddTrackVocabularyAsFlashcards(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_AddTrackVocabularyAsFlashcards_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).AddTrackVocabularyAsFlashcards(ctx, req.(*AddTrackVocabularyAsFlashcardsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // CourseService_ServiceDesc is the grpc.ServiceDesc for CourseService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -2312,6 +2380,14 @@ var CourseService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ListTodayQueue",
 			Handler:    _CourseService_ListTodayQueue_Handler,
+		},
+		{
+			MethodName: "ListTrackVocabulary",
+			Handler:    _CourseService_ListTrackVocabulary_Handler,
+		},
+		{
+			MethodName: "AddTrackVocabularyAsFlashcards",
+			Handler:    _CourseService_AddTrackVocabularyAsFlashcards_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

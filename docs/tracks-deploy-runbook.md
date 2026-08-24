@@ -65,7 +65,7 @@ git push origin dev
 ## Сервер
 
 ```bash
-ssh -F /dev/null root@178.104.217.201
+ssh -F /dev/null root@167.233.103.233
 cd /var/www/html/elearning
 
 git fetch origin dev
@@ -152,7 +152,7 @@ adb logcat -c
 adb shell am force-stop com.aziztwelve.engmob
 adb shell monkey -p com.aziztwelve.engmob -c android.intent.category.LAUNCHER 1
 sleep 6
-ssh -F /dev/null root@178.104.217.201 \
+ssh -F /dev/null root@167.233.103.233 \
   'tail -n 80 /var/www/html/elearning/logs/gateway.log | grep -E "/api/v1/me/tracks|/api/v1/tracks" || true'
 ```
 

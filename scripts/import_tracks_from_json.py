@@ -13,6 +13,7 @@ Usage:
 import json
 import sys
 import uuid
+import re
 from pathlib import Path
 
 NAMESPACE = uuid.UUID("6ba7b810-9dad-11d1-80b4-00c04fd430c8")
@@ -30,9 +31,37 @@ def stable_id(*parts):
     return str(uuid.uuid5(NAMESPACE, ":".join(parts)))
 
 
+def normalize_word(value):
+    return " ".join(value.casefold().split())
+
+
 def localized(value, native_language):
     """Prefer the track's native language, fall back to English."""
     return value.get(native_language) or value.get("en")
+
+
+GENERATED_EXPLANATION = re.compile(
+    r"^(?:The term ['\"].+['\"] as it is used|Listening word:)",
+    re.IGNORECASE,
+)
+
+
+def extract_vocabulary_pairs(step, native_language, target_language, warnings=None):
+    """Return conservative (word, translation, definition) candidates."""
+    if not isinstance(step.get("data", {}).get("pairs"), list):
+        return []
+    result = []
+    for pair in step.get("data", {}).get("pairs", []):
+        word = str(pair.get("left") or "").strip()
+        right = str(pair.get("right") or "").strip()
+        if not word or not right:
+            continue
+        if GENERATED_EXPLANATION.match(right):
+            if warnings is not None:
+                warnings.append(f"step {step.get('id')}: skipped generated explanation for {word!r}")
+            continue
+        result.append((word, right, ""))
+    return result
 
 
 def generate_sql_from_json(json_file_path):
@@ -60,6 +89,9 @@ def generate_sql_from_json(json_file_path):
     ]
 
     track_id = stable_id("lingoiq.track.v2", code)
+    vocabulary_rows = []
+    relation_rows = []
+    warnings = []
     lines.append(
         "INSERT INTO courses.learning_tracks "
         "(id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)\n"
@@ -90,6 +122,10 @@ def generate_sql_from_json(json_file_path):
             step_title = localized(step["title"], native_language)
             instructions = localized(step["instructions"], native_language)
             content = {**step["data"], "instruction": instructions}
+            for pair_index, (word, translation, definition) in enumerate(extract_vocabulary_pairs(step, native_language, track["target_language"], warnings)):
+                vocabulary_id = stable_id("vocabulary", track["target_language"], normalize_word(word), native_language)
+                vocabulary_rows.append((vocabulary_id, word, translation, definition))
+                relation_rows.append((word, lesson_id, (lesson["order"] - 1) * 10000 + (step["order"] - 1) * 100 + pair_index))
 
             lines.append(
                 "INSERT INTO courses.steps "
@@ -105,6 +141,29 @@ def generate_sql_from_json(json_file_path):
             f"VALUES ('{track_id}', '{lesson_id}', {lesson['order'] - 1})\n"
             "ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;"
         )
+
+    for vocabulary_id, word, translation, definition in vocabulary_rows:
+        lines.append(
+            "INSERT INTO courses.vocabulary "
+            "(id, language, word, translation, target_language, level, definition, created_at, updated_at)\n"
+            f"VALUES ('{vocabulary_id}', '{esc(track['target_language'])}', '{esc(word)}', "
+            f"'{esc(translation)}', '{esc(native_language)}', '{esc(track['level'])}', "
+            f"NULLIF('{esc(definition)}', ''), NOW(), NOW())\n"
+            "ON CONFLICT (language, word, target_language) DO NOTHING;"
+        )
+
+    for word, lesson_id, first_seen_order in relation_rows:
+        lines.append(
+            "INSERT INTO courses.track_vocabulary "
+            "(track_id, vocabulary_id, lesson_id, first_seen_order)\n"
+            f"SELECT '{track_id}', id, '{lesson_id}', {first_seen_order} FROM courses.vocabulary "
+            f"WHERE language = '{esc(track['target_language'])}' AND word = '{esc(word)}' "
+            f"AND target_language = '{esc(native_language)}'\n"
+            "ON CONFLICT (track_id, vocabulary_id) DO NOTHING;"
+        )
+
+    for warning in warnings:
+        print(f"WARNING: {warning}", file=sys.stderr)
 
     lines.append("COMMIT;")
     return "\n\n".join(lines) + "\n"

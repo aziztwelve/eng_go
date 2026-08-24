@@ -53,7 +53,7 @@ gateway endpoints), но **расширяем** UX и схему:
 1.  welcome (выбор target language из 12 + UI lang switcher)
        │
        ▼
-2.  goal (single, 9 options: work / exam / travel / relocation / study / social / content / fun / brain)
+2.  goal (single, 9 options: work / exam / travel / relocation / speaking / study / social / content / listening_shadowing)
        │
        ▼
 3.  age (single, 7 ranges: 7-12 / 13-17 / 18-24 / 25-34 / 35-44 / 45-54 / 55+)

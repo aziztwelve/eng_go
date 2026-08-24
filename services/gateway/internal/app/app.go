@@ -127,6 +127,8 @@ func (a *App) initRouter(ctx context.Context) error {
 		tracks := v1.Group("/tracks")
 		{
 			tracks.GET("", trackHandler.ListTracks)
+			tracks.GET("/:id/dictionary", authMiddleware.Handle(), trackHandler.GetTrackDictionary)
+			tracks.POST("/:id/dictionary/add", authMiddleware.Handle(), trackHandler.AddTrackDictionary)
 			tracks.GET("/:id", trackHandler.GetTrack)
 		}
 

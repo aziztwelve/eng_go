@@ -18,8 +18,8 @@
 **Причина (двойная):**
 1. `motivation` треков в БД была `{business_english}`, а мобильный клиент
    (`eng_mob/src/app/(tabs)/tracks/index.tsx`) фильтрует цели по фиксированному
-   набору `GoalKey`: `work, exam, travel, speaking, study, social, content,
-   listening_shadowing` (+legacy-алиасы). `business_english` там не было.
+   набору `GoalKey`: `work, exam, travel, relocation, speaking, study, social,
+   content, listening_shadowing` (+legacy-алиасы). `business_english` там не было.
 2. У пользователя на телефоне `proficiency_level = beginner`, а трек имеет
    `level = A1`. Gateway/course-service передавал `level=beginner` в фильтр
    `GET /tracks` буквально, без маппинга на CEFR-код — треки с `level=A1`

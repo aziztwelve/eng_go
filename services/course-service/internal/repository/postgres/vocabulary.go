@@ -17,7 +17,7 @@ import (
 )
 
 const vocabularySelectCols = `id, language, word, translation, target_language,
-	audio_url, image_url, level, pos, transcription, created_at, updated_at`
+		audio_url, image_url, level, pos, transcription, definition, example_sentence, created_at, updated_at`
 
 type vocabularyRepository struct {
 	pool *pgxpool.Pool
@@ -30,7 +30,7 @@ func NewVocabularyRepository(pool *pgxpool.Pool) repository.VocabularyRepository
 
 func scanVocabulary(scan func(...interface{}) error) (*model.VocabularyEntry, error) {
 	v := &model.VocabularyEntry{}
-	var audio, image, level, pos, transcription sql.NullString
+	var audio, image, level, pos, transcription, definition, example sql.NullString
 	if err := scan(
 		&v.ID,
 		&v.Language,
@@ -42,6 +42,8 @@ func scanVocabulary(scan func(...interface{}) error) (*model.VocabularyEntry, er
 		&level,
 		&pos,
 		&transcription,
+		&definition,
+		&example,
 		&v.CreatedAt,
 		&v.UpdatedAt,
 	); err != nil {
@@ -52,6 +54,8 @@ func scanVocabulary(scan func(...interface{}) error) (*model.VocabularyEntry, er
 	v.Level = level.String
 	v.POS = pos.String
 	v.Transcription = transcription.String
+	v.Definition = definition.String
+	v.ExampleSentence = example.String
 	return v, nil
 }
 
@@ -62,8 +66,8 @@ func (r *vocabularyRepository) Create(ctx context.Context, e *model.VocabularyEn
 	query := `
 		INSERT INTO vocabulary
 			(id, language, word, translation, target_language,
-			 audio_url, image_url, level, pos, transcription)
-		VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+			 audio_url, image_url, level, pos, transcription, definition, example_sentence)
+		VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
 		RETURNING created_at, updated_at
 	`
 	return r.pool.QueryRow(ctx, query,
@@ -76,7 +80,7 @@ func (r *vocabularyRepository) Create(ctx context.Context, e *model.VocabularyEn
 		nullStringPtr(e.ImageURL),
 		nullStringPtr(e.Level),
 		nullStringPtr(e.POS),
-		nullStringPtr(e.Transcription),
+		nullStringPtr(e.Transcription), nullStringPtr(e.Definition), nullStringPtr(e.ExampleSentence),
 	).Scan(&e.CreatedAt, &e.UpdatedAt)
 }
 

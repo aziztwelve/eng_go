@@ -192,6 +192,56 @@ func (a *api) ReorderTrackLessons(ctx context.Context, req *coursev1.ReorderTrac
 	return &coursev1.ReorderTrackLessonsResponse{Success: true}, nil
 }
 
+func (a *api) ListTrackVocabulary(ctx context.Context, req *coursev1.ListTrackVocabularyRequest) (*coursev1.ListTrackVocabularyResponse, error) {
+	if req.TrackId == "" {
+		return nil, status.Error(codes.InvalidArgument, "track_id is required")
+	}
+	track, err := a.trackService.GetTrack(ctx, req.TrackId)
+	if err != nil {
+		track, err = a.trackService.GetTrackByCode(ctx, req.TrackId)
+	}
+	if err != nil {
+		return nil, status.Errorf(codes.NotFound, "track not found: %v", err)
+	}
+	items, total, err := a.trackService.ListTrackVocabulary(ctx, track.ID, req.UserId, req.Search, int(req.Limit), int(req.Offset))
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to list track vocabulary: %v", err)
+	}
+	resp := &coursev1.ListTrackVocabularyResponse{TrackId: track.ID, TrackCode: track.Code, Total: int32(total)}
+	for _, item := range items {
+		entry := &coursev1.TrackVocabularyEntry{Vocabulary: converter.ToVocabularyEntryProto(item.Vocabulary), LessonId: item.LessonID, FirstSeenOrder: item.FirstSeenOrder, Added: item.Added}
+		resp.Entries = append(resp.Entries, entry)
+	}
+	return resp, nil
+}
+
+func (a *api) AddTrackVocabularyAsFlashcards(ctx context.Context, req *coursev1.AddTrackVocabularyAsFlashcardsRequest) (*coursev1.AddTrackVocabularyAsFlashcardsResponse, error) {
+	if req.TrackId == "" || req.UserId == "" {
+		return nil, status.Error(codes.InvalidArgument, "track_id and user_id are required")
+	}
+	track, err := a.trackService.GetTrack(ctx, req.TrackId)
+	if err != nil {
+		track, err = a.trackService.GetTrackByCode(ctx, req.TrackId)
+	}
+	if err != nil {
+		return nil, status.Errorf(codes.NotFound, "track not found: %v", err)
+	}
+	created, skipped, err := a.trackService.AddTrackVocabularyAsFlashcards(ctx, track.ID, req.UserId, req.VocabularyIds)
+	if err != nil {
+		return nil, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+	resp := &coursev1.AddTrackVocabularyAsFlashcardsResponse{}
+	for _, f := range created {
+		resp.Created = append(resp.Created, f.VocabularyID)
+		resp.Flashcards = append(resp.Flashcards, converter.ToFlashcardProto(f))
+	}
+	for _, f := range skipped {
+		resp.Skipped = append(resp.Skipped, f.VocabularyID)
+		resp.Flashcards = append(resp.Flashcards, converter.ToFlashcardProto(f))
+	}
+	return resp, nil
+}
+
 // GenerateUserPlan подбирает треки под профиль (level + goal) и материализует
 // их в персональный план пользователя (user_tracks).
 func (a *api) GenerateUserPlan(ctx context.Context, req *coursev1.GenerateUserPlanRequest) (*coursev1.GenerateUserPlanResponse, error) {

@@ -1924,15 +1924,16 @@ ON CONFLICT (language, word, target_language) DO UPDATE SET
 
 -- learning_tracks (1 row)
 INSERT INTO courses.learning_tracks (id, code, title, language, level, track_type, motivation, is_published, created_at, updated_at)
-VALUES ('cd330bcb-6387-5733-9bd5-363d55b078bc', 'speaking-a1', 'Speaking Proficiency — A1', 'en', 'A1', 'thematic', '{social}', true, NOW(), NOW())
+VALUES ('cd330bcb-6387-5733-9bd5-363d55b078bc', 'speaking-a1', 'Speaking Proficiency — A1', 'en', 'A1', 'thematic', '{speaking}', true, NOW(), NOW())
 ON CONFLICT (code) DO UPDATE SET
   title=EXCLUDED.title, motivation=EXCLUDED.motivation, is_published=EXCLUDED.is_published, updated_at=NOW();
 
 
 -- lessons (50 rows)
 INSERT INTO courses.lessons (id, title, description, module_id, order_index, created_at, updated_at)
-VALUES ('bf4f7917-87e7-5c89-9836-328c0d676803', 'The Verb ''To Be'' (Identity)', '', NULL, 0, NOW(), NOW())
-ON CONFLICT (id) DO NOTHING;
+VALUES ('bf4f7917-87e7-5c89-9836-328c0d676803', 'The Verb ''To Be'' (Identity)', 'Introduce yourself and describe people with am, is and are.', NULL, 0, NOW(), NOW())
+ON CONFLICT (id) DO UPDATE SET
+  title=EXCLUDED.title, description=EXCLUDED.description, updated_at=NOW();
 INSERT INTO courses.lessons (id, title, description, module_id, order_index, created_at, updated_at)
 VALUES ('74d5312d-6ab3-5ac2-9333-c04914718134', 'Describing People (Adjectives)', '', NULL, 1, NOW(), NOW())
 ON CONFLICT (id) DO NOTHING;
@@ -2083,14 +2084,16 @@ ON CONFLICT (id) DO NOTHING;
 
 -- steps (14 per lesson)
 INSERT INTO courses.steps (id, lesson_id, type, title, content, order_index, created_at, updated_at)
-VALUES ('d795965b-66df-53e9-aa27-055c6668bdfa', 'bf4f7917-87e7-5c89-9836-328c0d676803', 'text', 'Vocabulary', '{"text": "## The Verb ''To Be'' (Identity)\n\n**Am** — Used for\n_I\". \"I am a teacher._\n\n**Is** — Used for he/she/it.\n_She is my student._\n\n**Are** — Used for you/we/they.\n_They are in the library._\n\n**Name** — What you are called.\n_My name is Salma._\n\n**Age** — How old you are.\n_I am twenty years old._\n\n**From** — Your origin.\n_I am from Tajikistan._\n\n**Professional** — Your job.\n_I am a professional educator._\n\n**Student** — Someone who learns.\n_You are my student._\n\n**Friend** — A person you like.\n_We are good friends._\n\n**Happy** — Feeling good.\n_I am happy to be here._\n"}', 0, NOW(), NOW())
-ON CONFLICT (id) DO NOTHING;
+VALUES ('d795965b-66df-53e9-aa27-055c6668bdfa', 'bf4f7917-87e7-5c89-9836-328c0d676803', 'text', 'Vocabulary', '{"text": "## The Verb ''To Be'' (Identity)\n\n**Am** — Used for **I**.\n_I am a teacher._\n\n**Is** — Used for he/she/it.\n_She is my student._\n\n**Are** — Used for you/we/they.\n_They are in the library._\n\n**Name** — What you are called.\n_My name is Salma._\n\n**Age** — How old you are.\n_I am twenty years old._\n\n**From** — Your origin.\n_I am from Tajikistan._\n\n**Professional** — Your job.\n_I am a professional educator._\n\n**Student** — Someone who learns.\n_You are my student._\n\n**Friend** — A person you like.\n_We are good friends._\n\n**Happy** — Feeling good.\n_I am happy to be here._\n"}', 0, NOW(), NOW())
+ON CONFLICT (id) DO UPDATE SET
+  title=EXCLUDED.title, content=EXCLUDED.content, updated_at=NOW();
 INSERT INTO courses.steps (id, lesson_id, type, title, content, order_index, created_at, updated_at)
 VALUES ('a677ecde-5d95-58a1-b66a-a4501fcf3778', 'bf4f7917-87e7-5c89-9836-328c0d676803', 'match_pairs', 'Match the pairs', '{"instruction": "Match the word to its Russian translation", "pairs": [{"left": "Am", "right": "Я"}, {"left": "Is", "right": "является"}, {"left": "Are", "right": "они"}, {"left": "Name", "right": "имя"}, {"left": "Age", "right": "возраст"}, {"left": "From", "right": "из"}, {"left": "Professional", "right": "профессионал"}, {"left": "Student", "right": "студент"}, {"left": "Friend", "right": "друг"}, {"left": "Happy", "right": "счастливый"}]}', 1, NOW(), NOW())
 ON CONFLICT (id) DO NOTHING;
 INSERT INTO courses.steps (id, lesson_id, type, title, content, order_index, created_at, updated_at)
-VALUES ('c7098e07-7372-5e4a-8dae-c81001ffbc79', 'bf4f7917-87e7-5c89-9836-328c0d676803', 'fill_blank', 'Fill in the blank', '{"instruction": "Fill in the blank", "sentence_template": "I\". \"I ___ a teacher.", "correct_answer": "Am", "options": ["Happy", "Are", "Is", "Am"], "translation_hint": "Я", "explanation": "Used for"}', 2, NOW(), NOW())
-ON CONFLICT (id) DO NOTHING;
+VALUES ('c7098e07-7372-5e4a-8dae-c81001ffbc79', 'bf4f7917-87e7-5c89-9836-328c0d676803', 'fill_blank', 'Fill in the blank', '{"instruction": "Fill in the blank", "sentence_template": "I ___ a teacher.", "correct_answer": "am", "options": ["happy", "are", "is", "am"], "translation_hint": "Я", "explanation": "Use am with I."}', 2, NOW(), NOW())
+ON CONFLICT (id) DO UPDATE SET
+  title=EXCLUDED.title, content=EXCLUDED.content, updated_at=NOW();
 INSERT INTO courses.steps (id, lesson_id, type, title, content, order_index, created_at, updated_at)
 VALUES ('5c03c399-68ba-553c-b6e1-9d682982c566', 'bf4f7917-87e7-5c89-9836-328c0d676803', 'fill_blank', 'Fill in the blank', '{"instruction": "Fill in the blank", "sentence_template": "She ___ my student.", "correct_answer": "Is", "options": ["From", "Is", "Professional", "Student"], "translation_hint": "является", "explanation": "Used for he/she/it."}', 3, NOW(), NOW())
 ON CONFLICT (id) DO NOTHING;

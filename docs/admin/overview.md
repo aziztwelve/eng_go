@@ -109,8 +109,8 @@ task build-and-run   # Сборка и запуск сервисов
 
 ### Production
 ```bash
-task build-all       # Сборка бинарников
-task run-bin-all     # Запуск из бинарников
+# Деплой выполняется на root@167.233.103.233.
+# Актуальный build/restart/smoke-check: ../../../docs/development-workflow.md
 ```
 
 ## Мониторинг

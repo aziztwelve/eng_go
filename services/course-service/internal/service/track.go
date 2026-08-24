@@ -3,6 +3,7 @@ package service
 import (
 	"context"
 	"errors"
+	"fmt"
 	"strings"
 
 	"github.com/elearning/course-service/internal/model"
@@ -29,15 +30,66 @@ type TrackService interface {
 	GetUserTracks(ctx context.Context, userID string) ([]*model.UserTrack, error)
 	AddUserTrack(ctx context.Context, userID, trackID string) error
 	RemoveUserTrack(ctx context.Context, userID, trackID string) error
+	ListTrackVocabulary(ctx context.Context, trackID, userID, search string, limit, offset int) ([]*model.TrackVocabularyEntry, int, error)
+	AddTrackVocabularyAsFlashcards(ctx context.Context, trackID, userID string, vocabularyIDs []string) (created, skipped []*model.Flashcard, err error)
 }
 
 type trackService struct {
-	repo repository.TrackRepository
+	repo       repository.TrackRepository
+	flashcards FlashcardService
+	vocab      VocabularyService
 }
 
 // NewTrackService создаёт сервис learning tracks.
-func NewTrackService(repo repository.TrackRepository) TrackService {
-	return &trackService{repo: repo}
+func NewTrackService(repo repository.TrackRepository, deps ...interface{}) TrackService {
+	s := &trackService{repo: repo}
+	for _, dep := range deps {
+		switch v := dep.(type) {
+		case FlashcardService:
+			s.flashcards = v
+		case VocabularyService:
+			s.vocab = v
+		}
+	}
+	return s
+}
+
+func (s *trackService) ListTrackVocabulary(ctx context.Context, trackID, userID, search string, limit, offset int) ([]*model.TrackVocabularyEntry, int, error) {
+	return s.repo.ListVocabulary(ctx, trackID, userID, search, limit, offset)
+}
+
+func (s *trackService) AddTrackVocabularyAsFlashcards(ctx context.Context, trackID, userID string, vocabularyIDs []string) (created, skipped []*model.Flashcard, err error) {
+	if len(vocabularyIDs) == 0 || len(vocabularyIDs) > 100 {
+		return nil, nil, errors.New("vocabulary_ids must contain 1..100 items")
+	}
+	belongs, err := s.repo.VocabularyBelongsToTrack(ctx, trackID, vocabularyIDs)
+	if err != nil {
+		return nil, nil, err
+	}
+	seen := make(map[string]bool)
+	for _, id := range vocabularyIDs {
+		if seen[id] {
+			continue
+		}
+		seen[id] = true
+		if !belongs[id] {
+			return nil, nil, fmt.Errorf("vocabulary %s does not belong to track", id)
+		}
+		v, err := s.vocab.Get(ctx, id)
+		if err != nil {
+			return nil, nil, err
+		}
+		card, made, err := s.flashcards.AddVocabularyAsFlashcard(ctx, userID, v, model.FlashcardSourceLesson)
+		if err != nil {
+			return nil, nil, err
+		}
+		if made {
+			created = append(created, card)
+		} else {
+			skipped = append(skipped, card)
+		}
+	}
+	return created, skipped, nil
 }
 
 func validateTrack(t *model.Track) error {

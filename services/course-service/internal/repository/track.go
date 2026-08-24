@@ -43,4 +43,7 @@ type TrackRepository interface {
 	ListUserTracks(ctx context.Context, userID string) ([]*model.UserTrack, error)
 	DeleteUserTrack(ctx context.Context, userID, trackID string) error
 	CountUserTracks(ctx context.Context, userID string) (int, error)
+
+	ListVocabulary(ctx context.Context, trackID, userID, search string, limit, offset int) ([]*model.TrackVocabularyEntry, int, error)
+	VocabularyBelongsToTrack(ctx context.Context, trackID string, vocabularyIDs []string) (map[string]bool, error)
 }

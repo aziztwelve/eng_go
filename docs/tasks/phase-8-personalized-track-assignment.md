@@ -234,8 +234,8 @@ CREATE INDEX IF NOT EXISTS idx_user_tracks_user_status
 2. **Одна цель (не мультицель).** Подбор строго по **главной цели** юзера
    (`goal`), плюс универсальные треки (`motivation = '{}'`) в хвост очереди.
    Совпадает с онбордингом («выбери **главную** цель»).
-   Доступные цели (9): `work, travel, exam, study, social, fun, content, brain,
-   relocation`. Словарь онбординга = `motivation` треков 1:1.
+   Доступные цели (9): `work, travel, exam, relocation, speaking, study, social,
+   content, listening_shadowing`. Словарь онбординга = `motivation` треков 1:1.
 3. **`personal-*` треки — удалить.** Выполнить **отдельным безопасным шагом**:
    только после внедрения новой системы + бэкофилла и проверки, что на трек нет
    прогресса (`step_progress`/`user_tracks`). Удаление каскадит `track_lessons`,

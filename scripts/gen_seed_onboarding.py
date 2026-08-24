@@ -55,8 +55,8 @@ from typing import Any
 PROFICIENCY_LEVELS = ["beginner", "a1", "a2", "b1", "b2", "just_for_fun"]
 DAILY_GOAL_XP_VALUES = [10, 20, 30, 50]
 MOTIVATIONS = [
-    "work", "exam", "travel", "relocation", "study",
-    "social", "content", "fun", "brain",
+    "work", "exam", "travel", "relocation", "speaking", "study",
+    "social", "content", "listening_shadowing",
 ]
 AGE_BRACKETS = ["7-12", "13-17", "18-24", "25-34", "35-44", "45-54", "55+"]
 DAILY_COMMIT_MINUTES = [5, 10, 15, 25]
@@ -74,8 +74,9 @@ NATIVE_LANGS = ["ru", "en", "kk"]
 LEVEL_WEIGHTS = {"beginner": 5, "a1": 25, "a2": 30, "b1": 25, "b2": 10, "just_for_fun": 5}
 DAILY_GOAL_WEIGHTS = {10: 20, 20: 50, 30: 20, 50: 10}
 MOTIVATION_WEIGHTS = {
-    "work": 25, "travel": 20, "exam": 12, "study": 10,
-    "fun": 10, "social": 8, "content": 7, "relocation": 5, "brain": 3,
+    "work": 24, "travel": 19, "exam": 12, "study": 10,
+    "social": 8, "content": 7, "relocation": 5, "speaking": 5,
+    "listening_shadowing": 3,
 }
 AGE_WEIGHTS = {"7-12": 3, "13-17": 12, "18-24": 25, "25-34": 35, "35-44": 15, "45-54": 7, "55+": 3}
 COMMIT_WEIGHTS = {5: 20, 10: 40, 15: 25, 25: 15}

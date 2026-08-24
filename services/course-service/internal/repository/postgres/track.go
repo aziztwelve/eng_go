@@ -406,3 +406,71 @@ func (r *trackRepository) CountUserTracks(ctx context.Context, userID string) (i
 	err := r.pool.QueryRow(ctx, `SELECT COUNT(*) FROM user_tracks WHERE user_id = $1`, userID).Scan(&n)
 	return n, err
 }
+
+func (r *trackRepository) ListVocabulary(ctx context.Context, trackID, userID, search string, limit, offset int) ([]*model.TrackVocabularyEntry, int, error) {
+	conds := []string{"tv.track_id = $1"}
+	args := []interface{}{trackID}
+	pos := 2
+	if search != "" {
+		conds = append(conds, fmt.Sprintf("(v.word ILIKE $%d OR v.translation ILIKE $%d)", pos, pos))
+		args = append(args, "%"+search+"%")
+		pos++
+	}
+	where := strings.Join(conds, " AND ")
+	var total int
+	if err := r.pool.QueryRow(ctx, "SELECT COUNT(*) FROM track_vocabulary tv JOIN vocabulary v ON v.id = tv.vocabulary_id WHERE "+where, args...).Scan(&total); err != nil {
+		return nil, 0, err
+	}
+	if limit <= 0 || limit > 100 {
+		limit = 50
+	}
+	query := fmt.Sprintf(`SELECT v.id, v.language, v.word, v.translation, v.target_language,
+		v.audio_url, v.image_url, v.level, v.pos, v.transcription, v.definition, v.example_sentence,
+		v.created_at, v.updated_at, tv.lesson_id, tv.first_seen_order,
+		CASE WHEN $%d = '' THEN false ELSE EXISTS (
+			SELECT 1 FROM user_flashcards f WHERE f.user_id = $%d AND f.vocabulary_id = v.id AND f.archived_at IS NULL
+		) END
+		FROM track_vocabulary tv JOIN vocabulary v ON v.id = tv.vocabulary_id
+		WHERE %s ORDER BY tv.first_seen_order, v.id LIMIT $%d OFFSET $%d`, pos, pos, where, pos+1, pos+2)
+	args = append(args, userID, limit, offset)
+	rows, err := r.pool.Query(ctx, query, args...)
+	if err != nil {
+		return nil, 0, err
+	}
+	defer rows.Close()
+	entries := make([]*model.TrackVocabularyEntry, 0)
+	for rows.Next() {
+		v := &model.VocabularyEntry{}
+		var audio, image, level, posName, transcription, definition, example sql.NullString
+		entry := &model.TrackVocabularyEntry{Vocabulary: v}
+		if err := rows.Scan(&v.ID, &v.Language, &v.Word, &v.Translation, &v.TargetLanguage,
+			&audio, &image, &level, &posName, &transcription, &definition, &example,
+			&v.CreatedAt, &v.UpdatedAt, &entry.LessonID, &entry.FirstSeenOrder, &entry.Added); err != nil {
+			return nil, 0, err
+		}
+		v.AudioURL, v.ImageURL, v.Level, v.POS, v.Transcription = audio.String, image.String, level.String, posName.String, transcription.String
+		v.Definition, v.ExampleSentence = definition.String, example.String
+		entries = append(entries, entry)
+	}
+	return entries, total, rows.Err()
+}
+
+func (r *trackRepository) VocabularyBelongsToTrack(ctx context.Context, trackID string, vocabularyIDs []string) (map[string]bool, error) {
+	result := make(map[string]bool, len(vocabularyIDs))
+	if len(vocabularyIDs) == 0 {
+		return result, nil
+	}
+	rows, err := r.pool.Query(ctx, `SELECT vocabulary_id FROM track_vocabulary WHERE track_id = $1 AND vocabulary_id = ANY($2::uuid[])`, trackID, vocabularyIDs)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	for rows.Next() {
+		var id string
+		if err := rows.Scan(&id); err != nil {
+			return nil, err
+		}
+		result[id] = true
+	}
+	return result, rows.Err()
+}

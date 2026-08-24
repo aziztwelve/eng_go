@@ -218,6 +218,13 @@ func (c *CourseClient) ReorderTrackLessons(ctx context.Context, req *coursev1.Re
 	return c.client.ReorderTrackLessons(ctx, req)
 }
 
+func (c *CourseClient) ListTrackVocabulary(ctx context.Context, req *coursev1.ListTrackVocabularyRequest) (*coursev1.ListTrackVocabularyResponse, error) {
+	return c.client.ListTrackVocabulary(ctx, req)
+}
+func (c *CourseClient) AddTrackVocabularyAsFlashcards(ctx context.Context, req *coursev1.AddTrackVocabularyAsFlashcardsRequest) (*coursev1.AddTrackVocabularyAsFlashcardsResponse, error) {
+	return c.client.AddTrackVocabularyAsFlashcards(ctx, req)
+}
+
 // === Vocabulary (Phase 2) ===
 
 func (c *CourseClient) ListVocabulary(ctx context.Context, req *coursev1.ListVocabularyRequest) (*coursev1.ListVocabularyResponse, error) {

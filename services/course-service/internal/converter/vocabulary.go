@@ -13,18 +13,20 @@ func ToVocabularyEntryProto(e *model.VocabularyEntry) *coursev1.VocabularyEntry 
 		return nil
 	}
 	return &coursev1.VocabularyEntry{
-		Id:             e.ID,
-		Language:       e.Language,
-		Word:           e.Word,
-		Translation:    e.Translation,
-		TargetLanguage: e.TargetLanguage,
-		AudioUrl:       e.AudioURL,
-		ImageUrl:       e.ImageURL,
-		Level:          e.Level,
-		Pos:            e.POS,
-		Transcription:  e.Transcription,
-		CreatedAt:      timestamppb.New(e.CreatedAt),
-		UpdatedAt:      timestamppb.New(e.UpdatedAt),
+		Id:              e.ID,
+		Language:        e.Language,
+		Word:            e.Word,
+		Translation:     e.Translation,
+		TargetLanguage:  e.TargetLanguage,
+		AudioUrl:        e.AudioURL,
+		ImageUrl:        e.ImageURL,
+		Level:           e.Level,
+		Pos:             e.POS,
+		Transcription:   e.Transcription,
+		Definition:      e.Definition,
+		ExampleSentence: e.ExampleSentence,
+		CreatedAt:       timestamppb.New(e.CreatedAt),
+		UpdatedAt:       timestamppb.New(e.UpdatedAt),
 	}
 }
 

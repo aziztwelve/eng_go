@@ -71,7 +71,7 @@ schedule). Web-документ её **не дублирует** — реали�
        │  выбор target language из 12, UI lang switcher в шапке
        ▼
 2.  /onboarding/goal
-       │  9 опций: work / exam / travel / relocation / study / social / content / fun / brain
+       │  9 опций: work / exam / travel / relocation / speaking / study / social / content / listening_shadowing
        ▼
 3.  /onboarding/age
        │  7 диапазонов: 7-12 / 13-17 / 18-24 / 25-34 / 35-44 / 45-54 / 55+
@@ -680,7 +680,7 @@ function ProjectionChart({ goalCopy }: { goalCopy: ProjectionCopy }) {
 ```
 
 **Copy** в `src/lib/onboarding/copy.ts` — 9 шаблонов под каждый goal (work / exam /
-travel / relocation / study / social / content / fun / brain). На `projection/page.tsx`:
+travel / speaking / study / social / content / fun / brain). На `projection/page.tsx`:
 
 ```tsx
 const goal = state?.motivation?.[0] ?? 'fun';

@@ -31,10 +31,10 @@ func NewTrackHandler(courseClient *client.CourseClient, userClient *client.UserC
 
 // ListTracks GET /api/v1/tracks
 //
-// Язык, уровень и мотивацию можно передать query-параметрами (language, level,
-// track_type, motivation). Если они не заданы — подставляются из профиля
-// авторизованного пользователя (target_language, proficiency_level, motivation),
-// чтобы фронтенд мог звать просто GET /api/v1/tracks без параметров.
+// Язык, уровень, тип и цель можно передать query-параметрами (language, level,
+// track_type, motivation). Язык и уровень по умолчанию берём из профиля.
+// Цель намеренно не подставляется: каталог показывает все цели для уровня
+// пользователя, а не только выбранную на onboarding.
 func (h *TrackHandler) ListTracks(c *gin.Context) {
 	req := &coursev1.ListTracksRequest{
 		Search:             c.Query("search"),
@@ -55,20 +55,17 @@ func (h *TrackHandler) ListTracks(c *gin.Context) {
 		req.TrackType = wrapperspb.String(v)
 	}
 
-	motivationSet := false
 	if v := c.QueryArray("motivation"); len(v) > 0 {
 		req.Motivation = v
-		motivationSet = true
 	} else if v := c.Query("motivation"); v != "" {
 		req.Motivation = []string{v}
-		motivationSet = true
 	}
 
-	// Подставляем недостающие фильтры из профиля авторизованного юзера.
+	// Подставляем из профиля только язык и уровень. Motivation — явный фильтр
+	// для сценариев, где клиент действительно хочет одну цель.
 	needLang := langQ == ""
 	needLevel := levelQ == ""
-	needMotivation := !motivationSet
-	if (needLang || needLevel || needMotivation) && h.userClient != nil {
+	if (needLang || needLevel) && h.userClient != nil {
 		if userID := getUserIDFromCtx(c); userID != "" {
 			if ob, err := h.userClient.GetOnboardingState(c.Request.Context(), &userv1.GetOnboardingStateRequest{UserId: userID}); err == nil && ob.GetState() != nil {
 				st := ob.GetState()
@@ -81,9 +78,6 @@ func (h *TrackHandler) ListTracks(c *gin.Context) {
 					if pl := st.GetProficiencyLevel(); pl != nil && pl.GetValue() != "" {
 						req.Level = wrapperspb.String(pl.GetValue())
 					}
-				}
-				if needMotivation {
-					req.Motivation = st.GetMotivation()
 				}
 			}
 		}
@@ -137,6 +131,43 @@ func (h *TrackHandler) GetTrack(c *gin.Context) {
 		out["lessons"] = lessons
 	}
 	c.JSON(http.StatusOK, out)
+}
+
+func (h *TrackHandler) GetTrackDictionary(c *gin.Context) {
+	userID := getUserIDFromCtx(c)
+	if c.Query("include_added") == "false" {
+		userID = ""
+	}
+	resp, err := h.courseClient.ListTrackVocabulary(c.Request.Context(), &coursev1.ListTrackVocabularyRequest{
+		TrackId: c.Param("id"), UserId: userID, Search: c.Query("search"),
+		Limit: int32(parseIntQuery(c, "limit", 50)), Offset: int32(parseIntQuery(c, "offset", 0)),
+	})
+	if err != nil {
+		writeGRPCError(c, err)
+		return
+	}
+	c.JSON(http.StatusOK, resp)
+}
+
+func (h *TrackHandler) AddTrackDictionary(c *gin.Context) {
+	userID := getUserIDFromCtx(c)
+	var body struct {
+		VocabularyIDs []string `json:"vocabulary_ids"`
+	}
+	if err := c.ShouldBindJSON(&body); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+	if len(body.VocabularyIDs) < 1 || len(body.VocabularyIDs) > 100 {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "vocabulary_ids must contain 1..100 items"})
+		return
+	}
+	resp, err := h.courseClient.AddTrackVocabularyAsFlashcards(c.Request.Context(), &coursev1.AddTrackVocabularyAsFlashcardsRequest{TrackId: c.Param("id"), UserId: userID, VocabularyIds: body.VocabularyIDs})
+	if err != nil {
+		writeGRPCError(c, err)
+		return
+	}
+	c.JSON(http.StatusOK, resp)
 }
 
 // GetTrackProgress GET /api/v1/progress/tracks/:trackId

@@ -35,7 +35,7 @@
       "buildType": "apk"
     },
     "env": {
-      "EXPO_PUBLIC_API_URL": "https://178-104-217-201.sslip.io/api/v1"
+      "EXPO_PUBLIC_API_URL": "https://api.lingoiq.online/api/v1"
     }
   }
 }
@@ -105,12 +105,12 @@ curl -L -o ~/Downloads/engmob.apk "https://expo.dev/artifacts/eas/{artifact-id}.
 
 ### Preview окружение
 ```bash
-EXPO_PUBLIC_API_URL=https://178-104-217-201.sslip.io/api/v1
+EXPO_PUBLIC_API_URL=https://api.lingoiq.online/api/v1
 ```
 
 ### Development окружение
 ```bash
-EXPO_PUBLIC_API_URL=http://178.104.217.201:8080/api/v1
+EXPO_PUBLIC_API_URL=https://api.lingoiq.online/api/v1
 ```
 
 ## Учетные данные (Credentials)

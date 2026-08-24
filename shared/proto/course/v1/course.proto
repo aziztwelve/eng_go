@@ -155,6 +155,9 @@ service CourseService {
   rpc PinForToday(PinForTodayRequest) returns (PinForTodayResponse);
   rpc UnpinFromToday(UnpinFromTodayRequest) returns (UnpinFromTodayResponse);
   rpc ListTodayQueue(ListTodayQueueRequest) returns (ListTodayQueueResponse);
+
+  rpc ListTrackVocabulary(ListTrackVocabularyRequest) returns (ListTrackVocabularyResponse);
+  rpc AddTrackVocabularyAsFlashcards(AddTrackVocabularyAsFlashcardsRequest) returns (AddTrackVocabularyAsFlashcardsResponse);
 }
 
 // Course представляет курс
@@ -757,6 +760,39 @@ message VocabularyEntry {
   google.protobuf.Timestamp created_at = 10;
   google.protobuf.Timestamp updated_at = 11;
   string transcription = 12;  // optional, IPA: /həˈloʊ/
+  string definition = 13;
+  string example_sentence = 14;
+}
+
+message TrackVocabularyEntry {
+  VocabularyEntry vocabulary = 1;
+  string lesson_id = 2;
+  int32 first_seen_order = 3;
+  bool added = 4;
+  Flashcard flashcard = 5;
+}
+message ListTrackVocabularyRequest {
+  string track_id = 1;
+  string user_id = 2;
+  string search = 3;
+  int32 limit = 4;
+  int32 offset = 5;
+}
+message ListTrackVocabularyResponse {
+  string track_id = 1;
+  string track_code = 2;
+  repeated TrackVocabularyEntry entries = 3;
+  int32 total = 4;
+}
+message AddTrackVocabularyAsFlashcardsRequest {
+  string track_id = 1;
+  string user_id = 2;
+  repeated string vocabulary_ids = 3;
+}
+message AddTrackVocabularyAsFlashcardsResponse {
+  repeated string created = 1;
+  repeated string skipped = 2;
+  repeated Flashcard flashcards = 3;
 }
 
 message ListVocabularyRequest {

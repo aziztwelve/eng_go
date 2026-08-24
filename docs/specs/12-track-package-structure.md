@@ -75,7 +75,7 @@ tracks/{PACKAGE_NAME}_V2/
 | `target_language` | да | Изучаемый язык |
 | `native_language` | да | Родной язык — определяет, какая локализация показывается |
 | `level` | да | CEFR-уровень (`A1`–`C2`) — используется для фильтрации каталога |
-| `goal` | да | Записывается в `learning_tracks.motivation`; **должно совпадать** с одним из значений onboarding-целей мобильного приложения (`work, exam, travel, speaking, study, social, content, listening_shadowing`), не с произвольным свободным текстом — иначе трек не попадёт ни в одну цель каталога на моб |
+| `goal` | да | Записывается в `learning_tracks.motivation`; **должно совпадать** с одним из значений onboarding-целей приложения (`work, exam, travel, relocation, speaking, study, social, content, listening_shadowing`), не с произвольным свободным текстом — иначе трек не попадёт ни в одну цель каталога |
 | `track_type` | да | `thematic \| daily \| stories \| podcast` — определяет раздел/иконку в моб |
 
 **Запрещённые поля** (были в старых пакетах, удалены как неиспользуемые):

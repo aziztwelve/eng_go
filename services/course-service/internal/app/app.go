@@ -126,10 +126,10 @@ func New(ctx context.Context) (*App, error) {
 	courseService := service.NewCourseService(courseRepo, videoClient)
 	enrollmentService := service.NewEnrollmentService(enrollmentRepo)
 	progressService := service.NewProgressService(progressRepo, courseRepo, enrollmentRepo, gamificationClient, srsClient)
-	trackService := service.NewTrackService(trackRepo)
 	vocabService := service.NewVocabularyService(vocabRepo)
 	ttsService := service.NewTTSService(ttsRepo)
 	flashcardService := service.NewFlashcardService(flashcardRepo, vocabRepo)
+	trackService := service.NewTrackService(trackRepo, flashcardService, vocabService)
 	todayQueueService := service.NewTodayQueueService(todayQueueRepo)
 
 	// Инициализация gRPC API
