@@ -232,6 +232,32 @@ cd services/gateway && go test ./internal/handler         # ok
 
 ---
 
+## Phase 8 — Track dictionary integration ✅ Backend/Mobile
+
+Track dictionaries reuse the Phase 7 personal flashcard and SRS architecture;
+they do not introduce a second card model.
+
+- Added `courses.track_vocabulary` with ordered track-to-vocabulary relations.
+- Extended the importer to materialize deterministic vocabulary IDs and relations.
+- Generated placeholders (`The term ...`, `Listening word:`) are skipped.
+- Added `ListTrackVocabulary` and `AddTrackVocabularyAsFlashcards` RPCs.
+- Added protected Gateway routes for dictionary read and flashcard add.
+- Add requests validate track membership and use the existing idempotent
+  `AddVocabularyAsFlashcard` method.
+- Mobile track detail now opens a searchable dictionary with select-one,
+  select-all and add-to-library actions.
+
+Deployment on 2026-08-24:
+
+- Backend commits: `94655f5`, follow-up fix `b8198c6`.
+- Mobile commit: `40575ff`.
+- `450` JSON files imported, `1,178` relations created across `80` tracks.
+- Health endpoint passed.
+- Authenticated dictionary/add E2E smoke test is pending rerun after the UUID
+  cast fix in `b8198c6`.
+
+---
+
 ## Sprint 2 — Mobile UI (~5 дней)
 
 ### ✅ 2.1 API types + api-client — DONE

@@ -1,6 +1,6 @@
 # Phase 8 — Track Dictionaries and Flashcards Architecture
 
-**Статус:** Planning
+**Статус:** Implemented on backend and mobile; deployed to production
 **Зависимости:** Phase 2 (tracks/vocabulary), Phase 3 (SRS), Phase 7 (word flashcards)
 
 ## Цель
@@ -78,7 +78,7 @@ Query parameters:
 - `include_added` — default true; when true each entry includes the user's
   current flashcard status.
 
-Response:
+Response (actual gateway shape; vocabulary fields are nested under `vocabulary`):
 
 ```json
 {
@@ -87,18 +87,20 @@ Response:
   "total": 2,
   "entries": [
     {
-      "vocabulary_id": "uuid",
-      "word": "boarding pass",
-      "translation": "посадочный талон",
-      "language": "en",
-      "target_language": "ru",
-      "definition": "...",
-      "example_sentence": "...",
-      "audio_url": "https://...",
+      "vocabulary": {
+        "id": "uuid",
+        "word": "boarding pass",
+        "translation": "посадочный талон",
+        "language": "en",
+        "target_language": "ru",
+        "definition": "...",
+        "example_sentence": "...",
+        "audio_url": "https://..."
+      },
+      "lesson_id": "uuid",
+      "first_seen_order": 101,
       "added": false,
-      "flashcard_id": null,
-      "strength": null,
-      "repetitions": 0
+      "flashcard": null
     }
   ]
 }
@@ -165,6 +167,51 @@ reported import warning.
 - The dictionary screen can navigate to the personal flashcard library after a
   successful add.
 - Track identity is carried by stable code or UUID, never by display title.
+
+## Implementation And Deployment
+
+### Backend
+
+- Migration: `services/course-service/migrations/000027_create_track_vocabulary.{up,down}.sql`.
+- Importer: `scripts/import_tracks_from_json.py` materializes valid `match_pairs`
+  into `courses.vocabulary` and `courses.track_vocabulary` in the same SQL
+  transaction as the track seed.
+- Conservative extraction skips generated values beginning with `The term ...`
+  or `Listening word:` and prints warnings instead of creating false translations.
+- Proto RPCs: `ListTrackVocabulary` and `AddTrackVocabularyAsFlashcards`.
+- Gateway routes:
+  - `GET /api/v1/tracks/:idOrCode/dictionary` (JWT required for current added state).
+  - `POST /api/v1/tracks/:idOrCode/dictionary/add` (JWT required, 1..100 IDs).
+- Add flow validates track membership, then delegates to the existing idempotent
+  `AddVocabularyAsFlashcard` with `source=lesson`.
+- Repeated add returns the existing personal card in `skipped` and does not reset
+  SRS state.
+
+### Mobile
+
+- Track detail route: `src/app/(tabs)/tracks/[id].tsx`.
+- Dictionary route: `src/app/(tabs)/tracks/[id]/dictionary.tsx`.
+- API/hook integration: `TracksApi.dictionary`,
+  `TracksApi.addDictionaryWords`, `useTrackDictionary` and
+  `useAddTrackDictionaryWords`.
+- The screen supports search, per-word selection, select-all, added badges and
+  navigation to the existing `/flashcards` library.
+- No second flashcard or SRS implementation was introduced.
+
+### Production Rollout
+
+- Backend commit: `94655f5`; production SQL cast fix: `b8198c6`.
+- Mobile commit: `40575ff`.
+- Both repositories were pushed to `dev`.
+- Server backend was fast-forwarded, rebuilt and restarted.
+- Migration `000027_create_track_vocabulary` was applied.
+- Server importer processed `450` JSON files sequentially.
+- Production database contains `1,178` track-vocabulary relations across `80` tracks.
+- `GET /health` returns HTTP 200 with `{"status":"ok"}`.
+- The first dictionary smoke test exposed a PostgreSQL `uuid = text` cast bug;
+  it was fixed in `b8198c6` and the course-service was restarted.
+- Full authenticated dictionary/add smoke test must be rerun after this fix;
+  the initial failed response is not a successful E2E check.
 
 ## Acceptance criteria
 

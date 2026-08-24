@@ -1,10 +1,55 @@
 # Tracks deploy runbook
 
-Дата последнего проверенного прогона: 2026-07-06.
+Дата последнего проверенного прогона: 2026-08-24.
 
-Цель: синхронизировать локальный backend-код с сервером через Git, пересобрать
-`gateway` и `course-service`, применить миграцию `courses.user_tracks` и
-проверить, что мобильное приложение получает треки.
+Цель: синхронизировать backend-код с сервером через Git, пересобрать Go-сервисы,
+применить migration track dictionary, материализовать словари из JSON и
+проверить API, которое использует mobile.
+
+## Track Dictionary Deployment
+
+После обновления backend:
+
+```bash
+cd /var/www/html/elearning
+docker exec -i elearning-postgres psql -U admin -d elearning \
+  -v ON_ERROR_STOP=1 \
+  < services/course-service/migrations/000027_create_track_vocabulary.up.sql
+
+set -o pipefail
+for file in tracks/*_V2/*.json; do
+  ionice -c3 nice -n 19 python3 scripts/import_tracks_from_json.py "$file" \
+    | docker exec -i elearning-postgres psql \
+        -v ON_ERROR_STOP=1 -U admin -d elearning >/dev/null || exit 1
+done
+```
+
+The importer is idempotent and must run sequentially. It never deletes user
+flashcards or SRS progress. It skips generated non-translation placeholders and
+prints warnings.
+
+Production run on 2026-08-24:
+
+- `450` JSON files processed;
+- `1,178` rows in `courses.track_vocabulary`;
+- `80` tracks with materialized dictionary relations;
+- `GET /health` returned HTTP 200.
+
+Dictionary API currently requires JWT:
+
+```bash
+TOKEN=$(curl -sS -X POST https://api.lingoiq.online/api/v1/auth/guest \
+  -H 'Content-Type: application/json' \
+  -d '{"device_id":"dictionary-runbook-check"}' \
+  | node -e 'let s="";process.stdin.on("data",d=>s+=d);process.stdin.on("end",()=>process.stdout.write(JSON.parse(s).access_token||""))')
+
+curl -sS -H "Authorization: Bearer $TOKEN" \
+  'https://api.lingoiq.online/api/v1/tracks/A1_STUDY_V2_T05/dictionary?limit=3'
+```
+
+The first authenticated smoke test found a PostgreSQL `uuid = text` cast error
+in the added-state projection. The fix is backend commit `b8198c6`; rerun the
+authenticated GET and POST add/idempotency checks after deployment.
 
 ## Что чинит этот деплой
 

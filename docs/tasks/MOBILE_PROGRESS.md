@@ -7,8 +7,8 @@
 > [PHASE_5_PROGRESS.md](./PHASE_5_PROGRESS.md).
 
 **Дата старта:** 2026-05-16
-**Дата последнего обновления:** 2026-05-16
-**Статус:** 🟢 **Sprint 1 (Phase 3) + Sprint 2 (Onboarding) + Sprint 3 (Phase 4/4.5: leagues + friends) + Sprint 4 (Phase 5 AI: chat/roleplay/writing/tutor/pronunciation) + Content seed MVP — DONE. Mobile MVP complete.**
+**Дата последнего обновления:** 2026-08-24
+**Статус:** 🟢 **Mobile MVP + level-first track catalog + track dictionaries — implemented.**
 
 ---
 
@@ -21,6 +21,11 @@
 - Components: `components/tracks/*`
 - Hook: `use-tracks`, `use-daily-lesson`
 - API: `TracksApi` в `lib/api-client.ts`
+- Catalog flow: level → goal → thematic track.
+- Dictionary route: `(tabs)/tracks/[id]/dictionary` with search, selection,
+  select-all and add-to-flashcards actions.
+- Dictionary API: `TracksApi.dictionary` and
+  `TracksApi.addDictionaryWords`.
 
 **Phase 1 (геймификация):**
 - Components: `GamificationTopbar`, `XPBar`, `StreakBadge`, `HeartCounter`,
@@ -172,6 +177,24 @@
   /profile/notifications и нажать «Включить push». Это нормально для MVP
   (избегаем permission denied на onboarding'е), но для роста нужен
   ненавязчивый promotion в Phase 4.
+
+### Phase 8 — Track dictionary integration ✅
+
+- `src/types/api.ts`: track vocabulary response and add response types.
+- `src/hooks/use-tracks.ts`: dictionary query and add mutation with flashcard
+  cache invalidation.
+- `src/app/(tabs)/tracks/[id].tsx`: dictionary CTA before lesson list.
+- `src/app/(tabs)/tracks/[id]/dictionary.tsx`: searchable dictionary with
+  added badges, select-one/select-all and add CTA.
+- Existing `/flashcards` library and `/flashcards/session` remain the only
+  personal card/practice flow.
+
+Verification on 2026-08-24:
+
+- `npx tsc --noEmit` — passed.
+- Targeted ESLint — 0 errors; only pre-existing warnings in shared files.
+- Backend importer tests and course/gateway Go tests — passed.
+- Physical Android device smoke test is still pending.
 
 ---
 
