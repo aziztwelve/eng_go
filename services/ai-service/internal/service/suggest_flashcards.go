@@ -116,6 +116,9 @@ func normalizeLevel(raw string) string {
 func normalizeGoal(raw string) string {
 	g := strings.ToLower(strings.TrimSpace(raw))
 	switch g {
+	case "business_english":
+		// Business English uses the existing professional vocabulary pool.
+		return "work"
 	case "work", "travel", "exam", "study", "career":
 		return g
 	}

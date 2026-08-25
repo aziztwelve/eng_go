@@ -3,7 +3,7 @@
 BEGIN;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('09708d1d-8ed5-54d7-a724-d073822d582e', 'A1_BUSINESS_T01', 'Представление себя на работе', 'Курс A1 по деловому английскому: простое профессиональное представление себя и понимание базовых рабочих знакомств.', 'en', 'A1', 'thematic', ARRAY['work']::text[], true, 0, NOW(), NOW())
+VALUES ('09708d1d-8ed5-54d7-a724-d073822d582e', 'A1_BUSINESS_T01', 'Представление себя на работе', 'Курс A1 по деловому английскому: простое профессиональное представление себя и понимание базовых рабочих знакомств.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
@@ -643,7 +643,7 @@ VALUES ('09708d1d-8ed5-54d7-a724-d073822d582e', '5ba96519-7d7c-5860-977a-22df734
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('f0c525fc-3565-5ab9-9306-c50c3b4d6298', 'A1_BUSINESS_T02', 'Профессии и отделы', 'Курс A1 по деловому английскому: разговор о базовых должностях и о том, где работают люди.', 'en', 'A1', 'thematic', ARRAY['work']::text[], true, 0, NOW(), NOW())
+VALUES ('f0c525fc-3565-5ab9-9306-c50c3b4d6298', 'A1_BUSINESS_T02', 'Профессии и отделы', 'Курс A1 по деловому английскому: разговор о базовых должностях и о том, где работают люди.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
@@ -1283,7 +1283,7 @@ VALUES ('f0c525fc-3565-5ab9-9306-c50c3b4d6298', '19026430-772d-55ff-b854-da3fae6
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('947c921f-d92a-514a-91a4-ff3de64f4441', 'A1_BUSINESS_T03', 'Предметы и места на работе', 'Курс A1 по деловому английскому: обозначение распространённых предметов и мест в офисе или на рабочем месте.', 'en', 'A1', 'thematic', ARRAY['work']::text[], true, 0, NOW(), NOW())
+VALUES ('947c921f-d92a-514a-91a4-ff3de64f4441', 'A1_BUSINESS_T03', 'Предметы и места на работе', 'Курс A1 по деловому английскому: обозначение распространённых предметов и мест в офисе или на рабочем месте.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
@@ -1923,7 +1923,7 @@ VALUES ('947c921f-d92a-514a-91a4-ff3de64f4441', '3af7c25e-04ec-56d0-b6fb-a9d70bf
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('efe453ec-9255-527e-8d97-824a40a9a366', 'A1_BUSINESS_T04', 'Повседневный рабочий распорядок', 'Курс A1 по деловому английскому: описание простого рабочего дня и понимание обычных рабочих действий.', 'en', 'A1', 'thematic', ARRAY['work']::text[], true, 0, NOW(), NOW())
+VALUES ('efe453ec-9255-527e-8d97-824a40a9a366', 'A1_BUSINESS_T04', 'Повседневный рабочий распорядок', 'Курс A1 по деловому английскому: описание простого рабочего дня и понимание обычных рабочих действий.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
@@ -2563,7 +2563,7 @@ VALUES ('efe453ec-9255-527e-8d97-824a40a9a366', '49da44f2-31d9-5210-b6c3-60fb24d
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('47e14364-e91e-51b9-9e52-98d08216cf28', 'A1_BUSINESS_T05', 'Простые рабочие просьбы', 'Курс A1 по деловому английскому: как просить о чём-то на работе и вежливо отвечать на такие просьбы.', 'en', 'A1', 'thematic', ARRAY['work']::text[], true, 0, NOW(), NOW())
+VALUES ('47e14364-e91e-51b9-9e52-98d08216cf28', 'A1_BUSINESS_T05', 'Простые рабочие просьбы', 'Курс A1 по деловому английскому: как просить о чём-то на работе и вежливо отвечать на такие просьбы.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
@@ -3203,7 +3203,7 @@ VALUES ('47e14364-e91e-51b9-9e52-98d08216cf28', 'b557eecd-3dc8-5cc2-818d-c37e8a0
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('7f0b3978-0a32-5683-bf29-19593f7f3a2d', 'A1_BUSINESS_T06', 'Телефонные звонки на работе', 'Курс A1 по деловому английскому: очень простые профессиональные разговоры по телефону.', 'en', 'A1', 'thematic', ARRAY['work']::text[], true, 0, NOW(), NOW())
+VALUES ('7f0b3978-0a32-5683-bf29-19593f7f3a2d', 'A1_BUSINESS_T06', 'Телефонные звонки на работе', 'Курс A1 по деловому английскому: очень простые профессиональные разговоры по телефону.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
@@ -3843,7 +3843,7 @@ VALUES ('7f0b3978-0a32-5683-bf29-19593f7f3a2d', 'bffaac9f-95d8-55ae-b94a-9dc266a
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('0f60b643-51be-5fe9-8708-45fa8a598f18', 'A1_BUSINESS_T07', 'Письма и короткие сообщения', 'Курс A1 по деловому английскому: чтение и написание очень коротких рабочих писем и сообщений.', 'en', 'A1', 'thematic', ARRAY['work']::text[], true, 0, NOW(), NOW())
+VALUES ('0f60b643-51be-5fe9-8708-45fa8a598f18', 'A1_BUSINESS_T07', 'Письма и короткие сообщения', 'Курс A1 по деловому английскому: чтение и написание очень коротких рабочих писем и сообщений.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
@@ -4483,7 +4483,7 @@ VALUES ('0f60b643-51be-5fe9-8708-45fa8a598f18', 'f45ab034-c043-5958-9b45-5ef5ee4
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('7ce4ef3d-bba1-51b3-97ad-cd462a955a9e', 'A1_BUSINESS_T08', 'Встречи: базовый язык', 'Курс A1 по деловому английскому: понимание и использование простого языка до и во время встречи.', 'en', 'A1', 'thematic', ARRAY['work']::text[], true, 0, NOW(), NOW())
+VALUES ('7ce4ef3d-bba1-51b3-97ad-cd462a955a9e', 'A1_BUSINESS_T08', 'Встречи: базовый язык', 'Курс A1 по деловому английскому: понимание и использование простого языка до и во время встречи.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
@@ -5123,7 +5123,7 @@ VALUES ('7ce4ef3d-bba1-51b3-97ad-cd462a955a9e', '49335d7f-a1f6-5230-8dd9-4bd2550
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('6022871e-0556-54b8-9e50-68fd2a24de15', 'A1_BUSINESS_T09', 'Клиенты и простое обслуживание', 'Курс A1 по деловому английскому: вежливое общение с клиентами в простых рабочих ситуациях.', 'en', 'A1', 'thematic', ARRAY['work']::text[], true, 0, NOW(), NOW())
+VALUES ('6022871e-0556-54b8-9e50-68fd2a24de15', 'A1_BUSINESS_T09', 'Клиенты и простое обслуживание', 'Курс A1 по деловому английскому: вежливое общение с клиентами в простых рабочих ситуациях.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
@@ -5763,7 +5763,7 @@ VALUES ('6022871e-0556-54b8-9e50-68fd2a24de15', '4a95f313-a9b8-505f-9281-b994ea5
 ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_index;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('3e134547-e488-5f22-84c5-487ec3fed79c', 'A1_BUSINESS_T10', 'Итоговая деловая миссия уровня A1', 'Курс A1 по деловому английскому: объединение представлений, распорядка, просьб, звонков, сообщений, встреч и общения с клиентами.', 'en', 'A1', 'thematic', ARRAY['work']::text[], true, 0, NOW(), NOW())
+VALUES ('3e134547-e488-5f22-84c5-487ec3fed79c', 'A1_BUSINESS_T10', 'Итоговая деловая миссия уровня A1', 'Курс A1 по деловому английскому: объединение представлений, распорядка, просьб, звонков, сообщений, встреч и общения с клиентами.', 'en', 'A1', 'thematic', ARRAY['business_english']::text[], true, 0, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
