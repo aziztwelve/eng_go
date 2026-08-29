@@ -1,0 +1,1425 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_T09_SHOPPING",
+    "title": {
+      "ru": "Покупки",
+      "en": "Shopping"
+    },
+    "description": {
+      "ru": "Магазины, одежда, цены и оплата.",
+      "en": "Shops, clothes, prices and paying."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "sort_order": 9
+  },
+  "lessons": [
+    {
+      "code": "A1_T09_SHOPPING_L01",
+      "order": 1,
+      "title": {
+        "ru": "В магазине",
+        "en": "In the Shop"
+      },
+      "objective": {
+        "ru": "Говорить о покупках и ценах.",
+        "en": "Talk about shopping and prices."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T09_SHOPPING_L01_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "buy",
+                "right": "покупать"
+              },
+              {
+                "id": "P2",
+                "left": "sell",
+                "right": "продавать"
+              },
+              {
+                "id": "P3",
+                "left": "price",
+                "right": "цена"
+              },
+              {
+                "id": "P4",
+                "left": "money",
+                "right": "деньги"
+              },
+              {
+                "id": "P5",
+                "left": "cheap",
+                "right": "дешёвый"
+              },
+              {
+                "id": "P6",
+                "left": "expensive",
+                "right": "дорогой"
+              },
+              {
+                "id": "P7",
+                "left": "market",
+                "right": "рынок"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L01_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Антоним к expensive?",
+            "options": [
+              {
+                "id": "A",
+                "text": "price",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "cheap",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "money",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "market",
+                "is_correct": false
+              }
+            ],
+            "explanation": "cheap — «дешёвый», антоним expensive."
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L01_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "У меня нет денег.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I have no money.",
+            "word_bank": [
+              "no",
+              "buy",
+              "price",
+              "money",
+              "I",
+              "have"
+            ]
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L01_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "What is the ___ of this bread?",
+            "correct_answer": "price",
+            "options": [
+              "market",
+              "money",
+              "price"
+            ],
+            "translation_hint": "Какова цена этого хлеба?"
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L01_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "shop",
+              "sell",
+              "the",
+              "buy",
+              "market",
+              "I",
+              "bread",
+              "at"
+            ],
+            "correct_words": [
+              "I",
+              "buy",
+              "bread",
+              "at",
+              "the",
+              "market"
+            ]
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L01_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "This apple is cheap!",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L01_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I want to buy cheese.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Я хочу купить сыр."
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L01_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "At the Market",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Anna is at the market.",
+                "translation": "Анна на рынке."
+              },
+              {
+                "type": "dialogue",
+                "character": "Seller",
+                "text": "Apples! Cheap apples!",
+                "translation": "Яблоки! Дешёвые яблоки!"
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "I buy five apples, please!",
+                "translation": "Пять яблок, пожалуйста!"
+              },
+              {
+                "type": "choice",
+                "text": "Что делает Анна?",
+                "options": [
+                  {
+                    "text": "She buys apples",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "She sells apples",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "She eats money",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L01_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "market",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "цвет",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "место, где продают еду и вещи",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "место, где спят",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "вид транспорта",
+                "is_correct": false
+              }
+            ],
+            "explanation": "market — «рынок»."
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L01_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "This car is ___!",
+            "audio_text": "This car is expensive!",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "expensive",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "cheap",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "market",
+                "is_correct": false
+              }
+            ],
+            "explanation": "expensive — «дорогой»."
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L01_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ bread and milk.",
+            "correct_answer": "buy",
+            "hint_prefix": "bu",
+            "explanation": "buy — покупать."
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L01_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "buy",
+                "text": "buy"
+              },
+              {
+                "id": "V2",
+                "audio_text": "sell",
+                "text": "sell"
+              },
+              {
+                "id": "V3",
+                "audio_text": "price",
+                "text": "price"
+              },
+              {
+                "id": "V4",
+                "audio_text": "money",
+                "text": "money"
+              },
+              {
+                "id": "V5",
+                "audio_text": "cheap",
+                "text": "cheap"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L01_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "Is this bread cheap?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "Yes, it is expensive cheap.",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "Yes, it is cheap!",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "It cheap is.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Отвечаем: Yes, it is cheap!"
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T09_SHOPPING_L02",
+      "order": 2,
+      "title": {
+        "ru": "Одежда",
+        "en": "Clothes"
+      },
+      "objective": {
+        "ru": "Назвать одежду и размер.",
+        "en": "Name clothes and sizes."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T09_SHOPPING_L02_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "shirt",
+                "right": "рубашка"
+              },
+              {
+                "id": "P2",
+                "left": "shoes",
+                "right": "обувь"
+              },
+              {
+                "id": "P3",
+                "left": "size",
+                "right": "размер"
+              },
+              {
+                "id": "P4",
+                "left": "jacket",
+                "right": "куртка"
+              },
+              {
+                "id": "P5",
+                "left": "hat",
+                "right": "шляпа"
+              },
+              {
+                "id": "P6",
+                "left": "dress",
+                "right": "платье"
+              },
+              {
+                "id": "P7",
+                "left": "wear",
+                "right": "носить"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L02_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Что надевают на голову?",
+            "options": [
+              {
+                "id": "A",
+                "text": "a hat",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "a dress",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "shoes",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "a shirt",
+                "is_correct": false
+              }
+            ],
+            "explanation": "hat — «шляпа»."
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L02_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "У меня новая куртка.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I have a new jacket.",
+            "word_bank": [
+              "old",
+              "new",
+              "I",
+              "have",
+              "a",
+              "jacket",
+              "wear"
+            ]
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L02_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "What ___ do you wear: small or big?",
+            "correct_answer": "size",
+            "options": [
+              "market",
+              "price",
+              "size"
+            ],
+            "translation_hint": "Какой размер вы носите: маленький или большой?"
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L02_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "buy",
+              "a",
+              "black",
+              "shirt",
+              "white",
+              "wear",
+              "I"
+            ],
+            "correct_words": [
+              "I",
+              "wear",
+              "a",
+              "white",
+              "shirt"
+            ]
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L02_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Her dress is beautiful!",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L02_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I like your new shoes!",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Мне нравятся твои новые туфли!"
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L02_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "New Shirt",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Tom buys a new shirt.",
+                "translation": "Том покупает новую рубашку."
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "What size is it?",
+                "translation": "Какой это размер?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "It is my size. And it is cheap!",
+                "translation": "Это мой размер. И она дешёвая!"
+              },
+              {
+                "type": "choice",
+                "text": "Какая рубашка у Тома?",
+                "options": [
+                  {
+                    "text": "New and cheap",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Old and expensive",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "Big and black",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L02_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "wear",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "стирать одежду",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "покупать одежду",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "иметь на себе одежду",
+                "is_correct": true
+              },
+              {
+                "id": "D",
+                "text": "продавать одежду",
+                "is_correct": false
+              }
+            ],
+            "explanation": "wear — «носить» (одежду)."
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L02_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I wear a ___ on my head.",
+            "audio_text": "I wear a hat on my head.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "shoes",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "hat",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "audio_text": "dress",
+                "is_correct": false
+              }
+            ],
+            "explanation": "hat — «на голове»."
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L02_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I wear a blue ___ to school.",
+            "correct_answer": "shirt",
+            "hint_prefix": "sh",
+            "explanation": "shirt — рубашка."
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L02_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "shirt",
+                "text": "shirt"
+              },
+              {
+                "id": "V2",
+                "audio_text": "shoes",
+                "text": "shoes"
+              },
+              {
+                "id": "V3",
+                "audio_text": "jacket",
+                "text": "jacket"
+              },
+              {
+                "id": "V4",
+                "audio_text": "dress",
+                "text": "dress"
+              },
+              {
+                "id": "V5",
+                "audio_text": "wear",
+                "text": "wear"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L02_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "I like your jacket!"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "Thank you! It is new.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Yes, I wear your jacket.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I jacket thanks.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Благодарим: Thank you! It is new."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T09_SHOPPING_L03",
+      "order": 3,
+      "title": {
+        "ru": "Оплата",
+        "en": "Paying"
+      },
+      "objective": {
+        "ru": "Спросить цену и оплатить покупку.",
+        "en": "Ask the price and pay for your purchase."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T09_SHOPPING_L03_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "pay",
+                "right": "платить"
+              },
+              {
+                "id": "P2",
+                "left": "card",
+                "right": "карта"
+              },
+              {
+                "id": "P3",
+                "left": "cash",
+                "right": "наличные"
+              },
+              {
+                "id": "P4",
+                "left": "discount",
+                "right": "скидка"
+              },
+              {
+                "id": "P5",
+                "left": "receipt",
+                "right": "чек"
+              },
+              {
+                "id": "P6",
+                "left": "how much",
+                "right": "сколько стоит"
+              },
+              {
+                "id": "P7",
+                "left": "change",
+                "right": "сдача"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L03_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Чем платят: картой или …?",
+            "options": [
+              {
+                "id": "A",
+                "text": "discount",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "change",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "cash",
+                "is_correct": true
+              },
+              {
+                "id": "D",
+                "text": "receipt",
+                "is_correct": false
+              }
+            ],
+            "explanation": "cash — «наличные»; card — «карта»."
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L03_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Сколько стоит эта шляпа?",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "How much is this hat?",
+            "word_bank": [
+              "How",
+              "this",
+              "buy",
+              "hat",
+              "price",
+              "much",
+              "is"
+            ]
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L03_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Can I pay by ___?",
+            "correct_answer": "card",
+            "options": [
+              "card",
+              "receipt",
+              "discount"
+            ],
+            "translation_hint": "Можно заплатить картой?"
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L03_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "is",
+              "much",
+              "this",
+              "dress",
+              "How",
+              "hat",
+              "buy"
+            ],
+            "correct_words": [
+              "How",
+              "much",
+              "is",
+              "this",
+              "dress"
+            ]
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L03_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I pay cash and take my change.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L03_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "How much is it?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Сколько это стоит?"
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L03_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Paying",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Anna buys a hat.",
+                "translation": "Анна покупает шляпу."
+              },
+              {
+                "type": "dialogue",
+                "character": "Seller",
+                "text": "The hat is cheap today: big discount!",
+                "translation": "Шляпа сегодня дешёвая: большая скидка!"
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "Great! I pay by card.",
+                "translation": "Отлично! Плачу картой."
+              },
+              {
+                "type": "choice",
+                "text": "Чем платит Анна?",
+                "options": [
+                  {
+                    "text": "By card",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Cash",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "With change",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L03_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "discount",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "плата за доставку",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "цена становится больше",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "новая цена",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "цена становится меньше",
+                "is_correct": true
+              }
+            ],
+            "explanation": "discount — «скидка»."
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L03_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "Take your ___, please.",
+            "audio_text": "Take your receipt, please.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "receipt",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "card",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "discount",
+                "is_correct": false
+              }
+            ],
+            "explanation": "receipt — «чек», его дают после оплаты."
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L03_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I pay with money in my hands: I pay ___.",
+            "correct_answer": "cash",
+            "hint_prefix": "ca",
+            "explanation": "cash — наличные."
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L03_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "pay",
+                "text": "pay"
+              },
+              {
+                "id": "V2",
+                "audio_text": "card",
+                "text": "card"
+              },
+              {
+                "id": "V3",
+                "audio_text": "cash",
+                "text": "cash"
+              },
+              {
+                "id": "V4",
+                "audio_text": "receipt",
+                "text": "receipt"
+              },
+              {
+                "id": "V5",
+                "audio_text": "change",
+                "text": "change"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T09_SHOPPING_L03_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Seller",
+                "text": "Cash or card?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "Receipt, please.",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "Card, please.",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "I am card.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Отвечаем способом оплаты: Card, please."
+          }
+        }
+      ]
+    }
+  ]
+}

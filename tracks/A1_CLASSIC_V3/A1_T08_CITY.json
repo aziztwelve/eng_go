@@ -1,0 +1,1424 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_T08_CITY",
+    "title": {
+      "ru": "Город",
+      "en": "City"
+    },
+    "description": {
+      "ru": "Места в городе, направления и транспорт.",
+      "en": "Places in the city, directions and transport."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "sort_order": 8
+  },
+  "lessons": [
+    {
+      "code": "A1_T08_CITY_L01",
+      "order": 1,
+      "title": {
+        "ru": "Места",
+        "en": "Places"
+      },
+      "objective": {
+        "ru": "Назвать места в городе.",
+        "en": "Name places in the city."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T08_CITY_L01_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "city",
+                "right": "город"
+              },
+              {
+                "id": "P2",
+                "left": "street",
+                "right": "улица"
+              },
+              {
+                "id": "P3",
+                "left": "shop",
+                "right": "магазин"
+              },
+              {
+                "id": "P4",
+                "left": "school",
+                "right": "школа"
+              },
+              {
+                "id": "P5",
+                "left": "park",
+                "right": "парк"
+              },
+              {
+                "id": "P6",
+                "left": "hospital",
+                "right": "больница"
+              },
+              {
+                "id": "P7",
+                "left": "cafe",
+                "right": "кафе"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L01_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Куда идут учиться дети?",
+            "options": [
+              {
+                "id": "A",
+                "text": "to the hospital",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "to the park",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "to the shop",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "to school",
+                "is_correct": true
+              }
+            ],
+            "explanation": "school — «школа»."
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L01_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Парк рядом с моим домом.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "The park is near my house.",
+            "word_bank": [
+              "park",
+              "near",
+              "far",
+              "my",
+              "house",
+              "The",
+              "is",
+              "street"
+            ]
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L01_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I buy bread in the ___.",
+            "correct_answer": "shop",
+            "options": [
+              "school",
+              "shop",
+              "park"
+            ],
+            "translation_hint": "Я покупаю хлеб в магазине."
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L01_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "on",
+              "city",
+              "school",
+              "is",
+              "this",
+              "My",
+              "house",
+              "street"
+            ],
+            "correct_words": [
+              "My",
+              "school",
+              "is",
+              "on",
+              "this",
+              "street"
+            ]
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L01_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "The hospital is a big building.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L01_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I walk in the park.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Я гуляю в парке."
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L01_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "In the City",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Anna walks in the city.",
+                "translation": "Анна гуляет по городу."
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "What is in your city?",
+                "translation": "Что есть в твоём городе?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "A big park, two schools and many shops!",
+                "translation": "Большой парк, две школы и много магазинов!"
+              },
+              {
+                "type": "choice",
+                "text": "Что есть в городе Анны?",
+                "options": [
+                  {
+                    "text": "A park and shops",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "A hospital and cafes",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "A garden and rooms",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L01_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "hospital",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "место, где покупают еду",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "место, где учатся",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "место, где гуляют",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "место, где лечат людей",
+                "is_correct": true
+              }
+            ],
+            "explanation": "hospital — «больница»."
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L01_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "The ___ is near my house.",
+            "audio_text": "The cafe is near my house.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "city",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "cafe",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "audio_text": "school",
+                "is_correct": false
+              }
+            ],
+            "explanation": "cafe — «кафе»."
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L01_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Children learn at ___.",
+            "correct_answer": "school",
+            "hint_prefix": "sc",
+            "explanation": "school — школа."
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L01_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "city",
+                "text": "city"
+              },
+              {
+                "id": "V2",
+                "audio_text": "street",
+                "text": "street"
+              },
+              {
+                "id": "V3",
+                "audio_text": "shop",
+                "text": "shop"
+              },
+              {
+                "id": "V4",
+                "audio_text": "school",
+                "text": "school"
+              },
+              {
+                "id": "V5",
+                "audio_text": "park",
+                "text": "park"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L01_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "Is there a cafe near here?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "The street is a cafe.",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "Yes, the cafe is on Green Street.",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "Yes, I am a cafe.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Отвечаем, где: on Green Street."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T08_CITY_L02",
+      "order": 2,
+      "title": {
+        "ru": "Направления",
+        "en": "Directions"
+      },
+      "objective": {
+        "ru": "Понимать указания: налево, направо, прямо.",
+        "en": "Understand directions: left, right, straight."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T08_CITY_L02_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "left",
+                "right": "налево"
+              },
+              {
+                "id": "P2",
+                "left": "right",
+                "right": "направо"
+              },
+              {
+                "id": "P3",
+                "left": "straight",
+                "right": "прямо"
+              },
+              {
+                "id": "P4",
+                "left": "near",
+                "right": "рядом"
+              },
+              {
+                "id": "P5",
+                "left": "far",
+                "right": "далеко"
+              },
+              {
+                "id": "P6",
+                "left": "corner",
+                "right": "угол"
+              },
+              {
+                "id": "P7",
+                "left": "map",
+                "right": "карта"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L02_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Противоположность right (направо)?",
+            "options": [
+              {
+                "id": "A",
+                "text": "left",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "straight",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "near",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "corner",
+                "is_correct": false
+              }
+            ],
+            "explanation": "left — «налево»."
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L02_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Иди прямо и потом налево.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Go straight and then left.",
+            "word_bank": [
+              "and",
+              "right",
+              "then",
+              "left",
+              "straight",
+              "Go",
+              "far"
+            ]
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L02_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "The shop is ___: I walk two minutes!",
+            "correct_answer": "near",
+            "options": [
+              "far",
+              "straight",
+              "near"
+            ],
+            "translation_hint": "Магазин рядом: иду две минуты!"
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L02_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "corner",
+              "Turn",
+              "right",
+              "at",
+              "street",
+              "map",
+              "the"
+            ],
+            "correct_words": [
+              "Turn",
+              "right",
+              "at",
+              "the",
+              "corner"
+            ]
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L02_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "The park is far from my house.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L02_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Go straight, then turn left.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Идите прямо, потом налево."
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L02_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Looking for the Cafe",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Tom looks for a cafe.",
+                "translation": "Том ищет кафе."
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "Excuse me! Where is the cafe?",
+                "translation": "Извините! Где кафе?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Woman",
+                "text": "Go straight and turn left at the corner.",
+                "translation": "Идите прямо и поверните налево на углу."
+              },
+              {
+                "type": "choice",
+                "text": "Куда повернуть Тому?",
+                "options": [
+                  {
+                    "text": "Left at the corner",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Right at the park",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "Straight to the hospital",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L02_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "map",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "показывает улицы и дороги",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "показывает еду",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "показывает время",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "лечит людей",
+                "is_correct": false
+              }
+            ],
+            "explanation": "map — «карта»."
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L02_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "Turn ___ at the corner.",
+            "audio_text": "Turn right at the corner.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "right",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "map",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "near",
+                "is_correct": false
+              }
+            ],
+            "explanation": "turn right — повернуть направо."
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L02_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "My house is ___: ten minutes by bus.",
+            "correct_answer": "far",
+            "hint_prefix": "fa",
+            "explanation": "far — далеко."
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L02_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "left",
+                "text": "left"
+              },
+              {
+                "id": "V2",
+                "audio_text": "right",
+                "text": "right"
+              },
+              {
+                "id": "V3",
+                "audio_text": "straight",
+                "text": "straight"
+              },
+              {
+                "id": "V4",
+                "audio_text": "near",
+                "text": "near"
+              },
+              {
+                "id": "V5",
+                "audio_text": "far",
+                "text": "far"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L02_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Tom",
+                "text": "Where is the park?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "Go straight, then turn right.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "The park goes straight.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Right is the park turn.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Даём направление: Go straight, then turn right."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T08_CITY_L03",
+      "order": 3,
+      "title": {
+        "ru": "Транспорт",
+        "en": "Transport"
+      },
+      "objective": {
+        "ru": "Назвать транспорт и рассказать, как вы ездите.",
+        "en": "Name transport and say how you travel."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T08_CITY_L03_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "bus",
+                "right": "автобус"
+              },
+              {
+                "id": "P2",
+                "left": "car",
+                "right": "машина"
+              },
+              {
+                "id": "P3",
+                "left": "train",
+                "right": "поезд"
+              },
+              {
+                "id": "P4",
+                "left": "taxi",
+                "right": "такси"
+              },
+              {
+                "id": "P5",
+                "left": "walk",
+                "right": "идти пешком"
+              },
+              {
+                "id": "P6",
+                "left": "stop",
+                "right": "остановка"
+              },
+              {
+                "id": "P7",
+                "left": "station",
+                "right": "станция"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L03_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "На чём ездят по рельсам?",
+            "options": [
+              {
+                "id": "A",
+                "text": "a train",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "a bus",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "a taxi",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "a car",
+                "is_correct": false
+              }
+            ],
+            "explanation": "train — «поезд»."
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L03_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Я еду на автобусе.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I go by bus.",
+            "word_bank": [
+              "go",
+              "train",
+              "car",
+              "I",
+              "by",
+              "bus"
+            ]
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L03_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "The bus ___ is near the shop.",
+            "correct_answer": "stop",
+            "options": [
+              "walk",
+              "stop",
+              "station"
+            ],
+            "translation_hint": "Остановка автобуса рядом с магазином."
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L03_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "bus",
+              "drive",
+              "school",
+              "walk",
+              "I",
+              "to"
+            ],
+            "correct_words": [
+              "I",
+              "walk",
+              "to",
+              "school"
+            ]
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L03_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "The train comes at eight.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L03_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I go by taxi.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Я еду на такси."
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L03_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "To the Station",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Anna goes to the station.",
+                "translation": "Анна едет на станцию."
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "Do you go by bus?",
+                "translation": "Ты едешь на автобусе?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "No, I walk. The station is near!",
+                "translation": "Нет, я иду пешком. Станция рядом!"
+              },
+              {
+                "type": "choice",
+                "text": "Как Анна добирается?",
+                "options": [
+                  {
+                    "text": "She walks",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "By bus",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "By taxi",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L03_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "walk",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "спать",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "идти пешком",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "летать",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "ехать на машине",
+                "is_correct": false
+              }
+            ],
+            "explanation": "walk — «идти пешком»."
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L03_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I go to work by ___.",
+            "audio_text": "I go to work by car.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "car",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "station",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "stop",
+                "is_correct": false
+              }
+            ],
+            "explanation": "by car — «на машине»."
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L03_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "We wait for the bus at the ___.",
+            "correct_answer": "stop",
+            "hint_prefix": "st",
+            "explanation": "bus stop — автобусная остановка."
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L03_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "bus",
+                "text": "bus"
+              },
+              {
+                "id": "V2",
+                "audio_text": "car",
+                "text": "car"
+              },
+              {
+                "id": "V3",
+                "audio_text": "train",
+                "text": "train"
+              },
+              {
+                "id": "V4",
+                "audio_text": "taxi",
+                "text": "taxi"
+              },
+              {
+                "id": "V5",
+                "audio_text": "walk",
+                "text": "walk"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T08_CITY_L03_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "How do you go to school?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "I bus go.",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "I go by bus.",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "I am by bus school.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "by + транспорт: I go by bus."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1423 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_T10_TIME",
+    "title": {
+      "ru": "Время",
+      "en": "Time"
+    },
+    "description": {
+      "ru": "Дни недели, «сегодня и завтра», месяцы и времена года.",
+      "en": "Days of the week, \"today and tomorrow\", months and seasons."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "sort_order": 10
+  },
+  "lessons": [
+    {
+      "code": "A1_T10_TIME_L01",
+      "order": 1,
+      "title": {
+        "ru": "Дни недели",
+        "en": "Days of the Week"
+      },
+      "objective": {
+        "ru": "Назвать семь дней недели.",
+        "en": "Name the seven days of the week."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T10_TIME_L01_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "Monday",
+                "right": "понедельник"
+              },
+              {
+                "id": "P2",
+                "left": "Tuesday",
+                "right": "вторник"
+              },
+              {
+                "id": "P3",
+                "left": "Wednesday",
+                "right": "среда"
+              },
+              {
+                "id": "P4",
+                "left": "Thursday",
+                "right": "четверг"
+              },
+              {
+                "id": "P5",
+                "left": "Friday",
+                "right": "пятница"
+              },
+              {
+                "id": "P6",
+                "left": "Saturday",
+                "right": "суббота"
+              },
+              {
+                "id": "P7",
+                "left": "Sunday",
+                "right": "воскресенье"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L01_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Какой день после Monday?",
+            "options": [
+              {
+                "id": "A",
+                "text": "Tuesday",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Friday",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Sunday",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "Wednesday",
+                "is_correct": false
+              }
+            ],
+            "explanation": "После понедельника — вторник (Tuesday)."
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L01_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "В субботу я дома.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "On Saturday I am at home.",
+            "word_bank": [
+              "I",
+              "home",
+              "Saturday",
+              "Monday",
+              "week",
+              "On",
+              "at",
+              "am"
+            ]
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L01_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ is the first day of the week.",
+            "correct_answer": "Monday",
+            "options": [
+              "Sunday",
+              "Friday",
+              "Monday"
+            ],
+            "translation_hint": "Понедельник — первый день недели."
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L01_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "Sunday",
+              "work",
+              "on",
+              "I",
+              "rest",
+              "Saturday"
+            ],
+            "correct_words": [
+              "I",
+              "rest",
+              "on",
+              "Sunday"
+            ]
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L01_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "We meet on Friday.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L01_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "See you on Monday!",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Увидимся в понедельник!"
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L01_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Busy Week",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Tom plans his week.",
+                "translation": "Том планирует неделю."
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "What do you do on Monday?",
+                "translation": "Что ты делаешь в понедельник?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "I work on Monday and study on Wednesday.",
+                "translation": "Я работаю в понедельник и учусь в среду."
+              },
+              {
+                "type": "choice",
+                "text": "Когда Том учится?",
+                "options": [
+                  {
+                    "text": "On Wednesday",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "On Monday",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "On Sunday",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L01_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "Saturday",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "день перед пятницей",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "первый день недели",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "рабочий день после среды",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "шестой день недели, выходной",
+                "is_correct": true
+              }
+            ],
+            "explanation": "Saturday — «суббота», выходной."
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L01_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "We have a meeting on ___.",
+            "audio_text": "We have a meeting on Thursday.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "Sunday",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "Thursday",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "audio_text": "Tuesday",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Thursday — четверг."
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L01_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ is after Friday.",
+            "correct_answer": "Saturday",
+            "hint_prefix": "sa",
+            "explanation": "После пятницы — суббота."
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L01_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "Monday",
+                "text": "Monday"
+              },
+              {
+                "id": "V2",
+                "audio_text": "Tuesday",
+                "text": "Tuesday"
+              },
+              {
+                "id": "V3",
+                "audio_text": "Wednesday",
+                "text": "Wednesday"
+              },
+              {
+                "id": "V4",
+                "audio_text": "Thursday",
+                "text": "Thursday"
+              },
+              {
+                "id": "V5",
+                "audio_text": "Friday",
+                "text": "Friday"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L01_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "When do we meet?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "In Friday at six.",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "On Friday, at six.",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "Friday we in at.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Дни недели с предлогом on: on Friday."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T10_TIME_L02",
+      "order": 2,
+      "title": {
+        "ru": "Сегодня и завтра",
+        "en": "Today and Tomorrow"
+      },
+      "objective": {
+        "ru": "Говорить о сегодня, завтра и вчера.",
+        "en": "Talk about today, tomorrow and yesterday."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T10_TIME_L02_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "today",
+                "right": "сегодня"
+              },
+              {
+                "id": "P2",
+                "left": "tomorrow",
+                "right": "завтра"
+              },
+              {
+                "id": "P3",
+                "left": "yesterday",
+                "right": "вчера"
+              },
+              {
+                "id": "P4",
+                "left": "week",
+                "right": "неделя"
+              },
+              {
+                "id": "P5",
+                "left": "now",
+                "right": "сейчас"
+              },
+              {
+                "id": "P6",
+                "left": "weekend",
+                "right": "выходные"
+              },
+              {
+                "id": "P7",
+                "left": "free",
+                "right": "свободный"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L02_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Какой день был до сегодня?",
+            "options": [
+              {
+                "id": "A",
+                "text": "tomorrow",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "weekend",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "yesterday",
+                "is_correct": true
+              },
+              {
+                "id": "D",
+                "text": "now",
+                "is_correct": false
+              }
+            ],
+            "explanation": "yesterday — «вчера»."
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L02_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Завтра я свободен.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Tomorrow I am free.",
+            "word_bank": [
+              "free",
+              "Tomorrow",
+              "am",
+              "busy",
+              "today",
+              "I"
+            ]
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L02_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I am busy ___, but tomorrow I am free.",
+            "correct_answer": "today",
+            "options": [
+              "now",
+              "yesterday",
+              "today"
+            ],
+            "translation_hint": "Сегодня я занят, но завтра свободен."
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L02_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "work",
+              "do",
+              "you",
+              "on",
+              "today",
+              "the",
+              "weekend",
+              "What",
+              "do"
+            ],
+            "correct_words": [
+              "What",
+              "do",
+              "you",
+              "do",
+              "on",
+              "the",
+              "weekend"
+            ]
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L02_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "The week has seven days.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L02_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I am free now!",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Сейчас я свободен!"
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L02_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Plans",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "Are you free today?",
+                "translation": "Ты свободен сегодня?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "No, I am busy today. And tomorrow I work!",
+                "translation": "Нет, сегодня я занят. А завтра работаю!"
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "And on the weekend?",
+                "translation": "А на выходных?"
+              },
+              {
+                "type": "choice",
+                "text": "Когда Том свободен?",
+                "options": [
+                  {
+                    "text": "On the weekend",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Today",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "Tomorrow",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L02_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "weekend",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "один день",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "пять рабочих дней",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "весь месяц",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "суббота и воскресенье",
+                "is_correct": true
+              }
+            ],
+            "explanation": "weekend — «выходные»."
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L02_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ is Tuesday.",
+            "audio_text": "Today is Tuesday.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "yesterday",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "today",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "audio_text": "week",
+                "is_correct": false
+              }
+            ],
+            "explanation": "today — «сегодня»."
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L02_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "See you ___!",
+            "correct_answer": "tomorrow",
+            "hint_prefix": "to",
+            "explanation": "tomorrow — завтра."
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L02_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "today",
+                "text": "today"
+              },
+              {
+                "id": "V2",
+                "audio_text": "tomorrow",
+                "text": "tomorrow"
+              },
+              {
+                "id": "V3",
+                "audio_text": "yesterday",
+                "text": "yesterday"
+              },
+              {
+                "id": "V4",
+                "audio_text": "now",
+                "text": "now"
+              },
+              {
+                "id": "V5",
+                "audio_text": "free",
+                "text": "free"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L02_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "Are you free tomorrow?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "Yes, I am free tomorrow!",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "Yes, I free tomorrow am.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Tomorrow free yes I.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Порядок: I am free tomorrow."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T10_TIME_L03",
+      "order": 3,
+      "title": {
+        "ru": "Месяцы и сезоны",
+        "en": "Months and Seasons"
+      },
+      "objective": {
+        "ru": "Назвать месяцы и времена года.",
+        "en": "Name months and seasons."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T10_TIME_L03_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "month",
+                "right": "месяц"
+              },
+              {
+                "id": "P2",
+                "left": "year",
+                "right": "год"
+              },
+              {
+                "id": "P3",
+                "left": "January",
+                "right": "январь"
+              },
+              {
+                "id": "P4",
+                "left": "spring",
+                "right": "весна"
+              },
+              {
+                "id": "P5",
+                "left": "summer",
+                "right": "лето"
+              },
+              {
+                "id": "P6",
+                "left": "autumn",
+                "right": "осень"
+              },
+              {
+                "id": "P7",
+                "left": "winter",
+                "right": "зима"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L03_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Какой сезон самый холодный?",
+            "options": [
+              {
+                "id": "A",
+                "text": "summer",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "autumn",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "spring",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "winter",
+                "is_correct": true
+              }
+            ],
+            "explanation": "winter — «зима»."
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L03_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Мой день рождения в январе.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "My birthday is in January.",
+            "word_bank": [
+              "in",
+              "month",
+              "My",
+              "is",
+              "spring",
+              "January",
+              "birthday"
+            ]
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L03_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "The ___ has twelve months.",
+            "correct_answer": "year",
+            "options": [
+              "month",
+              "year",
+              "winter"
+            ],
+            "translation_hint": "В году двенадцать месяцев."
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L03_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "summer",
+              "I",
+              "like",
+              "month",
+              "winter"
+            ],
+            "correct_words": [
+              "I",
+              "like",
+              "summer"
+            ]
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L03_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "My birthday is in spring.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L03_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "January is the first month.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Январь — первый месяц."
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L03_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Seasons",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Anna likes all seasons.",
+                "translation": "Анне нравятся все времена года."
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "What is your favorite season?",
+                "translation": "Какое твоё любимое время года?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "Summer! The park is green and bright.",
+                "translation": "Лето! Парк зелёный и яркий."
+              },
+              {
+                "type": "choice",
+                "text": "Какой сезон любимый у Анны?",
+                "options": [
+                  {
+                    "text": "Summer",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Winter",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "Autumn",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L03_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "spring",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "самый холодный сезон",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "сезон после зимы, всё цветёт",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "сезон после лета",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "месяц года",
+                "is_correct": false
+              }
+            ],
+            "explanation": "spring — «весна»."
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L03_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "My birthday is in ___.",
+            "audio_text": "My birthday is in January.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "year",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "January",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "audio_text": "spring",
+                "is_correct": false
+              }
+            ],
+            "explanation": "in January — «в январе» (месяц)."
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L03_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "December is the last ___ of the year.",
+            "correct_answer": "month",
+            "hint_prefix": "mo",
+            "explanation": "month — месяц."
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L03_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "month",
+                "text": "month"
+              },
+              {
+                "id": "V2",
+                "audio_text": "year",
+                "text": "year"
+              },
+              {
+                "id": "V3",
+                "audio_text": "spring",
+                "text": "spring"
+              },
+              {
+                "id": "V4",
+                "audio_text": "summer",
+                "text": "summer"
+              },
+              {
+                "id": "V5",
+                "audio_text": "winter",
+                "text": "winter"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T10_TIME_L03_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Tom",
+                "text": "When is your birthday?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "My birthday is spring on.",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "In my birthday is spring.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My birthday is in spring.",
+                "is_correct": true
+              }
+            ],
+            "explanation": "Месяц/сезон с предлогом in: in spring."
+          }
+        }
+      ]
+    }
+  ]
+}

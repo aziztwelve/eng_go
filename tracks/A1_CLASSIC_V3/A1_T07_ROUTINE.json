@@ -1,0 +1,1419 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_T07_ROUTINE",
+    "title": {
+      "ru": "Мой день",
+      "en": "My Day"
+    },
+    "description": {
+      "ru": "Утро, день и вечер: распорядок дня простыми фразами.",
+      "en": "Morning, day and evening: your daily routine in simple phrases."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "sort_order": 7
+  },
+  "lessons": [
+    {
+      "code": "A1_T07_ROUTINE_L01",
+      "order": 1,
+      "title": {
+        "ru": "Утро",
+        "en": "Morning"
+      },
+      "objective": {
+        "ru": "Рассказать о утренних делах.",
+        "en": "Talk about your morning."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T07_ROUTINE_L01_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "morning",
+                "right": "утро"
+              },
+              {
+                "id": "P2",
+                "left": "wake up",
+                "right": "просыпаться"
+              },
+              {
+                "id": "P3",
+                "left": "get up",
+                "right": "вставать"
+              },
+              {
+                "id": "P4",
+                "left": "wash",
+                "right": "умываться"
+              },
+              {
+                "id": "P5",
+                "left": "dress",
+                "right": "одеваться"
+              },
+              {
+                "id": "P6",
+                "left": "early",
+                "right": "рано"
+              },
+              {
+                "id": "P7",
+                "left": "alarm",
+                "right": "будильник"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L01_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Что звенит утром?",
+            "options": [
+              {
+                "id": "A",
+                "text": "the evening",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "the breakfast",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "the bed",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "the alarm",
+                "is_correct": true
+              }
+            ],
+            "explanation": "alarm — «будильник»."
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L01_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Я встаю рано.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I get up early.",
+            "word_bank": [
+              "up",
+              "night",
+              "early",
+              "get",
+              "morning",
+              "I"
+            ]
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L01_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ at seven in the morning.",
+            "correct_answer": "wake up",
+            "options": [
+              "wash",
+              "dress",
+              "wake up"
+            ],
+            "translation_hint": "Я просыпаюсь в семь утра."
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L01_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "dress",
+              "and",
+              "eat",
+              "I",
+              "wash",
+              "sleep"
+            ],
+            "correct_words": [
+              "I",
+              "wash",
+              "and",
+              "dress"
+            ]
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L01_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "My alarm rings early!",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L01_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I wake up early.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Я просыпаюсь рано."
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L01_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Tom's Morning",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "The alarm rings.",
+                "translation": "Будильник звенит."
+              },
+              {
+                "type": "narration",
+                "text": "Tom wakes up and gets up.",
+                "translation": "Том просыпается и встаёт."
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "Good morning! I wash, dress and eat breakfast!",
+                "translation": "Доброе утро! Я умываюсь, одеваюсь и завтракаю!"
+              },
+              {
+                "type": "choice",
+                "text": "Что делает Том после будильника?",
+                "options": [
+                  {
+                    "text": "He gets up",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "He sleeps",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "He cooks dinner",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L01_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "early",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "вечером",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "до обычного времени, не поздно",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "ночью",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "после обычного времени",
+                "is_correct": false
+              }
+            ],
+            "explanation": "early — «рано»."
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L01_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I ___ with cold water.",
+            "audio_text": "I wash with cold water.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "dress",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "wash",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "audio_text": "get up",
+                "is_correct": false
+              }
+            ],
+            "explanation": "wash — «умываться»."
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L01_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "My ___ rings at six!",
+            "correct_answer": "alarm",
+            "hint_prefix": "al",
+            "explanation": "alarm — будильник."
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L01_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "morning",
+                "text": "morning"
+              },
+              {
+                "id": "V2",
+                "audio_text": "early",
+                "text": "early"
+              },
+              {
+                "id": "V3",
+                "audio_text": "wash",
+                "text": "wash"
+              },
+              {
+                "id": "V4",
+                "audio_text": "dress",
+                "text": "dress"
+              },
+              {
+                "id": "V5",
+                "audio_text": "alarm",
+                "text": "alarm"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L01_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "Do you wake up early?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "Yes, I early wake.",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "I am early.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Yes, I wake up at six.",
+                "is_correct": true
+              }
+            ],
+            "explanation": "Порядок: wake up early / at six."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T07_ROUTINE_L02",
+      "order": 2,
+      "title": {
+        "ru": "День и работа",
+        "en": "Day and Work"
+      },
+      "objective": {
+        "ru": "Рассказать о занятиях днём.",
+        "en": "Talk about your day activities."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T07_ROUTINE_L02_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "day",
+                "right": "день"
+              },
+              {
+                "id": "P2",
+                "left": "work",
+                "right": "работать"
+              },
+              {
+                "id": "P3",
+                "left": "study",
+                "right": "учиться"
+              },
+              {
+                "id": "P4",
+                "left": "busy",
+                "right": "занятый"
+              },
+              {
+                "id": "P5",
+                "left": "tired",
+                "right": "уставший"
+              },
+              {
+                "id": "P6",
+                "left": "meeting",
+                "right": "встреча"
+              },
+              {
+                "id": "P7",
+                "left": "break",
+                "right": "перерыв"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L02_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Как сказать «я работаю»?",
+            "options": [
+              {
+                "id": "A",
+                "text": "I tired",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "I meeting",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I busy",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "I work",
+                "is_correct": true
+              }
+            ],
+            "explanation": "work — «работать» (глагол)."
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L02_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Я занят весь день.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I am busy all day.",
+            "word_bank": [
+              "day",
+              "I",
+              "am",
+              "work",
+              "all",
+              "tired",
+              "busy"
+            ]
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L02_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I am ___: I work and study!",
+            "correct_answer": "busy",
+            "options": [
+              "tired",
+              "busy",
+              "break"
+            ],
+            "translation_hint": "Я занят: работаю и учусь!"
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L02_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "work",
+              "night",
+              "the",
+              "I",
+              "am",
+              "day",
+              "in"
+            ],
+            "correct_words": [
+              "I",
+              "work",
+              "in",
+              "the",
+              "day"
+            ]
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L02_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I have a short break at work.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L02_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I am busy all day.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Я занят весь день."
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L02_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Busy Day",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Tom has a busy day.",
+                "translation": "У Тома насыщенный день."
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "Are you tired?",
+                "translation": "Ты устал?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "Yes! I work, study and have three meetings!",
+                "translation": "Да! Я работаю, учусь и у меня три встречи!"
+              },
+              {
+                "type": "choice",
+                "text": "Почему Том устал?",
+                "options": [
+                  {
+                    "text": "He is busy",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "He is hungry",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "He is early",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L02_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "break",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "короткий отдых от работы",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "встреча",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "долгий сон",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "новая работа",
+                "is_correct": false
+              }
+            ],
+            "explanation": "break — «перерыв»."
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L02_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I am ___ after work.",
+            "audio_text": "I am tired after work.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "study",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "busy",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "tired",
+                "is_correct": true
+              }
+            ],
+            "explanation": "tired — «уставший»."
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L02_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Let's take a ___!",
+            "correct_answer": "break",
+            "hint_prefix": "br",
+            "explanation": "take a break — взять перерыв."
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L02_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "work",
+                "text": "work"
+              },
+              {
+                "id": "V2",
+                "audio_text": "study",
+                "text": "study"
+              },
+              {
+                "id": "V3",
+                "audio_text": "busy",
+                "text": "busy"
+              },
+              {
+                "id": "V4",
+                "audio_text": "tired",
+                "text": "tired"
+              },
+              {
+                "id": "V5",
+                "audio_text": "meeting",
+                "text": "meeting"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L02_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "Are you busy today?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "I busy am.",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "Yes, I am meeting have.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Yes, I have a meeting.",
+                "is_correct": true
+              }
+            ],
+            "explanation": "have + a meeting: у меня встреча."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T07_ROUTINE_L03",
+      "order": 3,
+      "title": {
+        "ru": "Вечер",
+        "en": "Evening"
+      },
+      "objective": {
+        "ru": "Рассказать о вечере и отходе ко сну.",
+        "en": "Talk about your evening and bedtime."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T07_ROUTINE_L03_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "evening",
+                "right": "вечер"
+              },
+              {
+                "id": "P2",
+                "left": "night",
+                "right": "ночь"
+              },
+              {
+                "id": "P3",
+                "left": "come home",
+                "right": "приходить домой"
+              },
+              {
+                "id": "P4",
+                "left": "relax",
+                "right": "расслабляться"
+              },
+              {
+                "id": "P5",
+                "left": "go to bed",
+                "right": "ложиться спать"
+              },
+              {
+                "id": "P6",
+                "left": "usually",
+                "right": "обычно"
+              },
+              {
+                "id": "P7",
+                "left": "late",
+                "right": "поздно"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L03_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Когда ложатся спать — утром или …?",
+            "options": [
+              {
+                "id": "A",
+                "text": "in the kitchen",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "early morning",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "at night",
+                "is_correct": true
+              },
+              {
+                "id": "D",
+                "text": "at work",
+                "is_correct": false
+              }
+            ],
+            "explanation": "go to bed at night — ложатся спать ночью."
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L03_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Обычно я прихожу домой поздно.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Usually I come home late.",
+            "word_bank": [
+              "night",
+              "early",
+              "Usually",
+              "late",
+              "I",
+              "home",
+              "come"
+            ]
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L03_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I go to ___ at ten.",
+            "correct_answer": "bed",
+            "options": [
+              "work",
+              "bed",
+              "home"
+            ],
+            "translation_hint": "Я ложусь спать в десять."
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L03_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "relax",
+              "evening",
+              "morning",
+              "In",
+              "the",
+              "I",
+              "cook"
+            ],
+            "correct_words": [
+              "In",
+              "the",
+              "evening",
+              "I",
+              "relax"
+            ]
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L03_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I usually come home at six.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L03_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Good night! I go to bed.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Доброй ночи! Я ложусь спать."
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L03_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Evening Routine",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "It is evening. Anna comes home.",
+                "translation": "Вечер. Анна приходит домой."
+              },
+              {
+                "type": "narration",
+                "text": "She cooks dinner and relaxes.",
+                "translation": "Она готовит ужин и отдыхает."
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "Usually I go to bed late, but not today!",
+                "translation": "Обычно я ложусь поздно, но не сегодня!"
+              },
+              {
+                "type": "choice",
+                "text": "Что делает Анна вечером?",
+                "options": [
+                  {
+                    "text": "She relaxes",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "She works",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "She wakes up",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L03_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "usually",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "большую часть времени, как всегда",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "сегодня",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "никогда",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "один раз",
+                "is_correct": false
+              }
+            ],
+            "explanation": "usually — «обычно»."
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L03_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I ___ late on Saturday.",
+            "audio_text": "I come home late on Saturday.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "come home",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "relax",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "go to bed",
+                "is_correct": false
+              }
+            ],
+            "explanation": "come home — «приходить домой»."
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L03_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ watch TV in the evening.",
+            "correct_answer": "usually",
+            "hint_prefix": "us",
+            "explanation": "usually — «обычно», стоит перед глаголом."
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L03_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "evening",
+                "text": "evening"
+              },
+              {
+                "id": "V2",
+                "audio_text": "night",
+                "text": "night"
+              },
+              {
+                "id": "V3",
+                "audio_text": "usually",
+                "text": "usually"
+              },
+              {
+                "id": "V4",
+                "audio_text": "late",
+                "text": "late"
+              },
+              {
+                "id": "V5",
+                "audio_text": "relax",
+                "text": "relax"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T07_ROUTINE_L03_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Tom",
+                "text": "When do you go to bed?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "I usually go to bed at eleven.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I go usually bed at eleven.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I bed at eleven usually go.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "usually стоит перед go."
+          }
+        }
+      ]
+    }
+  ]
+}

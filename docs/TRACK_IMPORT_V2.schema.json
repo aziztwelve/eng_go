@@ -19,7 +19,7 @@
     },
     "track": {
       "type": "object",
-      "required": ["code", "title", "description", "target_language", "native_language", "level", "goal", "track_type"],
+      "required": ["code", "title", "description", "target_language", "native_language", "level"],
       "additionalProperties": false,
       "properties": {
         "code": { "type": "string", "pattern": "^[A-Z0-9_-]+$" },
@@ -29,7 +29,8 @@
         "native_language": { "type": "string", "pattern": "^[a-z]{2,3}$" },
         "level": { "enum": ["A1", "A2", "B1", "B2", "C1", "C2"] },
         "goal": { "type": "string", "minLength": 1 },
-        "track_type": { "enum": ["thematic", "daily", "stories", "podcast"] }
+        "track_type": { "enum": ["thematic", "daily", "stories", "podcast"] },
+        "sort_order": { "type": "integer", "minimum": 0 }
       }
     },
     "lesson": {

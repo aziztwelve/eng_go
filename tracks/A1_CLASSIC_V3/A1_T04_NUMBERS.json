@@ -1,0 +1,1421 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_T04_NUMBERS",
+    "title": {
+      "ru": "Числа",
+      "en": "Numbers"
+    },
+    "description": {
+      "ru": "Счёт от нуля до двенадцати, «сколько?», первый и второй.",
+      "en": "Count from zero to twelve, ask \"how many?\", first and second."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "sort_order": 4
+  },
+  "lessons": [
+    {
+      "code": "A1_T04_NUMBERS_L01",
+      "order": 1,
+      "title": {
+        "ru": "От одного до семи",
+        "en": "One to Seven"
+      },
+      "objective": {
+        "ru": "Считать от одного до семи.",
+        "en": "Count from one to seven."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T04_NUMBERS_L01_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "one",
+                "right": "один"
+              },
+              {
+                "id": "P2",
+                "left": "two",
+                "right": "два"
+              },
+              {
+                "id": "P3",
+                "left": "three",
+                "right": "три"
+              },
+              {
+                "id": "P4",
+                "left": "four",
+                "right": "четыре"
+              },
+              {
+                "id": "P5",
+                "left": "five",
+                "right": "пять"
+              },
+              {
+                "id": "P6",
+                "left": "six",
+                "right": "шесть"
+              },
+              {
+                "id": "P7",
+                "left": "seven",
+                "right": "семь"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L01_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Сколько будет three + two?",
+            "options": [
+              {
+                "id": "A",
+                "text": "seven",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "five",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "six",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "four",
+                "is_correct": false
+              }
+            ],
+            "explanation": "3 + 2 = 5 (five)."
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L01_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "У меня два брата.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I have two brothers.",
+            "word_bank": [
+              "two",
+              "one",
+              "three",
+              "have",
+              "I",
+              "brothers"
+            ]
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L01_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "One, two, ___, four.",
+            "correct_answer": "three",
+            "options": [
+              "five",
+              "three",
+              "seven"
+            ],
+            "translation_hint": "Раз, два, три, четыре."
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L01_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "two",
+              "apples",
+              "I",
+              "three",
+              "have",
+              "eat"
+            ],
+            "correct_words": [
+              "I",
+              "have",
+              "three",
+              "apples"
+            ]
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L01_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Five, six, seven.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L01_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "One, two, three!",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Раз, два, три!"
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L01_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Counting Apples",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Anna has apples.",
+                "translation": "У Анны есть яблоки."
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "How many apples do you have?",
+                "translation": "Сколько у тебя яблок?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "I have five apples!",
+                "translation": "У меня пять яблок!"
+              },
+              {
+                "type": "choice",
+                "text": "Сколько яблок у Анны?",
+                "options": [
+                  {
+                    "text": "Five",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Four",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "Seven",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L01_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "seven",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "число один",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "число перед пятью",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "число после шести",
+                "is_correct": true
+              },
+              {
+                "id": "D",
+                "text": "число после четырёх",
+                "is_correct": false
+              }
+            ],
+            "explanation": "seven — «семь», идёт после six."
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L01_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___, two, three.",
+            "audio_text": "One, two, three.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "five",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "one",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "audio_text": "six",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Порядок: one, two, three."
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L01_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Two and two is ___.",
+            "correct_answer": "four",
+            "hint_prefix": "fo",
+            "explanation": "2 + 2 = 4 (four)."
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L01_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "one",
+                "text": "one"
+              },
+              {
+                "id": "V2",
+                "audio_text": "two",
+                "text": "two"
+              },
+              {
+                "id": "V3",
+                "audio_text": "three",
+                "text": "three"
+              },
+              {
+                "id": "V4",
+                "audio_text": "four",
+                "text": "four"
+              },
+              {
+                "id": "V5",
+                "audio_text": "five",
+                "text": "five"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L01_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Tom",
+                "text": "How many sisters do you have?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "I have one sister.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I have sister five.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I am one sister.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Отвечаем с числом: I have one sister."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T04_NUMBERS_L02",
+      "order": 2,
+      "title": {
+        "ru": "От восьми до двенадцати",
+        "en": "Eight to Twelve"
+      },
+      "objective": {
+        "ru": "Считать от восьми до двенадцати, узнать возраст.",
+        "en": "Count from eight to twelve, talk about age."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T04_NUMBERS_L02_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "eight",
+                "right": "восемь"
+              },
+              {
+                "id": "P2",
+                "left": "nine",
+                "right": "девять"
+              },
+              {
+                "id": "P3",
+                "left": "ten",
+                "right": "десять"
+              },
+              {
+                "id": "P4",
+                "left": "eleven",
+                "right": "одиннадцать"
+              },
+              {
+                "id": "P5",
+                "left": "twelve",
+                "right": "двенадцать"
+              },
+              {
+                "id": "P6",
+                "left": "zero",
+                "right": "ноль"
+              },
+              {
+                "id": "P7",
+                "left": "number",
+                "right": "число"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L02_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Какое число идёт после ten?",
+            "options": [
+              {
+                "id": "A",
+                "text": "eleven",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "twelve",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "nine",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "zero",
+                "is_correct": false
+              }
+            ],
+            "explanation": "После 10 идёт 11 (eleven)."
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L02_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Мне девять лет.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I am nine.",
+            "word_bank": [
+              "am",
+              "eight",
+              "I",
+              "nine",
+              "ten"
+            ]
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L02_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Nine, ten, ___, twelve.",
+            "correct_answer": "eleven",
+            "options": [
+              "zero",
+              "eleven",
+              "eight"
+            ],
+            "translation_hint": "9, 10, 11, 12."
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L02_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "am",
+              "old",
+              "nine",
+              "eleven",
+              "I",
+              "ten",
+              "years"
+            ],
+            "correct_words": [
+              "I",
+              "am",
+              "eleven",
+              "years",
+              "old"
+            ]
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L02_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Eight, nine, ten.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L02_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Ten, eleven, twelve.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Десять, одиннадцать, двенадцать."
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L02_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Age",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "How old are you, Tom?",
+                "translation": "Сколько тебе лет, Том?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "I am eleven. And you?",
+                "translation": "Мне одиннадцать. А тебе?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "I am twelve!",
+                "translation": "Мне двенадцать!"
+              },
+              {
+                "type": "choice",
+                "text": "Сколько лет Анне?",
+                "options": [
+                  {
+                    "text": "Twelve",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Eleven",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "Ten",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L02_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "zero",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "число после девяти",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "десять",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "число перед двумя",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "число «ничего»",
+                "is_correct": true
+              }
+            ],
+            "explanation": "zero — «ноль»."
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L02_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ is after eleven.",
+            "audio_text": "Twelve is after eleven.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "ten",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "zero",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "twelve",
+                "is_correct": true
+              }
+            ],
+            "explanation": "twelve — «двенадцать», после eleven."
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L02_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___, nine, ten.",
+            "correct_answer": "eight",
+            "hint_prefix": "ei",
+            "explanation": "eight — восемь."
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L02_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "eight",
+                "text": "eight"
+              },
+              {
+                "id": "V2",
+                "audio_text": "nine",
+                "text": "nine"
+              },
+              {
+                "id": "V3",
+                "audio_text": "ten",
+                "text": "ten"
+              },
+              {
+                "id": "V4",
+                "audio_text": "eleven",
+                "text": "eleven"
+              },
+              {
+                "id": "V5",
+                "audio_text": "twelve",
+                "text": "twelve"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L02_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "How old are you?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "I am ten years old.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I have ten years.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I am years ten.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Возраст: I am + число (+ years old)."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T04_NUMBERS_L03",
+      "order": 3,
+      "title": {
+        "ru": "Сколько?",
+        "en": "How Many?"
+      },
+      "objective": {
+        "ru": "Спрашивать количество, сравнивать: больше, меньше, половина.",
+        "en": "Ask about quantity, compare: more, less, half."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T04_NUMBERS_L03_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "how many",
+                "right": "сколько"
+              },
+              {
+                "id": "P2",
+                "left": "count",
+                "right": "считать"
+              },
+              {
+                "id": "P3",
+                "left": "more",
+                "right": "больше"
+              },
+              {
+                "id": "P4",
+                "left": "less",
+                "right": "меньше"
+              },
+              {
+                "id": "P5",
+                "left": "first",
+                "right": "первый"
+              },
+              {
+                "id": "P6",
+                "left": "second",
+                "right": "второй"
+              },
+              {
+                "id": "P7",
+                "left": "half",
+                "right": "половина"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L03_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Как спросить количество?",
+            "options": [
+              {
+                "id": "A",
+                "text": "What is your name?",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "How old are you?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "How are you?",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "How many?",
+                "is_correct": true
+              }
+            ],
+            "explanation": "How many? — «сколько?» про количество."
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L03_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "У меня больше яблок.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I have more apples.",
+            "word_bank": [
+              "more",
+              "I",
+              "have",
+              "less",
+              "many",
+              "apples"
+            ]
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L03_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Cut the apple in ___.",
+            "correct_answer": "half",
+            "options": [
+              "more",
+              "first",
+              "half"
+            ],
+            "translation_hint": "Разрежь яблоко пополам."
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L03_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "is",
+              "have",
+              "How",
+              "you",
+              "much",
+              "do",
+              "many",
+              "eggs"
+            ],
+            "correct_words": [
+              "How",
+              "many",
+              "eggs",
+              "do",
+              "you",
+              "have"
+            ]
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L03_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I have more bread.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L03_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "How many apples do you have?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Сколько у тебя яблок?"
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L03_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Counting Books",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Tom counts his books.",
+                "translation": "Том считает свои книги."
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "How many books do you have?",
+                "translation": "Сколько у тебя книг?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "I have twelve books!",
+                "translation": "У меня двенадцать книг!"
+              },
+              {
+                "type": "choice",
+                "text": "Что делает Том?",
+                "options": [
+                  {
+                    "text": "He counts his books",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "He eats his books",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "He reads the menu",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L03_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "half",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "одна из двух равных частей",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "первая часть",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "все части",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "две части",
+                "is_correct": false
+              }
+            ],
+            "explanation": "half — «половина»."
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L03_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "___ brothers do you have?",
+            "audio_text": "How many brothers do you have?",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "how are",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "how old",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "how many",
+                "is_correct": true
+              }
+            ],
+            "explanation": "how many — «сколько» про количество."
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L03_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "One, two, three — I can ___!",
+            "correct_answer": "count",
+            "hint_prefix": "co",
+            "explanation": "count — считать."
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L03_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "count",
+                "text": "count"
+              },
+              {
+                "id": "V2",
+                "audio_text": "more",
+                "text": "more"
+              },
+              {
+                "id": "V3",
+                "audio_text": "less",
+                "text": "less"
+              },
+              {
+                "id": "V4",
+                "audio_text": "first",
+                "text": "first"
+              },
+              {
+                "id": "V5",
+                "audio_text": "second",
+                "text": "second"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T04_NUMBERS_L03_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "How many books do you have?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "I have twelve books.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I am twelve books.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I have count books.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Отвечаем количеством: I have twelve books."
+          }
+        }
+      ]
+    }
+  ]
+}

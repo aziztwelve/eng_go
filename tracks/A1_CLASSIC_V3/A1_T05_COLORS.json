@@ -1,0 +1,1424 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_T05_COLORS",
+    "title": {
+      "ru": "Цвета",
+      "en": "Colors"
+    },
+    "description": {
+      "ru": "Основные цвета и описание предметов: большой, новый, красивый.",
+      "en": "Basic colors and describing things: big, new, beautiful."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "sort_order": 5
+  },
+  "lessons": [
+    {
+      "code": "A1_T05_COLORS_L01",
+      "order": 1,
+      "title": {
+        "ru": "Основные цвета",
+        "en": "Basic Colors"
+      },
+      "objective": {
+        "ru": "Назвать основные цвета.",
+        "en": "Name the basic colors."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T05_COLORS_L01_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "red",
+                "right": "красный"
+              },
+              {
+                "id": "P2",
+                "left": "blue",
+                "right": "синий"
+              },
+              {
+                "id": "P3",
+                "left": "green",
+                "right": "зелёный"
+              },
+              {
+                "id": "P4",
+                "left": "yellow",
+                "right": "жёлтый"
+              },
+              {
+                "id": "P5",
+                "left": "black",
+                "right": "чёрный"
+              },
+              {
+                "id": "P6",
+                "left": "white",
+                "right": "белый"
+              },
+              {
+                "id": "P7",
+                "left": "color",
+                "right": "цвет"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L01_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Какого цвета банан?",
+            "options": [
+              {
+                "id": "A",
+                "text": "white",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "red",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "yellow",
+                "is_correct": true
+              },
+              {
+                "id": "D",
+                "text": "black",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Банан жёлтый — yellow."
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L01_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "У меня зелёное яблоко.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I have a green apple.",
+            "word_bank": [
+              "I",
+              "have",
+              "a",
+              "red",
+              "apple",
+              "blue",
+              "green"
+            ]
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L01_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "The sky is ___.",
+            "correct_answer": "blue",
+            "options": [
+              "black",
+              "blue",
+              "yellow"
+            ],
+            "translation_hint": "Небо синее."
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L01_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "eat",
+              "green",
+              "like",
+              "the",
+              "apple",
+              "I",
+              "red"
+            ],
+            "correct_words": [
+              "I",
+              "like",
+              "the",
+              "red",
+              "apple"
+            ]
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L01_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Black and white.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L01_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "What is your favorite color?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Какой твой любимый цвет?"
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L01_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Colors Around",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Anna looks around.",
+                "translation": "Анна смотрит вокруг."
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "What color is the apple?",
+                "translation": "Какого цвета яблоко?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "It is red!",
+                "translation": "Оно красное!"
+              },
+              {
+                "type": "choice",
+                "text": "Какого цвета яблоко?",
+                "options": [
+                  {
+                    "text": "Red",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Blue",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "Black",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L01_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "color",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "еда",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "число",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "то, что видим: красный, синий…",
+                "is_correct": true
+              },
+              {
+                "id": "D",
+                "text": "имя",
+                "is_correct": false
+              }
+            ],
+            "explanation": "color — «цвет»."
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L01_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "The sun is ___.",
+            "audio_text": "The sun is yellow.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "green",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "white",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "yellow",
+                "is_correct": true
+              }
+            ],
+            "explanation": "Солнце жёлтое — yellow."
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L01_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "The apple is ___.",
+            "correct_answer": "red",
+            "hint_prefix": "re",
+            "explanation": "red — красный."
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L01_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "red",
+                "text": "red"
+              },
+              {
+                "id": "V2",
+                "audio_text": "blue",
+                "text": "blue"
+              },
+              {
+                "id": "V3",
+                "audio_text": "green",
+                "text": "green"
+              },
+              {
+                "id": "V4",
+                "audio_text": "yellow",
+                "text": "yellow"
+              },
+              {
+                "id": "V5",
+                "audio_text": "black",
+                "text": "black"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L01_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Tom",
+                "text": "What color do you like?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "I am green.",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "I eat green.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I like green.",
+                "is_correct": true
+              }
+            ],
+            "explanation": "like + цвет: I like green."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T05_COLORS_L02",
+      "order": 2,
+      "title": {
+        "ru": "Ещё цвета",
+        "en": "More Colors"
+      },
+      "objective": {
+        "ru": "Назвать дополнительные цвета, светлый и тёмный.",
+        "en": "Name more colors, light and dark."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T05_COLORS_L02_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "orange",
+                "right": "оранжевый"
+              },
+              {
+                "id": "P2",
+                "left": "pink",
+                "right": "розовый"
+              },
+              {
+                "id": "P3",
+                "left": "purple",
+                "right": "фиолетовый"
+              },
+              {
+                "id": "P4",
+                "left": "brown",
+                "right": "коричневый"
+              },
+              {
+                "id": "P5",
+                "left": "grey",
+                "right": "серый"
+              },
+              {
+                "id": "P6",
+                "left": "light",
+                "right": "светлый"
+              },
+              {
+                "id": "P7",
+                "left": "dark",
+                "right": "тёмный"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L02_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Какого цвета солнце и апельсин?",
+            "options": [
+              {
+                "id": "A",
+                "text": "orange",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "pink",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "brown",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "grey",
+                "is_correct": false
+              }
+            ],
+            "explanation": "orange — «оранжевый»."
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L02_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Кот серый.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "The cat is grey.",
+            "word_bank": [
+              "brown",
+              "cat",
+              "dark",
+              "grey",
+              "The",
+              "is"
+            ]
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L02_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "The night is ___, the day is light.",
+            "correct_answer": "dark",
+            "options": [
+              "purple",
+              "dark",
+              "pink"
+            ],
+            "translation_hint": "Ночь тёмная, день светлый."
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L02_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "I",
+              "brown",
+              "have",
+              "cat",
+              "black",
+              "dog",
+              "a"
+            ],
+            "correct_words": [
+              "I",
+              "have",
+              "a",
+              "brown",
+              "cat"
+            ]
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L02_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "The brown cat is small.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L02_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I like purple.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Мне нравится фиолетовый."
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L02_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "New Paint",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Tom paints a picture.",
+                "translation": "Том рисует картину."
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "What colors do you have?",
+                "translation": "Какие цвета у тебя есть?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "Red, blue, orange and brown!",
+                "translation": "Красный, синий, оранжевый и коричневый!"
+              },
+              {
+                "type": "choice",
+                "text": "Какого цвета НЕТ у Тома?",
+                "options": [
+                  {
+                    "text": "Purple",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Red",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "Brown",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L02_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "grey",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "цвет банана",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "цвет неба летом",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "цвет травы",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "цвет туч и мышей",
+                "is_correct": true
+              }
+            ],
+            "explanation": "grey — «серый»."
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L02_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "My ___ cat is big.",
+            "audio_text": "My grey cat is big.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "grey",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "pink",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "light",
+                "is_correct": false
+              }
+            ],
+            "explanation": "grey — «серый»."
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L02_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "An orange is ___.",
+            "correct_answer": "orange",
+            "hint_prefix": "or",
+            "explanation": "orange — оранжевый (и фрукт, и цвет)."
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L02_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "orange",
+                "text": "orange"
+              },
+              {
+                "id": "V2",
+                "audio_text": "pink",
+                "text": "pink"
+              },
+              {
+                "id": "V3",
+                "audio_text": "purple",
+                "text": "purple"
+              },
+              {
+                "id": "V4",
+                "audio_text": "brown",
+                "text": "brown"
+              },
+              {
+                "id": "V5",
+                "audio_text": "grey",
+                "text": "grey"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L02_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "Do you like pink?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "No, I like blue.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "No, I am blue.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Yes, I eat pink.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Отвечаем о вкусе: I like blue."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T05_COLORS_L03",
+      "order": 3,
+      "title": {
+        "ru": "Описываем предметы",
+        "en": "Describing Things"
+      },
+      "objective": {
+        "ru": "Описать предметы: большой, маленький, новый, любимый.",
+        "en": "Describe things: big, small, new, favorite."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T05_COLORS_L03_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "big",
+                "right": "большой"
+              },
+              {
+                "id": "P2",
+                "left": "small",
+                "right": "маленький"
+              },
+              {
+                "id": "P3",
+                "left": "new",
+                "right": "новый"
+              },
+              {
+                "id": "P4",
+                "left": "old",
+                "right": "старый"
+              },
+              {
+                "id": "P5",
+                "left": "beautiful",
+                "right": "красивый"
+              },
+              {
+                "id": "P6",
+                "left": "bright",
+                "right": "яркий"
+              },
+              {
+                "id": "P7",
+                "left": "favorite",
+                "right": "любимый"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L03_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Антоним к small?",
+            "options": [
+              {
+                "id": "A",
+                "text": "new",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "bright",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "big",
+                "is_correct": true
+              },
+              {
+                "id": "D",
+                "text": "favorite",
+                "is_correct": false
+              }
+            ],
+            "explanation": "big — «большой», антоним small."
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L03_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Какой красивый цвет!",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "What a beautiful color!",
+            "word_bank": [
+              "a",
+              "What",
+              "color",
+              "new",
+              "big",
+              "beautiful"
+            ]
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L03_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "My ___ color is blue.",
+            "correct_answer": "favorite",
+            "options": [
+              "favorite",
+              "old",
+              "small"
+            ],
+            "translation_hint": "Мой любимый цвет — синий."
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L03_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "have",
+              "red",
+              "apple",
+              "small",
+              "big",
+              "green",
+              "I",
+              "a"
+            ],
+            "correct_words": [
+              "I",
+              "have",
+              "a",
+              "small",
+              "green",
+              "apple"
+            ]
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L03_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "My cat is small and black.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L03_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "It is my favorite color!",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Это мой любимый цвет!"
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L03_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Two Cats",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Anna has two cats.",
+                "translation": "У Анны два кота."
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "Tell me about your cats!",
+                "translation": "Расскажи о своих котах!"
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "One is big and brown, one is small and black.",
+                "translation": "Один большой и коричневый, другой маленький и чёрный."
+              },
+              {
+                "type": "choice",
+                "text": "Какой кот чёрный?",
+                "options": [
+                  {
+                    "text": "The small cat",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "The big cat",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "The brown cat",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L03_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "bright",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "очень старый",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "очень светлый, много света",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "очень тёмный",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "очень маленький",
+                "is_correct": false
+              }
+            ],
+            "explanation": "bright — «яркий»."
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L03_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "My ___ car is red.",
+            "audio_text": "My new car is red.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "old",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "small",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "new",
+                "is_correct": true
+              }
+            ],
+            "explanation": "new — «новый»."
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L03_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "The sun is ___ and yellow.",
+            "correct_answer": "bright",
+            "hint_prefix": "br",
+            "explanation": "bright — яркий."
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L03_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "big",
+                "text": "big"
+              },
+              {
+                "id": "V2",
+                "audio_text": "small",
+                "text": "small"
+              },
+              {
+                "id": "V3",
+                "audio_text": "new",
+                "text": "new"
+              },
+              {
+                "id": "V4",
+                "audio_text": "old",
+                "text": "old"
+              },
+              {
+                "id": "V5",
+                "audio_text": "beautiful",
+                "text": "beautiful"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T05_COLORS_L03_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Tom",
+                "text": "What is your favorite color?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "Green favorite my is.",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "My favorite color is green.",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "I favorite green.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Порядок слов: My favorite color is …"
+          }
+        }
+      ]
+    }
+  ]
+}

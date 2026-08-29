@@ -1,0 +1,1392 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_T01_GREETINGS",
+    "title": {
+      "ru": "Приветствия",
+      "en": "Greetings"
+    },
+    "description": {
+      "ru": "Первые слова: поздороваться, спросить дела, познакомиться и попрощаться.",
+      "en": "Your first words: greet, ask how things are, meet people and say goodbye."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "sort_order": 1
+  },
+  "lessons": [
+    {
+      "code": "A1_T01_GREETINGS_L01",
+      "order": 1,
+      "title": {
+        "ru": "Здравствуйте!",
+        "en": "Hello!"
+      },
+      "objective": {
+        "ru": "Выучить базовые приветствия и прощания.",
+        "en": "Learn basic greetings and goodbyes."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T01_GREETINGS_L01_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "hello",
+                "right": "здравствуйте"
+              },
+              {
+                "id": "P2",
+                "left": "hi",
+                "right": "привет"
+              },
+              {
+                "id": "P3",
+                "left": "goodbye",
+                "right": "до свидания"
+              },
+              {
+                "id": "P4",
+                "left": "bye",
+                "right": "пока"
+              },
+              {
+                "id": "P5",
+                "left": "good morning",
+                "right": "доброе утро"
+              },
+              {
+                "id": "P6",
+                "left": "good night",
+                "right": "доброй ночи"
+              },
+              {
+                "id": "P7",
+                "left": "see you",
+                "right": "до встречи"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L01_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Как сказать «до свидания»?",
+            "options": [
+              {
+                "id": "A",
+                "text": "Good night",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "Goodbye",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "Good morning",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "Hello",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Goodbye — «до свидания», так прощаются."
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L01_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Доброе утро!",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Good morning!",
+            "word_bank": [
+              "morning",
+              "evening",
+              "night",
+              "Good"
+            ]
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L01_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Good ___!",
+            "correct_answer": "morning",
+            "options": [
+              "morning",
+              "night",
+              "bye"
+            ],
+            "translation_hint": "Доброе утро!"
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L01_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "Good",
+              "morning",
+              "see",
+              "night"
+            ],
+            "correct_words": [
+              "Good",
+              "night"
+            ]
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L01_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Hello! Goodbye!",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L01_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Good morning!",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Доброе утро!"
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L01_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "First Day",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "Hello!",
+                "translation": "Привет!"
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "Hi! Good morning!",
+                "translation": "Привет! Доброе утро!"
+              },
+              {
+                "type": "choice",
+                "text": "Анна уходит. Что сказать Тому?",
+                "options": [
+                  {
+                    "text": "Goodbye!",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Good morning!",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "Good night!",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L01_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "hello",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "число",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "слово для прощания",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "время суток",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "слово для приветствия",
+                "is_correct": true
+              }
+            ],
+            "explanation": "hello — «здравствуйте», слово-приветствие."
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L01_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "Good ___!",
+            "audio_text": "Good morning!",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "morning",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "night",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "bye",
+                "is_correct": false
+              }
+            ],
+            "explanation": "morning — «утро»."
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L01_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Good ___!",
+            "correct_answer": "morning",
+            "hint_prefix": "mo",
+            "explanation": "morning — утро."
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L01_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "hello",
+                "text": "hello"
+              },
+              {
+                "id": "V2",
+                "audio_text": "hi",
+                "text": "hi"
+              },
+              {
+                "id": "V3",
+                "audio_text": "morning",
+                "text": "morning"
+              },
+              {
+                "id": "V4",
+                "audio_text": "night",
+                "text": "night"
+              },
+              {
+                "id": "V5",
+                "audio_text": "goodbye",
+                "text": "goodbye"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L01_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "Hello! I am Anna."
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "Goodbye, Anna!",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "Hi, Anna!",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "Good night, Anna!",
+                "is_correct": false
+              }
+            ],
+            "explanation": "На приветствие отвечают приветствием: Hi, Anna!"
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T01_GREETINGS_L02",
+      "order": 2,
+      "title": {
+        "ru": "Как дела?",
+        "en": "How are you?"
+      },
+      "objective": {
+        "ru": "Спрашивать и отвечать о делах, благодарить.",
+        "en": "Ask and answer how things are, say thanks."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T01_GREETINGS_L02_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "how",
+                "right": "как"
+              },
+              {
+                "id": "P2",
+                "left": "fine",
+                "right": "отлично"
+              },
+              {
+                "id": "P3",
+                "left": "thanks",
+                "right": "спасибо"
+              },
+              {
+                "id": "P4",
+                "left": "please",
+                "right": "пожалуйста"
+              },
+              {
+                "id": "P5",
+                "left": "welcome",
+                "right": "добро пожаловать"
+              },
+              {
+                "id": "P6",
+                "left": "OK",
+                "right": "в порядке"
+              },
+              {
+                "id": "P7",
+                "left": "and you",
+                "right": "а у тебя"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L02_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Как спросить «Как дела?»",
+            "options": [
+              {
+                "id": "A",
+                "text": "How old are you?",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "What is your name?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "How are you?",
+                "is_correct": true
+              },
+              {
+                "id": "D",
+                "text": "Where are you from?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "How are you? — «Как дела?»"
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L02_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Спасибо, у меня всё отлично!",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Thanks, I am fine!",
+            "word_bank": [
+              "fine",
+              "am",
+              "Thanks",
+              "I",
+              "how",
+              "you"
+            ]
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L02_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I am ___, thanks.",
+            "correct_answer": "fine",
+            "options": [
+              "fine",
+              "how",
+              "please"
+            ],
+            "translation_hint": "Я в порядке, спасибо."
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L02_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "is",
+              "you",
+              "what",
+              "How",
+              "are"
+            ],
+            "correct_words": [
+              "How",
+              "are",
+              "you"
+            ]
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L02_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I am fine, thanks!",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L02_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "How are you?",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Как дела?"
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L02_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Small Talk",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "Hi, Tom! How are you?",
+                "translation": "Привет, Том! Как дела?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "I am fine, thanks. And you?",
+                "translation": "Отлично, спасибо. А у тебя?"
+              },
+              {
+                "type": "choice",
+                "text": "Что ответить Анне?",
+                "options": [
+                  {
+                    "text": "I am fine too!",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Good night!",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "You are welcome!",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L02_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "thanks",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "прощание",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "вопрос о делах",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "слово благодарности",
+                "is_correct": true
+              },
+              {
+                "id": "D",
+                "text": "приветствие",
+                "is_correct": false
+              }
+            ],
+            "explanation": "thanks — «спасибо»."
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L02_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I am ___, thanks.",
+            "audio_text": "I am fine, thanks.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "how",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "fine",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "audio_text": "please",
+                "is_correct": false
+              }
+            ],
+            "explanation": "fine — «отлично, в порядке»."
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L02_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ are you?",
+            "correct_answer": "How",
+            "hint_prefix": "ho",
+            "explanation": "How are you? — Как дела?"
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L02_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "how",
+                "text": "how"
+              },
+              {
+                "id": "V2",
+                "audio_text": "fine",
+                "text": "fine"
+              },
+              {
+                "id": "V3",
+                "audio_text": "thanks",
+                "text": "thanks"
+              },
+              {
+                "id": "V4",
+                "audio_text": "please",
+                "text": "please"
+              },
+              {
+                "id": "V5",
+                "audio_text": "welcome",
+                "text": "welcome"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L02_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "How are you?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "My name is Anna.",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "Good morning!",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I am fine, thanks!",
+                "is_correct": true
+              }
+            ],
+            "explanation": "На вопрос о делах отвечаем: I am fine, thanks!"
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T01_GREETINGS_L03",
+      "order": 3,
+      "title": {
+        "ru": "Как тебя зовут?",
+        "en": "What Is Your Name?"
+      },
+      "objective": {
+        "ru": "Знакомиться: спрашивать и называть имя.",
+        "en": "Meet people: ask and give your name."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T01_GREETINGS_L03_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "name",
+                "right": "имя"
+              },
+              {
+                "id": "P2",
+                "left": "my",
+                "right": "мой"
+              },
+              {
+                "id": "P3",
+                "left": "your",
+                "right": "твой"
+              },
+              {
+                "id": "P4",
+                "left": "who",
+                "right": "кто"
+              },
+              {
+                "id": "P5",
+                "left": "nice",
+                "right": "приятно"
+              },
+              {
+                "id": "P6",
+                "left": "meet",
+                "right": "знакомиться"
+              },
+              {
+                "id": "P7",
+                "left": "friend",
+                "right": "друг"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L03_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Как спросить имя?",
+            "options": [
+              {
+                "id": "A",
+                "text": "How are you?",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "Where do you live?",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "What is your name?",
+                "is_correct": true
+              },
+              {
+                "id": "D",
+                "text": "How old are you?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "What is your name? — «Как тебя зовут?»"
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L03_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Меня зовут Анна.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "My name is Anna.",
+            "word_bank": [
+              "is",
+              "Anna",
+              "who",
+              "name",
+              "her",
+              "My"
+            ]
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L03_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "My ___ is Tom.",
+            "correct_answer": "name",
+            "options": [
+              "name",
+              "friend",
+              "fine"
+            ],
+            "translation_hint": "Моё имя — Том."
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L03_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "see",
+              "meet",
+              "Nice",
+              "you",
+              "good",
+              "to"
+            ],
+            "correct_words": [
+              "Nice",
+              "to",
+              "meet",
+              "you"
+            ]
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L03_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "What is your name?",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L03_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "My name is Anna.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Меня зовут Анна."
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L03_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "New Friend",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "Hello! What is your name?",
+                "translation": "Привет! Как тебя зовут?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "My name is Tom. Nice to meet you!",
+                "translation": "Меня зовут Том. Приятно познакомиться!"
+              },
+              {
+                "type": "choice",
+                "text": "Что ответить Тому?",
+                "options": [
+                  {
+                    "text": "Nice to meet you too!",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Good night!",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "I am fine!",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L03_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "friend",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "член семьи",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "человек, с которым дружат",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "еда",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "город",
+                "is_correct": false
+              }
+            ],
+            "explanation": "friend — «друг»."
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L03_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "My ___ is Anna.",
+            "audio_text": "My name is Anna.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "fine",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "friend",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "name",
+                "is_correct": true
+              }
+            ],
+            "explanation": "name — «имя»."
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L03_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Nice to ___ you!",
+            "correct_answer": "meet",
+            "hint_prefix": "me",
+            "explanation": "Nice to meet you! — Приятно познакомиться!"
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L03_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "name",
+                "text": "name"
+              },
+              {
+                "id": "V2",
+                "audio_text": "my",
+                "text": "my"
+              },
+              {
+                "id": "V3",
+                "audio_text": "your",
+                "text": "your"
+              },
+              {
+                "id": "V4",
+                "audio_text": "nice",
+                "text": "nice"
+              },
+              {
+                "id": "V5",
+                "audio_text": "meet",
+                "text": "meet"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T01_GREETINGS_L03_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Tom",
+                "text": "What is your name?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "I am fine!",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "Goodbye!",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "My name is Anna.",
+                "is_correct": true
+              }
+            ],
+            "explanation": "На вопрос об имени отвечаем: My name is …"
+          }
+        }
+      ]
+    }
+  ]
+}

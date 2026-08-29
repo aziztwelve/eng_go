@@ -1,0 +1,1418 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_T03_FOOD",
+    "title": {
+      "ru": "Еда и напитки",
+      "en": "Food and Drinks"
+    },
+    "description": {
+      "ru": "Еда, напитки, приёмы пищи и заказ в кафе.",
+      "en": "Food, drinks, meals and ordering at a cafe."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "sort_order": 3
+  },
+  "lessons": [
+    {
+      "code": "A1_T03_FOOD_L01",
+      "order": 1,
+      "title": {
+        "ru": "Еда",
+        "en": "Food"
+      },
+      "objective": {
+        "ru": "Назвать базовые продукты.",
+        "en": "Name basic foods."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T03_FOOD_L01_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "bread",
+                "right": "хлеб"
+              },
+              {
+                "id": "P2",
+                "left": "milk",
+                "right": "молоко"
+              },
+              {
+                "id": "P3",
+                "left": "water",
+                "right": "вода"
+              },
+              {
+                "id": "P4",
+                "left": "apple",
+                "right": "яблоко"
+              },
+              {
+                "id": "P5",
+                "left": "cheese",
+                "right": "сыр"
+              },
+              {
+                "id": "P6",
+                "left": "egg",
+                "right": "яйцо"
+              },
+              {
+                "id": "P7",
+                "left": "rice",
+                "right": "рис"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L01_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Что такое water?",
+            "options": [
+              {
+                "id": "A",
+                "text": "хлеб",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "вода",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "молоко",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "сок",
+                "is_correct": false
+              }
+            ],
+            "explanation": "water — «вода»."
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L01_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Я хочу воды.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I want water.",
+            "word_bank": [
+              "bread",
+              "want",
+              "I",
+              "water",
+              "milk"
+            ]
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L01_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I eat ___ for breakfast.",
+            "correct_answer": "bread",
+            "options": [
+              "bread",
+              "milk",
+              "water"
+            ],
+            "translation_hint": "Я ем хлеб на завтрак."
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L01_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "my",
+              "like",
+              "cheese",
+              "I",
+              "eat"
+            ],
+            "correct_words": [
+              "I",
+              "like",
+              "cheese"
+            ]
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L01_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I drink water.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L01_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I want bread and cheese.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Я хочу хлеба и сыра."
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L01_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Breakfast",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "It is morning. Tom is hungry.",
+                "translation": "Утро. Том голоден."
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "What do you want for breakfast?",
+                "translation": "Что ты хочешь на завтрак?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "I want bread and cheese, please.",
+                "translation": "Я хочу хлеба и сыра, пожалуйста."
+              },
+              {
+                "type": "choice",
+                "text": "Что Том хочет на завтрак?",
+                "options": [
+                  {
+                    "text": "Bread and cheese",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Milk and rice",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "Water and an egg",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L01_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "apple",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "мясо",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "фрукт — красный или зелёный",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "овощ",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "напиток",
+                "is_correct": false
+              }
+            ],
+            "explanation": "apple — «яблоко»."
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L01_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I drink ___.",
+            "audio_text": "I drink milk.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "cheese",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "bread",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "milk",
+                "is_correct": true
+              }
+            ],
+            "explanation": "milk пьют — drink milk."
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L01_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I eat an ___.",
+            "correct_answer": "apple",
+            "hint_prefix": "ap",
+            "explanation": "an apple — яблоко."
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L01_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "bread",
+                "text": "bread"
+              },
+              {
+                "id": "V2",
+                "audio_text": "milk",
+                "text": "milk"
+              },
+              {
+                "id": "V3",
+                "audio_text": "water",
+                "text": "water"
+              },
+              {
+                "id": "V4",
+                "audio_text": "apple",
+                "text": "apple"
+              },
+              {
+                "id": "V5",
+                "audio_text": "cheese",
+                "text": "cheese"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L01_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "Do you want water or milk?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "Bread, please.",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "Water, please.",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "I eat water.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Выбираем напиток: Water, please."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T03_FOOD_L02",
+      "order": 2,
+      "title": {
+        "ru": "Приёмы пищи",
+        "en": "Meals"
+      },
+      "objective": {
+        "ru": "Назвать приёмы пищи и напитки.",
+        "en": "Name meals and drinks."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T03_FOOD_L02_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "breakfast",
+                "right": "завтрак"
+              },
+              {
+                "id": "P2",
+                "left": "lunch",
+                "right": "обед"
+              },
+              {
+                "id": "P3",
+                "left": "dinner",
+                "right": "ужин"
+              },
+              {
+                "id": "P4",
+                "left": "tea",
+                "right": "чай"
+              },
+              {
+                "id": "P5",
+                "left": "coffee",
+                "right": "кофе"
+              },
+              {
+                "id": "P6",
+                "left": "juice",
+                "right": "сок"
+              },
+              {
+                "id": "P7",
+                "left": "hungry",
+                "right": "голодный"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L02_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Какой приём пищи вечером?",
+            "options": [
+              {
+                "id": "A",
+                "text": "lunch",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "breakfast",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "dinner",
+                "is_correct": true
+              },
+              {
+                "id": "D",
+                "text": "tea",
+                "is_correct": false
+              }
+            ],
+            "explanation": "dinner — «ужин»."
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L02_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "На завтрак я пью кофе.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "For breakfast I drink coffee.",
+            "word_bank": [
+              "I",
+              "drink",
+              "breakfast",
+              "For",
+              "drinks",
+              "coffee",
+              "tea"
+            ]
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L02_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I am ___! Let's eat.",
+            "correct_answer": "hungry",
+            "options": [
+              "dinner",
+              "hungry",
+              "juice"
+            ],
+            "translation_hint": "Я голоден!"
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L02_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "the",
+              "eat",
+              "morning",
+              "drink",
+              "I",
+              "coffee",
+              "in",
+              "tea"
+            ],
+            "correct_words": [
+              "I",
+              "drink",
+              "tea",
+              "in",
+              "the",
+              "morning"
+            ]
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L02_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I have lunch with my sister.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L02_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I am hungry!",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Я голоден!"
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L02_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "At Lunch",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "It is lunch time.",
+                "translation": "Время обеда."
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "Are you hungry?",
+                "translation": "Ты голодна?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "Yes! I want rice and juice.",
+                "translation": "Да! Я хочу рис и сок."
+              },
+              {
+                "type": "choice",
+                "text": "Что Том хочет?",
+                "options": [
+                  {
+                    "text": "Rice and juice",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Tea and coffee",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "Bread and water",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L02_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "hungry",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "устал",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "хочет есть",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "хочет пить",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "сытый",
+                "is_correct": false
+              }
+            ],
+            "explanation": "hungry — «голодный»."
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L02_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I am ___. I want food.",
+            "audio_text": "I am hungry.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "dinner",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "lunch",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "hungry",
+                "is_correct": true
+              }
+            ],
+            "explanation": "hungry — «голодный»."
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L02_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___ is the first meal of the day.",
+            "correct_answer": "Breakfast",
+            "hint_prefix": "br",
+            "explanation": "breakfast — завтрак, первый приём пищи."
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L02_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "breakfast",
+                "text": "breakfast"
+              },
+              {
+                "id": "V2",
+                "audio_text": "lunch",
+                "text": "lunch"
+              },
+              {
+                "id": "V3",
+                "audio_text": "dinner",
+                "text": "dinner"
+              },
+              {
+                "id": "V4",
+                "audio_text": "tea",
+                "text": "tea"
+              },
+              {
+                "id": "V5",
+                "audio_text": "coffee",
+                "text": "coffee"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L02_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "Are you hungry?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "No, I am dinner.",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "Yes, I am lunch!",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Yes, I am hungry!",
+                "is_correct": true
+              }
+            ],
+            "explanation": "hungry — прилагательное: I am hungry."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T03_FOOD_L03",
+      "order": 3,
+      "title": {
+        "ru": "В кафе",
+        "en": "At the Cafe"
+      },
+      "objective": {
+        "ru": "Заказать напиток и попросить счёт.",
+        "en": "Order a drink and ask for the bill."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T03_FOOD_L03_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "menu",
+                "right": "меню"
+              },
+              {
+                "id": "P2",
+                "left": "order",
+                "right": "заказ"
+              },
+              {
+                "id": "P3",
+                "left": "bill",
+                "right": "счёт"
+              },
+              {
+                "id": "P4",
+                "left": "delicious",
+                "right": "вкусный"
+              },
+              {
+                "id": "P5",
+                "left": "thirsty",
+                "right": "хочет пить"
+              },
+              {
+                "id": "P6",
+                "left": "waiter",
+                "right": "официант"
+              },
+              {
+                "id": "P7",
+                "left": "sugar",
+                "right": "сахар"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L03_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Кто приносит меню в кафе?",
+            "options": [
+              {
+                "id": "A",
+                "text": "waiter",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "menu",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "sugar",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "bill",
+                "is_correct": false
+              }
+            ],
+            "explanation": "waiter — «официант»."
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L03_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Можно счёт, пожалуйста?",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "The bill, please.",
+            "word_bank": [
+              "delicious",
+              "The",
+              "please",
+              "bill",
+              "menu"
+            ]
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L03_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "This tea is ___!",
+            "correct_answer": "delicious",
+            "options": [
+              "order",
+              "hungry",
+              "delicious"
+            ],
+            "translation_hint": "Этот чай вкусный!"
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L03_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "tea",
+              "sugar",
+              "coffee",
+              "eat",
+              "with",
+              "I",
+              "want"
+            ],
+            "correct_words": [
+              "I",
+              "want",
+              "coffee",
+              "with",
+              "sugar"
+            ]
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L03_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Can I have the menu, please?",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L03_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "The bill, please.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Счёт, пожалуйста."
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L03_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "In a Cafe",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Anna and Tom are in a cafe.",
+                "translation": "Анна и Том в кафе."
+              },
+              {
+                "type": "dialogue",
+                "character": "Waiter",
+                "text": "Hello! Do you want tea or coffee?",
+                "translation": "Здравствуйте! Чай или кофе?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "Tea with sugar, please.",
+                "translation": "Чай с сахаром, пожалуйста."
+              },
+              {
+                "type": "choice",
+                "text": "Что заказала Анна?",
+                "options": [
+                  {
+                    "text": "Tea with sugar",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Coffee with milk",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "Bread with cheese",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L03_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "bill",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "список блюд",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "напиток",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "бумажка с суммой за еду",
+                "is_correct": true
+              },
+              {
+                "id": "D",
+                "text": "официант",
+                "is_correct": false
+              }
+            ],
+            "explanation": "bill — «счёт» для оплаты."
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L03_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I want ___ in my tea.",
+            "audio_text": "I want sugar in my tea.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "sugar",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "audio_text": "menu",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "bill",
+                "is_correct": false
+              }
+            ],
+            "explanation": "sugar — «сахар», его кладут в чай."
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L03_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "The ___ brings the menu.",
+            "correct_answer": "waiter",
+            "hint_prefix": "wa",
+            "explanation": "waiter — официант."
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L03_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "menu",
+                "text": "menu"
+              },
+              {
+                "id": "V2",
+                "audio_text": "order",
+                "text": "order"
+              },
+              {
+                "id": "V3",
+                "audio_text": "bill",
+                "text": "bill"
+              },
+              {
+                "id": "V4",
+                "audio_text": "delicious",
+                "text": "delicious"
+              },
+              {
+                "id": "V5",
+                "audio_text": "sugar",
+                "text": "sugar"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T03_FOOD_L03_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Waiter",
+                "text": "Do you want coffee or tea?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "Bill, please.",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "Hungry, please.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Coffee, please.",
+                "is_correct": true
+              }
+            ],
+            "explanation": "Напиток заказывают так: Coffee, please."
+          }
+        }
+      ]
+    }
+  ]
+}

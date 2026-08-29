@@ -92,14 +92,21 @@ def generate_sql_from_json(json_file_path):
     vocabulary_rows = []
     relation_rows = []
     warnings = []
+    # Пустой goal = универсальный трек (motivation '{}'): виден в каталоге
+    # при любом фильтре по целям (см. repository/postgres/track.go).
+    motivation_sql = (
+        f"ARRAY['{esc(track['goal'])}']::text[]" if track.get("goal") else "'{}'::text[]"
+    )
+    sort_order = int(track.get("sort_order") or 0)
     lines.append(
         "INSERT INTO courses.learning_tracks "
         "(id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)\n"
         f"VALUES ('{track_id}', '{esc(code)}', '{esc(title)}', '{esc(description)}', "
-        f"'{esc(track['target_language'])}', '{esc(track['level'])}', '{esc(track['track_type'])}', "
-        f"ARRAY['{esc(track['goal'])}']::text[], true, 0, NOW(), NOW())\n"
+        f"'{esc(track['target_language'])}', '{esc(track['level'])}', '', "
+        f"{motivation_sql}, true, {sort_order}, NOW(), NOW())\n"
         "ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, "
-        "motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, updated_at = NOW();"
+        "motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, "
+        "sort_order = EXCLUDED.sort_order, updated_at = NOW();"
     )
 
     for lesson in data["lessons"]:

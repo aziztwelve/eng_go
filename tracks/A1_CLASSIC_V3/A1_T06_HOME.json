@@ -1,0 +1,1427 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_T06_HOME",
+    "title": {
+      "ru": "Дом",
+      "en": "Home"
+    },
+    "description": {
+      "ru": "Комнаты, мебель и дела по дому.",
+      "en": "Rooms, furniture and things you do at home."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "sort_order": 6
+  },
+  "lessons": [
+    {
+      "code": "A1_T06_HOME_L01",
+      "order": 1,
+      "title": {
+        "ru": "Комнаты",
+        "en": "Rooms"
+      },
+      "objective": {
+        "ru": "Назвать комнаты в доме.",
+        "en": "Name the rooms in a house."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T06_HOME_L01_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "house",
+                "right": "дом"
+              },
+              {
+                "id": "P2",
+                "left": "room",
+                "right": "комната"
+              },
+              {
+                "id": "P3",
+                "left": "kitchen",
+                "right": "кухня"
+              },
+              {
+                "id": "P4",
+                "left": "bathroom",
+                "right": "ванная"
+              },
+              {
+                "id": "P5",
+                "left": "bedroom",
+                "right": "спальня"
+              },
+              {
+                "id": "P6",
+                "left": "garden",
+                "right": "сад"
+              },
+              {
+                "id": "P7",
+                "left": "door",
+                "right": "дверь"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L01_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Где готовят еду?",
+            "options": [
+              {
+                "id": "A",
+                "text": "in the bathroom",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "in the garden",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "in the bedroom",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "in the kitchen",
+                "is_correct": true
+              }
+            ],
+            "explanation": "kitchen — «кухня»."
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L01_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Мой дом большой.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "My house is big.",
+            "word_bank": [
+              "are",
+              "small",
+              "big",
+              "house",
+              "My",
+              "is"
+            ]
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L01_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I sleep in my ___.",
+            "correct_answer": "bedroom",
+            "options": [
+              "garden",
+              "kitchen",
+              "bedroom"
+            ],
+            "translation_hint": "Я сплю в спальне."
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L01_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "house",
+              "small",
+              "is",
+              "kitchen",
+              "The",
+              "big"
+            ],
+            "correct_words": [
+              "The",
+              "kitchen",
+              "is",
+              "small"
+            ]
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L01_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "My house has five rooms.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L01_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Welcome to my house!",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Добро пожаловать в мой дом!"
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L01_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "New House",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Tom has a new house.",
+                "translation": "У Тома новый дом."
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "How many rooms are in your house?",
+                "translation": "Сколько комнат в твоём доме?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "Five rooms and a small garden!",
+                "translation": "Пять комнат и маленький сад!"
+              },
+              {
+                "type": "choice",
+                "text": "Что есть у дома Тома?",
+                "options": [
+                  {
+                    "text": "A garden",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "A pool",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "Ten rooms",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L01_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "garden",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "место для еды",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "место для сна",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "место с растениями у дома",
+                "is_correct": true
+              },
+              {
+                "id": "D",
+                "text": "место для машины",
+                "is_correct": false
+              }
+            ],
+            "explanation": "garden — «сад»."
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L01_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I cook in the ___.",
+            "audio_text": "I cook in the kitchen.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "bathroom",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "kitchen",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "audio_text": "door",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Готовят на кухне — kitchen."
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L01_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Open the ___, please!",
+            "correct_answer": "door",
+            "hint_prefix": "do",
+            "explanation": "door — дверь."
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L01_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "house",
+                "text": "house"
+              },
+              {
+                "id": "V2",
+                "audio_text": "room",
+                "text": "room"
+              },
+              {
+                "id": "V3",
+                "audio_text": "kitchen",
+                "text": "kitchen"
+              },
+              {
+                "id": "V4",
+                "audio_text": "bathroom",
+                "text": "bathroom"
+              },
+              {
+                "id": "V5",
+                "audio_text": "garden",
+                "text": "garden"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L01_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "Do you have a garden?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "I am garden small.",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "Yes, I am a garden.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Yes, I have a small garden.",
+                "is_correct": true
+              }
+            ],
+            "explanation": "have + существительное: I have a small garden."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T06_HOME_L02",
+      "order": 2,
+      "title": {
+        "ru": "Мебель",
+        "en": "Furniture"
+      },
+      "objective": {
+        "ru": "Назвать мебель.",
+        "en": "Name the furniture."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T06_HOME_L02_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "table",
+                "right": "стол"
+              },
+              {
+                "id": "P2",
+                "left": "chair",
+                "right": "стул"
+              },
+              {
+                "id": "P3",
+                "left": "bed",
+                "right": "кровать"
+              },
+              {
+                "id": "P4",
+                "left": "sofa",
+                "right": "диван"
+              },
+              {
+                "id": "P5",
+                "left": "window",
+                "right": "окно"
+              },
+              {
+                "id": "P6",
+                "left": "lamp",
+                "right": "лампа"
+              },
+              {
+                "id": "P7",
+                "left": "mirror",
+                "right": "зеркало"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L02_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "На чём спят?",
+            "options": [
+              {
+                "id": "A",
+                "text": "a bed",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "a chair",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "a table",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "a mirror",
+                "is_correct": false
+              }
+            ],
+            "explanation": "bed — «кровать»."
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L02_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Кот на диване.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "The cat is on the sofa.",
+            "word_bank": [
+              "the",
+              "cat",
+              "on",
+              "table",
+              "sofa",
+              "is",
+              "in",
+              "The"
+            ]
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L02_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I sit on a ___.",
+            "correct_answer": "chair",
+            "options": [
+              "lamp",
+              "bed",
+              "chair"
+            ],
+            "translation_hint": "Я сижу на стуле."
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L02_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "the",
+              "lamp",
+              "The",
+              "table",
+              "window",
+              "is",
+              "near",
+              "door"
+            ],
+            "correct_words": [
+              "The",
+              "lamp",
+              "is",
+              "near",
+              "the",
+              "window"
+            ]
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L02_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "My bed is near the window.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L02_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "The book is on the table.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Книга на столе."
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L02_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Where Is the Cat?",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Anna looks for her cat.",
+                "translation": "Анна ищет своего кота."
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "Tom! Where is my cat?",
+                "translation": "Том! Где мой кот?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "It is on your bed!",
+                "translation": "Он на твоей кровати!"
+              },
+              {
+                "type": "choice",
+                "text": "Где кот?",
+                "options": [
+                  {
+                    "text": "On the bed",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "On the table",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "In the garden",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L02_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "mirror",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "на нём спят",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "на нём сидят",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "через него смотрят на улицу",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "видишь в нём себя",
+                "is_correct": true
+              }
+            ],
+            "explanation": "mirror — «зеркало»."
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L02_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "The ___ is on the table.",
+            "audio_text": "The lamp is on the table.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "sofa",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "lamp",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "audio_text": "chair",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Лампа маленькая — она стоит на столе."
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L02_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I look at my face in the ___.",
+            "correct_answer": "mirror",
+            "hint_prefix": "mi",
+            "explanation": "mirror — зеркало."
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L02_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "table",
+                "text": "table"
+              },
+              {
+                "id": "V2",
+                "audio_text": "chair",
+                "text": "chair"
+              },
+              {
+                "id": "V3",
+                "audio_text": "bed",
+                "text": "bed"
+              },
+              {
+                "id": "V4",
+                "audio_text": "window",
+                "text": "window"
+              },
+              {
+                "id": "V5",
+                "audio_text": "mirror",
+                "text": "mirror"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L02_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "Where is the lamp?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "It is on the table.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "It is a lamp.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I am on the table.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Отвечаем местом: It is on the table."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T06_HOME_L03",
+      "order": 3,
+      "title": {
+        "ru": "Дома",
+        "en": "At Home"
+      },
+      "objective": {
+        "ru": "Рассказать, что вы делаете дома.",
+        "en": "Say what you do at home."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T06_HOME_L03_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "cook",
+                "right": "готовить"
+              },
+              {
+                "id": "P2",
+                "left": "clean",
+                "right": "убирать"
+              },
+              {
+                "id": "P3",
+                "left": "rest",
+                "right": "отдыхать"
+              },
+              {
+                "id": "P4",
+                "left": "sleep",
+                "right": "спать"
+              },
+              {
+                "id": "P5",
+                "left": "watch",
+                "right": "смотреть"
+              },
+              {
+                "id": "P6",
+                "left": "quiet",
+                "right": "тихий"
+              },
+              {
+                "id": "P7",
+                "left": "cozy",
+                "right": "уютный"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L03_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Что делают с едой на кухне?",
+            "options": [
+              {
+                "id": "A",
+                "text": "watch",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "clean",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "rest",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "cook",
+                "is_correct": true
+              }
+            ],
+            "explanation": "cook — «готовить»."
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L03_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Я смотрю телевизор вечером.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I watch TV in the evening.",
+            "word_bank": [
+              "evening",
+              "morning",
+              "the",
+              "I",
+              "TV",
+              "cook",
+              "watch",
+              "in"
+            ]
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L03_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I ___ my room on Sunday.",
+            "correct_answer": "clean",
+            "options": [
+              "cook",
+              "watch",
+              "clean"
+            ],
+            "translation_hint": "Я убираю комнату в воскресенье."
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L03_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "sleep",
+              "my",
+              "I",
+              "bed",
+              "cozy",
+              "in",
+              "eat",
+              "kitchen"
+            ],
+            "correct_words": [
+              "I",
+              "sleep",
+              "in",
+              "my",
+              "cozy",
+              "bed"
+            ]
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L03_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I cook dinner and watch TV.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L03_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "My home is quiet and cozy.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Мой дом тихий и уютный."
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L03_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Sunday at Home",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "It is Sunday. Tom is at home.",
+                "translation": "Воскресенье. Том дома."
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "What do you do at home?",
+                "translation": "Что ты делаешь дома?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "I cook, clean and rest!",
+                "translation": "Я готовлю, убираю и отдыхаю!"
+              },
+              {
+                "type": "choice",
+                "text": "Что делает Том дома?",
+                "options": [
+                  {
+                    "text": "He cooks and rests",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "He sleeps all day",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "He is not at home",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L03_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "cozy",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "холодный и тёмный",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "тёплый и удобный",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "громкий и большой",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "новый и быстрый",
+                "is_correct": false
+              }
+            ],
+            "explanation": "cozy — «уютный»."
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L03_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I ___ TV in the evening.",
+            "audio_text": "I watch TV in the evening.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "sleep",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "cook",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "watch",
+                "is_correct": true
+              }
+            ],
+            "explanation": "watch TV — смотреть телевизор."
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L03_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Be ___! The baby sleeps.",
+            "correct_answer": "quiet",
+            "hint_prefix": "qu",
+            "explanation": "quiet — тихий."
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L03_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "cook",
+                "text": "cook"
+              },
+              {
+                "id": "V2",
+                "audio_text": "clean",
+                "text": "clean"
+              },
+              {
+                "id": "V3",
+                "audio_text": "rest",
+                "text": "rest"
+              },
+              {
+                "id": "V4",
+                "audio_text": "watch",
+                "text": "watch"
+              },
+              {
+                "id": "V5",
+                "audio_text": "quiet",
+                "text": "quiet"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T06_HOME_L03_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "What do you do in the evening?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "I watch TV and rest.",
+                "is_correct": true
+              },
+              {
+                "id": "B",
+                "text": "I am watch evening.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "I sleep TV.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Глаголы подряд: watch TV and rest."
+          }
+        }
+      ]
+    }
+  ]
+}

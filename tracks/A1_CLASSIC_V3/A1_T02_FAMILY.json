@@ -1,0 +1,1414 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "A1_T02_FAMILY",
+    "title": {
+      "ru": "Семья",
+      "en": "Family"
+    },
+    "description": {
+      "ru": "Члены семьи, родственники и разговоры о семье.",
+      "en": "Family members, relatives and talking about your family."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "A1",
+    "sort_order": 2
+  },
+  "lessons": [
+    {
+      "code": "A1_T02_FAMILY_L01",
+      "order": 1,
+      "title": {
+        "ru": "Моя семья",
+        "en": "My Family"
+      },
+      "objective": {
+        "ru": "Назвать членов семьи.",
+        "en": "Name your family members."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T02_FAMILY_L01_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "mother",
+                "right": "мама"
+              },
+              {
+                "id": "P2",
+                "left": "father",
+                "right": "папа"
+              },
+              {
+                "id": "P3",
+                "left": "sister",
+                "right": "сестра"
+              },
+              {
+                "id": "P4",
+                "left": "brother",
+                "right": "брат"
+              },
+              {
+                "id": "P5",
+                "left": "son",
+                "right": "сын"
+              },
+              {
+                "id": "P6",
+                "left": "daughter",
+                "right": "дочь"
+              },
+              {
+                "id": "P7",
+                "left": "family",
+                "right": "семья"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L01_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Кто такая daughter?",
+            "options": [
+              {
+                "id": "A",
+                "text": "мама",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "сестра",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "дочь",
+                "is_correct": true
+              },
+              {
+                "id": "D",
+                "text": "сын",
+                "is_correct": false
+              }
+            ],
+            "explanation": "daughter — «дочь»."
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L01_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Это моя мама.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "This is my mother.",
+            "word_bank": [
+              "is",
+              "my",
+              "This",
+              "mother",
+              "father",
+              "your"
+            ]
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L01_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I have one ___ and one sister.",
+            "correct_answer": "brother",
+            "options": [
+              "family",
+              "mother",
+              "brother"
+            ],
+            "translation_hint": "У меня есть брат и сестра."
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L01_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "the",
+              "are",
+              "my",
+              "This",
+              "is",
+              "family"
+            ],
+            "correct_words": [
+              "This",
+              "is",
+              "my",
+              "family"
+            ]
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L01_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I have a brother and a sister.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L01_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "This is my mother.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Это моя мама."
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L01_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Family Photo",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Tom shows a photo.",
+                "translation": "Том показывает фото."
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "Who is this?",
+                "translation": "Кто это?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "This is my sister. Her name is Kate.",
+                "translation": "Это моя сестра. Её зовут Кейт."
+              },
+              {
+                "type": "choice",
+                "text": "Кто Кейт для Тома?",
+                "options": [
+                  {
+                    "text": "His sister",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "His mother",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "His daughter",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L01_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "family",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "школа",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "город",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "родители и дети вместе",
+                "is_correct": true
+              },
+              {
+                "id": "D",
+                "text": "работа",
+                "is_correct": false
+              }
+            ],
+            "explanation": "family — «семья»."
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L01_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "My father and my ___ are my parents.",
+            "audio_text": "My father and my mother are my parents.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "daughter",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "mother",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "audio_text": "sister",
+                "is_correct": false
+              }
+            ],
+            "explanation": "mother — «мама»."
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L01_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "My mother's son is my ___.",
+            "correct_answer": "brother",
+            "hint_prefix": "br",
+            "explanation": "brother — брат."
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L01_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "mother",
+                "text": "mother"
+              },
+              {
+                "id": "V2",
+                "audio_text": "father",
+                "text": "father"
+              },
+              {
+                "id": "V3",
+                "audio_text": "sister",
+                "text": "sister"
+              },
+              {
+                "id": "V4",
+                "audio_text": "brother",
+                "text": "brother"
+              },
+              {
+                "id": "V5",
+                "audio_text": "family",
+                "text": "family"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L01_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "Is Kate your sister?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "Yes, she is my mother.",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "Yes, she is my sister.",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "No, he is my brother.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Кейт — она (she), поэтому отвечаем про сестру."
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T02_FAMILY_L02",
+      "order": 2,
+      "title": {
+        "ru": "Родственники",
+        "en": "Relatives"
+      },
+      "objective": {
+        "ru": "Назвать родственников: бабушка, дедушка, тётя, дядя.",
+        "en": "Name relatives: grandmother, grandfather, aunt, uncle."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T02_FAMILY_L02_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "grandmother",
+                "right": "бабушка"
+              },
+              {
+                "id": "P2",
+                "left": "grandfather",
+                "right": "дедушка"
+              },
+              {
+                "id": "P3",
+                "left": "aunt",
+                "right": "тётя"
+              },
+              {
+                "id": "P4",
+                "left": "uncle",
+                "right": "дядя"
+              },
+              {
+                "id": "P5",
+                "left": "cousin",
+                "right": "двоюродный брат"
+              },
+              {
+                "id": "P6",
+                "left": "parents",
+                "right": "родители"
+              },
+              {
+                "id": "P7",
+                "left": "wife",
+                "right": "жена"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L02_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Кто такой grandfather?",
+            "options": [
+              {
+                "id": "A",
+                "text": "отец",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "дедушка",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "text": "дядя",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "сын",
+                "is_correct": false
+              }
+            ],
+            "explanation": "grandfather — «дедушка»."
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L02_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Мои родители живут в Лондоне.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "My parents live in London.",
+            "word_bank": [
+              "his",
+              "parents",
+              "London",
+              "My",
+              "lives",
+              "in",
+              "live"
+            ]
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L02_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "My father's mother is my ___.",
+            "correct_answer": "grandmother",
+            "options": [
+              "grandmother",
+              "aunt",
+              "wife"
+            ],
+            "translation_hint": "Бабушка — мама папы."
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L02_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "is",
+              "old",
+              "grandmother",
+              "young",
+              "My",
+              "are"
+            ],
+            "correct_words": [
+              "My",
+              "grandmother",
+              "is",
+              "old"
+            ]
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L02_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "My aunt and my uncle live near us.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L02_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I love my grandmother.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Я люблю свою бабушку."
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L02_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Visit to Grandparents",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Anna visits her grandparents.",
+                "translation": "Анна навещает бабушку и дедушку."
+              },
+              {
+                "type": "dialogue",
+                "character": "Grandmother",
+                "text": "Hello, Anna! How are you?",
+                "translation": "Привет, Анна! Как дела?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "I am fine, thanks! And you?",
+                "translation": "Отлично, спасибо! А у вас?"
+              },
+              {
+                "type": "choice",
+                "text": "Кого навещает Анна?",
+                "options": [
+                  {
+                    "text": "Her grandmother and grandfather",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Her aunt and uncle",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "Her parents",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L02_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "parents",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "брат и сестра",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "бабушка и дедушка",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "мама и папа",
+                "is_correct": true
+              },
+              {
+                "id": "D",
+                "text": "тётя и дядя",
+                "is_correct": false
+              }
+            ],
+            "explanation": "parents — «родители»."
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L02_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "My mother's brother is my ___.",
+            "audio_text": "My mother's brother is my uncle.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "cousin",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "uncle",
+                "is_correct": true
+              },
+              {
+                "id": "C",
+                "audio_text": "father",
+                "is_correct": false
+              }
+            ],
+            "explanation": "uncle — «дядя»."
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L02_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "My mother's sister is my ___.",
+            "correct_answer": "aunt",
+            "hint_prefix": "au",
+            "explanation": "aunt — тётя."
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L02_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "grandmother",
+                "text": "grandmother"
+              },
+              {
+                "id": "V2",
+                "audio_text": "grandfather",
+                "text": "grandfather"
+              },
+              {
+                "id": "V3",
+                "audio_text": "aunt",
+                "text": "aunt"
+              },
+              {
+                "id": "V4",
+                "audio_text": "uncle",
+                "text": "uncle"
+              },
+              {
+                "id": "V5",
+                "audio_text": "cousin",
+                "text": "cousin"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L02_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Tom",
+                "text": "This is my uncle John."
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "I am fine!",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "Good night!",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Nice to meet you!",
+                "is_correct": true
+              }
+            ],
+            "explanation": "При знакомстве говорят: Nice to meet you!"
+          }
+        }
+      ]
+    },
+    {
+      "code": "A1_T02_FAMILY_L03",
+      "order": 3,
+      "title": {
+        "ru": "Семейная жизнь",
+        "en": "Family Life"
+      },
+      "objective": {
+        "ru": "Рассказать о семье простыми фразами.",
+        "en": "Talk about your family with simple phrases."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "A1_T02_FAMILY_L03_S01_MATCH",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "P1",
+                "left": "love",
+                "right": "любить"
+              },
+              {
+                "id": "P2",
+                "left": "live",
+                "right": "жить"
+              },
+              {
+                "id": "P3",
+                "left": "together",
+                "right": "вместе"
+              },
+              {
+                "id": "P4",
+                "left": "married",
+                "right": "женаты"
+              },
+              {
+                "id": "P5",
+                "left": "child",
+                "right": "ребёнок"
+              },
+              {
+                "id": "P6",
+                "left": "old",
+                "right": "старый"
+              },
+              {
+                "id": "P7",
+                "left": "young",
+                "right": "молодой"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L03_S02_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Как сказать «Мы живём вместе»?",
+            "options": [
+              {
+                "id": "A",
+                "text": "We love together",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "We are together old",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "We live married",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "We live together",
+                "is_correct": true
+              }
+            ],
+            "explanation": "live — «жить», together — «вместе»."
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L03_S03_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите фразу",
+            "en": "Translate the phrase"
+          },
+          "instructions": {
+            "ru": "Составьте перевод из слов.",
+            "en": "Build the translation from the words."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Я люблю свою семью.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I love my family.",
+            "word_bank": [
+              "my",
+              "family",
+              "love",
+              "live",
+              "likes",
+              "I"
+            ]
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L03_S04_FILL",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "My grandfather is ___.",
+            "correct_answer": "old",
+            "options": [
+              "together",
+              "old",
+              "young"
+            ],
+            "translation_hint": "Мой дедушка старый."
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L03_S05_TAP",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "live",
+              "are",
+              "We",
+              "together",
+              "love"
+            ],
+            "correct_words": [
+              "We",
+              "live",
+              "together"
+            ]
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L03_S06_LISTEN",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу и напишите, что услышали.",
+            "en": "Listen to the phrase and type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "They are married and live together.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L03_S07_SHADOW",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите за диктором",
+            "en": "Repeat after the speaker"
+          },
+          "instructions": {
+            "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+            "en": "Listen to the phrase, record your repetition, and get pronunciation feedback."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I love my family.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Я люблю свою семью."
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L03_S08_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю и выберите ответ.",
+            "en": "Read the story and choose an answer."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "A Big Family",
+            "scenes": [
+              {
+                "type": "narration",
+                "text": "Tom's family is big.",
+                "translation": "Семья Тома большая."
+              },
+              {
+                "type": "dialogue",
+                "character": "Anna",
+                "text": "Do you have brothers or sisters?",
+                "translation": "У тебя есть братья или сёстры?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Tom",
+                "text": "Yes, I have two sisters and one brother.",
+                "translation": "Да, у меня две сестры и один брат."
+              },
+              {
+                "type": "choice",
+                "text": "Сколько сестёр у Тома?",
+                "options": [
+                  {
+                    "text": "Two",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "One",
+                    "is_correct": false
+                  },
+                  {
+                    "text": "Three",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L03_S09_DEF",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Выберите определение",
+            "en": "Choose the definition"
+          },
+          "instructions": {
+            "ru": "Выберите правильное значение слова.",
+            "en": "Choose the correct meaning of the word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "together",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "text": "по одному",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "быстро",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "далеко",
+                "is_correct": false
+              },
+              {
+                "id": "D",
+                "text": "вместе, не поодиночке",
+                "is_correct": true
+              }
+            ],
+            "explanation": "together — «вместе»."
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L03_S10_LISTEN_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Выберите услышанное слово",
+            "en": "Choose the word you hear"
+          },
+          "instructions": {
+            "ru": "Прослушайте предложение и выберите пропущенное слово.",
+            "en": "Listen to the sentence and choose the missing word."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "We ___ together.",
+            "audio_text": "We live together.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A",
+                "audio_text": "love",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "audio_text": "old",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "audio_text": "live",
+                "is_correct": true
+              }
+            ],
+            "explanation": "live — «жить» (love — любить: похожие слова!)."
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L03_S11_MISSING",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите слово",
+            "en": "Type the missing word"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "My parents are ___.",
+            "correct_answer": "married",
+            "hint_prefix": "ma",
+            "explanation": "married — женаты/замужем."
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L03_S12_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Соедините звук и слово",
+            "en": "Match the sound and word"
+          },
+          "instructions": {
+            "ru": "Прослушайте каждое слово и выберите его написание.",
+            "en": "Listen to each word and choose its spelling."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "V1",
+                "audio_text": "love",
+                "text": "love"
+              },
+              {
+                "id": "V2",
+                "audio_text": "live",
+                "text": "live"
+              },
+              {
+                "id": "V3",
+                "audio_text": "together",
+                "text": "together"
+              },
+              {
+                "id": "V4",
+                "audio_text": "young",
+                "text": "young"
+              },
+              {
+                "id": "V5",
+                "audio_text": "old",
+                "text": "old"
+              }
+            ]
+          }
+        },
+        {
+          "id": "A1_T02_FAMILY_L03_S13_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Завершите диалог",
+            "en": "Complete the chat"
+          },
+          "instructions": {
+            "ru": "Выберите подходящую реплику.",
+            "en": "Choose the reply that completes the dialogue."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Anna",
+                "text": "Do you live with your parents?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A",
+                "text": "We love together.",
+                "is_correct": false
+              },
+              {
+                "id": "B",
+                "text": "We are old.",
+                "is_correct": false
+              },
+              {
+                "id": "C",
+                "text": "Yes, we live together.",
+                "is_correct": true
+              }
+            ],
+            "explanation": "Отвечаем: Yes, we live together."
+          }
+        }
+      ]
+    }
+  ]
+}
