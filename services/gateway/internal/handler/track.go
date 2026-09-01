@@ -4,10 +4,12 @@ import (
 	"context"
 	"net/http"
 	"strconv"
+	"strings"
 	"sync"
 
 	"github.com/gin-gonic/gin"
 	"google.golang.org/grpc/codes"
+	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/types/known/wrapperspb"
 
@@ -83,7 +85,7 @@ func (h *TrackHandler) ListTracks(c *gin.Context) {
 		}
 	}
 
-	resp, err := h.courseClient.ListTracks(c.Request.Context(), req)
+	resp, err := h.courseClient.ListTracks(withContentLang(c), req)
 	if err != nil {
 		writeGRPCError(c, err)
 		return
@@ -101,18 +103,19 @@ func (h *TrackHandler) ListTracks(c *gin.Context) {
 func (h *TrackHandler) GetTrack(c *gin.Context) {
 	idOrCode := c.Param("id")
 	includeLessons := c.Query("include_lessons") == "true"
+	ctx := withContentLang(c)
 
 	var (
 		resp *coursev1.GetTrackResponse
 		err  error
 	)
 	if isLikelyUUID(idOrCode) {
-		resp, err = h.courseClient.GetTrack(c.Request.Context(), &coursev1.GetTrackRequest{
+		resp, err = h.courseClient.GetTrack(ctx, &coursev1.GetTrackRequest{
 			TrackId:        idOrCode,
 			IncludeLessons: includeLessons,
 		})
 	} else {
-		resp, err = h.courseClient.GetTrackByCode(c.Request.Context(), &coursev1.GetTrackByCodeRequest{
+		resp, err = h.courseClient.GetTrackByCode(ctx, &coursev1.GetTrackByCodeRequest{
 			Code:           idOrCode,
 			IncludeLessons: includeLessons,
 		})
@@ -380,7 +383,7 @@ func (h *TrackHandler) AdminListTracks(c *gin.Context) {
 	if v := c.Query("track_type"); v != "" {
 		req.TrackType = wrapperspb.String(v)
 	}
-	resp, err := h.courseClient.ListTracks(c.Request.Context(), req)
+	resp, err := h.courseClient.ListTracks(withContentLang(c), req)
 	if err != nil {
 		writeGRPCError(c, err)
 		return
@@ -460,7 +463,7 @@ func (h *TrackHandler) GetMyTracks(c *gin.Context) {
 		c.JSON(http.StatusUnauthorized, gin.H{"error": "unauthorized"})
 		return
 	}
-	ctx := c.Request.Context()
+	ctx := withContentLang(c)
 
 	resp, err := h.courseClient.GetUserTracks(ctx, &coursev1.GetUserTracksRequest{UserId: userID})
 	if err != nil {
@@ -634,4 +637,25 @@ func getUserIDFromCtx(c *gin.Context) string {
 		}
 	}
 	return ""
+}
+
+// withContentLang прокидывает язык контента в course-service через gRPC
+// metadata (x-content-lang). Приоритет: ?lang= → Accept-Language → "".
+// course-service резолвит локаль с фолбэками (lang → ru → en → base).
+func withContentLang(c *gin.Context) context.Context {
+	lang := c.Query("lang")
+	if lang == "" {
+		lang = c.GetHeader("Accept-Language")
+	}
+	if lang != "" {
+		// "en-US,en;q=0.9" → первый тег → "en"
+		if i := strings.IndexAny(lang, ",;"); i > 0 {
+			lang = lang[:i]
+		}
+		lang = strings.TrimSpace(strings.ToLower(strings.SplitN(lang, "-", 2)[0]))
+	}
+	if lang == "" {
+		return c.Request.Context()
+	}
+	return metadata.AppendToOutgoingContext(c.Request.Context(), "x-content-lang", lang)
 }

@@ -2,30 +2,28 @@ package model
 
 import "time"
 
-// TrackType классифицирует трек.
-const (
-	TrackTypeThematic = "thematic"
-	TrackTypeDaily    = "daily"
-	TrackTypeStories  = "stories"
-	TrackTypePodcast  = "podcast"
-)
-
-// Track — тематическая группа standalone уроков (Daily English, Stories, etc.).
+// Track — группа standalone-уроков. TrackType временно пустой: классификация
+// треков отключена, поле оставлено для совместимости API.
 type Track struct {
 	ID          string
 	Code        string
 	Title       string
 	Description string
-	IconURL     string
-	Language    string
-	Level       string
-	TrackType   string
-	IsPublished bool
-	SortOrder   int32
-	Motivation  []string // цели юзера: work, travel, exam, etc.
-	CreatedBy   string   // UUID или "" если не задан
-	CreatedAt   time.Time
-	UpdatedAt   time.Time
+	// TitleI18N / DescriptionI18N — локализованные значения ({"ru":..,"en":..}).
+	// Title/Description — выбранная локаль (заполняется при чтении) либо
+	// моноязычное значение (при записи через admin API).
+	TitleI18N       map[string]string
+	DescriptionI18N map[string]string
+	IconURL         string
+	Language        string
+	Level           string
+	TrackType       string
+	IsPublished     bool
+	SortOrder       int32
+	Motivation      []string // цели юзера: work, travel, exam, etc.
+	CreatedBy       string  // UUID или "" если не задан
+	CreatedAt       time.Time
+	UpdatedAt       time.Time
 }
 
 // TrackLesson — связь many-to-many между треком и уроком.

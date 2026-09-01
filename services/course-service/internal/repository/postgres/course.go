@@ -3,6 +3,7 @@ package postgres
 import (
 	"context"
 	"database/sql"
+	"encoding/json"
 	"fmt"
 	"strings"
 
@@ -19,6 +20,21 @@ func nullStringPtr(s string) interface{} {
 		return nil
 	}
 	return s
+}
+
+// scanI18N / resolveI18NLang — общие хелперы контентной локализации
+// (см. track.go: langFromCtx + resolveI18N).
+func scanI18NMap(raw []byte) map[string]string {
+	if len(raw) == 0 {
+		return nil
+	}
+	m := map[string]string{}
+	_ = json.Unmarshal(raw, &m)
+	return m
+}
+
+func resolveI18NLang(m map[string]string, base, lang string) string {
+	return resolveI18N(m, base, lang)
 }
 
 type courseRepository struct {
@@ -352,13 +368,15 @@ func (r *courseRepository) CreateLesson(ctx context.Context, lesson *model.Lesso
 // GetLessonByID получает урок по ID. NULL module_id возвращается как пустая строка.
 func (r *courseRepository) GetLessonByID(ctx context.Context, id string) (*model.Lesson, error) {
 	query := `
-		SELECT id, module_id, title, description, order_index, created_at, updated_at
+		SELECT id, module_id, title, description, order_index, created_at, updated_at,
+		       title_i18n, description_i18n
 		FROM lessons
 		WHERE id = $1
 	`
 
 	lesson := &model.Lesson{}
 	var moduleID sql.NullString
+	var titleI18N, descrI18N []byte
 	err := r.pool.QueryRow(ctx, query, id).Scan(
 		&lesson.ID,
 		&moduleID,
@@ -367,6 +385,8 @@ func (r *courseRepository) GetLessonByID(ctx context.Context, id string) (*model
 		&lesson.OrderIndex,
 		&lesson.CreatedAt,
 		&lesson.UpdatedAt,
+		&titleI18N,
+		&descrI18N,
 	)
 
 	if err != nil {
@@ -374,6 +394,11 @@ func (r *courseRepository) GetLessonByID(ctx context.Context, id string) (*model
 	}
 
 	lesson.ModuleID = moduleID.String
+	lang := langFromCtx(ctx)
+	lesson.TitleI18N = scanI18NMap(titleI18N)
+	lesson.DescriptionI18N = scanI18NMap(descrI18N)
+	lesson.Title = resolveI18NLang(lesson.TitleI18N, lesson.Title, lang)
+	lesson.Description = resolveI18NLang(lesson.DescriptionI18N, lesson.Description, lang)
 	return lesson, nil
 }
 
@@ -462,13 +487,14 @@ func (r *courseRepository) CreateStep(ctx context.Context, step *model.Step) err
 // GetStepByID получает шаг по ID
 func (r *courseRepository) GetStepByID(ctx context.Context, id string) (*model.Step, error) {
 	query := `
-		SELECT id, lesson_id, type, title, content, order_index, created_at, updated_at
+		SELECT id, lesson_id, type, title, content, order_index, created_at, updated_at, title_i18n
 		FROM steps
 		WHERE id = $1
 	`
 
 	step := &model.Step{}
 	var stepType string
+	var titleI18N []byte
 	err := r.pool.QueryRow(ctx, query, id).Scan(
 		&step.ID,
 		&step.LessonID,
@@ -478,6 +504,7 @@ func (r *courseRepository) GetStepByID(ctx context.Context, id string) (*model.S
 		&step.OrderIndex,
 		&step.CreatedAt,
 		&step.UpdatedAt,
+		&titleI18N,
 	)
 
 	if err != nil {
@@ -485,6 +512,8 @@ func (r *courseRepository) GetStepByID(ctx context.Context, id string) (*model.S
 	}
 
 	step.Type = model.StepType(stepType)
+	step.TitleI18N = scanI18NMap(titleI18N)
+	step.Title = resolveI18NLang(step.TitleI18N, step.Title, langFromCtx(ctx))
 	return step, nil
 }
 
@@ -516,7 +545,7 @@ func (r *courseRepository) DeleteStep(ctx context.Context, id string) error {
 // ListStepsByLessonID возвращает список шагов урока
 func (r *courseRepository) ListStepsByLessonID(ctx context.Context, lessonID string) ([]*model.Step, error) {
 	query := `
-		SELECT id, lesson_id, type, title, content, order_index, created_at, updated_at
+		SELECT id, lesson_id, type, title, content, order_index, created_at, updated_at, title_i18n
 		FROM steps
 		WHERE lesson_id = $1
 		ORDER BY order_index ASC
@@ -528,10 +557,12 @@ func (r *courseRepository) ListStepsByLessonID(ctx context.Context, lessonID str
 	}
 	defer rows.Close()
 
+	lang := langFromCtx(ctx)
 	var steps []*model.Step
 	for rows.Next() {
 		step := &model.Step{}
 		var stepType string
+		var titleI18N []byte
 		err := rows.Scan(
 			&step.ID,
 			&step.LessonID,
@@ -541,11 +572,14 @@ func (r *courseRepository) ListStepsByLessonID(ctx context.Context, lessonID str
 			&step.OrderIndex,
 			&step.CreatedAt,
 			&step.UpdatedAt,
+			&titleI18N,
 		)
 		if err != nil {
 			return nil, err
 		}
 		step.Type = model.StepType(stepType)
+		step.TitleI18N = scanI18NMap(titleI18N)
+		step.Title = resolveI18NLang(step.TitleI18N, step.Title, lang)
 		steps = append(steps, step)
 	}
 

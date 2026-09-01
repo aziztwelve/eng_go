@@ -64,7 +64,8 @@ type Step struct {
 	LessonID   string
 	Type       StepType
 	Title      string
-	Content    string // JSON string
+	TitleI18N  map[string]string // локализованные заголовки ({"ru":..,"en":..})
+	Content    string            // JSON string
 	OrderIndex int32
 	CreatedAt  time.Time
 	UpdatedAt  time.Time

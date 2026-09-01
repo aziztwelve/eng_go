@@ -24,7 +24,7 @@ func NewLessonHandler(courseClient *client.CourseClient) *LessonHandler {
 func (h *LessonHandler) GetLesson(c *gin.Context) {
 	lessonID := c.Param("id")
 
-	resp, err := h.courseClient.GetLesson(c.Request.Context(), &coursev1.GetLessonRequest{
+	resp, err := h.courseClient.GetLesson(withContentLang(c), &coursev1.GetLessonRequest{
 		LessonId: lessonID,
 	})
 	if err != nil {

@@ -194,7 +194,7 @@ func (h *CourseHandler) GetStep(c *gin.Context) {
 	stepID := c.Param("stepId")
 	userID := c.Query("user_id")
 
-	resp, err := h.courseClient.GetStepContent(c.Request.Context(), &coursev1.GetStepContentRequest{
+	resp, err := h.courseClient.GetStepContent(withContentLang(c), &coursev1.GetStepContentRequest{
 		StepId: stepID,
 		UserId: userID,
 	})

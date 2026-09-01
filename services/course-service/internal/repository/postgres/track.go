@@ -3,15 +3,31 @@ package postgres
 import (
 	"context"
 	"database/sql"
+	"encoding/json"
 	"fmt"
 	"strings"
 
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5/pgxpool"
+	"google.golang.org/grpc/metadata"
 
 	"github.com/elearning/course-service/internal/model"
 	"github.com/elearning/course-service/internal/repository"
 )
+
+// CtxLangKey — ключ в gRPC metadata для языка контента ("ru"/"en"/"kk").
+// Gateway выставляет его из Accept-Language или ?lang=.
+const CtxLangKey = "x-content-lang"
+
+// langFromCtx — язык контента из metadata ("" → дефолт ru в resolveI18N).
+func langFromCtx(ctx context.Context) string {
+	if md, ok := metadata.FromIncomingContext(ctx); ok {
+		if vals := md.Get(CtxLangKey); len(vals) > 0 {
+			return strings.TrimSpace(vals[0])
+		}
+	}
+	return ""
+}
 
 type trackRepository struct {
 	pool *pgxpool.Pool
@@ -22,10 +38,40 @@ func NewTrackRepository(pool *pgxpool.Pool) repository.TrackRepository {
 	return &trackRepository{pool: pool}
 }
 
-func scanTrack(scan func(...interface{}) error) (*model.Track, error) {
+func scanI18N(raw []byte) map[string]string {
+	if len(raw) == 0 {
+		return nil
+	}
+	m := map[string]string{}
+	_ = json.Unmarshal(raw, &m)
+	return m
+}
+
+// resolveI18N — выбор строки на запрошенном языке с фолбэками:
+// lang → ru → en → первая непустая → базовое значение.
+func resolveI18N(m map[string]string, base, lang string) string {
+	if v := strings.TrimSpace(m[lang]); v != "" {
+		return v
+	}
+	if v := strings.TrimSpace(m["ru"]); v != "" {
+		return v
+	}
+	if v := strings.TrimSpace(m["en"]); v != "" {
+		return v
+	}
+	for _, v := range m {
+		if strings.TrimSpace(v) != "" {
+			return v
+		}
+	}
+	return base
+}
+
+func scanTrack(scan func(...interface{}) error, lang string) (*model.Track, error) {
 	t := &model.Track{}
 	var description, iconURL, language, level sql.NullString
 	var createdBy sql.NullString
+	var titleI18N, descrI18N []byte
 	if err := scan(
 		&t.ID,
 		&t.Code,
@@ -41,10 +87,20 @@ func scanTrack(scan func(...interface{}) error) (*model.Track, error) {
 		&createdBy,
 		&t.CreatedAt,
 		&t.UpdatedAt,
+		&titleI18N,
+		&descrI18N,
 	); err != nil {
 		return nil, err
 	}
-	t.Description = description.String
+	t.TitleI18N = scanI18N(titleI18N)
+	t.DescriptionI18N = scanI18N(descrI18N)
+	// title/description из БД — базовое (ru) значение; подменяем на локаль.
+	t.Title = resolveI18N(t.TitleI18N, t.Title, lang)
+	if description.Valid {
+		t.Description = resolveI18N(t.DescriptionI18N, description.String, lang)
+	} else {
+		t.Description = ""
+	}
 	t.IconURL = iconURL.String
 	t.Language = language.String
 	t.Level = level.String
@@ -56,17 +112,14 @@ func scanTrack(scan func(...interface{}) error) (*model.Track, error) {
 }
 
 const trackSelectCols = `id, code, title, description, icon_url, language, level,
-		track_type, is_published, sort_order, motivation, created_by, created_at, updated_at`
+		track_type, is_published, sort_order, motivation, created_by, created_at, updated_at,
+		title_i18n, description_i18n`
 
 // Create создаёт трек.
 func (r *trackRepository) Create(ctx context.Context, track *model.Track) error {
 	if track.ID == "" {
 		track.ID = uuid.New().String()
 	}
-	if track.TrackType == "" {
-		track.TrackType = model.TrackTypeThematic
-	}
-
 	query := `
 		INSERT INTO learning_tracks
 			(id, code, title, description, icon_url, language, level,
@@ -93,13 +146,13 @@ func (r *trackRepository) Create(ctx context.Context, track *model.Track) error 
 // GetByID — выборка по ID.
 func (r *trackRepository) GetByID(ctx context.Context, id string) (*model.Track, error) {
 	query := `SELECT ` + trackSelectCols + ` FROM learning_tracks WHERE id = $1`
-	return scanTrack(r.pool.QueryRow(ctx, query, id).Scan)
+	return scanTrack(r.pool.QueryRow(ctx, query, id).Scan, langFromCtx(ctx))
 }
 
 // GetByCode — выборка по уникальному коду.
 func (r *trackRepository) GetByCode(ctx context.Context, code string) (*model.Track, error) {
 	query := `SELECT ` + trackSelectCols + ` FROM learning_tracks WHERE code = $1`
-	return scanTrack(r.pool.QueryRow(ctx, query, code).Scan)
+	return scanTrack(r.pool.QueryRow(ctx, query, code).Scan, langFromCtx(ctx))
 }
 
 // Update обновляет редактируемые поля трека.
@@ -192,7 +245,7 @@ func (r *trackRepository) List(ctx context.Context, filters repository.TrackList
 
 	var tracks []*model.Track
 	for rows.Next() {
-		t, err := scanTrack(rows.Scan)
+		t, err := scanTrack(rows.Scan, langFromCtx(ctx))
 		if err != nil {
 			return nil, 0, err
 		}
@@ -227,7 +280,8 @@ func (r *trackRepository) RemoveLesson(ctx context.Context, trackID, lessonID st
 // ListLessons возвращает уроки трека в порядке order_index.
 func (r *trackRepository) ListLessons(ctx context.Context, trackID string) ([]*model.Lesson, error) {
 	query := `
-		SELECT l.id, l.module_id, l.title, l.description, tl.order_index, l.created_at, l.updated_at
+		SELECT l.id, l.module_id, l.title, l.description, tl.order_index, l.created_at, l.updated_at,
+		       l.title_i18n, l.description_i18n
 		FROM track_lessons tl
 		JOIN lessons l ON l.id = tl.lesson_id
 		WHERE tl.track_id = $1
@@ -239,10 +293,12 @@ func (r *trackRepository) ListLessons(ctx context.Context, trackID string) ([]*m
 	}
 	defer rows.Close()
 
+	lang := langFromCtx(ctx)
 	var lessons []*model.Lesson
 	for rows.Next() {
 		lesson := &model.Lesson{}
 		var moduleID sql.NullString
+		var titleI18N, descrI18N []byte
 		if err := rows.Scan(
 			&lesson.ID,
 			&moduleID,
@@ -251,10 +307,16 @@ func (r *trackRepository) ListLessons(ctx context.Context, trackID string) ([]*m
 			&lesson.OrderIndex,
 			&lesson.CreatedAt,
 			&lesson.UpdatedAt,
+			&titleI18N,
+			&descrI18N,
 		); err != nil {
 			return nil, err
 		}
 		lesson.ModuleID = moduleID.String
+		lesson.TitleI18N = scanI18N(titleI18N)
+		lesson.DescriptionI18N = scanI18N(descrI18N)
+		lesson.Title = resolveI18N(lesson.TitleI18N, lesson.Title, lang)
+		lesson.Description = resolveI18N(lesson.DescriptionI18N, lesson.Description, lang)
 		lessons = append(lessons, lesson)
 	}
 	return lessons, nil
@@ -327,7 +389,7 @@ func (r *trackRepository) SelectPlanCandidates(ctx context.Context, language, le
 
 	var tracks []*model.Track
 	for rows.Next() {
-		t, err := scanTrack(rows.Scan)
+		t, err := scanTrack(rows.Scan, langFromCtx(ctx))
 		if err != nil {
 			return nil, err
 		}
@@ -357,6 +419,7 @@ func (r *trackRepository) ListUserTracks(ctx context.Context, userID string) ([]
 	query := `
 		SELECT t.id, t.code, t.title, t.description, t.icon_url, t.language, t.level,
 		       t.track_type, t.is_published, t.sort_order, t.motivation, t.created_by, t.created_at, t.updated_at,
+		       t.title_i18n, t.description_i18n,
 		       ut.order_index, ut.status, ut.source, ut.added_at
 		FROM user_tracks ut
 		JOIN learning_tracks t ON t.id = ut.track_id
@@ -369,19 +432,25 @@ func (r *trackRepository) ListUserTracks(ctx context.Context, userID string) ([]
 	}
 	defer rows.Close()
 
+	lang := langFromCtx(ctx)
 	var result []*model.UserTrack
 	for rows.Next() {
 		t := &model.Track{}
 		var description, iconURL, language, level, createdBy sql.NullString
+		var titleI18N, descrI18N []byte
 		ut := &model.UserTrack{UserID: userID, Track: t}
 		if err := rows.Scan(
 			&t.ID, &t.Code, &t.Title, &description, &iconURL, &language, &level,
 			&t.TrackType, &t.IsPublished, &t.SortOrder, &t.Motivation, &createdBy, &t.CreatedAt, &t.UpdatedAt,
+			&titleI18N, &descrI18N,
 			&ut.OrderIndex, &ut.Status, &ut.Source, &ut.AddedAt,
 		); err != nil {
 			return nil, err
 		}
-		t.Description = description.String
+		t.TitleI18N = scanI18N(titleI18N)
+		t.DescriptionI18N = scanI18N(descrI18N)
+		t.Title = resolveI18N(t.TitleI18N, t.Title, lang)
+		t.Description = resolveI18N(t.DescriptionI18N, description.String, lang)
 		t.IconURL = iconURL.String
 		t.Language = language.String
 		t.Level = level.String

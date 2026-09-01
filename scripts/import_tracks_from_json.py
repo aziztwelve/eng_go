@@ -27,6 +27,14 @@ def json_sql(value):
     return esc(json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":")))
 
 
+def json_sql_obj(value):
+    """Локализованный объект {ru:..,en:..} → SQL-строка для ::jsonb."""
+    if not isinstance(value, dict):
+        value = {"ru": str(value or "")}
+    clean = {k: str(v) for k, v in value.items() if str(v or "").strip()}
+    return esc(json.dumps(clean, ensure_ascii=False, sort_keys=True, separators=(",", ":")))
+
+
 def stable_id(*parts):
     return str(uuid.uuid5(NAMESPACE, ":".join(parts)))
 
@@ -82,6 +90,9 @@ def generate_sql_from_json(json_file_path):
 
     title = localized(track["title"], native_language)
     description = localized(track["description"], native_language)
+    # JSONB-локали для контентного i18n (title_i18n/description_i18n).
+    title_i18n = json_sql_obj(track["title"])
+    description_i18n = json_sql_obj(track["description"])
 
     lines = [
         f"-- Track: {code}. Generated from lingoiq.track.v2 by import_tracks_from_json.py.",
@@ -100,11 +111,13 @@ def generate_sql_from_json(json_file_path):
     sort_order = int(track.get("sort_order") or 0)
     lines.append(
         "INSERT INTO courses.learning_tracks "
-        "(id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)\n"
+        "(id, code, title, description, title_i18n, description_i18n, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)\n"
         f"VALUES ('{track_id}', '{esc(code)}', '{esc(title)}', '{esc(description)}', "
+        f"'{title_i18n}'::jsonb, '{description_i18n}'::jsonb, "
         f"'{esc(track['target_language'])}', '{esc(track['level'])}', '', "
         f"{motivation_sql}, true, {sort_order}, NOW(), NOW())\n"
         "ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, "
+        "title_i18n = EXCLUDED.title_i18n, description_i18n = EXCLUDED.description_i18n, "
         "motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, "
         "sort_order = EXCLUDED.sort_order, updated_at = NOW();"
     )
@@ -114,13 +127,17 @@ def generate_sql_from_json(json_file_path):
         lesson_id = stable_id("lingoiq.track.v2", code, lesson_code)
         lesson_title = localized(lesson["title"], native_language)
         lesson_objective = localized(lesson["objective"], native_language)
+        lesson_title_i18n = json_sql_obj(lesson["title"])
+        lesson_objective_i18n = json_sql_obj(lesson["objective"])
 
         lines.append(
             "INSERT INTO courses.lessons "
-            "(id, module_id, title, description, order_index, created_at, updated_at)\n"
+            "(id, module_id, title, description, title_i18n, description_i18n, order_index, created_at, updated_at)\n"
             f"VALUES ('{lesson_id}', NULL, '{esc(lesson_title)}', '{esc(lesson_objective)}', "
+            f"'{lesson_title_i18n}'::jsonb, '{lesson_objective_i18n}'::jsonb, "
             f"{lesson['order'] - 1}, NOW(), NOW())\n"
             "ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, "
+            "title_i18n = EXCLUDED.title_i18n, description_i18n = EXCLUDED.description_i18n, "
             "order_index = EXCLUDED.order_index, updated_at = NOW();"
         )
 
@@ -136,10 +153,12 @@ def generate_sql_from_json(json_file_path):
 
             lines.append(
                 "INSERT INTO courses.steps "
-                "(id, lesson_id, type, title, content, order_index, created_at, updated_at)\n"
+                "(id, lesson_id, type, title, title_i18n, content, order_index, created_at, updated_at)\n"
                 f"VALUES ('{step_id}', '{lesson_id}', '{esc(step['type'])}', '{esc(step_title)}', "
+                f"'{json_sql_obj(step['title'])}'::jsonb, "
                 f"'{json_sql(content)}'::jsonb, {step['order'] - 1}, NOW(), NOW())\n"
                 "ON CONFLICT (id) DO UPDATE SET type = EXCLUDED.type, title = EXCLUDED.title, "
+                "title_i18n = EXCLUDED.title_i18n, "
                 "content = EXCLUDED.content, order_index = EXCLUDED.order_index, updated_at = NOW();"
             )
 
