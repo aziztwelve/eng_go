@@ -156,7 +156,7 @@ def generate_sql_from_json(json_file_path):
             f"VALUES ('{vocabulary_id}', '{esc(track['target_language'])}', '{esc(word)}', "
             f"'{esc(translation)}', '{esc(native_language)}', '{esc(track['level'])}', "
             f"NULLIF('{esc(definition)}', ''), NOW(), NOW())\n"
-            "ON CONFLICT (language, word, target_language) DO NOTHING;"
+            "ON CONFLICT DO NOTHING;"
         )
 
     for word, lesson_id, first_seen_order in relation_rows:

@@ -3,7 +3,7 @@
 BEGIN;
 
 INSERT INTO courses.learning_tracks (id, code, title, description, language, level, track_type, motivation, is_published, sort_order, created_at, updated_at)
-VALUES ('6df6dfe5-0574-5651-98a5-d8bfd7ad0ce7', 'A1_LISTENING_SHADOWING_SIMPLE_QUESTIONS_ANSWERS', 'Простые вопросы и ответы', 'Научитесь понимать на слух и повторять простые вопросы и короткие ответы.', 'en', 'A1', '', ARRAY['listening_shadowing']::text[], true, 20, NOW(), NOW())
+VALUES ('6df6dfe5-0574-5651-98a5-d8bfd7ad0ce7', 'A1_LISTENING_SHADOWING_SIMPLE_QUESTIONS_ANSWERS', 'Простые вопросы и ответы', 'Научитесь понимать на слух и повторять простые вопросы и короткие ответы.', 'en', 'A1', '', ARRAY['listening_shadowing']::text[], true, 120, NOW(), NOW())
 ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description, motivation = EXCLUDED.motivation, is_published = EXCLUDED.is_published, sort_order = EXCLUDED.sort_order, updated_at = NOW();
 
 INSERT INTO courses.lessons (id, module_id, title, description, order_index, created_at, updated_at)
@@ -188,87 +188,87 @@ ON CONFLICT (track_id, lesson_id) DO UPDATE SET order_index = EXCLUDED.order_ind
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('76b836fb-f4cd-5d85-9d7b-a615a4296dea', 'en', 'What?', 'Что?', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('8bbfaa56-5828-5a93-92bb-8d32521aaf20', 'en', 'Where?', 'Где?', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('e6c60842-c8ce-56c1-acf6-7f87faa89a8a', 'en', 'Who?', 'Кто?', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('0c94d15a-f7d7-5b87-9b83-5b769517fd2a', 'en', 'How?', 'Как?', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('6da48424-02f0-5c09-afab-17005f5ceb5f', 'en', 'What is your name?', 'Как вас зовут?', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('322d95de-8006-5d9e-bb2f-4fed296ecbaa', 'en', 'Where are you from?', 'Откуда вы?', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('61154476-f1cb-5cd0-a624-108da1188823', 'en', 'How are you?', 'Как дела?', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('8e1d62be-cf4b-5313-9c08-df51d7add0d1', 'en', 'Are you ready?', 'Вы готовы?', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('ec10c38e-f144-55a9-b632-7d7e0ff89a98', 'en', 'Yes, I am', 'Да, готов', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('5aca5f9d-ea83-5e60-93e8-365e1b6cca29', 'en', 'No, I am not', 'Нет, не готов', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('007140ff-0b1b-5091-9832-66f1dd364763', 'en', 'Can you swim?', 'Вы умеете плавать?', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('d03ab2ea-4168-5ed2-95ed-ca22069d041a', 'en', 'Yes, I can', 'Да, умею', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('c8561275-6350-5c8c-ba76-d0bf74e2e4f4', 'en', 'No, I cannot', 'Нет, не умею', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('5bad30e8-8e1e-56a3-9b15-ec198274172e', 'en', 'Do you like music?', 'Вам нравится музыка?', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('cc37913c-9bf8-5175-8f17-da3a80658de0', 'en', 'What is this?', 'Что это?', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('a96f888d-b235-5217-9c8d-2ca485d505f4', 'en', 'It is a book', 'Это книга', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('9fe0a04b-15dc-5153-98eb-104aceadfa4c', 'en', 'Where is my pen?', 'Где моя ручка?', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('c655a02d-1338-5b9b-875e-e5af247b9277', 'en', 'It is on the desk', 'Она на парте', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('b85e0c2f-033b-5cb5-a16a-f0b775646d51', 'en', 'Who is she?', 'Кто она?', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('67f95534-3039-553f-b120-4692a55fafae', 'en', 'She is my teacher', 'Она моя учительница', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.vocabulary (id, language, word, translation, target_language, level, definition, created_at, updated_at)
 VALUES ('479bc09d-adde-5497-be2a-137c9894c868', 'en', 'Do you understand?', 'Вы понимаете?', 'ru', 'A1', NULLIF('', ''), NOW(), NOW())
-ON CONFLICT (language, word, target_language) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO courses.track_vocabulary (track_id, vocabulary_id, lesson_id, first_seen_order)
 SELECT '6df6dfe5-0574-5651-98a5-d8bfd7ad0ce7', id, '82043d67-f23a-5905-a500-212418652a2b', 0 FROM courses.vocabulary WHERE language = 'en' AND word = 'What?' AND target_language = 'ru'
