@@ -2,7 +2,6 @@ package v1
 
 import (
 	"context"
-	"time"
 
 	"google.golang.org/protobuf/types/known/timestamppb"
 
@@ -10,13 +9,14 @@ import (
 )
 
 func (a *api) RefreshToken(ctx context.Context, req *authv1.RefreshTokenRequest) (*authv1.RefreshTokenResponse, error) {
-	accessToken, err := a.authService.RefreshToken(ctx, req.GetRefreshToken())
+	tokens, err := a.authService.RefreshToken(ctx, req.GetRefreshToken())
 	if err != nil {
 		return nil, err
 	}
 
 	return &authv1.RefreshTokenResponse{
-		AccessToken: accessToken,
-		ExpiresAt:   timestamppb.New(time.Now().Add(15 * time.Minute)), // TODO: get from config
+		AccessToken:  tokens.AccessToken,
+		RefreshToken: tokens.RefreshToken,
+		ExpiresAt:    timestamppb.New(tokens.ExpiresAt),
 	}, nil
 }

@@ -113,10 +113,14 @@ message RefreshTokenRequest {
   string refresh_token = 1;
 }
 
-// RefreshTokenResponse содержит новый access token
+// RefreshTokenResponse содержит новый access token и (ротация) новый refresh token
 message RefreshTokenResponse {
   string access_token = 1;
   google.protobuf.Timestamp expires_at = 2;
+  // Ротация refresh-токена: скользящее окно — пока юзер активен,
+  // refresh продлевается и не истекает. Пустой = ротация отключена
+  // (старое поведение, только access).
+  string refresh_token = 3;
 }
 
 // GetUserInfoRequest содержит ID пользователя

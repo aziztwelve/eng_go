@@ -102,8 +102,9 @@ func (h *AuthHandler) RefreshToken(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, dto.RefreshTokenResponse{
-		AccessToken: resp.AccessToken,
-		ExpiresAt:   resp.ExpiresAt.AsTime().Format(time.RFC3339),
+		AccessToken:  resp.AccessToken,
+		RefreshToken: resp.RefreshToken,
+		ExpiresAt:    resp.ExpiresAt.AsTime().Format(time.RFC3339),
 	})
 }
 

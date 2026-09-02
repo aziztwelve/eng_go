@@ -14,7 +14,9 @@ type AuthService interface {
 	// ValidateToken возвращает (user_id, role, is_guest, error).
 	// is_guest=true для guest-сессий (см. CreateGuestSession).
 	ValidateToken(ctx context.Context, token string) (string, string, bool, error)
-	RefreshToken(ctx context.Context, refreshToken string) (string, error)
+	// RefreshToken — ротация: новый access + новый refresh (скользящее
+	// окно: активный юзер не разлогинивается).
+	RefreshToken(ctx context.Context, refreshToken string) (model.TokenPair, error)
 	GetUserByID(ctx context.Context, userID string) (*model.User, error)
 
 	// Admin methods

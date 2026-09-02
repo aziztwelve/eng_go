@@ -27,8 +27,9 @@ type LoginResponse struct {
 }
 
 type RefreshTokenResponse struct {
-	AccessToken string `json:"access_token"`
-	ExpiresAt   string `json:"expires_at"`
+	AccessToken  string `json:"access_token"`
+	RefreshToken string `json:"refresh_token,omitempty"` // ротация: новый refresh (пустой = без ротации)
+	ExpiresAt    string `json:"expires_at"`
 }
 
 // === Guest mode (onboarding §3.2) ===

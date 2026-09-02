@@ -401,11 +401,15 @@ func (x *RefreshTokenRequest) GetRefreshToken() string {
 	return ""
 }
 
-// RefreshTokenResponse содержит новый access token
+// RefreshTokenResponse содержит новый access token и (ротация) новый refresh token
 type RefreshTokenResponse struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	AccessToken   string                 `protobuf:"bytes,1,opt,name=access_token,json=accessToken,proto3" json:"access_token,omitempty"`
-	ExpiresAt     *timestamppb.Timestamp `protobuf:"bytes,2,opt,name=expires_at,json=expiresAt,proto3" json:"expires_at,omitempty"`
+	state       protoimpl.MessageState `protogen:"open.v1"`
+	AccessToken string                 `protobuf:"bytes,1,opt,name=access_token,json=accessToken,proto3" json:"access_token,omitempty"`
+	ExpiresAt   *timestamppb.Timestamp `protobuf:"bytes,2,opt,name=expires_at,json=expiresAt,proto3" json:"expires_at,omitempty"`
+	// Ротация refresh-токена: скользящее окно — пока юзер активен,
+	// refresh продлевается и не истекает. Пустой = ротация отключена
+	// (старое поведение, только access).
+	RefreshToken  string `protobuf:"bytes,3,opt,name=refresh_token,json=refreshToken,proto3" json:"refresh_token,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -452,6 +456,13 @@ func (x *RefreshTokenResponse) GetExpiresAt() *timestamppb.Timestamp {
 		return x.ExpiresAt
 	}
 	return nil
+}
+
+func (x *RefreshTokenResponse) GetRefreshToken() string {
+	if x != nil {
+		return x.RefreshToken
+	}
+	return ""
 }
 
 // GetUserInfoRequest содержит ID пользователя
@@ -1534,11 +1545,12 @@ const file_auth_v1_auth_proto_rawDesc = "" +
 	"\x04role\x18\x03 \x01(\tR\x04role\x12\x19\n" +
 	"\bis_guest\x18\x04 \x01(\bR\aisGuest\":\n" +
 	"\x13RefreshTokenRequest\x12#\n" +
-	"\rrefresh_token\x18\x01 \x01(\tR\frefreshToken\"t\n" +
+	"\rrefresh_token\x18\x01 \x01(\tR\frefreshToken\"\x99\x01\n" +
 	"\x14RefreshTokenResponse\x12!\n" +
 	"\faccess_token\x18\x01 \x01(\tR\vaccessToken\x129\n" +
 	"\n" +
-	"expires_at\x18\x02 \x01(\v2\x1a.google.protobuf.TimestampR\texpiresAt\"-\n" +
+	"expires_at\x18\x02 \x01(\v2\x1a.google.protobuf.TimestampR\texpiresAt\x12#\n" +
+	"\rrefresh_token\x18\x03 \x01(\tR\frefreshToken\"-\n" +
 	"\x12GetUserInfoRequest\x12\x17\n" +
 	"\auser_id\x18\x01 \x01(\tR\x06userId\"\xa6\x01\n" +
 	"\x13GetUserInfoResponse\x12\x0e\n" +

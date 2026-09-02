@@ -50,39 +50,48 @@ func (s *service) ValidateToken(ctx context.Context, tokenString string) (string
 	return claims.UserID, claims.Role, claims.IsGuest, nil
 }
 
-func (s *service) RefreshToken(ctx context.Context, refreshTokenString string) (string, error) {
+func (s *service) RefreshToken(ctx context.Context, refreshTokenString string) (model.TokenPair, error) {
 	token, err := jwt.ParseWithClaims(refreshTokenString, &refreshTokenClaims{}, func(token *jwt.Token) (interface{}, error) {
 		return []byte(s.jwtSecret), nil
 	})
 
 	if err != nil {
-		return "", model.ErrInvalidToken
+		return model.TokenPair{}, model.ErrInvalidToken
 	}
 
 	claims, ok := token.Claims.(*refreshTokenClaims)
 	if !ok || !token.Valid {
-		return "", model.ErrInvalidToken
+		return model.TokenPair{}, model.ErrInvalidToken
 	}
 
 	// Проверяем срок действия
 	if claims.ExpiresAt.Before(time.Now()) {
-		return "", model.ErrTokenExpired
+		return model.TokenPair{}, model.ErrTokenExpired
 	}
 
 	// Получаем пользователя для получения роли + актуального is_guest флага
 	// (на случай если юзер был claim'нут — refresh выдаёт already-non-guest токен).
 	user, err := s.authRepository.GetByID(ctx, claims.UserID)
 	if err != nil {
-		return "", err
+		return model.TokenPair{}, err
 	}
 
-	// Генерируем новый access token
+	// Ротация: перевыпускаем ОБА токена. Скользящее окно — пока юзер
+	// активен (refresh хотя бы раз в refreshTTL), сессия не истекает.
 	accessToken, err := s.generateAccessToken(user.ID, user.Role, user.IsGuest)
 	if err != nil {
-		return "", err
+		return model.TokenPair{}, err
+	}
+	newRefreshToken, err := s.generateRefreshToken(user.ID, user.IsGuest)
+	if err != nil {
+		return model.TokenPair{}, err
 	}
 
-	return accessToken, nil
+	return model.TokenPair{
+		AccessToken:  accessToken,
+		RefreshToken: newRefreshToken,
+		ExpiresAt:    time.Now().Add(s.accessTTL),
+	}, nil
 }
 
 func (s *service) generateAccessToken(userID, role string, isGuest bool) (string, error) {
