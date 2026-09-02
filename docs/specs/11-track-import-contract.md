@@ -74,3 +74,45 @@ again discards any manual edits made directly to the v2 files (e.g. added
 Russian translations). Use `regenerate_seed_from_v2.py` instead when the v2
 files themselves are the source of truth and only the seed needs
 refreshing.
+
+## Adding tracks after the app is published (content-only releases)
+
+New tracks appear in the already-published mobile app **without an app
+update**. The mobile client contains no track data: everything is fetched
+from the API on every screen open (`GET /tracks`, `/tracks/:code`,
+`/lessons/:id`), with a React Query cache of at most 5 minutes. Once a
+seed is applied on the server, users see the track either within 5
+minutes (running app) or on the next cold start.
+
+```
+1. Receive JSON (lingoiq.track.v2, bilingual title/instructions ru+en)
+2. python3 scripts/import_tracks_from_json.py track.json \
+      --output services/course-service/seeds/1NN_track.sql
+3. Review the seed (sort_order, is_published=true), commit, push
+4. Deploy to the server and apply the seed:
+   docker exec -i elearning-postgres psql -U admin -d elearning \
+     -v ON_ERROR_STOP=1 < services/course-service/seeds/1NN_track.sql
+5. Done — no APK release needed
+```
+
+Conditions (all already hold):
+
+- **Step types**: the track uses only types the mobile `StepRenderer`
+  already supports (the 13 types in the table above). A new type requires
+  an app release.
+- **Goal**: the track's `goal` is one of the goals the mobile app lists
+  (`work`, `business_english`, `exam`, `travel`, `speaking`, `study`,
+  `listening_shadowing`). A new goal requires an app release.
+- **Deterministic IDs**: seeds use `uuid5` from track/lesson/step codes,
+  so seeds are idempotent and safe to re-apply.
+- **Visibility**: seeds set `is_published=true`. To stage a track before
+  a marketing date, set `is_published=false` in the seed and publish
+  later via the admin API.
+
+What is server-side only (no app release ever needed): track/lesson/step
+content and translations (`title_i18n`/`description_i18n` JSONB, served
+per `Accept-Language`), vocabulary, ordering, track-lesson composition,
+level and motivation assignment.
+
+What requires an app release: a new step type, a new goal, changes to
+the step content contract, or changes to the import contract itself.
