@@ -66,6 +66,7 @@ type Config struct {
 	AudioStorage         string
 	MinIOEndpoint        string // host:port (для PUT)
 	MinIOPublicEndpoint  string // host:port (для GET, опц.)
+	MinIOPublicBaseURL   string // полный base URL для GET, напр. "https://api.lingoiq.online"
 	MinIOAccessKey       string
 	MinIOSecretKey       string
 	MinIOUseSSL          bool
@@ -189,6 +190,7 @@ func Get() *Config {
 		AudioStorage:         getEnv("AI_AUDIO_STORAGE", "noop"),
 		MinIOEndpoint:        getEnv("AI_MINIO_ENDPOINT", ""),
 		MinIOPublicEndpoint:  getEnv("AI_MINIO_PUBLIC_ENDPOINT", ""),
+		MinIOPublicBaseURL:   getEnv("AI_MINIO_PUBLIC_BASE_URL", ""),
 		MinIOAccessKey:       getEnv("AI_MINIO_ACCESS_KEY", ""),
 		MinIOSecretKey:       getEnv("AI_MINIO_SECRET_KEY", ""),
 		MinIOUseSSL:          getEnv("AI_MINIO_USE_SSL", "false") == "true",

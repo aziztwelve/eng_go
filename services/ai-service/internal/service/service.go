@@ -25,20 +25,25 @@ type Config struct {
 type Service struct {
 	cfg Config
 
-	provider     providers.AIProvider
-	moderator    providers.Moderator
+	provider  providers.AIProvider
+	moderator providers.Moderator
 	// ttsSynth — опциональный inline-TTS (path A, напр. Google). Если задан,
 	// SynthesizeTTS возвращает аудио-байты, минуя MinIO. nil → fallback на
 	// provider.SynthesizeTTS (URL/storage).
-	ttsSynth     providers.TTSSynthesizer
+	ttsSynth providers.TTSSynthesizer
+	// audioUploader — опциональный storage для path A: inline-аудио
+	// дополнительно заливается в MinIO, чтобы gateway закэшировал публичный
+	// URL в courses.tts_cache и повторные запросы не ходили в Google.
+	// nil → path A без upload (только inline-байты).
+	audioUploader providers.AudioUploader
 	// sttTranscriber — опциональный STT (Google). nil → TranscribeAudio
 	// вернёт ErrInvalidArgument (фича выключена).
 	sttTranscriber providers.STTTranscriber
-	sanitize     providers.SanitizeOpts
-	pii          providers.PIIRedactOpts
-	abtests      *abtest.Registry
-	abExposures  repository.ABExposureRepository
-	user         user.Client
+	sanitize       providers.SanitizeOpts
+	pii            providers.PIIRedactOpts
+	abtests        *abtest.Registry
+	abExposures    repository.ABExposureRepository
+	user           user.Client
 
 	conversations repository.ConversationRepository
 	messages      repository.MessageRepository
@@ -57,6 +62,11 @@ type Deps struct {
 	// TTSSynth — опциональный inline-TTS синтезатор (path A, напр. Google
 	// Cloud TTS). Если задан — SynthesizeTTS возвращает байты, минуя MinIO.
 	TTSSynth providers.TTSSynthesizer
+	// AudioUploader — опциональный storage (MinIO/S3) для path A: аудио
+	// заливается в bucket, публичный URL возвращается вместе с байтами —
+	// gateway кладёт его в courses.tts_cache (дедупликация Google-вызовов).
+	// nil или NoopAudioUploader → upload отключён.
+	AudioUploader providers.AudioUploader
 	// STTTranscriber — опциональный STT (Google). Если задан — TranscribeAudio
 	// расшифровывает голос в текст.
 	STTTranscriber providers.STTTranscriber
@@ -107,22 +117,23 @@ func New(cfg Config, d Deps) *Service {
 		abReg = abtest.EmptyRegistry()
 	}
 	return &Service{
-		cfg:           cfg,
-		provider:      d.Provider,
-		moderator:     mod,
-		ttsSynth:      d.TTSSynth,
+		cfg:            cfg,
+		provider:       d.Provider,
+		moderator:      mod,
+		ttsSynth:       d.TTSSynth,
+		audioUploader:  d.AudioUploader,
 		sttTranscriber: d.STTTranscriber,
-		sanitize:      san,
-		pii:           d.PIIOpts,
-		abtests:       abReg,
-		abExposures:   d.ABExposures,
-		user:          d.User,
-		conversations: d.Conversations,
-		messages:      d.Messages,
-		explanations:  d.Explanations,
-		writing:       d.Writing,
-		pronunciation: d.Pronunciation,
-		quotas:        d.Quotas,
-		feedback:      d.Feedback,
+		sanitize:       san,
+		pii:            d.PIIOpts,
+		abtests:        abReg,
+		abExposures:    d.ABExposures,
+		user:           d.User,
+		conversations:  d.Conversations,
+		messages:       d.Messages,
+		explanations:   d.Explanations,
+		writing:        d.Writing,
+		pronunciation:  d.Pronunciation,
+		quotas:         d.Quotas,
+		feedback:       d.Feedback,
 	}
 }

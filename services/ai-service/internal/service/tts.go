@@ -73,9 +73,10 @@ func (s *Service) SynthesizeTTS(ctx context.Context, in SynthesizeTTSInput) (*Sy
 	// Path A (inline): если сконфигурирован отдельный TTS-синтезатор
 	// (напр. Google Cloud TTS) — возвращаем аудио-байты, минуя storage.
 	if s.ttsSynth != nil {
+		language := strings.ToLower(strings.TrimSpace(in.Language))
 		audio, mime, durationMs, err := s.ttsSynth.Synthesize(ctx, text, providers.TTSOptions{
 			Voice:    strings.TrimSpace(in.Voice),
-			Language: strings.ToLower(strings.TrimSpace(in.Language)),
+			Language: language,
 		})
 		if err != nil {
 			return nil, fmt.Errorf("%w: %v", ErrProviderFailed, err)
@@ -86,11 +87,23 @@ func (s *Service) SynthesizeTTS(ctx context.Context, in SynthesizeTTSInput) (*Sy
 		if in.UserID != "" {
 			_ = s.IncrementQuota(ctx, in.UserID, model.QuotaKindVoice, estMinutes)
 		}
-		return &SynthesizeTTSOutput{
+		out := &SynthesizeTTSOutput{
 			DurationMs:   durationMs,
 			MimeType:     mime,
 			AudioContent: audio,
-		}, nil
+		}
+		// Server-side cache enablement: заливаем аудио в публичный bucket и
+		// отдаём URL рядом с байтами. Gateway пишет его в courses.tts_cache,
+		// и повторные запросы того же текста получают cache-hit без вызова
+		// Google и без списания квоты. Best-effort: ошибка upload не валит
+		// синтез — клиент всё равно получает inline-байты.
+		if s.audioUploader != nil {
+			key := providers.KeyFromText(language, text)
+			if url, upErr := s.audioUploader.Upload(ctx, key, audio, mime); upErr == nil && url != "" {
+				out.AudioURL = url
+			}
+		}
+		return out, nil
 	}
 
 	// Path B (storage): провайдер синтезирует и заливает в MinIO, отдаёт URL.

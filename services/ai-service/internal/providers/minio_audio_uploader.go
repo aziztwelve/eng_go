@@ -19,6 +19,11 @@ import (
 // публичный URL. Реализует AudioUploader (Phase 5.X-storage).
 //
 // Стратегия URL'ов:
+//   - Если задан PublicBaseURL — публичный URL строится напрямую как
+//     "<public_base_url>/<bucket>/<key>". Используется когда bucket
+//     анонимно читается через внешний HTTPS-прокси (напр. Caddy
+//     `https://api.lingoiq.online/audio/*` → audio-minio), при этом
+//     внутренний PUT ходит по http на приватный endpoint.
 //   - Если задан PublicEndpoint — public URL строим вручную как
 //     "<scheme>://<public_endpoint>/<bucket>/<key>". Используется когда
 //     bucket настроен как public (`anonymous get`) — типично для prod.
@@ -37,18 +42,20 @@ type MinIOAudioUploader struct {
 	bucket         string
 	prefix         string // например "ai/tts/" — без leading slash
 	publicEndpoint string
+	publicBaseURL  string // готовый base (напр. "https://api.lingoiq.online"), без bucket
 	useSSL         bool
 	presignTTL     time.Duration
-	usePresign     bool // true если PublicEndpoint == "" → presigned URL
+	usePresign     bool // true если ни PublicBaseURL, ни PublicEndpoint не заданы
 }
 
 // MinIOConfig — параметры для NewMinIOAudioUploader.
 type MinIOConfig struct {
-	Endpoint       string        // host:port для PutObject (внутренний)
-	PublicEndpoint string        // host[:port] для GET (внешний, опционально)
+	Endpoint       string // host:port для PutObject (внутренний)
+	PublicEndpoint string // host[:port] для GET (внешний, опционально)
+	PublicBaseURL  string // полный base URL для GET (напр. "https://api.lingoiq.online"), опционально
 	AccessKey      string
 	SecretKey      string
-	UseSSL         bool
+	UseSSL         bool // scheme внутреннего клиента (и PublicEndpoint URL)
 	Region         string
 	Bucket         string
 	Prefix         string        // префикс ключа, def "ai/tts/"
@@ -93,10 +100,11 @@ func NewMinIOAudioUploader(ctx context.Context, cfg MinIOConfig) (*MinIOAudioUpl
 		return nil, fmt.Errorf("minio: bucket %q does not exist", cfg.Bucket)
 	}
 
+	publicBaseURL := strings.TrimSuffix(strings.TrimSpace(cfg.PublicBaseURL), "/")
 	publicEndpoint := cfg.PublicEndpoint
-	usePresign := publicEndpoint == ""
+	usePresign := publicBaseURL == "" && publicEndpoint == ""
 	publicClient := client
-	if !usePresign {
+	if !usePresign && publicBaseURL == "" {
 		publicClient, err = minio.New(publicEndpoint, &minio.Options{
 			Creds:  credentials.NewStaticV4(cfg.AccessKey, cfg.SecretKey, ""),
 			Secure: cfg.UseSSL,
@@ -118,6 +126,7 @@ func NewMinIOAudioUploader(ctx context.Context, cfg MinIOConfig) (*MinIOAudioUpl
 		bucket:         cfg.Bucket,
 		prefix:         prefix,
 		publicEndpoint: publicEndpoint,
+		publicBaseURL:  publicBaseURL,
 		useSSL:         cfg.UseSSL,
 		presignTTL:     ttl,
 		usePresign:     usePresign,
@@ -153,6 +162,10 @@ func (u *MinIOAudioUploader) Upload(ctx context.Context, key string, audio []byt
 		if err != nil {
 			return "", fmt.Errorf("minio: put: %w", err)
 		}
+	}
+
+	if u.publicBaseURL != "" {
+		return fmt.Sprintf("%s/%s/%s", u.publicBaseURL, u.bucket, objectKey), nil
 	}
 
 	if u.usePresign {

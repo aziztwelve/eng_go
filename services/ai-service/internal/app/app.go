@@ -85,8 +85,21 @@ func New(ctx context.Context) (*App, error) {
 	feedbackRepo := postgresrepo.NewFeedbackRepository(pool)
 	abExposureRepo := postgresrepo.NewABExposureRepository(pool)
 
+	// Audio uploader (общий для provider и path A TTS). Строится один раз.
+	// В Service уходит только реальная (не noop) реализация — она включает
+	// server-side кэш: path A (Google inline) заливает mp3 в публичный
+	// bucket, gateway кладёт URL в courses.tts_cache.
+	uploader, err := buildAudioUploader(cfg)
+	if err != nil {
+		return nil, fmt.Errorf("audio uploader: %w", err)
+	}
+	var serviceAudioUploader providers.AudioUploader
+	if !isNoopAudioUploader(uploader) {
+		serviceAudioUploader = uploader
+	}
+
 	// Provider.
-	provider, err := buildProvider(cfg)
+	provider, err := buildProvider(cfg, uploader)
 	if err != nil {
 		return nil, fmt.Errorf("failed to build provider: %w", err)
 	}
@@ -146,18 +159,19 @@ func New(ctx context.Context) (*App, error) {
 		PremiumVoiceMinutesLimit: cfg.PremiumVoiceMinutesLimit,
 		PremiumWritingLimit:      int32(cfg.PremiumWritingLimit),
 	}, service.Deps{
-		Provider:     provider,
-		Moderator:    moderator,
-		TTSSynth:     ttsSynth,
+		Provider:       provider,
+		Moderator:      moderator,
+		TTSSynth:       ttsSynth,
+		AudioUploader:  serviceAudioUploader,
 		STTTranscriber: sttTranscriber,
-		SanitizeOpts: providers.SanitizeOpts{MaxLength: cfg.SanitizeMaxLength},
+		SanitizeOpts:   providers.SanitizeOpts{MaxLength: cfg.SanitizeMaxLength},
 		PIIOpts: providers.PIIRedactOpts{
 			Enabled:     cfg.PIIRedactEnabled,
 			Replacement: cfg.PIIPlaceholderFmt,
 		},
-		ABTests:     abReg,
-		ABExposures: abExposureRepo,
-		User:        userCli,
+		ABTests:       abReg,
+		ABExposures:   abExposureRepo,
+		User:          userCli,
 		Conversations: convsRepo,
 		Messages:      msgsRepo,
 		Explanations:  explRepo,
@@ -216,14 +230,14 @@ func (a *App) Run(ctx context.Context) error {
 //   - "openai"         → OpenAIProvider (Chat + Whisper + TTS).
 //   - "anthropic"      → AnthropicProvider (Chat only; STT/TTS unsupported).
 //   - "router"         → LanguageRouter(Default=OpenAI, Heavy=Anthropic),
-//                         audio-вызовы идут на OpenAI.
-func buildProvider(cfg *config.Config) (providers.AIProvider, error) {
+//     audio-вызовы идут на OpenAI.
+func buildProvider(cfg *config.Config, uploader providers.AudioUploader) (providers.AIProvider, error) {
 	switch cfg.Provider {
 	case "", "mock":
 		return providers.NewMockProvider(), nil
 
 	case "openai":
-		return buildOpenAI(cfg)
+		return buildOpenAI(cfg, uploader)
 
 	case "anthropic":
 		return providers.NewAnthropicProvider(providers.AnthropicConfig{
@@ -233,7 +247,7 @@ func buildProvider(cfg *config.Config) (providers.AIProvider, error) {
 		})
 
 	case "router":
-		def, err := buildOpenAI(cfg)
+		def, err := buildOpenAI(cfg, uploader)
 		if err != nil {
 			return nil, fmt.Errorf("router: build openai default: %w", err)
 		}
@@ -255,11 +269,7 @@ func buildProvider(cfg *config.Config) (providers.AIProvider, error) {
 	}
 }
 
-func buildOpenAI(cfg *config.Config) (providers.AIProvider, error) {
-	uploader, err := buildAudioUploader(cfg)
-	if err != nil {
-		return nil, fmt.Errorf("audio uploader: %w", err)
-	}
+func buildOpenAI(cfg *config.Config, uploader providers.AudioUploader) (providers.AIProvider, error) {
 	return providers.NewOpenAIProvider(providers.OpenAIConfig{
 		APIKey:            cfg.OpenAIAPIKey,
 		BaseURL:           cfg.OpenAIBaseURL,
@@ -278,6 +288,10 @@ func buildOpenAI(cfg *config.Config) (providers.AIProvider, error) {
 //   - "minio"     → MinIOAudioUploader (реальная заливка). Требует
 //     AI_MINIO_ENDPOINT / AI_MINIO_BUCKET / AI_MINIO_ACCESS_KEY /
 //     AI_MINIO_SECRET_KEY. Если bucket недоступен — возвращает ошибку.
+//
+// Публичный URL: AI_MINIO_PUBLIC_BASE_URL (полный base, напр.
+// "https://api.lingoiq.online" при Caddy-прокси на bucket) либо
+// AI_MINIO_PUBLIC_ENDPOINT + scheme из AI_MINIO_USE_SSL; иначе presigned.
 func buildAudioUploader(cfg *config.Config) (providers.AudioUploader, error) {
 	switch strings.ToLower(strings.TrimSpace(cfg.AudioStorage)) {
 	case "", "noop":
@@ -287,6 +301,7 @@ func buildAudioUploader(cfg *config.Config) (providers.AudioUploader, error) {
 		return providers.NewMinIOAudioUploader(context.Background(), providers.MinIOConfig{
 			Endpoint:       cfg.MinIOEndpoint,
 			PublicEndpoint: cfg.MinIOPublicEndpoint,
+			PublicBaseURL:  cfg.MinIOPublicBaseURL,
 			AccessKey:      cfg.MinIOAccessKey,
 			SecretKey:      cfg.MinIOSecretKey,
 			UseSSL:         cfg.MinIOUseSSL,
@@ -298,6 +313,12 @@ func buildAudioUploader(cfg *config.Config) (providers.AudioUploader, error) {
 	default:
 		return nil, fmt.Errorf("unknown AI_AUDIO_STORAGE %q", cfg.AudioStorage)
 	}
+}
+
+// isNoopAudioUploader — true если переданный uploader реально no-op.
+func isNoopAudioUploader(u providers.AudioUploader) bool {
+	_, ok := u.(*providers.NoopAudioUploader)
+	return ok
 }
 
 // buildModerator — Phase 5.33.
