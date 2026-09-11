@@ -1,0 +1,1454 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES",
+  "title": {
+   "ru": "Рабочий день и приоритеты",
+   "en": "Workday Routines and Priorities"
+  },
+  "description": {
+   "ru": "Развивайте практический английский уровня A2 для работы по теме «Рабочий день и приоритеты».",
+   "en": "Develop practical A2 workplace English for workday routines and priorities."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "work",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "work",
+   "workday-routines-and-priorities"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L1",
+   "order": 1,
+   "title": {
+    "ru": "Мой обычный рабочий день",
+    "en": "My Usual Workday"
+   },
+   "objective": {
+    "ru": "Описать рабочий день и изменения в нём, используя past simple и present perfect.",
+    "en": "Describe a workday and its changes using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "routine",
+        "right": "порядок дня"
+       },
+       {
+        "id": "P2",
+        "left": "to plan the day",
+        "right": "планировать день"
+       },
+       {
+        "id": "P3",
+        "left": "most important task",
+        "right": "самая важная задача"
+       },
+       {
+        "id": "P4",
+        "left": "before lunch",
+        "right": "до обеда"
+       },
+       {
+        "id": "P5",
+        "left": "to check emails",
+        "right": "проверить почту"
+       },
+       {
+        "id": "P6",
+        "left": "focus time",
+        "right": "время для концентрации"
+       },
+       {
+        "id": "P7",
+        "left": "so far",
+        "right": "до сих пор"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "I have checked my emails twice so far today.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "I have checked my emails yesterday twice.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "I check my emails already so far.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “I have checked my emails twice so far today.”."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Раньше я проверял почту первым делом, но теперь я начинаю с самой важной задачи.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I used to check my emails first, but now I have started with the most important task.",
+      "word_bank": [
+       "did",
+       "I",
+       "to",
+       "important",
+       "check",
+       "yesterday",
+       "first,",
+       "now",
+       "the",
+       "most",
+       "I",
+       "started",
+       "use",
+       "but",
+       "task.",
+       "my",
+       "used",
+       "emails",
+       "have",
+       "with"
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Last year my working day ___ at eight o'clock.",
+      "correct_answer": "started",
+      "options": [
+       "started",
+       "has start",
+       "starting"
+      ],
+      "translation_hint": "В прошлом году мой рабочий день начинался в восемь."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "already",
+       "day.",
+       "was",
+       "have",
+       "morning",
+       "This",
+       "I",
+       "whole",
+       "planned",
+       "did",
+       "the"
+      ],
+      "correct_words": [
+       "This",
+       "morning",
+       "I",
+       "have",
+       "already",
+       "planned",
+       "the",
+       "whole",
+       "day."
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "I have already answered the most important emails, and it is only ten o'clock.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "I have already answered the most important emails, and it is only ten o'clock.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Я уже ответил на самые важные письма, а сейчас только десять часов."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "A New Routine",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "You look much more organised this month. What has changed?",
+        "translation": "Ты выглядишь гораздо организованнее в этом месяце. Что изменилось?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "I have started to plan my day the evening before.",
+        "translation": "Я начал планировать день накануне вечером."
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna ask?",
+        "options": [
+         {
+          "text": "And what do you do first in the morning now?",
+          "is_correct": true
+         },
+         {
+          "text": "And what did you did first tomorrow?",
+          "is_correct": false
+         },
+         {
+          "text": "Is the routine planning you now?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "routine",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Things you regularly do in the same order",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Something you do only once a year",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A surprise meeting without a plan",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“routine” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have ___ my day before lunch today.",
+      "audio_text": "I have planned my day before lunch today.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "planned",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "plan",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "planning",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “planned”."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She has answered ten emails ___ far.",
+      "correct_answer": "so",
+      "hint_prefix": "so",
+      "explanation": "The complete sentence is “She has answered ten emails so far.”."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "routine",
+        "text": "routine"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to plan the day",
+        "text": "to plan the day"
+       },
+       {
+        "id": "V3",
+        "audio_text": "most important task",
+        "text": "most important task"
+       },
+       {
+        "id": "V4",
+        "audio_text": "before lunch",
+        "text": "before lunch"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to check emails",
+        "text": "to check emails"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "When do you check your emails?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "I used to check them all morning, but now I do it twice a day.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, I check them yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The emails are checking me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“I used to check them all morning, but now I do it twice a day.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L2",
+   "order": 2,
+   "title": {
+    "ru": "Завтра по плану",
+    "en": "Tomorrow's Plan"
+   },
+   "objective": {
+    "ru": "Рассказать о планах на день и сравнить задачи по важности.",
+    "en": "Talk about tomorrow's plans and compare tasks by importance."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "first thing",
+        "right": "первым делом"
+       },
+       {
+        "id": "P2",
+        "left": "to-do list",
+        "right": "список дел"
+       },
+       {
+        "id": "P3",
+        "left": "urgent task",
+        "right": "срочная задача"
+       },
+       {
+        "id": "P4",
+        "left": "later",
+        "right": "позже"
+       },
+       {
+        "id": "P5",
+        "left": "as early as possible",
+        "right": "как можно раньше"
+       },
+       {
+        "id": "P6",
+        "left": "to schedule",
+        "right": "запланировать"
+       },
+       {
+        "id": "P7",
+        "left": "quieter",
+        "right": "тише (спокойнее)"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence talks about tomorrow's plan?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "I am going to write the report first thing tomorrow.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "I wrote the report first thing yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "I have write the report first thing already.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “I am going to write the report first thing tomorrow.”."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Завтра я собираюсь прийти пораньше, потому что утром в офисе тише.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I am going to arrive earlier tomorrow because the office is quieter in the morning.",
+      "word_bank": [
+       "earlier",
+       "arrives",
+       "yesterday",
+       "I",
+       "quieter",
+       "the",
+       "arrive",
+       "in",
+       "going",
+       "because",
+       "am",
+       "to",
+       "office",
+       "did",
+       "the",
+       "morning.",
+       "is",
+       "tomorrow"
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The morning is ___ for focused work than the afternoon.",
+      "correct_answer": "better",
+      "options": [
+       "better",
+       "best",
+       "more good"
+      ],
+      "translation_hint": "Утро лучше подходит для концентрированной работы, чем день."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "all",
+       "my",
+       "did",
+       "I",
+       "meetings",
+       "to",
+       "for",
+       "afternoon.",
+       "was",
+       "am",
+       "going",
+       "schedule",
+       "the"
+      ],
+      "correct_words": [
+       "I",
+       "am",
+       "going",
+       "to",
+       "schedule",
+       "all",
+       "my",
+       "meetings",
+       "for",
+       "the",
+       "afternoon."
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If I finish the urgent task in the morning, I will have a quieter afternoon tomorrow.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If I finish the urgent task in the morning, I will have a quieter afternoon tomorrow.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если я закончу срочную задачу утром, завтра во второй половине дня будет спокойнее."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Evening Plan",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "What are you going to do first thing tomorrow?",
+        "translation": "Что ты сделаешь первым делом завтра?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "The quarterly report — it is more urgent than the emails.",
+        "translation": "Квартальный отчёт — он срочнее почты."
+       },
+       {
+        "type": "choice",
+        "text": "What does Tom advise?",
+        "options": [
+         {
+          "text": "Good idea — you should schedule it before lunch.",
+          "is_correct": true
+         },
+         {
+          "text": "You must to schedule it yesterday evening.",
+          "is_correct": false
+         },
+         {
+          "text": "The report is going you first tomorrow.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to-do list",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A list of tasks that you need to do",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A list of people invited to a party",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A report about finished work only",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to-do list” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I am going to write the to-do ___ this evening.",
+      "audio_text": "I am going to write the to-do list this evening.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "list",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "listed",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "listing",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “list”."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The urgent task is ___ important than the rest.",
+      "correct_answer": "more",
+      "hint_prefix": "mo",
+      "explanation": "The complete sentence is “The urgent task is more important than the rest.”."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "first thing",
+        "text": "first thing"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to-do list",
+        "text": "to-do list"
+       },
+       {
+        "id": "V3",
+        "audio_text": "urgent task",
+        "text": "urgent task"
+       },
+       {
+        "id": "V4",
+        "audio_text": "later",
+        "text": "later"
+       },
+       {
+        "id": "V5",
+        "audio_text": "as early as possible",
+        "text": "as early as possible"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Are you free for a call tomorrow at eight?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Eight is a bit early — could we schedule it after ten instead?",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, I called you tomorrow already.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The call is scheduling me at eight.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Eight is a bit early — could we schedule it after ten instead?” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L3",
+   "order": 3,
+   "title": {
+    "ru": "Как правильно расставить приоритеты",
+    "en": "How to Prioritise Well"
+   },
+   "objective": {
+    "ru": "Дать советы о приоритетах, используя should и первое условное.",
+    "en": "Give prioritisation advice using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to manage time",
+        "right": "управлять временем"
+       },
+       {
+        "id": "P2",
+        "left": "distraction",
+        "right": "отвлекающий фактор"
+       },
+       {
+        "id": "P3",
+        "left": "to turn off notifications",
+        "right": "выключить уведомления"
+       },
+       {
+        "id": "P4",
+        "left": "one task at a time",
+        "right": "одна задача за раз"
+       },
+       {
+        "id": "P5",
+        "left": "to be worth",
+        "right": "стоить того"
+       },
+       {
+        "id": "P6",
+        "left": "regularly",
+        "right": "регулярно"
+       },
+       {
+        "id": "P7",
+        "left": "habit",
+        "right": "привычка"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should turn off notifications when you do focused work.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to turn off notifications yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must turning off notifications last week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should turn off notifications when you do focused work.”."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если ты будешь делать одну задачу за раз, ты закончишь работу быстрее.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If you do one task at a time, you will finish your work faster.",
+      "word_bank": [
+       "did",
+       "at",
+       "yesterday",
+       "finish",
+       "you",
+       "one",
+       "does",
+       "task",
+       "do",
+       "will",
+       "If",
+       "faster.",
+       "work",
+       "you",
+       "time,",
+       "your",
+       "a"
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If a distraction ___ you every five minutes, you will lose your focus.",
+      "correct_answer": "interrupts",
+      "options": [
+       "interrupts",
+       "will interrupt",
+       "interrupted"
+      ],
+      "translation_hint": "Если отвлекающий фактор мешает тебе каждые пять минут, ты потеряешь концентрацию."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "check",
+       "You",
+       "day.",
+       "at",
+       "mustn't",
+       "times",
+       "fixed",
+       "your",
+       "of",
+       "should",
+       "went",
+       "the",
+       "emails"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "check",
+       "your",
+       "emails",
+       "at",
+       "fixed",
+       "times",
+       "of",
+       "the",
+       "day."
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you plan your day regularly, prioritising will become a habit very quickly.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you plan your day regularly, prioritising will become a habit very quickly.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если ты будешь регулярно планировать день, расстановка приоритетов быстро станет привычкой."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Time Management Tips",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "I never finish my to-do list. What should I do?",
+        "translation": "Я никогда не заканчиваю список дел. Что мне делать?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "How many tasks do you put on it?",
+        "translation": "Сколько задач ты в него записываешь?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna say?",
+        "options": [
+         {
+          "text": "About fifteen — maybe that is too many.",
+          "is_correct": true
+         },
+         {
+          "text": "About fifteen, and I finished them all yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The list is doing itself the tasks.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "distraction",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Something that takes your attention away from work",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A quiet room where nobody interrupts you",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A short break between two meetings",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“distraction” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If you ___ notifications, you will focus better.",
+      "audio_text": "If you turn off notifications, you will focus better.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "turn off",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will turn off",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "turned off",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “turn off”."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should do ___ task at a time.",
+      "correct_answer": "one",
+      "hint_prefix": "on",
+      "explanation": "The complete sentence is “You should do one task at a time.”."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to manage time",
+        "text": "to manage time"
+       },
+       {
+        "id": "V2",
+        "audio_text": "distraction",
+        "text": "distraction"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to turn off notifications",
+        "text": "to turn off notifications"
+       },
+       {
+        "id": "V4",
+        "audio_text": "one task at a time",
+        "text": "one task at a time"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to be worth",
+        "text": "to be worth"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKDAY_ROUTINES_AND_PRIORITIES_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "I start many tasks but finish few."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "You should try one task at a time — it is worth building the habit.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "You must to try it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The tasks are starting you.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“You should try one task at a time — it is worth building the habit.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

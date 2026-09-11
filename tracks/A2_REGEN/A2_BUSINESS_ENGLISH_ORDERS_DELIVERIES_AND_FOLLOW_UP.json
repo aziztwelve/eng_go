@@ -1,0 +1,1453 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP",
+  "title": {
+   "ru": "Заказы, доставки и последующие действия",
+   "en": "Orders, Deliveries and Follow-up"
+  },
+  "description": {
+   "ru": "Развивайте деловой английский уровня A2 по теме «Заказы, доставки и последующие действия».",
+   "en": "Develop A2 business English for orders, deliveries and follow-up."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "business_english",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "business-english",
+   "orders-deliveries-and-follow-up"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L1",
+   "order": 1,
+   "title": {
+    "ru": "Что случилось с заказом",
+    "en": "What Happened to the Order"
+   },
+   "objective": {
+    "ru": "Сообщить о статусе заказа, используя past simple и present perfect.",
+    "en": "Report an order status using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "purchase order",
+        "right": "заказ на закупку"
+       },
+       {
+        "id": "P2",
+        "left": "to dispatch",
+        "right": "отправить (товар)"
+       },
+       {
+        "id": "P3",
+        "left": "tracking number",
+        "right": "трек-номер"
+       },
+       {
+        "id": "P4",
+        "left": "out of stock",
+        "right": "нет на складе"
+       },
+       {
+        "id": "P5",
+        "left": "partial delivery",
+        "right": "частичная доставка"
+       },
+       {
+        "id": "P6",
+        "left": "to arrive",
+        "right": "прибыть"
+       },
+       {
+        "id": "P7",
+        "left": "invoice",
+        "right": "счёт"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "Half of the order has already arrived at the warehouse.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Half of the order has arrived yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "Half of the order arrive already now.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “Half of the order has already arrived at the warehouse.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы отправили заказ в пятницу, но половина позиций была не на складе.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We dispatched the order on Friday, but half of the items were out of stock.",
+      "word_bank": [
+       "order",
+       "of",
+       "the",
+       "the",
+       "We",
+       "yesterday",
+       "on",
+       "half",
+       "of",
+       "items",
+       "but",
+       "were",
+       "stock.",
+       "Friday,",
+       "out",
+       "did",
+       "dispatch",
+       "dispatched"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The supplier ___ us the tracking number two days ago.",
+      "correct_answer": "sent",
+      "options": [
+       "sent",
+       "has send",
+       "sending"
+      ],
+      "translation_hint": "Поставщик прислал трек-номер два дня назад."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "was",
+       "have",
+       "warehouse",
+       "items",
+       "The",
+       "did",
+       "remaining",
+       "morning.",
+       "this",
+       "left",
+       "the"
+      ],
+      "correct_words": [
+       "The",
+       "remaining",
+       "items",
+       "have",
+       "left",
+       "the",
+       "warehouse",
+       "this",
+       "morning."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "The first delivery has arrived, but the invoice has not come yet, so accounting cannot close the month.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "The first delivery has arrived, but the invoice has not come yet, so accounting cannot close the month.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Первая поставка пришла, но счёт ещё не пришёл, поэтому бухгалтерия не может закрыть месяц."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Partial Delivery",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Client",
+        "text": "We ordered fifty chairs, but only twenty arrived.",
+        "translation": "Мы заказали пятьдесят стульев, а пришло только двадцать."
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "You are right. The rest were out of stock at that moment.",
+        "translation": "Вы правы. Остальных не было на складе в тот момент."
+       },
+       {
+        "type": "choice",
+        "text": "What does the client ask?",
+        "options": [
+         {
+          "text": "When are the other thirty going to arrive?",
+          "is_correct": true
+         },
+         {
+          "text": "When did the other thirty arrived tomorrow?",
+          "is_correct": false
+         },
+         {
+          "text": "Are the chairs ordering themselves?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "out of stock",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Not available to buy or order at the moment",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Ready to send from the warehouse today",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Delivered last week without problems",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“out of stock” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "The rest of the order has ___ the warehouse.",
+      "audio_text": "The rest of the order has left the warehouse.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "left",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "leave",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "leaving",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “left”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Have you received the ___ for order 512?",
+      "correct_answer": "invoice",
+      "hint_prefix": "in",
+      "explanation": "The complete sentence is “Have you received the invoice for order 512?”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "purchase order",
+        "text": "purchase order"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to dispatch",
+        "text": "to dispatch"
+       },
+       {
+        "id": "V3",
+        "audio_text": "tracking number",
+        "text": "tracking number"
+       },
+       {
+        "id": "V4",
+        "audio_text": "out of stock",
+        "text": "out of stock"
+       },
+       {
+        "id": "V5",
+        "audio_text": "partial delivery",
+        "text": "partial delivery"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Did the replacement items arrive?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes, they arrived today, and I have already checked them against the invoice.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, they arrive tomorrow morning.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The items are checking themselves.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes, they arrived today, and I have already checked them against the invoice.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L2",
+   "order": 2,
+   "title": {
+    "ru": "Следующий заказ",
+    "en": "The Next Order"
+   },
+   "objective": {
+    "ru": "Спланировать будущие заказы и сравнить условия доставки.",
+    "en": "Plan future orders and compare delivery terms."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to place an order",
+        "right": "разместить заказ"
+       },
+       {
+        "id": "P2",
+        "left": "delivery time",
+        "right": "срок доставки"
+       },
+       {
+        "id": "P3",
+        "left": "faster",
+        "right": "быстрее"
+       },
+       {
+        "id": "P4",
+        "left": "cheaper",
+        "right": "дешевле"
+       },
+       {
+        "id": "P5",
+        "left": "minimum order",
+        "right": "минимальный заказ"
+       },
+       {
+        "id": "P6",
+        "left": "to expect",
+        "right": "ожидать"
+       },
+       {
+        "id": "P7",
+        "left": "in total",
+        "right": "всего"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares delivery options correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "Express delivery is faster but more expensive.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Express delivery is more fast but expensiver.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "Express delivery is fastest but most cheap.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “Express delivery is faster but more expensive.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы собираемся разместить более крупный заказ, потому что так доставка выходит дешевле.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We are going to place a larger order because the delivery works out cheaper that way.",
+      "word_bank": [
+       "yesterday",
+       "to",
+       "because",
+       "way.",
+       "placed",
+       "order",
+       "out",
+       "the",
+       "We",
+       "larger",
+       "delivery",
+       "a",
+       "that",
+       "works",
+       "going",
+       "cheaper",
+       "are",
+       "did",
+       "place"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The minimum order is fifty units ___ total.",
+      "correct_answer": "in",
+      "options": [
+       "in",
+       "at",
+       "on"
+      ],
+      "translation_hint": "Минимальный заказ — пятьдесят единиц в сумме."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "a",
+       "twice",
+       "instead",
+       "was",
+       "did",
+       "week.",
+       "We",
+       "to",
+       "order",
+       "are",
+       "every",
+       "going",
+       "of",
+       "month"
+      ],
+      "correct_words": [
+       "We",
+       "are",
+       "going",
+       "to",
+       "order",
+       "twice",
+       "a",
+       "month",
+       "instead",
+       "of",
+       "every",
+       "week."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If we place the order before noon, the goods will leave the warehouse today.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If we place the order before noon, the goods will leave the warehouse today.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если разместить заказ до полудня, товар покинет склад сегодня же."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Two Delivery Options",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Supplier",
+        "text": "We can offer standard delivery in five days or express in two.",
+        "translation": "Мы можем предложить стандартную доставку за пять дней или экспресс за два."
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "How much more expensive is the express option?",
+        "translation": "Насколько экспресс дороже?"
+       },
+       {
+        "type": "choice",
+        "text": "What does the supplier say?",
+        "options": [
+         {
+          "text": "It costs thirty percent more, but it is three days faster.",
+          "is_correct": true
+         },
+         {
+          "text": "It costs thirty percent more yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The delivery is ordering itself faster.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to place an order",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To officially ask a company to send goods",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To cancel an order that has not arrived",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To return goods to the shop",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to place an order” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We are going to ___ a bigger order.",
+      "audio_text": "We are going to place a bigger order.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "place",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "placed",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "placing",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “place”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Express delivery is ___ than standard.",
+      "correct_answer": "quicker",
+      "hint_prefix": "qu",
+      "explanation": "The complete sentence is “Express delivery is quicker than standard.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to place an order",
+        "text": "to place an order"
+       },
+       {
+        "id": "V2",
+        "audio_text": "delivery time",
+        "text": "delivery time"
+       },
+       {
+        "id": "V3",
+        "audio_text": "faster",
+        "text": "faster"
+       },
+       {
+        "id": "V4",
+        "audio_text": "cheaper",
+        "text": "cheaper"
+       },
+       {
+        "id": "V5",
+        "audio_text": "minimum order",
+        "text": "minimum order"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Should we order the smaller pack?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "No — if we order the large one, the price per unit will be ten percent lower.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "We ordered it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The pack is ordering us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“No — if we order the large one, the price per unit will be ten percent lower.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если поставка задержится",
+    "en": "If the Delivery Is Late"
+   },
+   "objective": {
+    "ru": "Обсудить задержки поставки, используя should и первое условное.",
+    "en": "Discuss delivery delays using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "delay",
+        "right": "задержка"
+       },
+       {
+        "id": "P2",
+        "left": "to notify",
+        "right": "уведомить"
+       },
+       {
+        "id": "P3",
+        "left": "immediately",
+        "right": "немедленно"
+       },
+       {
+        "id": "P4",
+        "left": "to run out of",
+        "right": "закончиться (о запасах)"
+       },
+       {
+        "id": "P5",
+        "left": "stock level",
+        "right": "уровень запасов"
+       },
+       {
+        "id": "P6",
+        "left": "to plan ahead",
+        "right": "планировать заранее"
+       },
+       {
+        "id": "P7",
+        "left": "alternative supplier",
+        "right": "альтернативный поставщик"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The supplier should notify us about delays immediately.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "The supplier should to notify us yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The supplier must notifying us last week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The supplier should notify us about delays immediately.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если поставщик задержит доставку, мы закончим запасы к пятнице.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If the supplier delays the delivery, we will run out of stock by Friday.",
+      "word_bank": [
+       "stock",
+       "we",
+       "did",
+       "of",
+       "yesterday",
+       "delivery,",
+       "supplier",
+       "delayed",
+       "the",
+       "out",
+       "Friday.",
+       "the",
+       "run",
+       "will",
+       "delays",
+       "by",
+       "If"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If stock ___ too low, we will lose orders.",
+      "correct_answer": "gets",
+      "options": [
+       "gets",
+       "will get",
+       "got"
+      ],
+      "translation_hint": "Если запасов станет слишком мало, мы потеряем заказы."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "in",
+       "should",
+       "the",
+       "went",
+       "season.",
+       "mustn't",
+       "levels",
+       "stock",
+       "busy",
+       "higher",
+       "keep",
+       "You"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "keep",
+       "stock",
+       "levels",
+       "higher",
+       "in",
+       "the",
+       "busy",
+       "season."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If the main supplier is late again, we should contact the alternative supplier the same day.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If the main supplier is late again, we should contact the alternative supplier the same day.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если основной поставщик снова задержит, стоит в тот же день связаться с запасным."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Monday Delay",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "The delivery has not arrived, and it was due yesterday.",
+        "translation": "Поставка не пришла, хотя её ждали ещё вчера."
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "Have they told us why?",
+        "translation": "Они сказали почему?"
+       },
+       {
+        "type": "choice",
+        "text": "What is the risk?",
+        "options": [
+         {
+          "text": "If it does not come today, the production line will stop tomorrow.",
+          "is_correct": true
+         },
+         {
+          "text": "If it will not come, the line stopped yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The delivery is stopping itself.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to run out of",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To have no more of something left",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To order a large quantity of goods",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To check the quality of a delivery",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to run out of” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If we ___ of packaging, orders will stop.",
+      "audio_text": "If we run out of packaging, orders will stop.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "run out",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will run out",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "ran out",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “run out”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The supplier should notify us ___ advance.",
+      "correct_answer": "in",
+      "hint_prefix": "in",
+      "explanation": "The complete sentence is “The supplier should notify us in advance.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "delay",
+        "text": "delay"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to notify",
+        "text": "to notify"
+       },
+       {
+        "id": "V3",
+        "audio_text": "immediately",
+        "text": "immediately"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to run out of",
+        "text": "to run out of"
+       },
+       {
+        "id": "V5",
+        "audio_text": "stock level",
+        "text": "stock level"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_ORDERS_DELIVERIES_AND_FOLLOW_UP_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "The supplier is late again."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "We should plan ahead — if we keep a buffer stock, a delay will not stop us.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "We planned it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The delay is stocking us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“We should plan ahead — if we keep a buffer stock, a delay will not stop us.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

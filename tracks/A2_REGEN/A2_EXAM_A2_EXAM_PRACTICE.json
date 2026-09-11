@@ -1,0 +1,1442 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_EXAM_A2_EXAM_PRACTICE",
+  "title": {
+   "ru": "Экзаменационная практика A2",
+   "en": "A2 Exam Practice"
+  },
+  "description": {
+   "ru": "Развивайте экзаменационные навыки уровня A2 по теме «Экзаменационная практика A2».",
+   "en": "Develop A2 exam skills for a2 exam practice."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "exam",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "exam",
+   "a2-exam-practice"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_EXAM_A2_EXAM_PRACTICE_L1",
+   "order": 1,
+   "title": {
+    "ru": "Разбор пробника",
+    "en": "Analysing the Mock Exam"
+   },
+   "objective": {
+    "ru": "Разобрать результаты пробного экзамена, используя past simple и present perfect.",
+    "en": "Analyse mock exam results using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "exam paper",
+        "right": "экзаменационный вариант"
+       },
+       {
+        "id": "P2",
+        "left": "to score",
+        "right": "набрать (баллы)"
+       },
+       {
+        "id": "P3",
+        "left": "to review mistakes",
+        "right": "разобрать ошибки"
+       },
+       {
+        "id": "P4",
+        "left": "section",
+        "right": "раздел (экзамена)"
+       },
+       {
+        "id": "P5",
+        "left": "to improve",
+        "right": "улучшить результат"
+       },
+       {
+        "id": "P6",
+        "left": "time management",
+        "right": "тайм-менеджмент"
+       },
+       {
+        "id": "P7",
+        "left": "so far",
+        "right": "до сих пор"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "I have reviewed all my mistakes from the mock exam.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "I have reviewed them last week.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "I review my mistakes already so far.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “I have reviewed all my mistakes from the mock exam.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я набрал 65 баллов в пробнике, но раздел на аудирование провалил.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I scored 65 points in the mock exam, but I failed the listening section.",
+      "word_bank": [
+       "listening",
+       "exam,",
+       "but",
+       "the",
+       "mock",
+       "65",
+       "score",
+       "points",
+       "scored",
+       "section.",
+       "I",
+       "the",
+       "in",
+       "failed",
+       "did",
+       "tomorrow",
+       "I"
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She spent forty minutes on the reading ___ last time.",
+      "correct_answer": "section",
+      "options": [
+       "section",
+       "sections",
+       "sectional"
+      ],
+      "translation_hint": "В прошлый раз она потратила сорок минут на раздел чтения."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "this",
+       "twice",
+       "was",
+       "did",
+       "We",
+       "the",
+       "have",
+       "week.",
+       "writing",
+       "task",
+       "practised"
+      ],
+      "correct_words": [
+       "We",
+       "have",
+       "practised",
+       "the",
+       "writing",
+       "task",
+       "twice",
+       "this",
+       "week."
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "The mock showed one clear problem: my time management — I have spent half the exam on the first paper.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "The mock showed one clear problem: my time management — I have spent half the exam on the first paper.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Пробник показал одну явную проблему: тайм-менеджмент — я потратил половину экзамена на первый вариант."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Getting the Results",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "The mock results are out. How did you do?",
+        "translation": "Результаты пробника вышли. Как ты справился?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Better than expected — 72! But I have not seen the listening part yet.",
+        "translation": "Лучше ожидаемого — 72! Но раздел аудирования я ещё не видел."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 ask?",
+        "options": [
+         {
+          "text": "Which section has caused the most problems?",
+          "is_correct": true
+         },
+         {
+          "text": "Which section caused them tomorrow yesterday?",
+          "is_correct": false
+         },
+         {
+          "text": "Is 72 listening to your problems?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "mock exam",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A full practice exam before the real one",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A short quiz at the end of a lesson",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "The final exam itself",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“mock exam” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have ___ 80 out of 100 in the last mock.",
+      "audio_text": "I have scored 80 out of 100 in the last mock.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "scored",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "score",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "scoring",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “scored”."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Let's ___ your mistakes together.",
+      "correct_answer": "review",
+      "hint_prefix": "re",
+      "explanation": "The complete sentence is “Let's review your mistakes together.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "exam paper",
+        "text": "exam paper"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to score",
+        "text": "to score"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to review mistakes",
+        "text": "to review mistakes"
+       },
+       {
+        "id": "V4",
+        "audio_text": "section",
+        "text": "section"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to improve",
+        "text": "to improve"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "How was your mock?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Revealing — I have learned that I always lose points on prepositions.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I learned it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The mock is friending me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Revealing — I have learned that I always lose points on prepositions.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_EXAM_A2_EXAM_PRACTICE_L2",
+   "order": 2,
+   "title": {
+    "ru": "Стратегия на настоящий экзамен",
+    "en": "Strategy for the Real Exam"
+   },
+   "objective": {
+    "ru": "Сравнить стратегии сдачи и спланировать подготовку.",
+    "en": "Compare exam strategies and plan your preparation."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to skip a question",
+        "right": "пропустить вопрос"
+       },
+       {
+        "id": "P2",
+        "left": "more efficient",
+        "right": "эффективнее"
+       },
+       {
+        "id": "P3",
+        "left": "easy questions first",
+        "right": "лёгкие вопросы первыми"
+       },
+       {
+        "id": "P4",
+        "left": "to allocate",
+        "right": "распределить (время)"
+       },
+       {
+        "id": "P5",
+        "left": "guess",
+        "right": "догадка / угадать"
+       },
+       {
+        "id": "P6",
+        "left": "answer sheet",
+        "right": "бланк ответов"
+       },
+       {
+        "id": "P7",
+        "left": "checklist",
+        "right": "чек-лист"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two strategies correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "Doing easy questions first is more efficient than a strict order.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Easy first is efficienсter than order.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "Easy questions are most efficient than order.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “Doing easy questions first is more efficient than a strict order.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "На экзамене я собираюсь сначала отвечать на лёгкие вопросы.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "In the exam I am going to answer the easy questions first.",
+      "word_bank": [
+       "answered",
+       "yesterday",
+       "first.",
+       "am",
+       "the",
+       "answer",
+       "going",
+       "to",
+       "did",
+       "easy",
+       "exam",
+       "In",
+       "I",
+       "the",
+       "questions"
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Leaving a hard question for later is ___ than guessing at once.",
+      "correct_answer": "smarter",
+      "options": [
+       "smarter",
+       "smartest",
+       "more smart"
+      ],
+      "translation_hint": "Оставить сложный вопрос на потом умнее, чем сразу угадывать."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "fill",
+       "going",
+       "answer",
+       "sheet",
+       "to",
+       "at",
+       "end.",
+       "am",
+       "the",
+       "was",
+       "I",
+       "the",
+       "did"
+      ],
+      "correct_words": [
+       "I",
+       "am",
+       "going",
+       "to",
+       "fill",
+       "the",
+       "answer",
+       "sheet",
+       "at",
+       "the",
+       "end."
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you allocate fixed minutes to each section, you will never run out of time on the last page.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you allocate fixed minutes to each section, you will never run out of time on the last page.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если распределить фиксированные минуты на каждый раздел, времени на последней странице не закончится."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Exam Tactics",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "What is your tactic for the multiple-choice part?",
+        "translation": "Какая у тебя тактика для тестовой части?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Two passes: easy ones first, then the hard ones with the time left.",
+        "translation": "Два прохода: сначала лёгкие, потом сложные с оставшимся временем."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 decide?",
+        "options": [
+         {
+          "text": "I am going to try exactly that in the next mock.",
+          "is_correct": true
+         },
+         {
+          "text": "I tried it yesterday tomorrow already.",
+          "is_correct": false
+         },
+         {
+          "text": "The tactic is multipassing my choices.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "answer sheet",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The form where you write your final answers",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "The question paper you read from",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A certificate you get after the exam",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“answer sheet” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I am going to ___ ten minutes for checking.",
+      "audio_text": "I am going to allocate ten minutes for checking.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "allocate",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "allocated",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "allocating",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “allocate”."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "A planned guess is ___ than a panic guess.",
+      "correct_answer": "better",
+      "hint_prefix": "be",
+      "explanation": "The complete sentence is “A planned guess is better than a panic guess.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to skip a question",
+        "text": "to skip a question"
+       },
+       {
+        "id": "V2",
+        "audio_text": "more efficient",
+        "text": "more efficient"
+       },
+       {
+        "id": "V3",
+        "audio_text": "easy questions first",
+        "text": "easy questions first"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to allocate",
+        "text": "to allocate"
+       },
+       {
+        "id": "V5",
+        "audio_text": "guess",
+        "text": "guess"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Should I answer every question?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "No penalty means yes — if you mark every answer, you will gain a few free points.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I answered them yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The questions are penaltying me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“No penalty means yes — if you mark every answer, you will gain a few free points.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_EXAM_A2_EXAM_PRACTICE_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если завалишь раздел",
+    "en": "If You Fail a Section"
+   },
+   "objective": {
+    "ru": "Обсудить пересдачи и страховку, используя should и первое условное.",
+    "en": "Discuss retakes and safety nets using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to retake",
+        "right": "пересдать"
+       },
+       {
+        "id": "P2",
+        "left": "to pass",
+        "right": "сдать"
+       },
+       {
+        "id": "P3",
+        "left": "required score",
+        "right": "проходной балл"
+       },
+       {
+        "id": "P4",
+        "left": "to book",
+        "right": "забронировать (дату)"
+       },
+       {
+        "id": "P5",
+        "left": "in case",
+        "right": "на случай"
+       },
+       {
+        "id": "P6",
+        "left": "back-up date",
+        "right": "запасная дата"
+       },
+       {
+        "id": "P7",
+        "left": "nervous",
+        "right": "нервный"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should book a back-up date in case you need a retake.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to book it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must booking dates last exam.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should book a back-up date in case you need a retake.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если наберёшь проходной балл с первого раза, пересдача не понадобится.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If you reach the required score first time, you will not need a retake.",
+      "word_bank": [
+       "time,",
+       "will",
+       "score",
+       "yesterday",
+       "a",
+       "reach",
+       "need",
+       "you",
+       "you",
+       "the",
+       "retake.",
+       "If",
+       "reached",
+       "first",
+       "did",
+       "not",
+       "required"
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you feel too nervous, your score ___ lower.",
+      "correct_answer": "will be",
+      "options": [
+       "will be",
+       "be",
+       "is"
+      ],
+      "translation_hint": "Если слишком нервничать, балл будет ниже."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "register",
+       "You",
+       "the",
+       "should",
+       "mustn't",
+       "went",
+       "available",
+       "for",
+       "date.",
+       "earliest"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "register",
+       "for",
+       "the",
+       "earliest",
+       "available",
+       "date."
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you prepare a back-up plan for a retake, you will walk into the exam calmer — strange but true.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you prepare a back-up plan for a retake, you will walk into the exam calmer — strange but true.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если подготовить запасной план на пересдачу, войдёшь на экзамен спокойнее — странно, но факт."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "After a Bad Section",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "The listening was a disaster. I think I have failed the whole exam.",
+        "translation": "Аудирование было катастрофой. Кажется, я завалил весь экзамен."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Wait for the results — sections are scored separately.",
+        "translation": "Дождись результатов — разделы оцениваются отдельно."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 2 advise?",
+        "options": [
+         {
+          "text": "If you fail only one part, you can retake just that part.",
+          "is_correct": true
+         },
+         {
+          "text": "You retaked it yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The disaster is listening your exam.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to retake",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To take an exam again after failing",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To check your answers before submitting",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To leave the exam room early",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to retake” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If I ___ , I will book a new date in May.",
+      "audio_text": "If I fail, I will book a new date in May.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "fail",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will fail",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "failed",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “fail”."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The ___ score is 60 points.",
+      "correct_answer": "required",
+      "hint_prefix": "req",
+      "explanation": "The complete sentence is “The required score is 60 points.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to retake",
+        "text": "to retake"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to pass",
+        "text": "to pass"
+       },
+       {
+        "id": "V3",
+        "audio_text": "required score",
+        "text": "required score"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to book",
+        "text": "to book"
+       },
+       {
+        "id": "V5",
+        "audio_text": "in case",
+        "text": "in case"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_EXAM_A2_EXAM_PRACTICE_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "What if I do not pass this time?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Then you retake in June — if you keep practising, the second attempt is usually easier.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I passed it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The exam is passing time.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Then you retake in June — if you keep practising, the second attempt is usually easier.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

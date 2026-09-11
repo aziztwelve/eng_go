@@ -1,0 +1,1425 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS",
+  "title": {
+   "ru": "Написание сообщений и писем",
+   "en": "Writing Messages and Emails"
+  },
+  "description": {
+   "ru": "Развивайте экзаменационные навыки уровня A2 по теме «Написание сообщений и писем».",
+   "en": "Develop A2 exam skills for writing messages and emails."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "exam",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "exam",
+   "writing-messages-and-emails"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L1",
+   "order": 1,
+   "title": {
+    "ru": "Письмо, которое я написал",
+    "en": "The Email I Wrote"
+   },
+   "objective": {
+    "ru": "Написать письмо по образцу, используя past simple и present perfect.",
+    "en": "Write a model email using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "salutation",
+        "right": "обращение"
+       },
+       {
+        "id": "P2",
+        "left": "reason for writing",
+        "right": "причина письма"
+       },
+       {
+        "id": "P3",
+        "left": "to attach",
+        "right": "приложить"
+       },
+       {
+        "id": "P4",
+        "left": "sign-off",
+        "right": "заключительная формула"
+       },
+       {
+        "id": "P5",
+        "left": "word count",
+        "right": "количество слов"
+       },
+       {
+        "id": "P6",
+        "left": "formal register",
+        "right": "официальный стиль"
+       },
+       {
+        "id": "P7",
+        "left": "to proofread",
+        "right": "вычитать"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "I have attached the form to this email.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "I have attached it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "I attach the form already now.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “I have attached the form to this email.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я написал письмо, приложил форму и вычитал текст дважды.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I wrote the email, attached the form and proofread the text twice.",
+      "word_bank": [
+       "I",
+       "tomorrow",
+       "the",
+       "text",
+       "email,",
+       "did",
+       "the",
+       "wrote",
+       "write",
+       "form",
+       "proofread",
+       "the",
+       "attached",
+       "and",
+       "twice."
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The task asked for a ___ register, so I wrote 'Dear Mr Brown'.",
+      "correct_answer": "formal",
+      "options": [
+       "formal",
+       "formally",
+       "formals"
+      ],
+      "translation_hint": "В задании требовался официальный стиль, поэтому я написал 'Dear Mr Brown'."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "checked",
+       "word",
+       "count",
+       "She",
+       "did",
+       "was",
+       "twice.",
+       "the",
+       "has"
+      ],
+      "correct_words": [
+       "She",
+       "has",
+       "checked",
+       "the",
+       "word",
+       "count",
+       "twice."
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "The task usually gives three points — if you cover all of them, the structure of the email writes itself.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "The task usually gives three points — if you cover all of them, the structure of the email writes itself.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Задание обычно даёт три пункта — если покрыть все, структура письма напишется сама."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Task Check",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "The task says: explain the problem, suggest a date, ask about equipment.",
+        "translation": "В задании: объяснить проблему, предложить дату, спросить про оборудование."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Three paragraphs, one point each. Have you covered all three?",
+        "translation": "Три абзаца, по пункту на каждый. Ты покрыл все три?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 say?",
+        "options": [
+         {
+          "text": "Two... I have missed the question about equipment. Fixing it now.",
+          "is_correct": true
+         },
+         {
+          "text": "All three — I covered them tomorrow yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The paragraphs are tasking my points.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "sign-off",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The closing phrase like 'Kind regards'",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "The first line with the recipient's name",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "The subject line of the email",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“sign-off” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have ___ the documents to the reply.",
+      "audio_text": "I have attached the documents to the reply.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "attached",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "attach",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "attaching",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “attached”."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "State your ___ for writing in line one.",
+      "correct_answer": "reason",
+      "hint_prefix": "re",
+      "explanation": "The complete sentence is “State your reason for writing in line one.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "salutation",
+        "text": "salutation"
+       },
+       {
+        "id": "V2",
+        "audio_text": "reason for writing",
+        "text": "reason for writing"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to attach",
+        "text": "to attach"
+       },
+       {
+        "id": "V4",
+        "audio_text": "sign-off",
+        "text": "sign-off"
+       },
+       {
+        "id": "V5",
+        "audio_text": "word count",
+        "text": "word count"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "'Hi Sir' — is that a good salutation?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "No — either 'Dear Sir' or 'Hi Mr Brown'; a mix is too informal for the exam.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I mixed it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The sir is salutating me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“No — either 'Dear Sir' or 'Hi Mr Brown'; a mix is too informal for the exam.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L2",
+   "order": 2,
+   "title": {
+    "ru": "Пишем письмо на следующей неделе",
+    "en": "Writing Next Week's Email"
+   },
+   "objective": {
+    "ru": "Сравнить письма и спланировать письменную практику.",
+    "en": "Compare emails and plan writing practice."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "informal email",
+        "right": "неофициальное письмо"
+       },
+       {
+        "id": "P2",
+        "left": "formal email",
+        "right": "официальное письмо"
+       },
+       {
+        "id": "P3",
+        "left": "shorter",
+        "right": "короче"
+       },
+       {
+        "id": "P4",
+        "left": "contractions",
+        "right": "сокращения (don't, I'm)"
+       },
+       {
+        "id": "P5",
+        "left": "to organise into paragraphs",
+        "right": "разбить на абзацы"
+       },
+       {
+        "id": "P6",
+        "left": "flow",
+        "right": "связность (текста)"
+       },
+       {
+        "id": "P7",
+        "left": "to keep to the limit",
+        "right": "уложиться в лимит"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two email styles correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "An informal email is shorter than a formal one.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Informal emails is shorterest than formal.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "An informal email is most short than formal.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “An informal email is shorter than a formal one.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "На следующей неделе я собираюсь писать по одному письму в день.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "Next week I am going to write one email a day.",
+      "word_bank": [
+       "did",
+       "week",
+       "day.",
+       "I",
+       "email",
+       "yesterday",
+       "am",
+       "a",
+       "one",
+       "to",
+       "Next",
+       "wrote",
+       "write",
+       "going"
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Contractions like 'I'm' suit ___ emails.",
+      "correct_answer": "informal",
+      "options": [
+       "informal",
+       "informals",
+       "informally"
+      ],
+      "translation_hint": "Сокращения вроде 'I'm' уместны в неофициальных письмах."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "are",
+       "We",
+       "did",
+       "clear",
+       "was",
+       "going",
+       "organise",
+       "to",
+       "into",
+       "answers",
+       "paragraphs."
+      ],
+      "correct_words": [
+       "We",
+       "are",
+       "going",
+       "to",
+       "organise",
+       "answers",
+       "into",
+       "clear",
+       "paragraphs."
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you organise the email into short paragraphs, the examiner will see your structure in five seconds.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you organise the email into short paragraphs, the examiner will see your structure in five seconds.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если разбить письмо на короткие абзацы, экзаменатор увидит структуру за пять секунд."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Formal or Informal?",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "The task says 'write to your friend about the trip'.",
+        "translation": "В задании: 'напиши другу о поездке'."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Then informal — contractions, short sentences, a friendly sign-off.",
+        "translation": "Значит неофициальное — сокращения, короткие предложения, дружеское завершение."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 write?",
+        "options": [
+         {
+          "text": "'Hi Sam, great news — I've booked the tickets!'",
+          "is_correct": true
+         },
+         {
+          "text": "'Dear Sir, I am writing to inform you about my trip.'",
+          "is_correct": false
+         },
+         {
+          "text": "'To whom it may concern, my friend Sam...'",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "contractions",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Short forms like 'don't' or 'I'm'",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Long full forms like 'do not'",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Formal titles before names",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“contractions” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I am going to ___ the letter into three paragraphs.",
+      "audio_text": "I am going to divide the letter into three paragraphs.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "divide",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "divided",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "dividing",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “divide”."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "A good flow makes the text ___ to read.",
+      "correct_answer": "easier",
+      "hint_prefix": "ea",
+      "explanation": "The complete sentence is “A good flow makes the text easier to read.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "informal email",
+        "text": "informal email"
+       },
+       {
+        "id": "V2",
+        "audio_text": "formal email",
+        "text": "formal email"
+       },
+       {
+        "id": "V3",
+        "audio_text": "shorter",
+        "text": "shorter"
+       },
+       {
+        "id": "V4",
+        "audio_text": "contractions",
+        "text": "contractions"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to organise into paragraphs",
+        "text": "to organise into paragraphs"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "I always write more words than needed."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Cut the weakest sentence — if you keep to the limit, you will not lose points for length.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I cut it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The words are limiting me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Cut the weakest sentence — if you keep to the limit, you will not lose points for length.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если письмо выходит за лимит",
+    "en": "If the Email Exceeds the Limit"
+   },
+   "objective": {
+    "ru": "Редактировать письмо, используя should и первое условное.",
+    "en": "Edit an email using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "word limit",
+        "right": "лимит слов"
+       },
+       {
+        "id": "P2",
+        "left": "to cut out",
+        "right": "вырезать"
+       },
+       {
+        "id": "P3",
+        "left": "redundant",
+        "right": "избыточный"
+       },
+       {
+        "id": "P4",
+        "left": "to prioritise",
+        "right": "расставить приоритеты"
+       },
+       {
+        "id": "P5",
+        "left": "checking stage",
+        "right": "этап проверки"
+       },
+       {
+        "id": "P6",
+        "left": "spelling",
+        "right": "орфография"
+       },
+       {
+        "id": "P7",
+        "left": "punctuation",
+        "right": "пунктуация"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct writing advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should leave two minutes for a final check.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to leave it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must leaving minutes last email.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should leave two minutes for a final check.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если не оставить время на проверку, орфография пострадает.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If you do not leave time for checking, your spelling will suffer.",
+      "word_bank": [
+       "suffer.",
+       "time",
+       "If",
+       "leave",
+       "yesterday",
+       "left",
+       "not",
+       "will",
+       "for",
+       "do",
+       "spelling",
+       "your",
+       "you",
+       "did",
+       "checking,"
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If the text is too long, ___ the redundant sentences.",
+      "correct_answer": "cut out",
+      "options": [
+       "cut out",
+       "will cut out",
+       "cutted out"
+      ],
+      "translation_hint": "Если текст слишком длинный, вырежь избыточные предложения."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "mustn't",
+       "check",
+       "You",
+       "before",
+       "went",
+       "punctuation",
+       "submitting.",
+       "should"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "check",
+       "punctuation",
+       "before",
+       "submitting."
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you spend the last two minutes on spelling and punctuation, your email will look a grade higher.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you spend the last two minutes on spelling and punctuation, your email will look a grade higher.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если потратить последние две минуты на орфографию и пунктуацию, письмо будет выглядеть на балл выше."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Overlong Draft",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "My draft has 160 words, and the limit is 120.",
+        "translation": "В черновике 160 слов, а лимит 120."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Which sentences repeat the same idea?",
+        "translation": "Какие предложения повторяют одну мысль?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 do?",
+        "options": [
+         {
+          "text": "I have found two redundant ones — cutting them out.",
+          "is_correct": true
+         },
+         {
+          "text": "I have counted the words more times.",
+          "is_correct": false
+         },
+         {
+          "text": "The limit is drafting my 160 words.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "redundant",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Not needed, repeating other words",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Necessary for covering the task points",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "The first sentence of the email",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“redundant” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If you ___ two minutes, you will catch the typos.",
+      "audio_text": "If you leave two minutes, you will catch the typos.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "leave",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will leave",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "left",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “leave”."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Spelling and ___ are checked last.",
+      "correct_answer": "punctuation",
+      "hint_prefix": "pu",
+      "explanation": "The complete sentence is “Spelling and punctuation are checked last.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "word limit",
+        "text": "word limit"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to cut out",
+        "text": "to cut out"
+       },
+       {
+        "id": "V3",
+        "audio_text": "redundant",
+        "text": "redundant"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to prioritise",
+        "text": "to prioritise"
+       },
+       {
+        "id": "V5",
+        "audio_text": "checking stage",
+        "text": "checking stage"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_EXAM_WRITING_MESSAGES_AND_EMAILS_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "I never have time to check my writing."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Write shorter — if the draft is tight, the checking stage will fit in two minutes.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I checked it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The writing is timing me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Write shorter — if the draft is tight, the checking stage will fit in two minutes.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

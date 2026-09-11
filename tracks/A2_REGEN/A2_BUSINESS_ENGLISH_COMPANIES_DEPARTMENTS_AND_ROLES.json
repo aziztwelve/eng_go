@@ -1,0 +1,1446 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES",
+  "title": {
+   "ru": "Компании, отделы и должности",
+   "en": "Companies, Departments and Roles"
+  },
+  "description": {
+   "ru": "Развивайте деловой английский уровня A2 по теме «Компании, отделы и должности».",
+   "en": "Develop A2 business English for companies, departments and roles."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "business_english",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "business-english",
+   "companies-departments-and-roles"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L1",
+   "order": 1,
+   "title": {
+    "ru": "Как устроена компания",
+    "en": "How the Company Is Organised"
+   },
+   "objective": {
+    "ru": "Описать структуру компании, используя past simple и present perfect.",
+    "en": "Describe a company structure using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "head office",
+        "right": "главный офис"
+       },
+       {
+        "id": "P2",
+        "left": "subsidiary",
+        "right": "дочерняя компания"
+       },
+       {
+        "id": "P3",
+        "left": "to be responsible for",
+        "right": "отвечать за"
+       },
+       {
+        "id": "P4",
+        "left": "to expand",
+        "right": "расшириться"
+       },
+       {
+        "id": "P5",
+        "left": "staff",
+        "right": "персонал"
+       },
+       {
+        "id": "P6",
+        "left": "to found",
+        "right": "основать"
+       },
+       {
+        "id": "P7",
+        "left": "abroad",
+        "right": "за границей"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The company has opened three new offices since January.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "The company has opened a new office last year.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The company open three offices already.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The company has opened three new offices since January.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Компания основала главный офис в 2010 году и с тех пор открыла филиалы за границей.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "The company founded its head office in 2010 and has opened branches abroad since then.",
+      "word_bank": [
+       "since",
+       "opened",
+       "branches",
+       "its",
+       "The",
+       "yesterday",
+       "has",
+       "abroad",
+       "in",
+       "head",
+       "found",
+       "and",
+       "then.",
+       "did",
+       "2010",
+       "company",
+       "office",
+       "founded"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Last year the sales department ___ to a bigger floor.",
+      "correct_answer": "moved",
+      "options": [
+       "moved",
+       "has move",
+       "moving"
+      ],
+      "translation_hint": "В прошлом году отдел продаж переехал на больший этаж."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "people.",
+       "was",
+       "to",
+       "grown",
+       "from",
+       "ten",
+       "two",
+       "has",
+       "did",
+       "Our",
+       "HR",
+       "team"
+      ],
+      "correct_words": [
+       "Our",
+       "HR",
+       "team",
+       "has",
+       "grown",
+       "from",
+       "two",
+       "to",
+       "ten",
+       "people."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "The finance department has just published the annual report, and the CEO has commented on it already.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "The finance department has just published the annual report, and the CEO has commented on it already.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Финансовый отдел только что опубликовал годовой отчёт, и CEO уже прокомментировал его."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The New Subsidiary",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Ben",
+        "text": "Have you heard? The company has opened a subsidiary in Poland.",
+        "translation": "Слышал? Компания открыла дочернюю компанию в Польше."
+       },
+       {
+        "type": "dialogue",
+        "character": "Maya",
+        "text": "When did it happen?",
+        "translation": "Когда это произошло?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Ben answer?",
+        "options": [
+         {
+          "text": "Last month. The Warsaw team has already hired twenty people.",
+          "is_correct": true
+         },
+         {
+          "text": "Tomorrow. They hired twenty people last year already.",
+          "is_correct": false
+         },
+         {
+          "text": "The subsidiary is opening the company.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "subsidiary",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A company that belongs to a larger company",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A small shop that sells one product",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A department inside one office building",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“subsidiary” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "The company has ___ to South America.",
+      "audio_text": "The company has expanded to South America.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "expanded",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "expand",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "expanding",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “expanded”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She is responsible ___ the marketing team.",
+      "correct_answer": "for",
+      "hint_prefix": "fo",
+      "explanation": "The complete sentence is “She is responsible for the marketing team.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "head office",
+        "text": "head office"
+       },
+       {
+        "id": "V2",
+        "audio_text": "subsidiary",
+        "text": "subsidiary"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to be responsible for",
+        "text": "to be responsible for"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to expand",
+        "text": "to expand"
+       },
+       {
+        "id": "V5",
+        "audio_text": "staff",
+        "text": "staff"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Who is responsible for the new project?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Anna is. She has led similar projects since 2019.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Anna was it tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The project is responsible for Anna.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Anna is. She has led similar projects since 2019.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L2",
+   "order": 2,
+   "title": {
+    "ru": "Роли и рост команды",
+    "en": "Roles and Team Growth"
+   },
+   "objective": {
+    "ru": "Сравнить роли и рассказать о планах роста команды.",
+    "en": "Compare roles and talk about team growth plans."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "team leader",
+        "right": "тимлид"
+       },
+       {
+        "id": "P2",
+        "left": "more senior",
+        "right": "старше по должности"
+       },
+       {
+        "id": "P3",
+        "left": "to report to",
+        "right": "подотчётен (кому-то)"
+       },
+       {
+        "id": "P4",
+        "left": "to hire",
+        "right": "найять (сотрудника)"
+       },
+       {
+        "id": "P5",
+        "left": "position",
+        "right": "должность"
+       },
+       {
+        "id": "P6",
+        "left": "junior",
+        "right": "младший (сотрудник)"
+       },
+       {
+        "id": "P7",
+        "left": "to grow",
+        "right": "расти"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares roles correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "A team leader is more senior than a junior specialist.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "A team leader is seniorer than a junior.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "A team leader is most senior than a junior.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “A team leader is more senior than a junior specialist.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы собираемся нанять двух младших специалистов, потому что команда выросла вдвое.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We are going to hire two junior specialists because the team has doubled in size.",
+      "word_bank": [
+       "team",
+       "two",
+       "did",
+       "going",
+       "specialists",
+       "hired",
+       "yesterday",
+       "are",
+       "doubled",
+       "junior",
+       "to",
+       "size.",
+       "the",
+       "We",
+       "in",
+       "hire",
+       "has",
+       "because"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "In our structure, assistants ___ directly to the office manager.",
+      "correct_answer": "report",
+      "options": [
+       "report",
+       "reports",
+       "reporting"
+      ],
+      "translation_hint": "В нашей структуре ассистенты подотчётны напрямую офис-менеджеру."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "quarter.",
+       "team",
+       "was",
+       "is",
+       "grow",
+       "did",
+       "logistics",
+       "to",
+       "next",
+       "The",
+       "going"
+      ],
+      "correct_words": [
+       "The",
+       "logistics",
+       "team",
+       "is",
+       "going",
+       "to",
+       "grow",
+       "next",
+       "quarter."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If the company wins the tender, the department will create fifteen new positions.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If the company wins the tender, the department will create fifteen new positions.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если компания выиграет тендер, отдел создаст пятнадцать новых должностей."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The New Role",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Manager",
+        "text": "We are going to create a new position: customer success manager.",
+        "translation": "Мы собираемся ввести новую должность: менеджер по удержанию клиентов."
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "Who will the new manager report to?",
+        "translation": "Кому будет подотчётен новый менеджер?"
+       },
+       {
+        "type": "choice",
+        "text": "What does the manager say?",
+        "options": [
+         {
+          "text": "To me — and the role is more senior than the support team roles.",
+          "is_correct": true
+         },
+         {
+          "text": "To me, and it was seniorer yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The position is reporting to itself.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to report to",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To be managed by a particular person at work",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To write a report about a colleague",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To finish work before the deadline",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to report to” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "They are going to ___ five engineers.",
+      "audio_text": "They are going to hire five engineers.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "hire",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "hired",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "hiring",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “hire”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "This role is ___ senior than my old one.",
+      "correct_answer": "more",
+      "hint_prefix": "mo",
+      "explanation": "The complete sentence is “This role is more senior than my old one.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "team leader",
+        "text": "team leader"
+       },
+       {
+        "id": "V2",
+        "audio_text": "more senior",
+        "text": "more senior"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to report to",
+        "text": "to report to"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to hire",
+        "text": "to hire"
+       },
+       {
+        "id": "V5",
+        "audio_text": "position",
+        "text": "position"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Is the new position junior or senior?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "More senior — it reports directly to the head of department.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "It was seniorer yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The position is reporting me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“More senior — it reports directly to the head of department.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L3",
+   "order": 3,
+   "title": {
+    "ru": "К кому обратиться",
+    "en": "Who to Contact"
+   },
+   "objective": {
+    "ru": "Объяснить, к кому идти с вопросами, используя should и первое условное.",
+    "en": "Explain who to contact using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to contact",
+        "right": "обратиться к"
+       },
+       {
+        "id": "P2",
+        "left": "in charge of",
+        "right": "ответственный за"
+       },
+       {
+        "id": "P3",
+        "left": "to solve",
+        "right": "решить (вопрос)"
+       },
+       {
+        "id": "P4",
+        "left": "colleague",
+        "right": "коллега"
+       },
+       {
+        "id": "P5",
+        "left": "department",
+        "right": "отдел"
+       },
+       {
+        "id": "P6",
+        "left": "faster",
+        "right": "быстрее"
+       },
+       {
+        "id": "P7",
+        "left": "internal request",
+        "right": "внутренний запрос"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should contact HR about holiday requests.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to contact HR yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must contacting HR last week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should contact HR about holiday requests.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если вопрос касается зарплаты, обратитесь в отдел кадров.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If the question is about salaries, you should contact the HR department.",
+      "word_bank": [
+       "If",
+       "the",
+       "yesterday",
+       "is",
+       "salaries,",
+       "concerned",
+       "did",
+       "question",
+       "should",
+       "you",
+       "contact",
+       "HR",
+       "about",
+       "the",
+       "department."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you ___ the right department, you will get an answer faster.",
+      "correct_answer": "contact",
+      "options": [
+       "contact",
+       "will contact",
+       "contacted"
+      ],
+      "translation_hint": "Если обратишься в нужный отдел, получишь ответ быстрее."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "mustn't",
+       "should",
+       "person",
+       "the",
+       "went",
+       "budget.",
+       "You",
+       "of",
+       "charge",
+       "the",
+       "ask",
+       "in"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "ask",
+       "the",
+       "person",
+       "in",
+       "charge",
+       "of",
+       "the",
+       "budget."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you are not sure who to ask, the office manager will point you to the right department.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you are not sure who to ask, the office manager will point you to the right department.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если не знаешь, кого спросить, офис-менеджер подскажет нужный отдел."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Wrong Department",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "I sent my request to finance, but they returned it.",
+        "translation": "Я отправил запрос в финансовый отдел, но его вернули."
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "Equipment requests go to the office manager, not finance.",
+        "translation": "Запросы на технику идут офис-менеджеру, а не в финансы."
+       },
+       {
+        "type": "choice",
+        "text": "What did Tom do wrong?",
+        "options": [
+         {
+          "text": "He contacted the wrong department, so he should resend it.",
+          "is_correct": true
+         },
+         {
+          "text": "He contacted finance tomorrow instead.",
+          "is_correct": false
+         },
+         {
+          "text": "The request is sending itself back.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "in charge of",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Having control or responsibility for something",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Being new in a company",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Being on holiday this week",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“in charge of” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If you ___ the office manager, she will help today.",
+      "audio_text": "If you contact the office manager, she will help today.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "contact",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will contact",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "contacted",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “contact”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should contact the person ___ charge of IT.",
+      "correct_answer": "in",
+      "hint_prefix": "in",
+      "explanation": "The complete sentence is “You should contact the person in charge of IT.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to contact",
+        "text": "to contact"
+       },
+       {
+        "id": "V2",
+        "audio_text": "in charge of",
+        "text": "in charge of"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to solve",
+        "text": "to solve"
+       },
+       {
+        "id": "V4",
+        "audio_text": "colleague",
+        "text": "colleague"
+       },
+       {
+        "id": "V5",
+        "audio_text": "department",
+        "text": "department"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_COMPANIES_DEPARTMENTS_AND_ROLES_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Who should I ask about the parking pass?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Ask the office manager — if she cannot help, she will forward you to facilities.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I asked her yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The pass is parking the office.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Ask the office manager — if she cannot help, she will forward you to facilities.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

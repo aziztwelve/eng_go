@@ -1,0 +1,1328 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS",
+    "title": {
+      "ru": "Абзацы и короткие эссе",
+      "en": "Paragraphs and Short Essays"
+    },
+    "description": {
+      "ru": "Развивайте учебные навыки уровня B1 по теме «Абзацы и короткие эссе».",
+      "en": "Develop B1 study skills for paragraphs and short essays."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "B1",
+    "goal": "study",
+    "track_type": "thematic",
+    "tags": [
+      "B1",
+      "study",
+      "paragraphs-and-short-essays"
+    ]
+  },
+  "lessons": [
+    {
+      "code": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L1",
+      "order": 1,
+      "title": {
+        "ru": "Учебная практика 1",
+        "en": "Topic Sentences"
+      },
+      "objective": {
+        "ru": "Самостоятельно выполнять знакомые учебные задачи уровня B1, связывая идеи, используя доказательства и оценивая свой прогресс.",
+        "en": "Complete familiar B1 study tasks independently by connecting ideas, using evidence, and evaluating progress."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L1_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "A2STWSP_2",
+                "left": "first name",
+                "right": "имя"
+              },
+              {
+                "id": "A2STWSP_3",
+                "left": "last name",
+                "right": "фамилия"
+              },
+              {
+                "id": "A2STWSP_4",
+                "left": "full name",
+                "right": "полное имя"
+              },
+              {
+                "id": "A2STWSP_5",
+                "left": "spell",
+                "right": "произносить по буквам"
+              },
+              {
+                "id": "A2STWSP_6",
+                "left": "letter",
+                "right": "буква"
+              },
+              {
+                "id": "A2STWSP_7",
+                "left": "My name is",
+                "right": "Меня зовут"
+              },
+              {
+                "id": "A2STWSP_8",
+                "left": "How do you spell that?",
+                "right": "Как это пишется по буквам?"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L1_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "What is the last name in “My name is Anna Brown”?",
+            "options": [
+              {
+                "id": "A2STWSP_10",
+                "text": "Brown",
+                "is_correct": true
+              },
+              {
+                "id": "A2STWSP_11",
+                "text": "Anna",
+                "is_correct": false
+              },
+              {
+                "id": "A2STWSP_12",
+                "text": "Name",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Brown is the last name."
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L1_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Меня зовут Анна Браун.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "My name is Anna Brown.",
+            "word_bank": [
+              "Brown.",
+              "Anna",
+              "is",
+              "name",
+              "My"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L1_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "How do you ___ your name?",
+            "correct_answer": "spell",
+            "options": [
+              "spell",
+              "live",
+              "Friday"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L1_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "name?",
+              "last",
+              "your",
+              "is",
+              "What"
+            ],
+            "correct_words": [
+              "What",
+              "is",
+              "your",
+              "last",
+              "name?"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L1_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "My full name is Daniel Green.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L1_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "My last name is Clark. C-L-A-R-K. I can explain the main point in a short sentence. I will organise the main points, support them with evidence, and review my work before I submit it.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Моя фамилия Кларк. К-Л-А-Р-К. Я могу объяснить основную мысль коротким предложением. Я организую основные идеи, подкреплю их доказательствами и проверю работу перед сдачей."
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L1_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "At Registration",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Clerk",
+                "text": "What is your full name?",
+                "translation": "Как ваше полное имя?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Guest",
+                "text": "My name is Sofia Bell.",
+                "translation": "Меня зовут София Белл."
+              },
+              {
+                "type": "choice",
+                "text": "What can the clerk ask next?",
+                "options": [
+                  {
+                    "text": "How do you spell Bell?",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "What time is lunch?",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L1_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "spell",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STWSP_20",
+                "text": "To say or write the letters of a word",
+                "is_correct": true
+              },
+              {
+                "id": "A2STWSP_21",
+                "text": "To say your age",
+                "is_correct": false
+              },
+              {
+                "id": "A2STWSP_22",
+                "text": "To give a street number",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Spell means to give the letters of a word."
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L1_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "My last name is ___.",
+            "audio_text": "My last name is Clark.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STWSP_24",
+                "audio_text": "Clark",
+                "is_correct": true
+              },
+              {
+                "id": "A2STWSP_25",
+                "audio_text": "Monday",
+                "is_correct": false
+              },
+              {
+                "id": "A2STWSP_26",
+                "audio_text": "table",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing name is “Clark.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L1_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "My ___ name is Anna.",
+            "correct_answer": "first",
+            "hint_prefix": "fi",
+            "explanation": "The complete phrase is “My first name is Anna.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L1_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "A2STWSP_29",
+                "audio_text": "first name",
+                "text": "first name"
+              },
+              {
+                "id": "A2STWSP_30",
+                "audio_text": "last name",
+                "text": "last name"
+              },
+              {
+                "id": "A2STWSP_31",
+                "audio_text": "How do you spell that?",
+                "text": "How do you spell that?"
+              }
+            ],
+            "explanation": "Match each audio phrase with the same written English phrase."
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L1_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Clerk",
+                "text": "What is your full name?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A2STWSP_33",
+                "text": "My full name is Anna Brown.",
+                "is_correct": true
+              },
+              {
+                "id": "A2STWSP_34",
+                "text": "I am at nine o’clock.",
+                "is_correct": false
+              },
+              {
+                "id": "A2STWSP_35",
+                "text": "The bank is on the left.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the response that develops the academic task with a clear reason, example, or next step."
+          }
+        }
+      ]
+    },
+    {
+      "code": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L2",
+      "order": 2,
+      "title": {
+        "ru": "Учебная практика 2",
+        "en": "Supporting Ideas"
+      },
+      "objective": {
+        "ru": "Самостоятельно выполнять знакомые учебные задачи уровня B1, связывая идеи, используя доказательства и оценивая свой прогресс.",
+        "en": "Complete familiar B1 study tasks independently by connecting ideas, using evidence, and evaluating progress."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L2_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "A2STWSP_37",
+                "left": "age",
+                "right": "возраст"
+              },
+              {
+                "id": "A2STWSP_38",
+                "left": "years old",
+                "right": "лет"
+              },
+              {
+                "id": "A2STWSP_39",
+                "left": "country",
+                "right": "страна"
+              },
+              {
+                "id": "A2STWSP_40",
+                "left": "nationality",
+                "right": "национальность"
+              },
+              {
+                "id": "A2STWSP_41",
+                "left": "from",
+                "right": "из"
+              },
+              {
+                "id": "A2STWSP_42",
+                "left": "Russian",
+                "right": "русский"
+              },
+              {
+                "id": "A2STWSP_43",
+                "left": "I am twenty years old",
+                "right": "Мне двадцать лет"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L2_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "How old is the speaker in “I am eighteen years old”?",
+            "options": [
+              {
+                "id": "A2STWSP_45",
+                "text": "Eighteen",
+                "is_correct": true
+              },
+              {
+                "id": "A2STWSP_46",
+                "text": "Eighty",
+                "is_correct": false
+              },
+              {
+                "id": "A2STWSP_47",
+                "text": "Eight",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The speaker says “eighteen years old.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L2_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Я из Таджикистана.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I am from Tajikistan.",
+            "word_bank": [
+              "Tajikistan.",
+              "from",
+              "am",
+              "I"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L2_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I am twenty years ___.",
+            "correct_answer": "old",
+            "options": [
+              "old",
+              "left",
+              "January"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L2_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "you",
+              "from?",
+              "are",
+              "Where"
+            ],
+            "correct_words": [
+              "Where",
+              "are",
+              "you",
+              "from?"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L2_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I am nineteen years old and I am from Russia.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L2_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I am from Tajikistan, and my nationality is Tajik. I can explain the main point in a short sentence. I will organise the main points, support them with evidence, and review my work before I submit it.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Я из Таджикистана, и моя национальность — таджик. Я могу объяснить основную мысль коротким предложением. Я организую основные идеи, подкреплю их доказательствами и проверю работу перед сдачей."
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L2_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Meeting a Student",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Maya",
+                "text": "Where are you from?",
+                "translation": "Откуда ты?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Ivan",
+                "text": "I am from Russia.",
+                "translation": "Я из России."
+              },
+              {
+                "type": "choice",
+                "text": "What can Maya ask next?",
+                "options": [
+                  {
+                    "text": "How old are you?",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Where is the library?",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L2_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "nationality",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STWSP_55",
+                "text": "The country group a person belongs to",
+                "is_correct": true
+              },
+              {
+                "id": "A2STWSP_56",
+                "text": "The number of years a person has lived",
+                "is_correct": false
+              },
+              {
+                "id": "A2STWSP_57",
+                "text": "The street where a person lives",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Nationality describes which country group a person belongs to."
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L2_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "I am twenty years ___.",
+            "audio_text": "I am twenty years old.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STWSP_59",
+                "audio_text": "old",
+                "is_correct": true
+              },
+              {
+                "id": "A2STWSP_60",
+                "audio_text": "right",
+                "is_correct": false
+              },
+              {
+                "id": "A2STWSP_61",
+                "audio_text": "book",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is “old.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L2_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I am ___ Russia.",
+            "correct_answer": "from",
+            "hint_prefix": "fr",
+            "explanation": "The complete sentence is “I am from Russia.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L2_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "A2STWSP_64",
+                "audio_text": "eighteen years old",
+                "text": "eighteen years old"
+              },
+              {
+                "id": "A2STWSP_65",
+                "audio_text": "from Russia",
+                "text": "from Russia"
+              },
+              {
+                "id": "A2STWSP_66",
+                "audio_text": "Tajik nationality",
+                "text": "Tajik nationality"
+              }
+            ],
+            "explanation": "Match each audio phrase with the same written English phrase."
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L2_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Ben",
+                "text": "Where are you from?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A2STWSP_68",
+                "text": "I am from Tajikistan.",
+                "is_correct": true
+              },
+              {
+                "id": "A2STWSP_69",
+                "text": "I am twenty years old.",
+                "is_correct": false
+              },
+              {
+                "id": "A2STWSP_70",
+                "text": "My class starts at nine.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the response that develops the academic task with a clear reason, example, or next step."
+          }
+        }
+      ]
+    },
+    {
+      "code": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L3",
+      "order": 3,
+      "title": {
+        "ru": "Учебная практика 3",
+        "en": "Editing a Short Essay"
+      },
+      "objective": {
+        "ru": "Самостоятельно выполнять знакомые учебные задачи уровня B1, связывая идеи, используя доказательства и оценивая свой прогресс.",
+        "en": "Complete familiar B1 study tasks independently by connecting ideas, using evidence, and evaluating progress."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L3_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "A2STWSP_72",
+                "left": "address",
+                "right": "адрес"
+              },
+              {
+                "id": "A2STWSP_73",
+                "left": "street",
+                "right": "улица"
+              },
+              {
+                "id": "A2STWSP_74",
+                "left": "house number",
+                "right": "номер дома"
+              },
+              {
+                "id": "A2STWSP_75",
+                "left": "phone number",
+                "right": "номер телефона"
+              },
+              {
+                "id": "A2STWSP_76",
+                "left": "email address",
+                "right": "адрес электронной почты"
+              },
+              {
+                "id": "A2STWSP_77",
+                "left": "at",
+                "right": "собака в адресе электронной почты"
+              },
+              {
+                "id": "A2STWSP_78",
+                "left": "dot",
+                "right": "точка"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L3_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Which detail do you hear in “My phone number is 555 204”?",
+            "options": [
+              {
+                "id": "A2STWSP_80",
+                "text": "A phone number",
+                "is_correct": true
+              },
+              {
+                "id": "A2STWSP_81",
+                "text": "A street name",
+                "is_correct": false
+              },
+              {
+                "id": "A2STWSP_82",
+                "text": "An email address",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The speaker gives a phone number."
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L3_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Я живу на Парковой улице.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "I live on Park Street.",
+            "word_bank": [
+              "Street.",
+              "Park",
+              "on",
+              "live",
+              "I"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L3_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "My house ___ is twelve.",
+            "correct_answer": "number",
+            "options": [
+              "number",
+              "Friday",
+              "coffee"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L3_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "address?",
+              "email",
+              "your",
+              "is",
+              "What"
+            ],
+            "correct_words": [
+              "What",
+              "is",
+              "your",
+              "email",
+              "address?"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L3_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "My address is twelve King Street.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L3_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "My email is anna at mail dot com. I can explain the main point in a short sentence. I will organise the main points, support them with evidence, and review my work before I submit it.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Мой адрес электронной почты: anna@mail.com. Я могу объяснить основную мысль коротким предложением. Я организую основные идеи, подкреплю их доказательствами и проверю работу перед сдачей."
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L3_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Joining a Course",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Clerk",
+                "text": "What is your address?",
+                "translation": "Какой у вас адрес?"
+              },
+              {
+                "type": "dialogue",
+                "character": "Student",
+                "text": "I live at ten Green Street.",
+                "translation": "Я живу по адресу Грин-стрит, дом десять."
+              },
+              {
+                "type": "choice",
+                "text": "What can the clerk ask next?",
+                "options": [
+                  {
+                    "text": "What is your phone number?",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "What is your favorite food?",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L3_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "address",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STWSP_90",
+                "text": "Information showing where someone lives",
+                "is_correct": true
+              },
+              {
+                "id": "A2STWSP_91",
+                "text": "The number of years someone has lived",
+                "is_correct": false
+              },
+              {
+                "id": "A2STWSP_92",
+                "text": "A person’s country group",
+                "is_correct": false
+              }
+            ],
+            "explanation": "An address shows where someone lives."
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L3_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "My house number is ___.",
+            "audio_text": "My house number is twelve.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STWSP_94",
+                "audio_text": "twelve",
+                "is_correct": true
+              },
+              {
+                "id": "A2STWSP_95",
+                "audio_text": "Tuesday",
+                "is_correct": false
+              },
+              {
+                "id": "A2STWSP_96",
+                "audio_text": "teacher",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing house number is “twelve.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L3_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I live on Park ___.",
+            "correct_answer": "Street",
+            "hint_prefix": "St",
+            "explanation": "The complete address is “I live on Park Street.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L3_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "A2STWSP_99",
+                "audio_text": "phone number",
+                "text": "phone number"
+              },
+              {
+                "id": "A2STWSP_100",
+                "audio_text": "email address",
+                "text": "email address"
+              },
+              {
+                "id": "A2STWSP_101",
+                "audio_text": "twelve King Street",
+                "text": "twelve King Street"
+              }
+            ],
+            "explanation": "Match each audio phrase with the same written English phrase."
+          }
+        },
+        {
+          "id": "B1_STUDY_PARAGRAPHS_AND_SHORT_ESSAYS_L3_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Clerk",
+                "text": "What is your phone number?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A2STWSP_103",
+                "text": "It is 555 204.",
+                "is_correct": true
+              },
+              {
+                "id": "A2STWSP_104",
+                "text": "It is Friday.",
+                "is_correct": false
+              },
+              {
+                "id": "A2STWSP_105",
+                "text": "It is near the cafe.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the response that develops the academic task with a clear reason, example, or next step."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1432 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_EXAM_PRESENT_AND_PAST_TENSES",
+  "title": {
+   "ru": "Настоящее и прошедшее время",
+   "en": "Present and Past Tenses"
+  },
+  "description": {
+   "ru": "Развивайте экзаменационные навыки уровня A2 по теме «Настоящее и прошедшее время».",
+   "en": "Develop A2 exam skills for present and past tenses."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "exam",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "exam",
+   "present-and-past-tenses"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_EXAM_PRESENT_AND_PAST_TENSES_L1",
+   "order": 1,
+   "title": {
+    "ru": "Времена в контексте",
+    "en": "Tenses in Context"
+   },
+   "objective": {
+    "ru": "Тренировать времена в экзаменационных текстах, используя past simple и present perfect.",
+    "en": "Practise tenses in exam texts using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "past simple",
+        "right": "прошедшее простое"
+       },
+       {
+        "id": "P2",
+        "left": "present perfect",
+        "right": "настоящее совершённое"
+       },
+       {
+        "id": "P3",
+        "left": "while / when",
+        "right": "пока / когда"
+       },
+       {
+        "id": "P4",
+        "left": "ago",
+        "right": "тому назад"
+       },
+       {
+        "id": "P5",
+        "left": "state verb",
+        "right": "глагол состояния"
+       },
+       {
+        "id": "P6",
+        "left": "continuous",
+        "right": "длительное время"
+       },
+       {
+        "id": "P7",
+        "left": "context",
+        "right": "контекст"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the past continuous correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "I was reading when she called.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "I read when she was calling yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "I was read when she has called.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “I was reading when she called.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я писал эссе, когда отключился свет.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I was writing the essay when the power went off.",
+      "word_bank": [
+       "the",
+       "I",
+       "yesterday",
+       "off.",
+       "essay",
+       "writing",
+       "went",
+       "the",
+       "was",
+       "was",
+       "when",
+       "power",
+       "did"
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "They have known each other ___ ten years.",
+      "correct_answer": "for",
+      "options": [
+       "for",
+       "since",
+       "ago"
+      ],
+      "translation_hint": "Они знакомы десять лет."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "waiting",
+       "evening.",
+       "was",
+       "We",
+       "for",
+       "the",
+       "results",
+       "the",
+       "whole",
+       "did",
+       "were"
+      ],
+      "correct_words": [
+       "We",
+       "were",
+       "waiting",
+       "for",
+       "the",
+       "results",
+       "the",
+       "whole",
+       "evening."
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "The context decides: 'while' pairs two continuous actions, and 'when' interrupts them with a short one.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "The context decides: 'while' pairs two continuous actions, and 'when' interrupts them with a short one.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Контекст решает: 'while' объединяет два длительных действия, а 'when' прерывает их коротким."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Story Task",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "The text begins 'Yesterday I ___ (walk) home when...'",
+        "translation": "Текст начинается 'Yesterday I ___ (walk) home when...'"
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Two actions — a long one and a short interrupting one.",
+        "translation": "Два действия — длительное и короткое, прерывающее."
+       },
+       {
+        "type": "choice",
+        "text": "What is the answer?",
+        "options": [
+         {
+          "text": "was walking — the long background action.",
+          "is_correct": true
+         },
+         {
+          "text": "walked — yesterday asks for past simple only.",
+          "is_correct": false
+         },
+         {
+          "text": "have walked — it is a life experience.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "state verb",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A verb like know or love, rarely used in continuous",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A verb of movement like run or jump",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A verb used only in the past tense",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“state verb” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "She ___ dinner when I arrived.",
+      "audio_text": "She was cooking dinner when I arrived.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "was cooking",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "cooked",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "has cooked",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “was cooking”."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "I met him three years ___ .",
+      "correct_answer": "ago",
+      "hint_prefix": "ag",
+      "explanation": "The complete sentence is “I met him three years ago .”."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "past simple",
+        "text": "past simple"
+       },
+       {
+        "id": "V2",
+        "audio_text": "present perfect",
+        "text": "present perfect"
+       },
+       {
+        "id": "V3",
+        "audio_text": "while / when",
+        "text": "while / when"
+       },
+       {
+        "id": "V4",
+        "audio_text": "ago",
+        "text": "ago"
+       },
+       {
+        "id": "V5",
+        "audio_text": "state verb",
+        "text": "state verb"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "How do you spot the continuous gap?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Look for 'while' or a longer action around it — if you see them, the continuous will fit.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I saw it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The gap is continuing me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Look for 'while' or a longer action around it — if you see them, the continuous will fit.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_EXAM_PRESENT_AND_PAST_TENSES_L2",
+   "order": 2,
+   "title": {
+    "ru": "Рассказ о прошлом в заданиях",
+    "en": "Telling the Past in Tasks"
+   },
+   "objective": {
+    "ru": "Сравнить употребление времён и спланировать практику.",
+    "en": "Compare tense usage and plan practice."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "storytelling",
+        "right": "рассказывание историй"
+       },
+       {
+        "id": "P2",
+        "left": "more natural",
+        "right": "естественнее"
+       },
+       {
+        "id": "P3",
+        "left": "sequence of events",
+        "right": "последовательность событий"
+       },
+       {
+        "id": "P4",
+        "left": "background",
+        "right": "фон"
+       },
+       {
+        "id": "P5",
+        "left": "to link events",
+        "right": "связать события"
+       },
+       {
+        "id": "P6",
+        "left": "vivid",
+        "right": "яркий"
+       },
+       {
+        "id": "P7",
+        "left": "then / after that",
+        "right": "затем / после этого"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two ways of telling a story correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "Continuous for background makes a story more natural.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Continuous is naturaler for stories.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The continuous is most natural than simple.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “Continuous for background makes a story more natural.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "На этой неделе я собираюсь написать три истории по картинкам.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "This week I am going to write three picture-based stories.",
+      "word_bank": [
+       "am",
+       "I",
+       "to",
+       "This",
+       "picture-based",
+       "three",
+       "write",
+       "going",
+       "did",
+       "yesterday",
+       "stories.",
+       "wrote",
+       "week"
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "First he arrived, ___ he opened the letter, and after that everything changed.",
+      "correct_answer": "then",
+      "options": [
+       "then",
+       "than",
+       "when"
+      ],
+      "translation_hint": "Сначала он пришёл, затем открыл письмо, и после этого всё изменилось."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "the",
+       "continuous",
+       "simple",
+       "The",
+       "events;",
+       "moves",
+       "the",
+       "paints",
+       "the",
+       "did",
+       "background.",
+       "was",
+       "past"
+      ],
+      "correct_words": [
+       "The",
+       "past",
+       "simple",
+       "moves",
+       "the",
+       "events;",
+       "the",
+       "continuous",
+       "paints",
+       "the",
+       "background."
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you set the background in the continuous first, the short past actions will feel more vivid.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you set the background in the continuous first, the short past actions will feel more vivid.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если сначала задать фон длительным временем, короткие действия в past simple будут звучать ярче."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Picture Story",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "For this picture, which tense for 'the sun shine'?",
+        "translation": "Для этой картинки какое время для 'sun shine'?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Continuous — it is the background, not an event.",
+        "translation": "Длительное — это фон, а не событие."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 write?",
+        "options": [
+         {
+          "text": "The sun was shining while they were carrying the boat.",
+          "is_correct": true
+         },
+         {
+          "text": "The sun shone while they carried the boat out.",
+          "is_correct": false
+         },
+         {
+          "text": "The sun has shone since they carry boats.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "background",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The longer situation around the main events",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "The most important event of the story",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "The final sentence of a story",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“background” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I am going to ___ the events with 'after that'.",
+      "audio_text": "I am going to link the events with 'after that'.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "link",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "linked",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "linking",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “link”."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "A story with background feels ___ .",
+      "correct_answer": "more natural",
+      "hint_prefix": "mo",
+      "explanation": "The complete sentence is “A story with background feels more natural .”."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "storytelling",
+        "text": "storytelling"
+       },
+       {
+        "id": "V2",
+        "audio_text": "more natural",
+        "text": "more natural"
+       },
+       {
+        "id": "V3",
+        "audio_text": "sequence of events",
+        "text": "sequence of events"
+       },
+       {
+        "id": "V4",
+        "audio_text": "background",
+        "text": "background"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to link events",
+        "text": "to link events"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "All past simple sounds flat in my story."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Add one continuous sentence at the start — if the background is there, the events will pop.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I added it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The story is simplifying me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Add one continuous sentence at the start — if the background is there, the events will pop.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_EXAM_PRESENT_AND_PAST_TENSES_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если время выбрано неверно",
+    "en": "If the Tense Is Chosen Wrong"
+   },
+   "objective": {
+    "ru": "Разобрать ошибки во временах, используя should и первое условное.",
+    "en": "Analyse tense mistakes using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "error log",
+        "right": "журнал ошибок"
+       },
+       {
+        "id": "P2",
+        "left": "to repeat a mistake",
+        "right": "повторить ошибку"
+       },
+       {
+        "id": "P3",
+        "left": "pattern",
+        "right": "паттерн"
+       },
+       {
+        "id": "P4",
+        "left": "to drill",
+        "right": "дриллить (прорабатывать)"
+       },
+       {
+        "id": "P5",
+        "left": "carefully",
+        "right": "внимательно"
+       },
+       {
+        "id": "P6",
+        "left": "correction",
+        "right": "исправление"
+       },
+       {
+        "id": "P7",
+        "left": "rule",
+        "right": "правило"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice about mistakes?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should keep an error log and review it weekly.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to keep it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must keeping logs last month.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should keep an error log and review it weekly.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если ты ведёшь журнал ошибок, паттерны видны за неделю.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If you keep an error log, you will see the patterns within a week.",
+      "word_bank": [
+       "within",
+       "did",
+       "an",
+       "error",
+       "kept",
+       "keep",
+       "patterns",
+       "will",
+       "you",
+       "If",
+       "you",
+       "week.",
+       "log,",
+       "see",
+       "a",
+       "yesterday",
+       "the"
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you drill one rule a day, it ___ yours.",
+      "correct_answer": "becomes",
+      "options": [
+       "becomes",
+       "will become",
+       "became"
+      ],
+      "translation_hint": "Если прорабатывать одно правило в день, оно станет твоим."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "the",
+       "went",
+       "mustn't",
+       "should",
+       "aloud.",
+       "read",
+       "correction",
+       "You"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "read",
+       "the",
+       "correction",
+       "aloud."
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you write the correct version three times, your hand will remember it even under exam stress.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you write the correct version three times, your hand will remember it even under exam stress.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если написать правильный вариант три раза, рука запомнит его даже в экзаменационном стрессе."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Same Mistake",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "I have made the same tense mistake in every mock this month.",
+        "translation": "Я допускал одну и ту же ошибку во времени в каждом пробнике за месяц."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Every single one? That is a pattern, not bad luck.",
+        "translation": "В каждом? Это паттерн, а не невезение."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 2 advise?",
+        "options": [
+         {
+          "text": "You should drill that one rule until it is automatic.",
+          "is_correct": true
+         },
+         {
+          "text": "You must drilled it yesterday already.",
+          "is_correct": false
+         },
+         {
+          "text": "The mistake is mocking your month.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "error log",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A notebook where you collect your own mistakes",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A list of rules from the textbook",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A diary about your exam feelings",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“error log” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If you ___ the mistake again, log it.",
+      "audio_text": "If you repeat the mistake again, log it.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "repeat",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will repeat",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "repeated",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “repeat”."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Read your ___ log before the exam.",
+      "correct_answer": "error",
+      "hint_prefix": "er",
+      "explanation": "The complete sentence is “Read your error log before the exam.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "error log",
+        "text": "error log"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to repeat a mistake",
+        "text": "to repeat a mistake"
+       },
+       {
+        "id": "V3",
+        "audio_text": "pattern",
+        "text": "pattern"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to drill",
+        "text": "to drill"
+       },
+       {
+        "id": "V5",
+        "audio_text": "carefully",
+        "text": "carefully"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_EXAM_PRESENT_AND_PAST_TENSES_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "I always confuse these two tenses."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Drill five sentences daily — if you do it for a week, the choice will become automatic.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I drilled them yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The tenses are confusing my week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Drill five sentences daily — if you do it for a week, the choice will become automatic.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

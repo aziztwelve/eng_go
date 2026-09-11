@@ -1,0 +1,1440 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_WORK_WORKPLACE_CONVERSATIONS",
+  "title": {
+   "ru": "Разговоры на работе",
+   "en": "Workplace Conversations"
+  },
+  "description": {
+   "ru": "Развивайте практический английский уровня A2 для работы по теме «Разговоры на работе».",
+   "en": "Develop practical A2 workplace English for workplace conversations."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "work",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "work",
+   "workplace-conversations"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_WORK_WORKPLACE_CONVERSATIONS_L1",
+   "order": 1,
+   "title": {
+    "ru": "Разговоры у кулера",
+    "en": "Conversations by the Coffee Machine"
+   },
+   "objective": {
+    "ru": "Обменяться новостями с коллегами, используя past simple и present perfect.",
+    "en": "Exchange news with colleagues using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "small talk",
+        "right": "светская беседа"
+       },
+       {
+        "id": "P2",
+        "left": "news",
+        "right": "новости"
+       },
+       {
+        "id": "P3",
+        "left": "to hear about",
+        "right": "услышать о"
+       },
+       {
+        "id": "P4",
+        "left": "to move offices",
+        "right": "переехать в другой офис"
+       },
+       {
+        "id": "P5",
+        "left": "to congratulate",
+        "right": "поздравить"
+       },
+       {
+        "id": "P6",
+        "left": "team",
+        "right": "команда"
+       },
+       {
+        "id": "P7",
+        "left": "lately",
+        "right": "в последнее время"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "Have you heard about the new project lately?",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Did you have heard about it yesterday?",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "Have you hearing about it last week?",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “Have you heard about the new project lately?”."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я слышал, что отдел маркетинга переехал на третий этаж на прошлой неделе.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I heard that the marketing team moved to the third floor last week.",
+      "word_bank": [
+       "I",
+       "last",
+       "hears",
+       "that",
+       "third",
+       "tomorrow",
+       "to",
+       "heard",
+       "floor",
+       "moved",
+       "did",
+       "the",
+       "team",
+       "the",
+       "marketing",
+       "week."
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She ___ her colleague on the promotion this morning.",
+      "correct_answer": "congratulated",
+      "options": [
+       "congratulated",
+       "has congratulate",
+       "congratulating"
+      ],
+      "translation_hint": "Она поздравила коллегу с повышением сегодня утром."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "Our",
+       "a",
+       "lot",
+       "did",
+       "was",
+       "has",
+       "team",
+       "grown",
+       "lately."
+      ],
+      "correct_words": [
+       "Our",
+       "team",
+       "has",
+       "grown",
+       "a",
+       "lot",
+       "lately."
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "Have you spoken to Daniel lately? He has moved to the Berlin office.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "Have you spoken to Daniel lately? He has moved to the Berlin office.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Ты в последнее время разговаривал с Даниэлем? Он переехал в берлинский офис."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Good News",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Ben",
+        "text": "Have you heard the news? Anna has joined our project team!",
+        "translation": "Слышал новость? Аня вошла в нашу проектную команду!"
+       },
+       {
+        "type": "dialogue",
+        "character": "Maya",
+        "text": "That's great! When did she start?",
+        "translation": "Здорово! Когда она начала?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Ben answer?",
+        "options": [
+         {
+          "text": "Last Monday, and she has already shared some good ideas.",
+          "is_correct": true
+         },
+         {
+          "text": "Tomorrow, and she shared ideas yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The project team has start her.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to congratulate",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To tell someone you are happy about their success",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To tell someone about a problem",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To ask someone to leave the room",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to congratulate” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "Have you ___ about the reorganisation?",
+      "audio_text": "Have you heard about the reorganisation?",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "heard",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "hear",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "hearing",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “heard”."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "We have moved to the new office ___ March.",
+      "correct_answer": "since",
+      "hint_prefix": "si",
+      "explanation": "The complete sentence is “We have moved to the new office since March.”."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "small talk",
+        "text": "small talk"
+       },
+       {
+        "id": "V2",
+        "audio_text": "news",
+        "text": "news"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to hear about",
+        "text": "to hear about"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to move offices",
+        "text": "to move offices"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to congratulate",
+        "text": "to congratulate"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Did you hear about the new office?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes, I heard about it last week. Have you seen the plans yet?",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, I have hear it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The office is hearing us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes, I heard about it last week. Have you seen the plans yet?” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_WORK_WORKPLACE_CONVERSATIONS_L2",
+   "order": 2,
+   "title": {
+    "ru": "Договариваемся о встрече",
+    "en": "Arranging to Meet"
+   },
+   "objective": {
+    "ru": "Договориться о встрече, используя формы будущего и сравнения.",
+    "en": "Arrange a meeting using future forms and comparatives."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to arrange",
+        "right": "договориться (о встрече)"
+       },
+       {
+        "id": "P2",
+        "left": "to suit",
+        "right": "подходить (о времени)"
+       },
+       {
+        "id": "P3",
+        "left": "instead",
+        "right": "вместо этого"
+       },
+       {
+        "id": "P4",
+        "left": "to postpone",
+        "right": "перенести"
+       },
+       {
+        "id": "P5",
+        "left": "video call",
+        "right": "видеозвонок"
+       },
+       {
+        "id": "P6",
+        "left": "in person",
+        "right": "лично"
+       },
+       {
+        "id": "P7",
+        "left": "easier",
+        "right": "проще"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present continuous for a future arrangement?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "We are meeting the client at three o'clock tomorrow.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "We meet the client at three yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "We has met the client at three tomorrow.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “We are meeting the client at three o'clock tomorrow.”."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Завтра в десять мы обсуждаем бюджет — лично это проще, чем по видеосвязи.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We are discussing the budget at ten tomorrow — in person is easier than a video call.",
+      "word_bank": [
+       "in",
+       "discuss",
+       "yesterday",
+       "is",
+       "did",
+       "than",
+       "the",
+       "a",
+       "at",
+       "easier",
+       "We",
+       "tomorrow",
+       "ten",
+       "discussing",
+       "budget",
+       "—",
+       "person",
+       "are",
+       "video",
+       "call."
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "A short video call is ___ than a long email thread.",
+      "correct_answer": "quicker",
+      "options": [
+       "quicker",
+       "quickest",
+       "more quick"
+      ],
+      "translation_hint": "Короткий видеозвонок быстрее длинной переписки."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "did",
+       "suppliers",
+       "meeting",
+       "morning.",
+       "Thursday",
+       "I",
+       "was",
+       "the",
+       "on",
+       "am"
+      ],
+      "correct_words": [
+       "I",
+       "am",
+       "meeting",
+       "the",
+       "suppliers",
+       "on",
+       "Thursday",
+       "morning."
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "I am going to postpone our call because the client is visiting us at the same time.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "I am going to postpone our call because the client is visiting us at the same time.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Я перенесу наш звонок, потому что клиент приедет к нам в то же время."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Rescheduling",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "I'm afraid I can't meet on Thursday. Could we meet on Friday instead?",
+        "translation": "Боюсь, не смогу в четверг. Можем встретиться в пятницу?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "Friday morning is busy, but the afternoon is free.",
+        "translation": "Утро пятницы занято, но вторая половина свободна."
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna suggest?",
+        "options": [
+         {
+          "text": "Then we are meeting at two o'clock on Friday.",
+          "is_correct": true
+         },
+         {
+          "text": "Then we met at two yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "Friday is meeting us instead.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to postpone",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To move an event to a later time",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To cancel an event completely",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To start a meeting earlier than planned",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to postpone” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We are ___ the client at three.",
+      "audio_text": "We are meeting the client at three.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "meeting",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "meet",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "met",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “meeting”."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "A video call is ___ than travelling.",
+      "correct_answer": "cheaper",
+      "hint_prefix": "ch",
+      "explanation": "The complete sentence is “A video call is cheaper than travelling.”."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to arrange",
+        "text": "to arrange"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to suit",
+        "text": "to suit"
+       },
+       {
+        "id": "V3",
+        "audio_text": "instead",
+        "text": "instead"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to postpone",
+        "text": "to postpone"
+       },
+       {
+        "id": "V5",
+        "audio_text": "video call",
+        "text": "video call"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Does Monday at ten suit you?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Monday suits me fine — I am seeing the dentist in the afternoon.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, I suited it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "Monday is suiting the dentist.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Monday suits me fine — I am seeing the dentist in the afternoon.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_WORK_WORKPLACE_CONVERSATIONS_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если возникнет недопонимание",
+    "en": "If There Is a Misunderstanding"
+   },
+   "objective": {
+    "ru": "Обсудить недопонимания, используя should и первое условное.",
+    "en": "Discuss misunderstandings using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "misunderstanding",
+        "right": "недопонимание"
+       },
+       {
+        "id": "P2",
+        "left": "to apologise",
+        "right": "извиниться"
+       },
+       {
+        "id": "P3",
+        "left": "to listen carefully",
+        "right": "внимательно слушать"
+       },
+       {
+        "id": "P4",
+        "left": "to interrupt",
+        "right": "перебивать"
+       },
+       {
+        "id": "P5",
+        "left": "tone",
+        "right": "тон"
+       },
+       {
+        "id": "P6",
+        "left": "directly",
+        "right": "прямо"
+       },
+       {
+        "id": "P7",
+        "left": "to sort out",
+        "right": "уладить"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should listen carefully before you answer.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to listen carefully yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must listening carefully last week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should listen carefully before you answer.”."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если возникнет недопонимание, лучше обсудить его напрямую и спокойно.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If there is a misunderstanding, you should discuss it directly and calmly.",
+      "word_bank": [
+       "directly",
+       "yesterday",
+       "did",
+       "is",
+       "and",
+       "misunderstanding,",
+       "it",
+       "discuss",
+       "should",
+       "If",
+       "there",
+       "calmly.",
+       "you",
+       "was",
+       "a"
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you ___ people all the time, they will stop listening to you.",
+      "correct_answer": "interrupt",
+      "options": [
+       "interrupt",
+       "will interrupt",
+       "interrupted"
+      ],
+      "translation_hint": "Если ты всё время перебиваешь, тебя перестанут слушать."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "mustn't",
+       "of",
+       "the",
+       "went",
+       "email",
+       "You",
+       "your",
+       "apologise",
+       "if",
+       "tone",
+       "should",
+       "rude.",
+       "sounded"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "apologise",
+       "if",
+       "the",
+       "tone",
+       "of",
+       "your",
+       "email",
+       "sounded",
+       "rude."
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you explain the problem calmly, you will sort it out quickly and keep a good relationship.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you explain the problem calmly, you will sort it out quickly and keep a good relationship.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если ты спокойно объяснишь проблему, то быстро уладишь её и сохранишь хорошие отношения."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "After the Argument",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Manager",
+        "text": "I heard raised voices in the meeting room. What happened?",
+        "translation": "Я слышал повышенные голоса в переговорке. Что случилось?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "We had a misunderstanding about the budget numbers.",
+        "translation": "У нас было недопонимание по цифрам бюджета."
+       },
+       {
+        "type": "choice",
+        "text": "What should Tom do next?",
+        "options": [
+         {
+          "text": "I should apologise and explain the numbers calmly.",
+          "is_correct": true
+         },
+         {
+          "text": "I must to apologise yesterday afternoon.",
+          "is_correct": false
+         },
+         {
+          "text": "The numbers are apologising for me.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to interrupt",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To start speaking while someone else is speaking",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To wait quietly until someone finishes",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To write down what someone says",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to interrupt” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If you ___ to both sides, you will understand the problem.",
+      "audio_text": "If you listen to both sides, you will understand the problem.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "listen",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will listen",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "listened",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “listen”."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should sort out the problem ___ soon as possible.",
+      "correct_answer": "as",
+      "hint_prefix": "as",
+      "explanation": "The complete sentence is “You should sort out the problem as soon as possible.”."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "misunderstanding",
+        "text": "misunderstanding"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to apologise",
+        "text": "to apologise"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to listen carefully",
+        "text": "to listen carefully"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to interrupt",
+        "text": "to interrupt"
+       },
+       {
+        "id": "V5",
+        "audio_text": "tone",
+        "text": "tone"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_WORK_WORKPLACE_CONVERSATIONS_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "I think Maya misunderstood my email."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "You should speak to her directly — if you wait, it will get worse.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "You must to speak yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The email is misunderstanding her.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“You should speak to her directly — if you wait, it will get worse.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

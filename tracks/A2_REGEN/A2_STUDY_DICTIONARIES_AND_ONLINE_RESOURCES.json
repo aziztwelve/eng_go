@@ -1,0 +1,1440 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES",
+  "title": {
+   "ru": "Словари и онлайн-ресурсы",
+   "en": "Dictionaries and Online Resources"
+  },
+  "description": {
+   "ru": "Развивайте учебные навыки уровня A2 по теме «Словари и онлайн-ресурсы».",
+   "en": "Develop A2 study skills for dictionaries and online resources."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "study",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "study",
+   "dictionaries-and-online-resources"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L1",
+   "order": 1,
+   "title": {
+    "ru": "Как я искал слово",
+    "en": "How I Looked Up a Word"
+   },
+   "objective": {
+    "ru": "Рассказать о работе со словарями, используя past simple и present perfect.",
+    "en": "Talk about using dictionaries using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to look up",
+        "right": "посмотреть (в словаре)"
+       },
+       {
+        "id": "P2",
+        "left": "definition",
+        "right": "определение"
+       },
+       {
+        "id": "P3",
+        "left": "example sentence",
+        "right": "пример употребления"
+       },
+       {
+        "id": "P4",
+        "left": "pronunciation",
+        "right": "произношение"
+       },
+       {
+        "id": "P5",
+        "left": "bilingual dictionary",
+        "right": "двуязычный словарь"
+       },
+       {
+        "id": "P6",
+        "left": "to add to favourites",
+        "right": "добавить в избранное"
+       },
+       {
+        "id": "P7",
+        "left": "offline mode",
+        "right": "офлайн-режим"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "I have added twenty words to my favourites this week.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "I have added twenty words last week.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "I add twenty words already this week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “I have added twenty words to my favourites this week.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я посмотрел определение и сохранил примеры употребления в избранное.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I looked up the definition and have saved the example sentences to my favourites.",
+      "word_bank": [
+       "saved",
+       "look",
+       "have",
+       "example",
+       "definition",
+       "the",
+       "my",
+       "I",
+       "tomorrow",
+       "looked",
+       "and",
+       "to",
+       "up",
+       "favourites.",
+       "did",
+       "sentences",
+       "the"
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Yesterday the app ___ without internet, in offline mode.",
+      "correct_answer": "worked",
+      "options": [
+       "worked",
+       "has work",
+       "working"
+      ],
+      "translation_hint": "Вчера приложение работало без интернета, в офлайн-режиме."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "new",
+       "words.",
+       "pronunciation",
+       "of",
+       "the",
+       "was",
+       "has",
+       "She",
+       "checked",
+       "did",
+       "all"
+      ],
+      "correct_words": [
+       "She",
+       "has",
+       "checked",
+       "the",
+       "pronunciation",
+       "of",
+       "all",
+       "new",
+       "words."
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "The dictionary has shown three different meanings, so I have read the example sentences to choose the right one.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "The dictionary has shown three different meanings, so I have read the example sentences to choose the right one.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Словарь показал три разных значения, поэтому я прочитал примеры, чтобы выбрать верное."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Confusing Word",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "What does 'address' mean here — a place or a speech?",
+        "translation": "Что значит 'address' здесь — место или речь?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Let me check... The dictionary has two definitions for it.",
+        "translation": "Сейчас проверю... В словаре два определения."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 2 advise?",
+        "options": [
+         {
+          "text": "Read the example sentences — they show which meaning fits.",
+          "is_correct": true
+         },
+         {
+          "text": "Read the examples tomorrow yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "Is the word meaning the dictionary?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "definition",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The explanation of what a word means",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "The translation of a word into your language",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "The part of speech of a word",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“definition” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have ___ up five words today.",
+      "audio_text": "I have looked up five words today.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "looked",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "look",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "looking",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “looked”."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Check the ___ in the audio dictionary.",
+      "correct_answer": "pronunciation",
+      "hint_prefix": "pro",
+      "explanation": "The complete sentence is “Check the pronunciation in the audio dictionary.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to look up",
+        "text": "to look up"
+       },
+       {
+        "id": "V2",
+        "audio_text": "definition",
+        "text": "definition"
+       },
+       {
+        "id": "V3",
+        "audio_text": "example sentence",
+        "text": "example sentence"
+       },
+       {
+        "id": "V4",
+        "audio_text": "pronunciation",
+        "text": "pronunciation"
+       },
+       {
+        "id": "V5",
+        "audio_text": "bilingual dictionary",
+        "text": "bilingual dictionary"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Paper dictionary or an app?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "The app — I have used it daily for a year, and the offline mode always works.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I used it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The dictionary is apping me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“The app — I have used it daily for a year, and the offline mode always works.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L2",
+   "order": 2,
+   "title": {
+    "ru": "Выбираем инструменты",
+    "en": "Choosing the Tools"
+   },
+   "objective": {
+    "ru": "Сравнить учебные ресурсы и спланировать работу с ними.",
+    "en": "Compare study resources and plan how to use them."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "flashcard app",
+        "right": "приложение с карточками"
+       },
+       {
+        "id": "P2",
+        "left": "more convenient",
+        "right": "удобнее"
+       },
+       {
+        "id": "P3",
+        "left": "audio course",
+        "right": "аудиокурс"
+       },
+       {
+        "id": "P4",
+        "left": "grammar reference",
+        "right": "грамматический справочник"
+       },
+       {
+        "id": "P5",
+        "left": "to subscribe to a channel",
+        "right": "подписаться на канал"
+       },
+       {
+        "id": "P6",
+        "left": "ad-free",
+        "right": "без рекламы"
+       },
+       {
+        "id": "P7",
+        "left": "database",
+        "right": "база данных"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two resources correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "A flashcard app is more convenient than paper cards on a bus.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "An app is convenienter than paper.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "An app is most convenient than cards.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “A flashcard app is more convenient than paper cards on a bus.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я собираюсь подписаться на канал про грамматику — там есть справочник.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I am going to subscribe to a grammar channel — it has a full reference there.",
+      "word_bank": [
+       "a",
+       "reference",
+       "has",
+       "to",
+       "to",
+       "grammar",
+       "channel",
+       "I",
+       "did",
+       "going",
+       "there.",
+       "subscribed",
+       "subscribe",
+       "am",
+       "—",
+       "it",
+       "full",
+       "a",
+       "yesterday"
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The ad-free version is ___ distracting.",
+      "correct_answer": "less",
+      "options": [
+       "less",
+       "least",
+       "little"
+      ],
+      "translation_hint": "Версия без рекламы меньше отвлекает."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "We",
+       "database",
+       "paper.",
+       "are",
+       "the",
+       "to",
+       "did",
+       "the",
+       "use",
+       "going",
+       "was",
+       "university",
+       "for"
+      ],
+      "correct_words": [
+       "We",
+       "are",
+       "going",
+       "to",
+       "use",
+       "the",
+       "university",
+       "database",
+       "for",
+       "the",
+       "paper."
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you use one app for new words and one for grammar, you will not get lost between ten tools.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you use one app for new words and one for grammar, you will not get lost between ten tools.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если пользоваться одним приложением для новых слов и одним для грамматики, не запутаешься между десятью инструментами."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Too Many Apps",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "I have installed six study apps this month.",
+        "translation": "В этом месяце я установил шесть учебных приложений."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Six? Do you actually open them all?",
+        "translation": "Шесть? Ты правда открываешь их все?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 2 advise?",
+        "options": [
+         {
+          "text": "Keep two — the ones you open daily without reminders.",
+          "is_correct": true
+         },
+         {
+          "text": "Keep them all yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The apps are installing you daily.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "grammar reference",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A book or page that explains grammar rules",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A novel you read for pleasure",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A dictionary with word translations",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“grammar reference” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I am going to ___ to the new channel.",
+      "audio_text": "I am going to subscribe to the new channel.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "subscribe",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "subscribed",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "subscribing",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “subscribe”."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The audio course is ___ for listening than videos.",
+      "correct_answer": "better",
+      "hint_prefix": "be",
+      "explanation": "The complete sentence is “The audio course is better for listening than videos.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "flashcard app",
+        "text": "flashcard app"
+       },
+       {
+        "id": "V2",
+        "audio_text": "more convenient",
+        "text": "more convenient"
+       },
+       {
+        "id": "V3",
+        "audio_text": "audio course",
+        "text": "audio course"
+       },
+       {
+        "id": "V4",
+        "audio_text": "grammar reference",
+        "text": "grammar reference"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to subscribe to a channel",
+        "text": "to subscribe to a channel"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Which dictionary should I install?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "The blue one — if you use the offline mode, it works even in the metro.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I installed it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The dictionary is installing me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“The blue one — if you use the offline mode, it works even in the metro.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если ресурс не помогает",
+    "en": "If the Resource Does Not Help"
+   },
+   "objective": {
+    "ru": "Дать советы о выборе ресурсов, используя should и первое условное.",
+    "en": "Give resource-choice advice using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to waste time on",
+        "right": "тратить время на"
+       },
+       {
+        "id": "P2",
+        "left": "useless",
+        "right": "бесполезный"
+       },
+       {
+        "id": "P3",
+        "left": "to check the source",
+        "right": "проверить источник"
+       },
+       {
+        "id": "P4",
+        "left": "reliable",
+        "right": "надёжный"
+       },
+       {
+        "id": "P5",
+        "left": "outdated",
+        "right": "устаревший"
+       },
+       {
+        "id": "P6",
+        "left": "to switch to",
+        "right": "переключиться на"
+       },
+       {
+        "id": "P7",
+        "left": "review",
+        "right": "отзыв"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should check whether the source is up to date.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to check it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must checking sources last time.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should check whether the source is up to date.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если ресурс устарел, ты выучишь неправильные правила.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If the resource is outdated, you will learn incorrect rules.",
+      "word_bank": [
+       "If",
+       "incorrect",
+       "you",
+       "did",
+       "resource",
+       "outdated,",
+       "is",
+       "learn",
+       "the",
+       "was",
+       "rules.",
+       "will",
+       "yesterday"
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If an explanation confuses you, ___ to another source.",
+      "correct_answer": "switch",
+      "options": [
+       "switch",
+       "will switch",
+       "switched"
+      ],
+      "translation_hint": "Если объяснение запутывает, переключись на другой источник."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "You",
+       "the",
+       "should",
+       "before",
+       "went",
+       "read",
+       "reviews",
+       "paying.",
+       "mustn't"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "read",
+       "the",
+       "reviews",
+       "before",
+       "paying."
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If a video has no examples, you should find a different one — real sentences make rules clear.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If a video has no examples, you should find a different one — real sentences make rules clear.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если в видео нет примеров, стоит найти другое — реальные предложения делают правила понятными."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Confusing Explanation",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "This grammar page has explained the rule in a very strange way.",
+        "translation": "Эта страница объяснила правило очень странно."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Is it a reliable site? When was it updated?",
+        "translation": "Это надёжный сайт? Когда его обновляли?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 discover?",
+        "options": [
+         {
+          "text": "Last updated in 2015 — I should find something newer.",
+          "is_correct": true
+         },
+         {
+          "text": "It updated tomorrow yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The rule is confusing the site itself.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "outdated",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Old and no longer correct",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Fresh and checked this year",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Written specially for your textbook",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“outdated” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If the reviews are bad, ___ to another app.",
+      "audio_text": "If the reviews are bad, switch to another app.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "switch",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will switch",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "switched",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “switch”."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Do not ___ time on useless drills.",
+      "correct_answer": "waste",
+      "hint_prefix": "wa",
+      "explanation": "The complete sentence is “Do not waste time on useless drills.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to waste time on",
+        "text": "to waste time on"
+       },
+       {
+        "id": "V2",
+        "audio_text": "useless",
+        "text": "useless"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to check the source",
+        "text": "to check the source"
+       },
+       {
+        "id": "V4",
+        "audio_text": "reliable",
+        "text": "reliable"
+       },
+       {
+        "id": "V5",
+        "audio_text": "outdated",
+        "text": "outdated"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_STUDY_DICTIONARIES_AND_ONLINE_RESOURCES_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "This course promises fluent English in a month."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Be careful — if a promise sounds magical, the course is usually useless.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I bought it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The month is fluenting me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Be careful — if a promise sounds magical, the course is usually useless.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

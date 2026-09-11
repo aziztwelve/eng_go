@@ -1,0 +1,1447 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_WORK_TASKS_AND_PROGRESS_UPDATES",
+  "title": {
+   "ru": "Задачи и отчёты о ходе работы",
+   "en": "Tasks and Progress Updates"
+  },
+  "description": {
+   "ru": "Развивайте практический английский уровня A2 для работы по теме «Задачи и отчёты о ходе работы».",
+   "en": "Develop practical A2 workplace English for tasks and progress updates."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "work",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "work",
+   "tasks-and-progress-updates"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L1",
+   "order": 1,
+   "title": {
+    "ru": "Статус задач",
+    "en": "Task Status"
+   },
+   "objective": {
+    "ru": "Сообщить о прогрессе задач, используя past simple и present perfect.",
+    "en": "Give task progress updates using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "in progress",
+        "right": "в процессе"
+       },
+       {
+        "id": "P2",
+        "left": "completed",
+        "right": "завершённый"
+       },
+       {
+        "id": "P3",
+        "left": "to update",
+        "right": "обновить / сообщить новости"
+       },
+       {
+        "id": "P4",
+        "left": "status",
+        "right": "статус"
+       },
+       {
+        "id": "P5",
+        "left": "task list",
+        "right": "список задач"
+       },
+       {
+        "id": "P6",
+        "left": "so far",
+        "right": "до сих пор"
+       },
+       {
+        "id": "P7",
+        "left": "to finish",
+        "right": "закончить"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence reports progress correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "We have completed two tasks and started the third one.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "We have completed two tasks yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "We completes two tasks so far already.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “We have completed two tasks and started the third one.”."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы закончили дизайн на прошлой неделе, а тестирование уже началось.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We finished the design last week, and the testing has already started.",
+      "word_bank": [
+       "finished",
+       "already",
+       "started.",
+       "design",
+       "the",
+       "testing",
+       "We",
+       "and",
+       "did",
+       "has",
+       "finish",
+       "week,",
+       "the",
+       "yesterday",
+       "last"
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "I ___ the task list before the meeting yesterday.",
+      "correct_answer": "updated",
+      "options": [
+       "updated",
+       "have update",
+       "updating"
+      ],
+      "translation_hint": "Я обновил список задач перед вчерашней встречей."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "marketing",
+       "was",
+       "updated",
+       "The",
+       "already",
+       "has",
+       "project",
+       "team",
+       "did",
+       "the",
+       "status."
+      ],
+      "correct_words": [
+       "The",
+       "marketing",
+       "team",
+       "has",
+       "already",
+       "updated",
+       "the",
+       "project",
+       "status."
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "Here is a quick update: we have finished the first stage, and the second stage is in progress.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "Here is a quick update: we have finished the first stage, and the second stage is in progress.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Короткий апдейт: мы закончили первый этап, а второй уже в процессе."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Monday Update",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Manager",
+        "text": "What is the status of the website tasks?",
+        "translation": "Как статус задач по сайту?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "The design is completed, and the texts are in progress.",
+        "translation": "Дизайн завершён, тексты в процессе."
+       },
+       {
+        "type": "choice",
+        "text": "What does the manager ask next?",
+        "options": [
+         {
+          "text": "Have you updated the task list in the system?",
+          "is_correct": true
+         },
+         {
+          "text": "Did you has updated it yesterday?",
+          "is_correct": false
+         },
+         {
+          "text": "Is the status updating the tasks itself?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "in progress",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Happening now but not finished yet",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Finished successfully some time ago",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Cancelled by the manager last week",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“in progress” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We have ___ the first task on the list.",
+      "audio_text": "We have completed the first task on the list.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "completed",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "complete",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "completing",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “completed”."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The report is ___ progress at the moment.",
+      "correct_answer": "in",
+      "hint_prefix": "in",
+      "explanation": "The complete sentence is “The report is in progress at the moment.”."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "in progress",
+        "text": "in progress"
+       },
+       {
+        "id": "V2",
+        "audio_text": "completed",
+        "text": "completed"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to update",
+        "text": "to update"
+       },
+       {
+        "id": "V4",
+        "audio_text": "status",
+        "text": "status"
+       },
+       {
+        "id": "V5",
+        "audio_text": "task list",
+        "text": "task list"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Where are we with the presentation?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "I have finished the slides, and Ben has already checked the numbers.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I finished them tomorrow already.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The slides are presenting us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“I have finished the slides, and Ben has already checked the numbers.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L2",
+   "order": 2,
+   "title": {
+    "ru": "Что дальше по плану",
+    "en": "What Comes Next"
+   },
+   "objective": {
+    "ru": "Рассказать о следующих задачах и сравнить их приоритет.",
+    "en": "Talk about upcoming tasks and compare their priority."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "next step",
+        "right": "следующий шаг"
+       },
+       {
+        "id": "P2",
+        "left": "priority",
+        "right": "приоритет"
+       },
+       {
+        "id": "P3",
+        "left": "more important",
+        "right": "важнее"
+       },
+       {
+        "id": "P4",
+        "left": "to focus on",
+        "right": "сосредоточиться на"
+       },
+       {
+        "id": "P5",
+        "left": "first of all",
+        "right": "прежде всего"
+       },
+       {
+        "id": "P6",
+        "left": "to expect",
+        "right": "ожидать"
+       },
+       {
+        "id": "P7",
+        "left": "estimate",
+        "right": "оценка (сроков)"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares priorities correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "Fixing the bug is more important than adding new colours.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Fixing the bug is importanter than adding colours.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "Fixing the bug is most important than colours.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “Fixing the bug is more important than adding new colours.”."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "На следующей неделе мы сначала сосредоточимся на самых важных задачах.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "Next week we are going to focus on the most important tasks first of all.",
+      "word_bank": [
+       "all.",
+       "yesterday",
+       "going",
+       "on",
+       "of",
+       "Next",
+       "did",
+       "tasks",
+       "week",
+       "the",
+       "to",
+       "important",
+       "most",
+       "are",
+       "focus",
+       "focused",
+       "first",
+       "we"
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "This task is ___ important than the weekly report.",
+      "correct_answer": "less",
+      "options": [
+       "less",
+       "least",
+       "little"
+      ],
+      "translation_hint": "Эта задача менее важная, чем еженедельный отчёт."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "focus",
+       "on",
+       "going",
+       "to",
+       "first",
+       "was",
+       "team",
+       "of",
+       "is",
+       "all.",
+       "did",
+       "quality",
+       "The"
+      ],
+      "correct_words": [
+       "The",
+       "team",
+       "is",
+       "going",
+       "to",
+       "focus",
+       "on",
+       "quality",
+       "first",
+       "of",
+       "all."
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If we finish the priority tasks early, we will start the next stage sooner than expected.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If we finish the priority tasks early, we will start the next stage sooner than expected.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если мы рано закончим приоритетные задачи, то начнём следующий этап раньше ожидаемого."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Planning the Sprint",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "We have two days left. What is the priority?",
+        "translation": "У нас осталось два дня. Что в приоритете?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "The client demo is more important than the internal report.",
+        "translation": "Демо для клиента важнее внутреннего отчёта."
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna decide?",
+        "options": [
+         {
+          "text": "Then we should focus on the demo first of all.",
+          "is_correct": true
+         },
+         {
+          "text": "Then we must to focus on the report yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The priority is focusing the team tomorrow.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "priority",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Something that is more important and must be done first",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A task that you can skip every week",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A meeting without an agenda",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“priority” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We are going to ___ on the main task.",
+      "audio_text": "We are going to focus on the main task.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "focus",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "focused",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "focusing",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “focus”."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The demo is ___ important than the slides.",
+      "correct_answer": "more",
+      "hint_prefix": "mo",
+      "explanation": "The complete sentence is “The demo is more important than the slides.”."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "next step",
+        "text": "next step"
+       },
+       {
+        "id": "V2",
+        "audio_text": "priority",
+        "text": "priority"
+       },
+       {
+        "id": "V3",
+        "audio_text": "more important",
+        "text": "more important"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to focus on",
+        "text": "to focus on"
+       },
+       {
+        "id": "V5",
+        "audio_text": "first of all",
+        "text": "first of all"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "What is the next step after testing?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "We are going to fix the small bugs and then release the update.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "We fixed them tomorrow already.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The step is going us next.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“We are going to fix the small bugs and then release the update.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если задача буксует",
+    "en": "When a Task Is Stuck"
+   },
+   "objective": {
+    "ru": "Обсудить проблемы с задачами, используя should и первое условное.",
+    "en": "Discuss task problems using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "stuck",
+        "right": "застрявший (о задаче)"
+       },
+       {
+        "id": "P2",
+        "left": "blocker",
+        "right": "блокер / препятствие"
+       },
+       {
+        "id": "P3",
+        "left": "to escalate",
+        "right": "передать вопрос выше"
+       },
+       {
+        "id": "P4",
+        "left": "to wait",
+        "right": "ждать"
+       },
+       {
+        "id": "P5",
+        "left": "to inform",
+        "right": "проинформировать"
+       },
+       {
+        "id": "P6",
+        "left": "as early as possible",
+        "right": "как можно раньше"
+       },
+       {
+        "id": "P7",
+        "left": "solution",
+        "right": "решение"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should tell your manager about the blocker as early as possible.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to tell the manager yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must telling the manager last week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should tell your manager about the blocker as early as possible.”."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если задача застряла, стоит сообщить об этом как можно раньше.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If a task is stuck, you should inform your manager as early as possible.",
+      "word_bank": [
+       "early",
+       "you",
+       "is",
+       "stucked",
+       "inform",
+       "your",
+       "as",
+       "yesterday",
+       "a",
+       "possible.",
+       "did",
+       "stuck,",
+       "task",
+       "manager",
+       "should",
+       "as",
+       "If"
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you ___ for an answer too long, you will lose a day.",
+      "correct_answer": "wait",
+      "options": [
+       "wait",
+       "will wait",
+       "waited"
+      ],
+      "translation_hint": "Если будешь слишком долго ждать ответа, потеряешь день."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "the",
+       "is",
+       "You",
+       "solution.",
+       "no",
+       "there",
+       "if",
+       "problem",
+       "mustn't",
+       "escalate",
+       "went",
+       "should"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "escalate",
+       "the",
+       "problem",
+       "if",
+       "there",
+       "is",
+       "no",
+       "solution."
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If we do not find a solution today, we will ask the senior engineer for help tomorrow.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If we do not find a solution today, we will ask the senior engineer for help tomorrow.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если мы не найдём решение сегодня, завтра попросим помощи у старшего инженера."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Blocker",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "The integration task has been stuck since Tuesday.",
+        "translation": "Задача по интеграции застряла со вторника."
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "What is blocking it?",
+        "translation": "Что её блокирует?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Tom explain?",
+        "options": [
+         {
+          "text": "If the other team does not reply, we will escalate it.",
+          "is_correct": true
+         },
+         {
+          "text": "If the team will not reply, we escalated it yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The blocker is tasking the team.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to escalate",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To pass a problem to a more senior person",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To solve a problem completely alone",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To forget about a problem for a week",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to escalate” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If the task ___ stuck, ask for help.",
+      "audio_text": "If the task gets stuck, ask for help.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "gets",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will get",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "got",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “gets”."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should inform the team ___ early as possible.",
+      "correct_answer": "as",
+      "hint_prefix": "as",
+      "explanation": "The complete sentence is “You should inform the team as early as possible.”."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "stuck",
+        "text": "stuck"
+       },
+       {
+        "id": "V2",
+        "audio_text": "blocker",
+        "text": "blocker"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to escalate",
+        "text": "to escalate"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to wait",
+        "text": "to wait"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to inform",
+        "text": "to inform"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_WORK_TASKS_AND_PROGRESS_UPDATES_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "I have been waiting for the data for two days."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "You should escalate it — if you wait longer, we will miss the deadline.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "You must to wait more yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The data is waiting for you.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“You should escalate it — if you wait longer, we will miss the deadline.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1432 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS",
+  "title": {
+   "ru": "Маршруты и описание мест",
+   "en": "Directions and Location Details"
+  },
+  "description": {
+   "ru": "Развивайте навыки аудирования и повторения уровня A2 по теме «Маршруты и описание мест».",
+   "en": "Develop A2 listening and shadowing skills for directions and location details."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "listening_shadowing",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "listening-shadowing",
+   "directions-and-location-details"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L1",
+   "order": 1,
+   "title": {
+    "ru": "Как пройти: вчерашний маршрут",
+    "en": "Directions: Yesterday's Route"
+   },
+   "objective": {
+    "ru": "Понимать объяснения маршрута, используя past simple и present perfect.",
+    "en": "Understand route explanations using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "opposite",
+        "right": "напротив"
+       },
+       {
+        "id": "P2",
+        "left": "behind",
+        "right": "за (позади)"
+       },
+       {
+        "id": "P3",
+        "left": "to go past",
+        "right": "пройти мимо"
+       },
+       {
+        "id": "P4",
+        "left": "roundabout",
+        "right": "круговое движение"
+       },
+       {
+        "id": "P5",
+        "left": "landmark",
+        "right": "ориентир"
+       },
+       {
+        "id": "P6",
+        "left": "to take the second left",
+        "right": "свернуть на втором повороте налево"
+       },
+       {
+        "id": "P7",
+        "left": "you can't miss it",
+        "right": "вы его не пропустите"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which phrase means the place is easy to see?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You can't miss it — it's the bright green door.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You can miss it easy yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The door is missing you greenly.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You can't miss it — it's the bright green door.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы прошли мимо аптеки и свернули на втором повороте налево.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We went past the pharmacy and took the second left.",
+      "word_bank": [
+       "go",
+       "pharmacy",
+       "the",
+       "left.",
+       "and",
+       "tomorrow",
+       "past",
+       "the",
+       "went",
+       "took",
+       "We",
+       "second",
+       "did"
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The bakery is ___ the church, across the road.",
+      "correct_answer": "opposite",
+      "options": [
+       "opposite",
+       "opposites",
+       "oppositely"
+      ],
+      "translation_hint": "Пекарня напротив церкви, через дорогу."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "Have",
+       "roundabout",
+       "yet?",
+       "did",
+       "you",
+       "was",
+       "the",
+       "passed"
+      ],
+      "correct_words": [
+       "Have",
+       "you",
+       "passed",
+       "the",
+       "roundabout",
+       "yet?"
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "Go past the post office, and the studio is behind the tall glass building — you can't miss it.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "Go past the post office, and the studio is behind the tall glass building — you can't miss it.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Пройдите мимо почты, и студия за высоким стеклянным зданием — вы её не пропустите."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Giving Directions",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Visitor",
+        "text": "Excuse me, how do I get to the museum?",
+        "translation": "Извините, как пройти в музей?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Local",
+        "text": "Go past the bakery, take the second left, and the museum is opposite the park.",
+        "translation": "Пройдите мимо пекарни, на втором повороте налево, и музей напротив парка."
+       },
+       {
+        "type": "choice",
+        "text": "What should the visitor watch for?",
+        "options": [
+         {
+          "text": "A bakery and then a park as landmarks.",
+          "is_correct": true
+         },
+         {
+          "text": "A museum and then a bakery yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The left turn is missing the park.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "roundabout",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A circular road where cars turn around a centre point",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A place where two railways cross",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A bridge for walking over a motorway",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“roundabout” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We have gone ___ the market already.",
+      "audio_text": "We have gone past the market already.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "past",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "passed",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "passing",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “past”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The bank is ___ the supermarket.",
+      "correct_answer": "behind",
+      "hint_prefix": "be",
+      "explanation": "The complete sentence is “The bank is behind the supermarket.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "opposite",
+        "text": "opposite"
+       },
+       {
+        "id": "V2",
+        "audio_text": "behind",
+        "text": "behind"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to go past",
+        "text": "to go past"
+       },
+       {
+        "id": "V4",
+        "audio_text": "roundabout",
+        "text": "roundabout"
+       },
+       {
+        "id": "V5",
+        "audio_text": "landmark",
+        "text": "landmark"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Visitor",
+        "text": "Is the station far from here?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Ten minutes on foot — go past the cinema, and you can't miss it.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I went there yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The station is footing me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Ten minutes on foot — go past the cinema, and you can't miss it.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L2",
+   "order": 2,
+   "title": {
+    "ru": "Маршрут на завтра",
+    "en": "Tomorrow's Route"
+   },
+   "objective": {
+    "ru": "Слушать инструкции о будущем маршруте и сравнивать пути.",
+    "en": "Listen to future route instructions and compare ways."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "the fastest way",
+        "right": "самый быстрый путь"
+       },
+       {
+        "id": "P2",
+        "left": "to avoid",
+        "right": "избегать"
+       },
+       {
+        "id": "P3",
+        "left": "traffic jam",
+        "right": "пробка"
+       },
+       {
+        "id": "P4",
+        "left": "more direct",
+        "right": "прямее"
+       },
+       {
+        "id": "P5",
+        "left": "to follow the signs",
+        "right": "следовать указателям"
+       },
+       {
+        "id": "P6",
+        "left": "shortcut",
+        "right": "короткий путь"
+       },
+       {
+        "id": "P7",
+        "left": "less crowded",
+        "right": "менее людный"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which route description compares two ways correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The road by the river is less crowded than the highway.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "The river road is crowdeder than highway.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The river road is most crowded than the highway.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The road by the river is less crowded than the highway.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Завтра я поеду через центр, потому что мост будут ремонтировать.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "Tomorrow I am going to drive through the centre because they are repairing the bridge.",
+      "word_bank": [
+       "yesterday",
+       "they",
+       "the",
+       "going",
+       "am",
+       "to",
+       "Tomorrow",
+       "drove",
+       "centre",
+       "bridge.",
+       "through",
+       "are",
+       "drive",
+       "the",
+       "did",
+       "I",
+       "repairing",
+       "because"
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The metro is ___ direct than the bus during rush hour.",
+      "correct_answer": "more",
+      "options": [
+       "more",
+       "most",
+       "much"
+      ],
+      "translation_hint": "Метро прямее автобуса в час пик."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "the",
+       "Follow",
+       "the",
+       "to",
+       "old",
+       "signs",
+       "town.",
+       "did",
+       "was"
+      ],
+      "correct_words": [
+       "Follow",
+       "the",
+       "signs",
+       "to",
+       "the",
+       "old",
+       "town."
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you take the shortcut through the park, you will arrive ten minutes earlier and avoid the traffic jam.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you take the shortcut through the park, you will arrive ten minutes earlier and avoid the traffic jam.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если пойти коротким путём через парк, приедешь на десять минут раньше и избежишь пробки."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Two Ways to the Airport",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "Should I take the highway or the old road tomorrow?",
+        "translation": "Мне завтра ехать по шоссе или по старой дороге?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "The highway is faster, but the old road is less crowded in the morning.",
+        "translation": "Шоссе быстрее, но старая дорога менее людная утром."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 decide?",
+        "options": [
+         {
+          "text": "Then I am going to take the old road and follow the airport signs.",
+          "is_correct": true
+         },
+         {
+          "text": "Then I took the old road yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "Then the highway is taking me.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "shortcut",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A quicker way between two places",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "The longest possible route to a place",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A road only for bicycles and buses",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“shortcut” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I am going to ___ the ring road.",
+      "audio_text": "I am going to avoid the ring road.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "avoid",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "avoided",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "avoiding",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “avoid”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The night bus is ___ crowded.",
+      "correct_answer": "less",
+      "hint_prefix": "le",
+      "explanation": "The complete sentence is “The night bus is less crowded.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "the fastest way",
+        "text": "the fastest way"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to avoid",
+        "text": "to avoid"
+       },
+       {
+        "id": "V3",
+        "audio_text": "traffic jam",
+        "text": "traffic jam"
+       },
+       {
+        "id": "V4",
+        "audio_text": "more direct",
+        "text": "more direct"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to follow the signs",
+        "text": "to follow the signs"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Which entrance should we use?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "The north one — if we follow the blue signs, it will be the fastest way.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "We used it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The entrance is using us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“The north one — if we follow the blue signs, it will be the fastest way.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если заблудился",
+    "en": "If You Get Lost"
+   },
+   "objective": {
+    "ru": "Понимать советы о ориентировании, используя should и первое условное.",
+    "en": "Understand orientation advice using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to double back",
+        "right": "вернуться назад"
+       },
+       {
+        "id": "P2",
+        "left": "lost",
+        "right": "потерявшийся"
+       },
+       {
+        "id": "P3",
+        "left": "to check the GPS",
+        "right": "проверить GPS"
+       },
+       {
+        "id": "P4",
+        "left": "to ask a local",
+        "right": "спросить местного"
+       },
+       {
+        "id": "P5",
+        "left": "nearby",
+        "right": "поблизости"
+       },
+       {
+        "id": "P6",
+        "left": "dead end",
+        "right": "тупик"
+       },
+       {
+        "id": "P7",
+        "left": "to retrace your steps",
+        "right": "вернуться по своим следам"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which advice is correct when you take a wrong turn?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should double back to the last landmark.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to double back yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must doubling back last turn.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should double back to the last landmark.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если пойдёшь налево, упрёшься в тупик — лучше вернуться назад.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If you turn left, you will reach a dead end — you should double back.",
+      "word_bank": [
+       "dead",
+       "a",
+       "did",
+       "will",
+       "you",
+       "reach",
+       "turned",
+       "turn",
+       "you",
+       "—",
+       "If",
+       "double",
+       "end",
+       "back.",
+       "you",
+       "left,",
+       "should",
+       "yesterday"
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If the street name does not ___ the map, retrace your steps.",
+      "correct_answer": "match",
+      "options": [
+       "match",
+       "will match",
+       "matched"
+      ],
+      "translation_hint": "Если название улицы не совпадает с картой, вернись по своим следам."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "ask",
+       "should",
+       "You",
+       "a",
+       "mustn't",
+       "—",
+       "went",
+       "shortcuts.",
+       "the",
+       "know",
+       "local",
+       "they"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "ask",
+       "a",
+       "local",
+       "—",
+       "they",
+       "know",
+       "the",
+       "shortcuts."
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you have walked for fifteen minutes without landmarks, you should check the GPS or ask someone nearby.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you have walked for fifteen minutes without landmarks, you should check the GPS or ask someone nearby.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если шёл пятнадцать минут без ориентиров, стоит проверить GPS или спросить кого-то рядом."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Dead End",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "This street ends at a fence — I think we are lost.",
+        "translation": "Улица заканчивается забором — кажется, мы заблудились."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Have we passed any shop we remember?",
+        "translation": "Мы проходили какой-нибудь магазин, который помним?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 suggest?",
+        "options": [
+         {
+          "text": "Yes, the bakery — let's retrace our steps to it.",
+          "is_correct": true
+         },
+         {
+          "text": "Yes, we pass it tomorrow yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The fence is walking us back.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "dead end",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A street or path that you cannot continue along",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A road that goes around the whole city",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A crossing with traffic lights",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“dead end” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If you feel ___ , check the GPS.",
+      "audio_text": "If you feel lost, check the GPS.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "lost",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "lose",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "loosen",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “lost”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "We should ask a ___ for directions.",
+      "correct_answer": "local",
+      "hint_prefix": "lo",
+      "explanation": "The complete sentence is “We should ask a local for directions.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to double back",
+        "text": "to double back"
+       },
+       {
+        "id": "V2",
+        "audio_text": "lost",
+        "text": "lost"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to check the GPS",
+        "text": "to check the GPS"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to ask a local",
+        "text": "to ask a local"
+       },
+       {
+        "id": "V5",
+        "audio_text": "nearby",
+        "text": "nearby"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_DIRECTIONS_AND_LOCATION_DETAILS_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "The house numbers look wrong."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Maybe we missed the turn — if we double back to the bridge, we will find the street.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I doubled back yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The numbers are housing us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Maybe we missed the turn — if we double back to the bridge, we will find the street.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

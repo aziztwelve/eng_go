@@ -1,0 +1,1439 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_STUDY_READING_FOR_MAIN_IDEAS",
+  "title": {
+   "ru": "Чтение для понимания основной идеи",
+   "en": "Reading for Main Ideas"
+  },
+  "description": {
+   "ru": "Развивайте учебные навыки уровня A2 по теме «Чтение для понимания основной идеи».",
+   "en": "Develop A2 study skills for reading for main ideas."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "study",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "study",
+   "reading-for-main-ideas"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_STUDY_READING_FOR_MAIN_IDEAS_L1",
+   "order": 1,
+   "title": {
+    "ru": "О чём была статья",
+    "en": "What the Article Was About"
+   },
+   "objective": {
+    "ru": "Рассказать о прочитанном, используя past simple и present perfect.",
+    "en": "Talk about a text using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "main idea",
+        "right": "главная мысль"
+       },
+       {
+        "id": "P2",
+        "left": "topic sentence",
+        "right": "тематическое предложение"
+       },
+       {
+        "id": "P3",
+        "left": "to skim",
+        "right": "просмотреть бегло"
+       },
+       {
+        "id": "P4",
+        "left": "supporting detail",
+        "right": "подробность (подтверждающая)"
+       },
+       {
+        "id": "P5",
+        "left": "to come across",
+        "right": "наткнуться на"
+       },
+       {
+        "id": "P6",
+        "left": "heading",
+        "right": "заголовок"
+       },
+       {
+        "id": "P7",
+        "left": "so far",
+        "right": "до сих пор"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "I have skimmed two chapters so far this evening.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "I have skimmed them yesterday evening.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "I skim two chapters already so far.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “I have skimmed two chapters so far this evening.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я бегло просмотрел статью и нашёл три подтверждающие детали.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I skimmed the article and have found three supporting details.",
+      "word_bank": [
+       "article",
+       "skim",
+       "supporting",
+       "did",
+       "the",
+       "three",
+       "have",
+       "I",
+       "tomorrow",
+       "skimmed",
+       "and",
+       "details.",
+       "found"
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The first paragraph usually contains the ___ sentence.",
+      "correct_answer": "topic",
+      "options": [
+       "topic",
+       "topics",
+       "topical"
+      ],
+      "translation_hint": "Первый абзац обычно содержит тематическое предложение."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "each",
+       "idea",
+       "did",
+       "of",
+       "main",
+       "underlined",
+       "paragraph.",
+       "has",
+       "She",
+       "was",
+       "the"
+      ],
+      "correct_words": [
+       "She",
+       "has",
+       "underlined",
+       "the",
+       "main",
+       "idea",
+       "of",
+       "each",
+       "paragraph."
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "The heading promised tips on saving money, and the article has actually delivered them in the third section.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "The heading promised tips on saving money, and the article has actually delivered them in the third section.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Заголовок обещал советы по экономии денег, и статья действительно выдала их в третьем разделе."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "After the Reading Class",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "What was the article about, in one sentence?",
+        "translation": "О чём была статья, в одном предложении?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Remote work saves companies money — but only if they trust their staff.",
+        "translation": "Удалённая работа экономит компаниям деньги — но только если они доверяют сотрудникам."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 ask?",
+        "options": [
+         {
+          "text": "Which details has the author used to support it?",
+          "is_correct": true
+         },
+         {
+          "text": "Which details did the author use tomorrow?",
+          "is_correct": false
+         },
+         {
+          "text": "Is the sentence saving the article money?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "topic sentence",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The sentence that states the main idea of a paragraph",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A quote from another article",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "The last question of the text",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“topic sentence” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have ___ the whole report in ten minutes.",
+      "audio_text": "I have skimmed the whole report in ten minutes.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "skimmed",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "skim",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "skimming",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “skimmed”."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Find the main ___ first, details later.",
+      "correct_answer": "idea",
+      "hint_prefix": "id",
+      "explanation": "The complete sentence is “Find the main idea first, details later.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "main idea",
+        "text": "main idea"
+       },
+       {
+        "id": "V2",
+        "audio_text": "topic sentence",
+        "text": "topic sentence"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to skim",
+        "text": "to skim"
+       },
+       {
+        "id": "V4",
+        "audio_text": "supporting detail",
+        "text": "supporting detail"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to come across",
+        "text": "to come across"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Did you read the whole chapter?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "I skimmed it first — then I have read only the sections with the main ideas.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I read it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The chapter is skimming me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“I skimmed it first — then I have read only the sections with the main ideas.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_STUDY_READING_FOR_MAIN_IDEAS_L2",
+   "order": 2,
+   "title": {
+    "ru": "Как читать быстрее",
+    "en": "How to Read Faster"
+   },
+   "objective": {
+    "ru": "Сравнить техники чтения и спланировать чтение на неделю.",
+    "en": "Compare reading techniques and plan your weekly reading."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "scanning",
+        "right": "поиск по тексту (сканирование)"
+       },
+       {
+        "id": "P2",
+        "left": "faster",
+        "right": "быстрее"
+       },
+       {
+        "id": "P3",
+        "left": "to guess from context",
+        "right": "догадаться по контексту"
+       },
+       {
+        "id": "P4",
+        "left": "subtitles",
+        "right": "подзаголовки"
+       },
+       {
+        "id": "P5",
+        "left": "to slow down",
+        "right": "замедлиться"
+       },
+       {
+        "id": "P6",
+        "left": "more carefully",
+        "right": "внимательнее"
+       },
+       {
+        "id": "P7",
+        "left": "reading speed",
+        "right": "скорость чтения"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two reading ways correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "Scanning for numbers is faster than reading every word.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Scanning is more fast than reading.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "Scanning is fastest than reading.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “Scanning for numbers is faster than reading every word.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "На этой неделе я собираюсь читать по одной статье в день.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "This week I am going to read one article a day.",
+      "word_bank": [
+       "one",
+       "to",
+       "I",
+       "day.",
+       "going",
+       "am",
+       "a",
+       "did",
+       "read",
+       "week",
+       "This",
+       "article",
+       "yesterday",
+       "read"
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Guessing from context is ___ than stopping at every word.",
+      "correct_answer": "quicker",
+      "options": [
+       "quicker",
+       "quickest",
+       "more quick"
+      ],
+      "translation_hint": "Догадываться по контексту быстрее, чем останавливаться на каждом слове."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "text",
+       "going",
+       "did",
+       "dates",
+       "scan",
+       "We",
+       "the",
+       "to",
+       "was",
+       "are",
+       "the",
+       "for",
+       "first."
+      ],
+      "correct_words": [
+       "We",
+       "are",
+       "going",
+       "to",
+       "scan",
+       "the",
+       "text",
+       "for",
+       "the",
+       "dates",
+       "first."
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you read the subtitles first, you will know where to slow down and where to scan.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you read the subtitles first, you will know where to slow down and where to scan.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если сначала прочитать подзаголовки, будет понятно, где замедлиться, а где сканировать."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Reading a Long Text",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "This article is six pages long — do I read it all?",
+        "translation": "Статья на шесть страниц — читать всё?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Start with the headings — then read carefully only the relevant section.",
+        "translation": "Начни с подзаголовков — внимательно прочитай только нужный раздел."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 decide?",
+        "options": [
+         {
+          "text": "Good — I am going to scan for my topic first.",
+          "is_correct": true
+         },
+         {
+          "text": "I scanned it yesterday tomorrow already.",
+          "is_correct": false
+         },
+         {
+          "text": "The pages are heading my topic.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "scanning",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Looking quickly through a text for specific information",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Reading every word from top to bottom",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Translating the text word by word",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“scanning” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I am going to ___ for the key figure.",
+      "audio_text": "I am going to scan for the key figure.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "scan",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "scanned",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "scanning",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “scan”."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "My reading speed is ___ than last year.",
+      "correct_answer": "higher",
+      "hint_prefix": "hi",
+      "explanation": "The complete sentence is “My reading speed is higher than last year.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "scanning",
+        "text": "scanning"
+       },
+       {
+        "id": "V2",
+        "audio_text": "faster",
+        "text": "faster"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to guess from context",
+        "text": "to guess from context"
+       },
+       {
+        "id": "V4",
+        "audio_text": "subtitles",
+        "text": "subtitles"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to slow down",
+        "text": "to slow down"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "I stop at every unknown word."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Try guessing from context — if the guess fails, you can check the word later.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I guessed it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The words are stopping me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Try guessing from context — if the guess fails, you can check the word later.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_STUDY_READING_FOR_MAIN_IDEAS_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если текст не понятен",
+    "en": "If the Text Is Unclear"
+   },
+   "objective": {
+    "ru": "Дать советы о чтении сложных текстов, используя should и первое условное.",
+    "en": "Give advice on difficult texts using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to re-read",
+        "right": "перечитать"
+       },
+       {
+        "id": "P2",
+        "left": "in other words",
+        "right": "другими словами"
+       },
+       {
+        "id": "P3",
+        "left": "to paraphrase",
+        "right": "пересказать своими словами"
+       },
+       {
+        "id": "P4",
+        "left": "difficult",
+        "right": "сложный"
+       },
+       {
+        "id": "P5",
+        "left": "to look for",
+        "right": "искать"
+       },
+       {
+        "id": "P6",
+        "left": "clue",
+        "right": "подсказка"
+       },
+       {
+        "id": "P7",
+        "left": "to give up on",
+        "right": "сдаться на"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct reading advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should paraphrase each paragraph in your own words.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to paraphrase it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must paraphrasing paragraphs last text.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should paraphrase each paragraph in your own words.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если перечитать сложный абзац медленно, смысл часто становится ясен.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If you re-read a difficult paragraph slowly, the meaning often becomes clear.",
+      "word_bank": [
+       "slowly,",
+       "often",
+       "clear.",
+       "becomes",
+       "paragraph",
+       "did",
+       "If",
+       "difficult",
+       "the",
+       "meaning",
+       "you",
+       "reread",
+       "a",
+       "re-read",
+       "yesterday"
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If a sentence is unclear, look for ___ in the next one.",
+      "correct_answer": "clues",
+      "options": [
+       "clues",
+       "will clue",
+       "clued"
+      ],
+      "translation_hint": "Если предложение неясно, ищи подсказки в следующем."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "once.",
+       "up",
+       "at",
+       "mustn't",
+       "went",
+       "give",
+       "should",
+       "hard",
+       "not",
+       "texts",
+       "You",
+       "on"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "not",
+       "give",
+       "up",
+       "on",
+       "hard",
+       "texts",
+       "at",
+       "once."
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you paraphrase a paragraph in one sentence, you will immediately see what you have not understood.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you paraphrase a paragraph in one sentence, you will immediately see what you have not understood.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если пересказать абзац одним предложением, сразу станет видно, что именно не понял."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Impossible Paragraph",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "I have read this paragraph three times and still do not get it.",
+        "translation": "Я трижды прочитал этот абзац и всё равно не понимаю."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Try paraphrasing the first half aloud.",
+        "translation": "Попробуй пересказать первую половину вслух."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 discover?",
+        "options": [
+         {
+          "text": "Ah — now I see that I misunderstood the word 'claim'.",
+          "is_correct": true
+         },
+         {
+          "text": "I saw it tomorrow yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The paragraph is paraphrasing me thrice.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "clue",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Something that helps you find an answer or meaning",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A question nobody can answer",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A word you have never seen in any text",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“clue” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If the text stays unclear, ___ the main part.",
+      "audio_text": "If the text stays unclear, re-read the main part.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "re-read",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will re-read",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "re-readed",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “re-read”."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Say it in other ___ .",
+      "correct_answer": "words",
+      "hint_prefix": "wo",
+      "explanation": "The complete sentence is “Say it in other words .”."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to re-read",
+        "text": "to re-read"
+       },
+       {
+        "id": "V2",
+        "audio_text": "in other words",
+        "text": "in other words"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to paraphrase",
+        "text": "to paraphrase"
+       },
+       {
+        "id": "V4",
+        "audio_text": "difficult",
+        "text": "difficult"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to look for",
+        "text": "to look for"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_STUDY_READING_FOR_MAIN_IDEAS_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "This article is above my level."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Do not give up — if you find the main idea, the details will follow.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I found it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The level is articling me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Do not give up — if you find the main idea, the details will follow.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

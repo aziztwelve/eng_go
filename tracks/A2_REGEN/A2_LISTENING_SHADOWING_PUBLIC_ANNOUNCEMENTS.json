@@ -1,0 +1,1440 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS",
+  "title": {
+   "ru": "Объявления в общественных местах",
+   "en": "Public Announcements"
+  },
+  "description": {
+   "ru": "Развивайте навыки аудирования и повторения уровня A2 по теме «Объявления в общественных местах».",
+   "en": "Develop A2 listening and shadowing skills for public announcements."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "listening_shadowing",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "listening-shadowing",
+   "public-announcements"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L1",
+   "order": 1,
+   "title": {
+    "ru": "Объявления, которые уже прозвучали",
+    "en": "Announcements That Have Already Sounded"
+   },
+   "objective": {
+    "ru": "Понимать объявления, используя past simple и present perfect.",
+    "en": "Understand announcements using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "attention, please",
+        "right": "внимание, пожалуйста"
+       },
+       {
+        "id": "P2",
+        "left": "platform change",
+        "right": "изменение платформы"
+       },
+       {
+        "id": "P3",
+        "left": "to apologise for",
+        "right": "извиниться за"
+       },
+       {
+        "id": "P4",
+        "left": "delay",
+        "right": "задержка"
+       },
+       {
+        "id": "P5",
+        "left": "final call",
+        "right": "последний вызов (посадка)"
+       },
+       {
+        "id": "P6",
+        "left": "to make one's way to",
+        "right": "проследовать к"
+       },
+       {
+        "id": "P7",
+        "left": "boarding",
+        "right": "посадка"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which phrase do you hear just before gates close?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "This is the final call for flight BA 229.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "This is first call for yesterday flight.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The gates are calling the flight finally.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “This is the final call for flight BA 229.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Пассажирам извинились за задержку и попросили пройти к выходу B12.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "The passengers have received an apology for the delay and were asked to make their way to gate B12.",
+      "word_bank": [
+       "delay",
+       "to",
+       "an",
+       "way",
+       "apologise",
+       "their",
+       "for",
+       "asked",
+       "to",
+       "were",
+       "The",
+       "and",
+       "the",
+       "tomorrow",
+       "passengers",
+       "apology",
+       "make",
+       "B12.",
+       "received",
+       "have",
+       "gate",
+       "did"
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The announcement said the train ___ from a different platform.",
+      "correct_answer": "departed",
+      "options": [
+       "departed",
+       "has depart",
+       "departing"
+      ],
+      "translation_hint": "В объявлении сказали, что поезд отправляется с другой платформы."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "heard",
+       "change",
+       "announcement?",
+       "you",
+       "Have",
+       "did",
+       "platform",
+       "was",
+       "the"
+      ],
+      "correct_words": [
+       "Have",
+       "you",
+       "heard",
+       "the",
+       "platform",
+       "change",
+       "announcement?"
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "Attention, please: the 14:15 service to Bristol has been delayed — we apologise for the inconvenience and will update you shortly.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "Attention, please: the 14:15 service to Bristol has been delayed — we apologise for the inconvenience and will update you shortly.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Внимание: рейс 14:15 в Бристоль задержан — приносим извинения за неудобства и скоро сообщим подробности."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "At the Station",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Announcement",
+        "text": "Attention, please. The 10:30 train to Oxford now leaves from platform nine.",
+        "translation": "Внимание. Поезд 10:30 в Оксфорд теперь отправляется с девятой платформы."
+       },
+       {
+        "type": "dialogue",
+        "character": "Passenger",
+        "text": "Did you hear that? We have been waiting at the wrong platform.",
+        "translation": "Ты слышал? Мы ждали не на той платформе."
+       },
+       {
+        "type": "choice",
+        "text": "What should they do?",
+        "options": [
+         {
+          "text": "Hurry — boarding starts in three minutes.",
+          "is_correct": true
+         },
+         {
+          "text": "To wait at the old platform tomorrow yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The announcement is waiting for the train.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "final call",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The last announcement before boarding closes",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "The first announcement of the day",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A call made after the plane has left",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“final call” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "They have ___ for the delay.",
+      "audio_text": "They have apologised for the delay.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "apologised",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "apologise",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "apologising",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “apologised”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Please make your ___ to gate five.",
+      "correct_answer": "way",
+      "hint_prefix": "wa",
+      "explanation": "The complete sentence is “Please make your way to gate five.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "attention, please",
+        "text": "attention, please"
+       },
+       {
+        "id": "V2",
+        "audio_text": "platform change",
+        "text": "platform change"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to apologise for",
+        "text": "to apologise for"
+       },
+       {
+        "id": "V4",
+        "audio_text": "delay",
+        "text": "delay"
+       },
+       {
+        "id": "V5",
+        "audio_text": "final call",
+        "text": "final call"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Announcement",
+        "text": "This is the final call for passenger Ivanov."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "That's me — if I run now, I will catch the gate before it closes.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I ran there yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The call is gating me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“That's me — if I run now, I will catch the gate before it closes.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L2",
+   "order": 2,
+   "title": {
+    "ru": "Что объявят завтра",
+    "en": "What Will Be Announced Tomorrow"
+   },
+   "objective": {
+    "ru": "Понимать объявления о будущем и сравнивать варианты проезда.",
+    "en": "Understand future announcements and compare travel options."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "replacement bus",
+        "right": "автобус-заменитель"
+       },
+       {
+        "id": "P2",
+        "left": "more frequent",
+        "right": "чаще"
+       },
+       {
+        "id": "P3",
+        "left": "to run",
+        "right": "ходить (о транспорте)"
+       },
+       {
+        "id": "P4",
+        "left": "every ten minutes",
+        "right": "каждые десять минут"
+       },
+       {
+        "id": "P5",
+        "left": "to be subject to",
+        "right": "зависеть от (обстоятельств)"
+       },
+       {
+        "id": "P6",
+        "left": "at short notice",
+        "right": "в последний момент"
+       },
+       {
+        "id": "P7",
+        "left": "timetable",
+        "right": "расписание"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which announcement compares two services correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The express is more frequent than the slow service in the morning.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "The express is frequenter than slow service.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The express is most frequent than the slow one.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The express is more frequent than the slow service in the morning.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Завтра вместо поезда будет ходить автобус каждые двадцать минут.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "Tomorrow a replacement bus will run every twenty minutes instead of the train.",
+      "word_bank": [
+       "bus",
+       "yesterday",
+       "instead",
+       "a",
+       "replacement",
+       "train.",
+       "Tomorrow",
+       "twenty",
+       "run",
+       "ran",
+       "the",
+       "will",
+       "minutes",
+       "every",
+       "did",
+       "of"
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The shuttle runs ___ fifteen minutes on Sundays.",
+      "correct_answer": "every",
+      "options": [
+       "every",
+       "each",
+       "all"
+      ],
+      "translation_hint": "Шаттл ходит каждые пятнадцать минут по воскресеньям."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "festival.",
+       "during",
+       "going",
+       "are",
+       "was",
+       "run",
+       "the",
+       "Extra",
+       "trains",
+       "did",
+       "to"
+      ],
+      "correct_words": [
+       "Extra",
+       "trains",
+       "are",
+       "going",
+       "to",
+       "run",
+       "during",
+       "the",
+       "festival."
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "Because of engineering works, buses will replace trains this weekend — the buses are less frequent, so please allow extra time.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "Because of engineering works, buses will replace trains this weekend — the buses are less frequent, so please allow extra time.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Из-за путевых работ поезда заменят автобусами — автобусы ходят реже, поэтому заложите дополнительное время."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Weekend Works",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Announcement",
+        "text": "On Sunday, buses will replace all trains between Central and Northgate.",
+        "translation": "В воскресенье автобусы заменят все поезда между Центральным и Нортгейтом."
+       },
+       {
+        "type": "dialogue",
+        "character": "Passenger",
+        "text": "How often will the buses run?",
+        "translation": "Как часто будут ходить автобусы?"
+       },
+       {
+        "type": "choice",
+        "text": "What is the likely answer?",
+        "options": [
+         {
+          "text": "Every twenty minutes — less frequent than the trains, I am afraid.",
+          "is_correct": true
+         },
+         {
+          "text": "Every twenty minutes tomorrow yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The buses are training the minute.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "replacement bus",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A bus used when a train service is not running",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A bus that follows the same route for tourists",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "An extra carriage added to a train",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“replacement bus” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "The night service is going to ___ twice an hour.",
+      "audio_text": "The night service is going to run twice an hour.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "run",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "ran",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "running",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “run”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Morning trains are ___ frequent.",
+      "correct_answer": "more",
+      "hint_prefix": "mo",
+      "explanation": "The complete sentence is “Morning trains are more frequent.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "replacement bus",
+        "text": "replacement bus"
+       },
+       {
+        "id": "V2",
+        "audio_text": "more frequent",
+        "text": "more frequent"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to run",
+        "text": "to run"
+       },
+       {
+        "id": "V4",
+        "audio_text": "every ten minutes",
+        "text": "every ten minutes"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to be subject to",
+        "text": "to be subject to"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Announcement",
+        "text": "This service is subject to cancellation."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Then I should check the app — if it is cancelled, the taxi will cost a fortune.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "It cancelled me yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The service is subjecting me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Then I should check the app — if it is cancelled, the taxi will cost a fortune.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если объявление касается тебя",
+    "en": "If the Announcement Concerns You"
+   },
+   "objective": {
+    "ru": "Понимать инструкции в объявлениях, используя should и первое условное.",
+    "en": "Understand announcement instructions using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to follow instructions",
+        "right": "следовать инструкциям"
+       },
+       {
+        "id": "P2",
+        "left": "unattended",
+        "right": "беспризорный (оставленный без присмотра)"
+       },
+       {
+        "id": "P3",
+        "left": "to evacuate",
+        "right": "эвакуироваться"
+       },
+       {
+        "id": "P4",
+        "left": "emergency exit",
+        "right": "аварийный выход"
+       },
+       {
+        "id": "P5",
+        "left": "to report to",
+        "right": "явиться к"
+       },
+       {
+        "id": "P6",
+        "left": "in an orderly manner",
+        "right": "организованно"
+       },
+       {
+        "id": "P7",
+        "left": "staff member",
+        "right": "сотрудник"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives a safety instruction?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should leave the building through the emergency exits.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to leave it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must leaving yesterday through exits.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should leave the building through the emergency exits.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если вы увидите оставленную без присмотра сумку, сообщите об этом персоналу.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If you see an unattended bag, you should report it to a staff member.",
+      "word_bank": [
+       "report",
+       "see",
+       "an",
+       "should",
+       "a",
+       "you",
+       "you",
+       "to",
+       "If",
+       "staff",
+       "did",
+       "it",
+       "unattended",
+       "saw",
+       "member.",
+       "bag,",
+       "yesterday"
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If the alarm ___ , evacuate in an orderly manner.",
+      "correct_answer": "sounds",
+      "options": [
+       "sounds",
+       "will sound",
+       "sounded"
+      ],
+      "translation_hint": "Если сработает сигнализация, эвакуируйтесь организованно."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "follow",
+       "should",
+       "the",
+       "of",
+       "You",
+       "went",
+       "the",
+       "instructions",
+       "staff.",
+       "mustn't"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "follow",
+       "the",
+       "instructions",
+       "of",
+       "the",
+       "staff."
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you cannot hear this announcement clearly, you should move closer to a staff member and ask for help.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you cannot hear this announcement clearly, you should move closer to a staff member and ask for help.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если вы плохо слышите объявление, подойдите ближе к сотруднику и попросите помощи."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Unattended Bag",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Announcement",
+        "text": "Attention: a bag has been found unattended near the main entrance.",
+        "translation": "Внимание: у главного входа найдена сумка без присмотра."
+       },
+       {
+        "type": "dialogue",
+        "character": "Passenger",
+        "text": "That is my bag! I left it by the pillar for a minute.",
+        "translation": "Это моя сумка! Я на минуту оставил её у колонны."
+       },
+       {
+        "type": "choice",
+        "text": "What should the passenger do?",
+        "options": [
+         {
+          "text": "Report to the staff and describe the bag.",
+          "is_correct": true
+         },
+         {
+          "text": "To report it tomorrow yesterday again.",
+          "is_correct": false
+         },
+         {
+          "text": "The bag is announcing the passenger.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to evacuate",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To leave a building or area quickly and safely",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To enter a station through the main doors",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To wait calmly for a delayed train",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to evacuate” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If the alarm ___, follow the green signs.",
+      "audio_text": "If the alarm sounds, follow the green signs.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "sounds",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will sound",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "sounded",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “sounds”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Please report any unattended luggage ___ the staff.",
+      "correct_answer": "to",
+      "hint_prefix": "to",
+      "explanation": "The complete sentence is “Please report any unattended luggage to the staff.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to follow instructions",
+        "text": "to follow instructions"
+       },
+       {
+        "id": "V2",
+        "audio_text": "unattended",
+        "text": "unattended"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to evacuate",
+        "text": "to evacuate"
+       },
+       {
+        "id": "V4",
+        "audio_text": "emergency exit",
+        "text": "emergency exit"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to report to",
+        "text": "to report to"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PUBLIC_ANNOUNCEMENTS_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Announcement",
+        "text": "Will passenger Smith please report to the information desk?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "That's me — if I go now, I will find out what happened to my connection.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I reported me yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The desk is passing me by.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“That's me — if I go now, I will find out what happened to my connection.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

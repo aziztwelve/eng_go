@@ -1,0 +1,1433 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_SPEAKING_SHOPPING_CONVERSATIONS",
+  "title": {
+   "ru": "Разговоры в магазине",
+   "en": "Shopping Conversations"
+  },
+  "description": {
+   "ru": "Развивайте разговорные навыки уровня A2 по теме «Разговоры в магазине».",
+   "en": "Develop A2 speaking skills for shopping conversations."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "speaking",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "speaking",
+   "shopping-conversations"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L1",
+   "order": 1,
+   "title": {
+    "ru": "Удачная покупка",
+    "en": "A Successful Purchase"
+   },
+   "objective": {
+    "ru": "Рассказать о покупках, используя past simple и present perfect.",
+    "en": "Talk about shopping using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "bargain",
+        "right": "выгодная покупка"
+       },
+       {
+        "id": "P2",
+        "left": "to try on",
+        "right": "примерить"
+       },
+       {
+        "id": "P3",
+        "left": "fitting room",
+        "right": "примерочная"
+       },
+       {
+        "id": "P4",
+        "left": "to fit",
+        "right": "подходить по размеру"
+       },
+       {
+        "id": "P5",
+        "left": "receipt",
+        "right": "чек"
+       },
+       {
+        "id": "P6",
+        "left": "to order online",
+        "right": "заказать онлайн"
+       },
+       {
+        "id": "P7",
+        "left": "in the end",
+        "right": "в итоге"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "I have already spent my monthly clothes budget.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "I have spent it last month.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "I spend the budget already now.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “I have already spent my monthly clothes budget.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я примерил пять курток и в итоге купил самую дешёвую.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I tried on five jackets and in the end bought the cheapest one.",
+      "word_bank": [
+       "end",
+       "I",
+       "did",
+       "and",
+       "five",
+       "bought",
+       "try",
+       "jackets",
+       "cheapest",
+       "tried",
+       "the",
+       "on",
+       "the",
+       "one.",
+       "tomorrow",
+       "in"
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The shoes did not ___ , so I took a bigger size.",
+      "correct_answer": "fit",
+      "options": [
+       "fit",
+       "fits",
+       "fitting"
+      ],
+      "translation_hint": "Туфли не подошли, и я взял размер побольше."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "was",
+       "a",
+       "just",
+       "online.",
+       "She",
+       "has",
+       "phone",
+       "did",
+       "ordered",
+       "new"
+      ],
+      "correct_words": [
+       "She",
+       "has",
+       "just",
+       "ordered",
+       "a",
+       "new",
+       "phone",
+       "online."
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "I found a real bargain at the market — a wool coat for twenty euros, and it fits perfectly.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "I found a real bargain at the market — a wool coat for twenty euros, and it fits perfectly.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Я нашёл реальную выгоду на рынке — шерстяное пальто за двадцать евро, и оно идеально сидит."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "In the Fitting Room",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Assistant",
+        "text": "How does the dress fit?",
+        "translation": "Как сидит платье?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Customer",
+        "text": "The top is fine, but the skirt is a bit tight.",
+        "translation": "Верх в порядке, но юбка немного тесновата."
+       },
+       {
+        "type": "choice",
+        "text": "What does the assistant offer?",
+        "options": [
+         {
+          "text": "I will bring one size up — the colour has been very popular this week.",
+          "is_correct": true
+         },
+         {
+          "text": "I brought it yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The dress is fitting one size up.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "bargain",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Something bought for a lower price than usual",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "The most expensive item in the shop",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Something you return the next day",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“bargain” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have ___ the receipt, unfortunately.",
+      "audio_text": "I have lost the receipt, unfortunately.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "lost",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "lose",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "losing",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “lost”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She has paid ___ card.",
+      "correct_answer": "by",
+      "hint_prefix": "by",
+      "explanation": "The complete sentence is “She has paid by card.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "bargain",
+        "text": "bargain"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to try on",
+        "text": "to try on"
+       },
+       {
+        "id": "V3",
+        "audio_text": "fitting room",
+        "text": "fitting room"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to fit",
+        "text": "to fit"
+       },
+       {
+        "id": "V5",
+        "audio_text": "receipt",
+        "text": "receipt"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Assistant",
+        "text": "Would you like to try it on?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes, please — where is the fitting room? I have never shopped here before.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I tried it on yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The shop is trying me on.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes, please — where is the fitting room? I have never shopped here before.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L2",
+   "order": 2,
+   "title": {
+    "ru": "Что купить дальше",
+    "en": "What to Buy Next"
+   },
+   "objective": {
+    "ru": "Спланировать покупку и сравнить варианты.",
+    "en": "Plan a purchase and compare options."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to compare prices",
+        "right": "сравнить цены"
+       },
+       {
+        "id": "P2",
+        "left": "second-hand",
+        "right": "вторичка / б/у"
+       },
+       {
+        "id": "P3",
+        "left": "brand new",
+        "right": "совершенно новый"
+       },
+       {
+        "id": "P4",
+        "left": "more durable",
+        "right": "прочнее"
+       },
+       {
+        "id": "P5",
+        "left": "customer reviews",
+        "right": "отзывы покупателей"
+       },
+       {
+        "id": "P6",
+        "left": "to wait for a sale",
+        "right": "дождаться распродажи"
+       },
+       {
+        "id": "P7",
+        "left": "value for money",
+        "right": "соответствие цене"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two products correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "This rucksack is more durable than the cheaper one.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "This rucksack is durabler than that one.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "This rucksack is most durable than that.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “This rucksack is more durable than the cheaper one.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я собираюсь дождаться распродажи и купить куртку со скидкой.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I am going to wait for a sale and buy the jacket at a discount.",
+      "word_bank": [
+       "a",
+       "to",
+       "going",
+       "wait",
+       "I",
+       "a",
+       "and",
+       "the",
+       "discount.",
+       "jacket",
+       "am",
+       "did",
+       "at",
+       "sale",
+       "yesterday",
+       "waited",
+       "for",
+       "buy"
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "A second-hand bike is often ___ value for money than a new one.",
+      "correct_answer": "better",
+      "options": [
+       "better",
+       "best",
+       "more good"
+      ],
+      "translation_hint": "Б/у велосипед часто выгоднее нового."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "are",
+       "We",
+       "was",
+       "three",
+       "to",
+       "compare",
+       "going",
+       "did",
+       "prices",
+       "shops.",
+       "in"
+      ],
+      "correct_words": [
+       "We",
+       "are",
+       "going",
+       "to",
+       "compare",
+       "prices",
+       "in",
+       "three",
+       "shops."
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you read the customer reviews first, you will avoid the models that break quickly.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you read the customer reviews first, you will avoid the models that break quickly.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если сначала почитать отзывы, вы избежите моделей, которые быстро ломаются."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "New or Second-hand?",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "I need a new bike. Should I buy second-hand?",
+        "translation": "Мне нужен велосипед. Взять б/у?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "A second-hand one is cheaper, but this brand is more durable new.",
+        "translation": "Б/у дешевле, но эта марка прочнее новой."
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna decide?",
+        "options": [
+         {
+          "text": "I am going to look at both and compare the prices.",
+          "is_correct": true
+         },
+         {
+          "text": "I looked at them yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The bike is buying me second-hand.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "second-hand",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Not new; owned by someone before",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Fresh from the factory this month",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Reserved in the shop yesterday",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“second-hand” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We are going to ___ prices online.",
+      "audio_text": "We are going to compare prices online.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "compare",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "compared",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "comparing",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “compare”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The reviews are ___ helpful than the ads.",
+      "correct_answer": "more",
+      "hint_prefix": "mo",
+      "explanation": "The complete sentence is “The reviews are more helpful than the ads.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to compare prices",
+        "text": "to compare prices"
+       },
+       {
+        "id": "V2",
+        "audio_text": "second-hand",
+        "text": "second-hand"
+       },
+       {
+        "id": "V3",
+        "audio_text": "brand new",
+        "text": "brand new"
+       },
+       {
+        "id": "V4",
+        "audio_text": "more durable",
+        "text": "more durable"
+       },
+       {
+        "id": "V5",
+        "audio_text": "customer reviews",
+        "text": "customer reviews"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Is this brand worth the money?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Check the reviews — if it lasts five years, it will be good value for money.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "It was worth it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The brand is moneying me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Check the reviews — if it lasts five years, it will be good value for money.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если покупка не подошла",
+    "en": "If the Purchase Does Not Fit"
+   },
+   "objective": {
+    "ru": "Объяснить возврат и обмен, используя should и первое условное.",
+    "en": "Explain returns and exchanges using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to return",
+        "right": "вернуть (товар)"
+       },
+       {
+        "id": "P2",
+        "left": "exchange",
+        "right": "обмен"
+       },
+       {
+        "id": "P3",
+        "left": "warranty",
+        "right": "гарантия"
+       },
+       {
+        "id": "P4",
+        "left": "to keep the receipt",
+        "right": "хранить чек"
+       },
+       {
+        "id": "P5",
+        "left": "to complain politely",
+        "right": "вежливо пожаловаться"
+       },
+       {
+        "id": "P6",
+        "left": "faulty",
+        "right": "бракованный"
+       },
+       {
+        "id": "P7",
+        "left": "within the period",
+        "right": "в течение срока"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should keep the receipt until you are sure the item works.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to keep it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must keeping it last purchase.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should keep the receipt until you are sure the item works.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если товар бракованный, магазин обязан вернуть деньги или обменять его.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If the item is faulty, the shop must refund you or exchange it.",
+      "word_bank": [
+       "If",
+       "the",
+       "is",
+       "you",
+       "must",
+       "it.",
+       "faulty,",
+       "the",
+       "item",
+       "yesterday",
+       "did",
+       "exchange",
+       "was",
+       "or",
+       "refund",
+       "shop"
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you ___ the receipt, the exchange will take two minutes.",
+      "correct_answer": "show",
+      "options": [
+       "show",
+       "will show",
+       "showed"
+      ],
+      "translation_hint": "Если показать чек, обмен займёт две минуты."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "the",
+       "check",
+       "should",
+       "period.",
+       "You",
+       "warranty",
+       "went",
+       "mustn't"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "check",
+       "the",
+       "warranty",
+       "period."
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you complain politely but firmly, most shops will solve the problem quickly.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you complain politely but firmly, most shops will solve the problem quickly.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если жаловаться вежливо, но твёрдо, большинство магазинов быстро решит проблему."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Faulty Kettle",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Customer",
+        "text": "This kettle has stopped working after two weeks.",
+        "translation": "Этот чайник перестал работать через две недели."
+       },
+       {
+        "type": "dialogue",
+        "character": "Shop assistant",
+        "text": "Do you have the receipt and the box?",
+        "translation": "У вас есть чек и коробка?"
+       },
+       {
+        "type": "choice",
+        "text": "What does the customer say?",
+        "options": [
+         {
+          "text": "Yes, both — I would like an exchange rather than a refund.",
+          "is_correct": true
+         },
+         {
+          "text": "Yes, I have them tomorrow yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The kettle is refunding the receipt.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "warranty",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A promise to repair or replace something that breaks",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A discount for the next purchase",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A free delivery to your home",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“warranty” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If the item is ___ , bring it back.",
+      "audio_text": "If the item is faulty, bring it back.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "faulty",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "fault",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "falsely",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “faulty”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should return it ___ thirty days.",
+      "correct_answer": "within",
+      "hint_prefix": "wi",
+      "explanation": "The complete sentence is “You should return it within thirty days.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to return",
+        "text": "to return"
+       },
+       {
+        "id": "V2",
+        "audio_text": "exchange",
+        "text": "exchange"
+       },
+       {
+        "id": "V3",
+        "audio_text": "warranty",
+        "text": "warranty"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to keep the receipt",
+        "text": "to keep the receipt"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to complain politely",
+        "text": "to complain politely"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_SHOPPING_CONVERSATIONS_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "The online order arrived damaged."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Take photos — if you show them the damage, they will send a replacement for free.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I photographed it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The order is damaging me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Take photos — if you show them the damage, they will send a replacement for free.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

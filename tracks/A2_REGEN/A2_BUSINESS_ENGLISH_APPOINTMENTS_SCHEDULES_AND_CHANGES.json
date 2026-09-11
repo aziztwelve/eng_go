@@ -1,0 +1,1457 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES",
+  "title": {
+   "ru": "Встречи, расписания и изменения",
+   "en": "Appointments, Schedules and Changes"
+  },
+  "description": {
+   "ru": "Развивайте деловой английский уровня A2 по теме «Встречи, расписания и изменения».",
+   "en": "Develop A2 business English for appointments, schedules and changes."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "business_english",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "business-english",
+   "appointments-schedules-and-changes"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L1",
+   "order": 1,
+   "title": {
+    "ru": "Переносим встречу",
+    "en": "Moving a Meeting"
+   },
+   "objective": {
+    "ru": "Сообщить об изменениях во встречах, используя past simple и present perfect.",
+    "en": "Report changes to appointments using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "appointment",
+        "right": "встреча / договорённость"
+       },
+       {
+        "id": "P2",
+        "left": "to reschedule",
+        "right": "перенести (на другое время)"
+       },
+       {
+        "id": "P3",
+        "left": "available",
+        "right": "свободный (о времени)"
+       },
+       {
+        "id": "P4",
+        "left": "calendar",
+        "right": "календарь"
+       },
+       {
+        "id": "P5",
+        "left": "to cancel",
+        "right": "отменить"
+       },
+       {
+        "id": "P6",
+        "left": "confirmation",
+        "right": "подтверждение"
+       },
+       {
+        "id": "P7",
+        "left": "in advance",
+        "right": "заранее"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The client has rescheduled the appointment twice this week.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "The client has reschedule it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The client reschedule it already twice.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The client has rescheduled the appointment twice this week.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Клиент перенёс встречу на четверг, и мы уже подтвердили новое время.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "The client has moved the appointment to Thursday, and we have already confirmed the new time.",
+      "word_bank": [
+       "did",
+       "confirmed",
+       "client",
+       "moved",
+       "the",
+       "and",
+       "appointment",
+       "yesterday",
+       "the",
+       "has",
+       "have",
+       "new",
+       "Thursday,",
+       "The",
+       "already",
+       "to",
+       "time.",
+       "we",
+       "move"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She ___ the Monday meeting because of the flight delay.",
+      "correct_answer": "cancelled",
+      "options": [
+       "cancelled",
+       "has cancel",
+       "cancelling"
+      ],
+      "translation_hint": "Она отменила понедельничную встречу из-за задержки рейса."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "appointment",
+       "with",
+       "the",
+       "time.",
+       "have",
+       "was",
+       "new",
+       "the",
+       "did",
+       "calendar",
+       "updated",
+       "I"
+      ],
+      "correct_words": [
+       "I",
+       "have",
+       "updated",
+       "the",
+       "calendar",
+       "with",
+       "the",
+       "new",
+       "appointment",
+       "time."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "The Tuesday appointment has been cancelled, so I have offered two new slots instead.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "The Tuesday appointment has been cancelled, so I have offered two new slots instead.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Встреча во вторник отменена, поэтому я предложил два новых времени."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Full Calendar",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Assistant",
+        "text": "Mr Weber has moved his appointment to Friday at eleven.",
+        "translation": "Господин Вебер перенёс встречу на пятницу на одиннадцать."
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "That's fine. Have you sent him the confirmation yet?",
+        "translation": "Хорошо. Ты уже отправил ему подтверждение?"
+       },
+       {
+        "type": "choice",
+        "text": "What does the assistant answer?",
+        "options": [
+         {
+          "text": "Yes, I sent it an hour ago and he has already replied.",
+          "is_correct": true
+         },
+         {
+          "text": "Yes, I have send it tomorrow morning.",
+          "is_correct": false
+         },
+         {
+          "text": "The confirmation is sending itself.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to reschedule",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To change a planned time to another time",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To finish a meeting earlier than planned",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To arrive at a meeting very early",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to reschedule” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have ___ the call to three o'clock.",
+      "audio_text": "I have moved the call to three o'clock.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "moved",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "move",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "moving",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “moved”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "We have received the ___ for Friday.",
+      "correct_answer": "confirmation",
+      "hint_prefix": "co",
+      "explanation": "The complete sentence is “We have received the confirmation for Friday.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "appointment",
+        "text": "appointment"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to reschedule",
+        "text": "to reschedule"
+       },
+       {
+        "id": "V3",
+        "audio_text": "available",
+        "text": "available"
+       },
+       {
+        "id": "V4",
+        "audio_text": "calendar",
+        "text": "calendar"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to cancel",
+        "text": "to cancel"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Has the client confirmed the new time?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes, he confirmed it this morning and has added it to his calendar.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, he confirm it yesterday now.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The time is confirming the client.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes, he confirmed it this morning and has added it to his calendar.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L2",
+   "order": 2,
+   "title": {
+    "ru": "Планируем встречи на месяц",
+    "en": "Planning Meetings for the Month"
+   },
+   "objective": {
+    "ru": "Договориться о будущих встречах и сравнить варианты времени.",
+    "en": "Arrange future meetings and compare time options."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "slot",
+        "right": "окно в расписании"
+       },
+       {
+        "id": "P2",
+        "left": "to book",
+        "right": "забронировать"
+       },
+       {
+        "id": "P3",
+        "left": "earlier",
+        "right": "раньше"
+       },
+       {
+        "id": "P4",
+        "left": "conflict",
+        "right": "конфликт (в расписании)"
+       },
+       {
+        "id": "P5",
+        "left": "agenda",
+        "right": "повестка дня"
+       },
+       {
+        "id": "P6",
+        "left": "to offer",
+        "right": "предложить"
+       },
+       {
+        "id": "P7",
+        "left": "convenient",
+        "right": "удобный"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence talks about a future arrangement?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "We are meeting the suppliers on Tuesday at ten.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "We met the suppliers on Tuesday at ten.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "We has meet them tomorrow already.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “We are meeting the suppliers on Tuesday at ten.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я собираюсь забронировать зал на два часа, потому что он больше, чем переговорка.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I am going to book the main room for two hours because it is bigger than the small one.",
+      "word_bank": [
+       "because",
+       "is",
+       "the",
+       "going",
+       "than",
+       "yesterday",
+       "did",
+       "for",
+       "the",
+       "bigger",
+       "booked",
+       "main",
+       "I",
+       "one.",
+       "to",
+       "it",
+       "book",
+       "small",
+       "hours",
+       "am",
+       "two",
+       "room"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The morning slots are ___ popular than the afternoon ones.",
+      "correct_answer": "more",
+      "options": [
+       "more",
+       "most",
+       "much"
+      ],
+      "translation_hint": "Утренние окна пользуются большей популярностью, чем дневные."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "agenda",
+       "the",
+       "day",
+       "meeting.",
+       "was",
+       "are",
+       "send",
+       "a",
+       "We",
+       "did",
+       "to",
+       "going",
+       "before",
+       "the"
+      ],
+      "correct_words": [
+       "We",
+       "are",
+       "going",
+       "to",
+       "send",
+       "the",
+       "agenda",
+       "a",
+       "day",
+       "before",
+       "the",
+       "meeting."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you send me two convenient slots, I will book the room and invite the team.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you send me two convenient slots, I will book the room and invite the team.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если пришлёте два удобных времени, я забронирую зал и приглашу команду."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Finding a Slot",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Client",
+        "text": "Could we meet next week to discuss the contract?",
+        "translation": "Можем встретиться на следующей неделе обсудить контракт?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "Of course. Tuesday at ten or Thursday at two — which is more convenient?",
+        "translation": "Конечно. Вторник в десять или четверг в два — что удобнее?"
+       },
+       {
+        "type": "choice",
+        "text": "What does the client choose?",
+        "options": [
+         {
+          "text": "Thursday is better for me because I am travelling on Tuesday.",
+          "is_correct": true
+         },
+         {
+          "text": "Thursday was better yesterday when I travel.",
+          "is_correct": false
+         },
+         {
+          "text": "The contract is meeting me on Tuesday.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "agenda",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A list of topics for a meeting",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A room where people have meetings",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A document that confirms a booking",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“agenda” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I am going to ___ the conference room.",
+      "audio_text": "I am going to book the conference room.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "book",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "booked",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "booking",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “book”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The afternoon slot is ___ convenient for the client.",
+      "correct_answer": "less",
+      "hint_prefix": "le",
+      "explanation": "The complete sentence is “The afternoon slot is less convenient for the client.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "slot",
+        "text": "slot"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to book",
+        "text": "to book"
+       },
+       {
+        "id": "V3",
+        "audio_text": "earlier",
+        "text": "earlier"
+       },
+       {
+        "id": "V4",
+        "audio_text": "conflict",
+        "text": "conflict"
+       },
+       {
+        "id": "V5",
+        "audio_text": "agenda",
+        "text": "agenda"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "When should we send the agenda?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "We are going to send it tomorrow — a day before the meeting.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "We sent it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The agenda is sending us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“We are going to send it tomorrow — a day before the meeting.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если планы меняются",
+    "en": "When Plans Change"
+   },
+   "objective": {
+    "ru": "Объяснить изменения планов, используя should и первое условное.",
+    "en": "Explain changing plans using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to inform",
+        "right": "известить"
+       },
+       {
+        "id": "P2",
+        "left": "as soon as",
+        "right": "как только"
+       },
+       {
+        "id": "P3",
+        "left": "change",
+        "right": "изменение"
+       },
+       {
+        "id": "P4",
+        "left": "to avoid confusion",
+        "right": "избежать путаницы"
+       },
+       {
+        "id": "P5",
+        "left": "polite",
+        "right": "вежливый"
+       },
+       {
+        "id": "P6",
+        "left": "to appreciate",
+        "right": "быть благодарным"
+       },
+       {
+        "id": "P7",
+        "left": "flexible",
+        "right": "гибкий"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should inform everyone as soon as plans change.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to inform everyone yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must informing everyone last week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should inform everyone as soon as plans change.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если встреча изменится, сообщите всем участникам как можно скорее.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If the appointment changes, you should inform all the participants as soon as possible.",
+      "word_bank": [
+       "all",
+       "you",
+       "inform",
+       "possible.",
+       "changes,",
+       "should",
+       "changed",
+       "appointment",
+       "as",
+       "the",
+       "yesterday",
+       "as",
+       "the",
+       "If",
+       "soon",
+       "participants",
+       "did"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you ___ the time in two places, people will miss the update.",
+      "correct_answer": "change",
+      "options": [
+       "change",
+       "will change",
+       "changed"
+      ],
+      "translation_hint": "Если поменять время только в двух местах, люди пропустят обновление."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "clients",
+       "plans.",
+       "should",
+       "when",
+       "went",
+       "flexible",
+       "be",
+       "change",
+       "their",
+       "mustn't",
+       "You"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "be",
+       "flexible",
+       "when",
+       "clients",
+       "change",
+       "their",
+       "plans."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If a client cancels, you should offer a new slot politely — they will appreciate it.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If a client cancels, you should offer a new slot politely — they will appreciate it.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если клиент отменяет встречу, стоит вежливо предложить новое время — это оценят."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Late Change",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "The client has just cancelled tomorrow's call.",
+        "translation": "Клиент только что отменил завтрашний звонок."
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "Have you told the whole team yet?",
+        "translation": "Ты уже сказал всей команде?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Tom say?",
+        "options": [
+         {
+          "text": "No, but I should inform them now to avoid confusion.",
+          "is_correct": true
+         },
+         {
+          "text": "No, I must informing them yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The cancellation is telling the team.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "flexible",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Able to change plans easily when it is necessary",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Doing everything exactly as planned every time",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Refusing all changes to a schedule",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“flexible” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If the client ___, we will offer a new slot.",
+      "audio_text": "If the client cancels, we will offer a new slot.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "cancels",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will cancel",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "cancelled",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “cancels”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should inform the team as ___ as possible.",
+      "correct_answer": "soon",
+      "hint_prefix": "so",
+      "explanation": "The complete sentence is “You should inform the team as soon as possible.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to inform",
+        "text": "to inform"
+       },
+       {
+        "id": "V2",
+        "audio_text": "as soon as",
+        "text": "as soon as"
+       },
+       {
+        "id": "V3",
+        "audio_text": "change",
+        "text": "change"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to avoid confusion",
+        "text": "to avoid confusion"
+       },
+       {
+        "id": "V5",
+        "audio_text": "polite",
+        "text": "polite"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_APPOINTMENTS_SCHEDULES_AND_CHANGES_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "The supplier wants to move Friday's call."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "That's fine — if he sends two new slots, I will inform everyone today.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "He moved it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "Friday is moving the supplier.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“That's fine — if he sends two new slots, I will inform everyone today.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1440 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS",
+  "title": {
+   "ru": "Цены, показатели и простые бюджеты",
+   "en": "Prices, Figures and Simple Budgets"
+  },
+  "description": {
+   "ru": "Развивайте деловой английский уровня A2 по теме «Цены, показатели и простые бюджеты».",
+   "en": "Develop A2 business English for prices, figures and simple budgets."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "business_english",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "business-english",
+   "prices-figures-and-simple-budgets"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L1",
+   "order": 1,
+   "title": {
+    "ru": "Цифры за квартал",
+    "en": "The Quarterly Figures"
+   },
+   "objective": {
+    "ru": "Сообщить финансовые результаты, используя past simple и present perfect.",
+    "en": "Report financial results using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "revenue",
+        "right": "выручка"
+       },
+       {
+        "id": "P2",
+        "left": "costs",
+        "right": "расходы"
+       },
+       {
+        "id": "P3",
+        "left": "to increase by",
+        "right": "вырасти на"
+       },
+       {
+        "id": "P4",
+        "left": "to decrease",
+        "right": "снизиться"
+       },
+       {
+        "id": "P5",
+        "left": "profit",
+        "right": "прибыль"
+       },
+       {
+        "id": "P6",
+        "left": "per cent",
+        "right": "процент"
+       },
+       {
+        "id": "P7",
+        "left": "compared to",
+        "right": "по сравнению с"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "Revenue has increased by eight per cent this year.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Revenue has increased by eight per cent last year.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "Revenue increase eight per cent already.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “Revenue has increased by eight per cent this year.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Расходы выросли на пять процентов по сравнению с прошлым кварталом.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "Costs have increased by five per cent compared to the last quarter.",
+      "word_bank": [
+       "yesterday",
+       "quarter.",
+       "increased",
+       "increase",
+       "per",
+       "by",
+       "cent",
+       "Costs",
+       "the",
+       "last",
+       "five",
+       "compared",
+       "to",
+       "have",
+       "did"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Profit ___ by two thousand euros last month.",
+      "correct_answer": "fell",
+      "options": [
+       "fell",
+       "has fall",
+       "falling"
+      ],
+      "translation_hint": "Прибыль упала на две тысячи евро в прошлом месяце."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "report.",
+       "team",
+       "annual",
+       "has",
+       "the",
+       "was",
+       "finance",
+       "just",
+       "published",
+       "did",
+       "The"
+      ],
+      "correct_words": [
+       "The",
+       "finance",
+       "team",
+       "has",
+       "just",
+       "published",
+       "the",
+       "annual",
+       "report."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "Costs have decreased slightly, but revenue has grown faster, so the profit is higher than last year.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "Costs have decreased slightly, but revenue has grown faster, so the profit is higher than last year.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Расходы немного снизились, но выручка выросла быстрее, поэтому прибыль выше, чем в прошлом году."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Budget Review",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Director",
+        "text": "How are the numbers compared to last year?",
+        "translation": "Каковы цифры по сравнению с прошлым годом?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "Revenue has grown by twelve per cent, and costs have fallen by three.",
+        "translation": "Выручка выросла на двенадцать процентов, а расходы упали на три."
+       },
+       {
+        "type": "choice",
+        "text": "What does the director ask?",
+        "options": [
+         {
+          "text": "And what has happened to the marketing budget?",
+          "is_correct": true
+         },
+         {
+          "text": "And what did happened to it tomorrow?",
+          "is_correct": false
+         },
+         {
+          "text": "Is the budget growing the numbers itself?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "revenue",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The money a company receives from its business",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "The money a company pays to employees",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "The number of clients per year",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“revenue” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "Costs have ___ by three per cent.",
+      "audio_text": "Costs have decreased by three per cent.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "decreased",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "decrease",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "decreasing",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “decreased”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Revenue has grown ___ ten per cent.",
+      "correct_answer": "by",
+      "hint_prefix": "by",
+      "explanation": "The complete sentence is “Revenue has grown by ten per cent.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "revenue",
+        "text": "revenue"
+       },
+       {
+        "id": "V2",
+        "audio_text": "costs",
+        "text": "costs"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to increase by",
+        "text": "to increase by"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to decrease",
+        "text": "to decrease"
+       },
+       {
+        "id": "V5",
+        "audio_text": "profit",
+        "text": "profit"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Did you see the half-year figures?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes — profit has increased, and the team has already updated the forecast.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, I see them tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The figures are seeing us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes — profit has increased, and the team has already updated the forecast.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L2",
+   "order": 2,
+   "title": {
+    "ru": "Бюджет на следующий год",
+    "en": "The Budget for Next Year"
+   },
+   "objective": {
+    "ru": "Спланировать бюджет и сравнить статьи расходов.",
+    "en": "Plan a budget and compare spending items."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "budget",
+        "right": "бюджет"
+       },
+       {
+        "id": "P2",
+        "left": "to allocate",
+        "right": "распределить (средства)"
+       },
+       {
+        "id": "P3",
+        "left": "to save",
+        "right": "сэкономить"
+       },
+       {
+        "id": "P4",
+        "left": "more important",
+        "right": "важнее"
+       },
+       {
+        "id": "P5",
+        "left": "to cut",
+        "right": "сократить (расходы)"
+       },
+       {
+        "id": "P6",
+        "left": "estimate",
+        "right": "оценка"
+       },
+       {
+        "id": "P7",
+        "left": "to spend",
+        "right": "тратить"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares budget items correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "Training is more important than new furniture this year.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Training is importanter than furniture.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "Training is most important than furniture.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “Training is more important than new furniture this year.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы собираемся выделить больше средств на обучение и сократить расходы на поездки.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We are going to allocate more money to training and cut the travel budget.",
+      "word_bank": [
+       "more",
+       "money",
+       "We",
+       "cut",
+       "and",
+       "yesterday",
+       "are",
+       "did",
+       "travel",
+       "allocate",
+       "going",
+       "to",
+       "allocated",
+       "to",
+       "the",
+       "training",
+       "budget."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If we buy in bulk, we ___ up to twenty per cent.",
+      "correct_answer": "will save",
+      "options": [
+       "will save",
+       "saves",
+       "saving"
+      ],
+      "translation_hint": "Если покупать оптом, сэкономим до двадцати процентов."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "grow",
+       "going",
+       "budget",
+       "marketing",
+       "was",
+       "is",
+       "year.",
+       "The",
+       "to",
+       "next",
+       "did"
+      ],
+      "correct_words": [
+       "The",
+       "marketing",
+       "budget",
+       "is",
+       "going",
+       "to",
+       "grow",
+       "next",
+       "year."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If we cut the software budget, the team will work more slowly, so we should cut travel instead.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If we cut the software budget, the team will work more slowly, so we should cut travel instead.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если сократить бюджет на софт, команда будет работать медленнее, поэтому лучше сократить поездки."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Budget Discussion",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Director",
+        "text": "We can increase only one budget line. Which one?",
+        "translation": "Мы можем увеличить только одну статью бюджета. Какую?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "Salaries are fixed, so it is between marketing and equipment.",
+        "translation": "Зарплаты фиксированы, значит выбор между маркетингом и техникой."
+       },
+       {
+        "type": "choice",
+        "text": "What does the director decide?",
+        "options": [
+         {
+          "text": "We are going to spend more on marketing — it brings new clients.",
+          "is_correct": true
+         },
+         {
+          "text": "We spent more on it yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The budget is deciding between itself.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to allocate",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To officially give money for a particular purpose",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To borrow money from a bank",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To return unused money to the client",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to allocate” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We are going to ___ more to training.",
+      "audio_text": "We are going to allocate more to training.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "allocate",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "allocated",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "allocating",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “allocate”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Travel costs are ___ important this year.",
+      "correct_answer": "less",
+      "hint_prefix": "le",
+      "explanation": "The complete sentence is “Travel costs are less important this year.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "budget",
+        "text": "budget"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to allocate",
+        "text": "to allocate"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to save",
+        "text": "to save"
+       },
+       {
+        "id": "V4",
+        "audio_text": "more important",
+        "text": "more important"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to cut",
+        "text": "to cut"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "How much can we spend on the event?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "About two thousand — if we spend more, the training budget will be too small.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "We spent it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The event is spending us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“About two thousand — if we spend more, the training budget will be too small.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если превысим бюджет",
+    "en": "If We Go Over Budget"
+   },
+   "objective": {
+    "ru": "Обсудить перерасход бюджета, используя should и первое условное.",
+    "en": "Discuss going over budget using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "overspend",
+        "right": "перерасход"
+       },
+       {
+        "id": "P2",
+        "left": "to approve",
+        "right": "одобрить"
+       },
+       {
+        "id": "P3",
+        "left": "in advance",
+        "right": "заранее"
+       },
+       {
+        "id": "P4",
+        "left": "necessary",
+        "right": "необходимый"
+       },
+       {
+        "id": "P5",
+        "left": "to track",
+        "right": "отслеживать"
+       },
+       {
+        "id": "P6",
+        "left": "warning",
+        "right": "предупреждение"
+       },
+       {
+        "id": "P7",
+        "left": "monthly",
+        "right": "ежемесячно"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should get approval before any extra spending.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to get approval yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must getting approval last week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should get approval before any extra spending.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если мы будем отслеживать расходы ежемесячно, перерасход не станет сюрпризом.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If we track the costs monthly, overspending will not be a surprise.",
+      "word_bank": [
+       "surprise.",
+       "not",
+       "be",
+       "a",
+       "monthly,",
+       "we",
+       "will",
+       "track",
+       "overspending",
+       "yesterday",
+       "costs",
+       "If",
+       "the",
+       "tracked",
+       "did"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If the project ___ over budget, the director will hear about it immediately.",
+      "correct_answer": "goes",
+      "options": [
+       "goes",
+       "will go",
+       "went"
+      ],
+      "translation_hint": "Если проект выйдет за бюджет, директор узнает об этом немедленно."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "about",
+       "manager",
+       "costs",
+       "the",
+       "advance.",
+       "mustn't",
+       "in",
+       "extra",
+       "should",
+       "went",
+       "warn",
+       "You"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "warn",
+       "the",
+       "manager",
+       "about",
+       "extra",
+       "costs",
+       "in",
+       "advance."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If we get a warning at seventy per cent of the budget, we will still have time to react.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If we get a warning at seventy per cent of the budget, we will still have time to react.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если предупреждение срабатывает на семидесяти процентах бюджета, у нас ещё будет время отреагировать."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Surprise Overspend",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "The event costs are already above the plan, and it is only October.",
+        "translation": "Расходы на мероприятие уже выше плана, а ведь только октябрь."
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "Why did nobody warn us earlier?",
+        "translation": "Почему никто не предупредил раньше?"
+       },
+       {
+        "type": "choice",
+        "text": "What is the lesson?",
+        "options": [
+         {
+          "text": "We should track the costs monthly and give early warnings.",
+          "is_correct": true
+         },
+         {
+          "text": "We must tracking them yesterday already.",
+          "is_correct": false
+         },
+         {
+          "text": "The costs are warning the plan.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "overspend",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To spend more money than was planned",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To save part of the budget for later",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To ask for a bigger budget politely",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“overspend” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If you ___ extra costs early, we can react.",
+      "audio_text": "If you report extra costs early, we can react.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "report",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will report",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "reported",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “report”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "All spending above five hundred euros needs ___.",
+      "correct_answer": "approval",
+      "hint_prefix": "ap",
+      "explanation": "The complete sentence is “All spending above five hundred euros needs approval.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "overspend",
+        "text": "overspend"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to approve",
+        "text": "to approve"
+       },
+       {
+        "id": "V3",
+        "audio_text": "in advance",
+        "text": "in advance"
+       },
+       {
+        "id": "V4",
+        "audio_text": "necessary",
+        "text": "necessary"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to track",
+        "text": "to track"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_PRICES_FIGURES_AND_SIMPLE_BUDGETS_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "The travel costs look high this month."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "We should check them today — if we wait for the report, it will be too late to fix.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "We checked it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The costs are travelling to us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“We should check them today — if we wait for the report, it will be too late to fix.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

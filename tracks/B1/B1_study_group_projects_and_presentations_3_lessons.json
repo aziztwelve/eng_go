@@ -1,0 +1,1328 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS",
+    "title": {
+      "ru": "Групповые проекты и презентации",
+      "en": "Group Projects and Presentations"
+    },
+    "description": {
+      "ru": "Развивайте учебные навыки уровня B1 по теме «Групповые проекты и презентации».",
+      "en": "Develop B1 study skills for group projects and presentations."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "B1",
+    "goal": "study",
+    "track_type": "thematic",
+    "tags": [
+      "B1",
+      "study",
+      "group-projects-and-presentations"
+    ]
+  },
+  "lessons": [
+    {
+      "code": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L1",
+      "order": 1,
+      "title": {
+        "ru": "Учебная практика 1",
+        "en": "Planning as a Team"
+      },
+      "objective": {
+        "ru": "Самостоятельно выполнять знакомые учебные задачи уровня B1, связывая идеи, используя доказательства и оценивая свой прогресс.",
+        "en": "Complete familiar B1 study tasks independently by connecting ideas, using evidence, and evaluating progress."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L1_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "A2STGP_2",
+                "left": "project",
+                "right": "проект"
+              },
+              {
+                "id": "A2STGP_3",
+                "left": "topic",
+                "right": "тема"
+              },
+              {
+                "id": "A2STGP_4",
+                "left": "team",
+                "right": "команда"
+              },
+              {
+                "id": "A2STGP_5",
+                "left": "leader",
+                "right": "руководитель"
+              },
+              {
+                "id": "A2STGP_6",
+                "left": "partner",
+                "right": "партнёр"
+              },
+              {
+                "id": "A2STGP_7",
+                "left": "choose",
+                "right": "выбирать"
+              },
+              {
+                "id": "A2STGP_8",
+                "left": "What is our topic?",
+                "right": "Какая у нас тема?"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L1_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Which word means a group working together?",
+            "options": [
+              {
+                "id": "A2STGP_10",
+                "text": "Team",
+                "is_correct": true
+              },
+              {
+                "id": "A2STGP_11",
+                "text": "Topic",
+                "is_correct": false
+              },
+              {
+                "id": "A2STGP_12",
+                "text": "Page",
+                "is_correct": false
+              }
+            ],
+            "explanation": "A team is a group of people working together."
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L1_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Наша тема — животные.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Our topic is animals.",
+            "word_bank": [
+              "animals.",
+              "is",
+              "topic",
+              "Our"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L1_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Maya is our team ___.",
+            "correct_answer": "leader",
+            "options": [
+              "leader",
+              "breakfast",
+              "screen"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L1_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "a",
+              "choose",
+              "topic.",
+              "us",
+              "Let"
+            ],
+            "correct_words": [
+              "Let",
+              "us",
+              "choose",
+              "a",
+              "topic."
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L1_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Our project topic is our school.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L1_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I am the team leader, and Ben is my partner. I can explain the main point in a short sentence. I will organise the main points, support them with evidence, and review my work before I submit it.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Я руководитель команды, а Бен — мой партнёр. Я могу объяснить основную мысль коротким предложением. Я организую основные идеи, подкреплю их доказательствами и проверю работу перед сдачей."
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L1_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Starting a Project",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Teacher",
+                "text": "Please choose a topic for your project.",
+                "translation": "Пожалуйста, выберите тему для проекта."
+              },
+              {
+                "type": "dialogue",
+                "character": "Sara",
+                "text": "Let us choose animals.",
+                "translation": "Давайте выберем животных."
+              },
+              {
+                "type": "choice",
+                "text": "What can her partner say?",
+                "options": [
+                  {
+                    "text": "Good idea.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Open your lunch.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L1_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "leader",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STGP_20",
+                "text": "The person who guides a group",
+                "is_correct": true
+              },
+              {
+                "id": "A2STGP_21",
+                "text": "A subject a project is about",
+                "is_correct": false
+              },
+              {
+                "id": "A2STGP_22",
+                "text": "A person who works with you",
+                "is_correct": false
+              }
+            ],
+            "explanation": "A leader guides a group."
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L1_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "Our ___ is animals.",
+            "audio_text": "Our topic is animals.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STGP_24",
+                "audio_text": "topic",
+                "is_correct": true
+              },
+              {
+                "id": "A2STGP_25",
+                "audio_text": "pencil",
+                "is_correct": false
+              },
+              {
+                "id": "A2STGP_26",
+                "audio_text": "dinner",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is “topic.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L1_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "We are a ___.",
+            "correct_answer": "team",
+            "hint_prefix": "te",
+            "explanation": "The complete sentence is “We are a team.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L1_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "A2STGP_29",
+                "audio_text": "project",
+                "text": "project"
+              },
+              {
+                "id": "A2STGP_30",
+                "audio_text": "team leader",
+                "text": "team leader"
+              },
+              {
+                "id": "A2STGP_31",
+                "audio_text": "choose a topic",
+                "text": "choose a topic"
+              }
+            ],
+            "explanation": "Match each study phrase you hear with the same written English phrase."
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L1_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Omar",
+                "text": "What is our project topic?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A2STGP_33",
+                "text": "Our topic is healthy food.",
+                "is_correct": true
+              },
+              {
+                "id": "A2STGP_34",
+                "text": "The library is upstairs.",
+                "is_correct": false
+              },
+              {
+                "id": "A2STGP_35",
+                "text": "English starts at nine.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the response that develops the academic task with a clear reason, example, or next step."
+          }
+        }
+      ]
+    },
+    {
+      "code": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L2",
+      "order": 2,
+      "title": {
+        "ru": "Учебная практика 2",
+        "en": "Sharing Responsibilities"
+      },
+      "objective": {
+        "ru": "Самостоятельно выполнять знакомые учебные задачи уровня B1, связывая идеи, используя доказательства и оценивая свой прогресс.",
+        "en": "Complete familiar B1 study tasks independently by connecting ideas, using evidence, and evaluating progress."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L2_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "A2STGP_37",
+                "left": "information",
+                "right": "информация"
+              },
+              {
+                "id": "A2STGP_38",
+                "left": "find",
+                "right": "находить"
+              },
+              {
+                "id": "A2STGP_39",
+                "left": "read",
+                "right": "читать"
+              },
+              {
+                "id": "A2STGP_40",
+                "left": "write notes",
+                "right": "делать записи"
+              },
+              {
+                "id": "A2STGP_41",
+                "left": "picture",
+                "right": "картинка"
+              },
+              {
+                "id": "A2STGP_42",
+                "left": "poster",
+                "right": "плакат"
+              },
+              {
+                "id": "A2STGP_43",
+                "left": "use a website",
+                "right": "использовать веб-сайт"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L2_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "What can you use to display project words and pictures?",
+            "options": [
+              {
+                "id": "A2STGP_45",
+                "text": "A poster",
+                "is_correct": true
+              },
+              {
+                "id": "A2STGP_46",
+                "text": "An eraser",
+                "is_correct": false
+              },
+              {
+                "id": "A2STGP_47",
+                "text": "A timetable",
+                "is_correct": false
+              }
+            ],
+            "explanation": "A poster can show project words and pictures."
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L2_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Найдите информацию на веб-сайте.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Find information on the website.",
+            "word_bank": [
+              "website.",
+              "the",
+              "on",
+              "information",
+              "Find"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L2_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "We need three ___.",
+            "correct_answer": "pictures",
+            "options": [
+              "pictures",
+              "teachers",
+              "breaks"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L2_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "notes",
+              "book.",
+              "the",
+              "from",
+              "Write"
+            ],
+            "correct_words": [
+              "Write",
+              "notes",
+              "from",
+              "the",
+              "book."
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L2_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Find two pictures for the project.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L2_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I read the website and write short notes. I can explain the main point in a short sentence. I will organise the main points, support them with evidence, and review my work before I submit it.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Я читаю веб-сайт и делаю короткие записи. Я могу объяснить основную мысль коротким предложением. Я организую основные идеи, подкреплю их доказательствами и проверю работу перед сдачей."
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L2_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Making a Poster",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Nina",
+                "text": "I have two pictures for our poster.",
+                "translation": "У меня есть две картинки для нашего плаката."
+              },
+              {
+                "type": "dialogue",
+                "character": "Max",
+                "text": "Great. I can write the words.",
+                "translation": "Отлично. Я могу написать слова."
+              },
+              {
+                "type": "choice",
+                "text": "What can Nina say?",
+                "options": [
+                  {
+                    "text": "Let us work together.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Please close the cafe.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L2_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "information",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STGP_55",
+                "text": "Facts that help you learn about something",
+                "is_correct": true
+              },
+              {
+                "id": "A2STGP_56",
+                "text": "A large sheet showing words and pictures",
+                "is_correct": false
+              },
+              {
+                "id": "A2STGP_57",
+                "text": "A person working in a team",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Information means facts that help you learn about something."
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L2_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "We need a ___.",
+            "audio_text": "We need a poster.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STGP_59",
+                "audio_text": "poster",
+                "is_correct": true
+              },
+              {
+                "id": "A2STGP_60",
+                "audio_text": "coffee",
+                "is_correct": false
+              },
+              {
+                "id": "A2STGP_61",
+                "audio_text": "classmate",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing project item is “poster.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L2_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Please ___ this website.",
+            "correct_answer": "use",
+            "hint_prefix": "us",
+            "explanation": "The complete instruction is “Please use this website.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L2_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "A2STGP_64",
+                "audio_text": "find information",
+                "text": "find information"
+              },
+              {
+                "id": "A2STGP_65",
+                "audio_text": "write notes",
+                "text": "write notes"
+              },
+              {
+                "id": "A2STGP_66",
+                "audio_text": "make a poster",
+                "text": "make a poster"
+              }
+            ],
+            "explanation": "Match each study phrase you hear with the same written English phrase."
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L2_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Aida",
+                "text": "What do we need for the poster?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A2STGP_68",
+                "text": "We need pictures and short notes.",
+                "is_correct": true
+              },
+              {
+                "id": "A2STGP_69",
+                "text": "We need lunch at one.",
+                "is_correct": false
+              },
+              {
+                "id": "A2STGP_70",
+                "text": "We need a quiet street.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the response that develops the academic task with a clear reason, example, or next step."
+          }
+        }
+      ]
+    },
+    {
+      "code": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L3",
+      "order": 3,
+      "title": {
+        "ru": "Учебная практика 3",
+        "en": "Delivering a Presentation"
+      },
+      "objective": {
+        "ru": "Самостоятельно выполнять знакомые учебные задачи уровня B1, связывая идеи, используя доказательства и оценивая свой прогресс.",
+        "en": "Complete familiar B1 study tasks independently by connecting ideas, using evidence, and evaluating progress."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L3_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "A2STGP_72",
+                "left": "present",
+                "right": "представлять"
+              },
+              {
+                "id": "A2STGP_73",
+                "left": "presentation",
+                "right": "презентация"
+              },
+              {
+                "id": "A2STGP_74",
+                "left": "first",
+                "right": "сначала"
+              },
+              {
+                "id": "A2STGP_75",
+                "left": "next",
+                "right": "затем"
+              },
+              {
+                "id": "A2STGP_76",
+                "left": "finally",
+                "right": "наконец"
+              },
+              {
+                "id": "A2STGP_77",
+                "left": "This is our project",
+                "right": "Это наш проект"
+              },
+              {
+                "id": "A2STGP_78",
+                "left": "Thank you for listening",
+                "right": "Спасибо за внимание"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L3_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Which phrase can end a presentation politely?",
+            "options": [
+              {
+                "id": "A2STGP_80",
+                "text": "Thank you for listening.",
+                "is_correct": true
+              },
+              {
+                "id": "A2STGP_81",
+                "text": "Open your workbook.",
+                "is_correct": false
+              },
+              {
+                "id": "A2STGP_82",
+                "text": "Can I borrow a ruler?",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Thank you for listening” is a polite ending."
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L3_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Это наш школьный проект.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "This is our school project.",
+            "word_bank": [
+              "project.",
+              "school",
+              "our",
+              "is",
+              "This"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L3_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "___, I will show our poster.",
+            "correct_answer": "First",
+            "options": [
+              "First",
+              "Lunch",
+              "Teacher"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L3_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "for",
+              "Thank",
+              "listening.",
+              "you"
+            ],
+            "correct_words": [
+              "Thank",
+              "you",
+              "for",
+              "listening."
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L3_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Hello. This is our project about animals.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L3_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "First, I will show our poster. Next, Ben will speak. I can explain the main point in a short sentence. I will organise the main points, support them with evidence, and review my work before I submit it.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Сначала я покажу наш плакат. Затем Бен будет говорить. Я могу объяснить основную мысль коротким предложением. Я организую основные идеи, подкреплю их доказательствами и проверю работу перед сдачей."
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L3_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Project Day",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Mila",
+                "text": "Hello. This is our project about food.",
+                "translation": "Здравствуйте. Это наш проект о еде."
+              },
+              {
+                "type": "dialogue",
+                "character": "Ben",
+                "text": "First, we will show our poster.",
+                "translation": "Сначала мы покажем наш плакат."
+              },
+              {
+                "type": "choice",
+                "text": "How can they finish?",
+                "options": [
+                  {
+                    "text": "Thank you for listening.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Where is the school nurse?",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L3_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "present",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STGP_90",
+                "text": "To show and explain something to other people",
+                "is_correct": true
+              },
+              {
+                "id": "A2STGP_91",
+                "text": "To search for facts online",
+                "is_correct": false
+              },
+              {
+                "id": "A2STGP_92",
+                "text": "To choose a topic",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Present means to show and explain something to other people."
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L3_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "This is our school ___.",
+            "audio_text": "This is our school project.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STGP_94",
+                "audio_text": "project",
+                "is_correct": true
+              },
+              {
+                "id": "A2STGP_95",
+                "audio_text": "juice",
+                "is_correct": false
+              },
+              {
+                "id": "A2STGP_96",
+                "audio_text": "window",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is “project.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L3_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Thank you for ___.",
+            "correct_answer": "listening",
+            "hint_prefix": "li",
+            "explanation": "The complete phrase is “Thank you for listening.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L3_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "A2STGP_99",
+                "audio_text": "This is our project",
+                "text": "This is our project"
+              },
+              {
+                "id": "A2STGP_100",
+                "audio_text": "first",
+                "text": "first"
+              },
+              {
+                "id": "A2STGP_101",
+                "audio_text": "thank you for listening",
+                "text": "thank you for listening"
+              }
+            ],
+            "explanation": "Match each study phrase you hear with the same written English phrase."
+          }
+        },
+        {
+          "id": "B1_STUDY_GROUP_PROJECTS_AND_PRESENTATIONS_L3_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Teacher",
+                "text": "Are you ready to present your project?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A2STGP_103",
+                "text": "Yes. We are ready.",
+                "is_correct": true
+              },
+              {
+                "id": "A2STGP_104",
+                "text": "Yes. The bank is near.",
+                "is_correct": false
+              },
+              {
+                "id": "A2STGP_105",
+                "text": "Yes. I have breakfast.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the response that develops the academic task with a clear reason, example, or next step."
+          }
+        }
+      ]
+    }
+  ]
+}

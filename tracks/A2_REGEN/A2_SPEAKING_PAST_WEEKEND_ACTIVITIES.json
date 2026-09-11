@@ -1,0 +1,1442 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES",
+  "title": {
+   "ru": "Прошедшие выходные",
+   "en": "Past Weekend Activities"
+  },
+  "description": {
+   "ru": "Развивайте разговорные навыки уровня A2 по теме «Прошедшие выходные».",
+   "en": "Develop A2 speaking skills for past weekend activities."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "speaking",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "speaking",
+   "past-weekend-activities"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L1",
+   "order": 1,
+   "title": {
+    "ru": "Как прошли выходные",
+    "en": "How the Weekend Went"
+   },
+   "objective": {
+    "ru": "Рассказать о прошедших выходных, используя past simple и present perfect.",
+    "en": "Talk about last weekend using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to hang out with",
+        "right": "проводить время с"
+       },
+       {
+        "id": "P2",
+        "left": "to sleep in",
+        "right": "спать допоздна"
+       },
+       {
+        "id": "P3",
+        "left": "to go hiking",
+        "right": "ходить в поход"
+       },
+       {
+        "id": "P4",
+        "left": "to bake",
+        "right": "печь"
+       },
+       {
+        "id": "P5",
+        "left": "all of a sudden",
+        "right": "вдруг, неожиданно"
+       },
+       {
+        "id": "P6",
+        "left": "to take photos",
+        "right": "фотографировать"
+       },
+       {
+        "id": "P7",
+        "left": "whole day",
+        "right": "целый день"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "I have just uploaded the photos from the trip.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "I have uploaded them last weekend.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "I upload the photos already just.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “I have just uploaded the photos from the trip.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы спали допоздна, а потом внезапно решили пойти в поход.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We slept in, and then all of a sudden we decided to go hiking.",
+      "word_bank": [
+       "we",
+       "sleep",
+       "tomorrow",
+       "then",
+       "decided",
+       "We",
+       "a",
+       "of",
+       "go",
+       "to",
+       "and",
+       "did",
+       "slept",
+       "in,",
+       "hiking.",
+       "all",
+       "sudden"
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "On Sunday morning she ___ bread for the whole family.",
+      "correct_answer": "baked",
+      "options": [
+       "baked",
+       "has bake",
+       "baking"
+      ],
+      "translation_hint": "В воскресенье утром она испекла хлеб для всей семьи."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "day",
+       "at",
+       "a",
+       "before.",
+       "have",
+       "never",
+       "did",
+       "spent",
+       "lake",
+       "whole",
+       "They",
+       "was",
+       "the"
+      ],
+      "correct_words": [
+       "They",
+       "have",
+       "never",
+       "spent",
+       "a",
+       "whole",
+       "day",
+       "at",
+       "the",
+       "lake",
+       "before."
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "We hung out with friends on Saturday, and on Sunday I have finally cleaned the whole flat.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "We hung out with friends on Saturday, and on Sunday I have finally cleaned the whole flat.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "В субботу мы тусовались с друзьями, а в воскресенье я наконец убрал всю квартиру."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Monday Chatter",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "How was your weekend? Did you do anything special?",
+        "translation": "Как выходные? Делали что-то особенное?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "We went hiking in the hills. Have you seen my photos?",
+        "translation": "Мы ходили в поход в холмы. Ты видела мои фото?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna answer?",
+        "options": [
+         {
+          "text": "Not yet — upload them to the shared album!",
+          "is_correct": true
+         },
+         {
+          "text": "Yes, I see them tomorrow yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The hills are hiking your photos.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to sleep in",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To stay in bed later than usual in the morning",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To go to bed earlier than usual",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To work at the weekend instead of resting",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to sleep in” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have ___ the photos to the cloud.",
+      "audio_text": "I have uploaded the photos to the cloud.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "uploaded",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "upload",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "uploading",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “uploaded”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "We went ___ in the mountains.",
+      "correct_answer": "hiking",
+      "hint_prefix": "hi",
+      "explanation": "The complete sentence is “We went hiking in the mountains.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to hang out with",
+        "text": "to hang out with"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to sleep in",
+        "text": "to sleep in"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to go hiking",
+        "text": "to go hiking"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to bake",
+        "text": "to bake"
+       },
+       {
+        "id": "V5",
+        "audio_text": "all of a sudden",
+        "text": "all of a sudden"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "What did you do on Saturday night?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "We hung out at Marina's place — I have never laughed so much this year.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I hanged out yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "Saturday night is doing me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“We hung out at Marina's place — I have never laughed so much this year.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L2",
+   "order": 2,
+   "title": {
+    "ru": "Следующие выходные",
+    "en": "Next Weekend"
+   },
+   "objective": {
+    "ru": "Спланировать выходные и сравнить варианты отдыха.",
+    "en": "Plan the weekend and compare leisure options."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to look forward to",
+        "right": "предвкушать"
+       },
+       {
+        "id": "P2",
+        "left": "more peaceful",
+        "right": "спокойнее (более)"
+       },
+       {
+        "id": "P3",
+        "left": "to visit relatives",
+        "right": "навестить родственников"
+       },
+       {
+        "id": "P4",
+        "left": "picnic",
+        "right": "пикник"
+       },
+       {
+        "id": "P5",
+        "left": "to stay in",
+        "right": "остаться дома"
+       },
+       {
+        "id": "P6",
+        "left": "weather forecast",
+        "right": "прогноз погоды"
+       },
+       {
+        "id": "P7",
+        "left": "to book tickets",
+        "right": "купить билеты заранее"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two weekend plans correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "A picnic in the park is more peaceful than a shopping mall.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "A picnic is peacefuller than a mall.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "A picnic is most peaceful than a mall.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “A picnic in the park is more peaceful than a shopping mall.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "В эти выходные мы собираемся устроить пикник, если прогноз не подведёт.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We are going to have a picnic this weekend if the forecast is right.",
+      "word_bank": [
+       "this",
+       "picnic",
+       "had",
+       "weekend",
+       "We",
+       "a",
+       "if",
+       "is",
+       "have",
+       "are",
+       "yesterday",
+       "forecast",
+       "going",
+       "did",
+       "right.",
+       "the",
+       "to"
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Staying in with a book is ___ than a noisy party for me.",
+      "correct_answer": "nicer",
+      "options": [
+       "nicer",
+       "nicest",
+       "more nice"
+      ],
+      "translation_hint": "Посидеть дома с книгой для меня приятнее шумной вечеринки."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "in-laws",
+       "are",
+       "Sunday.",
+       "going",
+       "my",
+       "visit",
+       "We",
+       "was",
+       "did",
+       "to",
+       "on"
+      ],
+      "correct_words": [
+       "We",
+       "are",
+       "going",
+       "to",
+       "visit",
+       "my",
+       "in-laws",
+       "on",
+       "Sunday."
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If the weather holds, we are going to cycle to the lake and stay until sunset.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If the weather holds, we are going to cycle to the lake and stay until sunset.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если погода сохранится, мы поедем на велосипедах к озеру и останемся до заката."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Weekend Choices",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "So, what are we doing this weekend?",
+        "translation": "Итак, что делаем в эти выходные?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "We can visit your parents or stay in and finish the series.",
+        "translation": "Можно навестить твоих родителей или остаться и досмотреть сериал."
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna say?",
+        "options": [
+         {
+          "text": "Let's visit them — we have not seen them since Easter.",
+          "is_correct": true
+         },
+         {
+          "text": "We saw them tomorrow yesterday already.",
+          "is_correct": false
+         },
+         {
+          "text": "The weekend is visiting our parents.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "picnic",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "An outdoor meal with food you bring yourself",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A dinner in a fancy restaurant",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A quick lunch at the office desk",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“picnic” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We are going to ___ a picnic by the river.",
+      "audio_text": "We are going to have a picnic by the river.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "have",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "had",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "having",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “have”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "A quiet weekend is ___ stressful.",
+      "correct_answer": "less",
+      "hint_prefix": "le",
+      "explanation": "The complete sentence is “A quiet weekend is less stressful.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to look forward to",
+        "text": "to look forward to"
+       },
+       {
+        "id": "V2",
+        "audio_text": "more peaceful",
+        "text": "more peaceful"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to visit relatives",
+        "text": "to visit relatives"
+       },
+       {
+        "id": "V4",
+        "audio_text": "picnic",
+        "text": "picnic"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to stay in",
+        "text": "to stay in"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Any plans for Saturday?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "We are going to the open-air cinema — if it rains, we will switch to the indoor one.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I went there yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "Saturday is planning us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“We are going to the open-air cinema — if it rains, we will switch to the indoor one.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если выходные испортились",
+    "en": "If the Weekend Is Spoiled"
+   },
+   "objective": {
+    "ru": "Обсудить планы на выходные, используя should и первое условное.",
+    "en": "Discuss weekend contingencies using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to cancel",
+        "right": "отменить"
+       },
+       {
+        "id": "P2",
+        "left": "backup plan",
+        "right": "запасной план"
+       },
+       {
+        "id": "P3",
+        "left": "to complain",
+        "right": "жаловаться"
+       },
+       {
+        "id": "P4",
+        "left": "to make the most of",
+        "right": "извлечь максимум из"
+       },
+       {
+        "id": "P5",
+        "left": "rainy day",
+        "right": "дождливый день"
+       },
+       {
+        "id": "P6",
+        "left": "board game",
+        "right": "настольная игра"
+       },
+       {
+        "id": "P7",
+        "left": "cosy",
+        "right": "уютный"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should have a backup plan for outdoor events.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to have it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must having plans last weekend.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should have a backup plan for outdoor events.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если пикник отменится, мы устроим уютный вечер с настольными играми.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If the picnic is cancelled, we will have a cosy board-game evening.",
+      "word_bank": [
+       "we",
+       "will",
+       "evening.",
+       "If",
+       "cancelled",
+       "board-game",
+       "is",
+       "the",
+       "cosy",
+       "picnic",
+       "cancelled,",
+       "yesterday",
+       "did",
+       "a",
+       "have"
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If it ___ all weekend, the concert will move indoors.",
+      "correct_answer": "rains",
+      "options": [
+       "rains",
+       "will rain",
+       "rained"
+      ],
+      "translation_hint": "Если будет дождить все выходные, концерт перенесут внутрь."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "mustn't",
+       "of",
+       "make",
+       "most",
+       "went",
+       "the",
+       "You",
+       "should",
+       "any",
+       "weather."
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "make",
+       "the",
+       "most",
+       "of",
+       "any",
+       "weather."
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If your plans fall through, complaining will not help — a board game will.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If your plans fall through, complaining will not help — a board game will.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если планы сорвутся, жалобы не помогут — поможет настольная игра."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Washed-out Picnic",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "The forecast shows rain for Saturday.",
+        "translation": "Прогноз показывает дождь на субботу."
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "So the picnic is off? What should we do instead?",
+        "translation": "Значит, пикника не будет? Чем заняться вместо?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna suggest?",
+        "options": [
+         {
+          "text": "If it rains, we should host a board-game afternoon at our place.",
+          "is_correct": true
+         },
+         {
+          "text": "If it will rain, we hosted it yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The rain is picnicking on Saturday.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "cosy",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Warm and comfortable (about a place or time)",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Cold and windy, typical for the coast",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Too hot for sleeping well",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“cosy” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If they ___ the show, we will get refunds.",
+      "audio_text": "If they cancel the show, we will get refunds.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "cancel",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will cancel",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "cancelled",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “cancel”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should make the most ___ the day.",
+      "correct_answer": "of",
+      "hint_prefix": "of",
+      "explanation": "The complete sentence is “You should make the most of the day.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to cancel",
+        "text": "to cancel"
+       },
+       {
+        "id": "V2",
+        "audio_text": "backup plan",
+        "text": "backup plan"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to complain",
+        "text": "to complain"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to make the most of",
+        "text": "to make the most of"
+       },
+       {
+        "id": "V5",
+        "audio_text": "rainy day",
+        "text": "rainy day"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_PAST_WEEKEND_ACTIVITIES_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Our trip got cancelled because of the storm."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "That is a pity — if you are free Sunday, we will have a games evening instead.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "We cancelled it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The storm is tripping us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“That is a pity — if you are free Sunday, we will have a games evening instead.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

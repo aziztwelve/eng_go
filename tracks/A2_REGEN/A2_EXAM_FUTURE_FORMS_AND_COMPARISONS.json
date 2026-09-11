@@ -1,0 +1,1431 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS",
+  "title": {
+   "ru": "Будущее время и сравнения",
+   "en": "Future Forms and Comparisons"
+  },
+  "description": {
+   "ru": "Развивайте экзаменационные навыки уровня A2 по теме «Будущее время и сравнения».",
+   "en": "Develop A2 exam skills for future forms and comparisons."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "exam",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "exam",
+   "future-forms-and-comparisons"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L1",
+   "order": 1,
+   "title": {
+    "ru": "Прошлое и настоящее в задачах",
+    "en": "Past and Present in Exam Tasks"
+   },
+   "objective": {
+    "ru": "Потренировать past simple и present perfect в экзаменационных заданиях.",
+    "en": "Practise past simple and present perfect in exam tasks."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "tense",
+        "right": "время (глагола)"
+       },
+       {
+        "id": "P2",
+        "left": "signal word",
+        "right": "слово-маркер"
+       },
+       {
+        "id": "P3",
+        "left": "already / yet",
+        "right": "уже / ещё"
+       },
+       {
+        "id": "P4",
+        "left": "since / for",
+        "right": "с / в течение"
+       },
+       {
+        "id": "P5",
+        "left": "irregular verb",
+        "right": "неправильный глагол"
+       },
+       {
+        "id": "P6",
+        "left": "to complete the sentence",
+        "right": "завершить предложение"
+       },
+       {
+        "id": "P7",
+        "left": "gap fill",
+        "right": "задание на пропуски"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "She has lived here since 2019.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "She has lived here in 2019.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "She lives here since already 2019.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “She has lived here since 2019.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я живу здесь с 2019 года и ещё не поменял работу.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I have lived here since 2019 and have not changed my job yet.",
+      "word_bank": [
+       "and",
+       "not",
+       "I",
+       "my",
+       "have",
+       "tomorrow",
+       "live",
+       "2019",
+       "since",
+       "did",
+       "yet.",
+       "lived",
+       "have",
+       "here",
+       "changed",
+       "job"
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "We ___ to London three years ago.",
+      "correct_answer": "moved",
+      "options": [
+       "moved",
+       "have moved",
+       "are moving"
+      ],
+      "translation_hint": "Мы переехали в Лондон три года назад."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "has",
+       "did",
+       "task.",
+       "already",
+       "finished",
+       "the",
+       "was",
+       "He",
+       "gap-fill"
+      ],
+      "correct_words": [
+       "He",
+       "has",
+       "already",
+       "finished",
+       "the",
+       "gap-fill",
+       "task."
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "Signal words are your friends: 'yesterday' means past simple, and 'since' points to the present perfect.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "Signal words are your friends: 'yesterday' means past simple, and 'since' points to the present perfect.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Слова-маркеры — твои друзья: «yesterday» означает past simple, а «since» указывает на present perfect."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Grammar Section",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "I never remember when to use 'since' and 'for'.",
+        "translation": "Я никак не запомню, когда 'since', а когда 'for'."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Point in time — since; period of time — for. Since Monday, for three days.",
+        "translation": "Точка во времени — since; период — for. Since Monday, for three days."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 say?",
+        "options": [
+         {
+          "text": "Got it — 'for two years' but 'since 2020'.",
+          "is_correct": true
+         },
+         {
+          "text": "Got it — 'since two years' and 'for 2020'.",
+          "is_correct": false
+         },
+         {
+          "text": "The words are pointing my time.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "irregular verb",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A verb with special past forms, like go-went",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A verb that ends in -ed in the past",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A verb used only in questions",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“irregular verb” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "They have ___ the project since March.",
+      "audio_text": "They have worked on the project since March.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "worked",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "work",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "working",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “worked”."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "I have ___ sent the form.",
+      "correct_answer": "already",
+      "hint_prefix": "al",
+      "explanation": "The complete sentence is “I have already sent the form.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "tense",
+        "text": "tense"
+       },
+       {
+        "id": "V2",
+        "audio_text": "signal word",
+        "text": "signal word"
+       },
+       {
+        "id": "V3",
+        "audio_text": "already / yet",
+        "text": "already / yet"
+       },
+       {
+        "id": "V4",
+        "audio_text": "since / for",
+        "text": "since / for"
+       },
+       {
+        "id": "V5",
+        "audio_text": "irregular verb",
+        "text": "irregular verb"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Examiner",
+        "text": "Have you ever taken this exam before?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes, once last year — and I have practised a lot since then.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I take it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The exam is taking me once.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes, once last year — and I have practised a lot since then.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L2",
+   "order": 2,
+   "title": {
+    "ru": "Будущее в заданиях",
+    "en": "The Future in Exam Tasks"
+   },
+   "objective": {
+    "ru": "Потренировать формы будущего и сравнительные степени.",
+    "en": "Practise future forms and comparatives."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "will / going to",
+        "right": "will / going to"
+       },
+       {
+        "id": "P2",
+        "left": "arrangement",
+        "right": "договорённость"
+       },
+       {
+        "id": "P3",
+        "left": "prediction",
+        "right": "предсказание"
+       },
+       {
+        "id": "P4",
+        "left": "comparative",
+        "right": "сравнительная степень"
+       },
+       {
+        "id": "P5",
+        "left": "superlative",
+        "right": "превосходная степень"
+       },
+       {
+        "id": "P6",
+        "left": "than",
+        "right": "чем"
+       },
+       {
+        "id": "P7",
+        "left": "the ...est",
+        "right": "самый ..."
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses going to for a plan?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "We are going to visit the museum on Saturday.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "We will visited the museum yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "We visit museum going to Saturday.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “We are going to visit the museum on Saturday.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Этот вариант проще, а тот — самый сложный за весь год.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "This option is easier, and that one is the most difficult of the whole year.",
+      "word_bank": [
+       "yesterday",
+       "that",
+       "of",
+       "and",
+       "most",
+       "is",
+       "did",
+       "easier,",
+       "the",
+       "option",
+       "This",
+       "the",
+       "year.",
+       "whole",
+       "was",
+       "is",
+       "difficult",
+       "one"
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Look at those clouds — it ___ rain.",
+      "correct_answer": "is going to",
+      "options": [
+       "is going to",
+       "will be",
+       "goes to"
+      ],
+      "translation_hint": "Посмотри на тучи — сейчас пойдёт дождь."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "was",
+       "to",
+       "June.",
+       "going",
+       "be",
+       "in",
+       "is",
+       "My",
+       "exam",
+       "did"
+      ],
+      "correct_words": [
+       "My",
+       "exam",
+       "is",
+       "going",
+       "to",
+       "be",
+       "in",
+       "June."
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "A plan takes going to; an arrangement takes the present continuous; a prediction takes will.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "A plan takes going to; an arrangement takes the present continuous; a prediction takes will.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "План требует going to; договорённость — present continuous; предсказание — will."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Choosing the Future Form",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "This question has both 'will' and 'going to' as options...",
+        "translation": "В этом вопросе и 'will', и 'going to' в вариантах..."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Read the context: is it a plan decided before, or a decision right now?",
+        "translation": "Читай контекст: это заранее принятое решение или решение прямо сейчас?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 answer?",
+        "options": [
+         {
+          "text": "It says 'we decided last week' — so going to.",
+          "is_correct": true
+         },
+         {
+          "text": "It decided yesterday tomorrow — will.",
+          "is_correct": false
+         },
+         {
+          "text": "The question is going to the context.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "superlative",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The form like 'the biggest' or 'the best'",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "The form like 'bigger' or 'better'",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "The form like 'as big as'",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“superlative” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "She is ___ to retake the exam in May.",
+      "audio_text": "She is going to retake the exam in May.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "going",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "went",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "gone",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “going”."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "This task is ___ than the last one.",
+      "correct_answer": "easier",
+      "hint_prefix": "ea",
+      "explanation": "The complete sentence is “This task is easier than the last one.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "will / going to",
+        "text": "will / going to"
+       },
+       {
+        "id": "V2",
+        "audio_text": "arrangement",
+        "text": "arrangement"
+       },
+       {
+        "id": "V3",
+        "audio_text": "prediction",
+        "text": "prediction"
+       },
+       {
+        "id": "V4",
+        "audio_text": "comparative",
+        "text": "comparative"
+       },
+       {
+        "id": "V5",
+        "audio_text": "superlative",
+        "text": "superlative"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Will vs going to — one more time?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Evidence in the sentence: 'I promise' → will; 'we planned' → going to.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "You explained it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The forms are willing me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Evidence in the sentence: 'I promise' → will; 'we planned' → going to.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если сомневаешься во времени",
+    "en": "If You Doubt the Tense"
+   },
+   "objective": {
+    "ru": "Разобрать типичные ошибки, используя should и первое условное.",
+    "en": "Analyse typical mistakes using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "common mistake",
+        "right": "типичная ошибка"
+       },
+       {
+        "id": "P2",
+        "left": "to mark the signal",
+        "right": "отметить маркер"
+       },
+       {
+        "id": "P3",
+        "left": "to translate literally",
+        "right": "переводить дословно"
+       },
+       {
+        "id": "P4",
+        "left": "reliable",
+        "right": "надёжный"
+       },
+       {
+        "id": "P5",
+        "left": "to eliminate options",
+        "right": "отсеять варианты"
+       },
+       {
+        "id": "P6",
+        "left": "guessing",
+        "right": "угадывание"
+       },
+       {
+        "id": "P7",
+        "left": "clue",
+        "right": "ключ / подсказка"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct exam advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should underline the time signal before choosing a tense.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to underline it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must underlining signals last exam.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should underline the time signal before choosing a tense.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если дословно переводить с русского, часто выбираешь неправильное время.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If you translate literally from Russian, you will often choose the wrong tense.",
+      "word_bank": [
+       "wrong",
+       "translate",
+       "yesterday",
+       "translated",
+       "you",
+       "Russian,",
+       "will",
+       "the",
+       "literally",
+       "If",
+       "did",
+       "often",
+       "tense.",
+       "you",
+       "choose",
+       "from"
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you eliminate two options, your ___ becomes much safer.",
+      "correct_answer": "guess",
+      "options": [
+       "guess",
+       "will guess",
+       "guessed"
+      ],
+      "translation_hint": "Если отсеять два варианта, догадка станет гораздо безопаснее."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "check",
+       "You",
+       "time",
+       "markers",
+       "should",
+       "twice.",
+       "mustn't",
+       "went",
+       "the"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "check",
+       "the",
+       "time",
+       "markers",
+       "twice."
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If a sentence contains 'ago', the present perfect is impossible — this clue alone solves half the questions.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If a sentence contains 'ago', the present perfect is impossible — this clue alone solves half the questions.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если в предложении есть 'ago', present perfect невозможен — одна эта подсказка решает половину вопросов."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Repeated Mistake",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "I always write 'I have seen him yesterday' — why is it wrong?",
+        "translation": "Я всё время пишу 'I have seen him yesterday' — почему это неверно?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "'Yesterday' is a finished time, so the present perfect cannot take it.",
+        "translation": "'Yesterday' — завершённое время, present perfect его не принимает."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 learn?",
+        "options": [
+         {
+          "text": "So with 'yesterday' I should use past simple — saw.",
+          "is_correct": true
+         },
+         {
+          "text": "So I should using it yesterday again.",
+          "is_correct": false
+         },
+         {
+          "text": "The mistake is seeing my yesterday.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to eliminate",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To remove wrong options one by one",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To choose the first option you like",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To translate the task into Russian first",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to eliminate” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If you see 'ago', ___ the perfect option.",
+      "audio_text": "If you see 'ago', eliminate the perfect option.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "eliminate",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will eliminate",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "eliminated",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “eliminate”."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Never translate ___ from Russian.",
+      "correct_answer": "literally",
+      "hint_prefix": "li",
+      "explanation": "The complete sentence is “Never translate literally from Russian.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "common mistake",
+        "text": "common mistake"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to mark the signal",
+        "text": "to mark the signal"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to translate literally",
+        "text": "to translate literally"
+       },
+       {
+        "id": "V4",
+        "audio_text": "reliable",
+        "text": "reliable"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to eliminate options",
+        "text": "to eliminate options"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_EXAM_FUTURE_FORMS_AND_COMPARISONS_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Two options look identical to me."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Look for the signal word — if you mark it, the difference will appear.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I marked it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The options are doubling me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Look for the signal word — if you mark it, the difference will appear.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

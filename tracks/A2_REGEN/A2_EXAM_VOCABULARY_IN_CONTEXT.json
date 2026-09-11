@@ -1,0 +1,1434 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_EXAM_VOCABULARY_IN_CONTEXT",
+  "title": {
+   "ru": "Лексика в контексте",
+   "en": "Vocabulary in Context"
+  },
+  "description": {
+   "ru": "Развивайте экзаменационные навыки уровня A2 по теме «Лексика в контексте».",
+   "en": "Develop A2 exam skills for vocabulary in context."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "exam",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "exam",
+   "vocabulary-in-context"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_EXAM_VOCABULARY_IN_CONTEXT_L1",
+   "order": 1,
+   "title": {
+    "ru": "Слова в текстах",
+    "en": "Words in Texts"
+   },
+   "objective": {
+    "ru": "Работать со значением слов, используя past simple и present perfect.",
+    "en": "Work with word meanings using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "meaning in context",
+        "right": "значение в контексте"
+       },
+       {
+        "id": "P2",
+        "left": "to guess",
+        "right": "догадаться"
+       },
+       {
+        "id": "P3",
+        "left": "part of speech",
+        "right": "часть речи"
+       },
+       {
+        "id": "P4",
+        "left": "collocation",
+        "right": "словосочетание"
+       },
+       {
+        "id": "P5",
+        "left": "prefix",
+        "right": "приставка"
+       },
+       {
+        "id": "P6",
+        "left": "synonym substitution",
+        "right": "подбор синонима"
+       },
+       {
+        "id": "P7",
+        "left": "surrounding",
+        "right": "окружающий (контекст)"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "This word has appeared in every text this week.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "This word has appeared yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "This word appear in texts already now.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “This word has appeared in every text this week.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Из контекста я догадался, что это слово означает «наоборот».",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "From the context I guessed that the word means 'on the contrary'.",
+      "word_bank": [
+       "'on",
+       "the",
+       "From",
+       "guessed",
+       "guess",
+       "means",
+       "context",
+       "the",
+       "word",
+       "contrary'.",
+       "that",
+       "tomorrow",
+       "the",
+       "did",
+       "I"
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The word 'unfair' has a negative ___ 'un-'.",
+      "correct_answer": "prefix",
+      "options": [
+       "prefix",
+       "prefixes",
+       "prefixion"
+      ],
+      "translation_hint": "У слова 'unfair' отрицательная приставка 'un-'."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "learned",
+       "fifty",
+       "this",
+       "was",
+       "has",
+       "did",
+       "collocations",
+       "month.",
+       "She"
+      ],
+      "correct_words": [
+       "She",
+       "has",
+       "learned",
+       "fifty",
+       "collocations",
+       "this",
+       "month."
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "The same verb changes its meaning in different collocations: make coffee, make a mistake, make a decision.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "The same verb changes its meaning in different collocations: make coffee, make a mistake, make a decision.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Один и тот же глагол меняет значение в разных словосочетаниях: make coffee, make a mistake, make a decision."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Meaning Task",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "What does 'sharp' mean in 'a sharp increase'?",
+        "translation": "Что значит 'sharp' во фразе 'a sharp increase'?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Not about knives — in this context it means 'fast and sudden'.",
+        "translation": "Не про ножи — в этом контексте это значит «быстрый и резкий»."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 learn?",
+        "options": [
+         {
+          "text": "So the noun decides the meaning of the adjective here.",
+          "is_correct": true
+         },
+         {
+          "text": "So 'sharp' always means knives in every text.",
+          "is_correct": false
+         },
+         {
+          "text": "So the increase is cutting the context.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "collocation",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Words that naturally go together, like make a decision",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Two words with opposite meanings",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A word that came from another language",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“collocation” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have ___ the meaning from the context.",
+      "audio_text": "I have guessed the meaning from the context.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "guessed",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "guess",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "guessing",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “guessed”."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Check the part of ___ first.",
+      "correct_answer": "speech",
+      "hint_prefix": "sp",
+      "explanation": "The complete sentence is “Check the part of speech first.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "meaning in context",
+        "text": "meaning in context"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to guess",
+        "text": "to guess"
+       },
+       {
+        "id": "V3",
+        "audio_text": "part of speech",
+        "text": "part of speech"
+       },
+       {
+        "id": "V4",
+        "audio_text": "collocation",
+        "text": "collocation"
+       },
+       {
+        "id": "V5",
+        "audio_text": "prefix",
+        "text": "prefix"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "'Run a company' — can you run a company?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes — run has many collocations: run a company, run late, run out of money.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I ran it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The company is running me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes — run has many collocations: run a company, run late, run out of money.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_EXAM_VOCABULARY_IN_CONTEXT_L2",
+   "order": 2,
+   "title": {
+    "ru": "Расширяем словарь к экзамену",
+    "en": "Expanding Vocabulary for the Exam"
+   },
+   "objective": {
+    "ru": "Сравнить способы учить слова и спланировать словарную работу.",
+    "en": "Compare ways of learning words and plan vocabulary work."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "word family",
+        "right": "словообразовательное гнездо"
+       },
+       {
+        "id": "P2",
+        "left": "more efficient",
+        "right": "эффективнее"
+       },
+       {
+        "id": "P3",
+        "left": "topic lists",
+        "right": "тематические списки"
+       },
+       {
+        "id": "P4",
+        "left": "spaced repetition",
+        "right": "интервальное повторение"
+       },
+       {
+        "id": "P5",
+        "left": "to recycle words",
+        "right": "повторять (пущ. в оборот) слова"
+       },
+       {
+        "id": "P6",
+        "left": "active vocabulary",
+        "right": "активный словарь"
+       },
+       {
+        "id": "P7",
+        "left": "in chunks",
+        "right": "блоками / кусочками"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two learning ways correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "Learning word families is more efficient than single words.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Word families are efficienсter than words.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "Families are most efficient than single words.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “Learning word families is more efficient than single words.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я собираюсь учить слова блоками, а не по одному.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I am going to learn words in chunks, not one by one.",
+      "word_bank": [
+       "to",
+       "words",
+       "going",
+       "not",
+       "learned",
+       "yesterday",
+       "I",
+       "chunks,",
+       "learn",
+       "am",
+       "did",
+       "in",
+       "one.",
+       "by",
+       "one"
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Topic lists are ___ than alphabetical ones for the exam.",
+      "correct_answer": "better",
+      "options": [
+       "better",
+       "best",
+       "more good"
+      ],
+      "translation_hint": "Тематические списки лучше алфавитных для экзамена."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "going",
+       "are",
+       "weekly.",
+       "We",
+       "last",
+       "month's",
+       "to",
+       "did",
+       "recycle",
+       "words",
+       "was"
+      ],
+      "correct_words": [
+       "We",
+       "are",
+       "going",
+       "to",
+       "recycle",
+       "last",
+       "month's",
+       "words",
+       "weekly."
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you recycle old words in new sentences, they will move into your active vocabulary.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you recycle old words in new sentences, they will move into your active vocabulary.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если использовать старые слова в новых предложениях, они перейдут в активный словарь."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Word List",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "I have learned two hundred words this month, but I forget them in texts.",
+        "translation": "Я выучил двести слов за месяц, но в текстах их забываю."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Single words or chunks with examples?",
+        "translation": "Отдельные слова или блоками с примерами?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 admit?",
+        "options": [
+         {
+          "text": "Single words... I should switch to chunks and word families.",
+          "is_correct": true
+         },
+         {
+          "text": "Chunks — I have always learned them in families already.",
+          "is_correct": false
+         },
+         {
+          "text": "The texts are forgetting my two hundred words.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "word family",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A group of words from one root: decide, decision, decisive",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Words that rhyme with each other",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Words listed together in one topic",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“word family” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I am going to learn phrasal verbs in ___ .",
+      "audio_text": "I am going to learn phrasal verbs in chunks.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "chunks",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "chunk",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "chunking",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “chunks”."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Spaced repetition is ___ than one-night learning.",
+      "correct_answer": "more efficient",
+      "hint_prefix": "mo",
+      "explanation": "The complete sentence is “Spaced repetition is more efficient than one-night learning.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "word family",
+        "text": "word family"
+       },
+       {
+        "id": "V2",
+        "audio_text": "more efficient",
+        "text": "more efficient"
+       },
+       {
+        "id": "V3",
+        "audio_text": "topic lists",
+        "text": "topic lists"
+       },
+       {
+        "id": "V4",
+        "audio_text": "spaced repetition",
+        "text": "spaced repetition"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to recycle words",
+        "text": "to recycle words"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "How many words a day?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Ten in chunks — if you recycle them weekly, they will stay for the exam.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I learned them yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The words are chunking me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Ten in chunks — if you recycle them weekly, they will stay for the exam.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_EXAM_VOCABULARY_IN_CONTEXT_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если слово не вспоминается",
+    "en": "If the Word Does Not Come"
+   },
+   "objective": {
+    "ru": "Разобрать словарные ошибки, используя should и первое условное.",
+    "en": "Analyse vocabulary mistakes using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to confuse",
+        "right": "путать"
+       },
+       {
+        "id": "P2",
+        "left": "similar-looking word",
+        "right": "похожее по написанию слово"
+       },
+       {
+        "id": "P3",
+        "left": "false friend",
+        "right": "ложный друг переводчика"
+       },
+       {
+        "id": "P4",
+        "left": "to double the meaning",
+        "right": "проверить значение дважды"
+       },
+       {
+        "id": "P5",
+        "left": "to note down",
+        "right": "записать"
+       },
+       {
+        "id": "P6",
+        "left": "review",
+        "right": "повторение"
+       },
+       {
+        "id": "P7",
+        "left": "context sentence",
+        "right": "предложение с контекстом"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct vocabulary advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should learn false friends with context sentences.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to learn them yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must learning friends last week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should learn false friends with context sentences.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если выучить слово без контекста, легко перепутать его с похожим.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If you learn a word without context, you will easily confuse it with a similar one.",
+      "word_bank": [
+       "without",
+       "word",
+       "one.",
+       "you",
+       "a",
+       "yesterday",
+       "you",
+       "context,",
+       "easily",
+       "similar",
+       "a",
+       "with",
+       "learn",
+       "did",
+       "learned",
+       "confuse",
+       "If",
+       "will",
+       "it"
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you confuse two words, ___ them together in one notebook entry.",
+      "correct_answer": "write",
+      "options": [
+       "write",
+       "will write",
+       "wrote"
+      ],
+      "translation_hint": "Если путаешь два слова, запиши их вместе в одной записи."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "new",
+       "words",
+       "should",
+       "a",
+       "day.",
+       "You",
+       "mustn't",
+       "went",
+       "review",
+       "within"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "review",
+       "new",
+       "words",
+       "within",
+       "a",
+       "day."
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you note down the context sentence, not just the translation, the word will return to you in the exam.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you note down the context sentence, not just the translation, the word will return to you in the exam.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если записать предложение с контекстом, а не только перевод, слово вернётся к тебе на экзамене."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The False Friend",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "I wrote 'magazine' in the essay — but I meant a shop!",
+        "translation": "Я написал 'magazine' в эссе — а имел в виду магазин!"
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "A classic false friend. What is the correct English word?",
+        "translation": "Классический ложный друг. Какое правильное английское слово?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 learn?",
+        "options": [
+         {
+          "text": "'Shop' — and I have noted the pair down with an example sentence.",
+          "is_correct": true
+         },
+         {
+          "text": "'Magasin' — the same word in English spelling.",
+          "is_correct": false
+         },
+         {
+          "text": "The magazine is shopping my essay.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "false friend",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A word that looks the same in two languages but means something different",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A word that is easy to translate exactly",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A synonym pair in one language",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“false friend” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If you ___ similar words, study them side by side.",
+      "audio_text": "If you confuse similar words, study them side by side.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "confuse",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will confuse",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "confused",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “confuse”."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Note the ___ sentence, not only the translation.",
+      "correct_answer": "context",
+      "hint_prefix": "co",
+      "explanation": "The complete sentence is “Note the context sentence, not only the translation.”."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to confuse",
+        "text": "to confuse"
+       },
+       {
+        "id": "V2",
+        "audio_text": "similar-looking word",
+        "text": "similar-looking word"
+       },
+       {
+        "id": "V3",
+        "audio_text": "false friend",
+        "text": "false friend"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to double the meaning",
+        "text": "to double the meaning"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to note down",
+        "text": "to note down"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_EXAM_VOCABULARY_IN_CONTEXT_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "I mix up 'receipt' and 'recipe' all the time."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Write them together with examples — if you see the pair, the difference will stick.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I wrote them yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The words are recipeting me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Write them together with examples — if you see the pair, the difference will stick.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

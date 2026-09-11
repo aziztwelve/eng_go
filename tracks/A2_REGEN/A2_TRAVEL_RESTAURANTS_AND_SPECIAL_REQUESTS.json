@@ -1,0 +1,1439 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS",
+  "title": {
+   "ru": "Рестораны и особые просьбы",
+   "en": "Restaurants and Special Requests"
+  },
+  "description": {
+   "ru": "Развивайте английский для путешествий уровня A2 по теме «Рестораны и особые просьбы».",
+   "en": "Develop A2 travel English for restaurants and special requests."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "travel",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "travel",
+   "restaurants-and-special-requests"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L1",
+   "order": 1,
+   "title": {
+    "ru": "Ужин, который запомнился",
+    "en": "A Dinner to Remember"
+   },
+   "objective": {
+    "ru": "Рассказать о посещении ресторана, используя past simple и present perfect.",
+    "en": "Talk about a restaurant visit using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "starter",
+        "right": "закуска"
+       },
+       {
+        "id": "P2",
+        "left": "main course",
+        "right": "основное блюдо"
+       },
+       {
+        "id": "P3",
+        "left": "bill",
+        "right": "счёт"
+       },
+       {
+        "id": "P4",
+        "left": "to tip",
+        "right": "оставить чаевые"
+       },
+       {
+        "id": "P5",
+        "left": "vegetarian",
+        "right": "вегетарианский"
+       },
+       {
+        "id": "P6",
+        "left": "dessert",
+        "right": "десерт"
+       },
+       {
+        "id": "P7",
+        "left": "reservation",
+        "right": "бронь"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "We have already ordered the starters.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "We have ordered them yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "We order the starters already now.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “We have already ordered the starters.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы заказали закуски и основные блюда, но десерт оставили на потом.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We ordered the starters and the main courses, but we have left the dessert for later.",
+      "word_bank": [
+       "left",
+       "later.",
+       "tomorrow",
+       "and",
+       "for",
+       "dessert",
+       "we",
+       "the",
+       "courses,",
+       "the",
+       "order",
+       "main",
+       "but",
+       "ordered",
+       "have",
+       "the",
+       "did",
+       "starters",
+       "We"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Last night the restaurant ___ our reservation by mistake.",
+      "correct_answer": "lost",
+      "options": [
+       "lost",
+       "has lose",
+       "losing"
+      ],
+      "translation_hint": "Вчера вечером ресторан по ошибке потерял нашу бронь."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "did",
+       "just",
+       "for",
+       "has",
+       "asked",
+       "was",
+       "bill.",
+       "the",
+       "She"
+      ],
+      "correct_words": [
+       "She",
+       "has",
+       "just",
+       "asked",
+       "for",
+       "the",
+       "bill."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "We asked for a table by the window, and the waiter has brought the menu with vegetarian dishes already marked.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "We asked for a table by the window, and the waiter has brought the menu with vegetarian dishes already marked.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Мы попросили столик у окна, и официант принёс меню, где вегетарианские блюда уже отмечены."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Busy Friday",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Waiter",
+        "text": "Good evening. Do you have a reservation?",
+        "translation": "Добрый вечер. У вас есть бронь?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Guest",
+        "text": "Yes, under the name Petrov for eight o'clock.",
+        "translation": "Да, на фамилию Петров, на восемь."
+       },
+       {
+        "type": "choice",
+        "text": "What does the waiter say?",
+        "options": [
+         {
+          "text": "Ah yes, a table for two by the window. Has anyone taken your coat?",
+          "is_correct": true
+         },
+         {
+          "text": "Yes, your table has arrived yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The reservation is eating the dinner.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "starter",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The first small dish of a meal",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "The biggest dish of the evening",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "The drink you order at the bar",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“starter” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We have ___ a table for tonight.",
+      "audio_text": "We have booked a table for tonight.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "booked",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "book",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "booking",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “booked”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Could we have the ___ , please?",
+      "correct_answer": "bill",
+      "hint_prefix": "bi",
+      "explanation": "The complete sentence is “Could we have the bill , please?”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "starter",
+        "text": "starter"
+       },
+       {
+        "id": "V2",
+        "audio_text": "main course",
+        "text": "main course"
+       },
+       {
+        "id": "V3",
+        "audio_text": "bill",
+        "text": "bill"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to tip",
+        "text": "to tip"
+       },
+       {
+        "id": "V5",
+        "audio_text": "vegetarian",
+        "text": "vegetarian"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Waiter",
+        "text": "Are you ready to order?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Almost — could we get a few more minutes? We have not chosen the main courses yet.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, we order yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The menu is ordering us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Almost — could we get a few more minutes? We have not chosen the main courses yet.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L2",
+   "order": 2,
+   "title": {
+    "ru": "Выбираем ресторан",
+    "en": "Choosing a Restaurant"
+   },
+   "objective": {
+    "ru": "Сравнить рестораны и заказать еду с особыми пожеланиями.",
+    "en": "Compare restaurants and order food with special requests."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "special request",
+        "right": "особая просьба (к блюду)"
+       },
+       {
+        "id": "P2",
+        "left": "allergy",
+        "right": "аллергия"
+       },
+       {
+        "id": "P3",
+        "left": "spicy",
+        "right": "острый"
+       },
+       {
+        "id": "P4",
+        "left": "more popular",
+        "right": "популярнее"
+       },
+       {
+        "id": "P5",
+        "left": "to recommend",
+        "right": "порекомендовать"
+       },
+       {
+        "id": "P6",
+        "left": "portion",
+        "right": "порция"
+       },
+       {
+        "id": "P7",
+        "left": "to try",
+        "right": "попробовать"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two restaurants correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The bistro by the market is more popular than the one on the square.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "The bistro is popularer than the other one.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The bistro is most popular than the square one.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The bistro by the market is more popular than the one on the square.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Не могли бы вы приготовить это без орехов? У моего сына аллергия.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "Could you prepare this without nuts? My son has an allergy.",
+      "word_bank": [
+       "has",
+       "did",
+       "can",
+       "Could",
+       "nuts?",
+       "son",
+       "an",
+       "you",
+       "yesterday",
+       "prepare",
+       "allergy.",
+       "My",
+       "this",
+       "without"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "This local dish is ___ than the tourist menu.",
+      "correct_answer": "cheaper",
+      "options": [
+       "cheaper",
+       "cheapest",
+       "more cheap"
+      ],
+      "translation_hint": "Это местное блюдо дешевле туристического меню."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "try",
+       "did",
+       "seafood",
+       "going",
+       "are",
+       "tonight.",
+       "the",
+       "was",
+       "We",
+       "restaurant",
+       "to"
+      ],
+      "correct_words": [
+       "We",
+       "are",
+       "going",
+       "to",
+       "try",
+       "the",
+       "seafood",
+       "restaurant",
+       "tonight."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you tell the waiter about your allergy, the kitchen will adapt almost any dish.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you tell the waiter about your allergy, the kitchen will adapt almost any dish.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если сказать официанту об аллергии, кухня адаптирует почти любое блюдо."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Special Request",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Guest",
+        "text": "I would love the grilled fish, but is it very spicy?",
+        "translation": "Я бы взял рыбу на гриле, но она очень острая?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Waiter",
+        "text": "The sauce is spicy, but the kitchen can serve it separately.",
+        "translation": "Соус острый, но кухня может подать его отдельно."
+       },
+       {
+        "type": "choice",
+        "text": "What does the guest decide?",
+        "options": [
+         {
+          "text": "Perfect — I will take it with the sauce on the side.",
+          "is_correct": true
+         },
+         {
+          "text": "Perfect, I took it yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The fish is deciding about the sauce.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "allergy",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A condition when some food makes you ill",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A strong liking for one particular dish",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A skill of cooking without a recipe",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“allergy” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We are going to ___ the local stew.",
+      "audio_text": "We are going to try the local stew.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "try",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "tried",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "trying",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “try”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The portions here are ___ than at the hotel.",
+      "correct_answer": "bigger",
+      "hint_prefix": "bi",
+      "explanation": "The complete sentence is “The portions here are bigger than at the hotel.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "special request",
+        "text": "special request"
+       },
+       {
+        "id": "V2",
+        "audio_text": "allergy",
+        "text": "allergy"
+       },
+       {
+        "id": "V3",
+        "audio_text": "spicy",
+        "text": "spicy"
+       },
+       {
+        "id": "V4",
+        "audio_text": "more popular",
+        "text": "more popular"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to recommend",
+        "text": "to recommend"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Waiter",
+        "text": "Would you like anything to drink first?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "A bottle of still water, please — if the house wine is dry, we will try that too.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I drank it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The water is drinking me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“A bottle of still water, please — if the house wine is dry, we will try that too.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если блюдо не то",
+    "en": "If the Dish Is Wrong"
+   },
+   "objective": {
+    "ru": "Решить проблему с заказом, используя should и первое условное.",
+    "en": "Solve an order problem using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to send back",
+        "right": "вернуть (блюдо)"
+       },
+       {
+        "id": "P2",
+        "left": "rare",
+        "right": "недожаренный (о мясе)"
+       },
+       {
+        "id": "P3",
+        "left": "to apologise",
+        "right": "извиниться"
+       },
+       {
+        "id": "P4",
+        "left": "mix-up",
+        "right": "путаница"
+       },
+       {
+        "id": "P5",
+        "left": "on the house",
+        "right": "за счёт заведения"
+       },
+       {
+        "id": "P6",
+        "left": "patient",
+        "right": "терпеливый"
+       },
+       {
+        "id": "P7",
+        "left": "instead",
+        "right": "вместо этого"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should send the dish back politely if it is not what you ordered.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to send it back yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must sending it back last week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should send the dish back politely if it is not what you ordered.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если вы вернёте блюдо вежливо, повар приготовит новое без вопросов.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If you send the dish back politely, the chef will cook a new one without questions.",
+      "word_bank": [
+       "you",
+       "send",
+       "back",
+       "the",
+       "did",
+       "dish",
+       "a",
+       "without",
+       "will",
+       "politely,",
+       "one",
+       "questions.",
+       "new",
+       "chef",
+       "yesterday",
+       "sent",
+       "If",
+       "the",
+       "cook"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If the waiter ___ the order, they usually offer a free dessert.",
+      "correct_answer": "mixes up",
+      "options": [
+       "mixes up",
+       "will mix up",
+       "mixed up"
+      ],
+      "translation_hint": "Если официант перепутает заказ, обычно предлагают бесплатный десерт."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "should",
+       "check",
+       "dish",
+       "went",
+       "the",
+       "you",
+       "eating.",
+       "start",
+       "mustn't",
+       "before",
+       "You"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "check",
+       "the",
+       "dish",
+       "before",
+       "you",
+       "start",
+       "eating."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If the kitchen made a mistake, the dessert will probably be on the house.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If the kitchen made a mistake, the dessert will probably be on the house.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если кухня ошиблась, десерт, скорее всего, будет за счёт заведения."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Wrong Dish",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Guest",
+        "text": "Excuse me, I ordered the vegetarian risotto, and this has chicken in it.",
+        "translation": "Извините, я заказывал вегетарианское ризотто, а тут курица."
+       },
+       {
+        "type": "dialogue",
+        "character": "Waiter",
+        "text": "I'm so sorry — there has been a mix-up with the table numbers.",
+        "translation": "Очень извиняюсь — произошла путаница с номерами столиков."
+       },
+       {
+        "type": "choice",
+        "text": "What does the waiter offer?",
+        "options": [
+         {
+          "text": "I will bring the risotto in ten minutes, and your drinks will be on the house.",
+          "is_correct": true
+         },
+         {
+          "text": "I brought it yesterday tomorrow already.",
+          "is_correct": false
+         },
+         {
+          "text": "The chicken is ordering the risotto back.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "on the house",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Free, paid for by the restaurant",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Cooked at home and brought with you",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "The most expensive dish on the menu",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“on the house” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If the meat is too ___ , send it back.",
+      "audio_text": "If the meat is too rare, send it back.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "rare",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "rarely",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "rarest",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “rare”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should say it politely ___ of angrily.",
+      "correct_answer": "instead",
+      "hint_prefix": "in",
+      "explanation": "The complete sentence is “You should say it politely instead of angrily.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to send back",
+        "text": "to send back"
+       },
+       {
+        "id": "V2",
+        "audio_text": "rare",
+        "text": "rare"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to apologise",
+        "text": "to apologise"
+       },
+       {
+        "id": "V4",
+        "audio_text": "mix-up",
+        "text": "mix-up"
+       },
+       {
+        "id": "V5",
+        "audio_text": "on the house",
+        "text": "on the house"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_RESTAURANTS_AND_SPECIAL_REQUESTS_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "They brought me the wrong soup."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Call the waiter — if you explain calmly, they will change it quickly.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "He changed it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The soup is calling the waiter.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Call the waiter — if you explain calmly, they will change it quickly.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

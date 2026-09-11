@@ -1,0 +1,1442 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS",
+  "title": {
+   "ru": "Общественный транспорт и пересадки",
+   "en": "Public Transport and Connections"
+  },
+  "description": {
+   "ru": "Развивайте английский для путешествий уровня A2 по теме «Общественный транспорт и пересадки».",
+   "en": "Develop A2 travel English for public transport and connections."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "travel",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "travel",
+   "public-transport-and-connections"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L1",
+   "order": 1,
+   "title": {
+    "ru": "Поездка на поезде",
+    "en": "A Train Journey"
+   },
+   "objective": {
+    "ru": "Рассказать о поездке на транспорте, используя past simple и present perfect.",
+    "en": "Talk about a transport journey using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "platform",
+        "right": "платформа"
+       },
+       {
+        "id": "P2",
+        "left": "single ticket",
+        "right": "билет в одну сторону"
+       },
+       {
+        "id": "P3",
+        "left": "return ticket",
+        "right": "билет туда-обратно"
+       },
+       {
+        "id": "P4",
+        "left": "to miss",
+        "right": "опоздать на (транспорт)"
+       },
+       {
+        "id": "P5",
+        "left": "timetable",
+        "right": "расписание"
+       },
+       {
+        "id": "P6",
+        "left": "carriage",
+        "right": "вагон"
+       },
+       {
+        "id": "P7",
+        "left": "on time",
+        "right": "по расписанию"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The train has just arrived at platform four.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "The train has arrived yesterday at four.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The train arrive just now already.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The train has just arrived at platform four.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы почти опоздали на поезд, но он задержался на десять минут.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We almost missed the train, but it was ten minutes late.",
+      "word_bank": [
+       "almost",
+       "late.",
+       "it",
+       "the",
+       "was",
+       "miss",
+       "train,",
+       "We",
+       "minutes",
+       "but",
+       "tomorrow",
+       "ten",
+       "missed",
+       "did"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She bought a ___ ticket because she returns on Sunday.",
+      "correct_answer": "return",
+      "options": [
+       "return",
+       "returns",
+       "returning"
+      ],
+      "translation_hint": "Она купила обратный билет, потому что возвращается в воскресенье."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "has",
+       "two.",
+       "left",
+       "The",
+       "already",
+       "train",
+       "platform",
+       "did",
+       "was"
+      ],
+      "correct_words": [
+       "The",
+       "train",
+       "has",
+       "already",
+       "left",
+       "platform",
+       "two."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "We took the fast train from platform six, and it has brought us to the coast in two hours.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "We took the fast train from platform six, and it has brought us to the coast in two hours.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Мы сели на скорый поезд с шестой платформы, и он довёз нас до побережья за два часа."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Missed Connection",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "Our train to the airport has just left — we are on the wrong platform!",
+        "translation": "Наш поезд в аэропорт только что ушёл — мы не на той платформе!"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "When did you notice?",
+        "translation": "Когда ты заметила?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna say?",
+        "options": [
+         {
+          "text": "A minute ago. There is another train in twenty minutes, hasn't there?",
+          "is_correct": true
+         },
+         {
+          "text": "Tomorrow. Another train came yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The platform is missing the train instead.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "platform",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The area where you get on and off a train",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A place to park cars near the station",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A ticket office inside the building",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“platform” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "The train has ___ from platform two.",
+      "audio_text": "The train has departed from platform two.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "departed",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "depart",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "departing",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “departed”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "I have bought a ___ ticket by mistake.",
+      "correct_answer": "single",
+      "hint_prefix": "si",
+      "explanation": "The complete sentence is “I have bought a single ticket by mistake.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "platform",
+        "text": "platform"
+       },
+       {
+        "id": "V2",
+        "audio_text": "single ticket",
+        "text": "single ticket"
+       },
+       {
+        "id": "V3",
+        "audio_text": "return ticket",
+        "text": "return ticket"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to miss",
+        "text": "to miss"
+       },
+       {
+        "id": "V5",
+        "audio_text": "timetable",
+        "text": "timetable"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Local",
+        "text": "Does this tram go to the old town?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes, but it turns before the bridge — I have taken it twice and always changed at the gate.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, I take it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The old town is taking this tram.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes, but it turns before the bridge — I have taken it twice and always changed at the gate.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L2",
+   "order": 2,
+   "title": {
+    "ru": "Как доберёмся завтра",
+    "en": "How We Will Get There Tomorrow"
+   },
+   "objective": {
+    "ru": "Спланировать поездку на транспорте и сравнить варианты.",
+    "en": "Plan a transport trip and compare options."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "day pass",
+        "right": "дневной проездной"
+       },
+       {
+        "id": "P2",
+        "left": "cheaper",
+        "right": "дешевле"
+       },
+       {
+        "id": "P3",
+        "left": "direct",
+        "right": "прямой (без пересадок)"
+       },
+       {
+        "id": "P4",
+        "left": "to change",
+        "right": "сделать пересадку"
+       },
+       {
+        "id": "P5",
+        "left": "more convenient",
+        "right": "удобнее"
+       },
+       {
+        "id": "P6",
+        "left": "night bus",
+        "right": "ночной автобус"
+       },
+       {
+        "id": "P7",
+        "left": "traffic",
+        "right": "дорожное движение"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two options correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The metro is faster than the bus in the morning.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "The metro is more fast than the bus.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The metro is fastest than the bus.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The metro is faster than the bus in the morning.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы собираемся купить дневной проездной — так дешевле, чем четыре билета.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We are going to buy a day pass — it is cheaper than four single tickets.",
+      "word_bank": [
+       "bought",
+       "yesterday",
+       "than",
+       "tickets.",
+       "a",
+       "—",
+       "are",
+       "is",
+       "four",
+       "going",
+       "to",
+       "We",
+       "it",
+       "pass",
+       "single",
+       "buy",
+       "did",
+       "day",
+       "cheaper"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "A direct train is ___ convenient than one with two changes.",
+      "correct_answer": "more",
+      "options": [
+       "more",
+       "most",
+       "much"
+      ],
+      "translation_hint": "Прямой поезд удобнее поезда с двумя пересадками."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "are",
+       "to",
+       "hotel",
+       "night",
+       "bus",
+       "take",
+       "the",
+       "one",
+       "to",
+       "night.",
+       "was",
+       "did",
+       "going",
+       "We",
+       "save"
+      ],
+      "correct_words": [
+       "We",
+       "are",
+       "going",
+       "to",
+       "take",
+       "the",
+       "night",
+       "bus",
+       "to",
+       "save",
+       "one",
+       "hotel",
+       "night."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If we leave before seven, we will avoid the worst morning traffic on the ring road.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If we leave before seven, we will avoid the worst morning traffic on the ring road.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если выехать до семи, избежим худшего утреннего трафика на кольцевой."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Metro or Bus?",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "Should we take the metro or the bus to the stadium?",
+        "translation": "Ехать на стадион на метро или автобусе?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "The metro does not get stuck in traffic.",
+        "translation": "Метро не стоит в пробках."
+       },
+       {
+        "type": "choice",
+        "text": "What do they decide?",
+        "options": [
+         {
+          "text": "Then we are going to take the metro and walk ten minutes.",
+          "is_correct": true
+         },
+         {
+          "text": "Then we took the metro yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The stadium is taking us by metro.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "day pass",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A ticket for unlimited travel during one day",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A ticket for one single journey",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A monthly card for local residents",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“day pass” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We are going to ___ at Central Station.",
+      "audio_text": "We are going to change at Central Station.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "change",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "changed",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "changing",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “change”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The night bus is ___ than a taxi.",
+      "correct_answer": "cheaper",
+      "hint_prefix": "ch",
+      "explanation": "The complete sentence is “The night bus is cheaper than a taxi.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "day pass",
+        "text": "day pass"
+       },
+       {
+        "id": "V2",
+        "audio_text": "cheaper",
+        "text": "cheaper"
+       },
+       {
+        "id": "V3",
+        "audio_text": "direct",
+        "text": "direct"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to change",
+        "text": "to change"
+       },
+       {
+        "id": "V5",
+        "audio_text": "more convenient",
+        "text": "more convenient"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Is the last tram before midnight?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes — if we catch the eleven o'clock one, we will be home by half past.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I caught it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "Midnight is catching the tram.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes — if we catch the eleven o'clock one, we will be home by half past.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если опоздаем на пересадку",
+    "en": "If We Miss the Connection"
+   },
+   "objective": {
+    "ru": "Обсудить пересадки, используя should и первое условное.",
+    "en": "Discuss connections using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "connection",
+        "right": "пересадка (на другой рейс)"
+       },
+       {
+        "id": "P2",
+        "left": "to run late",
+        "right": "опаздывать"
+       },
+       {
+        "id": "P3",
+        "left": "valid",
+        "right": "действительный"
+       },
+       {
+        "id": "P4",
+        "left": "to check",
+        "right": "проверить"
+       },
+       {
+        "id": "P5",
+        "left": "alternative",
+        "right": "альтернатива"
+       },
+       {
+        "id": "P6",
+        "left": "platform change",
+        "right": "изменение платформы"
+       },
+       {
+        "id": "P7",
+        "left": "in plenty of time",
+        "right": "с запасом времени"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should leave at least twenty minutes for a connection.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to leave twenty minutes yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must leaving time last week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should leave at least twenty minutes for a connection.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если поезд опоздает, мы не успеем на последний автобус из аэропорта.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If the train runs late, we will not catch the last bus from the airport.",
+      "word_bank": [
+       "we",
+       "the",
+       "the",
+       "will",
+       "the",
+       "runs",
+       "catch",
+       "did",
+       "If",
+       "late,",
+       "ran",
+       "airport.",
+       "from",
+       "last",
+       "not",
+       "bus",
+       "yesterday",
+       "train"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you ___ your ticket before boarding, it will stay valid.",
+      "correct_answer": "validate",
+      "options": [
+       "validate",
+       "will validate",
+       "validated"
+      ],
+      "translation_hint": "Если прокомпостировать билет до посадки, он останется действительным."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "check",
+       "went",
+       "You",
+       "twice.",
+       "number",
+       "the",
+       "platform",
+       "should",
+       "mustn't"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "check",
+       "the",
+       "platform",
+       "number",
+       "twice."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If we buy flexible tickets, a missed connection will not ruin the whole journey.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If we buy flexible tickets, a missed connection will not ruin the whole journey.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если купить гибкие билеты, пропущенная пересадка не разрушит всю поездку."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Ten Minutes Only",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "We have only ten minutes for the connection in Lyon.",
+        "translation": "У нас всего десять минут на пересадку в Лионе."
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "That is tight. What happens if the first train is late?",
+        "translation": "Это впритык. Что будет, если первый поезд опоздает?"
+       },
+       {
+        "type": "choice",
+        "text": "What is the plan?",
+        "options": [
+         {
+          "text": "If we miss it, we should take the next regional train.",
+          "is_correct": true
+         },
+         {
+          "text": "If we will miss it, we took it yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The connection is missing the trains.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "connection",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A second vehicle you must catch to continue a journey",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "The last stop of a single train line",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A bus that circles the airport every night",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“connection” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If the first train ___ , we will call the hotel.",
+      "audio_text": "If the first train runs late, we will call the hotel.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "runs late",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will run late",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "ran late",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “runs late”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should arrive ___ plenty of time.",
+      "correct_answer": "in",
+      "hint_prefix": "in",
+      "explanation": "The complete sentence is “You should arrive in plenty of time.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "connection",
+        "text": "connection"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to run late",
+        "text": "to run late"
+       },
+       {
+        "id": "V3",
+        "audio_text": "valid",
+        "text": "valid"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to check",
+        "text": "to check"
+       },
+       {
+        "id": "V5",
+        "audio_text": "alternative",
+        "text": "alternative"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_PUBLIC_TRANSPORT_AND_CONNECTIONS_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Our train is delayed by twenty minutes."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "We should tell the conductor — if the delay is their fault, the next ticket will be free.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I told him yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The minutes are delaying us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“We should tell the conductor — if the delay is their fault, the next ticket will be free.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

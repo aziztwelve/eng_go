@@ -1,0 +1,1429 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS",
+  "title": {
+   "ru": "Понимание инструкций",
+   "en": "Understanding Instructions"
+  },
+  "description": {
+   "ru": "Развивайте учебные навыки уровня A2 по теме «Понимание инструкций».",
+   "en": "Develop A2 study skills for understanding instructions."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "study",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "study",
+   "understanding-instructions"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L1",
+   "order": 1,
+   "title": {
+    "ru": "Инструкции на занятии",
+    "en": "Instructions in Class"
+   },
+   "objective": {
+    "ru": "Понимать учебные инструкции, используя past simple и present perfect.",
+    "en": "Understand study instructions using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to hand in",
+        "right": "сдать (работу)"
+       },
+       {
+        "id": "P2",
+        "left": "word limit",
+        "right": "лимит слов"
+       },
+       {
+        "id": "P3",
+        "left": "to underline",
+        "right": "подчеркнуть"
+       },
+       {
+        "id": "P4",
+        "left": "in pairs",
+        "right": "в парах"
+       },
+       {
+        "id": "P5",
+        "left": "to refer to",
+        "right": "сослаться на"
+       },
+       {
+        "id": "P6",
+        "left": "rubric",
+        "right": "критерии оценки"
+       },
+       {
+        "id": "P7",
+        "left": "due date",
+        "right": "крайний срок"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The teacher has explained the rubric twice already.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "The teacher has explained it last lesson.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The teacher explain the rubric already twice.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The teacher has explained the rubric twice already.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Преподаватель объяснил критерии и попросил сдать работу к пятнице.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "The teacher explained the rubric and has asked us to hand in the essay by Friday.",
+      "word_bank": [
+       "to",
+       "The",
+       "teacher",
+       "us",
+       "asked",
+       "tomorrow",
+       "did",
+       "rubric",
+       "in",
+       "the",
+       "explained",
+       "by",
+       "has",
+       "the",
+       "and",
+       "explain",
+       "Friday.",
+       "essay",
+       "hand"
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "We worked ___ in the last session.",
+      "correct_answer": "in pairs",
+      "options": [
+       "in pairs",
+       "in pair",
+       "pairing"
+      ],
+      "translation_hint": "На прошлом занятии мы работали в парах."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "read",
+       "the",
+       "Have",
+       "end?",
+       "was",
+       "to",
+       "did",
+       "instructions",
+       "you",
+       "the"
+      ],
+      "correct_words": [
+       "Have",
+       "you",
+       "read",
+       "the",
+       "instructions",
+       "to",
+       "the",
+       "end?"
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "The task says 'underline the topic sentences and refer to paragraph two' — the due date is Monday, and the word limit is two hundred.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "The task says 'underline the topic sentences and refer to paragraph two' — the due date is Monday, and the word limit is two hundred.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "В задании сказано: «подчеркните тематические предложения и сошлитесь на второй абзац» — крайний срок понедельник, лимит слов двести."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Assignment",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "What exactly do we have to do for Monday?",
+        "translation": "Что именно нужно сделать к понедельнику?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Underline the arguments and refer to the rubric — the teacher has posted it online.",
+        "translation": "Подчеркнуть аргументы и ориентироваться на критерии — преподаватель выложил их онлайн."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 ask?",
+        "options": [
+         {
+          "text": "Is there a word limit this time?",
+          "is_correct": true
+         },
+         {
+          "text": "Is there a limit tomorrow yesterday?",
+          "is_correct": false
+         },
+         {
+          "text": "Is Monday underlining our arguments?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "rubric",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The list of criteria used to grade your work",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "The title you give your essay",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "The deadline printed on the task sheet",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“rubric” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have ___ in my homework already.",
+      "audio_text": "I have handed in my homework already.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "handed",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "hand",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "handing",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “handed”."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The ___ date is the twelfth.",
+      "correct_answer": "due",
+      "hint_prefix": "du",
+      "explanation": "The complete sentence is “The due date is the twelfth.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to hand in",
+        "text": "to hand in"
+       },
+       {
+        "id": "V2",
+        "audio_text": "word limit",
+        "text": "word limit"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to underline",
+        "text": "to underline"
+       },
+       {
+        "id": "V4",
+        "audio_text": "in pairs",
+        "text": "in pairs"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to refer to",
+        "text": "to refer to"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Teacher",
+        "text": "Any questions about the task?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes — should we work in pairs, or is it an individual assignment?",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I asked it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The task is questioning me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes — should we work in pairs, or is it an individual assignment?” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L2",
+   "order": 2,
+   "title": {
+    "ru": "Следующее задание",
+    "en": "The Next Assignment"
+   },
+   "objective": {
+    "ru": "Понимать требования задания и сравнивать форматы.",
+    "en": "Understand assignment requirements and compare formats."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "requirements",
+        "right": "требования"
+       },
+       {
+        "id": "P2",
+        "left": "clearer",
+        "right": "понятнее"
+       },
+       {
+        "id": "P3",
+        "left": "to follow the steps",
+        "right": "следовать шагам"
+       },
+       {
+        "id": "P4",
+        "left": "multiple choice",
+        "right": "множественный выбор"
+       },
+       {
+        "id": "P5",
+        "left": "open question",
+        "right": "открытый вопрос"
+       },
+       {
+        "id": "P6",
+        "left": "to count towards",
+        "right": "идти в зачёт (оценки)"
+       },
+       {
+        "id": "P7",
+        "left": "instruction",
+        "right": "инструкция"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two task types correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "Multiple choice is quicker than an open question.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Multiple choice is more quick than open question.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "Multiple choice is quickest than questions.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “Multiple choice is quicker than an open question.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "В этот раз мы собираемся следовать инструкции шаг за шагом.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "This time we are going to follow the instructions step by step.",
+      "word_bank": [
+       "to",
+       "followed",
+       "yesterday",
+       "we",
+       "did",
+       "by",
+       "follow",
+       "going",
+       "This",
+       "the",
+       "are",
+       "step.",
+       "instructions",
+       "time",
+       "step"
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The presentation ___ towards the final grade.",
+      "correct_answer": "counts",
+      "options": [
+       "counts",
+       "count",
+       "counting"
+      ],
+      "translation_hint": "Презентация идёт в зачёт итоговой оценки."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "to",
+       "listening",
+       "They",
+       "are",
+       "a",
+       "section.",
+       "did",
+       "going",
+       "was",
+       "add"
+      ],
+      "correct_words": [
+       "They",
+       "are",
+       "going",
+       "to",
+       "add",
+       "a",
+       "listening",
+       "section."
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you read the requirements twice before starting, you will not redo the task from the beginning.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you read the requirements twice before starting, you will not redo the task from the beginning.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если дважды прочитать требования до начала, не придётся переделывать работу с самого начала."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Reading the Brief",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "The brief has three pages of requirements...",
+        "translation": "В задании три страницы требований..."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Read the headings first — they show the steps.",
+        "translation": "Сначала прочитай заголовки — они показывают шаги."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 say?",
+        "options": [
+         {
+          "text": "Right — step one is choosing the topic by Wednesday.",
+          "is_correct": true
+         },
+         {
+          "text": "Step one chose me tomorrow yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The pages are briefing the steps.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "open question",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A task where you write your own answer",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A task where you choose from given options",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A task where you match two lists",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“open question” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We are going to ___ the steps exactly.",
+      "audio_text": "We are going to follow the steps exactly.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "follow",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "followed",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "following",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “follow”."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The checklist makes everything ___ .",
+      "correct_answer": "clearer",
+      "hint_prefix": "cl",
+      "explanation": "The complete sentence is “The checklist makes everything clearer .”."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "requirements",
+        "text": "requirements"
+       },
+       {
+        "id": "V2",
+        "audio_text": "clearer",
+        "text": "clearer"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to follow the steps",
+        "text": "to follow the steps"
+       },
+       {
+        "id": "V4",
+        "audio_text": "multiple choice",
+        "text": "multiple choice"
+       },
+       {
+        "id": "V5",
+        "audio_text": "open question",
+        "text": "open question"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Classmate",
+        "text": "Does the essay count towards the grade?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes, twenty per cent — if you read the rubric, you will see exactly how.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "It counted yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The essay is grading me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes, twenty per cent — if you read the rubric, you will see exactly how.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если инструкция непонятна",
+    "en": "If the Instruction Is Unclear"
+   },
+   "objective": {
+    "ru": "Уточнять задания, используя should и первое условное.",
+    "en": "Clarify tasks using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to misread",
+        "right": "прочитать неверно"
+       },
+       {
+        "id": "P2",
+        "left": "to ask for clarification",
+        "right": "попросить уточнение"
+       },
+       {
+        "id": "P3",
+        "left": "to assume",
+        "right": "предположить"
+       },
+       {
+        "id": "P4",
+        "left": "worse",
+        "right": "хуже"
+       },
+       {
+        "id": "P5",
+        "left": "to waste effort",
+        "right": "потратить усилия зря"
+       },
+       {
+        "id": "P6",
+        "left": "in advance",
+        "right": "заранее"
+       },
+       {
+        "id": "P7",
+        "left": "to double-check",
+        "right": "перепроверить"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should ask for clarification before you start writing.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to ask it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must asking clarification last time.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should ask for clarification before you start writing.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если неверно поймёшь задание, потеряешь часы работы.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If you misread the task, you will waste hours of work.",
+      "word_bank": [
+       "waste",
+       "misreaded",
+       "of",
+       "you",
+       "If",
+       "did",
+       "work.",
+       "will",
+       "misread",
+       "hours",
+       "the",
+       "task,",
+       "you",
+       "yesterday"
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If instructions are unclear, ___ the teacher directly.",
+      "correct_answer": "message",
+      "options": [
+       "message",
+       "will message",
+       "messaged"
+      ],
+      "translation_hint": "Если инструкция неясна, напиши преподавателю напрямую."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "never",
+       "should",
+       "assume",
+       "mustn't",
+       "—",
+       "went",
+       "You",
+       "double-check."
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "never",
+       "assume",
+       "—",
+       "double-check."
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you double-check the requirements on day one, you will not discover a missing section the night before the deadline.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you double-check the requirements on day one, you will not discover a missing section the night before the deadline.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если перепроверить требования в первый день, не обнаружишь отсутствующий раздел накануне срока."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Wrong Format",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "I wrote a report, but the task asked for a letter — I misread one word.",
+        "translation": "Я написал отчёт, а требовалось письмо — я неверно прочитал одно слово."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Ouch. Did you ask anyone before starting?",
+        "translation": "Ой. Ты спрашивал кого-нибудь до начала?"
+       },
+       {
+        "type": "choice",
+        "text": "What is the lesson?",
+        "options": [
+         {
+          "text": "No — from now on, I will double-check the format in advance.",
+          "is_correct": true
+         },
+         {
+          "text": "No, I will double-checked it yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The word is misreading my report.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to assume",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To think something is true without checking",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To verify the facts with the teacher",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To read the task twice before starting",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to assume” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If you ___ the task, you lose time.",
+      "audio_text": "If you misread the task, you lose time.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "misread",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will misread",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "misreaded",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “misread”."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Ask for ___ early, not after the deadline.",
+      "correct_answer": "clarification",
+      "hint_prefix": "cla",
+      "explanation": "The complete sentence is “Ask for clarification early, not after the deadline.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to misread",
+        "text": "to misread"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to ask for clarification",
+        "text": "to ask for clarification"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to assume",
+        "text": "to assume"
+       },
+       {
+        "id": "V4",
+        "audio_text": "worse",
+        "text": "worse"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to waste effort",
+        "text": "to waste effort"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_STUDY_UNDERSTANDING_INSTRUCTIONS_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "I do not understand step three of the task."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Email the teacher today — if you wait till Friday, you will lose two days.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I emailed her yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The step is tasking me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Email the teacher today — if you wait till Friday, you will lose two days.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1442 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES",
+  "title": {
+   "ru": "Достопримечательности и местные занятия",
+   "en": "Sightseeing and Local Activities"
+  },
+  "description": {
+   "ru": "Развивайте английский для путешествий уровня A2 по теме «Достопримечательности и местные занятия».",
+   "en": "Develop A2 travel English for sightseeing and local activities."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "travel",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "travel",
+   "sightseeing-and-local-activities"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L1",
+   "order": 1,
+   "title": {
+    "ru": "Экскурсия, которая удалась",
+    "en": "The Tour That Worked Out"
+   },
+   "objective": {
+    "ru": "Рассказать об экскурсиях, используя past simple и present perfect.",
+    "en": "Talk about sightseeing using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "guided tour",
+        "right": "экскурсия с гидом"
+       },
+       {
+        "id": "P2",
+        "left": "exhibition",
+        "right": "выставка"
+       },
+       {
+        "id": "P3",
+        "left": "to skip the line",
+        "right": "пройти без очереди"
+       },
+       {
+        "id": "P4",
+        "left": "opening hours",
+        "right": "часы работы"
+       },
+       {
+        "id": "P5",
+        "left": "crowded",
+        "right": "многолюдный"
+       },
+       {
+        "id": "P6",
+        "left": "to take photos",
+        "right": "фотографировать"
+       },
+       {
+        "id": "P7",
+        "left": "worth",
+        "right": "стоящий (того)"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "We have already visited two museums today.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "We have visited two museums yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "We visit two museums already today.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “We have already visited two museums today.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы пришли к девяти утра и прошли в собор без очереди.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We arrived at nine in the morning and skipped the line into the cathedral.",
+      "word_bank": [
+       "arrived",
+       "and",
+       "in",
+       "cathedral.",
+       "the",
+       "tomorrow",
+       "morning",
+       "arrive",
+       "line",
+       "skipped",
+       "at",
+       "the",
+       "We",
+       "nine",
+       "the",
+       "into",
+       "did"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The gallery ___ at ten o'clock last Sunday.",
+      "correct_answer": "opened",
+      "options": [
+       "opened",
+       "has open",
+       "opening"
+      ],
+      "translation_hint": "Галерея открылась в десять в прошлое воскресенье."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "photos",
+       "did",
+       "has",
+       "more",
+       "was",
+       "She",
+       "two",
+       "hundred",
+       "today.",
+       "taken",
+       "than"
+      ],
+      "correct_words": [
+       "She",
+       "has",
+       "taken",
+       "more",
+       "than",
+       "two",
+       "hundred",
+       "photos",
+       "today."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "The old town was less crowded in the evening, and we have finally seen the famous tower without queues.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "The old town was less crowded in the evening, and we have finally seen the famous tower without queues.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Старый город вечером был менее многолюдным, и мы наконец увидели знаменитую башню без очередей."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Long Queue",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "The queue for the castle is enormous — two hours, the sign says.",
+        "translation": "Очередь в замок огромная — на табличке два часа."
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "Have you checked the online tickets?",
+        "translation": "Ты проверил онлайн-билеты?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Tom say?",
+        "options": [
+         {
+          "text": "Yes, the e-ticket holders have skipped the line all morning.",
+          "is_correct": true
+         },
+         {
+          "text": "Yes, they skipped it yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The queue is visiting the castle itself.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "opening hours",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The times when a place is open to visitors",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "The price of a single entrance ticket",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A tour that happens every hour",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“opening hours” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We have ___ the whole old town.",
+      "audio_text": "We have explored the whole old town.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "explored",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "explore",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "exploring",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “explored”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The exhibition was ___ the price.",
+      "correct_answer": "worth",
+      "hint_prefix": "wo",
+      "explanation": "The complete sentence is “The exhibition was worth the price.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "guided tour",
+        "text": "guided tour"
+       },
+       {
+        "id": "V2",
+        "audio_text": "exhibition",
+        "text": "exhibition"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to skip the line",
+        "text": "to skip the line"
+       },
+       {
+        "id": "V4",
+        "audio_text": "opening hours",
+        "text": "opening hours"
+       },
+       {
+        "id": "V5",
+        "audio_text": "crowded",
+        "text": "crowded"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Guide",
+        "text": "Did you enjoy the walking tour?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Very much — it was more interesting than the bus tour we took last year.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I enjoyed it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The tour is enjoying us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Very much — it was more interesting than the bus tour we took last year.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L2",
+   "order": 2,
+   "title": {
+    "ru": "Планы на выходные",
+    "en": "Weekend Plans"
+   },
+   "objective": {
+    "ru": "Спланировать осмотр достопримечательностей и сравнить активности.",
+    "en": "Plan sightseeing and compare activities."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "boat trip",
+        "right": "прогулка на лодке"
+       },
+       {
+        "id": "P2",
+        "left": "more relaxing",
+        "right": "расслабляющий (более спокойный)"
+       },
+       {
+        "id": "P3",
+        "left": "to climb",
+        "right": "подняться на (возвышенность)"
+       },
+       {
+        "id": "P4",
+        "left": "sunset",
+        "right": "закат"
+       },
+       {
+        "id": "P5",
+        "left": "to rent",
+        "right": "взять напрокат"
+       },
+       {
+        "id": "P6",
+        "left": "local guide",
+        "right": "местный гид"
+       },
+       {
+        "id": "P7",
+        "left": "busier",
+        "right": "оживлённее"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two activities correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The boat trip is more relaxing than the mountain hike.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "The boat trip is relaxingest than the hike.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The boat trip is more relax than the hike.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The boat trip is more relaxing than the mountain hike.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "В субботу мы собираемся взять напрокат велосипеды и поехать к пляжу.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "On Saturday we are going to rent bikes and ride to the beach.",
+      "word_bank": [
+       "beach.",
+       "rented",
+       "to",
+       "bikes",
+       "rent",
+       "and",
+       "yesterday",
+       "did",
+       "On",
+       "Saturday",
+       "to",
+       "we",
+       "the",
+       "are",
+       "going",
+       "ride"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The square at sunset is ___ than at noon.",
+      "correct_answer": "busier",
+      "options": [
+       "busier",
+       "busiest",
+       "more busy"
+      ],
+      "translation_hint": "Площадь на закате оживлённее, чем в полдень."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "hill.",
+       "from",
+       "the",
+       "going",
+       "watch",
+       "are",
+       "did",
+       "We",
+       "to",
+       "was",
+       "sunset",
+       "the"
+      ],
+      "correct_words": [
+       "We",
+       "are",
+       "going",
+       "to",
+       "watch",
+       "the",
+       "sunset",
+       "from",
+       "the",
+       "hill."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If we book the early boat trip, we will see the caves before the crowds.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If we book the early boat trip, we will see the caves before the crowds.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если забронировать раннюю прогулку на лодке, увидим гроты до наплыва туристов."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Saturday Morning",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "What are we doing on Saturday — the boat trip or the castle?",
+        "translation": "Что делаем в субботу — лодку или замок?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "The castle gets busier later, and the boat is more relaxing in the afternoon.",
+        "translation": "Замок позже оживлённее, а лодка расслабляет лучше во второй половине дня."
+       },
+       {
+        "type": "choice",
+        "text": "What do they decide?",
+        "options": [
+         {
+          "text": "Then we are going to the castle first and the boat at four.",
+          "is_correct": true
+         },
+         {
+          "text": "Then we went to the castle yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "Saturday is deciding our trip.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to rent",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To pay to use something for a short time",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To buy something to keep forever",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To borrow money from a friend",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to rent” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We are going to ___ bikes for the day.",
+      "audio_text": "We are going to rent bikes for the day.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "rent",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "rented",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "renting",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “rent”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The evening boat is ___ relaxing.",
+      "correct_answer": "more",
+      "hint_prefix": "mo",
+      "explanation": "The complete sentence is “The evening boat is more relaxing.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "boat trip",
+        "text": "boat trip"
+       },
+       {
+        "id": "V2",
+        "audio_text": "more relaxing",
+        "text": "more relaxing"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to climb",
+        "text": "to climb"
+       },
+       {
+        "id": "V4",
+        "audio_text": "sunset",
+        "text": "sunset"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to rent",
+        "text": "to rent"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Is the tower worth the climb?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes — if the sky is clear, you will see the whole bay from the top.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I climbed it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The tower is climbing me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes — if the sky is clear, you will see the whole bay from the top.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если погода подведёт",
+    "en": "If the Weather Is Bad"
+   },
+   "objective": {
+    "ru": "Обсудить запасные планы, используя should и первое условное.",
+    "en": "Discuss backup plans using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "forecast",
+        "right": "прогноз погоды"
+       },
+       {
+        "id": "P2",
+        "left": "indoor",
+        "right": "крытый (в помещении)"
+       },
+       {
+        "id": "P3",
+        "left": "to check in advance",
+        "right": "проверить заранее"
+       },
+       {
+        "id": "P4",
+        "left": "backup plan",
+        "right": "запасной план"
+       },
+       {
+        "id": "P5",
+        "left": "museum pass",
+        "right": "музейный абонемент"
+       },
+       {
+        "id": "P6",
+        "left": "to change plans",
+        "right": "изменить планы"
+       },
+       {
+        "id": "P7",
+        "left": "after all",
+        "right": "в конце концов"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should check the forecast before planning a boat trip.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to check it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must checking it last night.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should check the forecast before planning a boat trip.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если пойдёт дождь, мы проведём день в музеях вместо пляжа.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If it rains, we will spend the day in the museums instead of the beach.",
+      "word_bank": [
+       "the",
+       "rains,",
+       "spend",
+       "yesterday",
+       "day",
+       "of",
+       "we",
+       "the",
+       "it",
+       "the",
+       "beach.",
+       "rained",
+       "did",
+       "in",
+       "museums",
+       "instead",
+       "If",
+       "will"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If the weather ___ worse, the boat trip will be cancelled.",
+      "correct_answer": "gets",
+      "options": [
+       "gets",
+       "will get",
+       "got"
+      ],
+      "translation_hint": "Если погода ухудшится, прогулку на лодке отменят."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "an",
+       "B.",
+       "mustn't",
+       "indoor",
+       "plan",
+       "always",
+       "You",
+       "have",
+       "went",
+       "should"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "always",
+       "have",
+       "an",
+       "indoor",
+       "plan",
+       "B."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you buy the museum pass online, you will enter every rainy-day place without queues.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you buy the museum pass online, you will enter every rainy-day place without queues.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если купить музейный абонемент онлайн, в любой дождливый день вход будет без очередей."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Rainy Morning",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "The forecast says rain all afternoon.",
+        "translation": "Прогноз обещает дождь весь день."
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "Then the beach is off. What should we do instead?",
+        "translation": "Тогда пляж отменяется. Чем заняться вместо?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna suggest?",
+        "options": [
+         {
+          "text": "If it rains, we should use the museum pass we bought online.",
+          "is_correct": true
+         },
+         {
+          "text": "If it will rain, we used it yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The rain is planning the beach.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "forecast",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Information about future weather",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A description of yesterday's temperature",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A map of city museums and galleries",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“forecast” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If it ___ , we will visit the aquarium.",
+      "audio_text": "If it rains, we will visit the aquarium.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "rains",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will rain",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "rained",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “rains”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should check the forecast in ___ .",
+      "correct_answer": "advance",
+      "hint_prefix": "ad",
+      "explanation": "The complete sentence is “You should check the forecast in advance .”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "forecast",
+        "text": "forecast"
+       },
+       {
+        "id": "V2",
+        "audio_text": "indoor",
+        "text": "indoor"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to check in advance",
+        "text": "to check in advance"
+       },
+       {
+        "id": "V4",
+        "audio_text": "backup plan",
+        "text": "backup plan"
+       },
+       {
+        "id": "V5",
+        "audio_text": "museum pass",
+        "text": "museum pass"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SIGHTSEEING_AND_LOCAL_ACTIVITIES_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "The sky looks grey today."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "We should take the umbrellas — if it starts on the hill, the walk will be spoiled.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I took them yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The sky is walking us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“We should take the umbrellas — if it starts on the hill, the walk will be spoiled.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

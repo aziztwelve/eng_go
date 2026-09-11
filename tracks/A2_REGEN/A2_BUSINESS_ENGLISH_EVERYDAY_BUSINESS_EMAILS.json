@@ -1,0 +1,1446 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS",
+  "title": {
+   "ru": "Повседневная деловая переписка",
+   "en": "Everyday Business Emails"
+  },
+  "description": {
+   "ru": "Развивайте деловой английский уровня A2 по теме «Повседневная деловая переписка».",
+   "en": "Develop A2 business English for everyday business emails."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "business_english",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "business-english",
+   "everyday-business-emails"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L1",
+   "order": 1,
+   "title": {
+    "ru": "Письма на этой неделе",
+    "en": "Emails This Week"
+   },
+   "objective": {
+    "ru": "Рассказать о переписке, используя past simple и present perfect.",
+    "en": "Talk about email exchanges using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "inbox",
+        "right": "входящие"
+       },
+       {
+        "id": "P2",
+        "left": "to reply",
+        "right": "ответить"
+       },
+       {
+        "id": "P3",
+        "left": "attachment",
+        "right": "вложение"
+       },
+       {
+        "id": "P4",
+        "left": "to forward",
+        "right": "переслать"
+       },
+       {
+        "id": "P5",
+        "left": "subject line",
+        "right": "тема письма"
+       },
+       {
+        "id": "P6",
+        "left": "to attach",
+        "right": "приложить"
+       },
+       {
+        "id": "P7",
+        "left": "so far",
+        "right": "до сих пор"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "I have answered twenty emails so far today.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "I have answered twenty emails yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "I answer twenty emails so far already.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “I have answered twenty emails so far today.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я переслал письмо бухгалтерии и приложил счёт-фактуру.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I forwarded the email to the accounting department and attached the invoice.",
+      "word_bank": [
+       "forwarded",
+       "invoice.",
+       "accounting",
+       "the",
+       "forwards",
+       "tomorrow",
+       "attached",
+       "email",
+       "department",
+       "the",
+       "to",
+       "and",
+       "did",
+       "I",
+       "the"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She forgot to ___ the attachment last Friday.",
+      "correct_answer": "add",
+      "options": [
+       "add",
+       "has add",
+       "adding"
+      ],
+      "translation_hint": "В прошлую пятницу она забыла приложить вложение."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "important",
+       "was",
+       "to",
+       "replied",
+       "most",
+       "has",
+       "message.",
+       "the",
+       "did",
+       "He",
+       "already"
+      ],
+      "correct_words": [
+       "He",
+       "has",
+       "already",
+       "replied",
+       "to",
+       "the",
+       "most",
+       "important",
+       "message."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "I have checked my inbox twice this morning, and the contract has not arrived yet.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "I have checked my inbox twice this morning, and the contract has not arrived yet.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Я проверял входящие дважды сегодня утром, а контракт всё ещё не пришёл."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Missing Attachment",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Client",
+        "text": "Your email arrived, but there is no attachment.",
+        "translation": "Ваше письмо пришло, но вложения нет."
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "You are right — I forgot it. I'm very sorry.",
+        "translation": "Вы правы — я забыла его. Очень извиняюсь."
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna do next?",
+        "options": [
+         {
+          "text": "She has just sent the file again with an apology.",
+          "is_correct": true
+         },
+         {
+          "text": "She sends it yesterday again tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The attachment is emailing itself.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to forward",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To send an email you received to another person",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To delete an email from the inbox",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To print an email on paper",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to forward” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have ___ the invoice to the email.",
+      "audio_text": "I have attached the invoice to the email.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "attached",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "attach",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "attaching",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “attached”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Please write a clear subject ___ .",
+      "correct_answer": "line",
+      "hint_prefix": "li",
+      "explanation": "The complete sentence is “Please write a clear subject line .”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "inbox",
+        "text": "inbox"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to reply",
+        "text": "to reply"
+       },
+       {
+        "id": "V3",
+        "audio_text": "attachment",
+        "text": "attachment"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to forward",
+        "text": "to forward"
+       },
+       {
+        "id": "V5",
+        "audio_text": "subject line",
+        "text": "subject line"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Did you see the client's email?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes, I replied this morning and have forwarded it to the manager.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, I reply it tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The email is seeing me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes, I replied this morning and have forwarded it to the manager.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L2",
+   "order": 2,
+   "title": {
+    "ru": "Пишем письмо-запрос",
+    "en": "Writing a Request Email"
+   },
+   "objective": {
+    "ru": "Составить вежливый запрос и сравнить формулировки.",
+    "en": "Write a polite request and compare wording options."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "polite",
+        "right": "вежливый"
+       },
+       {
+        "id": "P2",
+        "left": "formal",
+        "right": "официальный"
+       },
+       {
+        "id": "P3",
+        "left": "more direct",
+        "right": "прямее"
+       },
+       {
+        "id": "P4",
+        "left": "to request",
+        "right": "запросить"
+       },
+       {
+        "id": "P5",
+        "left": "regarding",
+        "right": "касательно"
+       },
+       {
+        "id": "P6",
+        "left": "to follow up",
+        "right": "напомнить о себе письмом"
+       },
+       {
+        "id": "P7",
+        "left": "short",
+        "right": "короткий"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which subject line is the clearest?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "Request: new price list for 2026",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Hello!",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "Very important, open now!!!",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “Request: new price list for 2026”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Не могли бы вы прислать обновлённый прайс-лист касательно нашего контракта?",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "Could you please send the updated price list regarding our contract?",
+      "word_bank": [
+       "regarding",
+       "price",
+       "Could",
+       "send",
+       "our",
+       "the",
+       "you",
+       "yesterday",
+       "updated",
+       "list",
+       "can",
+       "did",
+       "contract?",
+       "please"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "A formal email is ___ appropriate for a first contact than a short chat message.",
+      "correct_answer": "more",
+      "options": [
+       "more",
+       "most",
+       "much"
+      ],
+      "translation_hint": "Официальное письмо уместнее для первого контакта, чем короткое сообщение в чате."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "to",
+       "email",
+       "am",
+       "short",
+       "with",
+       "I",
+       "clear",
+       "question.",
+       "one",
+       "going",
+       "did",
+       "a",
+       "was",
+       "write"
+      ],
+      "correct_words": [
+       "I",
+       "am",
+       "going",
+       "to",
+       "write",
+       "a",
+       "short",
+       "email",
+       "with",
+       "one",
+       "clear",
+       "question."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you put the main question in the first line, the reader will answer faster.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you put the main question in the first line, the reader will answer faster.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если поставить главный вопрос в первую строку, читатель ответит быстрее."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Rushed Email",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "I sent the request five minutes ago and got an answer already!",
+        "translation": "Я отправил запрос пять минут назад и уже получил ответ!"
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "That's unusually fast. What did you write in the subject line?",
+        "translation": "Это необычно быстро. Что ты написал в теме письма?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Tom say?",
+        "options": [
+         {
+          "text": "I wrote one clear question: 'Invoice number for order 415?'",
+          "is_correct": true
+         },
+         {
+          "text": "I wrote 'Hello' and attached three documents.",
+          "is_correct": false
+         },
+         {
+          "text": "The subject line answered me itself.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "regarding",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "About or connected with a subject",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Before a deadline",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Instead of an attachment",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“regarding” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "Could you ___ the form by Friday?",
+      "audio_text": "Could you complete the form by Friday?",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "complete",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "completed",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "completing",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “complete”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "A short email is ___ effective than a long one.",
+      "correct_answer": "more",
+      "hint_prefix": "mo",
+      "explanation": "The complete sentence is “A short email is more effective than a long one.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "polite",
+        "text": "polite"
+       },
+       {
+        "id": "V2",
+        "audio_text": "formal",
+        "text": "formal"
+       },
+       {
+        "id": "V3",
+        "audio_text": "more direct",
+        "text": "more direct"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to request",
+        "text": "to request"
+       },
+       {
+        "id": "V5",
+        "audio_text": "regarding",
+        "text": "regarding"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "How should I start the email to the new client?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Start formally — 'Dear Mr Brown' is safer than 'Hi' for a first contact.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I started it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The email is starting the client.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Start formally — 'Dear Mr Brown' is safer than 'Hi' for a first contact.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если письмо не понятно",
+    "en": "When an Email Is Unclear"
+   },
+   "objective": {
+    "ru": "Уточнить письмо, используя should и первое условное.",
+    "en": "Clarify an email using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "unclear",
+        "right": "неясный"
+       },
+       {
+        "id": "P2",
+        "left": "to rewrite",
+        "right": "переписать"
+       },
+       {
+        "id": "P3",
+        "left": "shorter",
+        "right": "короче"
+       },
+       {
+        "id": "P4",
+        "left": "bulleted list",
+        "right": "маркированный список"
+       },
+       {
+        "id": "P5",
+        "left": "to misunderstand",
+        "right": "неверно понять"
+       },
+       {
+        "id": "P6",
+        "left": "simple",
+        "right": "простой"
+       },
+       {
+        "id": "P7",
+        "left": "to proofread",
+        "right": "вычитать"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should proofread the email before you send it.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to proofread it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must proofreading it last night.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should proofread the email before you send it.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если письмо непонятное, читатель потратит вдвое больше времени.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If an email is unclear, the reader will spend twice as much time.",
+      "word_bank": [
+       "did",
+       "If",
+       "an",
+       "was",
+       "much",
+       "spend",
+       "as",
+       "time.",
+       "will",
+       "twice",
+       "the",
+       "yesterday",
+       "reader",
+       "is",
+       "unclear,",
+       "email"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you ___ the email into short paragraphs, it will be easier to read.",
+      "correct_answer": "divide",
+      "options": [
+       "divide",
+       "will divide",
+       "divided"
+      ],
+      "translation_hint": "Если разбить письмо на короткие абзацы, его будет легче читать."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "went",
+       "three",
+       "items.",
+       "more",
+       "for",
+       "use",
+       "should",
+       "a",
+       "bulleted",
+       "You",
+       "or",
+       "mustn't",
+       "list"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "use",
+       "a",
+       "bulleted",
+       "list",
+       "for",
+       "three",
+       "or",
+       "more",
+       "items."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you rewrite the message in simpler words, the client will not misunderstand you.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you rewrite the message in simpler words, the client will not misunderstand you.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если переписать сообщение более простыми словами, клиент вас не поймёт неверно."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Confusing Reply",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "I have read the client's reply three times, and it is still unclear.",
+        "translation": "Я трижды прочитала ответ клиента, и он всё ещё неясен."
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "What should we do — guess or ask?",
+        "translation": "Что делать — догадаться или спросить?"
+       },
+       {
+        "type": "choice",
+        "text": "What is the better decision?",
+        "options": [
+         {
+          "text": "We should ask one short clarifying question today.",
+          "is_correct": true
+         },
+         {
+          "text": "We should guessing until tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The reply is reading us three times.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to proofread",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To read a text again to find mistakes",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To translate an email into another language",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To send an email to a big group",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to proofread” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If you ___ the email, you will find the typo.",
+      "audio_text": "If you proofread the email, you will find the typo.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "proofread",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will proofread",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "proofreaded",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “proofread”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Shorter sentences are ___ to understand.",
+      "correct_answer": "easier",
+      "hint_prefix": "ea",
+      "explanation": "The complete sentence is “Shorter sentences are easier to understand.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "unclear",
+        "text": "unclear"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to rewrite",
+        "text": "to rewrite"
+       },
+       {
+        "id": "V3",
+        "audio_text": "shorter",
+        "text": "shorter"
+       },
+       {
+        "id": "V4",
+        "audio_text": "bulleted list",
+        "text": "bulleted list"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to misunderstand",
+        "text": "to misunderstand"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_EVERYDAY_BUSINESS_EMAILS_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "The client misunderstood my last email."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Next time you should use a bulleted list — if the points are numbered, nothing will be lost.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I used it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The email is misunderstanding the client.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Next time you should use a bulleted list — if the points are numbered, nothing will be lost.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

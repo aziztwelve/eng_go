@@ -1,0 +1,1437 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_SPEAKING_HEALTH_AND_FEELINGS",
+  "title": {
+   "ru": "Здоровье и самочувствие",
+   "en": "Health and Feelings"
+  },
+  "description": {
+   "ru": "Развивайте разговорные навыки уровня A2 по теме «Здоровье и самочувствие».",
+   "en": "Develop A2 speaking skills for health and feelings."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "speaking",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "speaking",
+   "health-and-feelings"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_SPEAKING_HEALTH_AND_FEELINGS_L1",
+   "order": 1,
+   "title": {
+    "ru": "Как я себя чувствую",
+    "en": "How I Have Been Feeling"
+   },
+   "objective": {
+    "ru": "Рассказать о самочувствии, используя past simple и present perfect.",
+    "en": "Talk about health using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to catch a cold",
+        "right": "простудиться"
+       },
+       {
+        "id": "P2",
+        "left": "symptoms",
+        "right": "симптомы"
+       },
+       {
+        "id": "P3",
+        "left": "to recover",
+        "right": "поправиться"
+       },
+       {
+        "id": "P4",
+        "left": "prescription",
+        "right": "рецепт"
+       },
+       {
+        "id": "P5",
+        "left": "to feel dizzy",
+        "right": "чувствовать головокружение"
+       },
+       {
+        "id": "P6",
+        "left": "appointment with a doctor",
+        "right": "приём у врача"
+       },
+       {
+        "id": "P7",
+        "left": "twice a year",
+        "right": "дважды в год"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "I have had a sore throat since Monday.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "I have a sore throat yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "I have sore throat since Monday already.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “I have had a sore throat since Monday.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я простудился на прошлой неделе, но уже почти выздоровел.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I caught a cold last week, but I have almost recovered.",
+      "word_bank": [
+       "week,",
+       "I",
+       "cold",
+       "last",
+       "tomorrow",
+       "caught",
+       "recovered.",
+       "almost",
+       "have",
+       "but",
+       "catch",
+       "a",
+       "did",
+       "I"
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The doctor ___ me a prescription for the cough.",
+      "correct_answer": "gave",
+      "options": [
+       "gave",
+       "has give",
+       "giving"
+      ],
+      "translation_hint": "Врач выписал мне рецепт от кашля."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "has",
+       "already",
+       "was",
+       "did",
+       "an",
+       "made",
+       "the",
+       "She",
+       "appointment",
+       "with",
+       "doctor."
+      ],
+      "correct_words": [
+       "She",
+       "has",
+       "already",
+       "made",
+       "an",
+       "appointment",
+       "with",
+       "the",
+       "doctor."
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "The symptoms have almost disappeared, but I have stayed at home for the whole week.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "The symptoms have almost disappeared, but I have stayed at home for the whole week.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Симптомы почти исчезли, но я оставался дома всю неделю."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "At the Surgery",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Doctor",
+        "text": "What seems to be the problem today?",
+        "translation": "Что вас беспокоит сегодня?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Patient",
+        "text": "I have had a headache and felt dizzy since Tuesday.",
+        "translation": "У меня болит голова и кружится с вторника."
+       },
+       {
+        "type": "choice",
+        "text": "What does the doctor ask?",
+        "options": [
+         {
+          "text": "Have you taken any medicine so far?",
+          "is_correct": true
+         },
+         {
+          "text": "Did you has taken it tomorrow?",
+          "is_correct": false
+         },
+         {
+          "text": "Is the headache visiting you today?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "prescription",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A doctor's paper that lets you get medicine",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A note that frees you from work",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A list of exercises from a trainer",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“prescription” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have ___ a cold twice this winter.",
+      "audio_text": "I have caught a cold twice this winter.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "caught",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "catch",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "catching",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “caught”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "He has ___ from the flu.",
+      "correct_answer": "recovered",
+      "hint_prefix": "re",
+      "explanation": "The complete sentence is “He has recovered from the flu.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to catch a cold",
+        "text": "to catch a cold"
+       },
+       {
+        "id": "V2",
+        "audio_text": "symptoms",
+        "text": "symptoms"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to recover",
+        "text": "to recover"
+       },
+       {
+        "id": "V4",
+        "audio_text": "prescription",
+        "text": "prescription"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to feel dizzy",
+        "text": "to feel dizzy"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "You sound terrible!"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Thanks — I have had this cough for a week, and I am seeing the doctor tomorrow.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I sound it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The cough is sounding me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Thanks — I have had this cough for a week, and I am seeing the doctor tomorrow.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_SPEAKING_HEALTH_AND_FEELINGS_L2",
+   "order": 2,
+   "title": {
+    "ru": "Здоровые привычки",
+    "en": "Healthy Habits"
+   },
+   "objective": {
+    "ru": "Сравнить подходы к здоровью и рассказать о планах.",
+    "en": "Compare health approaches and talk about plans."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "workout",
+        "right": "тренировка"
+       },
+       {
+        "id": "P2",
+        "left": "more energetic",
+        "right": "энергичнее"
+       },
+       {
+        "id": "P3",
+        "left": "to join a gym",
+        "right": "записаться в спортзал"
+       },
+       {
+        "id": "P4",
+        "left": "balanced diet",
+        "right": "сбалансированное питание"
+       },
+       {
+        "id": "P5",
+        "left": "to cut out",
+        "right": "полностью убрать (из рациона)"
+       },
+       {
+        "id": "P6",
+        "left": "sleep schedule",
+        "right": "режим сна"
+       },
+       {
+        "id": "P7",
+        "left": "regularly",
+        "right": "регулярно"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two options correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "Exercising outdoors is more enjoyable than a gym for me.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Outdoors is enjoyabler than the gym.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "Outdoors is most enjoyable than gym.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “Exercising outdoors is more enjoyable than a gym for me.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я собираюсь записаться в спортзал и наладить режим сна.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I am going to join a gym and fix my sleep schedule.",
+      "word_bank": [
+       "joined",
+       "my",
+       "I",
+       "going",
+       "gym",
+       "yesterday",
+       "join",
+       "am",
+       "and",
+       "fix",
+       "sleep",
+       "did",
+       "to",
+       "schedule.",
+       "a"
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "A balanced diet is ___ important than any supplement.",
+      "correct_answer": "more",
+      "options": [
+       "more",
+       "most",
+       "much"
+      ],
+      "translation_hint": "Сбалансированное питание важнее любых добавок."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "week.",
+       "did",
+       "going",
+       "He",
+       "was",
+       "out",
+       "three",
+       "a",
+       "to",
+       "times",
+       "is",
+       "work"
+      ],
+      "correct_words": [
+       "He",
+       "is",
+       "going",
+       "to",
+       "work",
+       "out",
+       "three",
+       "times",
+       "a",
+       "week."
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you walk to work instead of driving, you will feel more energetic without a gym.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you walk to work instead of driving, you will feel more energetic without a gym.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если ходить на работу пешком вместо машины, будешь энергичнее без спортзала."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Fitness Decision",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "Have you decided — the gym or the swimming pool?",
+        "translation": "Ты решил — спортзал или бассейн?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "The pool is more expensive, but swimming is easier on my knees.",
+        "translation": "Бассейн дороже, но плавание легче для моих коленей."
+       },
+       {
+        "type": "choice",
+        "text": "What does Tom decide?",
+        "options": [
+         {
+          "text": "I am going to join the pool from Monday.",
+          "is_correct": true
+         },
+         {
+          "text": "I joined it yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The knees are swimming in the pool.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "balanced diet",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Eating different healthy foods in the right amounts",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Eating only one type of food all week",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Skipping meals to lose weight fast",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“balanced diet” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I am going to ___ a gym this month.",
+      "audio_text": "I am going to join a gym this month.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "join",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "joined",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "joining",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “join”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She feels ___ after the workouts.",
+      "correct_answer": "stronger",
+      "hint_prefix": "st",
+      "explanation": "The complete sentence is “She feels stronger after the workouts.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "workout",
+        "text": "workout"
+       },
+       {
+        "id": "V2",
+        "audio_text": "more energetic",
+        "text": "more energetic"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to join a gym",
+        "text": "to join a gym"
+       },
+       {
+        "id": "V4",
+        "audio_text": "balanced diet",
+        "text": "balanced diet"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to cut out",
+        "text": "to cut out"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "I want to start eating better."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Start small — if you add one vegetable meal a day, you will not even miss the old food.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I started it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The food is eating me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Start small — if you add one vegetable meal a day, you will not even miss the old food.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_SPEAKING_HEALTH_AND_FEELINGS_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если заболеешь",
+    "en": "If You Fall Ill"
+   },
+   "objective": {
+    "ru": "Объяснить действия при болезни, используя should и первое условное.",
+    "en": "Explain what to do when ill using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to stay in bed",
+        "right": "оставаться в постели"
+       },
+       {
+        "id": "P2",
+        "left": "fever",
+        "right": "жар"
+       },
+       {
+        "id": "P3",
+        "left": "to call in sick",
+        "right": "сообщить о болезни на работе"
+       },
+       {
+        "id": "P4",
+        "left": "medicine",
+        "right": "лекарство"
+       },
+       {
+        "id": "P5",
+        "left": "rest",
+        "right": "отдых"
+       },
+       {
+        "id": "P6",
+        "left": "to get worse",
+        "right": "ухудшиться"
+       },
+       {
+        "id": "P7",
+        "left": "within a week",
+        "right": "в течение недели"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should call in sick if you have a fever.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to call yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must calling in sick last week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should call in sick if you have a fever.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если жар не пройдёт за три дня, обратитесь к врачу.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If the fever does not go within three days, you should see a doctor.",
+      "word_bank": [
+       "a",
+       "you",
+       "the",
+       "go",
+       "fever",
+       "see",
+       "days,",
+       "should",
+       "does",
+       "yesterday",
+       "within",
+       "not",
+       "If",
+       "three",
+       "did",
+       "went",
+       "doctor."
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you ___ medicine with food, it will not upset your stomach.",
+      "correct_answer": "take",
+      "options": [
+       "take",
+       "will take",
+       "took"
+      ],
+      "translation_hint": "Если принимать лекарство с едой, оно не будет раздражать желудок."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "drink",
+       "You",
+       "went",
+       "should",
+       "liquids.",
+       "and",
+       "plenty",
+       "of",
+       "rest",
+       "mustn't"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "rest",
+       "and",
+       "drink",
+       "plenty",
+       "of",
+       "liquids."
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you go to work with a fever, you will recover more slowly and may infect your colleagues.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you go to work with a fever, you will recover more slowly and may infect your colleagues.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если пойти на работу с жаром, выздоровление пойдёт медленнее, и можно заразить коллег."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Monday Fever",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "I feel awful, but the report is due today.",
+        "translation": "Мне ужасно плохо, но отчёт нужно сдать сегодня."
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "If you have a fever, you should call in sick.",
+        "translation": "Если у тебя жар, стоит взять больничный."
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna decide?",
+        "options": [
+         {
+          "text": "You are right — if I stay in bed, I will be back by Thursday.",
+          "is_correct": true
+         },
+         {
+          "text": "I will stayed in bed yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The report is having my fever.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to call in sick",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To phone work to say you are ill",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To arrive at work later than usual",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To cancel a meeting because of a holiday",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to call in sick” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If the symptoms ___ worse, call an ambulance.",
+      "audio_text": "If the symptoms get worse, call an ambulance.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "get",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will get",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "got",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “get”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should take the ___ twice a day.",
+      "correct_answer": "medicine",
+      "hint_prefix": "me",
+      "explanation": "The complete sentence is “You should take the medicine twice a day.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to stay in bed",
+        "text": "to stay in bed"
+       },
+       {
+        "id": "V2",
+        "audio_text": "fever",
+        "text": "fever"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to call in sick",
+        "text": "to call in sick"
+       },
+       {
+        "id": "V4",
+        "audio_text": "medicine",
+        "text": "medicine"
+       },
+       {
+        "id": "V5",
+        "audio_text": "rest",
+        "text": "rest"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_HEALTH_AND_FEELINGS_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "My headache has lasted two days."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "You should see a doctor — if it is a migraine, they can prescribe something stronger.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I saw one yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The headache is prescribing me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“You should see a doctor — if it is a migraine, they can prescribe something stronger.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

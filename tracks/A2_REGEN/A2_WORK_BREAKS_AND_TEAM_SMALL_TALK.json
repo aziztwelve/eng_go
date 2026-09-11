@@ -1,0 +1,1452 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK",
+  "title": {
+   "ru": "Перерывы и общение с коллегами",
+   "en": "Breaks and Team Small Talk"
+  },
+  "description": {
+   "ru": "Развивайте практический английский уровня A2 для работы по теме «Перерывы и общение с коллегами».",
+   "en": "Develop practical A2 workplace English for breaks and team small talk."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "work",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "work",
+   "breaks-and-team-small-talk"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L1",
+   "order": 1,
+   "title": {
+    "ru": "Новости с прошлой недели",
+    "en": "News From Last Week"
+   },
+   "objective": {
+    "ru": "Обсудить в перерыве прошедшие события, используя past simple и present perfect.",
+    "en": "Discuss recent events during a break using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to catch up",
+        "right": "обменяться новостями"
+       },
+       {
+        "id": "P2",
+        "left": "team lunch",
+        "right": "обед с командой"
+       },
+       {
+        "id": "P3",
+        "left": "already",
+        "right": "уже"
+       },
+       {
+        "id": "P4",
+        "left": "yet",
+        "right": "ещё"
+       },
+       {
+        "id": "P5",
+        "left": "to join",
+        "right": "присоединиться"
+       },
+       {
+        "id": "P6",
+        "left": "stressful",
+        "right": "напряжённый"
+       },
+       {
+        "id": "P7",
+        "left": "weekend",
+        "right": "выходные"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence is in the present perfect?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "I have already told the team about the change.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "I told the team about the change yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "I will tell the team about the change.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “I have already told the team about the change.”."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы уже обсудили новый график, но ещё не сказали об этом менеджеру.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We have already discussed the new schedule, but we have not told the manager yet.",
+      "word_bank": [
+       "will",
+       "new",
+       "discussed",
+       "not",
+       "schedule,",
+       "yesterday",
+       "did",
+       "We",
+       "yet.",
+       "manager",
+       "have",
+       "but",
+       "already",
+       "have",
+       "we",
+       "told",
+       "the",
+       "the"
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "We had a team lunch ___ Friday.",
+      "correct_answer": "last",
+      "options": [
+       "last",
+       "next",
+       "since"
+      ],
+      "translation_hint": "Мы обедали всей командой в прошлую пятницу."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "will",
+       "She",
+       "team",
+       "ago.",
+       "months",
+       "joined",
+       "never",
+       "two",
+       "our"
+      ],
+      "correct_words": [
+       "She",
+       "joined",
+       "our",
+       "team",
+       "two",
+       "months",
+       "ago."
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "Have you finished the report yet? We discussed it last week.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "Have you finished the report yet? We discussed it last week.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Ты уже закончил отчёт? Мы обсуждали его на прошлой неделе."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Monday Morning",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Maya",
+        "text": "Did you have a good weekend?",
+        "translation": "Как прошли твои выходные?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Ben",
+        "text": "Yes, I visited my parents. Have you seen the new coffee machine yet?",
+        "translation": "Да, я навестил родителей. Ты уже видел новую кофемашину?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Maya answer?",
+        "options": [
+         {
+          "text": "Not yet, but I have already made tea.",
+          "is_correct": true
+         },
+         {
+          "text": "Yes, I see it tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The coffee machine is on holiday.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "stressful",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Making you feel worried and tired",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Making you feel happy and relaxed",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Very cheap to buy",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“stressful” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have ___ joined the new project team.",
+      "audio_text": "I have just joined the new project team.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "just",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "yet",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "last week",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “just”."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She has worked here ___ 2021.",
+      "correct_answer": "since",
+      "hint_prefix": "si",
+      "explanation": "The complete sentence is “She has worked here since 2021.”."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to catch up",
+        "text": "to catch up"
+       },
+       {
+        "id": "V2",
+        "audio_text": "team lunch",
+        "text": "team lunch"
+       },
+       {
+        "id": "V3",
+        "audio_text": "already",
+        "text": "already"
+       },
+       {
+        "id": "V4",
+        "audio_text": "yet",
+        "text": "yet"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to join",
+        "text": "to join"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Have you had lunch yet?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Not yet, I have just finished a call.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, I eat lunch yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "Lunch is a meeting room.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Not yet, I have just finished a call.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L2",
+   "order": 2,
+   "title": {
+    "ru": "Планы на пятницу",
+    "en": "Friday Plans"
+   },
+   "objective": {
+    "ru": "Рассказать о планах и сравнить варианты, используя going to и сравнительные степени.",
+    "en": "Talk about plans and compare options using going to and comparatives."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to be going to",
+        "right": "собираться (что-то сделать)"
+       },
+       {
+        "id": "P2",
+        "left": "day off",
+        "right": "выходной день"
+       },
+       {
+        "id": "P3",
+        "left": "to invite",
+        "right": "пригласить"
+       },
+       {
+        "id": "P4",
+        "left": "birthday",
+        "right": "день рождения"
+       },
+       {
+        "id": "P5",
+        "left": "cake",
+        "right": "торт"
+       },
+       {
+        "id": "P6",
+        "left": "to order",
+        "right": "заказать"
+       },
+       {
+        "id": "P7",
+        "left": "than",
+        "right": "чем"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence talks about a future plan?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "We are going to order pizza for the team lunch.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "We ordered pizza for the team lunch.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "We have ordered pizza for the team lunch.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “We are going to order pizza for the team lunch.”."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы собираемся устроить обед побольше, чем в прошлый раз, потому что у Аны день рождения.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We are going to have a bigger lunch than last time because it is Ana's birthday.",
+      "word_bank": [
+       "because",
+       "time",
+       "lunch",
+       "is",
+       "a",
+       "to",
+       "bigger",
+       "will",
+       "birthday.",
+       "it",
+       "than",
+       "going",
+       "are",
+       "had",
+       "We",
+       "Ana's",
+       "have",
+       "last",
+       "did"
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "This Monday is ___ stressful than last Monday.",
+      "correct_answer": "less",
+      "options": [
+       "less",
+       "most",
+       "the"
+      ],
+      "translation_hint": "Этот понедельник менее напряжённый, чем прошлый."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "birthday",
+       "was",
+       "party.",
+       "going",
+       "to",
+       "am",
+       "I",
+       "whole",
+       "my",
+       "team",
+       "invite",
+       "to",
+       "the",
+       "did"
+      ],
+      "correct_words": [
+       "I",
+       "am",
+       "going",
+       "to",
+       "invite",
+       "the",
+       "whole",
+       "team",
+       "to",
+       "my",
+       "birthday",
+       "party."
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "Are you going to join us for coffee? This cafe is quieter than the one downstairs.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "Are you going to join us for coffee? This cafe is quieter than the one downstairs.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Ты пойдёшь с нами за кофе? Это кафе тише, чем то, что на первом этаже."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Friday Plans",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Ben",
+        "text": "Are you going to join the team lunch on Friday?",
+        "translation": "Ты присоединишься к обеду команды в пятницу?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Maya",
+        "text": "Yes, I am. Is it going to be at the Italian place again?",
+        "translation": "Да. Он снова будет в том итальянском месте?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Ben say?",
+        "options": [
+         {
+          "text": "No, we are going to try the new cafe this time.",
+          "is_correct": true
+         },
+         {
+          "text": "Yes, it is going to yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The lunch is eating a pizza.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to invite",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To ask someone to come to an event",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To tell someone to leave a place",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To pay for someone's meal",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to invite” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We are ___ to order a cake for Friday.",
+      "audio_text": "We are going to order a cake for Friday.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "going",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "went",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "gone",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “going”."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Friday is ___ than Monday for meetings.",
+      "correct_answer": "better",
+      "hint_prefix": "be",
+      "explanation": "The complete sentence is “Friday is better than Monday for meetings.”."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to be going to",
+        "text": "to be going to"
+       },
+       {
+        "id": "V2",
+        "audio_text": "day off",
+        "text": "day off"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to invite",
+        "text": "to invite"
+       },
+       {
+        "id": "V4",
+        "audio_text": "birthday",
+        "text": "birthday"
+       },
+       {
+        "id": "V5",
+        "audio_text": "cake",
+        "text": "cake"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Do you want to join our coffee break?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "I can't now, but I am going to join you in ten minutes.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I will joined you yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "Coffee is drinking me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“I can't now, but I am going to join you in ten minutes.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L3",
+   "order": 3,
+   "title": {
+    "ru": "Хороший совет",
+    "en": "Good Advice"
+   },
+   "objective": {
+    "ru": "Дать совет коллеге, используя should, must и первое условное наклонение.",
+    "en": "Give a colleague advice using should, must and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "should",
+        "right": "следует"
+       },
+       {
+        "id": "P2",
+        "left": "must",
+        "right": "должен (обязан)"
+       },
+       {
+        "id": "P3",
+        "left": "to relax",
+        "right": "расслабиться"
+       },
+       {
+        "id": "P4",
+        "left": "break",
+        "right": "перерыв"
+       },
+       {
+        "id": "P5",
+        "left": "to suggest",
+        "right": "предложить"
+       },
+       {
+        "id": "P6",
+        "left": "fresh air",
+        "right": "свежий воздух"
+       },
+       {
+        "id": "P7",
+        "left": "to feel tired",
+        "right": "чувствовать усталость"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives advice about breaks?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should take a short break every hour.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You must take a break yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You are taking a break every hour.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should take a short break every hour.”."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если ты будешь работать без перерывов, ты устанешь к обеду.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If you work without breaks, you will feel tired by lunchtime.",
+      "word_bank": [
+       "you",
+       "by",
+       "worked",
+       "will",
+       "work",
+       "tired",
+       "you",
+       "feel",
+       "yesterday",
+       "lunchtime.",
+       "without",
+       "did",
+       "breaks,",
+       "If"
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You ___ turn off your phone during the meeting — it is the rule.",
+      "correct_answer": "must",
+      "options": [
+       "must",
+       "might",
+       "would"
+      ],
+      "translation_hint": "Ты обязан выключить телефон на встрече — это правило."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "park",
+       "the",
+       "mustn't",
+       "a",
+       "lunch",
+       "walk",
+       "should",
+       "the",
+       "break.",
+       "for",
+       "We",
+       "went",
+       "during",
+       "in",
+       "go"
+      ],
+      "correct_words": [
+       "We",
+       "should",
+       "go",
+       "for",
+       "a",
+       "walk",
+       "in",
+       "the",
+       "park",
+       "during",
+       "the",
+       "lunch",
+       "break."
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If the weather is nice, we should have our coffee break outside.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If the weather is nice, we should have our coffee break outside.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если погода будет хорошей, нам стоит выпить кофе на улице."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "A Good Idea",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Maya",
+        "text": "You look tired today. Have you taken a break?",
+        "translation": "Ты выглядишь уставшим. Ты сегодня делал перерыв?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Ben",
+        "text": "No, I have been at my desk since nine.",
+        "translation": "Нет, я за столом с девяти."
+       },
+       {
+        "type": "choice",
+        "text": "What should Maya suggest?",
+        "options": [
+         {
+          "text": "You should take a short walk and get some fresh air.",
+          "is_correct": true
+         },
+         {
+          "text": "You must work faster and finish everything.",
+          "is_correct": false
+         },
+         {
+          "text": "You should to sleep in the office.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to suggest",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To offer an idea for other people to think about",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To say no to an idea politely",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To finish work earlier than usual",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to suggest” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If you ___ a break, you will feel better.",
+      "audio_text": "If you take a break, you will feel better.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "take",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will take",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "took",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “take”."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You ___ not use your phone in the meeting room.",
+      "correct_answer": "must",
+      "hint_prefix": "mu",
+      "explanation": "The complete sentence is “You must not use your phone in the meeting room.”."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "should",
+        "text": "should"
+       },
+       {
+        "id": "V2",
+        "audio_text": "must",
+        "text": "must"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to relax",
+        "text": "to relax"
+       },
+       {
+        "id": "V4",
+        "audio_text": "break",
+        "text": "break"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to suggest",
+        "text": "to suggest"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_WORK_BREAKS_AND_TEAM_SMALL_TALK_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "I always feel tired in the afternoon."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "You should take a short walk after lunch.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "You must to drink coffee all day.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "You should worked less yesterday.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“You should take a short walk after lunch.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

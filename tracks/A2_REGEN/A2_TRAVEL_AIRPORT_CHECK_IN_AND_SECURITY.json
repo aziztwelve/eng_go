@@ -1,0 +1,1441 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY",
+  "title": {
+   "ru": "Регистрация и контроль в аэропорту",
+   "en": "Airport Check-in and Security"
+  },
+  "description": {
+   "ru": "Развивайте английский для путешествий уровня A2 по теме «Регистрация и контроль в аэропорту».",
+   "en": "Develop A2 travel English for airport check-in and security."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "travel",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "travel",
+   "airport-check-in-and-security"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L1",
+   "order": 1,
+   "title": {
+    "ru": "Регистрация в аэропорту",
+    "en": "At the Check-in Desk"
+   },
+   "objective": {
+    "ru": "Рассказать о регистрации на рейс, используя past simple и present perfect.",
+    "en": "Talk about check-in using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "check-in desk",
+        "right": "стойка регистрации"
+       },
+       {
+        "id": "P2",
+        "left": "boarding pass",
+        "right": "посадочный талон"
+       },
+       {
+        "id": "P3",
+        "left": "luggage",
+        "right": "багаж"
+       },
+       {
+        "id": "P4",
+        "left": "to weigh",
+        "right": "взвесить"
+       },
+       {
+        "id": "P5",
+        "left": "aisle seat",
+        "right": "место у прохода"
+       },
+       {
+        "id": "P6",
+        "left": "overweight",
+        "right": "перевес (багажа)"
+       },
+       {
+        "id": "P7",
+        "left": "to print",
+        "right": "распечатать"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The airline has already changed our gate twice.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "The airline has changed the gate yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The airline change the gate already twice.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The airline has already changed our gate twice.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мой чемодан весил двадцать три килограмма, и я заплатил за перевес.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "My suitcase weighed twenty-three kilos, and I paid for the extra weight.",
+      "word_bank": [
+       "kilos,",
+       "weight.",
+       "paid",
+       "suitcase",
+       "and",
+       "extra",
+       "My",
+       "weighs",
+       "the",
+       "weighed",
+       "I",
+       "tomorrow",
+       "did",
+       "for",
+       "twenty-three"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She ___ in online and printed the boarding pass at home.",
+      "correct_answer": "checked",
+      "options": [
+       "checked",
+       "has check",
+       "checking"
+      ],
+      "translation_hint": "Она зарегистрировалась онлайн и распечатала посадочный талон дома."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "was",
+       "We",
+       "already",
+       "passed",
+       "security.",
+       "did",
+       "through",
+       "have"
+      ],
+      "correct_words": [
+       "We",
+       "have",
+       "already",
+       "passed",
+       "through",
+       "security."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "I have checked in online, but the desk has printed a different seat for me.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "I have checked in online, but the desk has printed a different seat for me.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Я зарегистрировался онлайн, но на стойке мне распечатали другое место."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Overweight Suitcase",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Agent",
+        "text": "Good morning. May I see your passport, please?",
+        "translation": "Доброе утро. Можно ваш паспорт?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Traveller",
+        "text": "Here it is. Is the flight on time?",
+        "translation": "Вот, пожалуйста. Рейс по расписанию?"
+       },
+       {
+        "type": "choice",
+        "text": "What does the agent say next?",
+        "options": [
+         {
+          "text": "Yes, it is. Your suitcase is two kilos overweight, I'm afraid.",
+          "is_correct": true
+         },
+         {
+          "text": "Yes, it was overweight yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The suitcase is flying itself.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "boarding pass",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The document that lets you get on a plane",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A ticket you buy at a museum entrance",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A passport photo you carry separately",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“boarding pass” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have ___ in for the evening flight.",
+      "audio_text": "I have checked in for the evening flight.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "checked",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "check",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "checking",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “checked”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She has chosen an ___ seat.",
+      "correct_answer": "aisle",
+      "hint_prefix": "ai",
+      "explanation": "The complete sentence is “She has chosen an aisle seat.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "check-in desk",
+        "text": "check-in desk"
+       },
+       {
+        "id": "V2",
+        "audio_text": "boarding pass",
+        "text": "boarding pass"
+       },
+       {
+        "id": "V3",
+        "audio_text": "luggage",
+        "text": "luggage"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to weigh",
+        "text": "to weigh"
+       },
+       {
+        "id": "V5",
+        "audio_text": "aisle seat",
+        "text": "aisle seat"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Agent",
+        "text": "Would you like a window or an aisle seat?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "An aisle seat, please — I have already travelled with a window seat twice.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "A window seat, I take it tomorrow yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The seat is choosing me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“An aisle seat, please — I have already travelled with a window seat twice.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L2",
+   "order": 2,
+   "title": {
+    "ru": "Завтра вылетаем",
+    "en": "Flying Out Tomorrow"
+   },
+   "objective": {
+    "ru": "Обсудить подготовку к вылету, используя формы будущего и сравнения.",
+    "en": "Discuss departure preparations using future forms and comparatives."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "departure time",
+        "right": "время вылета"
+       },
+       {
+        "id": "P2",
+        "left": "to arrive in advance",
+        "right": "приехать заранее"
+       },
+       {
+        "id": "P3",
+        "left": "earlier",
+        "right": "раньше"
+       },
+       {
+        "id": "P4",
+        "left": "hand luggage",
+        "right": "ручная кладь"
+       },
+       {
+        "id": "P5",
+        "left": "security rules",
+        "right": "правила безопасности"
+       },
+       {
+        "id": "P6",
+        "left": "liquid",
+        "right": "жидкость"
+       },
+       {
+        "id": "P7",
+        "left": "faster",
+        "right": "быстрее"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence talks about a future plan?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "We are going to leave for the airport at six tomorrow.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "We left for the airport at six yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "We has left at six tomorrow already.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “We are going to leave for the airport at six tomorrow.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы приедем в аэропорт заранее, потому что утром контроль безопасности дольше.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We are going to arrive at the airport in advance because security takes longer in the morning.",
+      "word_bank": [
+       "morning.",
+       "airport",
+       "advance",
+       "because",
+       "did",
+       "to",
+       "longer",
+       "in",
+       "the",
+       "We",
+       "in",
+       "at",
+       "the",
+       "takes",
+       "arrived",
+       "arrive",
+       "are",
+       "going",
+       "security",
+       "yesterday"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Travelling with hand luggage only is ___ than checking in a suitcase.",
+      "correct_answer": "quicker",
+      "options": [
+       "quicker",
+       "quickest",
+       "more quick"
+      ],
+      "translation_hint": "Путешествовать только с ручной кладью быстрее, чем сдавать чемодан."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "all",
+       "transparent",
+       "bag.",
+       "to",
+       "did",
+       "put",
+       "I",
+       "going",
+       "am",
+       "liquids",
+       "was",
+       "into",
+       "the"
+      ],
+      "correct_words": [
+       "I",
+       "am",
+       "going",
+       "to",
+       "put",
+       "all",
+       "liquids",
+       "into",
+       "the",
+       "transparent",
+       "bag."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If we arrive two hours before departure, we will have time for a coffee after security.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If we arrive two hours before departure, we will have time for a coffee after security.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если приехать за два часа до вылета, останется время на кофе после контроля."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Morning Plans",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "What time are we leaving for the airport tomorrow?",
+        "translation": "Во сколько завтра выезжаем в аэропорт?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "The taxi is coming at six — the flight leaves at half past eight.",
+        "translation": "Такси приедет в шесть — рейс в восемь тридцать."
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna ask?",
+        "options": [
+         {
+          "text": "Is two and a half hours enough for this airport?",
+          "is_correct": true
+         },
+         {
+          "text": "Did two hours were enough yesterday?",
+          "is_correct": false
+         },
+         {
+          "text": "Is the taxi flying with us tomorrow?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "hand luggage",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The small bag you can take onto the plane",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "The big suitcase you give at the check-in desk",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A bag the airline lost last month",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“hand luggage” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We are ___ to check in online tonight.",
+      "audio_text": "We are going to check in online tonight.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "going",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "went",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "gone",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “going”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Online check-in is ___ than the desk.",
+      "correct_answer": "faster",
+      "hint_prefix": "fa",
+      "explanation": "The complete sentence is “Online check-in is faster than the desk.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "departure time",
+        "text": "departure time"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to arrive in advance",
+        "text": "to arrive in advance"
+       },
+       {
+        "id": "V3",
+        "audio_text": "earlier",
+        "text": "earlier"
+       },
+       {
+        "id": "V4",
+        "audio_text": "hand luggage",
+        "text": "hand luggage"
+       },
+       {
+        "id": "V5",
+        "audio_text": "security rules",
+        "text": "security rules"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Do we need to print the boarding passes?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "No — if we check in on the app, the mobile pass will be enough.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, I printed them yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The passes are printing us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“No — if we check in on the app, the mobile pass will be enough.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L3",
+   "order": 3,
+   "title": {
+    "ru": "На контроле безопасности",
+    "en": "At the Security Check"
+   },
+   "objective": {
+    "ru": "Объяснить правила досмотра, используя should и первое условное.",
+    "en": "Explain security rules using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to take out",
+        "right": "достать"
+       },
+       {
+        "id": "P2",
+        "left": "belt",
+        "right": "ремень"
+       },
+       {
+        "id": "P3",
+        "left": "tray",
+        "right": "лоток"
+       },
+       {
+        "id": "P4",
+        "left": "scanner",
+        "right": "сканер"
+       },
+       {
+        "id": "P5",
+        "left": "to beep",
+        "right": "запищать"
+       },
+       {
+        "id": "P6",
+        "left": "sharp objects",
+        "right": "острые предметы"
+       },
+       {
+        "id": "P7",
+        "left": "to remove",
+        "right": "снять"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence expresses a rule at security?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You must take your laptop out of the bag.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You must to take it out yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You musts take it out last week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You must take your laptop out of the bag.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если у вас в багаже окажутся острые предметы, их заберут на контроле.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If there are sharp objects in your luggage, they will be taken away at the check.",
+      "word_bank": [
+       "are",
+       "there",
+       "luggage,",
+       "objects",
+       "was",
+       "they",
+       "at",
+       "your",
+       "away",
+       "yesterday",
+       "If",
+       "check.",
+       "will",
+       "sharp",
+       "be",
+       "the",
+       "did",
+       "taken",
+       "in"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If the scanner ___, the officer will check you again.",
+      "correct_answer": "beeps",
+      "options": [
+       "beeps",
+       "will beep",
+       "beeped"
+      ],
+      "translation_hint": "Если сканер запищит, сотрудник проверит вас ещё раз."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "remove",
+       "scanner.",
+       "went",
+       "belt",
+       "the",
+       "You",
+       "mustn't",
+       "should",
+       "before",
+       "your"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "remove",
+       "your",
+       "belt",
+       "before",
+       "the",
+       "scanner."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you take out your laptop and liquids first, you will pass through security much faster.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you take out your laptop and liquids first, you will pass through security much faster.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если сначала достать ноутбук и жидкости, вы пройдете контроль гораздо быстрее."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Beeping Scanner",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Officer",
+        "text": "Please put your bag in the tray and take out your laptop.",
+        "translation": "Пожалуйста, положите сумку в лоток и достаньте ноутбук."
+       },
+       {
+        "type": "dialogue",
+        "character": "Traveller",
+        "text": "Sorry, I forgot about the liquids in my pocket.",
+        "translation": "Извините, я забыл про жидкости в кармане."
+       },
+       {
+        "type": "choice",
+        "text": "What does the officer say?",
+        "options": [
+         {
+          "text": "That's fine, but next time you should check your pockets first.",
+          "is_correct": true
+         },
+         {
+          "text": "You must checking your pockets yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The pocket is beeping the liquids.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "tray",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A plastic box where you put your things at security",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A seat next to the window on the plane",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A shop in the departure area",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“tray” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If the machine ___, step aside, please.",
+      "audio_text": "If the machine beeps, step aside, please.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "beeps",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will beep",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "beeped",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “beeps”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You must remove ___ objects from hand luggage.",
+      "correct_answer": "sharp",
+      "hint_prefix": "sh",
+      "explanation": "The complete sentence is “You must remove sharp objects from hand luggage.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to take out",
+        "text": "to take out"
+       },
+       {
+        "id": "V2",
+        "audio_text": "belt",
+        "text": "belt"
+       },
+       {
+        "id": "V3",
+        "audio_text": "tray",
+        "text": "tray"
+       },
+       {
+        "id": "V4",
+        "audio_text": "scanner",
+        "text": "scanner"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to beep",
+        "text": "to beep"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_AIRPORT_CHECK_IN_AND_SECURITY_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Officer",
+        "text": "Do you have any liquids in your bag?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Only a small one — if it is under one hundred millilitres, it will be fine, won't it?",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, I have it tomorrow yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The liquids are checking me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Only a small one — if it is under one hundred millilitres, it will be fine, won't it?” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

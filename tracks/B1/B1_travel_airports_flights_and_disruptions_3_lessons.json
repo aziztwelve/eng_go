@@ -1,0 +1,1406 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS",
+    "title": {
+      "ru": "Аэропорты, рейсы и сбои",
+      "en": "Airports, Flights and Disruptions"
+    },
+    "description": {
+      "ru": "Развивайте английский для путешествий уровня B1 по теме «Аэропорты, рейсы и сбои».",
+      "en": "Develop B1 travel English for airports, flights and disruptions."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "B1",
+    "goal": "travel",
+    "track_type": "thematic",
+    "tags": [
+      "B1",
+      "travel",
+      "airports-flights-and-disruptions"
+    ]
+  },
+  "lessons": [
+    {
+      "code": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1",
+      "order": 1,
+      "title": {
+        "ru": "Планирование и ключевые детали",
+        "en": "Airport Procedures"
+      },
+      "objective": {
+        "ru": "Использовать английский уровня B1 для планирования поездок, решения неожиданных проблем и объяснения рекомендаций.",
+        "en": "Use B1 English to plan journeys, solve unexpected travel problems, and explain recommendations."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T01",
+                "left": "boarding pass",
+                "right": "посадочный талон"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T02",
+                "left": "departure gate",
+                "right": "выход на посадку"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T03",
+                "left": "delayed",
+                "right": "задержанный"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T04",
+                "left": "cancelled",
+                "right": "отменённый"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T05",
+                "left": "rebook",
+                "right": "перебронировать"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T06",
+                "left": "compensation",
+                "right": "компенсация"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T07",
+                "left": "announcement",
+                "right": "объявление"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Which option best communicates the travel situation?",
+            "options": [
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T08",
+                "text": "The departure gate printed on my boarding pass changed shortly before boarding began.",
+                "is_correct": true
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T09",
+                "text": "No travel detail or reason is relevant to the situation.",
+                "is_correct": false
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T10",
+                "text": "The opposite event happened without any supporting information.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct response accurately connects the main travel detail with its reason, contrast, or consequence."
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Выход на посадку, указанный в моём посадочном талоне, изменился незадолго до начала посадки.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "The departure gate printed on my boarding pass changed shortly before boarding began.",
+            "word_bank": [
+              "The",
+              "departure",
+              "gate",
+              "printed",
+              "on",
+              "my",
+              "boarding",
+              "pass",
+              "changed",
+              "shortly",
+              "before",
+              "boarding",
+              "began."
+            ]
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "The departure gate printed on my ___ changed shortly before boarding began.",
+            "correct_answer": "boarding pass",
+            "options": [
+              "boarding pass",
+              "cancelled",
+              "compensation"
+            ]
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "began.",
+              "boarding",
+              "before",
+              "shortly",
+              "changed",
+              "pass",
+              "boarding",
+              "my",
+              "on",
+              "printed",
+              "gate",
+              "departure",
+              "The"
+            ],
+            "correct_words": [
+              "The",
+              "departure",
+              "gate",
+              "printed",
+              "on",
+              "my",
+              "boarding",
+              "pass",
+              "changed",
+              "shortly",
+              "before",
+              "boarding",
+              "began."
+            ]
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "The departure gate printed on my boarding pass changed shortly before boarding began. The traveller then compared the available options before deciding what to do next.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "The departure gate printed on my boarding pass changed shortly before boarding began. The traveller then compared the available options before deciding what to do next. Listen for the sequence, contrast and stressed travel details, then repeat the complete passage.",
+            "language": "en",
+            "min_accuracy": 0.76,
+            "translation_hint": "Выход на посадку, указанный в моём посадочном талоне, изменился незадолго до начала посадки. Затем путешественник сравнил доступные варианты, прежде чем решить, что делать дальше. Слушайте последовательность, противопоставление и выделенные детали поездки, затем повторите весь отрывок."
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Airport Procedures",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Traveller",
+                "text": "The departure gate printed on my boarding pass changed shortly before boarding began.",
+                "translation": "Выход на посадку, указанный в моём посадочном талоне, изменился незадолго до начала посадки."
+              },
+              {
+                "type": "dialogue",
+                "character": "Assistant",
+                "text": "Let us compare the available options before choosing a solution.",
+                "translation": "Давайте сравним доступные варианты, прежде чем выбрать решение."
+              },
+              {
+                "type": "choice",
+                "text": "Which response continues naturally?",
+                "options": [
+                  {
+                    "text": "That makes sense; we should also confirm the cost and timing.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "The details do not matter and no solution is necessary.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "boarding pass",
+            "language": "en",
+            "options": [
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T11",
+                "text": "a document allowing a passenger to board",
+                "is_correct": true
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T12",
+                "text": "the airport location where boarding begins",
+                "is_correct": false
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T13",
+                "text": "happening later than planned",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“boarding pass” means a document allowing a passenger to board."
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "The departure gate printed on my ___ changed shortly before boarding began.",
+            "audio_text": "The departure gate printed on my boarding pass changed shortly before boarding began.",
+            "language": "en",
+            "options": [
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T14",
+                "audio_text": "boarding pass",
+                "is_correct": true
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T15",
+                "audio_text": "delayed",
+                "is_correct": false
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T16",
+                "audio_text": "rebook",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing travel expression is “boarding pass”."
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "The departure gate printed on my ___ changed shortly before boarding began.",
+            "correct_answer": "boarding pass",
+            "hint_prefix": "boa",
+            "explanation": "The sentence requires “boarding pass” to express the intended travel meaning."
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T17",
+                "audio_text": "boarding pass",
+                "text": "boarding pass"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T18",
+                "audio_text": "departure gate",
+                "text": "departure gate"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T19",
+                "audio_text": "delayed",
+                "text": "delayed"
+              }
+            ],
+            "explanation": "Match each B1 travel expression you hear with its written form."
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Companion",
+                "text": "How should we handle “Airport Procedures”?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T20",
+                "text": "The departure gate printed on my boarding pass changed shortly before boarding began.",
+                "is_correct": true
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T21",
+                "text": "We should ignore all details and avoid making a decision.",
+                "is_correct": false
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L1_T22",
+                "text": "This response is unrelated to the travel situation.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct response explains the travel situation clearly and supports a practical action or recommendation."
+          }
+        }
+      ]
+    },
+    {
+      "code": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2",
+      "order": 2,
+      "title": {
+        "ru": "Неожиданная ситуация",
+        "en": "Flight Changes"
+      },
+      "objective": {
+        "ru": "Использовать английский уровня B1 для планирования поездок, решения неожиданных проблем и объяснения рекомендаций.",
+        "en": "Use B1 English to plan journeys, solve unexpected travel problems, and explain recommendations."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T01",
+                "left": "boarding pass",
+                "right": "посадочный талон"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T02",
+                "left": "departure gate",
+                "right": "выход на посадку"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T03",
+                "left": "delayed",
+                "right": "задержанный"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T04",
+                "left": "cancelled",
+                "right": "отменённый"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T05",
+                "left": "rebook",
+                "right": "перебронировать"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T06",
+                "left": "compensation",
+                "right": "компенсация"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T07",
+                "left": "announcement",
+                "right": "объявление"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Which option best communicates the travel situation?",
+            "options": [
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T08",
+                "text": "Because the flight was cancelled rather than delayed, the airline rebooked us for the following morning.",
+                "is_correct": true
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T09",
+                "text": "No travel detail or reason is relevant to the situation.",
+                "is_correct": false
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T10",
+                "text": "The opposite event happened without any supporting information.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct response accurately connects the main travel detail with its reason, contrast, or consequence."
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Поскольку рейс был отменён, а не задержан, авиакомпания перебронировала нас на следующее утро.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Because the flight was cancelled rather than delayed, the airline rebooked us for the following morning.",
+            "word_bank": [
+              "Because",
+              "the",
+              "flight",
+              "was",
+              "cancelled",
+              "rather",
+              "than",
+              "delayed,",
+              "the",
+              "airline",
+              "rebooked",
+              "us",
+              "for",
+              "the",
+              "following",
+              "morning."
+            ]
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Because the flight was cancelled rather than delayed, the airline rebooked us for the following morning.",
+            "correct_answer": "departure gate",
+            "options": [
+              "departure gate",
+              "rebook",
+              "announcement"
+            ]
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "morning.",
+              "following",
+              "the",
+              "for",
+              "us",
+              "rebooked",
+              "airline",
+              "the",
+              "delayed,",
+              "than",
+              "rather",
+              "cancelled",
+              "was",
+              "flight",
+              "the",
+              "Because"
+            ],
+            "correct_words": [
+              "Because",
+              "the",
+              "flight",
+              "was",
+              "cancelled",
+              "rather",
+              "than",
+              "delayed,",
+              "the",
+              "airline",
+              "rebooked",
+              "us",
+              "for",
+              "the",
+              "following",
+              "morning."
+            ]
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Because the flight was cancelled rather than delayed, the airline rebooked us for the following morning. The traveller then compared the available options before deciding what to do next.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Because the flight was cancelled rather than delayed, the airline rebooked us for the following morning. The traveller then compared the available options before deciding what to do next. Listen for the sequence, contrast and stressed travel details, then repeat the complete passage.",
+            "language": "en",
+            "min_accuracy": 0.76,
+            "translation_hint": "Поскольку рейс был отменён, а не задержан, авиакомпания перебронировала нас на следующее утро. Затем путешественник сравнил доступные варианты, прежде чем решить, что делать дальше. Слушайте последовательность, противопоставление и выделенные детали поездки, затем повторите весь отрывок."
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Flight Changes",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Traveller",
+                "text": "Because the flight was cancelled rather than delayed, the airline rebooked us for the following morning.",
+                "translation": "Поскольку рейс был отменён, а не задержан, авиакомпания перебронировала нас на следующее утро."
+              },
+              {
+                "type": "dialogue",
+                "character": "Assistant",
+                "text": "Let us compare the available options before choosing a solution.",
+                "translation": "Давайте сравним доступные варианты, прежде чем выбрать решение."
+              },
+              {
+                "type": "choice",
+                "text": "Which response continues naturally?",
+                "options": [
+                  {
+                    "text": "That makes sense; we should also confirm the cost and timing.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "The details do not matter and no solution is necessary.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "departure gate",
+            "language": "en",
+            "options": [
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T11",
+                "text": "the airport location where boarding begins",
+                "is_correct": true
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T12",
+                "text": "happening later than planned",
+                "is_correct": false
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T13",
+                "text": "officially stopped from happening",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“departure gate” means the airport location where boarding begins."
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "Because the flight was cancelled rather than delayed, the airline rebooked us for the following morning.",
+            "audio_text": "Because the flight was cancelled rather than delayed, the airline rebooked us for the following morning.",
+            "language": "en",
+            "options": [
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T14",
+                "audio_text": "departure gate",
+                "is_correct": true
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T15",
+                "audio_text": "cancelled",
+                "is_correct": false
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T16",
+                "audio_text": "compensation",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing travel expression is “departure gate”."
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Because the flight was cancelled rather than delayed, the airline rebooked us for the following morning.",
+            "correct_answer": "departure gate",
+            "hint_prefix": "dep",
+            "explanation": "The sentence requires “departure gate” to express the intended travel meaning."
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T17",
+                "audio_text": "boarding pass",
+                "text": "boarding pass"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T18",
+                "audio_text": "departure gate",
+                "text": "departure gate"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T19",
+                "audio_text": "delayed",
+                "text": "delayed"
+              }
+            ],
+            "explanation": "Match each B1 travel expression you hear with its written form."
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Companion",
+                "text": "How should we handle “Flight Changes”?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T20",
+                "text": "Because the flight was cancelled rather than delayed, the airline rebooked us for the following morning.",
+                "is_correct": true
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T21",
+                "text": "We should ignore all details and avoid making a decision.",
+                "is_correct": false
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L2_T22",
+                "text": "This response is unrelated to the travel situation.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct response explains the travel situation clearly and supports a practical action or recommendation."
+          }
+        }
+      ]
+    },
+    {
+      "code": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3",
+      "order": 3,
+      "title": {
+        "ru": "Решение и рекомендация",
+        "en": "Handling a Disruption"
+      },
+      "objective": {
+        "ru": "Использовать английский уровня B1 для планирования поездок, решения неожиданных проблем и объяснения рекомендаций.",
+        "en": "Use B1 English to plan journeys, solve unexpected travel problems, and explain recommendations."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T01",
+                "left": "boarding pass",
+                "right": "посадочный талон"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T02",
+                "left": "departure gate",
+                "right": "выход на посадку"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T03",
+                "left": "delayed",
+                "right": "задержанный"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T04",
+                "left": "cancelled",
+                "right": "отменённый"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T05",
+                "left": "rebook",
+                "right": "перебронировать"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T06",
+                "left": "compensation",
+                "right": "компенсация"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T07",
+                "left": "announcement",
+                "right": "объявление"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Which option best communicates the travel situation?",
+            "options": [
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T08",
+                "text": "The announcement explained how passengers could request accommodation and possible compensation.",
+                "is_correct": true
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T09",
+                "text": "No travel detail or reason is relevant to the situation.",
+                "is_correct": false
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T10",
+                "text": "The opposite event happened without any supporting information.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct response accurately connects the main travel detail with its reason, contrast, or consequence."
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "В объявлении объяснялось, как пассажиры могут запросить проживание и возможную компенсацию.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "The announcement explained how passengers could request accommodation and possible compensation.",
+            "word_bank": [
+              "The",
+              "announcement",
+              "explained",
+              "how",
+              "passengers",
+              "could",
+              "request",
+              "accommodation",
+              "and",
+              "possible",
+              "compensation."
+            ]
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "The announcement explained how passengers could request accommodation and possible compensation.",
+            "correct_answer": "delayed",
+            "options": [
+              "delayed",
+              "compensation",
+              "boarding pass"
+            ]
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "compensation.",
+              "possible",
+              "and",
+              "accommodation",
+              "request",
+              "could",
+              "passengers",
+              "how",
+              "explained",
+              "announcement",
+              "The"
+            ],
+            "correct_words": [
+              "The",
+              "announcement",
+              "explained",
+              "how",
+              "passengers",
+              "could",
+              "request",
+              "accommodation",
+              "and",
+              "possible",
+              "compensation."
+            ]
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "The announcement explained how passengers could request accommodation and possible compensation. The traveller then compared the available options before deciding what to do next.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "The announcement explained how passengers could request accommodation and possible compensation. The traveller then compared the available options before deciding what to do next. Listen for the sequence, contrast and stressed travel details, then repeat the complete passage.",
+            "language": "en",
+            "min_accuracy": 0.76,
+            "translation_hint": "В объявлении объяснялось, как пассажиры могут запросить проживание и возможную компенсацию. Затем путешественник сравнил доступные варианты, прежде чем решить, что делать дальше. Слушайте последовательность, противопоставление и выделенные детали поездки, затем повторите весь отрывок."
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Handling a Disruption",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Traveller",
+                "text": "The announcement explained how passengers could request accommodation and possible compensation.",
+                "translation": "В объявлении объяснялось, как пассажиры могут запросить проживание и возможную компенсацию."
+              },
+              {
+                "type": "dialogue",
+                "character": "Assistant",
+                "text": "Let us compare the available options before choosing a solution.",
+                "translation": "Давайте сравним доступные варианты, прежде чем выбрать решение."
+              },
+              {
+                "type": "choice",
+                "text": "Which response continues naturally?",
+                "options": [
+                  {
+                    "text": "That makes sense; we should also confirm the cost and timing.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "The details do not matter and no solution is necessary.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "delayed",
+            "language": "en",
+            "options": [
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T11",
+                "text": "happening later than planned",
+                "is_correct": true
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T12",
+                "text": "officially stopped from happening",
+                "is_correct": false
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T13",
+                "text": "book a different service after a change",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“delayed” means happening later than planned."
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "The announcement explained how passengers could request accommodation and possible compensation.",
+            "audio_text": "The announcement explained how passengers could request accommodation and possible compensation.",
+            "language": "en",
+            "options": [
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T14",
+                "audio_text": "delayed",
+                "is_correct": true
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T15",
+                "audio_text": "rebook",
+                "is_correct": false
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T16",
+                "audio_text": "announcement",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing travel expression is “delayed”."
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "The announcement explained how passengers could request accommodation and possible compensation.",
+            "correct_answer": "delayed",
+            "hint_prefix": "del",
+            "explanation": "The sentence requires “delayed” to express the intended travel meaning."
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T17",
+                "audio_text": "boarding pass",
+                "text": "boarding pass"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T18",
+                "audio_text": "departure gate",
+                "text": "departure gate"
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T19",
+                "audio_text": "delayed",
+                "text": "delayed"
+              }
+            ],
+            "explanation": "Match each B1 travel expression you hear with its written form."
+          }
+        },
+        {
+          "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Companion",
+                "text": "How should we handle “Handling a Disruption”?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T20",
+                "text": "The announcement explained how passengers could request accommodation and possible compensation.",
+                "is_correct": true
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T21",
+                "text": "We should ignore all details and avoid making a decision.",
+                "is_correct": false
+              },
+              {
+                "id": "B1_TRAVEL_AIRPORTS_FLIGHTS_AND_DISRUPTIONS_L3_T22",
+                "text": "This response is unrelated to the travel situation.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct response explains the travel situation clearly and supports a practical action or recommendation."
+          }
+        }
+      ]
+    }
+  ]
+}

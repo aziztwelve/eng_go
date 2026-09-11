@@ -1,0 +1,1447 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES",
+  "title": {
+   "ru": "Билеты, бронирование и изменения",
+   "en": "Tickets, Bookings and Changes"
+  },
+  "description": {
+   "ru": "Развивайте английский для путешествий уровня A2 по теме «Билеты, бронирование и изменения».",
+   "en": "Develop A2 travel English for tickets, bookings and changes."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "travel",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "travel",
+   "tickets-bookings-and-changes"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L1",
+   "order": 1,
+   "title": {
+    "ru": "Как мы бронировали",
+    "en": "How We Booked"
+   },
+   "objective": {
+    "ru": "Рассказать о бронированиях, используя past simple и present perfect.",
+    "en": "Talk about bookings using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to book online",
+        "right": "забронировать онлайн"
+       },
+       {
+        "id": "P2",
+        "left": "confirmation email",
+        "right": "письмо-подтверждение"
+       },
+       {
+        "id": "P3",
+        "left": "non-refundable",
+        "right": "невозвратный"
+       },
+       {
+        "id": "P4",
+        "left": "to reserve",
+        "right": "зарезервировать"
+       },
+       {
+        "id": "P5",
+        "left": "seat reservation",
+        "right": "бронь места"
+       },
+       {
+        "id": "P6",
+        "left": "booking reference",
+        "right": "код бронирования"
+       },
+       {
+        "id": "P7",
+        "left": "straight away",
+        "right": "сразу же"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The hotel has sent the confirmation email already.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "The hotel has sent it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The hotel send the email already now.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The hotel has sent the confirmation email already.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я забронировал билеты сразу же, потому что цена выросла на следующий день.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I booked the tickets straight away because the price went up the next day.",
+      "word_bank": [
+       "went",
+       "next",
+       "tickets",
+       "price",
+       "because",
+       "booked",
+       "the",
+       "day.",
+       "the",
+       "up",
+       "away",
+       "straight",
+       "I",
+       "the",
+       "did",
+       "tomorrow",
+       "book"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "We reserved the seats a month ___ .",
+      "correct_answer": "ago",
+      "options": [
+       "ago",
+       "since",
+       "before"
+      ],
+      "translation_hint": "Мы забронировали места месяц назад."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "did",
+       "received",
+       "email.",
+       "She",
+       "by",
+       "reference",
+       "the",
+       "booking",
+       "has",
+       "was"
+      ],
+      "correct_words": [
+       "She",
+       "has",
+       "received",
+       "the",
+       "booking",
+       "reference",
+       "by",
+       "email."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "I have printed all the confirmation emails, but the booking reference has not arrived yet.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "I have printed all the confirmation emails, but the booking reference has not arrived yet.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Я распечатал все подтверждения, но код бронирования ещё не пришёл."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Vanishing Price",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "I booked the flight this morning for two hundred euros.",
+        "translation": "Я забронировала рейс сегодня утром за двести евро."
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "The same flight now costs two hundred and sixty. When did the price change?",
+        "translation": "Тот же рейс теперь стоит двести шестьдесят. Когда цена изменилась?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna say?",
+        "options": [
+         {
+          "text": "About an hour after my booking — I have saved sixty euros.",
+          "is_correct": true
+         },
+         {
+          "text": "Tomorrow, an hour ago yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The price is booking the flight.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "non-refundable",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "That cannot be cancelled for money back",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Easy to change to another date for free",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Paid for at the hotel on arrival",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“non-refundable” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have ___ two seats for the night train.",
+      "audio_text": "I have reserved two seats for the night train.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "reserved",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "reserve",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "reserving",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “reserved”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Have you received the ___ email?",
+      "correct_answer": "confirmation",
+      "hint_prefix": "co",
+      "explanation": "The complete sentence is “Have you received the confirmation email?”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to book online",
+        "text": "to book online"
+       },
+       {
+        "id": "V2",
+        "audio_text": "confirmation email",
+        "text": "confirmation email"
+       },
+       {
+        "id": "V3",
+        "audio_text": "non-refundable",
+        "text": "non-refundable"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to reserve",
+        "text": "to reserve"
+       },
+       {
+        "id": "V5",
+        "audio_text": "seat reservation",
+        "text": "seat reservation"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Agent",
+        "text": "Do you have your booking reference?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes, here it is — I have also brought the confirmation email, just in case.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, I have it tomorrow yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The reference is booking me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes, here it is — I have also brought the confirmation email, just in case.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L2",
+   "order": 2,
+   "title": {
+    "ru": "Меняем бронирование",
+    "en": "Changing a Booking"
+   },
+   "objective": {
+    "ru": "Изменить бронирование и сравнить тарифы.",
+    "en": "Change a booking and compare fares."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to change a booking",
+        "right": "изменить бронь"
+       },
+       {
+        "id": "P2",
+        "left": "flexible fare",
+        "right": "гибкий тариф"
+       },
+       {
+        "id": "P3",
+        "left": "change fee",
+        "right": "сбор за изменение"
+       },
+       {
+        "id": "P4",
+        "left": "more expensive",
+        "right": "дороже"
+       },
+       {
+        "id": "P5",
+        "left": "to upgrade",
+        "right": "улучшить (тариф/класс)"
+       },
+       {
+        "id": "P6",
+        "left": "availability",
+        "right": "наличие мест"
+       },
+       {
+        "id": "P7",
+        "left": "to rebook",
+        "right": "перебронировать"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two fares correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The flexible fare is more expensive than the basic one.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "The flexible fare is expensiver than basic.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The flexible fare is most expensive than basic.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The flexible fare is more expensive than the basic one.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы собираемся изменить дату — гибкий тариф стоит дороже, но без сбора за изменение.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We are going to change the date — the flexible fare is more expensive, but there is no change fee.",
+      "word_bank": [
+       "but",
+       "change",
+       "are",
+       "to",
+       "more",
+       "did",
+       "We",
+       "the",
+       "no",
+       "going",
+       "expensive,",
+       "the",
+       "fee.",
+       "is",
+       "is",
+       "change",
+       "flexible",
+       "changed",
+       "yesterday",
+       "date",
+       "—",
+       "there",
+       "fare"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The basic fare has a change ___ of thirty euros.",
+      "correct_answer": "fee",
+      "options": [
+       "fee",
+       "fees",
+       "feeing"
+      ],
+      "translation_hint": "У базового тарифа сбор за изменение — тридцать евро."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "going",
+       "rebook",
+       "are",
+       "the",
+       "did",
+       "us",
+       "to",
+       "They",
+       "morning",
+       "flight.",
+       "on",
+       "was"
+      ],
+      "correct_words": [
+       "They",
+       "are",
+       "going",
+       "to",
+       "rebook",
+       "us",
+       "on",
+       "the",
+       "morning",
+       "flight."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you upgrade to the flexible fare now, any future change will cost you nothing extra.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you upgrade to the flexible fare now, any future change will cost you nothing extra.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если перейти на гибкий тариф сейчас, любое будущее изменение будет бесплатным."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Date Change",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Customer",
+        "text": "I need to move my ticket from Friday to Sunday.",
+        "translation": "Мне нужно перенести билет с пятницы на воскресенье."
+       },
+       {
+        "type": "dialogue",
+        "character": "Agent",
+        "text": "There is availability, but the basic fare has a change fee.",
+        "translation": "Места есть, но у базового тарифа сбор за изменение."
+       },
+       {
+        "type": "choice",
+        "text": "What does the customer ask?",
+        "options": [
+         {
+          "text": "How much is the fee, and is the flexible fare still cheaper than a new ticket?",
+          "is_correct": true
+         },
+         {
+          "text": "Is the fee arriving tomorrow yesterday?",
+          "is_correct": false
+         },
+         {
+          "text": "Is the Friday changing the fee?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "fare",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The price you pay for a journey by train or plane",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "The food served during a long flight",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A hotel room with breakfast included",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“fare” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "They are going to ___ us on the early train.",
+      "audio_text": "They are going to rebook us on the early train.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "rebook",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "rebooked",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "rebooking",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “rebook”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The flexible fare is ___ for changes.",
+      "correct_answer": "better",
+      "hint_prefix": "be",
+      "explanation": "The complete sentence is “The flexible fare is better for changes.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to change a booking",
+        "text": "to change a booking"
+       },
+       {
+        "id": "V2",
+        "audio_text": "flexible fare",
+        "text": "flexible fare"
+       },
+       {
+        "id": "V3",
+        "audio_text": "change fee",
+        "text": "change fee"
+       },
+       {
+        "id": "V4",
+        "audio_text": "more expensive",
+        "text": "more expensive"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to upgrade",
+        "text": "to upgrade"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Agent",
+        "text": "Would you like to keep the same seat?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "If possible — if the window seat is free on the new flight, I will take it.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I kept it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The seat is rebooking me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“If possible — if the window seat is free on the new flight, I will take it.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если планы сорвутся",
+    "en": "If Plans Fall Through"
+   },
+   "objective": {
+    "ru": "Обсудить отмену бронирования, используя should и первое условное.",
+    "en": "Discuss cancelling a booking using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "cancellation",
+        "right": "отмена"
+       },
+       {
+        "id": "P2",
+        "left": "to cancel",
+        "right": "отменить"
+       },
+       {
+        "id": "P3",
+        "left": "refundable",
+        "right": "возвратный"
+       },
+       {
+        "id": "P4",
+        "left": "to read the rules",
+        "right": "прочитать правила"
+       },
+       {
+        "id": "P5",
+        "left": "before booking",
+        "right": "до бронирования"
+       },
+       {
+        "id": "P6",
+        "left": "insurance",
+        "right": "страховка"
+       },
+       {
+        "id": "P7",
+        "left": "in case",
+        "right": "на случай"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should read the cancellation rules before booking.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to read them yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must reading them last week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should read the cancellation rules before booking.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если планы изменятся, возвратный тариф спасёт деньги.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If your plans change, a refundable fare will save your money.",
+      "word_bank": [
+       "will",
+       "your",
+       "save",
+       "fare",
+       "did",
+       "refundable",
+       "plans",
+       "money.",
+       "yesterday",
+       "a",
+       "change,",
+       "changed",
+       "If",
+       "your"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you ___ within twenty-four hours, most airlines will refund the full price.",
+      "correct_answer": "cancel",
+      "options": [
+       "cancel",
+       "will cancel",
+       "cancelled"
+      ],
+      "translation_hint": "Если отменить в течение суток, большинство авиакомпаний вернёт полную стоимость."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "in",
+       "cancellation.",
+       "documents",
+       "insurance",
+       "mustn't",
+       "the",
+       "of",
+       "case",
+       "went",
+       "You",
+       "keep",
+       "should"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "keep",
+       "the",
+       "insurance",
+       "documents",
+       "in",
+       "case",
+       "of",
+       "cancellation."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you book refundable rooms, a sudden change of plans will not destroy your budget.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you book refundable rooms, a sudden change of plans will not destroy your budget.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если бронировать возвратные номера, внезапная смена планов не разрушит бюджет."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Sudden Change",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "Our host has just cancelled our flat for next week!",
+        "translation": "Хозяин только что отменил нашу квартиру на следующую неделю!"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "Did you book the refundable option?",
+        "translation": "Ты брала возвратный вариант?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna answer?",
+        "options": [
+         {
+          "text": "Yes, luckily — if I hadn't, we would lose two hundred euros.",
+          "is_correct": true
+         },
+         {
+          "text": "Yes, I will booked it tomorrow yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The flat is refunding our plans.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "refundable",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Something you can get your money back for",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A ticket that cannot be used after the date",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A service paid only in cash",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“refundable” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If the airline ___ the flight, you will get a voucher.",
+      "audio_text": "If the airline cancels the flight, you will get a voucher.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "cancels",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will cancel",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "cancelled",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “cancels”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should buy insurance ___ case of illness.",
+      "correct_answer": "in",
+      "hint_prefix": "in",
+      "explanation": "The complete sentence is “You should buy insurance in case of illness.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "cancellation",
+        "text": "cancellation"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to cancel",
+        "text": "to cancel"
+       },
+       {
+        "id": "V3",
+        "audio_text": "refundable",
+        "text": "refundable"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to read the rules",
+        "text": "to read the rules"
+       },
+       {
+        "id": "V5",
+        "audio_text": "before booking",
+        "text": "before booking"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TICKETS_BOOKINGS_AND_CHANGES_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Should I book the cheaper non-refundable room?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Think twice — if your trip changes, the flexible room will be cheaper in the end.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I booked it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The room is refunding me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Think twice — if your trip changes, the flexible room will be cheaper in the end.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

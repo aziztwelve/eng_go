@@ -1,0 +1,1430 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_SPEAKING_FAMILY_LIFE",
+  "title": {
+   "ru": "Семейная жизнь",
+   "en": "Family Life"
+  },
+  "description": {
+   "ru": "Развивайте разговорные навыки уровня A2 по теме «Семейная жизнь».",
+   "en": "Develop A2 speaking skills for family life."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "speaking",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "speaking",
+   "family-life"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_SPEAKING_FAMILY_LIFE_L1",
+   "order": 1,
+   "title": {
+    "ru": "Новости из семьи",
+    "en": "Family News"
+   },
+   "objective": {
+    "ru": "Поделиться семейными новостями, используя past simple и present perfect.",
+    "en": "Share family news using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to get married",
+        "right": "пожениться"
+       },
+       {
+        "id": "P2",
+        "left": "to move out",
+        "right": "переехать (от родителей)"
+       },
+       {
+        "id": "P3",
+        "left": "grandparents",
+        "right": "бабушка и дедушка"
+       },
+       {
+        "id": "P4",
+        "left": "to have a baby",
+        "right": "родить ребёнка"
+       },
+       {
+        "id": "P5",
+        "left": "cousin",
+        "right": "двоюродный брат/сестра"
+       },
+       {
+        "id": "P6",
+        "left": "to visit",
+        "right": "навестить"
+       },
+       {
+        "id": "P7",
+        "left": "family gathering",
+        "right": "семейный сбор"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "My sister has just had a baby.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "My sister has a baby last month.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "My sister just has had a baby yesterday.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “My sister has just had a baby.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мой брат переехал в другой город, когда женился.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "My brother moved to another city when he got married.",
+      "word_bank": [
+       "did",
+       "city",
+       "he",
+       "when",
+       "tomorrow",
+       "moves",
+       "to",
+       "got",
+       "married.",
+       "brother",
+       "another",
+       "moved",
+       "My"
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "We ___ our grandparents every summer when we were children.",
+      "correct_answer": "visited",
+      "options": [
+       "visited",
+       "has visit",
+       "visiting"
+      ],
+      "translation_hint": "Мы навещали бабушку с дедушкой каждое лето в детстве."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "The",
+       "at",
+       "gathered",
+       "today.",
+       "family",
+       "our",
+       "house",
+       "whole",
+       "did",
+       "was",
+       "has"
+      ],
+      "correct_words": [
+       "The",
+       "whole",
+       "family",
+       "has",
+       "gathered",
+       "at",
+       "our",
+       "house",
+       "today."
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "My cousin has bought a house near the lake, and the family gathering this year has moved there.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "My cousin has bought a house near the lake, and the family gathering this year has moved there.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Мой двоюродный брат купил дом у озера, и семейный сбор в этом году переехал туда."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Sunday Call",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "Any news from your family this week?",
+        "translation": "Есть новости от семьи на этой неделе?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "Yes! My cousin has got engaged, and my parents have already met the fiancée.",
+        "translation": "Да! Мой кузен сделал предложение, а родители уже познакомились с невестой."
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna ask?",
+        "options": [
+         {
+          "text": "When did they meet her — at the weekend?",
+          "is_correct": true
+         },
+         {
+          "text": "When do they met her tomorrow?",
+          "is_correct": false
+         },
+         {
+          "text": "Is the news meeting the fiancée?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to get married",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To become someone's husband or wife",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To go on a first date with someone",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To divorce after many years",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to get married” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "She has ___ into a new flat.",
+      "audio_text": "She has moved into a new flat.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "moved",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "move",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "moving",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “moved”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "They have ___ a baby girl.",
+      "correct_answer": "had",
+      "hint_prefix": "ha",
+      "explanation": "The complete sentence is “They have had a baby girl.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to get married",
+        "text": "to get married"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to move out",
+        "text": "to move out"
+       },
+       {
+        "id": "V3",
+        "audio_text": "grandparents",
+        "text": "grandparents"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to have a baby",
+        "text": "to have a baby"
+       },
+       {
+        "id": "V5",
+        "audio_text": "cousin",
+        "text": "cousin"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "How is your brother doing?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Great — he has changed jobs and has moved closer to our parents.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "He is fine yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The brother is doing me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Great — he has changed jobs and has moved closer to our parents.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_SPEAKING_FAMILY_LIFE_L2",
+   "order": 2,
+   "title": {
+    "ru": "Планы на семейный праздник",
+    "en": "Planning a Family Celebration"
+   },
+   "objective": {
+    "ru": "Спланировать семейное событие и сравнить варианты.",
+    "en": "Plan a family event and compare options."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to host",
+        "right": "принять (гостей)"
+       },
+       {
+        "id": "P2",
+        "left": "potluck dinner",
+        "right": "ужин, куда каждый приносит блюдо"
+       },
+       {
+        "id": "P3",
+        "left": "more fun",
+        "right": "веселее"
+       },
+       {
+        "id": "P4",
+        "left": "to invite",
+        "right": "пригласить"
+       },
+       {
+        "id": "P5",
+        "left": "anniversary",
+        "right": "годовщина"
+       },
+       {
+        "id": "P6",
+        "left": "to cook",
+        "right": "готовить"
+       },
+       {
+        "id": "P7",
+        "left": "to hire a venue",
+        "right": "арендовать зал"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two celebration ideas correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "A garden party is more fun than a formal restaurant dinner.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "A garden party is funner than a dinner.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "A garden party is most fun than dinner.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “A garden party is more fun than a formal restaurant dinner.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "В этом году мы собираемся устроить ужин, куда каждый принесёт своё блюдо.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "This year we are going to host a potluck dinner.",
+      "word_bank": [
+       "hosted",
+       "potluck",
+       "we",
+       "are",
+       "This",
+       "going",
+       "a",
+       "year",
+       "did",
+       "to",
+       "yesterday",
+       "dinner.",
+       "host"
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "A homemade cake is ___ personal than a shop one.",
+      "correct_answer": "more",
+      "options": [
+       "more",
+       "most",
+       "much"
+      ],
+      "translation_hint": "Домашний торт более личный, чем покупной."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "all",
+       "did",
+       "to",
+       "We",
+       "cousins.",
+       "invite",
+       "was",
+       "going",
+       "the",
+       "are"
+      ],
+      "correct_words": [
+       "We",
+       "are",
+       "going",
+       "to",
+       "invite",
+       "all",
+       "the",
+       "cousins."
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If we celebrate in the garden, the children will have more space to play.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If we celebrate in the garden, the children will have more space to play.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если отметить в саду, у детей будет больше места для игр."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Anniversary",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "It is our grandparents' fiftieth anniversary in May.",
+        "translation": "В мае пятидесятилетие наших бабушки и дедушки."
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "Should we book a restaurant or host it at home?",
+        "translation": "Забронировать ресторан или устроить дома?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna prefer?",
+        "options": [
+         {
+          "text": "At home — it is more work, but it feels more personal.",
+          "is_correct": true
+         },
+         {
+          "text": "A restaurant was more personal yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The anniversary is hosting a restaurant.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "potluck dinner",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A meal where every guest brings one dish",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A dinner cooked only by the hosts",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A dinner ordered from a restaurant",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“potluck dinner” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We are going to ___ twenty guests.",
+      "audio_text": "We are going to invite twenty guests.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "invite",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "invited",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "inviting",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “invite”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Grandma's cake is ___ than the bakery's.",
+      "correct_answer": "better",
+      "hint_prefix": "be",
+      "explanation": "The complete sentence is “Grandma's cake is better than the bakery's.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to host",
+        "text": "to host"
+       },
+       {
+        "id": "V2",
+        "audio_text": "potluck dinner",
+        "text": "potluck dinner"
+       },
+       {
+        "id": "V3",
+        "audio_text": "more fun",
+        "text": "more fun"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to invite",
+        "text": "to invite"
+       },
+       {
+        "id": "V5",
+        "audio_text": "anniversary",
+        "text": "anniversary"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Are you hosting New Year this year?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes — if everyone brings one dish, the cooking will be much easier.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I hosted it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "New Year is hosting us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes — if everyone brings one dish, the cooking will be much easier.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_SPEAKING_FAMILY_LIFE_L3",
+   "order": 3,
+   "title": {
+    "ru": "Семейные правила",
+    "en": "Family Rules"
+   },
+   "objective": {
+    "ru": "Обсудить правила в семье, используя should и первое условное.",
+    "en": "Discuss family rules using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to share chores",
+        "right": "делить домашние дела"
+       },
+       {
+        "id": "P2",
+        "left": "screen time",
+        "right": "время у экрана"
+       },
+       {
+        "id": "P3",
+        "left": "fair",
+        "right": "справедливый"
+       },
+       {
+        "id": "P4",
+        "left": "to negotiate",
+        "right": "договориться"
+       },
+       {
+        "id": "P5",
+        "left": "bedtime",
+        "right": "время отхода ко сну"
+       },
+       {
+        "id": "P6",
+        "left": "pocket money",
+        "right": "карманные деньги"
+       },
+       {
+        "id": "P7",
+        "left": "to respect",
+        "right": "уважать"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence expresses a family rule?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "Children should help with the chores at the weekend.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Children should to help yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "Children must helping last weekend.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “Children should help with the chores at the weekend.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "если дети будут помогать по дому, у родителей будет больше времени на семью.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If the children help with the housework, the parents will have more time for the family.",
+      "word_bank": [
+       "the",
+       "parents",
+       "help",
+       "housework,",
+       "family.",
+       "yesterday",
+       "for",
+       "with",
+       "will",
+       "more",
+       "time",
+       "the",
+       "have",
+       "If",
+       "helped",
+       "the",
+       "the",
+       "did",
+       "children"
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If everyone ___ the chores, the flat will be clean by evening.",
+      "correct_answer": "shares",
+      "options": [
+       "shares",
+       "will share",
+       "shared"
+      ],
+      "translation_hint": "Если все поделят домашние дела, квартира будет чистой к вечеру."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "should",
+       "went",
+       "each",
+       "respect",
+       "mustn't",
+       "free",
+       "time.",
+       "You",
+       "other's"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "respect",
+       "each",
+       "other's",
+       "free",
+       "time."
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If we agree on the screen-time rules together, the children will follow them more easily.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If we agree on the screen-time rules together, the children will follow them more easily.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если договориться о правилах экранного времени вместе, детям будет проще их соблюдать."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Chore Chart",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "I do all the cleaning alone, and it is not fair.",
+        "translation": "Я делаю всю уборку одна, и это несправедливо."
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "What should we change?",
+        "translation": "Что нам изменить?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna propose?",
+        "options": [
+         {
+          "text": "If we make a chore chart, everyone will have one task.",
+          "is_correct": true
+         },
+         {
+          "text": "If we will make a chart, everyone had a task yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The cleaning is charting us weekly.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "pocket money",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Small regular money that parents give children",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "The money a family spends on food",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A bank loan for a new flat",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“pocket money” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If you ___ your bedtime, you will feel better.",
+      "audio_text": "If you keep your bedtime, you will feel better.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "keep",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will keep",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "kept",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “keep”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "We should share the ___ fairly.",
+      "correct_answer": "chores",
+      "hint_prefix": "ch",
+      "explanation": "The complete sentence is “We should share the chores fairly.”."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to share chores",
+        "text": "to share chores"
+       },
+       {
+        "id": "V2",
+        "audio_text": "screen time",
+        "text": "screen time"
+       },
+       {
+        "id": "V3",
+        "audio_text": "fair",
+        "text": "fair"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to negotiate",
+        "text": "to negotiate"
+       },
+       {
+        "id": "V5",
+        "audio_text": "bedtime",
+        "text": "bedtime"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_SPEAKING_FAMILY_LIFE_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "My kids watch cartoons all evening."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Set a simple rule — if they finish homework first, they will get their screen time without arguments.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "They watched them yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The cartoons are ruling the kids.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Set a simple rule — if they finish homework first, they will get their screen time without arguments.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

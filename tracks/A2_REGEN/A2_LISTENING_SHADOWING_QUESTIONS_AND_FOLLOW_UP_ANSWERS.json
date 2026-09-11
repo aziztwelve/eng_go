@@ -1,0 +1,1434 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS",
+  "title": {
+   "ru": "Вопросы и развёрнутые ответы",
+   "en": "Questions and Follow-up Answers"
+  },
+  "description": {
+   "ru": "Развивайте навыки аудирования и повторения уровня A2 по теме «Вопросы и развёрнутые ответы».",
+   "en": "Develop A2 listening and shadowing skills for questions and follow-up answers."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "listening_shadowing",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "listening-shadowing",
+   "questions-and-follow-up-answers"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L1",
+   "order": 1,
+   "title": {
+    "ru": "Вопросы о прошлом",
+    "en": "Questions About the Past"
+   },
+   "objective": {
+    "ru": "Понимать вопросы и ответы о прошлом, используя past simple и present perfect.",
+    "en": "Understand past questions and answers using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "How long...?",
+        "right": "Как долго...?"
+       },
+       {
+        "id": "P2",
+        "left": "What happened next?",
+        "right": "Что было дальше?"
+       },
+       {
+        "id": "P3",
+        "left": "to find out",
+        "right": "выяснить"
+       },
+       {
+        "id": "P4",
+        "left": "the reason why",
+        "right": "причина, по которой"
+       },
+       {
+        "id": "P5",
+        "left": "to explain",
+        "right": "объяснить"
+       },
+       {
+        "id": "P6",
+        "left": "How come?",
+        "right": "Как так получилось?"
+       },
+       {
+        "id": "P7",
+        "left": "detail",
+        "right": "деталь"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which question asks about duration?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "How long have you worked here?",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "How long you work here yesterday?",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "How long did you worked tomorrow?",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “How long have you worked here?”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Как так получилось, что ты не знал о встрече?",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "How come you did not know about the meeting?",
+      "word_bank": [
+       "did",
+       "tomorrow",
+       "did",
+       "come",
+       "about",
+       "meeting?",
+       "not",
+       "the",
+       "How",
+       "know",
+       "know",
+       "you"
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She explained the reason ___ she had left early.",
+      "correct_answer": "why",
+      "options": [
+       "why",
+       "because",
+       "how"
+      ],
+      "translation_hint": "Она объяснила причину, по которой ушла раньше."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "next?",
+       "Have",
+       "out",
+       "what",
+       "you",
+       "found",
+       "was",
+       "did",
+       "happened"
+      ],
+      "correct_words": [
+       "Have",
+       "you",
+       "found",
+       "out",
+       "what",
+       "happened",
+       "next?"
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "How long have you lived in this city? What made you move here, and do you remember your first week?",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "How long have you lived in this city? What made you move here, and do you remember your first week?",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Как долго ты живёшь в этом городе? Что заставило тебя переехать, и помнишь ли свою первую неделю?"
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Small Talk Questions",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "You mentioned a trip to Georgia. How long did you stay?",
+        "translation": "Ты упоминала поездку в Грузию. Как долго ты была там?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Two weeks. We found out about the mountain trains only after we arrived!",
+        "translation": "Две недели. Мы узнали о горных поездах только после приезда!"
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 ask next?",
+        "options": [
+         {
+          "text": "What happened after you found out about them?",
+          "is_correct": true
+         },
+         {
+          "text": "What happens after you found it tomorrow?",
+          "is_correct": false
+         },
+         {
+          "text": "Is the trip asking about the trains?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "How come...?",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A friendly way to ask why something happened",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A polite way to ask for the time",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A formal way to end a conversation",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“How come...?” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "How ___ have you known each other?",
+      "audio_text": "How long have you known each other?",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "long",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "much",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "many",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “long”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "I still do not know the ___ why he called.",
+      "correct_answer": "reason",
+      "hint_prefix": "re",
+      "explanation": "The complete sentence is “I still do not know the reason why he called.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "How long...?",
+        "text": "How long...?"
+       },
+       {
+        "id": "V2",
+        "audio_text": "What happened next?",
+        "text": "What happened next?"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to find out",
+        "text": "to find out"
+       },
+       {
+        "id": "V4",
+        "audio_text": "the reason why",
+        "text": "the reason why"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to explain",
+        "text": "to explain"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Did you ask her about the concert?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes — it turned out she has never been to one, so we are going together.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I asked her yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The concert is asking her.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes — it turned out she has never been to one, so we are going together.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L2",
+   "order": 2,
+   "title": {
+    "ru": "Вопросы о планах",
+    "en": "Questions About Plans"
+   },
+   "objective": {
+    "ru": "Понимать вопросы о будущем и уточнять детали.",
+    "en": "Understand future questions and clarify details."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "What about you?",
+        "right": "А ты?"
+       },
+       {
+        "id": "P2",
+        "left": "to be planning to",
+        "right": "планировать"
+       },
+       {
+        "id": "P3",
+        "left": "more specific",
+        "right": "конкретнее"
+       },
+       {
+        "id": "P4",
+        "left": "either way",
+        "right": "в любом случае"
+       },
+       {
+        "id": "P5",
+        "left": "to make sure",
+        "right": "убедиться"
+       },
+       {
+        "id": "P6",
+        "left": "to depend on",
+        "right": "зависеть от"
+       },
+       {
+        "id": "P7",
+        "left": "as well",
+        "right": "тоже"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which question asks about a future plan politely?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "Are you planning to stay for the dinner as well?",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You are planning stay yesterday dinner?",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "Is the dinner planning you as well?",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “Are you planning to stay for the dinner as well?”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Поедешь ли ты летом к морю, зависит от работы или от денег?",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "Whether you go to the sea in summer — does it depend on work or on money?",
+      "word_bank": [
+       "on",
+       "it",
+       "work",
+       "yesterday",
+       "went",
+       "you",
+       "sea",
+       "did",
+       "summer",
+       "to",
+       "go",
+       "Whether",
+       "—",
+       "the",
+       "does",
+       "money?",
+       "on",
+       "in",
+       "or",
+       "depend"
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Could you be ___ specific about the dates?",
+      "correct_answer": "more",
+      "options": [
+       "more",
+       "most",
+       "much"
+      ],
+      "translation_hint": "Можешь быть конкретнее насчёт дат?"
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "you",
+       "move",
+       "planning",
+       "was",
+       "Are",
+       "did",
+       "to",
+       "well?",
+       "as"
+      ],
+      "correct_words": [
+       "Are",
+       "you",
+       "planning",
+       "to",
+       "move",
+       "as",
+       "well?"
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "Are you planning to join us on Saturday? It depends on the weather, I know, but either way let me know by Thursday.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "Are you planning to join us on Saturday? It depends on the weather, I know, but either way let me know by Thursday.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Ты планируешь присоединиться в субботу? Я знаю, всё зависит от погоды, но в любом случае дай знать до четверга."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Clarifying a Plan",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "Are you planning to take the early train on Friday?",
+        "translation": "Ты планируешь ехать ранним поездом в пятницу?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Probably. Why — are you going the same way?",
+        "translation": "Наверное. А что — ты едешь тем же маршрутом?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 say?",
+        "options": [
+         {
+          "text": "Yes, so let's make sure we book seats together.",
+          "is_correct": true
+         },
+         {
+          "text": "Yes, we booked together yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The train is planning us both.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "either way",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Used when both possibilities lead to the same result",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A phrase for counting two things together",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A way to say you disagree politely",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“either way” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "Are you ___ to stay for lunch?",
+      "audio_text": "Are you planning to stay for lunch?",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "planning",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "plan",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "planned",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “planning”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "It ___ on the traffic, unfortunately.",
+      "correct_answer": "depends",
+      "hint_prefix": "de",
+      "explanation": "The complete sentence is “It depends on the traffic, unfortunately.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "What about you?",
+        "text": "What about you?"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to be planning to",
+        "text": "to be planning to"
+       },
+       {
+        "id": "V3",
+        "audio_text": "more specific",
+        "text": "more specific"
+       },
+       {
+        "id": "V4",
+        "audio_text": "either way",
+        "text": "either way"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to make sure",
+        "text": "to make sure"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "What are you doing this weekend?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Nothing special — what about you? If you are free, we could try the new climbing wall.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I did it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The weekend is doing me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Nothing special — what about you? If you are free, we could try the new climbing wall.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L3",
+   "order": 3,
+   "title": {
+    "ru": "Уточняющие вопросы",
+    "en": "Follow-up Questions"
+   },
+   "objective": {
+    "ru": "Понимать уточняющие вопросы, используя should и первое условное.",
+    "en": "Understand follow-up questions using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to mean",
+        "right": "иметь в виду"
+       },
+       {
+        "id": "P2",
+        "left": "to check",
+        "right": "уточнить"
+       },
+       {
+        "id": "P3",
+        "left": "correct me if I'm wrong",
+        "right": "поправь, если я не прав"
+       },
+       {
+        "id": "P4",
+        "left": "in other words",
+        "right": "другими словами"
+       },
+       {
+        "id": "P5",
+        "left": "to sum up",
+        "right": "подытожить"
+       },
+       {
+        "id": "P6",
+        "left": "to make sense",
+        "right": "иметь смысл"
+       },
+       {
+        "id": "P7",
+        "left": "exactly",
+        "right": "именно"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which phrase checks understanding politely?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "So, in other words, the meeting has moved to Friday?",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "So the meeting moved yesterday Friday, yes?",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "In other words is the meeting Friday yesterday?",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “So, in other words, the meeting has moved to Friday?”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если я правильно понял, ты остаёшься ещё на неделю?",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "Correct me if I am wrong — you are staying for one more week?",
+      "word_bank": [
+       "yesterday",
+       "one",
+       "more",
+       "I",
+       "staying",
+       "week?",
+       "Correct",
+       "if",
+       "—",
+       "me",
+       "did",
+       "you",
+       "wrong",
+       "are",
+       "understood",
+       "am",
+       "for"
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If the plan ___ sense, let's start tomorrow.",
+      "correct_answer": "makes",
+      "options": [
+       "makes",
+       "will make",
+       "made"
+      ],
+      "translation_hint": "Если план имеет смысл, начнём завтра."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "answer.",
+       "we",
+       "sum",
+       "should",
+       "the",
+       "for",
+       "up,",
+       "mustn't",
+       "final",
+       "wait",
+       "To",
+       "went"
+      ],
+      "correct_words": [
+       "To",
+       "sum",
+       "up,",
+       "we",
+       "should",
+       "wait",
+       "for",
+       "the",
+       "final",
+       "answer."
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "Let me check if I understood you: if we order today, the delivery comes on Thursday — is that exactly what you mean?",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "Let me check if I understood you: if we order today, the delivery comes on Thursday — is that exactly what you mean?",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Позволь уточнить: если закажем сегодня, доставка придёт в четверг — именно это ты имеешь в виду?"
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Checking the Details",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "So we should send the draft to the client, in other words?",
+        "translation": "Итак, нам следует отправить черновик клиенту, другими словами?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Not exactly — we should wait for the designer's final version first.",
+        "translation": "Не совсем — сначала стоит дождаться финальной версии от дизайнера."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 ask?",
+        "options": [
+         {
+          "text": "Ah, I see. So if the version comes today, we send it this evening?",
+          "is_correct": true
+         },
+         {
+          "text": "So we sent it yesterday evening already?",
+          "is_correct": false
+         },
+         {
+          "text": "Is the designer wording the client?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to make sense",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To be clear and logical",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To be strange and difficult to understand",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To cost too much money",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to make sense” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If I ___ you correctly, we start on Monday.",
+      "audio_text": "If I understood you correctly, we start on Monday.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "understood",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "understand",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "understanding",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “understood”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "To ___ up, we all agree.",
+      "correct_answer": "sum",
+      "hint_prefix": "su",
+      "explanation": "The complete sentence is “To sum up, we all agree.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to mean",
+        "text": "to mean"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to check",
+        "text": "to check"
+       },
+       {
+        "id": "V3",
+        "audio_text": "correct me if I'm wrong",
+        "text": "correct me if I'm wrong"
+       },
+       {
+        "id": "V4",
+        "audio_text": "in other words",
+        "text": "in other words"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to sum up",
+        "text": "to sum up"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_QUESTIONS_AND_FOLLOW_UP_ANSWERS_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "So the party starts at nine, right?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Exactly — and if you bring the salad, I will handle the drinks.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "It started yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The party is nining us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Exactly — and if you bring the salad, I will handle the drinks.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

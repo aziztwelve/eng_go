@@ -1,0 +1,1440 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION",
+  "title": {
+   "ru": "Офисные услуги и администрирование",
+   "en": "Office Services and Administration"
+  },
+  "description": {
+   "ru": "Развивайте деловой английский уровня A2 по теме «Офисные услуги и администрирование».",
+   "en": "Develop A2 business English for office services and administration."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "business_english",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "business-english",
+   "office-services-and-administration"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L1",
+   "order": 1,
+   "title": {
+    "ru": "Заявки в администрацию",
+    "en": "Requests to the Administration"
+   },
+   "objective": {
+    "ru": "Сообщить о заявках и услугах офиса, используя past simple и present perfect.",
+    "en": "Report office service requests using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "facilities",
+        "right": "хозяйственная служба"
+       },
+       {
+        "id": "P2",
+        "left": "to submit a request",
+        "right": "подать заявку"
+       },
+       {
+        "id": "P3",
+        "left": "maintenance",
+        "right": "техобслуживание"
+       },
+       {
+        "id": "P4",
+        "left": "access card",
+        "right": "пропуск"
+       },
+       {
+        "id": "P5",
+        "left": "to repair",
+        "right": "отремонтировать"
+       },
+       {
+        "id": "P6",
+        "left": "work order",
+        "right": "наряд на работы"
+       },
+       {
+        "id": "P7",
+        "left": "within a week",
+        "right": "в течение недели"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The facilities team has fixed the heating already.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "The facilities team has fixed it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The team fix the heating already now.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The facilities team has fixed the heating already.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я подал заявку на ремонт в понедельник, и её уже выполнили.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I submitted the repair request on Monday, and they have already completed it.",
+      "word_bank": [
+       "the",
+       "and",
+       "it.",
+       "already",
+       "submitted",
+       "submit",
+       "did",
+       "I",
+       "yesterday",
+       "on",
+       "completed",
+       "Monday,",
+       "repair",
+       "request",
+       "have",
+       "they"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "My access card ___ working last Tuesday.",
+      "correct_answer": "stopped",
+      "options": [
+       "stopped",
+       "has stop",
+       "stopping"
+      ],
+      "translation_hint": "Мой пропуск перестал работать в прошлый вторник."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "replaced",
+       "did",
+       "They",
+       "on",
+       "all",
+       "our",
+       "floor.",
+       "have",
+       "lights",
+       "the",
+       "was"
+      ],
+      "correct_words": [
+       "They",
+       "have",
+       "replaced",
+       "all",
+       "the",
+       "lights",
+       "on",
+       "our",
+       "floor."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "The air conditioning broke down again, so I have submitted a new work order.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "The air conditioning broke down again, so I have submitted a new work order.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Кондиционер снова сломался, поэтому я подал новый наряд на работы."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Access Card",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "I can't get into the meeting room — my card doesn't work.",
+        "translation": "Не могу попасть в переговорку — мой пропуск не работает."
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "When did it stop working?",
+        "translation": "Когда он перестал работать?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Tom say?",
+        "options": [
+         {
+          "text": "This morning. I have already submitted a request to facilities.",
+          "is_correct": true
+         },
+         {
+          "text": "Tomorrow morning. I submitted it yesterday already.",
+          "is_correct": false
+         },
+         {
+          "text": "The card is getting into the room itself.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "maintenance",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Work done to keep equipment or buildings in good condition",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A meeting about next year's budget",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A welcome party for new employees",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“maintenance” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have ___ a work order for the door.",
+      "audio_text": "I have submitted a work order for the door.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "submitted",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "submit",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "submitting",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “submitted”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The heating has been ___ since October.",
+      "correct_answer": "broken",
+      "hint_prefix": "br",
+      "explanation": "The complete sentence is “The heating has been broken since October.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "facilities",
+        "text": "facilities"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to submit a request",
+        "text": "to submit a request"
+       },
+       {
+        "id": "V3",
+        "audio_text": "maintenance",
+        "text": "maintenance"
+       },
+       {
+        "id": "V4",
+        "audio_text": "access card",
+        "text": "access card"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to repair",
+        "text": "to repair"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Did facilities reply to your ticket?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes, they replied this morning and have already scheduled the repair.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, they reply tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The ticket is replying to them.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes, they replied this morning and have already scheduled the repair.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L2",
+   "order": 2,
+   "title": {
+    "ru": "Улучшения в офисе",
+    "en": "Office Improvements"
+   },
+   "objective": {
+    "ru": "Рассказать о будущих улучшениях и сравнить варианты.",
+    "en": "Talk about future improvements and compare options."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "renovation",
+        "right": "ремонт"
+       },
+       {
+        "id": "P2",
+        "left": "more comfortable",
+        "right": "комфортнее"
+       },
+       {
+        "id": "P3",
+        "left": "to install",
+        "right": "установить"
+       },
+       {
+        "id": "P4",
+        "left": "meeting room booking",
+        "right": "бронирование переговорок"
+       },
+       {
+        "id": "P5",
+        "left": "quieter",
+        "right": "тише"
+       },
+       {
+        "id": "P6",
+        "left": "to upgrade",
+        "right": "модернизировать"
+       },
+       {
+        "id": "P7",
+        "left": "by the end of",
+        "right": "к концу"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence talks about the future?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "They are going to install new desks by the end of the month.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "They installed new desks by the end of last month.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "They has installed desks tomorrow already.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “They are going to install new desks by the end of the month.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Администрация собирается отремонтировать кухню — она будет просторнее.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "The administration is going to renovate the kitchen — it will be more spacious.",
+      "word_bank": [
+       "did",
+       "kitchen",
+       "to",
+       "—",
+       "spacious.",
+       "will",
+       "the",
+       "administration",
+       "more",
+       "it",
+       "is",
+       "renovate",
+       "going",
+       "The",
+       "renovated",
+       "be",
+       "yesterday"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The new meeting rooms are ___ than the old ones.",
+      "correct_answer": "quieter",
+      "options": [
+       "quieter",
+       "quietest",
+       "more quiet"
+      ],
+      "translation_hint": "Новые переговорки тише старых."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "did",
+       "was",
+       "We",
+       "system",
+       "quarter.",
+       "the",
+       "next",
+       "are",
+       "to",
+       "going",
+       "upgrade",
+       "booking"
+      ],
+      "correct_words": [
+       "We",
+       "are",
+       "going",
+       "to",
+       "upgrade",
+       "the",
+       "booking",
+       "system",
+       "next",
+       "quarter."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If we install the screens this week, the training room will be ready before the visit.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If we install the screens this week, the training room will be ready before the visit.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если мы установим экраны на этой неделе, учебная комната будет готова до визита."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Two Renovation Plans",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Office manager",
+        "text": "We can renovate either the kitchen or the lounge this year.",
+        "translation": "В этом году мы можем отремонтировать либо кухню, либо зону отдыха."
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "The kitchen is more useful — everyone eats there every day.",
+        "translation": "Кухня полезнее — там каждый день обедают все."
+       },
+       {
+        "type": "choice",
+        "text": "What does the office manager decide?",
+        "options": [
+         {
+          "text": "Then we are going to start with the kitchen in May.",
+          "is_correct": true
+         },
+         {
+          "text": "Then we started with it yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The kitchen is renovating itself.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to upgrade",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To improve something or replace it with a better version",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To move furniture from one room to another",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To book a room for a meeting",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to upgrade” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "They are going to ___ new lamps.",
+      "audio_text": "They are going to install new lamps.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "install",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "installed",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "installing",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “install”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The lounge will be ___ comfortable after the renovation.",
+      "correct_answer": "more",
+      "hint_prefix": "mo",
+      "explanation": "The complete sentence is “The lounge will be more comfortable after the renovation.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "renovation",
+        "text": "renovation"
+       },
+       {
+        "id": "V2",
+        "audio_text": "more comfortable",
+        "text": "more comfortable"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to install",
+        "text": "to install"
+       },
+       {
+        "id": "V4",
+        "audio_text": "meeting room booking",
+        "text": "meeting room booking"
+       },
+       {
+        "id": "V5",
+        "audio_text": "quieter",
+        "text": "quieter"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "When will the new booking system be ready?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "They are going to launch it by the end of the quarter.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "It was ready yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The system is launching us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“They are going to launch it by the end of the quarter.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L3",
+   "order": 3,
+   "title": {
+    "ru": "Правила использования услуг",
+    "en": "Rules for Using Services"
+   },
+   "objective": {
+    "ru": "Объяснить правила офисных услуг, используя should и первое условное.",
+    "en": "Explain office service rules using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to keep clean",
+        "right": "содержать в чистоте"
+       },
+       {
+        "id": "P2",
+        "left": "shared",
+        "right": "общий"
+       },
+       {
+        "id": "P3",
+        "left": "to book in advance",
+        "right": "бронировать заранее"
+       },
+       {
+        "id": "P4",
+        "left": "cleaning schedule",
+        "right": "график уборки"
+       },
+       {
+        "id": "P5",
+        "left": "to follow",
+        "right": "соблюдать"
+       },
+       {
+        "id": "P6",
+        "left": "fair",
+        "right": "справедливый"
+       },
+       {
+        "id": "P7",
+        "left": "label",
+        "right": "надпись / маркировать"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence expresses a rule for shared spaces?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should book the meeting rooms in advance.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to book them yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must booking them last week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should book the meeting rooms in advance.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если каждый будет убирать за собой, кухня останется чистой.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If everyone cleans up after themselves, the kitchen will stay clean.",
+      "word_bank": [
+       "stay",
+       "kitchen",
+       "cleans",
+       "yesterday",
+       "everyone",
+       "If",
+       "clean.",
+       "the",
+       "after",
+       "will",
+       "themselves,",
+       "did",
+       "up",
+       "cleaned"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you ___ your food in the fridge, nobody will throw it away.",
+      "correct_answer": "label",
+      "options": [
+       "label",
+       "will label",
+       "labelled"
+      ],
+      "translation_hint": "Если подписать еду в холодильнике, её никто не выбросит."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "went",
+       "mustn't",
+       "the",
+       "schedule",
+       "cleaning",
+       "should",
+       "kitchens.",
+       "in",
+       "follow",
+       "shared",
+       "You"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "follow",
+       "the",
+       "cleaning",
+       "schedule",
+       "in",
+       "shared",
+       "kitchens."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you cancel a booking you do not need, another team will be able to use the room.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you cancel a booking you do not need, another team will be able to use the room.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если отменить ненужное бронирование, другая команда сможет воспользоваться комнатой."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Shared Fridge",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "Someone has thrown away my lunch box again!",
+        "translation": "Кто-то снова выбросил мой ланчбокс!"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "Did it have your name on it?",
+        "translation": "На нём было твоё имя?"
+       },
+       {
+        "type": "choice",
+        "text": "What is the fair solution?",
+        "options": [
+         {
+          "text": "From now on, everyone should label their food clearly.",
+          "is_correct": true
+         },
+         {
+          "text": "From now on, everyone must labelling it yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The fridge is eating the lunches itself.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "shared",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Used by several people, not only one person",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Kept locked in a personal office",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Bought by one employee yesterday",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“shared” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If you ___ the room, others can use it.",
+      "audio_text": "If you cancel the room, others can use it.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "cancel",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will cancel",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "cancelled",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “cancel”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should book the room ___ advance.",
+      "correct_answer": "in",
+      "hint_prefix": "in",
+      "explanation": "The complete sentence is “You should book the room in advance.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to keep clean",
+        "text": "to keep clean"
+       },
+       {
+        "id": "V2",
+        "audio_text": "shared",
+        "text": "shared"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to book in advance",
+        "text": "to book in advance"
+       },
+       {
+        "id": "V4",
+        "audio_text": "cleaning schedule",
+        "text": "cleaning schedule"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to follow",
+        "text": "to follow"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_OFFICE_SERVICES_AND_ADMINISTRATION_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "The meeting room is always busy at noon."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "That's why you should book it in advance — if you book at nine, you will get it.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I booked it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "Noon is booking the room.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“That's why you should book it in advance — if you book at nine, you will get it.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1455 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES",
+  "title": {
+   "ru": "Деловые звонки и сообщения",
+   "en": "Business Calls and Messages"
+  },
+  "description": {
+   "ru": "Развивайте деловой английский уровня A2 по теме «Деловые звонки и сообщения».",
+   "en": "Develop A2 business English for business calls and messages."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "business_english",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "business-english",
+   "business-calls-and-messages"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L1",
+   "order": 1,
+   "title": {
+    "ru": "Звонки на этой неделе",
+    "en": "Calls This Week"
+   },
+   "objective": {
+    "ru": "Рассказать о звонках и сообщениях, используя past simple и present perfect.",
+    "en": "Talk about calls and messages using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to call back",
+        "right": "перезвонить"
+       },
+       {
+        "id": "P2",
+        "left": "voicemail",
+        "right": "голосовая почта"
+       },
+       {
+        "id": "P3",
+        "left": "to leave a message",
+        "right": "оставить сообщение"
+       },
+       {
+        "id": "P4",
+        "left": "line",
+        "right": "линия"
+       },
+       {
+        "id": "P5",
+        "left": "to reach",
+        "right": "дозвониться до"
+       },
+       {
+        "id": "P6",
+        "left": "missed call",
+        "right": "пропущенный звонок"
+       },
+       {
+        "id": "P7",
+        "left": "twice",
+        "right": "дважды"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "I have left two voicemails since this morning.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "I have left a voicemail yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "I left two voicemails already since morning.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “I have left two voicemails since this morning.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я позвонил ему в десять, но не дозвонился и оставил сообщение.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I called him at ten, but I did not reach him and left a message instead.",
+      "word_bank": [
+       "did",
+       "ten,",
+       "and",
+       "him",
+       "did",
+       "message",
+       "a",
+       "but",
+       "I",
+       "I",
+       "reach",
+       "at",
+       "not",
+       "called",
+       "left",
+       "call",
+       "instead.",
+       "tomorrow",
+       "him"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She ___ me back within an hour yesterday.",
+      "correct_answer": "called",
+      "options": [
+       "called",
+       "has call",
+       "calling"
+      ],
+      "translation_hint": "Она перезвонила мне в течение часа вчера."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "has",
+       "did",
+       "this",
+       "calls",
+       "three",
+       "morning.",
+       "He",
+       "already",
+       "missed",
+       "returned",
+       "was"
+      ],
+      "correct_words": [
+       "He",
+       "has",
+       "already",
+       "returned",
+       "three",
+       "missed",
+       "calls",
+       "this",
+       "morning."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "I have called the office twice today, but the line has been busy both times.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "I have called the office twice today, but the line has been busy both times.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Я звонил в офис дважды сегодня, но линия оба раза была занята."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Missed Call",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "You have three missed calls from the same number.",
+        "translation": "У тебя три пропущенных с одного номера."
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "Really? When did they call?",
+        "translation": "Серьёзно? Когда звонили?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna say?",
+        "options": [
+         {
+          "text": "Twice this morning and once after lunch — you should call back soon.",
+          "is_correct": true
+         },
+         {
+          "text": "Yesterday twice, and they has called again tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The number is calling the missed calls.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "voicemail",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A recorded message you leave when someone does not answer",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A written message you send by email",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A meeting room booking system",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“voicemail” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "Could you ask him to ___ me back?",
+      "audio_text": "Could you ask him to call me back?",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "call",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "called",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "calling",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “call”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "I have left a message ___ his voicemail.",
+      "correct_answer": "on",
+      "hint_prefix": "on",
+      "explanation": "The complete sentence is “I have left a message on his voicemail.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to call back",
+        "text": "to call back"
+       },
+       {
+        "id": "V2",
+        "audio_text": "voicemail",
+        "text": "voicemail"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to leave a message",
+        "text": "to leave a message"
+       },
+       {
+        "id": "V4",
+        "audio_text": "line",
+        "text": "line"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to reach",
+        "text": "to reach"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Did you get my voicemail?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes, I listened to it this morning and have already replied by email.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, I listen it tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The voicemail is replying to me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes, I listened to it this morning and have already replied by email.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L2",
+   "order": 2,
+   "title": {
+    "ru": "Важный звонок завтра",
+    "en": "An Important Call Tomorrow"
+   },
+   "objective": {
+    "ru": "Подготовиться к будущим звонкам и сравнить способы связи.",
+    "en": "Prepare for future calls and compare ways of contacting people."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "conference call",
+        "right": "конференц-звонок"
+       },
+       {
+        "id": "P2",
+        "left": "to dial in",
+        "right": "подключиться к звонку"
+       },
+       {
+        "id": "P3",
+        "left": "clearly",
+        "right": "чётко / ясно"
+       },
+       {
+        "id": "P4",
+        "left": "to take notes",
+        "right": "делать записи"
+       },
+       {
+        "id": "P5",
+        "left": "in advance",
+        "right": "заранее"
+       },
+       {
+        "id": "P6",
+        "left": "more useful",
+        "right": "полезнее"
+       },
+       {
+        "id": "P7",
+        "left": "to prepare questions",
+        "right": "подготовить вопросы"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence talks about tomorrow?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "We are going to have a conference call with the Berlin office.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "We had a conference call with Berlin yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "We has a call tomorrow already.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “We are going to have a conference call with the Berlin office.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Завтра у нас конференц-звонок, поэтому я подготовлю вопросы заранее.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We are having a conference call tomorrow, so I am going to prepare the questions in advance.",
+      "word_bank": [
+       "call",
+       "the",
+       "We",
+       "a",
+       "tomorrow,",
+       "in",
+       "are",
+       "having",
+       "questions",
+       "advance.",
+       "conference",
+       "going",
+       "prepare",
+       "so",
+       "yesterday",
+       "am",
+       "had",
+       "to",
+       "did",
+       "I"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "A short agenda is ___ useful than a long silence.",
+      "correct_answer": "more",
+      "options": [
+       "more",
+       "most",
+       "much"
+      ],
+      "translation_hint": "Короткая повестка полезнее долгого молчания."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "I",
+       "going",
+       "after.",
+       "notes",
+       "during",
+       "take",
+       "send",
+       "to",
+       "was",
+       "am",
+       "and",
+       "the",
+       "did",
+       "call",
+       "them"
+      ],
+      "correct_words": [
+       "I",
+       "am",
+       "going",
+       "to",
+       "take",
+       "notes",
+       "during",
+       "the",
+       "call",
+       "and",
+       "send",
+       "them",
+       "after."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you dial in five minutes early, you will have time to test your microphone.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you dial in five minutes early, you will have time to test your microphone.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если подключишься на пять минут раньше, успеешь проверить микрофон."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Before the Call",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Manager",
+        "text": "The client call starts at nine tomorrow. Are you ready?",
+        "translation": "Звонок с клиентом завтра в девять. Ты готов?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "Almost. I have prepared the questions but not the slides.",
+        "translation": "Почти. Я подготовил вопросы, но не слайды."
+       },
+       {
+        "type": "choice",
+        "text": "What does the manager advise?",
+        "options": [
+         {
+          "text": "You should finish the slides tonight — they matter more.",
+          "is_correct": true
+         },
+         {
+          "text": "You must finishing them yesterday evening.",
+          "is_correct": false
+         },
+         {
+          "text": "The slides are preparing you tonight.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to dial in",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To join a phone or video call by entering a code",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To hang up at the end of a conversation",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To write down a phone number on paper",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to dial in” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We are ___ the supplier at ten.",
+      "audio_text": "We are calling the supplier at ten.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "calling",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "call",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "called",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “calling”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should prepare ___ in advance.",
+      "correct_answer": "questions",
+      "hint_prefix": "qu",
+      "explanation": "The complete sentence is “You should prepare questions in advance.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "conference call",
+        "text": "conference call"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to dial in",
+        "text": "to dial in"
+       },
+       {
+        "id": "V3",
+        "audio_text": "clearly",
+        "text": "clearly"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to take notes",
+        "text": "to take notes"
+       },
+       {
+        "id": "V5",
+        "audio_text": "in advance",
+        "text": "in advance"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Should I join the call with the client?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes, dial in at nine — if you take notes, the summary will be ready by noon.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I dialled in yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The call is joining me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes, dial in at nine — if you take notes, the summary will be ready by noon.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L3",
+   "order": 3,
+   "title": {
+    "ru": "Правила хороших звонков",
+    "en": "Rules for Good Calls"
+   },
+   "objective": {
+    "ru": "Дать советы о деловых звонках, используя should и первое условное.",
+    "en": "Give advice about business calls using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to disturb",
+        "right": "беспокоить"
+       },
+       {
+        "id": "P2",
+        "left": "brief",
+        "right": "краткий"
+       },
+       {
+        "id": "P3",
+        "left": "to summarise",
+        "right": "подытожить"
+       },
+       {
+        "id": "P4",
+        "left": "at the end",
+        "right": "в конце"
+       },
+       {
+        "id": "P5",
+        "left": "to confirm",
+        "right": "подтвердить"
+       },
+       {
+        "id": "P6",
+        "left": "polite",
+        "right": "вежливый"
+       },
+       {
+        "id": "P7",
+        "left": "to hang up",
+        "right": "положить трубку"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice about calls?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should summarise the main points at the end of the call.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to summarise the points yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must summarising the call last week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should summarise the main points at the end of the call.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если ты подытожишь договорённости в конце, вы избежите недопонимания.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If you summarise the agreements at the end, you will avoid misunderstandings.",
+      "word_bank": [
+       "did",
+       "yesterday",
+       "If",
+       "end,",
+       "avoid",
+       "the",
+       "will",
+       "agreements",
+       "summarised",
+       "at",
+       "you",
+       "you",
+       "summarise",
+       "misunderstandings.",
+       "the"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you speak too fast, the client ___ understand you.",
+      "correct_answer": "will not",
+      "options": [
+       "will not",
+       "not will",
+       "don't"
+      ],
+      "translation_hint": "Если говорить слишком быстро, клиент вас не поймёт."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "You",
+       "mustn't",
+       "hang",
+       "before",
+       "you",
+       "up.",
+       "should",
+       "the",
+       "steps",
+       "confirm",
+       "next",
+       "went"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "confirm",
+       "the",
+       "next",
+       "steps",
+       "before",
+       "you",
+       "hang",
+       "up."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If the client sounds busy, you should keep the call brief and offer to email the details.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If the client sounds busy, you should keep the call brief and offer to email the details.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если клиент звучит занятым, стоит говорить кратко и предложить прислать детали письмом."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "After the Call",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "The call went well, but did we confirm who sends the offer?",
+        "translation": "Звонок прошёл хорошо, но мы подтвердили, кто отправляет предложение?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "I'm not sure — we talked about so many things.",
+        "translation": "Не уверен — мы обсудили столько всего."
+       },
+       {
+        "type": "choice",
+        "text": "What should they do?",
+        "options": [
+         {
+          "text": "You should send a short summary email to confirm.",
+          "is_correct": true
+         },
+         {
+          "text": "You must sending it yesterday afternoon.",
+          "is_correct": false
+         },
+         {
+          "text": "The offer is confirming itself by email.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "brief",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Short and using few words",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Very long and detailed",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Loud and difficult to hear",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“brief” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If you ___ the steps in writing, nothing will be lost.",
+      "audio_text": "If you confirm the steps in writing, nothing will be lost.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "confirm",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will confirm",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "confirmed",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “confirm”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should summarise the call ___ the end.",
+      "correct_answer": "at",
+      "hint_prefix": "at",
+      "explanation": "The complete sentence is “You should summarise the call at the end.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to disturb",
+        "text": "to disturb"
+       },
+       {
+        "id": "V2",
+        "audio_text": "brief",
+        "text": "brief"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to summarise",
+        "text": "to summarise"
+       },
+       {
+        "id": "V4",
+        "audio_text": "at the end",
+        "text": "at the end"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to confirm",
+        "text": "to confirm"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_BUSINESS_CALLS_AND_MESSAGES_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "The client asked so many questions on the call."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "You should send a brief follow-up email — if you write the answers down, they will trust us more.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I sent it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The questions are emailing the client.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“You should send a brief follow-up email — if you write the answers down, they will trust us more.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

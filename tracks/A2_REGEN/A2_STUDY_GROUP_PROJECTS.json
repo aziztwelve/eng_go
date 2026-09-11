@@ -1,0 +1,1439 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_STUDY_GROUP_PROJECTS",
+  "title": {
+   "ru": "Групповые проекты",
+   "en": "Group Projects"
+  },
+  "description": {
+   "ru": "Развивайте учебные навыки уровня A2 по теме «Групповые проекты».",
+   "en": "Develop A2 study skills for group projects."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "study",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "study",
+   "group-projects"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_STUDY_GROUP_PROJECTS_L1",
+   "order": 1,
+   "title": {
+    "ru": "Как прошёл наш проект",
+    "en": "How Our Project Went"
+   },
+   "objective": {
+    "ru": "Рассказать о групповом проекте, используя past simple и present perfect.",
+    "en": "Talk about a group project using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to divide tasks",
+        "right": "разделить задачи"
+       },
+       {
+        "id": "P2",
+        "left": "deadline",
+        "right": "срок"
+       },
+       {
+        "id": "P3",
+        "left": "to contribute",
+        "right": "внести вклад"
+       },
+       {
+        "id": "P4",
+        "left": "slide deck",
+        "right": "презентация (набор слайдов)"
+       },
+       {
+        "id": "P5",
+        "left": "to proofread",
+        "right": "вычитать"
+       },
+       {
+        "id": "P6",
+        "left": "to merge",
+        "right": "объединить (файлы/части)"
+       },
+       {
+        "id": "P7",
+        "left": "so far",
+        "right": "до сих пор"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "Our group has finished the research part so far.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Our group has finished it last week.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "We finish the research already so far.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “Our group has finished the research part so far.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы разделили задачи в понедельник, а презентацию уже объединили.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We divided the tasks on Monday, and we have already merged the slide deck.",
+      "word_bank": [
+       "deck.",
+       "Monday,",
+       "on",
+       "did",
+       "merged",
+       "We",
+       "divide",
+       "already",
+       "slide",
+       "the",
+       "and",
+       "we",
+       "divided",
+       "the",
+       "tasks",
+       "tomorrow",
+       "have"
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Last night I ___ the final text of the report.",
+      "correct_answer": "proofread",
+      "options": [
+       "proofread",
+       "has proofread",
+       "proofreading"
+      ],
+      "translation_hint": "Прошлой ночью я вычитал финальный текст отчёта."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "has",
+       "the",
+       "presentation.",
+       "was",
+       "did",
+       "contributed",
+       "member",
+       "Each",
+       "to"
+      ],
+      "correct_words": [
+       "Each",
+       "member",
+       "has",
+       "contributed",
+       "to",
+       "the",
+       "presentation."
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "We have met four times this month, and every meeting has moved the project forward.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "We have met four times this month, and every meeting has moved the project forward.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Мы встречались четыре раза за месяц, и каждая встреча двигала проект вперёд."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Before Submission",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "Has everyone uploaded their parts?",
+        "translation": "Все загрузили свои части?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Three of us have. Kirill promised to send his slides by nine.",
+        "translation": "Трое уже. Кирилл обещал прислать слайды к девяти."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 say?",
+        "options": [
+         {
+          "text": "Good — I have proofread the introduction already.",
+          "is_correct": true
+         },
+         {
+          "text": "Good, I proofread it tomorrow yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "Is the introduction uploading Kirill?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to merge",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To combine several files or parts into one",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To delete the extra copies of a file",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To print a document for the whole group",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to merge” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We have ___ all the parts into one file.",
+      "audio_text": "We have merged all the parts into one file.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "merged",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "merge",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "merging",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “merged”."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She has ___ a lot to the project.",
+      "correct_answer": "contributed",
+      "hint_prefix": "co",
+      "explanation": "The complete sentence is “She has contributed a lot to the project.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to divide tasks",
+        "text": "to divide tasks"
+       },
+       {
+        "id": "V2",
+        "audio_text": "deadline",
+        "text": "deadline"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to contribute",
+        "text": "to contribute"
+       },
+       {
+        "id": "V4",
+        "audio_text": "slide deck",
+        "text": "slide deck"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to proofread",
+        "text": "to proofread"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Classmate",
+        "text": "Who did the design?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Lena did — she has made all the charts, and we have checked the numbers twice.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "She did them yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The design is charting us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Lena did — she has made all the charts, and we have checked the numbers twice.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_STUDY_GROUP_PROJECTS_L2",
+   "order": 2,
+   "title": {
+    "ru": "Планируем следующий проект",
+    "en": "Planning the Next Project"
+   },
+   "objective": {
+    "ru": "Спланировать проект и сравнить роли в группе.",
+    "en": "Plan a project and compare group roles."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "team leader",
+        "right": "тимлид"
+       },
+       {
+        "id": "P2",
+        "left": "more responsible",
+        "right": "ответственнее"
+       },
+       {
+        "id": "P3",
+        "left": "to assign roles",
+        "right": "распределить роли"
+       },
+       {
+        "id": "P4",
+        "left": "shared folder",
+        "right": "общая папка"
+       },
+       {
+        "id": "P5",
+        "left": "to set a timeline",
+        "right": "составить график"
+       },
+       {
+        "id": "P6",
+        "left": "editor",
+        "right": "редактор"
+       },
+       {
+        "id": "P7",
+        "left": "fair",
+        "right": "справедливый"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two roles correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The editor's role is more demanding than the timekeeper's.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Editor is demandinger than timekeeper.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "Editor is most demanding than timekeeper.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The editor's role is more demanding than the timekeeper's.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы собираемся распределить роли на следующей встрече и завести общую папку.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We are going to assign the roles at the next meeting and set up a shared folder.",
+      "word_bank": [
+       "did",
+       "assign",
+       "to",
+       "are",
+       "folder.",
+       "roles",
+       "going",
+       "assigned",
+       "and",
+       "next",
+       "the",
+       "up",
+       "We",
+       "yesterday",
+       "shared",
+       "set",
+       "meeting",
+       "a",
+       "the",
+       "at"
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "A clear timeline is ___ than vague promises.",
+      "correct_answer": "better",
+      "options": [
+       "better",
+       "best",
+       "more good"
+      ],
+      "translation_hint": "Чёткий график лучше расплывчатых обещаний."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "this",
+       "going",
+       "the",
+       "to",
+       "be",
+       "did",
+       "time.",
+       "was",
+       "I",
+       "am",
+       "editor"
+      ],
+      "correct_words": [
+       "I",
+       "am",
+       "going",
+       "to",
+       "be",
+       "the",
+       "editor",
+       "this",
+       "time."
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If we set a timeline with three checkpoints, the project will not pile up in the last week.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If we set a timeline with three checkpoints, the project will not pile up in the last week.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если составить график с тремя контрольными точками, проект не навалится всей массой в последнюю неделю."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Assigning Roles",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "Who wants to be the team leader this time?",
+        "translation": "Кто теперь хочет быть тимлидом?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "You did the design last time — I can lead if nobody minds.",
+        "translation": "Прошлый раз дизайн делал ты — могу вести я, если никто не против."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 answer?",
+        "options": [
+         {
+          "text": "Good idea — and I am going to be the editor.",
+          "is_correct": true
+         },
+         {
+          "text": "Good idea, I was editor yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "Is the leader minding the design?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "shared folder",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "An online folder all group members can use",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A private folder only the leader opens",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A printed copy of the final report",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“shared folder” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We are going to ___ roles today.",
+      "audio_text": "We are going to assign roles today.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "assign",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "assigned",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "assigning",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “assign”."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Leading a team is ___ stressful than editing.",
+      "correct_answer": "more",
+      "hint_prefix": "mo",
+      "explanation": "The complete sentence is “Leading a team is more stressful than editing.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "team leader",
+        "text": "team leader"
+       },
+       {
+        "id": "V2",
+        "audio_text": "more responsible",
+        "text": "more responsible"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to assign roles",
+        "text": "to assign roles"
+       },
+       {
+        "id": "V4",
+        "audio_text": "shared folder",
+        "text": "shared folder"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to set a timeline",
+        "text": "to set a timeline"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Classmate",
+        "text": "How should we divide the work?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "By strengths — if everyone takes what they do best, the quality will be higher.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "We divided it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The work is dividing us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“By strengths — if everyone takes what they do best, the quality will be higher.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_STUDY_GROUP_PROJECTS_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если кто-то не сдаёт работу",
+    "en": "If Someone Does Not Deliver"
+   },
+   "objective": {
+    "ru": "Обсудить проблемы в группе, используя should и первое условное.",
+    "en": "Discuss group problems using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to fall behind",
+        "right": "отставать"
+       },
+       {
+        "id": "P2",
+        "left": "to remind",
+        "right": "напомнить"
+       },
+       {
+        "id": "P3",
+        "left": "to rely on",
+        "right": "полагаться на"
+       },
+       {
+        "id": "P4",
+        "left": "honest",
+        "right": "честный"
+       },
+       {
+        "id": "P5",
+        "left": "to split up the work",
+        "right": "переделить работу"
+       },
+       {
+        "id": "P6",
+        "left": "consequence",
+        "right": "последствие"
+       },
+       {
+        "id": "P7",
+        "left": "as early as possible",
+        "right": "как можно раньше"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct group advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should tell the leader about problems as early as possible.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to tell him yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must telling leader last week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should tell the leader about problems as early as possible.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если один отстанет, вся группа рискует сорвать срок.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If one person falls behind, the whole group risks missing the deadline.",
+      "word_bank": [
+       "the",
+       "one",
+       "the",
+       "missing",
+       "risks",
+       "deadline.",
+       "yesterday",
+       "did",
+       "behind,",
+       "group",
+       "falls",
+       "person",
+       "fell",
+       "whole",
+       "If"
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you cannot finish your part, ___ the others immediately.",
+      "correct_answer": "tell",
+      "options": [
+       "tell",
+       "will tell",
+       "told"
+      ],
+      "translation_hint": "Если не можешь закончить свою часть, сразу скажи остальным."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "You",
+       "went",
+       "not",
+       "rely",
+       "mustn't",
+       "memory",
+       "reminders.",
+       "should",
+       "on",
+       "—",
+       "set"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "not",
+       "rely",
+       "on",
+       "memory",
+       "—",
+       "set",
+       "reminders."
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If the group splits up the unfinished work early, a small delay will not become a disaster.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If the group splits up the unfinished work early, a small delay will not become a disaster.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если группа заранее переделит незаконченную работу, небольшая задержка не станет катастрофой."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Missing Part",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "Mark has not sent his part, and the deadline is tomorrow.",
+        "translation": "Марк не прислал свою часть, а срок завтра."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Has anyone reminded him?",
+        "translation": "Кто-нибудь напоминал ему?"
+       },
+       {
+        "type": "choice",
+        "text": "What do they decide?",
+        "options": [
+         {
+          "text": "I will call him now — if he cannot do it, we will split up his part.",
+          "is_correct": true
+         },
+         {
+          "text": "I called him yesterday tomorrow already.",
+          "is_correct": false
+         },
+         {
+          "text": "The deadline is missing Mark's part.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to fall behind",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To progress more slowly than needed",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To finish your part earlier than planned",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To leave the group for another project",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to fall behind” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If a task is late, ___ the leader today.",
+      "audio_text": "If a task is late, remind the leader today.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "remind",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will remind",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "reminded",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “remind”."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should rely ___ the shared calendar.",
+      "correct_answer": "on",
+      "hint_prefix": "on",
+      "explanation": "The complete sentence is “You should rely on the shared calendar.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to fall behind",
+        "text": "to fall behind"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to remind",
+        "text": "to remind"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to rely on",
+        "text": "to rely on"
+       },
+       {
+        "id": "V4",
+        "audio_text": "honest",
+        "text": "honest"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to split up the work",
+        "text": "to split up the work"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_STUDY_GROUP_PROJECTS_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Classmate",
+        "text": "I am afraid I will miss my part."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Tell us today — if we know early, we will help you finish it.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "He told us yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The part is missing you.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Tell us today — if we know early, we will help you finish it.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

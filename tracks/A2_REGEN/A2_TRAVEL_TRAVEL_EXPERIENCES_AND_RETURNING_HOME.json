@@ -1,0 +1,1446 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME",
+  "title": {
+   "ru": "Впечатления от поездки и возвращение домой",
+   "en": "Travel Experiences and Returning Home"
+  },
+  "description": {
+   "ru": "Развивайте английский для путешествий уровня A2 по теме «Впечатления от поездки и возвращение домой».",
+   "en": "Develop A2 travel English for travel experiences and returning home."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "travel",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "travel",
+   "travel-experiences-and-returning-home"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L1",
+   "order": 1,
+   "title": {
+    "ru": "Лучшие моменты поездки",
+    "en": "Best Moments of the Trip"
+   },
+   "objective": {
+    "ru": "Поделиться впечатлениями, используя past simple и present perfect.",
+    "en": "Share impressions using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "highlight",
+        "right": "лучший момент"
+       },
+       {
+        "id": "P2",
+        "left": "unforgettable",
+        "right": "незабываемый"
+       },
+       {
+        "id": "P3",
+        "left": "to try local food",
+        "right": "попробовать местную еду"
+       },
+       {
+        "id": "P4",
+        "left": "experience",
+        "right": "впечатление / опыт"
+       },
+       {
+        "id": "P5",
+        "left": "to come back",
+        "right": "вернуться"
+       },
+       {
+        "id": "P6",
+        "left": "already",
+        "right": "уже"
+       },
+       {
+        "id": "P7",
+        "left": "abroad",
+        "right": "за границей"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "This is the best meal I have ever tried abroad.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "This is the best meal I have tried it last year.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "This is the best meal I try already abroad.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “This is the best meal I have ever tried abroad.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы попробовали местную уличную еду, и это был лучший вечер поездки.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We tried the local street food, and it was the best evening of the trip.",
+      "word_bank": [
+       "food,",
+       "try",
+       "local",
+       "tried",
+       "the",
+       "it",
+       "evening",
+       "We",
+       "trip.",
+       "of",
+       "was",
+       "and",
+       "tomorrow",
+       "the",
+       "best",
+       "did",
+       "the",
+       "street"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The boat trip at sunset was the ___ of our holiday.",
+      "correct_answer": "highlight",
+      "options": [
+       "highlight",
+       "highlights",
+       "highlighting"
+      ],
+      "translation_hint": "Прогулка на лодке на закате стала лучшим моментом отпуска."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "was",
+       "to",
+       "has",
+       "spring.",
+       "back",
+       "already",
+       "She",
+       "did",
+       "next",
+       "planned",
+       "come"
+      ],
+      "correct_words": [
+       "She",
+       "has",
+       "already",
+       "planned",
+       "to",
+       "come",
+       "back",
+       "next",
+       "spring."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "We have visited nine places in ten days, and the mountain village has been the most unforgettable one.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "We have visited nine places in ten days, and the mountain village has been the most unforgettable one.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Мы посетили девять мест за десять дней, и горная деревня оказалась самой незабываемой."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Last Evening",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "So, what was the highlight of the trip for you?",
+        "translation": "Итак, какой момент поездки был лучшим для тебя?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "The night market, definitely. Have you ever tasted anything like that grilled fish?",
+        "translation": "Ночной рынок, однозначно. Ты когда-нибудь пробовала что-то вроде той рыбы на гриле?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna answer?",
+        "options": [
+         {
+          "text": "Never — and I have already found a recipe to try at home.",
+          "is_correct": true
+         },
+         {
+          "text": "Yes, I try it tomorrow yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The market is highlighting the fish.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "highlight",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The best or most memorable part of something",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A problem that spoiled part of the trip",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "The hotel where the trip started",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“highlight” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We have ___ so many new dishes.",
+      "audio_text": "We have tried so many new dishes.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "tried",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "try",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "trying",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “tried”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "This trip has been ___ .",
+      "correct_answer": "unforgettable",
+      "hint_prefix": "un",
+      "explanation": "The complete sentence is “This trip has been unforgettable .”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "highlight",
+        "text": "highlight"
+       },
+       {
+        "id": "V2",
+        "audio_text": "unforgettable",
+        "text": "unforgettable"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to try local food",
+        "text": "to try local food"
+       },
+       {
+        "id": "V4",
+        "audio_text": "experience",
+        "text": "experience"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to come back",
+        "text": "to come back"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "How was your holiday?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Amazing — it was more authentic than any trip we have done before.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "It was good yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The holiday is travelling me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Amazing — it was more authentic than any trip we have done before.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L2",
+   "order": 2,
+   "title": {
+    "ru": "Возвращаемся домой",
+    "en": "Returning Home"
+   },
+   "objective": {
+    "ru": "Рассказать о возвращении, используя формы будущего и сравнения.",
+    "en": "Talk about returning using future forms and comparatives."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to pack",
+        "right": "собрать (чемодан)"
+       },
+       {
+        "id": "P2",
+        "left": "to land",
+        "right": "приземлиться"
+       },
+       {
+        "id": "P3",
+        "left": "earlier than planned",
+        "right": "раньше планируемого"
+       },
+       {
+        "id": "P4",
+        "left": "jet lag",
+        "right": "смена часовых поясов"
+       },
+       {
+        "id": "P5",
+        "left": "to look forward to",
+        "right": "с нетерпением ждать"
+       },
+       {
+        "id": "P6",
+        "left": "more tired",
+        "right": "усталее"
+       },
+       {
+        "id": "P7",
+        "left": "home sweet home",
+        "right": "дом милый дом"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence talks about the future?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "We are landing at six tomorrow morning.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "We landed at six yesterday morning.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "We has landed tomorrow already.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “We are landing at six tomorrow morning.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Завтра мы вылетаем домой, и я уже жду свою собственную кровать.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We are flying home tomorrow, and I am already looking forward to my own bed.",
+      "word_bank": [
+       "am",
+       "already",
+       "looking",
+       "bed.",
+       "yesterday",
+       "flew",
+       "did",
+       "We",
+       "to",
+       "and",
+       "I",
+       "tomorrow,",
+       "home",
+       "are",
+       "flying",
+       "forward",
+       "own",
+       "my"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The return flight is ___ than the flight out.",
+      "correct_answer": "shorter",
+      "options": [
+       "shorter",
+       "shortest",
+       "more short"
+      ],
+      "translation_hint": "Обратный рейс короче рейса туда."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "I",
+       "am",
+       "we",
+       "was",
+       "evening",
+       "before",
+       "pack",
+       "to",
+       "going",
+       "leave.",
+       "did",
+       "the"
+      ],
+      "correct_words": [
+       "I",
+       "am",
+       "going",
+       "to",
+       "pack",
+       "the",
+       "evening",
+       "before",
+       "we",
+       "leave."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If we sleep on the plane, the jet lag will be easier during the first days at home.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If we sleep on the plane, the jet lag will be easier during the first days at home.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если поспать в самолёте, смена часовых поясов перенесётся легче в первые дни дома."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Last Day",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "Our flight is at nine tomorrow. Have you started packing?",
+        "translation": "Наш рейс завтра в девять. Ты начала собираться?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "Half of it. The souvenirs take more space than I thought.",
+        "translation": "Наполовину. Сувениры занимают больше места, чем я думала."
+       },
+       {
+        "type": "choice",
+        "text": "What does Tom advise?",
+        "options": [
+         {
+          "text": "You should pack the heavy things in the hand luggage.",
+          "is_correct": true
+         },
+         {
+          "text": "You must packed them yesterday already.",
+          "is_correct": false
+         },
+         {
+          "text": "The suitcase is packing the souvenirs.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "jet lag",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The tired feeling after flying across time zones",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A long queue at the baggage claim",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A delay caused by bad weather",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“jet lag” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We are ___ at six in the morning.",
+      "audio_text": "We are landing at six in the morning.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "landing",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "land",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "landed",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “landing”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "I am looking forward ___ my own kitchen.",
+      "correct_answer": "to",
+      "hint_prefix": "to",
+      "explanation": "The complete sentence is “I am looking forward to my own kitchen.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to pack",
+        "text": "to pack"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to land",
+        "text": "to land"
+       },
+       {
+        "id": "V3",
+        "audio_text": "earlier than planned",
+        "text": "earlier than planned"
+       },
+       {
+        "id": "V4",
+        "audio_text": "jet lag",
+        "text": "jet lag"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to look forward to",
+        "text": "to look forward to"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "When do you get back?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Sunday evening — if the connection goes well, I will be home before midnight.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I got back yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "Sunday is getting me back.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Sunday evening — if the connection goes well, I will be home before midnight.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L3",
+   "order": 3,
+   "title": {
+    "ru": "Рассказываем о поездке",
+    "en": "Telling Others About the Trip"
+   },
+   "objective": {
+    "ru": "Дать советы о рассказах о поездках, используя should и первое условное.",
+    "en": "Give advice about sharing travel stories using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "photo album",
+        "right": "фотоальбом"
+       },
+       {
+        "id": "P2",
+        "left": "to recommend",
+        "right": "порекомендовать"
+       },
+       {
+        "id": "P3",
+        "left": "to exaggerate",
+        "right": "преувеличивать"
+       },
+       {
+        "id": "P4",
+        "left": "honest",
+        "right": "честный"
+       },
+       {
+        "id": "P5",
+        "left": "tips",
+        "right": "советы"
+       },
+       {
+        "id": "P6",
+        "left": "the same route",
+        "right": "тот же маршрут"
+       },
+       {
+        "id": "P7",
+        "left": "to share",
+        "right": "поделиться"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should share practical tips, not just photos.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to share tips yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must sharing tips last night.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should share practical tips, not just photos.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если ты честно расскажешь о минусах, друзья лучше спланируют поездку.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If you talk honestly about the downsides, your friends will plan the trip better.",
+      "word_bank": [
+       "better.",
+       "talk",
+       "downsides,",
+       "your",
+       "did",
+       "about",
+       "honestly",
+       "plan",
+       "the",
+       "friends",
+       "you",
+       "the",
+       "If",
+       "will",
+       "told",
+       "trip",
+       "yesterday"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you ___ too much, people will not believe the story.",
+      "correct_answer": "exaggerate",
+      "options": [
+       "exaggerate",
+       "will exaggerate",
+       "exaggerated"
+      ],
+      "translation_hint": "Если слишком преувеличивать, люди не поверят рассказу."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "mustn't",
+       "the",
+       "anyone",
+       "went",
+       "asks.",
+       "route",
+       "should",
+       "share",
+       "who",
+       "You",
+       "with"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "share",
+       "the",
+       "route",
+       "with",
+       "anyone",
+       "who",
+       "asks."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you write down your tips while the trip is fresh, you will remember much more.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you write down your tips while the trip is fresh, you will remember much more.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если записать советы, пока впечатления свежи, запомнится гораздо больше."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Dinner Stories",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "How was the trip? Tell us everything!",
+        "translation": "Как прошла поездка? Рассказывай всё!"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "It was great. The caves were even bigger than the photos show.",
+        "translation": "Было здорово. Гроты оказались даже больше, чем на фото."
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna ask?",
+        "options": [
+         {
+          "text": "Would you recommend the same route for our autumn trip?",
+          "is_correct": true
+         },
+         {
+          "text": "Did you recommend it tomorrow yesterday?",
+          "is_correct": false
+         },
+         {
+          "text": "Is the route telling the story itself?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to exaggerate",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To make something sound bigger or better than it really was",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To describe something exactly as it was",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To refuse to talk about a trip at all",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to exaggerate” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If they ___ our route, they will save a day.",
+      "audio_text": "If they follow our route, they will save a day.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "follow",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will follow",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "followed",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “follow”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should share your ___ with other travellers.",
+      "correct_answer": "tips",
+      "hint_prefix": "ti",
+      "explanation": "The complete sentence is “You should share your tips with other travellers.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "photo album",
+        "text": "photo album"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to recommend",
+        "text": "to recommend"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to exaggerate",
+        "text": "to exaggerate"
+       },
+       {
+        "id": "V4",
+        "audio_text": "honest",
+        "text": "honest"
+       },
+       {
+        "id": "V5",
+        "audio_text": "tips",
+        "text": "tips"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_EXPERIENCES_AND_RETURNING_HOME_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "I am doing the same route next month."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Great — if you message me, I will send you our whole list of places.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I sent it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The route is messaging you.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Great — if you message me, I will send you our whole list of places.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

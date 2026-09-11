@@ -1,0 +1,1436 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES",
+  "title": {
+   "ru": "Личный опыт",
+   "en": "Personal Experiences"
+  },
+  "description": {
+   "ru": "Развивайте навыки аудирования и повторения уровня A2 по теме «Личный опыт».",
+   "en": "Develop A2 listening and shadowing skills for personal experiences."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "listening_shadowing",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "listening-shadowing",
+   "personal-experiences"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L1",
+   "order": 1,
+   "title": {
+    "ru": "Истории из жизни",
+    "en": "Life Stories"
+   },
+   "objective": {
+    "ru": "Понимать рассказы о прошлом, используя past simple и present perfect.",
+    "en": "Understand stories about the past using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "childhood",
+        "right": "детство"
+       },
+       {
+        "id": "P2",
+        "left": "to move house",
+        "right": "переехать (в другой дом)"
+       },
+       {
+        "id": "P3",
+        "left": "used to",
+        "right": "раньше (было)"
+       },
+       {
+        "id": "P4",
+        "left": "memory",
+        "right": "воспоминание"
+       },
+       {
+        "id": "P5",
+        "left": "to grow up",
+        "right": "вырасти"
+       },
+       {
+        "id": "P6",
+        "left": "the first time",
+        "right": "первый раз"
+       },
+       {
+        "id": "P7",
+        "left": "since then",
+        "right": "с тех пор"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence talks about a childhood habit?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "We used to play football in this yard every day.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "We use to played here yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The yard is playing us daily.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “We used to play football in this yard every day.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я вырос в маленьком городе, а потом мы переехали в столицу.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I grew up in a small town, and then we moved house to the capital.",
+      "word_bank": [
+       "tomorrow",
+       "moved",
+       "did",
+       "to",
+       "small",
+       "capital.",
+       "and",
+       "a",
+       "I",
+       "in",
+       "grow",
+       "then",
+       "the",
+       "up",
+       "we",
+       "house",
+       "grew",
+       "town,"
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She has lived in five cities ___ she left home.",
+      "correct_answer": "since",
+      "options": [
+       "since",
+       "for",
+       "ago"
+      ],
+      "translation_hint": "Она пожила в пяти городах с тех пор, как уехала из дома."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "Since",
+       "oysters",
+       "then",
+       "I",
+       "never",
+       "have",
+       "again.",
+       "was",
+       "did",
+       "eaten"
+      ],
+      "correct_words": [
+       "Since",
+       "then",
+       "I",
+       "have",
+       "never",
+       "eaten",
+       "oysters",
+       "again."
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "When I was a child, we used to spend every summer at the lake, and I have kept those memories all my life.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "When I was a child, we used to spend every summer at the lake, and I have kept those memories all my life.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "В детстве мы проводили каждое лето у озера, и я храню эти воспоминания всю жизнь."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "An Old Photo",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "Look at this photo — it was my first day at school.",
+        "translation": "Посмотри на это фото — мой первый день в школе."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "You look so serious! Where did you grow up?",
+        "translation": "Той такой серьёзный! Где ты вырос?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 answer?",
+        "options": [
+         {
+          "text": "In a village near the sea. We moved house when I was ten.",
+          "is_correct": true
+         },
+         {
+          "text": "I grew up tomorrow yesterday near the sea.",
+          "is_correct": false
+         },
+         {
+          "text": "The photo is growing me serious.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "memory",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Something you remember from the past",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A plan you make for next summer",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A photo you are going to take tomorrow",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“memory” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have kept this ___ since childhood.",
+      "audio_text": "I have kept this medal since childhood.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "medal",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "medals",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "medalled",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “medal”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "We ___ to swim in this river.",
+      "correct_answer": "used",
+      "hint_prefix": "us",
+      "explanation": "The complete sentence is “We used to swim in this river.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "childhood",
+        "text": "childhood"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to move house",
+        "text": "to move house"
+       },
+       {
+        "id": "V3",
+        "audio_text": "used to",
+        "text": "used to"
+       },
+       {
+        "id": "V4",
+        "audio_text": "memory",
+        "text": "memory"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to grow up",
+        "text": "to grow up"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Have you ever changed schools?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Twice — I still remember how nervous I was the first time.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I changed them yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The schools are changing me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Twice — I still remember how nervous I was the first time.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L2",
+   "order": 2,
+   "title": {
+    "ru": "Планы, о которых рассказывают",
+    "en": "Plans People Talk About"
+   },
+   "objective": {
+    "ru": "Понимать рассказы о планах и сравнивать жизненные пути.",
+    "en": "Understand talks about plans and compare life paths."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to settle down",
+        "right": "осесть, обосноваться"
+       },
+       {
+        "id": "P2",
+        "left": "career change",
+        "right": "смена карьеры"
+       },
+       {
+        "id": "P3",
+        "left": "more challenging",
+        "right": "сложнее (вызов)"
+       },
+       {
+        "id": "P4",
+        "left": "to apply for",
+        "right": "подать заявку на"
+       },
+       {
+        "id": "P5",
+        "left": "abroad",
+        "right": "за границей"
+       },
+       {
+        "id": "P6",
+        "left": "to be ready for",
+        "right": "быть готовым к"
+       },
+       {
+        "id": "P7",
+        "left": "gap year",
+        "right": "перерыв на год (между учёбой)"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two paths correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "Moving abroad is more challenging than changing jobs at home.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Moving abroad is challenginger than jobs.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "Abroad is most challenging than home.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “Moving abroad is more challenging than changing jobs at home.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "В следующем году она собирается взять перерыв и пожить за границей.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "Next year she is going to take a gap year and live abroad.",
+      "word_bank": [
+       "gap",
+       "is",
+       "took",
+       "a",
+       "take",
+       "going",
+       "she",
+       "yesterday",
+       "live",
+       "and",
+       "to",
+       "year",
+       "Next",
+       "did",
+       "year",
+       "abroad."
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "A career change is ___ risky at thirty than at fifty.",
+      "correct_answer": "less",
+      "options": [
+       "less",
+       "least",
+       "little"
+      ],
+      "translation_hint": "Смена карьеры в тридцать менее рискованна, чем в пятьдесят."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "going",
+       "in",
+       "They",
+       "did",
+       "to",
+       "down",
+       "countryside.",
+       "was",
+       "are",
+       "settle",
+       "the"
+      ],
+      "correct_words": [
+       "They",
+       "are",
+       "going",
+       "to",
+       "settle",
+       "down",
+       "in",
+       "the",
+       "countryside."
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you are ready for a big change, a career switch will feel less scary than it sounds.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you are ready for a big change, a career switch will feel less scary than it sounds.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если ты готов к большим переменам, смена карьеры будет менее страшной, чем звучит."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Plans Over Coffee",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "I have some news — I am going to apply for a job in Berlin.",
+        "translation": "У меня новость — я собираюсь подать заявку на работу в Берлине."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Really? That is a big step. Are you ready for such a change?",
+        "translation": "Серьёзно? Это большой шаг. Ты готова к таким переменам?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 say?",
+        "options": [
+         {
+          "text": "I think so — it is more challenging, but I have planned it for a year.",
+          "is_correct": true
+         },
+         {
+          "text": "Yes, I was ready for it yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "Berlin is applying for me.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to settle down",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To start living a stable life in one place",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To travel non-stop for several years",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To change your flat every month",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to settle down” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "He is going to ___ for a master's programme.",
+      "audio_text": "He is going to apply for a master's programme.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "apply",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "applied",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "applying",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “apply”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Living abroad is ___ comfortable now.",
+      "correct_answer": "more",
+      "hint_prefix": "mo",
+      "explanation": "The complete sentence is “Living abroad is more comfortable now.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to settle down",
+        "text": "to settle down"
+       },
+       {
+        "id": "V2",
+        "audio_text": "career change",
+        "text": "career change"
+       },
+       {
+        "id": "V3",
+        "audio_text": "more challenging",
+        "text": "more challenging"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to apply for",
+        "text": "to apply for"
+       },
+       {
+        "id": "V5",
+        "audio_text": "abroad",
+        "text": "abroad"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "What would you do with a gap year?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "I would learn Spanish — if I stay in one place, progress will be faster.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I took it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The year is gapping me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“I would learn Spanish — if I stay in one place, progress will be faster.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L3",
+   "order": 3,
+   "title": {
+    "ru": "Опыт, который учит",
+    "en": "Experience That Teaches"
+   },
+   "objective": {
+    "ru": "Понимать рассказы об уроках жизни, используя should и первое условное.",
+    "en": "Understand life-lesson stories using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "lesson",
+        "right": "урок"
+       },
+       {
+        "id": "P2",
+        "left": "to regret",
+        "right": "сожалеть"
+       },
+       {
+        "id": "P3",
+        "left": "mistake",
+        "right": "ошибка"
+       },
+       {
+        "id": "P4",
+        "left": "to take a risk",
+        "right": "рискнуть"
+       },
+       {
+        "id": "P5",
+        "left": "worth it",
+        "right": "того стоило"
+       },
+       {
+        "id": "P6",
+        "left": "to look back",
+        "right": "оглядываться назад"
+       },
+       {
+        "id": "P7",
+        "left": "to learn from",
+        "right": "извлечь урок из"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence describes a lesson learned?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "If I had asked for help, the move would have been easier — now I always ask.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "I asked help yesterday, and now never ask.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The help is moving me easier.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “If I had asked for help, the move would have been easier — now I always ask.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если ты не рискнёшь, то потом будешь об этом жалеть.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If you do not take the risk, you will regret it later.",
+      "word_bank": [
+       "do",
+       "later.",
+       "will",
+       "took",
+       "risk,",
+       "regret",
+       "you",
+       "If",
+       "you",
+       "yesterday",
+       "the",
+       "it",
+       "take",
+       "did",
+       "not"
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Looking back, that mistake ___ the best lesson of my career.",
+      "correct_answer": "was",
+      "options": [
+       "was",
+       "were",
+       "been"
+      ],
+      "translation_hint": "Оглядываясь назад, та ошибка была лучшим уроком моей карьеры."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "fear",
+       "not",
+       "should",
+       "You",
+       "mustn't",
+       "mistakes,",
+       "learn",
+       "from",
+       "them.",
+       "went"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "learn",
+       "from",
+       "mistakes,",
+       "not",
+       "fear",
+       "them."
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "I almost turned down the job offer, but a friend said: if you never take risks, you will never know.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "I almost turned down the job offer, but a friend said: if you never take risks, you will never know.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Я чуть не отказался от предложения о работе, но друг сказал: если никогда не рискуешь, никогда не узнаешь."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Rejected Offer",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "Have I told you about my first job interview? I turned the offer down.",
+        "translation": "Я рассказывал о своём первом собеседовании? Я отказался от предложения."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Why? Do you regret it?",
+        "translation": "Почему? Сожалеешь?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 answer?",
+        "options": [
+         {
+          "text": "A little — but I learned from it, and the next risk was worth it.",
+          "is_correct": true
+         },
+         {
+          "text": "Yes, I regret it tomorrow yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The interview is regretting me down.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to regret",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To feel sad about something you did or did not do",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To feel happy about a past decision",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To plan a future change carefully",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to regret” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If you ___ a risk, you will never grow.",
+      "audio_text": "If you never take a risk, you will never grow.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "take",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will take",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "took",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “take”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "It was difficult, but it was ___ it.",
+      "correct_answer": "worth",
+      "hint_prefix": "wo",
+      "explanation": "The complete sentence is “It was difficult, but it was worth it.”."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "lesson",
+        "text": "lesson"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to regret",
+        "text": "to regret"
+       },
+       {
+        "id": "V3",
+        "audio_text": "mistake",
+        "text": "mistake"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to take a risk",
+        "text": "to take a risk"
+       },
+       {
+        "id": "V5",
+        "audio_text": "worth it",
+        "text": "worth it"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_LISTENING_SHADOWING_PERSONAL_EXPERIENCES_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "I failed my first driving test."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "So did I — if you learn from it, the second attempt will be easier.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I passed it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The test is failing me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“So did I — if you learn from it, the second attempt will be easier.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

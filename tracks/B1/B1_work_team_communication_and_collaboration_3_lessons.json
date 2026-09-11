@@ -1,0 +1,1412 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION",
+    "title": {
+      "ru": "Командное общение и сотрудничество",
+      "en": "Team Communication and Collaboration"
+    },
+    "description": {
+      "ru": "Развивайте практический английский уровня B1 для работы по теме «Командное общение и сотрудничество».",
+      "en": "Develop practical B1 workplace English for team communication and collaboration."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "B1",
+    "goal": "work",
+    "track_type": "thematic",
+    "tags": [
+      "B1",
+      "work",
+      "team-communication-and-collaboration"
+    ]
+  },
+  "lessons": [
+    {
+      "code": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1",
+      "order": 1,
+      "title": {
+        "ru": "Рабочая ситуация",
+        "en": "Sharing Information"
+      },
+      "objective": {
+        "ru": "Использовать английский уровня B1 для объяснения рабочих ситуаций, обсуждения вариантов и согласования следующих действий.",
+        "en": "Use B1 English to explain workplace situations, discuss options, and agree on next actions."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W01",
+                "left": "coordinate",
+                "right": "координировать"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W02",
+                "left": "keep someone informed",
+                "right": "держать в курсе"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W03",
+                "left": "contribute",
+                "right": "вносить вклад"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W04",
+                "left": "misunderstanding",
+                "right": "недопонимание"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W05",
+                "left": "clarify",
+                "right": "уточнять"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W06",
+                "left": "collaborate",
+                "right": "сотрудничать"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W07",
+                "left": "feedback",
+                "right": "обратная связь"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Which response communicates the workplace situation most effectively?",
+            "options": [
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W08",
+                "text": "We coordinate our tasks through a shared plan and keep everyone informed when priorities change.",
+                "is_correct": true
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W09",
+                "text": "The problem does not need an explanation or any further action.",
+                "is_correct": false
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W10",
+                "text": "No one should receive information about the decision.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct response gives clear B1-level information and connects the situation to an action or reason."
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Мы координируем задачи с помощью общего плана и держим всех в курсе изменений приоритетов.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "We coordinate our tasks through a shared plan and keep everyone informed when priorities change.",
+            "word_bank": [
+              "We",
+              "coordinate",
+              "our",
+              "tasks",
+              "through",
+              "a",
+              "shared",
+              "plan",
+              "and",
+              "keep",
+              "everyone",
+              "informed",
+              "when",
+              "priorities",
+              "change."
+            ]
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "We ___ our tasks through a shared plan and keep everyone informed when priorities change.",
+            "correct_answer": "coordinate",
+            "options": [
+              "coordinate",
+              "misunderstanding",
+              "collaborate"
+            ]
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "change.",
+              "priorities",
+              "when",
+              "informed",
+              "everyone",
+              "keep",
+              "and",
+              "plan",
+              "shared",
+              "a",
+              "through",
+              "tasks",
+              "our",
+              "coordinate",
+              "We"
+            ],
+            "correct_words": [
+              "We",
+              "coordinate",
+              "our",
+              "tasks",
+              "through",
+              "a",
+              "shared",
+              "plan",
+              "and",
+              "keep",
+              "everyone",
+              "informed",
+              "when",
+              "priorities",
+              "change."
+            ]
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "We coordinate our tasks through a shared plan and keep everyone informed when priorities change. The team will review the situation and confirm the next action by the end of the day.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "We coordinate our tasks through a shared plan and keep everyone informed when priorities change. The team will review the situation and confirm the next action by the end of the day. Notice the contrast and stressed action words, then repeat the complete update naturally.",
+            "language": "en",
+            "min_accuracy": 0.76,
+            "translation_hint": "Мы координируем задачи с помощью общего плана и держим всех в курсе изменений приоритетов. Команда рассмотрит ситуацию и подтвердит следующее действие до конца дня. Обратите внимание на противопоставление и ударные слова действия, затем естественно повторите всё сообщение."
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Sharing Information",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Manager",
+                "text": "Please explain the situation and recommend a next step.",
+                "translation": "Пожалуйста, объясните ситуацию и порекомендуйте следующий шаг."
+              },
+              {
+                "type": "dialogue",
+                "character": "Employee",
+                "text": "We coordinate our tasks through a shared plan and keep everyone informed when priorities change.",
+                "translation": "Мы координируем задачи с помощью общего плана и держим всех в курсе изменений приоритетов."
+              },
+              {
+                "type": "choice",
+                "text": "Which action best continues the conversation?",
+                "options": [
+                  {
+                    "text": "Confirm responsibilities and agree when the next update will be given.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "End the discussion without assigning any action.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "coordinate",
+            "language": "en",
+            "options": [
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W11",
+                "text": "organise people or activities effectively",
+                "is_correct": true
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W12",
+                "text": "provide regular relevant information",
+                "is_correct": false
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W13",
+                "text": "add useful work or ideas",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“coordinate” means organise people or activities effectively."
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "We ___ our tasks through a shared plan and keep everyone informed when priorities change.",
+            "audio_text": "We coordinate our tasks through a shared plan and keep everyone informed when priorities change.",
+            "language": "en",
+            "options": [
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W14",
+                "audio_text": "coordinate",
+                "is_correct": true
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W15",
+                "audio_text": "contribute",
+                "is_correct": false
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W16",
+                "audio_text": "clarify",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing workplace expression is “coordinate”."
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "We ___ our tasks through a shared plan and keep everyone informed when priorities change.",
+            "correct_answer": "coordinate",
+            "hint_prefix": "coo",
+            "explanation": "The sentence requires “coordinate” to communicate the intended workplace meaning."
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W17",
+                "audio_text": "coordinate",
+                "text": "coordinate"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W18",
+                "audio_text": "keep someone informed",
+                "text": "keep someone informed"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W19",
+                "audio_text": "contribute",
+                "text": "contribute"
+              }
+            ],
+            "explanation": "Match each B1 workplace expression you hear with its written form."
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Colleague",
+                "text": "What should we do about “Sharing Information”?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W20",
+                "text": "We coordinate our tasks through a shared plan and keep everyone informed when priorities change.",
+                "is_correct": true
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W21",
+                "text": "There is no need to explain the issue or consider a solution.",
+                "is_correct": false
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L1_W22",
+                "text": "I will give an unrelated answer instead of discussing the work.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct response explains the work situation clearly and supports practical next steps."
+          }
+        }
+      ]
+    },
+    {
+      "code": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2",
+      "order": 2,
+      "title": {
+        "ru": "Обсуждение вариантов",
+        "en": "Coordinating with Colleagues"
+      },
+      "objective": {
+        "ru": "Использовать английский уровня B1 для объяснения рабочих ситуаций, обсуждения вариантов и согласования следующих действий.",
+        "en": "Use B1 English to explain workplace situations, discuss options, and agree on next actions."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W01",
+                "left": "coordinate",
+                "right": "координировать"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W02",
+                "left": "keep someone informed",
+                "right": "держать в курсе"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W03",
+                "left": "contribute",
+                "right": "вносить вклад"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W04",
+                "left": "misunderstanding",
+                "right": "недопонимание"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W05",
+                "left": "clarify",
+                "right": "уточнять"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W06",
+                "left": "collaborate",
+                "right": "сотрудничать"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W07",
+                "left": "feedback",
+                "right": "обратная связь"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Which response communicates the workplace situation most effectively?",
+            "options": [
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W08",
+                "text": "Each department contributed useful information, which allowed us to collaborate more effectively.",
+                "is_correct": true
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W09",
+                "text": "The problem does not need an explanation or any further action.",
+                "is_correct": false
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W10",
+                "text": "No one should receive information about the decision.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct response gives clear B1-level information and connects the situation to an action or reason."
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Каждый отдел предоставил полезную информацию, что позволило нам сотрудничать эффективнее.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Each department contributed useful information, which allowed us to collaborate more effectively.",
+            "word_bank": [
+              "Each",
+              "department",
+              "contributed",
+              "useful",
+              "information,",
+              "which",
+              "allowed",
+              "us",
+              "to",
+              "collaborate",
+              "more",
+              "effectively."
+            ]
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Each department contributed useful information, which allowed us to collaborate more effectively.",
+            "correct_answer": "keep someone informed",
+            "options": [
+              "keep someone informed",
+              "clarify",
+              "feedback"
+            ]
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "effectively.",
+              "more",
+              "collaborate",
+              "to",
+              "us",
+              "allowed",
+              "which",
+              "information,",
+              "useful",
+              "contributed",
+              "department",
+              "Each"
+            ],
+            "correct_words": [
+              "Each",
+              "department",
+              "contributed",
+              "useful",
+              "information,",
+              "which",
+              "allowed",
+              "us",
+              "to",
+              "collaborate",
+              "more",
+              "effectively."
+            ]
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Each department contributed useful information, which allowed us to collaborate more effectively. The team will review the situation and confirm the next action by the end of the day.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Each department contributed useful information, which allowed us to collaborate more effectively. The team will review the situation and confirm the next action by the end of the day. Notice the contrast and stressed action words, then repeat the complete update naturally.",
+            "language": "en",
+            "min_accuracy": 0.76,
+            "translation_hint": "Каждый отдел предоставил полезную информацию, что позволило нам сотрудничать эффективнее. Команда рассмотрит ситуацию и подтвердит следующее действие до конца дня. Обратите внимание на противопоставление и ударные слова действия, затем естественно повторите всё сообщение."
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Coordinating with Colleagues",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Manager",
+                "text": "Please explain the situation and recommend a next step.",
+                "translation": "Пожалуйста, объясните ситуацию и порекомендуйте следующий шаг."
+              },
+              {
+                "type": "dialogue",
+                "character": "Employee",
+                "text": "Each department contributed useful information, which allowed us to collaborate more effectively.",
+                "translation": "Каждый отдел предоставил полезную информацию, что позволило нам сотрудничать эффективнее."
+              },
+              {
+                "type": "choice",
+                "text": "Which action best continues the conversation?",
+                "options": [
+                  {
+                    "text": "Confirm responsibilities and agree when the next update will be given.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "End the discussion without assigning any action.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "keep someone informed",
+            "language": "en",
+            "options": [
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W11",
+                "text": "provide regular relevant information",
+                "is_correct": true
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W12",
+                "text": "add useful work or ideas",
+                "is_correct": false
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W13",
+                "text": "a failure to understand correctly",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“keep someone informed” means provide regular relevant information."
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "Each department contributed useful information, which allowed us to collaborate more effectively.",
+            "audio_text": "Each department contributed useful information, which allowed us to collaborate more effectively.",
+            "language": "en",
+            "options": [
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W14",
+                "audio_text": "keep someone informed",
+                "is_correct": true
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W15",
+                "audio_text": "misunderstanding",
+                "is_correct": false
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W16",
+                "audio_text": "collaborate",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing workplace expression is “keep someone informed”."
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Each department contributed useful information, which allowed us to collaborate more effectively.",
+            "correct_answer": "keep someone informed",
+            "hint_prefix": "kee",
+            "explanation": "The sentence requires “keep someone informed” to communicate the intended workplace meaning."
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W17",
+                "audio_text": "coordinate",
+                "text": "coordinate"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W18",
+                "audio_text": "keep someone informed",
+                "text": "keep someone informed"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W19",
+                "audio_text": "contribute",
+                "text": "contribute"
+              }
+            ],
+            "explanation": "Match each B1 workplace expression you hear with its written form."
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Colleague",
+                "text": "What should we do about “Coordinating with Colleagues”?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W20",
+                "text": "Each department contributed useful information, which allowed us to collaborate more effectively.",
+                "is_correct": true
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W21",
+                "text": "There is no need to explain the issue or consider a solution.",
+                "is_correct": false
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L2_W22",
+                "text": "I will give an unrelated answer instead of discussing the work.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct response explains the work situation clearly and supports practical next steps."
+          }
+        }
+      ]
+    },
+    {
+      "code": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3",
+      "order": 3,
+      "title": {
+        "ru": "Решение и последующие действия",
+        "en": "Handling Different Views"
+      },
+      "objective": {
+        "ru": "Использовать английский уровня B1 для объяснения рабочих ситуаций, обсуждения вариантов и согласования следующих действий.",
+        "en": "Use B1 English to explain workplace situations, discuss options, and agree on next actions."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W01",
+                "left": "coordinate",
+                "right": "координировать"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W02",
+                "left": "keep someone informed",
+                "right": "держать в курсе"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W03",
+                "left": "contribute",
+                "right": "вносить вклад"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W04",
+                "left": "misunderstanding",
+                "right": "недопонимание"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W05",
+                "left": "clarify",
+                "right": "уточнять"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W06",
+                "left": "collaborate",
+                "right": "сотрудничать"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W07",
+                "left": "feedback",
+                "right": "обратная связь"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Which response communicates the workplace situation most effectively?",
+            "options": [
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W08",
+                "text": "A brief meeting clarified the misunderstanding and gave both colleagues a chance to offer feedback.",
+                "is_correct": true
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W09",
+                "text": "The problem does not need an explanation or any further action.",
+                "is_correct": false
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W10",
+                "text": "No one should receive information about the decision.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct response gives clear B1-level information and connects the situation to an action or reason."
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Короткая встреча прояснила недопонимание и дала обоим коллегам возможность оставить обратную связь.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "A brief meeting clarified the misunderstanding and gave both colleagues a chance to offer feedback.",
+            "word_bank": [
+              "A",
+              "brief",
+              "meeting",
+              "clarified",
+              "the",
+              "misunderstanding",
+              "and",
+              "gave",
+              "both",
+              "colleagues",
+              "a",
+              "chance",
+              "to",
+              "offer",
+              "feedback."
+            ]
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "A brief meeting clarified the misunderstanding and gave both colleagues a chance to offer feedback.",
+            "correct_answer": "contribute",
+            "options": [
+              "contribute",
+              "collaborate",
+              "coordinate"
+            ]
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "feedback.",
+              "offer",
+              "to",
+              "chance",
+              "a",
+              "colleagues",
+              "both",
+              "gave",
+              "and",
+              "misunderstanding",
+              "the",
+              "clarified",
+              "meeting",
+              "brief",
+              "A"
+            ],
+            "correct_words": [
+              "A",
+              "brief",
+              "meeting",
+              "clarified",
+              "the",
+              "misunderstanding",
+              "and",
+              "gave",
+              "both",
+              "colleagues",
+              "a",
+              "chance",
+              "to",
+              "offer",
+              "feedback."
+            ]
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "A brief meeting clarified the misunderstanding and gave both colleagues a chance to offer feedback. The team will review the situation and confirm the next action by the end of the day.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "A brief meeting clarified the misunderstanding and gave both colleagues a chance to offer feedback. The team will review the situation and confirm the next action by the end of the day. Notice the contrast and stressed action words, then repeat the complete update naturally.",
+            "language": "en",
+            "min_accuracy": 0.76,
+            "translation_hint": "Короткая встреча прояснила недопонимание и дала обоим коллегам возможность оставить обратную связь. Команда рассмотрит ситуацию и подтвердит следующее действие до конца дня. Обратите внимание на противопоставление и ударные слова действия, затем естественно повторите всё сообщение."
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Handling Different Views",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Manager",
+                "text": "Please explain the situation and recommend a next step.",
+                "translation": "Пожалуйста, объясните ситуацию и порекомендуйте следующий шаг."
+              },
+              {
+                "type": "dialogue",
+                "character": "Employee",
+                "text": "A brief meeting clarified the misunderstanding and gave both colleagues a chance to offer feedback.",
+                "translation": "Короткая встреча прояснила недопонимание и дала обоим коллегам возможность оставить обратную связь."
+              },
+              {
+                "type": "choice",
+                "text": "Which action best continues the conversation?",
+                "options": [
+                  {
+                    "text": "Confirm responsibilities and agree when the next update will be given.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "End the discussion without assigning any action.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "contribute",
+            "language": "en",
+            "options": [
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W11",
+                "text": "add useful work or ideas",
+                "is_correct": true
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W12",
+                "text": "a failure to understand correctly",
+                "is_correct": false
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W13",
+                "text": "make information easier to understand",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“contribute” means add useful work or ideas."
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "A brief meeting clarified the misunderstanding and gave both colleagues a chance to offer feedback.",
+            "audio_text": "A brief meeting clarified the misunderstanding and gave both colleagues a chance to offer feedback.",
+            "language": "en",
+            "options": [
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W14",
+                "audio_text": "contribute",
+                "is_correct": true
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W15",
+                "audio_text": "clarify",
+                "is_correct": false
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W16",
+                "audio_text": "feedback",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing workplace expression is “contribute”."
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "A brief meeting clarified the misunderstanding and gave both colleagues a chance to offer feedback.",
+            "correct_answer": "contribute",
+            "hint_prefix": "con",
+            "explanation": "The sentence requires “contribute” to communicate the intended workplace meaning."
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W17",
+                "audio_text": "coordinate",
+                "text": "coordinate"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W18",
+                "audio_text": "keep someone informed",
+                "text": "keep someone informed"
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W19",
+                "audio_text": "contribute",
+                "text": "contribute"
+              }
+            ],
+            "explanation": "Match each B1 workplace expression you hear with its written form."
+          }
+        },
+        {
+          "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Colleague",
+                "text": "What should we do about “Handling Different Views”?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W20",
+                "text": "A brief meeting clarified the misunderstanding and gave both colleagues a chance to offer feedback.",
+                "is_correct": true
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W21",
+                "text": "There is no need to explain the issue or consider a solution.",
+                "is_correct": false
+              },
+              {
+                "id": "B1_WORK_TEAM_COMMUNICATION_AND_COLLABORATION_L3_W22",
+                "text": "I will give an unrelated answer instead of discussing the work.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct response explains the work situation clearly and supports practical next steps."
+          }
+        }
+      ]
+    }
+  ]
+}

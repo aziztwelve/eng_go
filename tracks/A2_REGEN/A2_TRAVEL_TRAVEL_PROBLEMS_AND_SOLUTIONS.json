@@ -1,0 +1,1450 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS",
+  "title": {
+   "ru": "Проблемы в поездке и решения",
+   "en": "Travel Problems and Solutions"
+  },
+  "description": {
+   "ru": "Развивайте английский для путешествий уровня A2 по теме «Проблемы в поездке и решения».",
+   "en": "Develop A2 travel English for travel problems and solutions."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "travel",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "travel",
+   "travel-problems-and-solutions"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L1",
+   "order": 1,
+   "title": {
+    "ru": "Что пошло не так в поездке",
+    "en": "What Went Wrong on the Trip"
+   },
+   "objective": {
+    "ru": "Рассказать о проблемах в пути, используя past simple и present perfect.",
+    "en": "Talk about travel problems using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "delay",
+        "right": "задержка"
+       },
+       {
+        "id": "P2",
+        "left": "lost luggage",
+        "right": "потерянный багаж"
+       },
+       {
+        "id": "P3",
+        "left": "to claim",
+        "right": "подать заявление (на компенсацию)"
+       },
+       {
+        "id": "P4",
+        "left": "to rebook",
+        "right": "перебронировать"
+       },
+       {
+        "id": "P5",
+        "left": "stressful",
+        "right": "стрессовый"
+       },
+       {
+        "id": "P6",
+        "left": "customer service",
+        "right": "служба поддержки"
+       },
+       {
+        "id": "P7",
+        "left": "eventually",
+        "right": "в итоге"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The airline has found my suitcase this morning.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "The airline has found it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The airline find it already this morning.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The airline has found my suitcase this morning.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Наш рейс задержали на пять часов, а багаж в итоге потеряли.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "Our flight was delayed by five hours, and the luggage got lost in the end.",
+      "word_bank": [
+       "tomorrow",
+       "and",
+       "the",
+       "in",
+       "hours,",
+       "was",
+       "did",
+       "end.",
+       "was",
+       "five",
+       "by",
+       "lost",
+       "the",
+       "got",
+       "flight",
+       "luggage",
+       "delayed",
+       "Our"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "They ___ us on the next flight for free.",
+      "correct_answer": "rebooked",
+      "options": [
+       "rebooked",
+       "has rebook",
+       "rebooking"
+      ],
+      "translation_hint": "Нас бесплатно перебронировали на следующий рейс."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "did",
+       "compensation",
+       "She",
+       "the",
+       "has",
+       "already",
+       "claimed",
+       "was",
+       "delay.",
+       "for"
+      ],
+      "correct_words": [
+       "She",
+       "has",
+       "already",
+       "claimed",
+       "compensation",
+       "for",
+       "the",
+       "delay."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "The airline has apologised for the delay, but nobody has explained where our suitcases are.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "The airline has apologised for the delay, but nobody has explained where our suitcases are.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Авиакомпания извинилась за задержку, но никто не объяснил, где наши чемоданы."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Empty Belt",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "Everyone's luggage has arrived, but ours has not.",
+        "translation": "Чей хочешь багаж пришёл, а наш — нет."
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "Did you report it at the lost luggage desk?",
+        "translation": "Ты сообщила на стойке потерянного багажа?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna say?",
+        "options": [
+         {
+          "text": "Yes, I have filled in the form and they have given me a tracking number.",
+          "is_correct": true
+         },
+         {
+          "text": "Yes, I fill it in tomorrow yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The belt is losing our luggage report.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "lost luggage",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Suitcases that did not arrive with your flight",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A bag you left at home on purpose",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Extra bags you paid for at check-in",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“lost luggage” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have ___ a compensation claim online.",
+      "audio_text": "I have submitted a compensation claim online.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "submitted",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "submit",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "submitting",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “submitted”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Our flight has been ___ for three hours.",
+      "correct_answer": "delayed",
+      "hint_prefix": "de",
+      "explanation": "The complete sentence is “Our flight has been delayed for three hours.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "delay",
+        "text": "delay"
+       },
+       {
+        "id": "V2",
+        "audio_text": "lost luggage",
+        "text": "lost luggage"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to claim",
+        "text": "to claim"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to rebook",
+        "text": "to rebook"
+       },
+       {
+        "id": "V5",
+        "audio_text": "stressful",
+        "text": "stressful"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Agent",
+        "text": "How can I help you?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Our connecting train has been cancelled — could you rebook us on the night bus?",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "You rebooked us yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The train is helping you.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Our connecting train has been cancelled — could you rebook us on the night bus?” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L2",
+   "order": 2,
+   "title": {
+    "ru": "Что будем делать дальше",
+    "en": "What We Will Do Next"
+   },
+   "objective": {
+    "ru": "Решить проблемы и сравнить варианты действий.",
+    "en": "Solve problems and compare options."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "solution",
+        "right": "решение"
+       },
+       {
+        "id": "P2",
+        "left": "alternative",
+        "right": "альтернатива"
+       },
+       {
+        "id": "P3",
+        "left": "more sensible",
+        "right": "разумнее"
+       },
+       {
+        "id": "P4",
+        "left": "to wait",
+        "right": "ждать"
+       },
+       {
+        "id": "P5",
+        "left": "to rent a car",
+        "right": "взять машину напрокат"
+       },
+       {
+        "id": "P6",
+        "left": "overnight",
+        "right": "ночной / на ночь"
+       },
+       {
+        "id": "P7",
+        "left": "to compensate",
+        "right": "компенсировать"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two solutions correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "Renting a car is more sensible than waiting here all night.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Renting a car is sensibler than waiting.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "Renting a car is most sensible than waiting.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “Renting a car is more sensible than waiting here all night.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы возьмём машину напрокат — это выйдет дешевле, чем ночь в аэропорту.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We are going to rent a car — it will work out cheaper than a night at the airport.",
+      "word_bank": [
+       "are",
+       "going",
+       "We",
+       "yesterday",
+       "at",
+       "to",
+       "than",
+       "night",
+       "a",
+       "a",
+       "rented",
+       "airport.",
+       "it",
+       "the",
+       "out",
+       "car",
+       "work",
+       "will",
+       "—",
+       "did",
+       "cheaper",
+       "rent"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The overnight bus is ___ than the morning train.",
+      "correct_answer": "slower",
+      "options": [
+       "slower",
+       "slowest",
+       "more slow"
+      ],
+      "translation_hint": "Ночной автобус медленнее утреннего поезда."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "taxi.",
+       "was",
+       "The",
+       "going",
+       "us",
+       "for",
+       "the",
+       "is",
+       "did",
+       "company",
+       "to",
+       "compensate"
+      ],
+      "correct_words": [
+       "The",
+       "company",
+       "is",
+       "going",
+       "to",
+       "compensate",
+       "us",
+       "for",
+       "the",
+       "taxi."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If the airline pays for the hotel, waiting until tomorrow will be the easiest solution.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If the airline pays for the hotel, waiting until tomorrow will be the easiest solution.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если авиакомпания оплатит отель, ожидание до завтра будет самым простым решением."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Stranded at Midnight",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "The last bus has gone, and the first train is at six.",
+        "translation": "Последний автобус ушёл, а первый поезд в шесть."
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "So we either sleep here or take a taxi. Which is more sensible?",
+        "translation": "Значит, либо спим здесь, либо берём такси. Что разумнее?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Tom calculate?",
+        "options": [
+         {
+          "text": "The taxi is expensive, but a hotel near the station costs even more.",
+          "is_correct": true
+         },
+         {
+          "text": "The taxi was cheaper yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The bus is taking us while sleeping.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "overnight",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "During the night, lasting the whole night",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Happening early in the morning",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Taking about half an hour",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“overnight” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We are going to ___ a car for two days.",
+      "audio_text": "We are going to rent a car for two days.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "rent",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "rented",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "renting",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “rent”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "This solution is ___ than the first one.",
+      "correct_answer": "cheaper",
+      "hint_prefix": "ch",
+      "explanation": "The complete sentence is “This solution is cheaper than the first one.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "solution",
+        "text": "solution"
+       },
+       {
+        "id": "V2",
+        "audio_text": "alternative",
+        "text": "alternative"
+       },
+       {
+        "id": "V3",
+        "audio_text": "more sensible",
+        "text": "more sensible"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to wait",
+        "text": "to wait"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to rent a car",
+        "text": "to rent a car"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Agent",
+        "text": "The next available flight is on Friday."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "That is too late — if you rebook us via Munich, we will be home on Wednesday.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "You rebooked us yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "Friday is flying us home.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“That is too late — if you rebook us via Munich, we will be home on Wednesday.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если проблема повторится",
+    "en": "If the Problem Repeats"
+   },
+   "objective": {
+    "ru": "Предложить профилактику проблем, используя should и первое условное.",
+    "en": "Suggest preventing problems using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to prepare",
+        "right": "подготовиться"
+       },
+       {
+        "id": "P2",
+        "left": "copy of documents",
+        "right": "копия документов"
+       },
+       {
+        "id": "P3",
+        "left": "to take precautions",
+        "right": "принять меры предосторожности"
+       },
+       {
+        "id": "P4",
+        "left": "travel insurance",
+        "right": "страховка поездки"
+       },
+       {
+        "id": "P5",
+        "left": "in advance",
+        "right": "заранее"
+       },
+       {
+        "id": "P6",
+        "left": "emergency number",
+        "right": "номер для чрезвычайных ситуаций"
+       },
+       {
+        "id": "P7",
+        "left": "to save (on phone)",
+        "right": "сохранить (в телефоне)"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should keep copies of your documents in the cloud.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to keep them yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must keeping them last trip.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should keep copies of your documents in the cloud.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если ты сохранишь копии документов заранее, потеря паспорта будет менее страшной.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If you save copies of your documents in advance, losing your passport will be less frightening.",
+      "word_bank": [
+       "of",
+       "you",
+       "copies",
+       "your",
+       "will",
+       "documents",
+       "losing",
+       "saved",
+       "did",
+       "save",
+       "less",
+       "passport",
+       "your",
+       "If",
+       "frightening.",
+       "in",
+       "advance,",
+       "be",
+       "yesterday"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If your phone ___ , you will still have paper copies.",
+      "correct_answer": "dies",
+      "options": [
+       "dies",
+       "will die",
+       "died"
+      ],
+      "translation_hint": "Если телефон разрядится, бумажные копии всё равно останутся."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "emergency",
+       "the",
+       "down",
+       "paper.",
+       "on",
+       "write",
+       "went",
+       "should",
+       "number",
+       "mustn't",
+       "You"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "write",
+       "down",
+       "the",
+       "emergency",
+       "number",
+       "on",
+       "paper."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you arrive at the station forty minutes early, a suddenly changed platform will not catch you out.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you arrive at the station forty minutes early, a suddenly changed platform will not catch you out.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если прийти на вокзал на сорок минут раньше, внезапно изменённая платформа не застанет врасплох."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Learning From Trouble",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "That was a stressful morning — we nearly missed the check-in.",
+        "translation": "Утро было стрессовым — мы чуть не опоздали на регистрацию."
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "Next time we should take more precautions.",
+        "translation": "В следующий раз стоит принять больше мер."
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna suggest?",
+        "options": [
+         {
+          "text": "If we leave one hour earlier, traffic will not be a problem.",
+          "is_correct": true
+         },
+         {
+          "text": "If we will leave earlier, traffic was fine yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The check-in is taking precautions against us.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "precautions",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Things you do to stop problems before they happen",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Surprises that appear during a journey",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Tickets you buy at the last moment",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“precautions” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If you ___ copies in advance, you will be calmer.",
+      "audio_text": "If you save copies in advance, you will be calmer.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "save",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will save",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "saved",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “save”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should prepare ___ advance.",
+      "correct_answer": "in",
+      "hint_prefix": "in",
+      "explanation": "The complete sentence is “You should prepare in advance.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to prepare",
+        "text": "to prepare"
+       },
+       {
+        "id": "V2",
+        "audio_text": "copy of documents",
+        "text": "copy of documents"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to take precautions",
+        "text": "to take precautions"
+       },
+       {
+        "id": "V4",
+        "audio_text": "travel insurance",
+        "text": "travel insurance"
+       },
+       {
+        "id": "V5",
+        "audio_text": "in advance",
+        "text": "in advance"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_TRAVEL_PROBLEMS_AND_SOLUTIONS_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "I always panic when plans break down."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Make a small checklist — if you follow it, even a cancelled train will not spoil the trip.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I made it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The panic is planning me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Make a small checklist — if you follow it, even a cancelled train will not spoil the trip.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

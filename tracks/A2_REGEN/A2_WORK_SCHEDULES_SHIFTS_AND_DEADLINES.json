@@ -1,0 +1,1455 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES",
+  "title": {
+   "ru": "Расписания, смены и сроки",
+   "en": "Schedules, Shifts and Deadlines"
+  },
+  "description": {
+   "ru": "Развивайте практический английский уровня A2 для работы по теме «Расписания, смены и сроки».",
+   "en": "Develop practical A2 workplace English for schedules, shifts and deadlines."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "work",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "work",
+   "schedules-shifts-and-deadlines"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L1",
+   "order": 1,
+   "title": {
+    "ru": "Что изменилось на этой неделе",
+    "en": "What Changed This Week"
+   },
+   "objective": {
+    "ru": "Сообщить об изменениях в графике, используя past simple и present perfect.",
+    "en": "Report schedule changes using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "shift",
+        "right": "смена"
+       },
+       {
+        "id": "P2",
+        "left": "deadline",
+        "right": "срок"
+       },
+       {
+        "id": "P3",
+        "left": "to move",
+        "right": "перенести"
+       },
+       {
+        "id": "P4",
+        "left": "to extend",
+        "right": "продлить"
+       },
+       {
+        "id": "P5",
+        "left": "night shift",
+        "right": "ночная смена"
+       },
+       {
+        "id": "P6",
+        "left": "to swap",
+        "right": "обменяться (сменами)"
+       },
+       {
+        "id": "P7",
+        "left": "schedule",
+        "right": "график"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The deadline has moved to the end of the month.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "The deadline has moved yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The deadline move already to Friday.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The deadline has moved to the end of the month.”."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы перенесли дедлайн на пятницу, и клиент уже подтвердил новую дату.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We have moved the deadline to Friday, and the client has already confirmed the new date.",
+      "word_bank": [
+       "the",
+       "yesterday",
+       "We",
+       "client",
+       "the",
+       "date.",
+       "moved",
+       "new",
+       "confirmed",
+       "has",
+       "to",
+       "have",
+       "Friday,",
+       "already",
+       "and",
+       "the",
+       "move",
+       "did",
+       "deadline"
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Last month she worked the ___ shift every week.",
+      "correct_answer": "night",
+      "options": [
+       "night",
+       "nights",
+       "nightly"
+      ],
+      "translation_hint": "В прошлом месяце она каждую неделю работала в ночную смену."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "did",
+       "has",
+       "morning",
+       "with",
+       "a",
+       "He",
+       "swapped",
+       "the",
+       "from",
+       "colleague",
+       "team.",
+       "shifts",
+       "was"
+      ],
+      "correct_words": [
+       "He",
+       "has",
+       "swapped",
+       "shifts",
+       "with",
+       "a",
+       "colleague",
+       "from",
+       "the",
+       "morning",
+       "team."
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "The deadline has changed again, so we have more time than we planned last week.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "The deadline has changed again, so we have more time than we planned last week.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Срок снова изменился, поэтому у нас больше времени, чем мы планировали на прошлой неделе."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Moved Deadline",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "Why is everyone working late today?",
+        "translation": "Почему сегодня все работают допоздна?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "The client moved the deadline, and we have only three days left now.",
+        "translation": "Клиент перенёс срок, и у нас осталось всего три дня."
+       },
+       {
+        "type": "choice",
+        "text": "What does Tom ask?",
+        "options": [
+         {
+          "text": "Has the manager approved the new plan?",
+          "is_correct": true
+         },
+         {
+          "text": "Did the manager has approved it yesterday?",
+          "is_correct": false
+         },
+         {
+          "text": "Is the deadline working late too?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "deadline",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The time or date by which something must be finished",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "The day when a project starts",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A meeting about next year's plan",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“deadline” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We have ___ the deadline by two days.",
+      "audio_text": "We have extended the deadline by two days.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "extended",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "extend",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "extending",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “extended”."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She has worked the night ___ since June.",
+      "correct_answer": "shift",
+      "hint_prefix": "sh",
+      "explanation": "The complete sentence is “She has worked the night shift since June.”."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "shift",
+        "text": "shift"
+       },
+       {
+        "id": "V2",
+        "audio_text": "deadline",
+        "text": "deadline"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to move",
+        "text": "to move"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to extend",
+        "text": "to extend"
+       },
+       {
+        "id": "V5",
+        "audio_text": "night shift",
+        "text": "night shift"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Are you working the morning shift tomorrow?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "I was, but I have swapped it for the evening shift.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, I work it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The shift is swapping me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“I was, but I have swapped it for the evening shift.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L2",
+   "order": 2,
+   "title": {
+    "ru": "График на следующий месяц",
+    "en": "Next Month's Schedule"
+   },
+   "objective": {
+    "ru": "Обсудить будущие смены и сравнить варианты времени.",
+    "en": "Discuss future shifts and compare time options."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "rota",
+        "right": "график смен"
+       },
+       {
+        "id": "P2",
+        "left": "early shift",
+        "right": "ранняя смена"
+       },
+       {
+        "id": "P3",
+        "left": "later",
+        "right": "позже"
+       },
+       {
+        "id": "P4",
+        "left": "to cover",
+        "right": "подменить / закрыть (смену)"
+       },
+       {
+        "id": "P5",
+        "left": "overtime",
+        "right": "сверхурочные"
+       },
+       {
+        "id": "P6",
+        "left": "flexible hours",
+        "right": "гибкий график"
+       },
+       {
+        "id": "P7",
+        "left": "to prefer",
+        "right": "предпочитать"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence talks about the future?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "I am going to cover Anna's shift on Saturday.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "I covered Anna's shift last Saturday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "I have cover Anna's shift yesterday.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “I am going to cover Anna's shift on Saturday.”."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Ранняя смена начинается раньше, но зато я свободен весь вечер.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "The early shift starts earlier, but I am free all evening.",
+      "word_bank": [
+       "but",
+       "starts",
+       "evening.",
+       "early",
+       "shift",
+       "did",
+       "I",
+       "free",
+       "starts",
+       "all",
+       "The",
+       "yesterday",
+       "am",
+       "earlier,"
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Flexible hours are ___ convenient for parents than fixed shifts.",
+      "correct_answer": "more",
+      "options": [
+       "more",
+       "most",
+       "much"
+      ],
+      "translation_hint": "Гибкий график удобнее для родителей, чем фиксированные смены."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "was",
+       "end",
+       "the",
+       "the",
+       "week.",
+       "are",
+       "at",
+       "new",
+       "publish",
+       "going",
+       "did",
+       "to",
+       "We",
+       "rota",
+       "the",
+       "of"
+      ],
+      "correct_words": [
+       "We",
+       "are",
+       "going",
+       "to",
+       "publish",
+       "the",
+       "new",
+       "rota",
+       "at",
+       "the",
+       "end",
+       "of",
+       "the",
+       "week."
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you prefer later starts, you should tell the manager before the rota is final.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you prefer later starts, you should tell the manager before the rota is final.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если ты предпочитаешь начинать позже, стоит сказать менеджеру до того, как график станет окончательным."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Choosing Shifts",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Manager",
+        "text": "The new rota starts next month. Do you have any preferences?",
+        "translation": "Новый график начинается со следующего месяца. Есть предпочтения?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "Yes. Could I work the early shift on Mondays?",
+        "translation": "Да. Можно мне раннюю смену по понедельникам?"
+       },
+       {
+        "type": "choice",
+        "text": "What does the manager answer?",
+        "options": [
+         {
+          "text": "That is fine — Mondays are quieter in the morning.",
+          "is_correct": true
+         },
+         {
+          "text": "Yes, you worked it last month already.",
+          "is_correct": false
+         },
+         {
+          "text": "The early shift is preferring you.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "overtime",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Extra working hours beyond your normal schedule",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A short break during the working day",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A day off that you take every week",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“overtime” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "The meeting is going to start ___ than usual.",
+      "audio_text": "The meeting is going to start later than usual.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "later",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "late",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "latest",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “later”."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "I am going to ___ the Saturday shift for a colleague.",
+      "correct_answer": "cover",
+      "hint_prefix": "co",
+      "explanation": "The complete sentence is “I am going to cover the Saturday shift for a colleague.”."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "rota",
+        "text": "rota"
+       },
+       {
+        "id": "V2",
+        "audio_text": "early shift",
+        "text": "early shift"
+       },
+       {
+        "id": "V3",
+        "audio_text": "later",
+        "text": "later"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to cover",
+        "text": "to cover"
+       },
+       {
+        "id": "V5",
+        "audio_text": "overtime",
+        "text": "overtime"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Can you work on Sunday?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "I'd rather not, but if you find nobody else, I will do it.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, I will worked it last Sunday.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "Sunday is working me this week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“I'd rather not, but if you find nobody else, I will do it.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если не успеем к сроку",
+    "en": "If We Miss the Deadline"
+   },
+   "objective": {
+    "ru": "Обсудить последствия и обязательства с must и первым условным.",
+    "en": "Discuss consequences and obligations with must and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "on time",
+        "right": "вовремя"
+       },
+       {
+        "id": "P2",
+        "left": "to delay",
+        "right": "задержать"
+       },
+       {
+        "id": "P3",
+        "left": "to prioritise",
+        "right": "расставить приоритеты"
+       },
+       {
+        "id": "P4",
+        "left": "consequence",
+        "right": "последствие"
+       },
+       {
+        "id": "P5",
+        "left": "to rush",
+        "right": "спешить (делать наспех)"
+       },
+       {
+        "id": "P6",
+        "left": "carefully",
+        "right": "внимательно"
+       },
+       {
+        "id": "P7",
+        "left": "as agreed",
+        "right": "как договорились"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence expresses a strong obligation?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "We must finish the order as agreed.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "We must to finish the order yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "We finishing the order must now.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “We must finish the order as agreed.”."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если мы не расставим приоритеты сегодня, мы не успеем к сроку.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If we do not prioritise today, we will not meet the deadline.",
+      "word_bank": [
+       "will",
+       "prioritised",
+       "the",
+       "not",
+       "prioritise",
+       "yesterday",
+       "do",
+       "did",
+       "today,",
+       "not",
+       "meet",
+       "we",
+       "we",
+       "If",
+       "deadline."
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If we ___ the delivery, the client will complain.",
+      "correct_answer": "delay",
+      "options": [
+       "delay",
+       "will delay",
+       "delayed"
+      ],
+      "translation_hint": "Если мы задержим доставку, клиент будет недоволен."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "the",
+       "contract.",
+       "the",
+       "as",
+       "went",
+       "in",
+       "confirmation",
+       "We",
+       "must",
+       "agreed",
+       "send",
+       "may"
+      ],
+      "correct_words": [
+       "We",
+       "must",
+       "send",
+       "the",
+       "confirmation",
+       "as",
+       "agreed",
+       "in",
+       "the",
+       "contract."
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If we rush the work, we will make more mistakes, so we should plan the time carefully.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If we rush the work, we will make more mistakes, so we should plan the time carefully.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если мы будем делать работу наспех, мы допустим больше ошибок, поэтому стоит внимательно спланировать время."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Risky Week",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "We have too many tasks and only one week.",
+        "translation": "У нас слишком много задач и всего одна неделя."
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "What happens if we do not finish everything on time?",
+        "translation": "Что будет, если мы не закончим всё вовремя?"
+       },
+       {
+        "type": "choice",
+        "text": "How does Anna explain the consequence?",
+        "options": [
+         {
+          "text": "If we miss the deadline, the client will choose another supplier.",
+          "is_correct": true
+         },
+         {
+          "text": "If we will miss the deadline, the client chose another supplier.",
+          "is_correct": false
+         },
+         {
+          "text": "The deadline is finishing us instead.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to prioritise",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To decide which tasks are the most important and do them first",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To do all tasks at the same time",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To stop working when you feel tired",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to prioritise” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If we ___ the tasks, we will finish faster.",
+      "audio_text": "If we prioritise the tasks, we will finish faster.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "prioritise",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will prioritise",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "prioritised",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “prioritise”."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "We must finish the report ___ Friday.",
+      "correct_answer": "by",
+      "hint_prefix": "by",
+      "explanation": "The complete sentence is “We must finish the report by Friday.”."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "on time",
+        "text": "on time"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to delay",
+        "text": "to delay"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to prioritise",
+        "text": "to prioritise"
+       },
+       {
+        "id": "V4",
+        "audio_text": "consequence",
+        "text": "consequence"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to rush",
+        "text": "to rush"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_WORK_SCHEDULES_SHIFTS_AND_DEADLINES_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "The deadline is on Friday. Are we ready?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Almost. If we prioritise the main sections, we will make it.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, we are ready yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "Friday is finishing the report for us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Almost. If we prioritise the main sections, we will make it.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

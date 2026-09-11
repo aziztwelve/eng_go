@@ -1,0 +1,1306 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE",
+    "title": {
+      "ru": "Учебное чтение: основные идеи и доказательства",
+      "en": "Academic Reading: Main Ideas and Evidence"
+    },
+    "description": {
+      "ru": "Развивайте учебные навыки уровня B1 по теме «Учебное чтение: основные идеи и доказательства».",
+      "en": "Develop B1 study skills for academic reading: main ideas and evidence."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "B1",
+    "goal": "study",
+    "track_type": "thematic",
+    "tags": [
+      "B1",
+      "study",
+      "academic-reading-main-ideas-and-evidence"
+    ]
+  },
+  "lessons": [
+    {
+      "code": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L1",
+      "order": 1,
+      "title": {
+        "ru": "Учебная практика 1",
+        "en": "Finding the Main Argument"
+      },
+      "objective": {
+        "ru": "Самостоятельно выполнять знакомые учебные задачи уровня B1, связывая идеи, используя доказательства и оценивая свой прогресс.",
+        "en": "Complete familiar B1 study tasks independently by connecting ideas, using evidence, and evaluating progress."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L1_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "A2STRFMI_2",
+                "left": "name",
+                "right": "имя"
+              },
+              {
+                "id": "A2STRFMI_3",
+                "left": "age",
+                "right": "возраст"
+              },
+              {
+                "id": "A2STRFMI_4",
+                "left": "city",
+                "right": "город"
+              },
+              {
+                "id": "A2STRFMI_5",
+                "left": "live",
+                "right": "жить"
+              },
+              {
+                "id": "A2STRFMI_6",
+                "left": "like",
+                "right": "нравиться"
+              },
+              {
+                "id": "A2STRFMI_7",
+                "left": "student",
+                "right": "ученик"
+              },
+              {
+                "id": "A2STRFMI_8",
+                "left": "teacher",
+                "right": "учитель"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L1_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Read: “Mia is ten.” How old is Mia?",
+            "options": [
+              {
+                "id": "A2STRFMI_10",
+                "text": "Ten",
+                "is_correct": true
+              },
+              {
+                "id": "A2STRFMI_11",
+                "text": "Nine",
+                "is_correct": false
+              },
+              {
+                "id": "A2STRFMI_12",
+                "text": "Twelve",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The sentence says Mia is ten."
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L1_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Том живёт в Лондоне.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Tom lives in London.",
+            "word_bank": [
+              "London.",
+              "in",
+              "lives",
+              "Tom"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L1_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Anna is a ___.",
+            "correct_answer": "teacher",
+            "options": [
+              "teacher",
+              "city",
+              "age"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L1_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "music.",
+              "likes",
+              "Ben"
+            ],
+            "correct_words": [
+              "Ben",
+              "likes",
+              "music."
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L1_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Eva is a student.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L1_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "My name is Leo. I live in Rome. I can explain the main point in a short sentence. I will organise the main points, support them with evidence, and review my work before I submit it.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Меня зовут Лео. Я живу в Риме. Я могу объяснить основную мысль коротким предложением. Я организую основные идеи, подкреплю их доказательствами и проверю работу перед сдачей."
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L1_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Read and Answer",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Text",
+                "text": "Sam is eleven. He lives in Paris.",
+                "translation": "Сэму одиннадцать лет. Он живёт в Париже."
+              },
+              {
+                "type": "choice",
+                "text": "Where does Sam live?",
+                "options": [
+                  {
+                    "text": "Paris.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "London.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L1_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "live",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STRFMI_20",
+                "text": "To have your home in a place",
+                "is_correct": true
+              },
+              {
+                "id": "A2STRFMI_21",
+                "text": "To read a school book",
+                "is_correct": false
+              },
+              {
+                "id": "A2STRFMI_22",
+                "text": "To ask a question",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Live” means to have your home in a place."
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L1_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "Mia lives in ___.",
+            "audio_text": "Mia lives in Rome.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STRFMI_24",
+                "audio_text": "Rome",
+                "is_correct": true
+              },
+              {
+                "id": "A2STRFMI_25",
+                "audio_text": "eleven",
+                "is_correct": false
+              },
+              {
+                "id": "A2STRFMI_26",
+                "audio_text": "teacher",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The sentence names Rome."
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L1_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Ben likes ___.",
+            "correct_answer": "music",
+            "hint_prefix": "mu",
+            "explanation": "The complete sentence is “Ben likes music.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L1_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "A2STRFMI_29",
+                "audio_text": "name",
+                "text": "name"
+              },
+              {
+                "id": "A2STRFMI_30",
+                "audio_text": "city",
+                "text": "city"
+              },
+              {
+                "id": "A2STRFMI_31",
+                "audio_text": "student",
+                "text": "student"
+              }
+            ],
+            "explanation": "Match each item you hear with the same written English word or phrase."
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L1_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Teacher",
+                "text": "Read: “Nina is a doctor.” What is Nina’s job?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A2STRFMI_33",
+                "text": "She is a doctor.",
+                "is_correct": true
+              },
+              {
+                "id": "A2STRFMI_34",
+                "text": "She is ten.",
+                "is_correct": false
+              },
+              {
+                "id": "A2STRFMI_35",
+                "text": "She lives in Rome.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the response that develops the academic task with a clear reason, example, or next step."
+          }
+        }
+      ]
+    },
+    {
+      "code": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L2",
+      "order": 2,
+      "title": {
+        "ru": "Учебная практика 2",
+        "en": "Identifying Supporting Evidence"
+      },
+      "objective": {
+        "ru": "Самостоятельно выполнять знакомые учебные задачи уровня B1, связывая идеи, используя доказательства и оценивая свой прогресс.",
+        "en": "Complete familiar B1 study tasks independently by connecting ideas, using evidence, and evaluating progress."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L2_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "A2STRFMI_37",
+                "left": "from",
+                "right": "из"
+              },
+              {
+                "id": "A2STRFMI_38",
+                "left": "favorite",
+                "right": "любимый"
+              },
+              {
+                "id": "A2STRFMI_39",
+                "left": "family",
+                "right": "семья"
+              },
+              {
+                "id": "A2STRFMI_40",
+                "left": "brother",
+                "right": "брат"
+              },
+              {
+                "id": "A2STRFMI_41",
+                "left": "sister",
+                "right": "сестра"
+              },
+              {
+                "id": "A2STRFMI_42",
+                "left": "friend",
+                "right": "друг"
+              },
+              {
+                "id": "A2STRFMI_43",
+                "left": "home",
+                "right": "дом"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L2_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Read: “Leo is from Spain.” Where is Leo from?",
+            "options": [
+              {
+                "id": "A2STRFMI_45",
+                "text": "Spain",
+                "is_correct": true
+              },
+              {
+                "id": "A2STRFMI_46",
+                "text": "Italy",
+                "is_correct": false
+              },
+              {
+                "id": "A2STRFMI_47",
+                "text": "France",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The description says Leo is from Spain."
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L2_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Мой любимый цвет — синий.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "My favorite color is blue.",
+            "word_bank": [
+              "blue.",
+              "is",
+              "color",
+              "favorite",
+              "My"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L2_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "This is my ___.",
+            "correct_answer": "brother",
+            "options": [
+              "brother",
+              "Spain",
+              "blue"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L2_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "from",
+              "is",
+              "Sara",
+              "Italy."
+            ],
+            "correct_words": [
+              "Sara",
+              "is",
+              "from",
+              "Italy."
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L2_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "My sister likes books.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L2_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "This is my friend Ana. She is from Spain. I can explain the main point in a short sentence. I will organise the main points, support them with evidence, and review my work before I submit it.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Это моя подруга Ана. Она из Испании. Я могу объяснить основную мысль коротким предложением. Я организую основные идеи, подкреплю их доказательствами и проверю работу перед сдачей."
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L2_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "A Short Profile",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Text",
+                "text": "My name is Eva. I am from Poland. My favorite color is green.",
+                "translation": "Меня зовут Ева. Я из Польши. Мой любимый цвет — зелёный."
+              },
+              {
+                "type": "choice",
+                "text": "What is Eva’s favorite color?",
+                "options": [
+                  {
+                    "text": "Green.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Blue.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L2_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "favorite",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STRFMI_55",
+                "text": "Liked more than all others",
+                "is_correct": true
+              },
+              {
+                "id": "A2STRFMI_56",
+                "text": "A person in your family",
+                "is_correct": false
+              },
+              {
+                "id": "A2STRFMI_57",
+                "text": "The place where you live",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Favorite” means liked more than all others."
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L2_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "Tom is from ___.",
+            "audio_text": "Tom is from Canada.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STRFMI_59",
+                "audio_text": "Canada",
+                "is_correct": true
+              },
+              {
+                "id": "A2STRFMI_60",
+                "audio_text": "brother",
+                "is_correct": false
+              },
+              {
+                "id": "A2STRFMI_61",
+                "audio_text": "green",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The description names Canada."
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L2_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "This is my ___.",
+            "correct_answer": "friend",
+            "hint_prefix": "fr",
+            "explanation": "The complete sentence is “This is my friend.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L2_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "A2STRFMI_64",
+                "audio_text": "family",
+                "text": "family"
+              },
+              {
+                "id": "A2STRFMI_65",
+                "audio_text": "brother",
+                "text": "brother"
+              },
+              {
+                "id": "A2STRFMI_66",
+                "audio_text": "friend",
+                "text": "friend"
+              }
+            ],
+            "explanation": "Match each item you hear with the same written English word or phrase."
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L2_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Teacher",
+                "text": "Read: “Anna’s favorite food is pizza.” What food does Anna like best?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A2STRFMI_68",
+                "text": "Pizza.",
+                "is_correct": true
+              },
+              {
+                "id": "A2STRFMI_69",
+                "text": "Pasta.",
+                "is_correct": false
+              },
+              {
+                "id": "A2STRFMI_70",
+                "text": "Rice.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the response that develops the academic task with a clear reason, example, or next step."
+          }
+        }
+      ]
+    },
+    {
+      "code": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L3",
+      "order": 3,
+      "title": {
+        "ru": "Учебная практика 3",
+        "en": "Summarising a Text"
+      },
+      "objective": {
+        "ru": "Самостоятельно выполнять знакомые учебные задачи уровня B1, связывая идеи, используя доказательства и оценивая свой прогресс.",
+        "en": "Complete familiar B1 study tasks independently by connecting ideas, using evidence, and evaluating progress."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L3_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "A2STRFMI_72",
+                "left": "morning",
+                "right": "утро"
+              },
+              {
+                "id": "A2STRFMI_73",
+                "left": "breakfast",
+                "right": "завтрак"
+              },
+              {
+                "id": "A2STRFMI_74",
+                "left": "school",
+                "right": "школа"
+              },
+              {
+                "id": "A2STRFMI_75",
+                "left": "lesson",
+                "right": "урок"
+              },
+              {
+                "id": "A2STRFMI_76",
+                "left": "lunch",
+                "right": "обед"
+              },
+              {
+                "id": "A2STRFMI_77",
+                "left": "afternoon",
+                "right": "день"
+              },
+              {
+                "id": "A2STRFMI_78",
+                "left": "evening",
+                "right": "вечер"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L3_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Read: “Max goes to school in the morning.” When does Max go to school?",
+            "options": [
+              {
+                "id": "A2STRFMI_80",
+                "text": "In the morning",
+                "is_correct": true
+              },
+              {
+                "id": "A2STRFMI_81",
+                "text": "In the evening",
+                "is_correct": false
+              },
+              {
+                "id": "A2STRFMI_82",
+                "text": "At night",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The text says Max goes in the morning."
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L3_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Она обедает в школе.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "She has lunch at school.",
+            "word_bank": [
+              "school.",
+              "at",
+              "lunch",
+              "has",
+              "She"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L3_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Tom eats ___ in the morning.",
+            "correct_answer": "breakfast",
+            "options": [
+              "breakfast",
+              "lesson",
+              "evening"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L3_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "afternoon.",
+              "the",
+              "in",
+              "studies",
+              "He"
+            ],
+            "correct_words": [
+              "He",
+              "studies",
+              "in",
+              "the",
+              "afternoon."
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L3_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Anna has two lessons today.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L3_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "I go to school in the morning and come home in the afternoon. I can explain the main point in a short sentence. I will organise the main points, support them with evidence, and review my work before I submit it.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Я иду в школу утром и прихожу домой днём. Я могу объяснить основную мысль коротким предложением. Я организую основные идеи, подкреплю их доказательствами и проверю работу перед сдачей."
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L3_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "A School Day",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Text",
+                "text": "Ben gets up at seven. He has breakfast and goes to school. He has lunch at school.",
+                "translation": "Бен встаёт в семь. Он завтракает и идёт в школу. Он обедает в школе."
+              },
+              {
+                "type": "choice",
+                "text": "Where does Ben have lunch?",
+                "options": [
+                  {
+                    "text": "At school.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "At home.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L3_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "breakfast",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STRFMI_90",
+                "text": "The first meal of the day",
+                "is_correct": true
+              },
+              {
+                "id": "A2STRFMI_91",
+                "text": "A class at school",
+                "is_correct": false
+              },
+              {
+                "id": "A2STRFMI_92",
+                "text": "The later part of the day",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Breakfast is the first meal of the day."
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L3_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "He goes to ___ in the morning.",
+            "audio_text": "He goes to school in the morning.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STRFMI_94",
+                "audio_text": "school",
+                "is_correct": true
+              },
+              {
+                "id": "A2STRFMI_95",
+                "audio_text": "lunch",
+                "is_correct": false
+              },
+              {
+                "id": "A2STRFMI_96",
+                "audio_text": "evening",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The sentence names school."
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L3_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "She has ___ at school.",
+            "correct_answer": "lunch",
+            "hint_prefix": "lu",
+            "explanation": "The complete sentence is “She has lunch at school.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L3_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "A2STRFMI_99",
+                "audio_text": "breakfast",
+                "text": "breakfast"
+              },
+              {
+                "id": "A2STRFMI_100",
+                "audio_text": "lesson",
+                "text": "lesson"
+              },
+              {
+                "id": "A2STRFMI_101",
+                "audio_text": "afternoon",
+                "text": "afternoon"
+              }
+            ],
+            "explanation": "Match each item you hear with the same written English word or phrase."
+          }
+        },
+        {
+          "id": "B1_STUDY_ACADEMIC_READING_MAIN_IDEAS_AND_EVIDENCE_L3_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Teacher",
+                "text": "Read: “Mia studies in the evening.” When does Mia study?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A2STRFMI_103",
+                "text": "In the evening.",
+                "is_correct": true
+              },
+              {
+                "id": "A2STRFMI_104",
+                "text": "In the morning.",
+                "is_correct": false
+              },
+              {
+                "id": "A2STRFMI_105",
+                "text": "At lunch.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the response that develops the academic task with a clear reason, example, or next step."
+          }
+        }
+      ]
+    }
+  ]
+}

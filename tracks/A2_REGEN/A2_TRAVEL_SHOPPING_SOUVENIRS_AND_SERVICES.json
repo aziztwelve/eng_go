@@ -1,0 +1,1451 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES",
+  "title": {
+   "ru": "Покупки, сувениры и услуги",
+   "en": "Shopping, Souvenirs and Services"
+  },
+  "description": {
+   "ru": "Развивайте английский для путешествий уровня A2 по теме «Покупки, сувениры и услуги».",
+   "en": "Develop A2 travel English for shopping, souvenirs and services."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "travel",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "travel",
+   "shopping-souvenirs-and-services"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L1",
+   "order": 1,
+   "title": {
+    "ru": "Покупки и сувениры",
+    "en": "Shopping and Souvenirs"
+   },
+   "objective": {
+    "ru": "Рассказать о покупках, используя past simple и present perfect.",
+    "en": "Talk about shopping using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "souvenir",
+        "right": "сувенир"
+       },
+       {
+        "id": "P2",
+        "left": "to bargain",
+        "right": "торговаться"
+       },
+       {
+        "id": "P3",
+        "left": "receipt",
+        "right": "чек"
+       },
+       {
+        "id": "P4",
+        "left": "handmade",
+        "right": "ручной работы"
+       },
+       {
+        "id": "P5",
+        "left": "to pay by card",
+        "right": "платить картой"
+       },
+       {
+        "id": "P6",
+        "left": "discount",
+        "right": "скидка"
+       },
+       {
+        "id": "P7",
+        "left": "so far",
+        "right": "до сих пор"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "I have bought six postcards so far.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "I have bought six postcards yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "I buy six postcards so far already.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “I have bought six postcards so far.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я купил подарок ручной работы и заплатил картой, но чек потерял.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I bought a handmade gift and paid by card, but I have lost the receipt.",
+      "word_bank": [
+       "but",
+       "bought",
+       "paid",
+       "did",
+       "tomorrow",
+       "by",
+       "and",
+       "receipt.",
+       "I",
+       "gift",
+       "card,",
+       "I",
+       "lost",
+       "a",
+       "have",
+       "buy",
+       "the",
+       "handmade"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She ___ a small discount at the market yesterday.",
+      "correct_answer": "asked for",
+      "options": [
+       "asked for",
+       "has ask for",
+       "asking for"
+      ],
+      "translation_hint": "Вчера на рынке она попросила небольшую скидку."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "on",
+       "have",
+       "We",
+       "already",
+       "did",
+       "our",
+       "all",
+       "was",
+       "spent",
+       "cash",
+       "souvenirs."
+      ],
+      "correct_words": [
+       "We",
+       "have",
+       "already",
+       "spent",
+       "all",
+       "our",
+       "cash",
+       "on",
+       "souvenirs."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "The market has opened at eight, and by nine the best handmade goods have almost gone.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "The market has opened at eight, and by nine the best handmade goods have almost gone.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Рынок открылся в восемь, а к девяти лучшие изделия ручной работы почти разошлись."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Last Souvenir",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "Look at these ceramics! Have you bought anything for your parents yet?",
+        "translation": "Смотри на эту керамику! Ты уже купил что-нибудь родителям?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "Not yet. Did you see the price of those lamps?",
+        "translation": "Ещё нет. Ты видела цену тех ламп?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna say?",
+        "options": [
+         {
+          "text": "Yes, but they are handmade — I think we should get one.",
+          "is_correct": true
+         },
+         {
+          "text": "Yes, I buy them yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The ceramics are buying our parents.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "receipt",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The paper that proves you paid for something",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A list of things you want to buy",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A map of the shopping street",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“receipt” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have ___ for a discount politely.",
+      "audio_text": "I have asked for a discount politely.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "asked",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "ask",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "asking",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “asked”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Could I pay ___ card?",
+      "correct_answer": "by",
+      "hint_prefix": "by",
+      "explanation": "The complete sentence is “Could I pay by card?”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "souvenir",
+        "text": "souvenir"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to bargain",
+        "text": "to bargain"
+       },
+       {
+        "id": "V3",
+        "audio_text": "receipt",
+        "text": "receipt"
+       },
+       {
+        "id": "V4",
+        "audio_text": "handmade",
+        "text": "handmade"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to pay by card",
+        "text": "to pay by card"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Seller",
+        "text": "These scarves are handmade, madam."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "They are beautiful — I have already bought two, but this blue one is the nicest.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I bought it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The scarves are buying me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“They are beautiful — I have already bought two, but this blue one is the nicest.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L2",
+   "order": 2,
+   "title": {
+    "ru": "Что купим завтра",
+    "en": "What We Will Buy Tomorrow"
+   },
+   "objective": {
+    "ru": "Спланировать покупки и сравнить места для них.",
+    "en": "Plan purchases and compare shopping places."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "market",
+        "right": "рынок"
+       },
+       {
+        "id": "P2",
+        "left": "duty-free",
+        "right": "duty-free / беспошлинный"
+       },
+       {
+        "id": "P3",
+        "left": "more original",
+        "right": "оригинальнее"
+       },
+       {
+        "id": "P4",
+        "left": "to wrap",
+        "right": "упаковать"
+       },
+       {
+        "id": "P5",
+        "left": "as a gift",
+        "right": "в подарок"
+       },
+       {
+        "id": "P6",
+        "left": "weight limit",
+        "right": "лимит веса (багажа)"
+       },
+       {
+        "id": "P7",
+        "left": "to leave space",
+        "right": "оставить место (в чемодане)"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two shopping places correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The market is more original than the airport shops.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "The market is originaler than the shops.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The market is most original than the shops.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The market is more original than the airport shops.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Завтра мы пойдём на рынок — там подарки оригинальнее, чем в аэропорту.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "Tomorrow we are going to the market — the gifts there are more original than at the airport.",
+      "word_bank": [
+       "are",
+       "the",
+       "Tomorrow",
+       "going",
+       "—",
+       "did",
+       "to",
+       "airport.",
+       "the",
+       "more",
+       "the",
+       "at",
+       "than",
+       "there",
+       "gifts",
+       "are",
+       "went",
+       "market",
+       "yesterday",
+       "we",
+       "original"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The market prices are ___ than in the shopping centre.",
+      "correct_answer": "lower",
+      "options": [
+       "lower",
+       "lowest",
+       "more low"
+      ],
+      "translation_hint": "Цены на рынке ниже, чем в торговом центре."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "buy",
+       "I",
+       "colleagues.",
+       "the",
+       "going",
+       "tea",
+       "was",
+       "for",
+       "to",
+       "as",
+       "my",
+       "gift",
+       "am",
+       "did",
+       "a"
+      ],
+      "correct_words": [
+       "I",
+       "am",
+       "going",
+       "to",
+       "buy",
+       "the",
+       "tea",
+       "as",
+       "a",
+       "gift",
+       "for",
+       "my",
+       "colleagues."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you leave some space in your suitcase, you will not sit on your souvenirs on the way home.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you leave some space in your suitcase, you will not sit on your souvenirs on the way home.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если оставить в чемодане место, не придётся сидеть на сувенирах по дороге домой."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Heavy Suitcase",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "I want to buy this ceramic set, but my suitcase is already full.",
+        "translation": "Хочу купить этот керамический набор, но чемодан уже полон."
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "What is your weight limit?",
+        "translation": "Какой у тебя лимит веса?"
+       },
+       {
+        "type": "choice",
+        "text": "What should Anna do?",
+        "options": [
+         {
+          "text": "If I wear my heaviest jacket, I can take the set.",
+          "is_correct": true
+         },
+         {
+          "text": "I worn it yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The suitcase is buying the ceramics.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to wrap",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To cover something in paper as a present",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To pay extra for heavy luggage",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To open a box before giving it",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to wrap” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "They are going to ___ it as a gift.",
+      "audio_text": "They are going to wrap it as a gift.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "wrap",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "wrapped",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "wrapping",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “wrap”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The market is ___ than duty-free.",
+      "correct_answer": "cheaper",
+      "hint_prefix": "ch",
+      "explanation": "The complete sentence is “The market is cheaper than duty-free.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "market",
+        "text": "market"
+       },
+       {
+        "id": "V2",
+        "audio_text": "duty-free",
+        "text": "duty-free"
+       },
+       {
+        "id": "V3",
+        "audio_text": "more original",
+        "text": "more original"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to wrap",
+        "text": "to wrap"
+       },
+       {
+        "id": "V5",
+        "audio_text": "as a gift",
+        "text": "as a gift"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Where should I buy the local honey?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "At the Saturday market — if you go before ten, the choice will be better.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I bought it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The honey is buying me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“At the Saturday market — if you go before ten, the choice will be better.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если нужно вернуть покупку",
+    "en": "If You Need a Return"
+   },
+   "objective": {
+    "ru": "Объяснить возврат товара, используя should и первое условное.",
+    "en": "Explain returns using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to refund",
+        "right": "вернуть деньги"
+       },
+       {
+        "id": "P2",
+        "left": "exchange",
+        "right": "обмен"
+       },
+       {
+        "id": "P3",
+        "left": "faulty",
+        "right": "бракованный"
+       },
+       {
+        "id": "P4",
+        "left": "to keep the receipt",
+        "right": "сохранить чек"
+       },
+       {
+        "id": "P5",
+        "left": "size",
+        "right": "размер"
+       },
+       {
+        "id": "P6",
+        "left": "unworn",
+        "right": "ненадеванный"
+       },
+       {
+        "id": "P7",
+        "left": "within fourteen days",
+        "right": "в течение четырнадцати дней"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should keep the receipt until you are home.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to keep it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must keeping it last week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should keep the receipt until you are home.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если товар бракованный, магазин обязан вернуть деньги.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If the goods are faulty, the shop must give you a refund.",
+      "word_bank": [
+       "give",
+       "a",
+       "refund.",
+       "must",
+       "are",
+       "goods",
+       "If",
+       "the",
+       "the",
+       "was",
+       "shop",
+       "you",
+       "faulty,",
+       "did",
+       "yesterday"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you want an ___, bring the unworn item with the receipt.",
+      "correct_answer": "exchange",
+      "options": [
+       "exchange",
+       "exchanging",
+       "exchanged"
+      ],
+      "translation_hint": "Если нужен обмен, принесите неношеную вещь с чеком."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "should",
+       "mustn't",
+       "check",
+       "went",
+       "You",
+       "cracks",
+       "buying.",
+       "souvenirs",
+       "for",
+       "before"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "check",
+       "souvenirs",
+       "for",
+       "cracks",
+       "before",
+       "buying."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you keep all your receipts in one envelope, any return will take five minutes.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you keep all your receipts in one envelope, any return will take five minutes.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если хранить все чеки в одном конверте, любой возврат займёт пять минут."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Cracked Vase",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Tourist",
+        "text": "I bought this vase yesterday, and it has a crack on the side.",
+        "translation": "Я купил эту вазу вчера, а на ней трещина сбоку."
+       },
+       {
+        "type": "dialogue",
+        "character": "Seller",
+        "text": "Do you have the receipt with you?",
+        "translation": "Чек с вами?"
+       },
+       {
+        "type": "choice",
+        "text": "What does the tourist show?",
+        "options": [
+         {
+          "text": "Yes, here it is — could I exchange it for an intact one?",
+          "is_correct": true
+         },
+         {
+          "text": "Yes, I have it tomorrow yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The crack is buying a new vase.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "exchange",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To change an item you bought for a different one",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To get your money back completely",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To sell your old things to a shop",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“exchange” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If the item is ___ , they will refund you.",
+      "audio_text": "If the item is faulty, they will refund you.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "faulty",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "fault",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "falsely",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “faulty”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should keep the ___ for two weeks.",
+      "correct_answer": "receipt",
+      "hint_prefix": "re",
+      "explanation": "The complete sentence is “You should keep the receipt for two weeks.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to refund",
+        "text": "to refund"
+       },
+       {
+        "id": "V2",
+        "audio_text": "exchange",
+        "text": "exchange"
+       },
+       {
+        "id": "V3",
+        "audio_text": "faulty",
+        "text": "faulty"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to keep the receipt",
+        "text": "to keep the receipt"
+       },
+       {
+        "id": "V5",
+        "audio_text": "size",
+        "text": "size"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_SHOPPING_SOUVENIRS_AND_SERVICES_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "The jumper I bought is too small."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Take it back — if it is unworn and you have the receipt, they will exchange it.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I exchanged it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The jumper is returning me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Take it back — if it is unworn and you have the receipt, they will exchange it.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

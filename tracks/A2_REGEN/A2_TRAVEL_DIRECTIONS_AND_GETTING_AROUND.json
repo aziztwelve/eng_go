@@ -1,0 +1,1443 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND",
+  "title": {
+   "ru": "Маршруты и передвижение по городу",
+   "en": "Directions and Getting Around"
+  },
+  "description": {
+   "ru": "Развивайте английский для путешествий уровня A2 по теме «Маршруты и передвижение по городу».",
+   "en": "Develop A2 travel English for directions and getting around."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "travel",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "travel",
+   "directions-and-getting-around"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L1",
+   "order": 1,
+   "title": {
+    "ru": "Как мы добрались",
+    "en": "How We Got There"
+   },
+   "objective": {
+    "ru": "Рассказать о маршруте, используя past simple и present perfect.",
+    "en": "Describe a route using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to turn left",
+        "right": "повернуть налево"
+       },
+       {
+        "id": "P2",
+        "left": "crossroads",
+        "right": "перекрёсток"
+       },
+       {
+        "id": "P3",
+        "left": "pedestrian zone",
+        "right": "пешеходная зона"
+       },
+       {
+        "id": "P4",
+        "left": "straight ahead",
+        "right": "прямо впереди"
+       },
+       {
+        "id": "P5",
+        "left": "to get lost",
+        "right": "заблудиться"
+       },
+       {
+        "id": "P6",
+        "left": "map",
+        "right": "карта"
+       },
+       {
+        "id": "P7",
+        "left": "finally",
+        "right": "наконец"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "We have walked around the old town for two hours already.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "We have walked there yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "We walk for two hours already now.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “We have walked around the old town for two hours already.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы повернули налево у собора и наконец нашли нужную улицу.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We turned left at the cathedral and finally found the right street.",
+      "word_bank": [
+       "We",
+       "turned",
+       "street.",
+       "the",
+       "finally",
+       "right",
+       "at",
+       "turns",
+       "tomorrow",
+       "the",
+       "left",
+       "found",
+       "cathedral",
+       "and",
+       "did"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Yesterday we ___ lost near the station.",
+      "correct_answer": "got",
+      "options": [
+       "got",
+       "has get",
+       "getting"
+      ],
+      "translation_hint": "Вчера мы заблудились около вокзала."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "map.",
+       "She",
+       "an",
+       "did",
+       "offline",
+       "has",
+       "was",
+       "already",
+       "downloaded"
+      ],
+      "correct_words": [
+       "She",
+       "has",
+       "already",
+       "downloaded",
+       "an",
+       "offline",
+       "map."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "We took the second turning on the right, and the museum has appeared straight ahead of us.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "We took the second turning on the right, and the museum has appeared straight ahead of us.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Мы свернули во второй поворот направо, и музей оказался прямо перед нами."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Lost Near the Station",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "I think we have walked past this church already.",
+        "translation": "Кажется, мы уже проходили мимо этой церкви."
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "You are right — we got lost at the last crossroads.",
+        "translation": "Ты права — мы заблудились на прошлом перекрёстке."
+       },
+       {
+        "type": "choice",
+        "text": "What should they do?",
+        "options": [
+         {
+          "text": "We should ask someone for directions or check the map.",
+          "is_correct": true
+         },
+         {
+          "text": "We must asking someone yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The church is walking past us again.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "crossroads",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A place where two or more roads cross",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A bridge over a wide river",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "The last stop of a city bus",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“crossroads” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We have ___ past the theatre twice.",
+      "audio_text": "We have walked past the theatre twice.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "walked",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "walk",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "walking",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “walked”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The museum is straight ___ .",
+      "correct_answer": "ahead",
+      "hint_prefix": "ah",
+      "explanation": "The complete sentence is “The museum is straight ahead .”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to turn left",
+        "text": "to turn left"
+       },
+       {
+        "id": "V2",
+        "audio_text": "crossroads",
+        "text": "crossroads"
+       },
+       {
+        "id": "V3",
+        "audio_text": "pedestrian zone",
+        "text": "pedestrian zone"
+       },
+       {
+        "id": "V4",
+        "audio_text": "straight ahead",
+        "text": "straight ahead"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to get lost",
+        "text": "to get lost"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Tourist",
+        "text": "Excuse me, how do we get to the main square?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Go straight ahead and turn left at the crossroads — it has taken me five minutes before.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I went there yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The square is getting me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Go straight ahead and turn left at the crossroads — it has taken me five minutes before.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L2",
+   "order": 2,
+   "title": {
+    "ru": "Куда пойдём завтра",
+    "en": "Where We Will Go Tomorrow"
+   },
+   "objective": {
+    "ru": "Спланировать маршрут на завтра и сравнить пути.",
+    "en": "Plan tomorrow's route and compare ways."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "the quickest way",
+        "right": "самый быстрый путь"
+       },
+       {
+        "id": "P2",
+        "left": "on foot",
+        "right": "пешком"
+       },
+       {
+        "id": "P3",
+        "left": "by tram",
+        "right": "на трамвае"
+       },
+       {
+        "id": "P4",
+        "left": "more scenic",
+        "right": "живописнее"
+       },
+       {
+        "id": "P5",
+        "left": "to recommend",
+        "right": "порекомендовать"
+       },
+       {
+        "id": "P6",
+        "left": "walking distance",
+        "right": "пешая доступность"
+       },
+       {
+        "id": "P7",
+        "left": "to save time",
+        "right": "сэкономить время"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two routes correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The road along the river is more scenic than the main street.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "The road is scenicer than the street.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The road is most scenic than the street.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The road along the river is more scenic than the main street.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Завтра мы пойдём пешком вдоль реки — это живописнее, чем главный проспект.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "Tomorrow we are going to walk along the river — it is more scenic than the main avenue.",
+      "word_bank": [
+       "walk",
+       "main",
+       "the",
+       "we",
+       "than",
+       "is",
+       "more",
+       "along",
+       "yesterday",
+       "river",
+       "to",
+       "avenue.",
+       "walked",
+       "—",
+       "are",
+       "Tomorrow",
+       "scenic",
+       "the",
+       "it",
+       "did",
+       "going"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The museum is within ___ distance from our hotel.",
+      "correct_answer": "walking",
+      "options": [
+       "walking",
+       "walk",
+       "walked"
+      ],
+      "translation_hint": "Музей в пешей доступности от нашего отеля."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "did",
+       "to",
+       "castle.",
+       "going",
+       "to",
+       "take",
+       "We",
+       "are",
+       "the",
+       "tram",
+       "the",
+       "was"
+      ],
+      "correct_words": [
+       "We",
+       "are",
+       "going",
+       "to",
+       "take",
+       "the",
+       "tram",
+       "to",
+       "the",
+       "castle."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If we take the tram instead of the bus, we will save about fifteen minutes.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If we take the tram instead of the bus, we will save about fifteen minutes.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если поехать трамваем вместо автобуса, сэкономим примерно пятнадцать минут."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Two Routes",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "Should we go to the castle on foot or by tram?",
+        "translation": "Идти к замку пешком или на трамвае?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "On foot is more scenic, but it takes forty minutes.",
+        "translation": "Пешком живописнее, но это сорок минут."
+       },
+       {
+        "type": "choice",
+        "text": "What does Anna decide?",
+        "options": [
+         {
+          "text": "Then we are going to walk there and take the tram back.",
+          "is_correct": true
+         },
+         {
+          "text": "Then we walked there yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The castle is deciding our route.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "on foot",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Walking, not using transport",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Travelling by city tram",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Driving a rented car",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“on foot” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We are going to ___ time with the tram.",
+      "audio_text": "We are going to save time with the tram.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "save",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "saved",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "saving",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “save”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The river route is ___ scenic.",
+      "correct_answer": "more",
+      "hint_prefix": "mo",
+      "explanation": "The complete sentence is “The river route is more scenic.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "the quickest way",
+        "text": "the quickest way"
+       },
+       {
+        "id": "V2",
+        "audio_text": "on foot",
+        "text": "on foot"
+       },
+       {
+        "id": "V3",
+        "audio_text": "by tram",
+        "text": "by tram"
+       },
+       {
+        "id": "V4",
+        "audio_text": "more scenic",
+        "text": "more scenic"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to recommend",
+        "text": "to recommend"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Is the old town far from here?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "No, it is within walking distance — about fifteen minutes if we cross the bridge.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "It was far yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The town is walking to us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“No, it is within walking distance — about fifteen minutes if we cross the bridge.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если заблудились",
+    "en": "If You Get Lost"
+   },
+   "objective": {
+    "ru": "Дать советы о ориентировании, используя should и первое условное.",
+    "en": "Give orientation advice using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "landmark",
+        "right": "ориентир"
+       },
+       {
+        "id": "P2",
+        "left": "to ask for directions",
+        "right": "спросить дорогу"
+       },
+       {
+        "id": "P3",
+        "left": "street name sign",
+        "right": "указатель с названием улицы"
+       },
+       {
+        "id": "P4",
+        "left": "polite",
+        "right": "вежливый"
+       },
+       {
+        "id": "P5",
+        "left": "confident",
+        "right": "уверенный"
+       },
+       {
+        "id": "P6",
+        "left": "to check the map",
+        "right": "посмотреть на карту"
+       },
+       {
+        "id": "P7",
+        "left": "the way back",
+        "right": "путь обратно"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should remember a landmark near your hotel.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to remember it yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must remembering it last week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should remember a landmark near your hotel.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если ты запомнишь ориентир рядом с отелем, ты легко найдёшь обратный путь.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If you remember a landmark near your hotel, you will easily find the way back.",
+      "word_bank": [
+       "yesterday",
+       "remember",
+       "easily",
+       "your",
+       "near",
+       "you",
+       "did",
+       "you",
+       "back.",
+       "If",
+       "will",
+       "hotel,",
+       "landmark",
+       "way",
+       "find",
+       "a",
+       "the",
+       "remembered"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you ___ someone for directions, be polite and speak slowly.",
+      "correct_answer": "ask",
+      "options": [
+       "ask",
+       "will ask",
+       "asked"
+      ],
+      "translation_hint": "Если спросить кого-то дорогу, делай это вежливо и медленно."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "check",
+       "mustn't",
+       "map",
+       "walk.",
+       "long",
+       "went",
+       "every",
+       "You",
+       "before",
+       "should",
+       "the"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "check",
+       "the",
+       "map",
+       "before",
+       "every",
+       "long",
+       "walk."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you take a photo of the street name sign near your hotel, you will always show it to locals.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you take a photo of the street name sign near your hotel, you will always show it to locals.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если сфотографировать табличку с названием улицы у отеля, всегда можно показать её местным."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "A Wrong Turn",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Tom",
+        "text": "This street looks different from the map.",
+        "translation": "Эта улица выглядит не так, как на карте."
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "Maybe we turned right instead of left at the bakery.",
+        "translation": "Может, мы повернули направо вместо налево у пекарни."
+       },
+       {
+        "type": "choice",
+        "text": "What does Tom suggest?",
+        "options": [
+         {
+          "text": "We should ask in that shop — the assistant will know the area.",
+          "is_correct": true
+         },
+         {
+          "text": "We must asking in the shop yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The street is looking at the map differently.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "landmark",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A building or place that is easy to recognise",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A small shop that changes its name often",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A bus that goes around the city centre",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“landmark” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If you ___ the map first, you will not get lost.",
+      "audio_text": "If you check the map first, you will not get lost.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "check",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will check",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "checked",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “check”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should ask ___ directions politely.",
+      "correct_answer": "for",
+      "hint_prefix": "fo",
+      "explanation": "The complete sentence is “You should ask for directions politely.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "landmark",
+        "text": "landmark"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to ask for directions",
+        "text": "to ask for directions"
+       },
+       {
+        "id": "V3",
+        "audio_text": "street name sign",
+        "text": "street name sign"
+       },
+       {
+        "id": "V4",
+        "audio_text": "polite",
+        "text": "polite"
+       },
+       {
+        "id": "V5",
+        "audio_text": "confident",
+        "text": "confident"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_DIRECTIONS_AND_GETTING_AROUND_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Tourist",
+        "text": "I cannot find the way back to my hotel."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "You should look for the cathedral tower — if you walk towards it, the hotel is right behind it.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I found it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The hotel is finding me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“You should look for the cathedral tower — if you walk towards it, the hotel is right behind it.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

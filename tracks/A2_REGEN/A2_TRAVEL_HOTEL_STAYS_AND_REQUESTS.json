@@ -1,0 +1,1441 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS",
+  "title": {
+   "ru": "Проживание в отеле и просьбы",
+   "en": "Hotel Stays and Requests"
+  },
+  "description": {
+   "ru": "Развивайте английский для путешествий уровня A2 по теме «Проживание в отеле и просьбы».",
+   "en": "Develop A2 travel English for hotel stays and requests."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "travel",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "travel",
+   "hotel-stays-and-requests"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L1",
+   "order": 1,
+   "title": {
+    "ru": "Заселение и первые впечатления",
+    "en": "Check-in and First Impressions"
+   },
+   "objective": {
+    "ru": "Рассказать о заселении в отель, используя past simple и present perfect.",
+    "en": "Talk about hotel check-in using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "reception",
+        "right": "стойка приёма"
+       },
+       {
+        "id": "P2",
+        "left": "room key",
+        "right": "ключ от номера"
+       },
+       {
+        "id": "P3",
+        "left": "to book",
+        "right": "забронировать"
+       },
+       {
+        "id": "P4",
+        "left": "spacious",
+        "right": "просторный"
+       },
+       {
+        "id": "P5",
+        "left": "view",
+        "right": "вид (из окна)"
+       },
+       {
+        "id": "P6",
+        "left": "towels",
+        "right": "полотенца"
+       },
+       {
+        "id": "P7",
+        "left": "since morning",
+        "right": "с утра"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "The room has not been cleaned yet today.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "The room has not cleaned yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "The room not cleaned already today.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “The room has not been cleaned yet today.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Я забронировал номер на неделю, но вид из окна оказался не такой, как на фото.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I booked the room for a week, but the view turned out to be different from the photos.",
+      "word_bank": [
+       "view",
+       "a",
+       "from",
+       "but",
+       "out",
+       "photos.",
+       "the",
+       "room",
+       "I",
+       "the",
+       "did",
+       "tomorrow",
+       "different",
+       "turned",
+       "be",
+       "week,",
+       "book",
+       "for",
+       "the",
+       "to",
+       "booked"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "We ___ in at three o'clock yesterday afternoon.",
+      "correct_answer": "checked",
+      "options": [
+       "checked",
+       "has check",
+       "checking"
+      ],
+      "translation_hint": "Мы заселились вчера в три часа дня."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "has",
+       "The",
+       "was",
+       "did",
+       "extra",
+       "brought",
+       "towels.",
+       "already",
+       "receptionist"
+      ],
+      "correct_words": [
+       "The",
+       "receptionist",
+       "has",
+       "already",
+       "brought",
+       "extra",
+       "towels."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "We have stayed at this hotel twice, and the rooms have always been clean and spacious.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "We have stayed at this hotel twice, and the rooms have always been clean and spacious.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Мы дважды останавливались в этом отеле, и номера всегда были чистыми и просторными."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Other View",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Guest",
+        "text": "Excuse me, I booked a room with a sea view, but my window faces the car park.",
+        "translation": "Извините, я бронировал номер с видом на море, а моё окно выходит на парковку."
+       },
+       {
+        "type": "dialogue",
+        "character": "Receptionist",
+        "text": "Let me check. You are right — I'm sorry about that.",
+        "translation": "Сейчас проверю. Вы правы — извините за это."
+       },
+       {
+        "type": "choice",
+        "text": "What does the receptionist offer?",
+        "options": [
+         {
+          "text": "We have a sea-view room free from tomorrow morning.",
+          "is_correct": true
+         },
+         {
+          "text": "We has a free room yesterday already.",
+          "is_correct": false
+         },
+         {
+          "text": "The car park is booking the room itself.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "reception",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "The place in a hotel where you check in and ask questions",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A restaurant on the top floor",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "The car park behind the hotel",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“reception” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "She has ___ our passports at reception.",
+      "audio_text": "She has taken our passports at reception.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "taken",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "take",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "taking",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “taken”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The room has been ready ___ ten o'clock.",
+      "correct_answer": "since",
+      "hint_prefix": "si",
+      "explanation": "The complete sentence is “The room has been ready since ten o'clock.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "reception",
+        "text": "reception"
+       },
+       {
+        "id": "V2",
+        "audio_text": "room key",
+        "text": "room key"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to book",
+        "text": "to book"
+       },
+       {
+        "id": "V4",
+        "audio_text": "spacious",
+        "text": "spacious"
+       },
+       {
+        "id": "V5",
+        "audio_text": "view",
+        "text": "view"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Receptionist",
+        "text": "How was your first night?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Very good, thank you — the room is more spacious than the one we had last year.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "It was good yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The night is sleeping us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Very good, thank you — the room is more spacious than the one we had last year.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L2",
+   "order": 2,
+   "title": {
+    "ru": "Просьбы в отеле",
+    "en": "Requests at the Hotel"
+   },
+   "objective": {
+    "ru": "Вежливо просить об услугах и сравнивать номера.",
+    "en": "Make polite requests and compare rooms."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to request",
+        "right": "попросить (об услуге)"
+       },
+       {
+        "id": "P2",
+        "left": "wake-up call",
+        "right": "звонок-будильник"
+       },
+       {
+        "id": "P3",
+        "left": "quieter",
+        "right": "тише"
+       },
+       {
+        "id": "P4",
+        "left": "to move rooms",
+        "right": "переехать в другой номер"
+       },
+       {
+        "id": "P5",
+        "left": "extra pillow",
+        "right": "дополнительная подушка"
+       },
+       {
+        "id": "P6",
+        "left": "more comfortable",
+        "right": "удобнее"
+       },
+       {
+        "id": "P7",
+        "left": "to charge",
+        "right": "списать (деньги)"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which request is the most polite?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "Could I have an extra pillow, please?",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "Send a pillow to room 12 now.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You will bring me a pillow.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “Could I have an extra pillow, please?”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Не могли бы вы разбудить нас в шесть утра? У нас ранний поезд.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "Could you give us a wake-up call at six? We have an early train.",
+      "word_bank": [
+       "have",
+       "did",
+       "at",
+       "can",
+       "you",
+       "six?",
+       "call",
+       "We",
+       "give",
+       "an",
+       "yesterday",
+       "us",
+       "early",
+       "Could",
+       "train.",
+       "a",
+       "wake-up"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "A room away from the lift is ___ .",
+      "correct_answer": "quieter",
+      "options": [
+       "quieter",
+       "quietest",
+       "more quiet"
+      ],
+      "translation_hint": "Номер подальше от лифта тише."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "going",
+       "check-out",
+       "tomorrow.",
+       "a",
+       "did",
+       "was",
+       "am",
+       "to",
+       "request",
+       "late",
+       "I"
+      ],
+      "correct_words": [
+       "I",
+       "am",
+       "going",
+       "to",
+       "request",
+       "a",
+       "late",
+       "check-out",
+       "tomorrow."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you ask at reception the evening before, a late check-out will often cost less.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you ask at reception the evening before, a late check-out will often cost less.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если попросить на стойке накануне вечером, поздний выезд часто стоит дешевле."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Noisy Room",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Guest",
+        "text": "I'm afraid room 405 is very noisy — I hear the street all night.",
+        "translation": "Боюсь, номер 405 очень шумный — улицу слышно всю ночь."
+       },
+       {
+        "type": "dialogue",
+        "character": "Receptionist",
+        "text": "I'm sorry. We can move you to a quieter room on the courtyard side.",
+        "translation": "Извините. Мы можем переселить вас в более тихий номер во двор."
+       },
+       {
+        "type": "choice",
+        "text": "What does the guest ask?",
+        "options": [
+         {
+          "text": "That would be great. Could you also send an extra pillow?",
+          "is_correct": true
+         },
+         {
+          "text": "Great. You sent a pillow yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The room is moving itself to the courtyard.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "wake-up call",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A phone call from reception to wake you up",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A loud alarm clock you bring from home",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A morning newspaper left at your door",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“wake-up call” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "Could I ___ a late check-out?",
+      "audio_text": "Could I request a late check-out?",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "request",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "requested",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "requesting",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “request”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The twin room is ___ comfortable for two friends.",
+      "correct_answer": "more",
+      "hint_prefix": "mo",
+      "explanation": "The complete sentence is “The twin room is more comfortable for two friends.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to request",
+        "text": "to request"
+       },
+       {
+        "id": "V2",
+        "audio_text": "wake-up call",
+        "text": "wake-up call"
+       },
+       {
+        "id": "V3",
+        "audio_text": "quieter",
+        "text": "quieter"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to move rooms",
+        "text": "to move rooms"
+       },
+       {
+        "id": "V5",
+        "audio_text": "extra pillow",
+        "text": "extra pillow"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Receptionist",
+        "text": "Is everything all right with your room?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Almost — could you send one more blanket? The nights are colder than we expected.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, you sent it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The room is asking about me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Almost — could you send one more blanket? The nights are colder than we expected.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если что-то не так",
+    "en": "When Something Is Wrong"
+   },
+   "objective": {
+    "ru": "Решить проблемы в отеле, используя should и первое условное.",
+    "en": "Solve hotel problems using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "broken",
+        "right": "сломанный"
+       },
+       {
+        "id": "P2",
+        "left": "to complain",
+        "right": "пожаловаться"
+       },
+       {
+        "id": "P3",
+        "left": "to fix",
+        "right": "починить"
+       },
+       {
+        "id": "P4",
+        "left": "maintenance",
+        "right": "техобслуживание"
+       },
+       {
+        "id": "P5",
+        "left": "immediately",
+        "right": "немедленно"
+       },
+       {
+        "id": "P6",
+        "left": "apology",
+        "right": "извинение"
+       },
+       {
+        "id": "P7",
+        "left": "to offer",
+        "right": "предложить"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should report problems at reception immediately.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to report them yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must reporting them last night.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should report problems at reception immediately.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если кондиционер не починят сегодня, мы попросим другой номер.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If they do not fix the air conditioning today, we will ask for another room.",
+      "word_bank": [
+       "the",
+       "do",
+       "fix",
+       "will",
+       "they",
+       "fixed",
+       "another",
+       "not",
+       "today,",
+       "ask",
+       "air",
+       "If",
+       "yesterday",
+       "we",
+       "room.",
+       "for",
+       "conditioning",
+       "did"
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If the shower ___ not work, call reception.",
+      "correct_answer": "does",
+      "options": [
+       "does",
+       "will",
+       "do"
+      ],
+      "translation_hint": "Если душ не работает, позвоните на стойку."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "check",
+       "the",
+       "you",
+       "should",
+       "went",
+       "unpack.",
+       "room",
+       "You",
+       "mustn't",
+       "before"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "check",
+       "the",
+       "room",
+       "before",
+       "you",
+       "unpack."
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you complain politely, the hotel will usually offer a discount or a better room.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you complain politely, the hotel will usually offer a discount or a better room.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если пожаловаться вежливо, отель обычно предложит скидку или номер получше."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Broken Shower",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Guest",
+        "text": "The shower in room 302 has not worked since we arrived.",
+        "translation": "Душ в номере 302 не работает с нашего приезда."
+       },
+       {
+        "type": "dialogue",
+        "character": "Receptionist",
+        "text": "I'm very sorry. Our technician has looked at two rooms already today.",
+        "translation": "Очень извиняюсь. Наш техник сегодня уже посмотрел два номера."
+       },
+       {
+        "type": "choice",
+        "text": "What does the guest ask?",
+        "options": [
+         {
+          "text": "Could he fix it before dinner, or should we change rooms?",
+          "is_correct": true
+         },
+         {
+          "text": "Did he fix it tomorrow before dinner?",
+          "is_correct": false
+         },
+         {
+          "text": "Is the shower complaining about us?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "to complain",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "To say clearly that something is not good enough",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "To thank the staff for good service",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "To book a table for dinner quietly",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“to complain” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If the TV ___ , we will call you again.",
+      "audio_text": "If the TV breaks, we will call you again.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "breaks",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will break",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "broke",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “breaks”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "You should report it ___ once.",
+      "correct_answer": "at",
+      "hint_prefix": "at",
+      "explanation": "The complete sentence is “You should report it at once.”."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "broken",
+        "text": "broken"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to complain",
+        "text": "to complain"
+       },
+       {
+        "id": "V3",
+        "audio_text": "to fix",
+        "text": "to fix"
+       },
+       {
+        "id": "V4",
+        "audio_text": "maintenance",
+        "text": "maintenance"
+       },
+       {
+        "id": "V5",
+        "audio_text": "immediately",
+        "text": "immediately"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_TRAVEL_HOTEL_STAYS_AND_REQUESTS_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "The wifi in our room is very slow."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Tell reception — if enough guests complain, they will fix the router today.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I told them yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The wifi is complaining to us.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Tell reception — if enough guests complain, they will fix the router today.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

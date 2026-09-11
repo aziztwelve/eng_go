@@ -1,0 +1,1443 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS",
+  "title": {
+   "ru": "Запросы и жалобы клиентов",
+   "en": "Customer Requests and Complaints"
+  },
+  "description": {
+   "ru": "Развивайте деловой английский уровня A2 по теме «Запросы и жалобы клиентов».",
+   "en": "Develop A2 business English for customer requests and complaints."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "business_english",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "business-english",
+   "customer-requests-and-complaints"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L1",
+   "order": 1,
+   "title": {
+    "ru": "Жалоба клиента",
+    "en": "A Customer Complaint"
+   },
+   "objective": {
+    "ru": "Описать жалобу и действия, используя past simple и present perfect.",
+    "en": "Describe a complaint and the actions taken using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "complaint",
+        "right": "жалоба"
+       },
+       {
+        "id": "P2",
+        "left": "refund",
+        "right": "возврат средств"
+       },
+       {
+        "id": "P3",
+        "left": "faulty",
+        "right": "неисправный"
+       },
+       {
+        "id": "P4",
+        "left": "to replace",
+        "right": "заменить"
+       },
+       {
+        "id": "P5",
+        "left": "to apologise",
+        "right": "извиниться"
+       },
+       {
+        "id": "P6",
+        "left": "within",
+        "right": "в течение"
+       },
+       {
+        "id": "P7",
+        "left": "to investigate",
+        "right": "расследовать"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "We have received three complaints about the same product this month.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "We have received a complaint yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "We receive three complaints already this month.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “We have received three complaints about the same product this month.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Клиент получил неисправный товар, и мы уже отправили ему замену.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "The customer received a faulty product, and we have already sent him a replacement.",
+      "word_bank": [
+       "we",
+       "and",
+       "faulty",
+       "a",
+       "received",
+       "product,",
+       "receive",
+       "sent",
+       "him",
+       "already",
+       "replacement.",
+       "yesterday",
+       "customer",
+       "have",
+       "did",
+       "The",
+       "a"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "The support team ___ to the customer within an hour.",
+      "correct_answer": "apologised",
+      "options": [
+       "apologised",
+       "has apologise",
+       "apologising"
+      ],
+      "translation_hint": "Команда поддержки извинилась перед клиентом в течение часа."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "have",
+       "was",
+       "problem",
+       "did",
+       "and",
+       "cause.",
+       "found",
+       "We",
+       "the",
+       "investigated",
+       "the"
+      ],
+      "correct_words": [
+       "We",
+       "have",
+       "investigated",
+       "the",
+       "problem",
+       "and",
+       "found",
+       "the",
+       "cause."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "The customer has complained twice this week, so the manager has called her personally.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "The customer has complained twice this week, so the manager has called her personally.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Клиент жаловался дважды за неделю, поэтому менеджер позвонил ей лично."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Faulty Printer",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Client",
+        "text": "The printer you delivered last week does not work.",
+        "translation": "Принтер, который вы доставили на прошлой неделе, не работает."
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "I'm sorry about that. Have you checked the power cable?",
+        "translation": "Сожалею. Вы проверили кабель питания?"
+       },
+       {
+        "type": "choice",
+        "text": "What does the client say?",
+        "options": [
+         {
+          "text": "Yes, the machine itself is faulty — I would like a replacement.",
+          "is_correct": true
+         },
+         {
+          "text": "Yes, I check it tomorrow morning.",
+          "is_correct": false
+         },
+         {
+          "text": "The printer is complaining about the cable.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "faulty",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Not working correctly; having a fault",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Brand new and never used",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Very expensive but popular",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“faulty” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We have ___ the complaint already.",
+      "audio_text": "We have investigated the complaint already.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "investigated",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "investigate",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "investigating",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “investigated”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She has asked for a ___ of the payment.",
+      "correct_answer": "refund",
+      "hint_prefix": "re",
+      "explanation": "The complete sentence is “She has asked for a refund of the payment.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "complaint",
+        "text": "complaint"
+       },
+       {
+        "id": "V2",
+        "audio_text": "refund",
+        "text": "refund"
+       },
+       {
+        "id": "V3",
+        "audio_text": "faulty",
+        "text": "faulty"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to replace",
+        "text": "to replace"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to apologise",
+        "text": "to apologise"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "Did the customer accept the replacement?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Yes, she accepted it and has already thanked the support team.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "Yes, she accepts it tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The replacement is accepting her.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Yes, she accepted it and has already thanked the support team.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L2",
+   "order": 2,
+   "title": {
+    "ru": "Как мы ответим",
+    "en": "How We Will Respond"
+   },
+   "objective": {
+    "ru": "Предложить решения по жалобе и сравнить варианты.",
+    "en": "Offer solutions to a complaint and compare options."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "solution",
+        "right": "решение"
+       },
+       {
+        "id": "P2",
+        "left": "compensation",
+        "right": "компенсация"
+       },
+       {
+        "id": "P3",
+        "left": "faster",
+        "right": "быстрее"
+       },
+       {
+        "id": "P4",
+        "left": "to offer a discount",
+        "right": "предложить скидку"
+       },
+       {
+        "id": "P5",
+        "left": "loyal",
+        "right": "лояльный"
+       },
+       {
+        "id": "P6",
+        "left": "to satisfy",
+        "right": "удовлетворить (клиента)"
+       },
+       {
+        "id": "P7",
+        "left": "more generous",
+        "right": "щедрее"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two offers correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "A discount is more generous than a simple apology.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "A discount is generousest than an apology.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "A discount is more generous of the two most.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “A discount is more generous than a simple apology.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Мы предложим скидку десять процентов — это лучше, чем просто извинение.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "We are going to offer a ten percent discount — it is better than a simple apology.",
+      "word_bank": [
+       "We",
+       "percent",
+       "ten",
+       "discount",
+       "going",
+       "it",
+       "did",
+       "than",
+       "yesterday",
+       "better",
+       "are",
+       "is",
+       "apology.",
+       "to",
+       "a",
+       "a",
+       "offered",
+       "—",
+       "offer",
+       "simple"
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "A quick answer is ___ important than a perfect answer.",
+      "correct_answer": "more",
+      "options": [
+       "more",
+       "most",
+       "much"
+      ],
+      "translation_hint": "Быстрый ответ важнее идеального ответа."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "call",
+       "was",
+       "the",
+       "personally",
+       "is",
+       "client",
+       "manager",
+       "to",
+       "tomorrow.",
+       "going",
+       "did",
+       "The"
+      ],
+      "correct_words": [
+       "The",
+       "manager",
+       "is",
+       "going",
+       "to",
+       "call",
+       "the",
+       "client",
+       "personally",
+       "tomorrow."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If we respond faster than the competition, the customer will stay with us.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If we respond faster than the competition, the customer will stay with us.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если мы отвечаем быстрее конкурентов, клиент останется с нами."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Choosing Compensation",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Manager",
+        "text": "The client is angry. What can we offer?",
+        "translation": "Клиент недоволен. Что мы можем предложить?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "A refund or a twenty percent discount on the next order.",
+        "translation": "Возврат средств или скидку двадцать процентов на следующий заказ."
+       },
+       {
+        "type": "choice",
+        "text": "What does the manager decide?",
+        "options": [
+         {
+          "text": "The discount is better — it keeps the customer loyal.",
+          "is_correct": true
+         },
+         {
+          "text": "The refund was better yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The anger is offering a discount.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "compensation",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Something given to make up for a problem",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A price list sent before the order",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A thank-you letter without any offer",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“compensation” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "We are going to ___ a full refund.",
+      "audio_text": "We are going to offer a full refund.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "offer",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "offered",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "offering",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “offer”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "This solution is ___ generous than the first one.",
+      "correct_answer": "more",
+      "hint_prefix": "mo",
+      "explanation": "The complete sentence is “This solution is more generous than the first one.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "solution",
+        "text": "solution"
+       },
+       {
+        "id": "V2",
+        "audio_text": "compensation",
+        "text": "compensation"
+       },
+       {
+        "id": "V3",
+        "audio_text": "faster",
+        "text": "faster"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to offer a discount",
+        "text": "to offer a discount"
+       },
+       {
+        "id": "V5",
+        "audio_text": "loyal",
+        "text": "loyal"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "The client wants a discount this time."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "I agree — if we offer ten percent now, we will keep the order.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "We offered it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The discount is wanting the client.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“I agree — if we offer ten percent now, we will keep the order.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L3",
+   "order": 3,
+   "title": {
+    "ru": "Профилактика жалоб",
+    "en": "Preventing Complaints"
+   },
+   "objective": {
+    "ru": "Предложить меры против жалоб, используя should и первое условное.",
+    "en": "Suggest measures against complaints using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to prevent",
+        "right": "предотвратить"
+       },
+       {
+        "id": "P2",
+        "left": "to check quality",
+        "right": "проверять качество"
+       },
+       {
+        "id": "P3",
+        "left": "before delivery",
+        "right": "до доставки"
+       },
+       {
+        "id": "P4",
+        "left": "feedback",
+        "right": "обратная связь"
+       },
+       {
+        "id": "P5",
+        "left": "to repeat",
+        "right": "повториться"
+       },
+       {
+        "id": "P6",
+        "left": "to improve service",
+        "right": "улучшить сервис"
+       },
+       {
+        "id": "P7",
+        "left": "to promise",
+        "right": "обещать"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "We should check the quality before every delivery.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "We should to check the quality yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "We must checking quality last week.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “We should check the quality before every delivery.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если мы будем проверять качество до отправки, жалоб станет меньше.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If we check the quality before delivery, there will be fewer complaints.",
+      "word_bank": [
+       "did",
+       "be",
+       "before",
+       "check",
+       "delivery,",
+       "fewer",
+       "quality",
+       "yesterday",
+       "there",
+       "the",
+       "checked",
+       "we",
+       "If",
+       "will",
+       "complaints."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If we ___ only what we can deliver, clients will trust us.",
+      "correct_answer": "promise",
+      "options": [
+       "promise",
+       "will promise",
+       "promised"
+      ],
+      "translation_hint": "Если обещать только то, что можем выполнить, клиенты будут нам доверять."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "ask",
+       "should",
+       "every",
+       "You",
+       "went",
+       "feedback",
+       "for",
+       "order.",
+       "after",
+       "mustn't"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "ask",
+       "for",
+       "feedback",
+       "after",
+       "every",
+       "order."
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If we call customers after delivery, we will solve small problems before they grow.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If we call customers after delivery, we will solve small problems before they grow.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если звонить клиентам после доставки, мы решим мелкие проблемы до того, как они вырастут."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "After the Incident",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Director",
+        "text": "This is the second complaint about packaging this month.",
+        "translation": "Это вторая жалоба на упаковку за месяц."
+       },
+       {
+        "type": "dialogue",
+        "character": "Anna",
+        "text": "What should we change?",
+        "translation": "Что нам изменить?"
+       },
+       {
+        "type": "choice",
+        "text": "What does the director suggest?",
+        "options": [
+         {
+          "text": "If we use stronger boxes, the damage will not repeat.",
+          "is_correct": true
+         },
+         {
+          "text": "If we will use stronger boxes, the damage repeated yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "The packaging is complaining about itself.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "feedback",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Opinions about how well something is done",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A list of products for the next order",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A signed contract with a client",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“feedback” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If we ___ quality twice, faults will not reach clients.",
+      "audio_text": "If we check quality twice, faults will not reach clients.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "check",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will check",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "checked",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “check”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "We should call clients ___ every delivery.",
+      "correct_answer": "after",
+      "hint_prefix": "af",
+      "explanation": "The complete sentence is “We should call clients after every delivery.”."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to prevent",
+        "text": "to prevent"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to check quality",
+        "text": "to check quality"
+       },
+       {
+        "id": "V3",
+        "audio_text": "before delivery",
+        "text": "before delivery"
+       },
+       {
+        "id": "V4",
+        "audio_text": "feedback",
+        "text": "feedback"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to repeat",
+        "text": "to repeat"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_BUSINESS_ENGLISH_CUSTOMER_REQUESTS_AND_COMPLAINTS_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Colleague",
+        "text": "The same client has complained again."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "We should offer a call — if he explains the problem, we will fix it for good.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "We must to call him yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The problem is complaining again.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“We should offer a call — if he explains the problem, we will fix it for good.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}

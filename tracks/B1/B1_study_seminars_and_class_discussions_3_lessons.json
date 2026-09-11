@@ -1,0 +1,1314 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS",
+    "title": {
+      "ru": "Семинары и обсуждения в классе",
+      "en": "Seminars and Class Discussions"
+    },
+    "description": {
+      "ru": "Развивайте учебные навыки уровня B1 по теме «Семинары и обсуждения в классе».",
+      "en": "Develop B1 study skills for seminars and class discussions."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "B1",
+    "goal": "study",
+    "track_type": "thematic",
+    "tags": [
+      "B1",
+      "study",
+      "seminars-and-class-discussions"
+    ]
+  },
+  "lessons": [
+    {
+      "code": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L1",
+      "order": 1,
+      "title": {
+        "ru": "Учебная практика 1",
+        "en": "Joining a Discussion"
+      },
+      "objective": {
+        "ru": "Самостоятельно выполнять знакомые учебные задачи уровня B1, связывая идеи, используя доказательства и оценивая свой прогресс.",
+        "en": "Complete familiar B1 study tasks independently by connecting ideas, using evidence, and evaluating progress."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L1_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "A2STCD_2",
+                "left": "open your book",
+                "right": "откройте книгу"
+              },
+              {
+                "id": "A2STCD_3",
+                "left": "close your book",
+                "right": "закройте книгу"
+              },
+              {
+                "id": "A2STCD_4",
+                "left": "listen",
+                "right": "слушайте"
+              },
+              {
+                "id": "A2STCD_5",
+                "left": "repeat",
+                "right": "повторите"
+              },
+              {
+                "id": "A2STCD_6",
+                "left": "read",
+                "right": "читайте"
+              },
+              {
+                "id": "A2STCD_7",
+                "left": "write",
+                "right": "пишите"
+              },
+              {
+                "id": "A2STCD_8",
+                "left": "look at the board",
+                "right": "посмотрите на доску"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L1_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "What should you do when the teacher says “Open your book”?",
+            "options": [
+              {
+                "id": "A2STCD_10",
+                "text": "Open the book",
+                "is_correct": true
+              },
+              {
+                "id": "A2STCD_11",
+                "text": "Close the book",
+                "is_correct": false
+              },
+              {
+                "id": "A2STCD_12",
+                "text": "Leave the room",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Open your book” tells you to open it."
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L1_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Откройте книгу.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Open your book.",
+            "word_bank": [
+              "book.",
+              "your",
+              "Open"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L1_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Look at the ___.",
+            "correct_answer": "board",
+            "options": [
+              "board",
+              "party",
+              "juice"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L1_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "and",
+              "Listen",
+              "repeat."
+            ],
+            "correct_words": [
+              "Listen",
+              "and",
+              "repeat."
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L1_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Please open your book.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L1_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Look at the board and read the sentence. I can explain the main point in a short sentence. I will organise the main points, support them with evidence, and review my work before I submit it.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Посмотрите на доску и прочитайте предложение. Я могу объяснить основную мысль коротким предложением. Я организую основные идеи, подкреплю их доказательствами и проверю работу перед сдачей."
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L1_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "English Class",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Teacher",
+                "text": "Open your books, please.",
+                "translation": "Откройте книги, пожалуйста."
+              },
+              {
+                "type": "dialogue",
+                "character": "Ali",
+                "text": "Which page?",
+                "translation": "Какая страница?"
+              },
+              {
+                "type": "choice",
+                "text": "What can the teacher say?",
+                "options": [
+                  {
+                    "text": "Page ten.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "See you at the cafe.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L1_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "repeat",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STCD_20",
+                "text": "To say something again",
+                "is_correct": true
+              },
+              {
+                "id": "A2STCD_21",
+                "text": "To shut a book",
+                "is_correct": false
+              },
+              {
+                "id": "A2STCD_22",
+                "text": "To draw a picture",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Repeat means to say something again."
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L1_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "Look at the ___.",
+            "audio_text": "Look at the board.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STCD_24",
+                "audio_text": "board",
+                "is_correct": true
+              },
+              {
+                "id": "A2STCD_25",
+                "audio_text": "park",
+                "is_correct": false
+              },
+              {
+                "id": "A2STCD_26",
+                "audio_text": "coffee",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing classroom word is “board.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L1_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Please ___ the sentence.",
+            "correct_answer": "read",
+            "hint_prefix": "re",
+            "explanation": "The complete instruction is “Please read the sentence.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L1_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "A2STCD_29",
+                "audio_text": "open your book",
+                "text": "open your book"
+              },
+              {
+                "id": "A2STCD_30",
+                "audio_text": "listen",
+                "text": "listen"
+              },
+              {
+                "id": "A2STCD_31",
+                "audio_text": "repeat",
+                "text": "repeat"
+              }
+            ],
+            "explanation": "Match each phrase you hear with the same written English phrase."
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L1_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Teacher",
+                "text": "Please close your books."
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A2STCD_33",
+                "text": "Okay.",
+                "is_correct": true
+              },
+              {
+                "id": "A2STCD_34",
+                "text": "At three o’clock.",
+                "is_correct": false
+              },
+              {
+                "id": "A2STCD_35",
+                "text": "I like apples.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the response that develops the academic task with a clear reason, example, or next step."
+          }
+        }
+      ]
+    },
+    {
+      "code": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L2",
+      "order": 2,
+      "title": {
+        "ru": "Учебная практика 2",
+        "en": "Explaining an Opinion"
+      },
+      "objective": {
+        "ru": "Самостоятельно выполнять знакомые учебные задачи уровня B1, связывая идеи, используя доказательства и оценивая свой прогресс.",
+        "en": "Complete familiar B1 study tasks independently by connecting ideas, using evidence, and evaluating progress."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L2_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "A2STCD_37",
+                "left": "answer the question",
+                "right": "ответьте на вопрос"
+              },
+              {
+                "id": "A2STCD_38",
+                "left": "complete the exercise",
+                "right": "выполните упражнение"
+              },
+              {
+                "id": "A2STCD_39",
+                "left": "choose the answer",
+                "right": "выберите ответ"
+              },
+              {
+                "id": "A2STCD_40",
+                "left": "work in pairs",
+                "right": "работайте в парах"
+              },
+              {
+                "id": "A2STCD_41",
+                "left": "check your work",
+                "right": "проверьте свою работу"
+              },
+              {
+                "id": "A2STCD_42",
+                "left": "underline the word",
+                "right": "подчеркните слово"
+              },
+              {
+                "id": "A2STCD_43",
+                "left": "write your name",
+                "right": "напишите своё имя"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L2_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "What should two students do when told to “work in pairs”?",
+            "options": [
+              {
+                "id": "A2STCD_45",
+                "text": "Work together",
+                "is_correct": true
+              },
+              {
+                "id": "A2STCD_46",
+                "text": "Work alone",
+                "is_correct": false
+              },
+              {
+                "id": "A2STCD_47",
+                "text": "Go home",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Work in pairs” means two students work together."
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L2_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Ответьте на вопрос.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Answer the question.",
+            "word_bank": [
+              "question.",
+              "the",
+              "Answer"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L2_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Write your ___ at the top.",
+            "correct_answer": "name",
+            "options": [
+              "name",
+              "cafe",
+              "dinner"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L2_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "your",
+              "Check",
+              "work."
+            ],
+            "correct_words": [
+              "Check",
+              "your",
+              "work."
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L2_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Complete exercise number two.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L2_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Work in pairs and answer the questions. I can explain the main point in a short sentence. I will organise the main points, support them with evidence, and review my work before I submit it.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Работайте в парах и ответьте на вопросы. Я могу объяснить основную мысль коротким предложением. Я организую основные идеи, подкреплю их доказательствами и проверю работу перед сдачей."
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L2_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "A Pair Activity",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Teacher",
+                "text": "Please work in pairs.",
+                "translation": "Пожалуйста, работайте в парах."
+              },
+              {
+                "type": "dialogue",
+                "character": "Mila",
+                "text": "Can I work with Tom?",
+                "translation": "Можно мне работать с Томом?"
+              },
+              {
+                "type": "choice",
+                "text": "What can the teacher say?",
+                "options": [
+                  {
+                    "text": "Yes, of course.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Meet me at the park.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L2_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "underline",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STCD_55",
+                "text": "To draw a line under a word",
+                "is_correct": true
+              },
+              {
+                "id": "A2STCD_56",
+                "text": "To speak very quietly",
+                "is_correct": false
+              },
+              {
+                "id": "A2STCD_57",
+                "text": "To close a notebook",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Underline means to draw a line under a word."
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L2_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "Check your ___.",
+            "audio_text": "Check your work.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STCD_59",
+                "audio_text": "work",
+                "is_correct": true
+              },
+              {
+                "id": "A2STCD_60",
+                "audio_text": "milk",
+                "is_correct": false
+              },
+              {
+                "id": "A2STCD_61",
+                "audio_text": "street",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is “work.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L2_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Choose the correct ___.",
+            "correct_answer": "answer",
+            "hint_prefix": "an",
+            "explanation": "The complete instruction is “Choose the correct answer.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L2_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "A2STCD_64",
+                "audio_text": "work in pairs",
+                "text": "work in pairs"
+              },
+              {
+                "id": "A2STCD_65",
+                "audio_text": "check your work",
+                "text": "check your work"
+              },
+              {
+                "id": "A2STCD_66",
+                "audio_text": "write your name",
+                "text": "write your name"
+              }
+            ],
+            "explanation": "Match each phrase you hear with the same written English phrase."
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L2_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Teacher",
+                "text": "Please complete exercise three."
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A2STCD_68",
+                "text": "Okay. Which page?",
+                "is_correct": true
+              },
+              {
+                "id": "A2STCD_69",
+                "text": "Yes. I like tea.",
+                "is_correct": false
+              },
+              {
+                "id": "A2STCD_70",
+                "text": "At the bus stop.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the response that develops the academic task with a clear reason, example, or next step."
+          }
+        }
+      ]
+    },
+    {
+      "code": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L3",
+      "order": 3,
+      "title": {
+        "ru": "Учебная практика 3",
+        "en": "Responding to Ideas"
+      },
+      "objective": {
+        "ru": "Самостоятельно выполнять знакомые учебные задачи уровня B1, связывая идеи, используя доказательства и оценивая свой прогресс.",
+        "en": "Complete familiar B1 study tasks independently by connecting ideas, using evidence, and evaluating progress."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L3_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "A2STCD_72",
+                "left": "I understand",
+                "right": "Я понимаю"
+              },
+              {
+                "id": "A2STCD_73",
+                "left": "I don't understand",
+                "right": "Я не понимаю"
+              },
+              {
+                "id": "A2STCD_74",
+                "left": "Please repeat",
+                "right": "Повторите, пожалуйста"
+              },
+              {
+                "id": "A2STCD_75",
+                "left": "Please speak slowly",
+                "right": "Говорите медленнее, пожалуйста"
+              },
+              {
+                "id": "A2STCD_76",
+                "left": "What do we do?",
+                "right": "Что мы делаем?"
+              },
+              {
+                "id": "A2STCD_77",
+                "left": "Which page?",
+                "right": "Какая страница?"
+              },
+              {
+                "id": "A2STCD_78",
+                "left": "Can you help me?",
+                "right": "Вы можете мне помочь?"
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L3_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "What can you say when the teacher speaks too fast?",
+            "options": [
+              {
+                "id": "A2STCD_80",
+                "text": "Please speak slowly.",
+                "is_correct": true
+              },
+              {
+                "id": "A2STCD_81",
+                "text": "Close the window.",
+                "is_correct": false
+              },
+              {
+                "id": "A2STCD_82",
+                "text": "I have lunch.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“Please speak slowly” is a polite request."
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L3_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Повторите, пожалуйста.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Please repeat.",
+            "word_bank": [
+              "repeat.",
+              "Please"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L3_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "I don't ___.",
+            "correct_answer": "understand",
+            "options": [
+              "understand",
+              "invite",
+              "breakfast"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L3_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              "help",
+              "you",
+              "me?",
+              "Can"
+            ],
+            "correct_words": [
+              "Can",
+              "you",
+              "help",
+              "me?"
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L3_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "I don't understand this question.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L3_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Excuse me. Can you repeat that, please? I can explain the main point in a short sentence. I will organise the main points, support them with evidence, and review my work before I submit it.",
+            "language": "en",
+            "min_accuracy": 0.7,
+            "translation_hint": "Извините. Вы можете повторить это, пожалуйста? Я могу объяснить основную мысль коротким предложением. Я организую основные идеи, подкреплю их доказательствами и проверю работу перед сдачей."
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L3_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "A Difficult Instruction",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Teacher",
+                "text": "Underline the verbs in exercise five.",
+                "translation": "Подчеркните глаголы в упражнении пять."
+              },
+              {
+                "type": "dialogue",
+                "character": "Nora",
+                "text": "Sorry, I don't understand.",
+                "translation": "Извините, я не понимаю."
+              },
+              {
+                "type": "choice",
+                "text": "What should Nora ask?",
+                "options": [
+                  {
+                    "text": "Can you repeat that, please?",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "Would you like some tea?",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L3_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "understand",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STCD_90",
+                "text": "To know what something means",
+                "is_correct": true
+              },
+              {
+                "id": "A2STCD_91",
+                "text": "To ask someone to a party",
+                "is_correct": false
+              },
+              {
+                "id": "A2STCD_92",
+                "text": "To arrive at a place",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Understand means to know what something means."
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L3_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "Please speak ___.",
+            "audio_text": "Please speak slowly.",
+            "language": "en",
+            "options": [
+              {
+                "id": "A2STCD_94",
+                "audio_text": "slowly",
+                "is_correct": true
+              },
+              {
+                "id": "A2STCD_95",
+                "audio_text": "science",
+                "is_correct": false
+              },
+              {
+                "id": "A2STCD_96",
+                "audio_text": "cheese",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing word is “slowly.”"
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L3_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Can you ___ me?",
+            "correct_answer": "help",
+            "hint_prefix": "he",
+            "explanation": "The complete question is “Can you help me?”"
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L3_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "A2STCD_99",
+                "audio_text": "I don't understand",
+                "text": "I don't understand"
+              },
+              {
+                "id": "A2STCD_100",
+                "audio_text": "Please repeat",
+                "text": "Please repeat"
+              },
+              {
+                "id": "A2STCD_101",
+                "audio_text": "Which page?",
+                "text": "Which page?"
+              }
+            ],
+            "explanation": "Match each phrase you hear with the same written English phrase."
+          }
+        },
+        {
+          "id": "B1_STUDY_SEMINARS_AND_CLASS_DISCUSSIONS_L3_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Teacher",
+                "text": "Do you understand the instruction?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "A2STCD_103",
+                "text": "No. Can you repeat it, please?",
+                "is_correct": true
+              },
+              {
+                "id": "A2STCD_104",
+                "text": "No. I meet at three.",
+                "is_correct": false
+              },
+              {
+                "id": "A2STCD_105",
+                "text": "No. My home is small.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Choose the response that develops the academic task with a clear reason, example, or next step."
+          }
+        }
+      ]
+    }
+  ]
+}

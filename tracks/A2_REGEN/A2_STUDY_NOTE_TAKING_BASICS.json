@@ -1,0 +1,1440 @@
+{
+ "schema_version": "lingoiq.track.v2",
+ "track": {
+  "code": "A2_STUDY_NOTE_TAKING_BASICS",
+  "title": {
+   "ru": "Основы ведения записей",
+   "en": "Note-Taking Basics"
+  },
+  "description": {
+   "ru": "Развивайте учебные навыки уровня A2 по теме «Основы ведения записей».",
+   "en": "Develop A2 study skills for note-taking basics."
+  },
+  "target_language": "en",
+  "native_language": "ru",
+  "level": "A2",
+  "goal": "study",
+  "track_type": "thematic",
+  "tags": [
+   "A2",
+   "study",
+   "note-taking-basics"
+  ]
+ },
+ "lessons": [
+  {
+   "code": "A2_STUDY_NOTE_TAKING_BASICS_L1",
+   "order": 1,
+   "title": {
+    "ru": "Мои записи на лекциях",
+    "en": "My Lecture Notes"
+   },
+   "objective": {
+    "ru": "Рассказать о конспектах, используя past simple и present perfect.",
+    "en": "Talk about notes using past simple and present perfect."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L1_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to take notes",
+        "right": "делать записи"
+       },
+       {
+        "id": "P2",
+        "left": "abbreviation",
+        "right": "сокращение"
+       },
+       {
+        "id": "P3",
+        "left": "margin",
+        "right": "поля (страницы)"
+       },
+       {
+        "id": "P4",
+        "left": "to highlight",
+        "right": "выделить маркером"
+       },
+       {
+        "id": "P5",
+        "left": "to review notes",
+        "right": "повторить записи"
+       },
+       {
+        "id": "P6",
+        "left": "key point",
+        "right": "ключевая мысль"
+       },
+       {
+        "id": "P7",
+        "left": "to miss (a point)",
+        "right": "пропустить (мысль)"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L1_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence uses the present perfect correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "I have reviewed all the notes from this module.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "I have reviewed them last module.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "I review the notes already now.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “I have reviewed all the notes from this module.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L1_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "На прошлой лекции я пропустил ключевую мысль, но друг дал свои записи.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "I missed a key point at the last lecture, but a friend has shared his notes.",
+      "word_bank": [
+       "tomorrow",
+       "his",
+       "last",
+       "key",
+       "missed",
+       "I",
+       "the",
+       "friend",
+       "a",
+       "notes.",
+       "point",
+       "but",
+       "a",
+       "shared",
+       "lecture,",
+       "did",
+       "has",
+       "miss",
+       "at"
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L1_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "She wrote the dates in the ___ of every page.",
+      "correct_answer": "margin",
+      "options": [
+       "margin",
+       "margins",
+       "marginal"
+      ],
+      "translation_hint": "Она записывала даты на полях каждой страницы."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L1_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "the",
+       "definitions",
+       "have",
+       "did",
+       "yellow.",
+       "in",
+       "was",
+       "main",
+       "highlighted",
+       "I"
+      ],
+      "correct_words": [
+       "I",
+       "have",
+       "highlighted",
+       "the",
+       "main",
+       "definitions",
+       "in",
+       "yellow."
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L1_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "I used only abbreviations in class, so I have rewritten the notes the same evening while I still remembered everything.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L1_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "I used only abbreviations in class, so I have rewritten the notes the same evening while I still remembered everything.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "На занятии я пользовался только сокращениями, поэтому в тот же вечер переписал записи, пока всё помнил."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L1_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Comparing Notes",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "Could I copy your notes from Tuesday? I missed that lecture.",
+        "translation": "Можно сфотографировать твои записи со вторника? Я пропустил ту лекцию."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Sure — but I have used a lot of abbreviations.",
+        "translation": "Конечно — только у меня много сокращений."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 ask?",
+        "options": [
+         {
+          "text": "No problem — what does this arrow in the margin mean?",
+          "is_correct": true
+         },
+         {
+          "text": "No problem, it meant tomorrow yesterday.",
+          "is_correct": false
+         },
+         {
+          "text": "Is the abbreviation copying the lecture?",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L1_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "abbreviation",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A short form of a word or phrase",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A full sentence written at the top",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A drawing in the notebook margin",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“abbreviation” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L1_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I have ___ the notes twice this week.",
+      "audio_text": "I have reviewed the notes twice this week.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "reviewed",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "review",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "reviewing",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “reviewed”."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L1_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "___ the key points before the exam.",
+      "correct_answer": "Highlight",
+      "hint_prefix": "Hi",
+      "explanation": "The complete sentence is “Highlight the key points before the exam.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L1_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to take notes",
+        "text": "to take notes"
+       },
+       {
+        "id": "V2",
+        "audio_text": "abbreviation",
+        "text": "abbreviation"
+       },
+       {
+        "id": "V3",
+        "audio_text": "margin",
+        "text": "margin"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to highlight",
+        "text": "to highlight"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to review notes",
+        "text": "to review notes"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L1_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "Your notes look so tidy!"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "I have rewritten them in the evening since September — it doubles as revision.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I rewrote them yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The notes are tidying me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“I have rewritten them in the evening since September — it doubles as revision.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_STUDY_NOTE_TAKING_BASICS_L2",
+   "order": 2,
+   "title": {
+    "ru": "Новый способ записывать",
+    "en": "A New Way of Taking Notes"
+   },
+   "objective": {
+    "ru": "Сравнить способы ведения записей и выбрать систему.",
+    "en": "Compare note-taking systems and choose one."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L2_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "outline",
+        "right": "план (тезисный)"
+       },
+       {
+        "id": "P2",
+        "left": "mind map",
+        "right": "интеллект-карта"
+       },
+       {
+        "id": "P3",
+        "left": "more visual",
+        "right": "нагляднее"
+       },
+       {
+        "id": "P4",
+        "left": "Cornell method",
+        "right": "метод Корнелла"
+       },
+       {
+        "id": "P5",
+        "left": "to structure",
+        "right": "структурировать"
+       },
+       {
+        "id": "P6",
+        "left": "typed notes",
+        "right": "печатные записи"
+       },
+       {
+        "id": "P7",
+        "left": "handwritten",
+        "right": "рукописный"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L2_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence compares two note styles correctly?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "A mind map is more visual than a plain outline.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "A mind map is visualer than outline.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "A mind map is most visual than outline.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “A mind map is more visual than a plain outline.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L2_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "С этого месяца я собираюсь вести записи по методу Корнелла.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "From this month I am going to take notes with the Cornell method.",
+      "word_bank": [
+       "I",
+       "yesterday",
+       "Cornell",
+       "this",
+       "with",
+       "to",
+       "going",
+       "From",
+       "am",
+       "method.",
+       "month",
+       "take",
+       "did",
+       "the",
+       "notes",
+       "took"
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L2_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Handwritten notes are ___ for memory than typed ones.",
+      "correct_answer": "better",
+      "options": [
+       "better",
+       "best",
+       "more good"
+      ],
+      "translation_hint": "Рукописные записи запоминаются лучше печатных."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L2_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "a",
+       "We",
+       "the",
+       "did",
+       "to",
+       "was",
+       "as",
+       "going",
+       "map.",
+       "are",
+       "structure",
+       "topic",
+       "mind"
+      ],
+      "correct_words": [
+       "We",
+       "are",
+       "going",
+       "to",
+       "structure",
+       "the",
+       "topic",
+       "as",
+       "a",
+       "mind",
+       "map."
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L2_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you leave a summary line at the bottom of each page, revision will take minutes, not hours.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L2_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you leave a summary line at the bottom of each page, revision will take minutes, not hours.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если оставлять строку-резюме внизу каждой страницы, повторение займёт минуты, а не часы."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L2_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "Choosing a System",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "Do you type your notes or write by hand?",
+        "translation": "Ты печатаешь записи или пишешь от руки?"
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Handwritten — a mind map is also more visual for me than an outline.",
+        "translation": "От руки — и интеллект-карта для меня нагляднее плана."
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 say?",
+        "options": [
+         {
+          "text": "I am going to try mind maps for the history course then.",
+          "is_correct": true
+         },
+         {
+          "text": "I tried them yesterday tomorrow.",
+          "is_correct": false
+         },
+         {
+          "text": "The outline is mapping your hand.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L2_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "mind map",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "A diagram with the topic in the centre and ideas around it",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "A numbered list of sentences",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "A table with dates and names only",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“mind map” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L2_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "I am going to ___ the chapter first.",
+      "audio_text": "I am going to structure the chapter first.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "structure",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "structured",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "structuring",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “structure”."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L2_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Typed notes are ___ searchable.",
+      "correct_answer": "more",
+      "hint_prefix": "mo",
+      "explanation": "The complete sentence is “Typed notes are more searchable.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L2_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "outline",
+        "text": "outline"
+       },
+       {
+        "id": "V2",
+        "audio_text": "mind map",
+        "text": "mind map"
+       },
+       {
+        "id": "V3",
+        "audio_text": "more visual",
+        "text": "more visual"
+       },
+       {
+        "id": "V4",
+        "audio_text": "Cornell method",
+        "text": "Cornell method"
+       },
+       {
+        "id": "V5",
+        "audio_text": "to structure",
+        "text": "to structure"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L2_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "How do you remember diagrams?"
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "I redraw them from memory — if the map is wrong, I check the original.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I drew them yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The diagrams are remembering me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“I redraw them from memory — if the map is wrong, I check the original.” is the natural reply in this situation."
+     }
+    }
+   ]
+  },
+  {
+   "code": "A2_STUDY_NOTE_TAKING_BASICS_L3",
+   "order": 3,
+   "title": {
+    "ru": "Если записи не помогают",
+    "en": "If the Notes Do Not Help"
+   },
+   "objective": {
+    "ru": "Дать советы о записях, используя should и первое условное.",
+    "en": "Give note advice using should and the first conditional."
+   },
+   "estimated_seconds": 415,
+   "steps": [
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L3_MATCH_PAIRS",
+     "order": 1,
+     "type": "match_pairs",
+     "title": {
+      "ru": "Соедините пары",
+      "en": "Match the pairs"
+     },
+     "instructions": {
+      "ru": "Соедините английские слова и фразы с переводом.",
+      "en": "Соедините английские слова и фразы с переводом."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "pairs": [
+       {
+        "id": "P1",
+        "left": "to reread",
+        "right": "перечитать"
+       },
+       {
+        "id": "P2",
+        "left": "to summarise",
+        "right": "резюмировать"
+       },
+       {
+        "id": "P3",
+        "left": "in your own words",
+        "right": "своими словами"
+       },
+       {
+        "id": "P4",
+        "left": "to copy blindly",
+        "right": "бездумно списывать"
+       },
+       {
+        "id": "P5",
+        "left": "effective",
+        "right": "эффективный"
+       },
+       {
+        "id": "P6",
+        "left": "to review regularly",
+        "right": "регулярно повторять"
+       },
+       {
+        "id": "P7",
+        "left": "cluttered",
+        "right": "захламлённый (о записях)"
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L3_QUIZ",
+     "order": 2,
+     "type": "quiz",
+     "title": {
+      "ru": "Проверьте себя",
+      "en": "Check yourself"
+     },
+     "instructions": {
+      "ru": "Выберите правильный ответ.",
+      "en": "Выберите правильный ответ."
+     },
+     "estimated_seconds": 20,
+     "data": {
+      "question": "Which sentence gives correct advice?",
+      "options": [
+       {
+        "id": "Q_A",
+        "text": "You should write summaries in your own words.",
+        "is_correct": true
+       },
+       {
+        "id": "Q_B",
+        "text": "You should to write them yesterday.",
+        "is_correct": false
+       },
+       {
+        "id": "Q_C",
+        "text": "You must writing summaries last lecture.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The correct answer is “You should write summaries in your own words.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L3_TRANSLATE",
+     "order": 3,
+     "type": "translate",
+     "title": {
+      "ru": "Переведите",
+      "en": "Translate"
+     },
+     "instructions": {
+      "ru": "Составьте перевод из слов.",
+      "en": "Составьте перевод из слов."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "source_text": "Если просто перечитывать записи, они почти не запоминаются.",
+      "source_language": "ru",
+      "target_language": "en",
+      "correct_translation": "If you only reread your notes, you will remember almost nothing.",
+      "word_bank": [
+       "only",
+       "yesterday",
+       "remember",
+       "will",
+       "reread",
+       "reread",
+       "your",
+       "nothing.",
+       "If",
+       "you",
+       "notes,",
+       "you",
+       "almost",
+       "did"
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L3_FILL_BLANK",
+     "order": 4,
+     "type": "fill_blank",
+     "title": {
+      "ru": "Заполните пропуск",
+      "en": "Fill the blank"
+     },
+     "instructions": {
+      "ru": "Выберите подходящее слово.",
+      "en": "Выберите подходящее слово."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "If you copy blindly, the material ___ sense later.",
+      "correct_answer": "will not make",
+      "options": [
+       "will not make",
+       "not make",
+       "does not made"
+      ],
+      "translation_hint": "Если бездумно списывать, материал позже не сложится в систему."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L3_TAP_WORDS",
+     "order": 5,
+     "type": "tap_words",
+     "title": {
+      "ru": "Соберите фразу",
+      "en": "Build the phrase"
+     },
+     "instructions": {
+      "ru": "Расставьте слова в правильном порядке.",
+      "en": "Расставьте слова в правильном порядке."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word_bank": [
+       "mustn't",
+       "within",
+       "notes",
+       "went",
+       "day.",
+       "should",
+       "your",
+       "review",
+       "You",
+       "a"
+      ],
+      "correct_words": [
+       "You",
+       "should",
+       "review",
+       "your",
+       "notes",
+       "within",
+       "a",
+       "day."
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L3_LISTENING",
+     "order": 6,
+     "type": "listening",
+     "title": {
+      "ru": "Послушайте",
+      "en": "Listen"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и напишите, что услышали.",
+      "en": "Прослушайте предложение и напишите, что услышали."
+     },
+     "estimated_seconds": 35,
+     "data": {
+      "audio_text": "If you close the notebook and retell the topic aloud, you will remember much more than by rereading.",
+      "language": "en"
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L3_LISTENING_SHADOWING",
+     "order": 7,
+     "type": "listening_shadowing",
+     "title": {
+      "ru": "Повторите",
+      "en": "Repeat"
+     },
+     "instructions": {
+      "ru": "Прослушайте фразу, запишите повтор и получите оценку произношения.",
+      "en": "Прослушайте фразу, запишите повтор и получите оценку произношения."
+     },
+     "estimated_seconds": 60,
+     "data": {
+      "audio_text": "If you close the notebook and retell the topic aloud, you will remember much more than by rereading.",
+      "language": "en",
+      "min_accuracy": 0.7,
+      "translation_hint": "Если закрыть тетрадь и пересказать тему вслух, запомнится гораздо больше, чем при перечитывании."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L3_STORY",
+     "order": 8,
+     "type": "story",
+     "title": {
+      "ru": "История",
+      "en": "Story"
+     },
+     "instructions": {
+      "ru": "Прочитайте историю и выберите ответ.",
+      "en": "Прочитайте историю и выберите ответ."
+     },
+     "estimated_seconds": 40,
+     "data": {
+      "title": "The Cluttered Notebook",
+      "scenes": [
+       {
+        "type": "dialogue",
+        "character": "Voice 1",
+        "text": "My notes are so cluttered that I cannot study from them.",
+        "translation": "Мои записи так захламлены, что по ним нельзя заниматься."
+       },
+       {
+        "type": "dialogue",
+        "character": "Voice 2",
+        "text": "Have you tried summarising each page in one sentence?",
+        "translation": "Пробовал резюмировать каждую страницу одним предложением?"
+       },
+       {
+        "type": "choice",
+        "text": "What does Voice 1 decide?",
+        "options": [
+         {
+          "text": "Not yet — I will do it this evening, while it is fresh.",
+          "is_correct": true
+         },
+         {
+          "text": "I did it yesterday tomorrow already.",
+          "is_correct": false
+         },
+         {
+          "text": "The notebook is cluttering my studies.",
+          "is_correct": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L3_CHOOSE_DEFINITION",
+     "order": 9,
+     "type": "choose_definition",
+     "title": {
+      "ru": "Определение",
+      "en": "Definition"
+     },
+     "instructions": {
+      "ru": "Выберите правильное значение слова.",
+      "en": "Выберите правильное значение слова."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "word": "cluttered",
+      "language": "en",
+      "options": [
+       {
+        "id": "D_A",
+        "text": "Messy and hard to read",
+        "is_correct": true
+       },
+       {
+        "id": "D_B",
+        "text": "Neat, with clear headings and margins",
+        "is_correct": false
+       },
+       {
+        "id": "D_C",
+        "text": "Short, with one idea per line",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“cluttered” matches the correct definition."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L3_LISTEN_CHOOSE_WORD",
+     "order": 10,
+     "type": "listen_choose_word",
+     "title": {
+      "ru": "Слово",
+      "en": "Word"
+     },
+     "instructions": {
+      "ru": "Прослушайте предложение и выберите пропущенное слово.",
+      "en": "Прослушайте предложение и выберите пропущенное слово."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "sentence_template": "If you ___ regularly, the exam will be easier.",
+      "audio_text": "If you review regularly, the exam will be easier.",
+      "language": "en",
+      "options": [
+       {
+        "id": "LW_A",
+        "audio_text": "review",
+        "is_correct": true
+       },
+       {
+        "id": "LW_B",
+        "audio_text": "will review",
+        "is_correct": false
+       },
+       {
+        "id": "LW_C",
+        "audio_text": "reviewed",
+        "is_correct": false
+       }
+      ],
+      "explanation": "The missing word is “review”."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L3_MISSING_WORD",
+     "order": 11,
+     "type": "missing_word",
+     "title": {
+      "ru": "Впишите",
+      "en": "Type"
+     },
+     "instructions": {
+      "ru": "Впишите пропущенное слово по подсказке.",
+      "en": "Впишите пропущенное слово по подсказке."
+     },
+     "estimated_seconds": 25,
+     "data": {
+      "sentence_template": "Summarise it in your ___ words.",
+      "correct_answer": "own",
+      "hint_prefix": "ow",
+      "explanation": "The complete sentence is “Summarise it in your own words.”."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L3_MATCH_PAIRS_VOICE",
+     "order": 12,
+     "type": "match_pairs_voice",
+     "title": {
+      "ru": "Звук",
+      "en": "Sound"
+     },
+     "instructions": {
+      "ru": "Прослушайте каждое слово и выберите его написание.",
+      "en": "Прослушайте каждое слово и выберите его написание."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "language": "en",
+      "pairs": [
+       {
+        "id": "V1",
+        "audio_text": "to reread",
+        "text": "to reread"
+       },
+       {
+        "id": "V2",
+        "audio_text": "to summarise",
+        "text": "to summarise"
+       },
+       {
+        "id": "V3",
+        "audio_text": "in your own words",
+        "text": "in your own words"
+       },
+       {
+        "id": "V4",
+        "audio_text": "to copy blindly",
+        "text": "to copy blindly"
+       },
+       {
+        "id": "V5",
+        "audio_text": "effective",
+        "text": "effective"
+       }
+      ],
+      "explanation": "Match each English phrase you hear with the same written phrase."
+     }
+    },
+    {
+     "id": "A2_STUDY_NOTE_TAKING_BASICS_L3_COMPLETE_CHAT",
+     "order": 13,
+     "type": "complete_chat",
+     "title": {
+      "ru": "Диалог",
+      "en": "Chat"
+     },
+     "instructions": {
+      "ru": "Выберите подходящую реплику.",
+      "en": "Выберите подходящую реплику."
+     },
+     "estimated_seconds": 30,
+     "data": {
+      "dialogue": [
+       {
+        "speaker": "Friend",
+        "text": "I forget everything right after the lecture."
+       }
+      ],
+      "answer_speaker": "You",
+      "options": [
+       {
+        "id": "C_A",
+        "text": "Review the same day — if you wait a week, you will be learning it from scratch.",
+        "is_correct": true
+       },
+       {
+        "id": "C_B",
+        "text": "I reviewed it yesterday tomorrow.",
+        "is_correct": false
+       },
+       {
+        "id": "C_C",
+        "text": "The lecture is forgetting me.",
+        "is_correct": false
+       }
+      ],
+      "explanation": "“Review the same day — if you wait a week, you will be learning it from scratch.” is the natural reply in this situation."
+     }
+    }
+   ]
+  }
+ ]
+}
