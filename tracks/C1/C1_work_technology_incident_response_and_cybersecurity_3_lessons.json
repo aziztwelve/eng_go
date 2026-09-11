@@ -1,0 +1,1458 @@
+{
+  "schema_version": "lingoiq.track.v2",
+  "track": {
+    "code": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY",
+    "title": {
+      "ru": "Реагирование на ИТ-инциденты и кибербезопасность",
+      "en": "Technology Incident Response and Cybersecurity"
+    },
+    "description": {
+      "ru": "Развивайте продвинутую профессиональную коммуникацию уровня C1 по теме «Реагирование на ИТ-инциденты и кибербезопасность» в реалистичных ситуациях, требующих точности, ответственности и междисциплинарного взаимодействия.",
+      "en": "Develop advanced C1 professional communication for technology incident response and cybersecurity through realistic situations requiring precision, accountability, and interdisciplinary coordination."
+    },
+    "target_language": "en",
+    "native_language": "ru",
+    "level": "C1",
+    "goal": "work",
+    "track_type": "thematic",
+    "tags": [
+      "C1",
+      "work",
+      "professional-english",
+      "technology-incident-response-and-cybersecurity"
+    ]
+  },
+  "lessons": [
+    {
+      "code": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1",
+      "order": 1,
+      "title": {
+        "ru": "Специализированный контекст",
+        "en": "Triaging a Production Incident"
+      },
+      "objective": {
+        "ru": "Уверенно выполнять сложную профессиональную задачу уровня C1, точно используя отраслевую терминологию, оценивая риски и ясно распределяя ответственность.",
+        "en": "Handle a complex C1 professional task confidently by using sector-specific terminology precisely, evaluating risk, and establishing clear accountability."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D01",
+                "left": "production outage",
+                "right": "сбой рабочей системы"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D02",
+                "left": "incident severity",
+                "right": "критичность инцидента"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D03",
+                "left": "attack vector",
+                "right": "вектор атаки"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D04",
+                "left": "containment measure",
+                "right": "мера сдерживания"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D05",
+                "left": "data exfiltration",
+                "right": "несанкционированный вывод данных"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D06",
+                "left": "service restoration",
+                "right": "восстановление сервиса"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D07",
+                "left": "post-incident review",
+                "right": "разбор после инцидента"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Which response demonstrates the strongest professional judgement?",
+            "options": [
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D08",
+                "text": "The production outage meets the highest incident severity because it affects authentication across every customer-facing service.",
+                "is_correct": true
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D09",
+                "text": "Specialist standards can be ignored whenever a faster informal solution is available.",
+                "is_correct": false
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D10",
+                "text": "Responsibility should remain undocumented so that no individual or team can be held accountable.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct response uses precise C1 professional language and aligns action with evidence, standards, risk, and accountability."
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Сбой рабочей системы соответствует наивысшей критичности, поскольку затрагивает аутентификацию во всех клиентских сервисах.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "The production outage meets the highest incident severity because it affects authentication across every customer-facing service.",
+            "word_bank": [
+              "The",
+              "production",
+              "outage",
+              "meets",
+              "the",
+              "highest",
+              "incident",
+              "severity",
+              "because",
+              "it",
+              "affects",
+              "authentication",
+              "across",
+              "every",
+              "customer-facing",
+              "service",
+              "."
+            ]
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "The ___ meets the highest incident severity because it affects authentication across every customer-facing service.",
+            "correct_answer": "production outage",
+            "options": [
+              "production outage",
+              "containment measure",
+              "service restoration"
+            ]
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              ".",
+              "service",
+              "customer-facing",
+              "every",
+              "across",
+              "authentication",
+              "affects",
+              "it",
+              "because",
+              "severity",
+              "incident",
+              "highest",
+              "the",
+              "meets",
+              "outage",
+              "production",
+              "The"
+            ],
+            "correct_words": [
+              "The",
+              "production",
+              "outage",
+              "meets",
+              "the",
+              "highest",
+              "incident",
+              "severity",
+              "because",
+              "it",
+              "affects",
+              "authentication",
+              "across",
+              "every",
+              "customer-facing",
+              "service",
+              "."
+            ]
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "The production outage meets the highest incident severity because it affects authentication across every customer-facing service. The immediate response must remain proportionate to the evidence while preserving safety, professional accountability, and a reliable record of the decision.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "The production outage meets the highest incident severity because it affects authentication across every customer-facing service. The immediate response must remain proportionate to the evidence while preserving safety, professional accountability, and a reliable record of the decision. Where uncertainty remains, the decision-maker should state its limits explicitly and define the threshold for specialist review or escalation.",
+            "language": "en",
+            "min_accuracy": 0.86,
+            "translation_hint": "Сбой рабочей системы соответствует наивысшей критичности, поскольку затрагивает аутентификацию во всех клиентских сервисах. Немедленная реакция должна быть соразмерна доказательствам, сохраняя безопасность, профессиональную ответственность и надёжную фиксацию решения. При сохранении неопределённости лицо, принимающее решение, должно прямо обозначить её пределы и определить порог для проверки специалистом или эскалации."
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Triaging a Production Incident",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Specialist",
+                "text": "The production outage meets the highest incident severity because it affects authentication across every customer-facing service.",
+                "translation": "Сбой рабочей системы соответствует наивысшей критичности, поскольку затрагивает аутентификацию во всех клиентских сервисах."
+              },
+              {
+                "type": "dialogue",
+                "character": "Colleague",
+                "text": "What professional standard, risk, or uncertainty should govern the next decision?",
+                "translation": "Какой профессиональный стандарт, риск или неопределённость должны определять следующее решение?"
+              },
+              {
+                "type": "choice",
+                "text": "Which response advances the professional discussion?",
+                "options": [
+                  {
+                    "text": "We should state the evidential limits, follow the relevant standard, and assign accountable ownership for review and escalation.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "We should bypass the standard, avoid documenting uncertainty, and decide without specialist input.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "production outage",
+            "language": "en",
+            "options": [
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D11",
+                "text": "a loss of availability in a live technical service",
+                "is_correct": true
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D12",
+                "text": "the classification of operational impact and urgency",
+                "is_correct": false
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D13",
+                "text": "the route used to gain unauthorised access",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“production outage” means a loss of availability in a live technical service."
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "The ___ meets the highest incident severity because it affects authentication across every customer-facing service.",
+            "audio_text": "The production outage meets the highest incident severity because it affects authentication across every customer-facing service.",
+            "language": "en",
+            "options": [
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D14",
+                "audio_text": "production outage",
+                "is_correct": true
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D15",
+                "audio_text": "attack vector",
+                "is_correct": false
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D16",
+                "audio_text": "data exfiltration",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing professional term is “production outage”."
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "The ___ meets the highest incident severity because it affects authentication across every customer-facing service.",
+            "correct_answer": "production outage",
+            "hint_prefix": "prod",
+            "explanation": "The complete professional statement uses “production outage” precisely."
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D17",
+                "audio_text": "production outage",
+                "text": "production outage"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D18",
+                "audio_text": "incident severity",
+                "text": "incident severity"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D19",
+                "audio_text": "attack vector",
+                "text": "attack vector"
+              }
+            ],
+            "explanation": "Match each specialist C1 term you hear with its written form."
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Senior professional",
+                "text": "What action would you recommend for “Triaging a Production Incident”?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D20",
+                "text": "The production outage meets the highest incident severity because it affects authentication across every customer-facing service.",
+                "is_correct": true
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D21",
+                "text": "Professional evidence and sector standards are unnecessary when an intuitive answer is available.",
+                "is_correct": false
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L1_D22",
+                "text": "I would leave risk, documentation, and accountability undefined until the problem resolves itself.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct response demonstrates advanced C1 workplace judgement through specialist precision, risk awareness, and accountable action."
+          }
+        }
+      ]
+    },
+    {
+      "code": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2",
+      "order": 2,
+      "title": {
+        "ru": "Профессиональное решение и взаимодействие",
+        "en": "Containing a Security Breach"
+      },
+      "objective": {
+        "ru": "Уверенно выполнять сложную профессиональную задачу уровня C1, точно используя отраслевую терминологию, оценивая риски и ясно распределяя ответственность.",
+        "en": "Handle a complex C1 professional task confidently by using sector-specific terminology precisely, evaluating risk, and establishing clear accountability."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D01",
+                "left": "production outage",
+                "right": "сбой рабочей системы"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D02",
+                "left": "incident severity",
+                "right": "критичность инцидента"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D03",
+                "left": "attack vector",
+                "right": "вектор атаки"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D04",
+                "left": "containment measure",
+                "right": "мера сдерживания"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D05",
+                "left": "data exfiltration",
+                "right": "несанкционированный вывод данных"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D06",
+                "left": "service restoration",
+                "right": "восстановление сервиса"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D07",
+                "left": "post-incident review",
+                "right": "разбор после инцидента"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Which response demonstrates the strongest professional judgement?",
+            "options": [
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D08",
+                "text": "The immediate containment measure blocks the suspected attack vector while preserving evidence needed to assess possible data exfiltration.",
+                "is_correct": true
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D09",
+                "text": "Specialist standards can be ignored whenever a faster informal solution is available.",
+                "is_correct": false
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D10",
+                "text": "Responsibility should remain undocumented so that no individual or team can be held accountable.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct response uses precise C1 professional language and aligns action with evidence, standards, risk, and accountability."
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Немедленная мера сдерживания блокирует предполагаемый вектор атаки, сохраняя доказательства для оценки возможного вывода данных.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "The immediate containment measure blocks the suspected attack vector while preserving evidence needed to assess possible data exfiltration.",
+            "word_bank": [
+              "The",
+              "immediate",
+              "containment",
+              "measure",
+              "blocks",
+              "the",
+              "suspected",
+              "attack",
+              "vector",
+              "while",
+              "preserving",
+              "evidence",
+              "needed",
+              "to",
+              "assess",
+              "possible",
+              "data",
+              "exfiltration",
+              "."
+            ]
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "The immediate containment measure blocks the suspected attack vector while preserving evidence needed to assess possible data exfiltration.",
+            "correct_answer": "incident severity",
+            "options": [
+              "incident severity",
+              "data exfiltration",
+              "post-incident review"
+            ]
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              ".",
+              "exfiltration",
+              "data",
+              "possible",
+              "assess",
+              "to",
+              "needed",
+              "evidence",
+              "preserving",
+              "while",
+              "vector",
+              "attack",
+              "suspected",
+              "the",
+              "blocks",
+              "measure",
+              "containment",
+              "immediate",
+              "The"
+            ],
+            "correct_words": [
+              "The",
+              "immediate",
+              "containment",
+              "measure",
+              "blocks",
+              "the",
+              "suspected",
+              "attack",
+              "vector",
+              "while",
+              "preserving",
+              "evidence",
+              "needed",
+              "to",
+              "assess",
+              "possible",
+              "data",
+              "exfiltration",
+              "."
+            ]
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "The immediate containment measure blocks the suspected attack vector while preserving evidence needed to assess possible data exfiltration. The immediate response must remain proportionate to the evidence while preserving safety, professional accountability, and a reliable record of the decision.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "The immediate containment measure blocks the suspected attack vector while preserving evidence needed to assess possible data exfiltration. The immediate response must remain proportionate to the evidence while preserving safety, professional accountability, and a reliable record of the decision. Where uncertainty remains, the decision-maker should state its limits explicitly and define the threshold for specialist review or escalation.",
+            "language": "en",
+            "min_accuracy": 0.86,
+            "translation_hint": "Немедленная мера сдерживания блокирует предполагаемый вектор атаки, сохраняя доказательства для оценки возможного вывода данных. Немедленная реакция должна быть соразмерна доказательствам, сохраняя безопасность, профессиональную ответственность и надёжную фиксацию решения. При сохранении неопределённости лицо, принимающее решение, должно прямо обозначить её пределы и определить порог для проверки специалистом или эскалации."
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Containing a Security Breach",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Specialist",
+                "text": "The immediate containment measure blocks the suspected attack vector while preserving evidence needed to assess possible data exfiltration.",
+                "translation": "Немедленная мера сдерживания блокирует предполагаемый вектор атаки, сохраняя доказательства для оценки возможного вывода данных."
+              },
+              {
+                "type": "dialogue",
+                "character": "Colleague",
+                "text": "What professional standard, risk, or uncertainty should govern the next decision?",
+                "translation": "Какой профессиональный стандарт, риск или неопределённость должны определять следующее решение?"
+              },
+              {
+                "type": "choice",
+                "text": "Which response advances the professional discussion?",
+                "options": [
+                  {
+                    "text": "We should state the evidential limits, follow the relevant standard, and assign accountable ownership for review and escalation.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "We should bypass the standard, avoid documenting uncertainty, and decide without specialist input.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "incident severity",
+            "language": "en",
+            "options": [
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D11",
+                "text": "the classification of operational impact and urgency",
+                "is_correct": true
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D12",
+                "text": "the route used to gain unauthorised access",
+                "is_correct": false
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D13",
+                "text": "an action limiting the spread or impact of an incident",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“incident severity” means the classification of operational impact and urgency."
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "The immediate containment measure blocks the suspected attack vector while preserving evidence needed to assess possible data exfiltration.",
+            "audio_text": "The immediate containment measure blocks the suspected attack vector while preserving evidence needed to assess possible data exfiltration.",
+            "language": "en",
+            "options": [
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D14",
+                "audio_text": "incident severity",
+                "is_correct": true
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D15",
+                "audio_text": "containment measure",
+                "is_correct": false
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D16",
+                "audio_text": "service restoration",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing professional term is “incident severity”."
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "The immediate containment measure blocks the suspected attack vector while preserving evidence needed to assess possible data exfiltration.",
+            "correct_answer": "incident severity",
+            "hint_prefix": "inci",
+            "explanation": "The complete professional statement uses “incident severity” precisely."
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D17",
+                "audio_text": "production outage",
+                "text": "production outage"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D18",
+                "audio_text": "incident severity",
+                "text": "incident severity"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D19",
+                "audio_text": "attack vector",
+                "text": "attack vector"
+              }
+            ],
+            "explanation": "Match each specialist C1 term you hear with its written form."
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Senior professional",
+                "text": "What action would you recommend for “Containing a Security Breach”?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D20",
+                "text": "The immediate containment measure blocks the suspected attack vector while preserving evidence needed to assess possible data exfiltration.",
+                "is_correct": true
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D21",
+                "text": "Professional evidence and sector standards are unnecessary when an intuitive answer is available.",
+                "is_correct": false
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L2_D22",
+                "text": "I would leave risk, documentation, and accountability undefined until the problem resolves itself.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct response demonstrates advanced C1 workplace judgement through specialist precision, risk awareness, and accountable action."
+          }
+        }
+      ]
+    },
+    {
+      "code": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3",
+      "order": 3,
+      "title": {
+        "ru": "Ответственность и последующие действия",
+        "en": "Leading a Post-Incident Review"
+      },
+      "objective": {
+        "ru": "Уверенно выполнять сложную профессиональную задачу уровня C1, точно используя отраслевую терминологию, оценивая риски и ясно распределяя ответственность.",
+        "en": "Handle a complex C1 professional task confidently by using sector-specific terminology precisely, evaluating risk, and establishing clear accountability."
+      },
+      "estimated_seconds": 415,
+      "steps": [
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_MATCH_PAIRS",
+          "order": 1,
+          "type": "match_pairs",
+          "title": {
+            "ru": "Соедините пары",
+            "en": "Match the pairs"
+          },
+          "instructions": {
+            "ru": "Соедините английские слова с переводом.",
+            "en": "Match the English words with their translations."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "pairs": [
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D01",
+                "left": "production outage",
+                "right": "сбой рабочей системы"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D02",
+                "left": "incident severity",
+                "right": "критичность инцидента"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D03",
+                "left": "attack vector",
+                "right": "вектор атаки"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D04",
+                "left": "containment measure",
+                "right": "мера сдерживания"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D05",
+                "left": "data exfiltration",
+                "right": "несанкционированный вывод данных"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D06",
+                "left": "service restoration",
+                "right": "восстановление сервиса"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D07",
+                "left": "post-incident review",
+                "right": "разбор после инцидента"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_QUIZ",
+          "order": 2,
+          "type": "quiz",
+          "title": {
+            "ru": "Проверьте себя",
+            "en": "Check yourself"
+          },
+          "instructions": {
+            "ru": "Выберите правильный ответ.",
+            "en": "Choose the correct answer."
+          },
+          "estimated_seconds": 20,
+          "data": {
+            "question": "Which response demonstrates the strongest professional judgement?",
+            "options": [
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D08",
+                "text": "Service restoration is only the first objective; the post-incident review must identify control failures and assign measurable preventive action.",
+                "is_correct": true
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D09",
+                "text": "Specialist standards can be ignored whenever a faster informal solution is available.",
+                "is_correct": false
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D10",
+                "text": "Responsibility should remain undocumented so that no individual or team can be held accountable.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct response uses precise C1 professional language and aligns action with evidence, standards, risk, and accountability."
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_TRANSLATE",
+          "order": 3,
+          "type": "translate",
+          "title": {
+            "ru": "Переведите",
+            "en": "Translate"
+          },
+          "instructions": {
+            "ru": "Соберите перевод.",
+            "en": "Build the translation."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "source_text": "Восстановление сервиса — лишь первая цель; разбор после инцидента должен выявить сбои контроля и назначить измеримые профилактические действия.",
+            "source_language": "ru",
+            "target_language": "en",
+            "correct_translation": "Service restoration is only the first objective; the post-incident review must identify control failures and assign measurable preventive action.",
+            "word_bank": [
+              "Service",
+              "restoration",
+              "is",
+              "only",
+              "the",
+              "first",
+              "objective",
+              ";",
+              "the",
+              "post-incident",
+              "review",
+              "must",
+              "identify",
+              "control",
+              "failures",
+              "and",
+              "assign",
+              "measurable",
+              "preventive",
+              "action",
+              "."
+            ]
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_FILL_BLANK",
+          "order": 4,
+          "type": "fill_blank",
+          "title": {
+            "ru": "Заполните пропуск",
+            "en": "Fill the blank"
+          },
+          "instructions": {
+            "ru": "Выберите подходящее слово.",
+            "en": "Choose the word that fits."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Service restoration is only the first objective; the post-incident review must identify control failures and assign measurable preventive action.",
+            "correct_answer": "attack vector",
+            "options": [
+              "attack vector",
+              "service restoration",
+              "production outage"
+            ]
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_TAP_WORDS",
+          "order": 5,
+          "type": "tap_words",
+          "title": {
+            "ru": "Соберите фразу",
+            "en": "Build the phrase"
+          },
+          "instructions": {
+            "ru": "Расставьте слова в правильном порядке.",
+            "en": "Put the words in the correct order."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word_bank": [
+              ".",
+              "action",
+              "preventive",
+              "measurable",
+              "assign",
+              "and",
+              "failures",
+              "control",
+              "identify",
+              "must",
+              "review",
+              "post-incident",
+              "the",
+              ";",
+              "objective",
+              "first",
+              "the",
+              "only",
+              "is",
+              "restoration",
+              "Service"
+            ],
+            "correct_words": [
+              "Service",
+              "restoration",
+              "is",
+              "only",
+              "the",
+              "first",
+              "objective",
+              ";",
+              "the",
+              "post-incident",
+              "review",
+              "must",
+              "identify",
+              "control",
+              "failures",
+              "and",
+              "assign",
+              "measurable",
+              "preventive",
+              "action",
+              "."
+            ]
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_LISTENING",
+          "order": 6,
+          "type": "listening",
+          "title": {
+            "ru": "Послушайте",
+            "en": "Listen"
+          },
+          "instructions": {
+            "ru": "Напишите услышанное.",
+            "en": "Type what you hear."
+          },
+          "estimated_seconds": 35,
+          "data": {
+            "audio_text": "Service restoration is only the first objective; the post-incident review must identify control failures and assign measurable preventive action. The immediate response must remain proportionate to the evidence while preserving safety, professional accountability, and a reliable record of the decision.",
+            "language": "en"
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_LISTENING_SHADOWING",
+          "order": 7,
+          "type": "listening_shadowing",
+          "title": {
+            "ru": "Повторите",
+            "en": "Repeat"
+          },
+          "instructions": {
+            "ru": "Запишите повтор.",
+            "en": "Record your repetition."
+          },
+          "estimated_seconds": 60,
+          "data": {
+            "audio_text": "Service restoration is only the first objective; the post-incident review must identify control failures and assign measurable preventive action. The immediate response must remain proportionate to the evidence while preserving safety, professional accountability, and a reliable record of the decision. Where uncertainty remains, the decision-maker should state its limits explicitly and define the threshold for specialist review or escalation.",
+            "language": "en",
+            "min_accuracy": 0.86,
+            "translation_hint": "Восстановление сервиса — лишь первая цель; разбор после инцидента должен выявить сбои контроля и назначить измеримые профилактические действия. Немедленная реакция должна быть соразмерна доказательствам, сохраняя безопасность, профессиональную ответственность и надёжную фиксацию решения. При сохранении неопределённости лицо, принимающее решение, должно прямо обозначить её пределы и определить порог для проверки специалистом или эскалации."
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_STORY",
+          "order": 8,
+          "type": "story",
+          "title": {
+            "ru": "История",
+            "en": "Story"
+          },
+          "instructions": {
+            "ru": "Прочитайте историю.",
+            "en": "Read the story."
+          },
+          "estimated_seconds": 40,
+          "data": {
+            "title": "Leading a Post-Incident Review",
+            "scenes": [
+              {
+                "type": "dialogue",
+                "character": "Specialist",
+                "text": "Service restoration is only the first objective; the post-incident review must identify control failures and assign measurable preventive action.",
+                "translation": "Восстановление сервиса — лишь первая цель; разбор после инцидента должен выявить сбои контроля и назначить измеримые профилактические действия."
+              },
+              {
+                "type": "dialogue",
+                "character": "Colleague",
+                "text": "What professional standard, risk, or uncertainty should govern the next decision?",
+                "translation": "Какой профессиональный стандарт, риск или неопределённость должны определять следующее решение?"
+              },
+              {
+                "type": "choice",
+                "text": "Which response advances the professional discussion?",
+                "options": [
+                  {
+                    "text": "We should state the evidential limits, follow the relevant standard, and assign accountable ownership for review and escalation.",
+                    "is_correct": true
+                  },
+                  {
+                    "text": "We should bypass the standard, avoid documenting uncertainty, and decide without specialist input.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_CHOOSE_DEFINITION",
+          "order": 9,
+          "type": "choose_definition",
+          "title": {
+            "ru": "Определение",
+            "en": "Definition"
+          },
+          "instructions": {
+            "ru": "Выберите значение.",
+            "en": "Choose the meaning."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "word": "attack vector",
+            "language": "en",
+            "options": [
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D11",
+                "text": "the route used to gain unauthorised access",
+                "is_correct": true
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D12",
+                "text": "an action limiting the spread or impact of an incident",
+                "is_correct": false
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D13",
+                "text": "unauthorised transfer of data from a system",
+                "is_correct": false
+              }
+            ],
+            "explanation": "“attack vector” means the route used to gain unauthorised access."
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_LISTEN_CHOOSE_WORD",
+          "order": 10,
+          "type": "listen_choose_word",
+          "title": {
+            "ru": "Слово",
+            "en": "Word"
+          },
+          "instructions": {
+            "ru": "Слушайте.",
+            "en": "Listen."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "sentence_template": "Service restoration is only the first objective; the post-incident review must identify control failures and assign measurable preventive action.",
+            "audio_text": "Service restoration is only the first objective; the post-incident review must identify control failures and assign measurable preventive action.",
+            "language": "en",
+            "options": [
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D14",
+                "audio_text": "attack vector",
+                "is_correct": true
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D15",
+                "audio_text": "data exfiltration",
+                "is_correct": false
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D16",
+                "audio_text": "post-incident review",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The missing professional term is “attack vector”."
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_MISSING_WORD",
+          "order": 11,
+          "type": "missing_word",
+          "title": {
+            "ru": "Впишите",
+            "en": "Type"
+          },
+          "instructions": {
+            "ru": "Впишите пропущенное слово по подсказке.",
+            "en": "Type the missing word using the hint."
+          },
+          "estimated_seconds": 25,
+          "data": {
+            "sentence_template": "Service restoration is only the first objective; the post-incident review must identify control failures and assign measurable preventive action.",
+            "correct_answer": "attack vector",
+            "hint_prefix": "atta",
+            "explanation": "The complete professional statement uses “attack vector” precisely."
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_MATCH_PAIRS_VOICE",
+          "order": 12,
+          "type": "match_pairs_voice",
+          "title": {
+            "ru": "Звук",
+            "en": "Sound"
+          },
+          "instructions": {
+            "ru": "Соедините звук.",
+            "en": "Match the sound."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "language": "en",
+            "pairs": [
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D17",
+                "audio_text": "production outage",
+                "text": "production outage"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D18",
+                "audio_text": "incident severity",
+                "text": "incident severity"
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D19",
+                "audio_text": "attack vector",
+                "text": "attack vector"
+              }
+            ],
+            "explanation": "Match each specialist C1 term you hear with its written form."
+          }
+        },
+        {
+          "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_COMPLETE_CHAT",
+          "order": 13,
+          "type": "complete_chat",
+          "title": {
+            "ru": "Диалог",
+            "en": "Chat"
+          },
+          "instructions": {
+            "ru": "Ответьте.",
+            "en": "Reply."
+          },
+          "estimated_seconds": 30,
+          "data": {
+            "dialogue": [
+              {
+                "speaker": "Senior professional",
+                "text": "What action would you recommend for “Leading a Post-Incident Review”?"
+              }
+            ],
+            "answer_speaker": "You",
+            "options": [
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D20",
+                "text": "Service restoration is only the first objective; the post-incident review must identify control failures and assign measurable preventive action.",
+                "is_correct": true
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D21",
+                "text": "Professional evidence and sector standards are unnecessary when an intuitive answer is available.",
+                "is_correct": false
+              },
+              {
+                "id": "C1_WORK_TECHNOLOGY_INCIDENT_RESPONSE_AND_CYBERSECURITY_L3_D22",
+                "text": "I would leave risk, documentation, and accountability undefined until the problem resolves itself.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct response demonstrates advanced C1 workplace judgement through specialist precision, risk awareness, and accountable action."
+          }
+        }
+      ]
+    }
+  ]
+}
