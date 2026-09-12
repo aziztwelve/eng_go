@@ -21,7 +21,7 @@ func Logger() gin.HandlerFunc {
 		latency := time.Since(start)
 		statusCode := c.Writer.Status()
 
-		logger.Info(c.Request.Context(), "HTTP request",
+		fields := []zap.Field{
 			zap.String("method", c.Request.Method),
 			zap.String("path", path),
 			zap.String("query", query),
@@ -29,6 +29,12 @@ func Logger() gin.HandlerFunc {
 			zap.Duration("latency", latency),
 			zap.String("ip", c.ClientIP()),
 			zap.String("user_agent", c.Request.UserAgent()),
-		)
+		}
+		// Версия мобильного приложения (X-App-Version с APK >= 1.0.4).
+		// По ней считаем adoption старых версий перед удалением compat-шим.
+		if v := c.GetHeader("X-App-Version"); v != "" {
+			fields = append(fields, zap.String("app_version", v))
+		}
+		logger.Info(c.Request.Context(), "HTTP request", fields...)
 	}
 }
