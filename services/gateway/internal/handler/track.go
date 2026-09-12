@@ -38,10 +38,20 @@ func NewTrackHandler(courseClient *client.CourseClient, userClient *client.UserC
 // Цель намеренно не подставляется: каталог показывает все цели для уровня
 // пользователя, а не только выбранную на onboarding.
 func (h *TrackHandler) ListTracks(c *gin.Context) {
+	// Заглушка для опубликованного APK: приложение запрашивает limit=100,
+	// а каталог вырос до 350 треков (5 уровней x 70). Карточки уровней в
+	// Practice считают треки из первого запроса, поэтому малые лимиты
+	// обрезают каталог и уровни показывают "Coming soon". Поднимаем любой
+	// лимит < 500 до 500. TODO: убрать после релиза APK с limit=500.
+	listLimit := parseIntQuery(c, "limit", 20)
+	if listLimit > 0 && listLimit < 500 {
+		listLimit = 500
+	}
+
 	req := &coursev1.ListTracksRequest{
 		Search:             c.Query("search"),
 		IncludeUnpublished: false,
-		Limit:              parseIntQuery(c, "limit", 20),
+		Limit:              listLimit,
 		Offset:             parseIntQuery(c, "offset", 0),
 	}
 
