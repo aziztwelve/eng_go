@@ -1,6 +1,6 @@
 # Vocabulary Bank — data foundation and learner interface
 
-**Status:** Planned
+**Status:** Step 1 complete
 **Owner:** Mobile + backend
 **Source data:** LingoIQ Vocabulary System, 15-stage programmer package, and CEFR A1–C1 JSON batches.
 
@@ -91,20 +91,23 @@ the date, pull request/commit and a short verification result.
 
 ### Step 1 — Content model and import foundation
 
-- [ ] Create `vocabulary_bank_words` as the new canonical shared-word table;
+- [x] Create `vocabulary_bank_words` as the new canonical shared-word table;
   keep `courses.vocabulary` unchanged for legacy lessons.
-- [ ] Create tables for translations, question sets, activities and immutable
+- [x] Create tables for translations, question sets, activities and immutable
   import reports, all linked to the Word Bank word ID.
-- [ ] Make `external_id` from the source JSON unique and use it as the
+- [x] Make `external_id` from the source JSON unique and use it as the
   idempotent upsert key.
-- [ ] Add a versioned importer that reads a selected JSON batch and stores the
+- [x] Add a versioned importer that reads a selected JSON batch and stores the
   word first, then its related content by the saved word ID.
-- [ ] Validate: JSON schema, 500 entries per batch, unique external IDs and
+- [x] Validate: JSON schema, 500 entries per batch, unique external IDs and
   exactly 15 ordered activities per entry.
-- [ ] Persist checksum, created/updated/skipped counts and validation errors in
+- [x] Persist checksum, created/updated/skipped counts and validation errors in
   an import report; unchanged files must be no-ops.
 
-**Completion record:** _not started_
+**Completion record:** 2026-09-19, commit `1649123` — course-service tests and
+full build passed; dry-run accepted a real 500-entry B2 batch. The migration was
+applied on the server; all five Vocabulary Bank tables were verified and the
+public health check passed.
 
 ### Step 2 — Backend learner APIs and translations
 
