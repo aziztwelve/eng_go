@@ -155,6 +155,9 @@ func (a *App) initRouter(ctx context.Context) error {
 		ttsHandler := handler.NewTTSHandler(a.diContainer.CourseClient(ctx))
 		v1.GET("/vocabulary", vocabHandler.List)
 		v1.GET("/vocabulary/:id", vocabHandler.Get)
+		vocabularyBankHandler := handler.NewVocabularyBankHandler(a.diContainer.CourseClient(ctx))
+		v1.GET("/vocabulary-bank", vocabularyBankHandler.List)
+		v1.GET("/vocabulary-bank/:externalId", vocabularyBankHandler.Get)
 		v1.GET("/tts/by-text", ttsHandler.GetByText)
 
 		protected := v1.Group("")

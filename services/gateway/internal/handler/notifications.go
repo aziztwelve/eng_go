@@ -27,13 +27,13 @@ func NewNotificationsHandler(n *client.NotificationsClient) *NotificationsHandle
 
 // registerDeviceRequest — POST /api/v1/notifications/devices body.
 type registerDeviceRequest struct {
-	Platform  string `json:"platform"  binding:"required"` // web | expo | ios | android
-	Token     string `json:"token"     binding:"required"`
+	Platform string `json:"platform"  binding:"required"` // web | expo | ios | android
+	Token    string `json:"token"     binding:"required"`
 
 	// Web Push специфика — обязательны если platform=web.
-	Endpoint  string `json:"endpoint,omitempty"`
-	P256DH    string `json:"p256dh,omitempty"`
-	Auth      string `json:"auth,omitempty"`
+	Endpoint string `json:"endpoint,omitempty"`
+	P256DH   string `json:"p256dh,omitempty"`
+	Auth     string `json:"auth,omitempty"`
 
 	UserAgent string `json:"user_agent,omitempty"`
 	Locale    string `json:"locale,omitempty"`

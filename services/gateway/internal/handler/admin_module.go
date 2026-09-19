@@ -27,13 +27,13 @@ func NewAdminModuleHandler(courseClient *client.CourseClient) *AdminModuleHandle
 // CreateModule создает новый модуль
 func (h *AdminModuleHandler) CreateModule(c *gin.Context) {
 	courseID := c.Param("courseId")
-	
+
 	var req struct {
 		Title       string `json:"title" binding:"required"`
 		Description string `json:"description"`
 		OrderIndex  int32  `json:"order_index"`
 	}
-	
+
 	if err := c.ShouldBindJSON(&req); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"error": "Invalid request body",
@@ -69,13 +69,13 @@ func (h *AdminModuleHandler) CreateModule(c *gin.Context) {
 // UpdateModule обновляет модуль
 func (h *AdminModuleHandler) UpdateModule(c *gin.Context) {
 	moduleID := c.Param("moduleId")
-	
+
 	var req struct {
 		Title       string `json:"title"`
 		Description string `json:"description"`
 		OrderIndex  int32  `json:"order_index"`
 	}
-	
+
 	if err := c.ShouldBindJSON(&req); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"error": "Invalid request body",

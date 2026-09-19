@@ -27,13 +27,13 @@ func NewAdminLessonHandler(courseClient *client.CourseClient) *AdminLessonHandle
 // CreateLesson создает новый урок
 func (h *AdminLessonHandler) CreateLesson(c *gin.Context) {
 	moduleID := c.Param("moduleId")
-	
+
 	var req struct {
 		Title       string `json:"title" binding:"required"`
 		Description string `json:"description"`
 		OrderIndex  int32  `json:"order_index"`
 	}
-	
+
 	if err := c.ShouldBindJSON(&req); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"error": "Invalid request body",
@@ -69,13 +69,13 @@ func (h *AdminLessonHandler) CreateLesson(c *gin.Context) {
 // UpdateLesson обновляет урок
 func (h *AdminLessonHandler) UpdateLesson(c *gin.Context) {
 	lessonID := c.Param("lessonId")
-	
+
 	var req struct {
 		Title       string `json:"title"`
 		Description string `json:"description"`
 		OrderIndex  int32  `json:"order_index"`
 	}
-	
+
 	if err := c.ShouldBindJSON(&req); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"error": "Invalid request body",

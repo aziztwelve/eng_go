@@ -598,10 +598,11 @@ func beginSSE(c *gin.Context) (*backpressureWriter, *http.ResponseController, bo
 // CheckPronunciation POST /api/v1/ai/pronunciation/check (multipart/form-data).
 //
 // Поля:
-//   audio (file, обязательно)
-//   target_text
-//   language
-//   step_id (optional)
+//
+//	audio (file, обязательно)
+//	target_text
+//	language
+//	step_id (optional)
 func (h *AIHandler) CheckPronunciation(c *gin.Context) {
 	userID, ok := getUserID(c)
 	if !ok {

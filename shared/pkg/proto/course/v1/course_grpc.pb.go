@@ -62,6 +62,8 @@ const (
 	CourseService_UpdateVocabularyEntry_FullMethodName          = "/course.v1.CourseService/UpdateVocabularyEntry"
 	CourseService_DeleteVocabularyEntry_FullMethodName          = "/course.v1.CourseService/DeleteVocabularyEntry"
 	CourseService_BulkCreateVocabulary_FullMethodName           = "/course.v1.CourseService/BulkCreateVocabulary"
+	CourseService_ListVocabularyBankWords_FullMethodName        = "/course.v1.CourseService/ListVocabularyBankWords"
+	CourseService_GetVocabularyBankWord_FullMethodName          = "/course.v1.CourseService/GetVocabularyBankWord"
 	CourseService_SynthesizeTTS_FullMethodName                  = "/course.v1.CourseService/SynthesizeTTS"
 	CourseService_GetTTSByText_FullMethodName                   = "/course.v1.CourseService/GetTTSByText"
 	CourseService_ListFlashcards_FullMethodName                 = "/course.v1.CourseService/ListFlashcards"
@@ -170,6 +172,11 @@ type CourseServiceClient interface {
 	UpdateVocabularyEntry(ctx context.Context, in *UpdateVocabularyEntryRequest, opts ...grpc.CallOption) (*UpdateVocabularyEntryResponse, error)
 	DeleteVocabularyEntry(ctx context.Context, in *DeleteVocabularyEntryRequest, opts ...grpc.CallOption) (*DeleteVocabularyEntryResponse, error)
 	BulkCreateVocabulary(ctx context.Context, in *BulkCreateVocabularyRequest, opts ...grpc.CallOption) (*BulkCreateVocabularyResponse, error)
+	// === Vocabulary Bank ===
+	// Canonical imported 15-step LingoIQ content. This is deliberately separate
+	// from the legacy Vocabulary RPCs above and from personal flashcards.
+	ListVocabularyBankWords(ctx context.Context, in *ListVocabularyBankWordsRequest, opts ...grpc.CallOption) (*ListVocabularyBankWordsResponse, error)
+	GetVocabularyBankWord(ctx context.Context, in *GetVocabularyBankWordRequest, opts ...grpc.CallOption) (*GetVocabularyBankWordResponse, error)
 	// === TTS (Phase 2 — stub) ===
 	// На phase-2 SynthesizeTTS сохраняет переданный audio_url в кэш
 	// (без вызова TTS-провайдера). GetTTSByText читает из кэша.
@@ -635,6 +642,26 @@ func (c *courseServiceClient) BulkCreateVocabulary(ctx context.Context, in *Bulk
 	return out, nil
 }
 
+func (c *courseServiceClient) ListVocabularyBankWords(ctx context.Context, in *ListVocabularyBankWordsRequest, opts ...grpc.CallOption) (*ListVocabularyBankWordsResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ListVocabularyBankWordsResponse)
+	err := c.cc.Invoke(ctx, CourseService_ListVocabularyBankWords_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *courseServiceClient) GetVocabularyBankWord(ctx context.Context, in *GetVocabularyBankWordRequest, opts ...grpc.CallOption) (*GetVocabularyBankWordResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(GetVocabularyBankWordResponse)
+	err := c.cc.Invoke(ctx, CourseService_GetVocabularyBankWord_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *courseServiceClient) SynthesizeTTS(ctx context.Context, in *SynthesizeTTSRequest, opts ...grpc.CallOption) (*SynthesizeTTSResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SynthesizeTTSResponse)
@@ -876,6 +903,11 @@ type CourseServiceServer interface {
 	UpdateVocabularyEntry(context.Context, *UpdateVocabularyEntryRequest) (*UpdateVocabularyEntryResponse, error)
 	DeleteVocabularyEntry(context.Context, *DeleteVocabularyEntryRequest) (*DeleteVocabularyEntryResponse, error)
 	BulkCreateVocabulary(context.Context, *BulkCreateVocabularyRequest) (*BulkCreateVocabularyResponse, error)
+	// === Vocabulary Bank ===
+	// Canonical imported 15-step LingoIQ content. This is deliberately separate
+	// from the legacy Vocabulary RPCs above and from personal flashcards.
+	ListVocabularyBankWords(context.Context, *ListVocabularyBankWordsRequest) (*ListVocabularyBankWordsResponse, error)
+	GetVocabularyBankWord(context.Context, *GetVocabularyBankWordRequest) (*GetVocabularyBankWordResponse, error)
 	// === TTS (Phase 2 — stub) ===
 	// На phase-2 SynthesizeTTS сохраняет переданный audio_url в кэш
 	// (без вызова TTS-провайдера). GetTTSByText читает из кэша.
@@ -1039,6 +1071,12 @@ func (UnimplementedCourseServiceServer) DeleteVocabularyEntry(context.Context, *
 }
 func (UnimplementedCourseServiceServer) BulkCreateVocabulary(context.Context, *BulkCreateVocabularyRequest) (*BulkCreateVocabularyResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method BulkCreateVocabulary not implemented")
+}
+func (UnimplementedCourseServiceServer) ListVocabularyBankWords(context.Context, *ListVocabularyBankWordsRequest) (*ListVocabularyBankWordsResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method ListVocabularyBankWords not implemented")
+}
+func (UnimplementedCourseServiceServer) GetVocabularyBankWord(context.Context, *GetVocabularyBankWordRequest) (*GetVocabularyBankWordResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method GetVocabularyBankWord not implemented")
 }
 func (UnimplementedCourseServiceServer) SynthesizeTTS(context.Context, *SynthesizeTTSRequest) (*SynthesizeTTSResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method SynthesizeTTS not implemented")
@@ -1880,6 +1918,42 @@ func _CourseService_BulkCreateVocabulary_Handler(srv interface{}, ctx context.Co
 	return interceptor(ctx, in, info, handler)
 }
 
+func _CourseService_ListVocabularyBankWords_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListVocabularyBankWordsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).ListVocabularyBankWords(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_ListVocabularyBankWords_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).ListVocabularyBankWords(ctx, req.(*ListVocabularyBankWordsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CourseService_GetVocabularyBankWord_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetVocabularyBankWordRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).GetVocabularyBankWord(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_GetVocabularyBankWord_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).GetVocabularyBankWord(ctx, req.(*GetVocabularyBankWordRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _CourseService_SynthesizeTTS_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SynthesizeTTSRequest)
 	if err := dec(in); err != nil {
@@ -2328,6 +2402,14 @@ var CourseService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "BulkCreateVocabulary",
 			Handler:    _CourseService_BulkCreateVocabulary_Handler,
+		},
+		{
+			MethodName: "ListVocabularyBankWords",
+			Handler:    _CourseService_ListVocabularyBankWords_Handler,
+		},
+		{
+			MethodName: "GetVocabularyBankWord",
+			Handler:    _CourseService_GetVocabularyBankWord_Handler,
 		},
 		{
 			MethodName: "SynthesizeTTS",

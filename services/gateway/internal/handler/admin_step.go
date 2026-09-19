@@ -27,14 +27,14 @@ func NewAdminStepHandler(courseClient *client.CourseClient) *AdminStepHandler {
 // CreateStep создает новый шаг
 func (h *AdminStepHandler) CreateStep(c *gin.Context) {
 	lessonID := c.Param("lessonId")
-	
+
 	var req struct {
 		Type       string `json:"type" binding:"required"`
 		Title      string `json:"title" binding:"required"`
 		Content    string `json:"content"`
 		OrderIndex int32  `json:"order_index"`
 	}
-	
+
 	if err := c.ShouldBindJSON(&req); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"error": "Invalid request body",
@@ -72,14 +72,14 @@ func (h *AdminStepHandler) CreateStep(c *gin.Context) {
 // UpdateStep обновляет шаг
 func (h *AdminStepHandler) UpdateStep(c *gin.Context) {
 	stepID := c.Param("stepId")
-	
+
 	var req struct {
 		Type       string `json:"type"`
 		Title      string `json:"title"`
 		Content    string `json:"content"`
 		OrderIndex int32  `json:"order_index"`
 	}
-	
+
 	if err := c.ShouldBindJSON(&req); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"error": "Invalid request body",

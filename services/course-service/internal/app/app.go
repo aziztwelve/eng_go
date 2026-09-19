@@ -73,6 +73,7 @@ func New(ctx context.Context) (*App, error) {
 	progressRepo := postgresrepo.NewProgressRepository(pool)
 	trackRepo := postgresrepo.NewTrackRepository(pool)
 	vocabRepo := postgresrepo.NewVocabularyRepository(pool)
+	vocabBankRepo := postgresrepo.NewVocabularyBankRepository(pool)
 	ttsRepo := postgresrepo.NewTTSRepository(pool)
 	flashcardRepo := postgresrepo.NewFlashcardRepository(pool)
 	todayQueueRepo := postgresrepo.NewTodayQueueRepository(pool)
@@ -127,13 +128,14 @@ func New(ctx context.Context) (*App, error) {
 	enrollmentService := service.NewEnrollmentService(enrollmentRepo)
 	progressService := service.NewProgressService(progressRepo, courseRepo, enrollmentRepo, gamificationClient, srsClient)
 	vocabService := service.NewVocabularyService(vocabRepo)
+	vocabBankService := service.NewVocabularyBankService(vocabBankRepo)
 	ttsService := service.NewTTSService(ttsRepo)
 	flashcardService := service.NewFlashcardService(flashcardRepo, vocabRepo)
 	trackService := service.NewTrackService(trackRepo, flashcardService, vocabService)
 	todayQueueService := service.NewTodayQueueService(todayQueueRepo)
 
 	// Инициализация gRPC API
-	courseAPI := v1.NewAPI(courseService, enrollmentService, progressService, trackService, vocabService, ttsService, flashcardService, todayQueueService)
+	courseAPI := v1.NewAPI(courseService, enrollmentService, progressService, trackService, vocabService, vocabBankService, ttsService, flashcardService, todayQueueService)
 
 	// Создание gRPC сервера
 	grpcServer := grpc.NewServer()

@@ -20,6 +20,7 @@ type api struct {
 	progressService   service.ProgressService
 	trackService      service.TrackService
 	vocabService      service.VocabularyService
+	vocabBankService  service.VocabularyBankService
 	ttsService        service.TTSService
 	flashcardService  service.FlashcardService
 	todayQueueService service.TodayQueueService
@@ -32,6 +33,7 @@ func NewAPI(
 	progressService service.ProgressService,
 	trackService service.TrackService,
 	vocabService service.VocabularyService,
+	vocabBankService service.VocabularyBankService,
 	ttsService service.TTSService,
 	flashcardService service.FlashcardService,
 	todayQueueService service.TodayQueueService,
@@ -42,6 +44,7 @@ func NewAPI(
 		progressService:   progressService,
 		trackService:      trackService,
 		vocabService:      vocabService,
+		vocabBankService:  vocabBankService,
 		ttsService:        ttsService,
 		flashcardService:  flashcardService,
 		todayQueueService: todayQueueService,

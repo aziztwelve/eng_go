@@ -449,7 +449,8 @@ func (h *FlashcardHandler) ListToday(c *gin.Context) {
 // === AI suggestions ===
 
 // Suggestions GET /api/v1/ai/flashcard-suggestions
-//   ?level=&goal=&pain_point=&target_language=&native_language=&count=&exclude_words=a,b
+//
+//	?level=&goal=&pain_point=&target_language=&native_language=&count=&exclude_words=a,b
 func (h *FlashcardHandler) Suggestions(c *gin.Context) {
 	userID, ok := getUserID(c)
 	if !ok {

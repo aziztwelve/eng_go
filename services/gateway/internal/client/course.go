@@ -251,6 +251,16 @@ func (c *CourseClient) BulkCreateVocabulary(ctx context.Context, req *coursev1.B
 	return c.client.BulkCreateVocabulary(ctx, req)
 }
 
+// === Vocabulary Bank ===
+
+func (c *CourseClient) ListVocabularyBankWords(ctx context.Context, req *coursev1.ListVocabularyBankWordsRequest) (*coursev1.ListVocabularyBankWordsResponse, error) {
+	return c.client.ListVocabularyBankWords(ctx, req)
+}
+
+func (c *CourseClient) GetVocabularyBankWord(ctx context.Context, req *coursev1.GetVocabularyBankWordRequest) (*coursev1.GetVocabularyBankWordResponse, error) {
+	return c.client.GetVocabularyBankWord(ctx, req)
+}
+
 // === Flashcards (Phase 7) ===
 
 func (c *CourseClient) ListFlashcards(ctx context.Context, req *coursev1.ListFlashcardsRequest) (*coursev1.ListFlashcardsResponse, error) {

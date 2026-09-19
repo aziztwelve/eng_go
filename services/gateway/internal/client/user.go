@@ -65,11 +65,6 @@ func (c *UserClient) PatchOnboardingState(ctx context.Context, req *userv1.Patch
 func (c *UserClient) CompleteOnboarding(ctx context.Context, req *userv1.CompleteOnboardingRequest) (*userv1.CompleteOnboardingResponse, error) {
 	return c.client.CompleteOnboarding(ctx, req)
 }
-
-
-
-
-
 // Close закрывает соединение
 func (c *UserClient) Close() error {
 	return c.conn.Close()

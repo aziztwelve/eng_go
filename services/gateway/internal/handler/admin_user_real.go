@@ -78,7 +78,7 @@ func (h *AdminUserRealHandler) ListUsers(c *gin.Context) {
 		profileResp, err := h.userClient.GetProfile(c.Request.Context(), &userv1.GetProfileRequest{
 			UserId: authUser.Id,
 		})
-		
+
 		fullName := ""
 		if err == nil && profileResp.Profile != nil {
 			firstName := ""
@@ -93,7 +93,7 @@ func (h *AdminUserRealHandler) ListUsers(c *gin.Context) {
 				fullName = firstName + " " + lastName
 			}
 		}
-		
+
 		users = append(users, dto.UserResponse{
 			ID:        authUser.Id,
 			Email:     authUser.Email,
@@ -146,7 +146,7 @@ func (h *AdminUserRealHandler) GetUser(c *gin.Context) {
 	profileResp, err := h.userClient.GetProfile(c.Request.Context(), &userv1.GetProfileRequest{
 		UserId: userID,
 	})
-	
+
 	fullName := ""
 	if err == nil && profileResp.Profile != nil {
 		firstName := ""
@@ -215,7 +215,7 @@ func (h *AdminUserRealHandler) UpdateUser(c *gin.Context) {
 	if len(parts) > 1 {
 		lastName = parts[1]
 	}
-	
+
 	_, _ = h.userClient.UpdateProfile(c.Request.Context(), &userv1.UpdateProfileRequest{
 		UserId:    userID,
 		FirstName: &wrapperspb.StringValue{Value: firstName},

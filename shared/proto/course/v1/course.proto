@@ -5,6 +5,7 @@ package course.v1;
 option go_package = "github.com/elearning/shared/pkg/proto/course/v1;coursev1";
 
 import "google/protobuf/timestamp.proto";
+import "google/protobuf/struct.proto";
 import "google/protobuf/wrappers.proto";
 import "gamification/v1/gamification.proto";
 
@@ -129,6 +130,12 @@ service CourseService {
   rpc UpdateVocabularyEntry(UpdateVocabularyEntryRequest) returns (UpdateVocabularyEntryResponse);
   rpc DeleteVocabularyEntry(DeleteVocabularyEntryRequest) returns (DeleteVocabularyEntryResponse);
   rpc BulkCreateVocabulary(BulkCreateVocabularyRequest) returns (BulkCreateVocabularyResponse);
+
+  // === Vocabulary Bank ===
+  // Canonical imported 15-step LingoIQ content. This is deliberately separate
+  // from the legacy Vocabulary RPCs above and from personal flashcards.
+  rpc ListVocabularyBankWords(ListVocabularyBankWordsRequest) returns (ListVocabularyBankWordsResponse);
+  rpc GetVocabularyBankWord(GetVocabularyBankWordRequest) returns (GetVocabularyBankWordResponse);
 
   // === TTS (Phase 2 — stub) ===
   // На phase-2 SynthesizeTTS сохраняет переданный audio_url в кэш
@@ -868,6 +875,65 @@ message BulkCreateVocabularyResponse {
   repeated string ids = 1;
   int32 created = 2;
   int32 skipped = 3;
+}
+
+// === Vocabulary Bank ===
+
+// VocabularyBankWordSummary contains learner-facing data only. Internal UUIDs,
+// translation keys and image-generation prompts never cross this boundary.
+message VocabularyBankWordSummary {
+  string external_id = 1;
+  string word = 2;
+  string translation = 3;
+  string part_of_speech = 4;
+  string cefr_level = 5;
+  bool has_audio = 6;
+}
+
+message VocabularyBankQuestionSet {
+  string grammar_family = 1;
+  string tense = 2;
+  string question_form = 3;
+  string question = 4;
+  google.protobuf.Struct positive_answer = 5;
+  google.protobuf.Struct negative_answer = 6;
+}
+
+message VocabularyBankActivity {
+  int32 step = 1;
+  string type = 2;
+  string instruction = 3;
+  google.protobuf.Struct payload = 4;
+}
+
+message VocabularyBankWordDetail {
+  VocabularyBankWordSummary word = 1;
+  string lemma = 2;
+  string meaning = 3;
+  repeated VocabularyBankQuestionSet question_sets = 4;
+  repeated VocabularyBankActivity activities = 5;
+}
+
+message ListVocabularyBankWordsRequest {
+  string cefr_level = 1;
+  string search = 2;
+  string locale = 3;
+  int32 limit = 4;
+  int32 offset = 5;
+}
+
+message ListVocabularyBankWordsResponse {
+  repeated VocabularyBankWordSummary entries = 1;
+  int32 total = 2;
+}
+
+message GetVocabularyBankWordRequest {
+  string external_id = 1;
+  string locale = 2;
+}
+
+message GetVocabularyBankWordResponse {
+  VocabularyBankWordDetail entry = 1;
 }
 
 // === TTS Cache (Phase 2 stub) ===

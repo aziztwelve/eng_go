@@ -117,16 +117,16 @@ func (h *CourseHandler) GetCourse(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, dto.CourseDetailResponse{
-		ID:          resp.Course.Id,
-		Title:       resp.Course.Title,
-		Description: resp.Course.Description,
-		Level:       resp.Course.Level,
-		Language:    resp.Course.Language,
-		Price:       resp.Course.Price,
+		ID:           resp.Course.Id,
+		Title:        resp.Course.Title,
+		Description:  resp.Course.Description,
+		Level:        resp.Course.Level,
+		Language:     resp.Course.Language,
+		Price:        resp.Course.Price,
 		InstructorID: resp.Course.InstructorId,
-		CreatedAt:   resp.Course.CreatedAt.AsTime().Format("2006-01-02T15:04:05Z"),
-		UpdatedAt:   resp.Course.UpdatedAt.AsTime().Format("2006-01-02T15:04:05Z"),
-		Modules:     modules,
+		CreatedAt:    resp.Course.CreatedAt.AsTime().Format("2006-01-02T15:04:05Z"),
+		UpdatedAt:    resp.Course.UpdatedAt.AsTime().Format("2006-01-02T15:04:05Z"),
+		Modules:      modules,
 	})
 }
 
