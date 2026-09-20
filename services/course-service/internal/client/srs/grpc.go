@@ -81,3 +81,11 @@ func (c *grpcClient) StrengthenSkill(ctx context.Context, ev StrengthenSkillEven
 	}
 	return err
 }
+
+func (c *grpcClient) RecordVocabularyBankReview(ctx context.Context, ev VocabularyBankReviewEvent) error {
+	_, err := c.client.RecordReview(ctx, &srsv1.RecordReviewRequest{UserId: ev.UserID, ItemType: srsv1.ItemType_ITEM_TYPE_VOCABULARY_BANK, ItemId: ev.ExternalID, Quality: ev.Quality, ResponseTimeMs: ev.ResponseTimeMS})
+	if err != nil {
+		logger.Warn(ctx, "srs.RecordVocabularyBankReview failed (non-fatal)", zap.String("user_id", ev.UserID), zap.String("external_id", ev.ExternalID), zap.Error(err))
+	}
+	return err
+}

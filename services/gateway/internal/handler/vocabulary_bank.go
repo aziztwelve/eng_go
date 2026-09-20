@@ -1,9 +1,11 @@
 package handler
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"google.golang.org/protobuf/types/known/structpb"
 
 	"github.com/elearning/gateway/internal/client"
 	"github.com/elearning/gateway/internal/errors"
@@ -14,6 +16,14 @@ import (
 // intentionally separate from legacy /vocabulary routes.
 type VocabularyBankHandler struct {
 	course *client.CourseClient
+}
+
+type vocabularyBankAttemptRequest struct {
+	Answer             map[string]any `json:"answer"`
+	IsCorrect          bool           `json:"is_correct"`
+	Score              int32          `json:"score"`
+	TimeSpentMS        int32          `json:"time_spent_ms"`
+	PronunciationScore float64        `json:"pronunciation_score"`
 }
 
 func NewVocabularyBankHandler(course *client.CourseClient) *VocabularyBankHandler {
@@ -43,6 +53,48 @@ func (h *VocabularyBankHandler) Get(c *gin.Context) {
 		ExternalId: c.Param("externalId"),
 		Locale:     c.Query("locale"),
 	})
+	if err != nil {
+		errors.HandleGRPCError(c, err)
+		return
+	}
+	c.JSON(http.StatusOK, response)
+}
+
+func (h *VocabularyBankHandler) GetProgress(c *gin.Context) {
+	userID, ok := userIDFromCtx(c)
+	if !ok {
+		return
+	}
+	response, err := h.course.GetVocabularyBankProgress(c.Request.Context(), &coursev1.GetVocabularyBankProgressRequest{UserId: userID, ExternalId: c.Param("externalId")})
+	if err != nil {
+		errors.HandleGRPCError(c, err)
+		return
+	}
+	c.JSON(http.StatusOK, response)
+}
+
+func (h *VocabularyBankHandler) RecordAttempt(c *gin.Context) {
+	userID, ok := userIDFromCtx(c)
+	if !ok {
+		return
+	}
+	var body vocabularyBankAttemptRequest
+	if err := c.ShouldBindJSON(&body); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+	answer, err := structpb.NewStruct(body.Answer)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "answer must be an object"})
+		return
+	}
+	stepBytes := c.Param("step")
+	var step int32
+	if _, err := fmt.Sscan(stepBytes, &step); err != nil || step < 1 || step > 15 {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "step must be between 1 and 15"})
+		return
+	}
+	response, err := h.course.RecordVocabularyBankAttempt(c.Request.Context(), &coursev1.RecordVocabularyBankAttemptRequest{UserId: userID, ExternalId: c.Param("externalId"), Step: step, Answer: answer, IsCorrect: body.IsCorrect, Score: body.Score, TimeSpentMs: body.TimeSpentMS, PronunciationScore: body.PronunciationScore})
 	if err != nil {
 		errors.HandleGRPCError(c, err)
 		return

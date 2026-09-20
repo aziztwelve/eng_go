@@ -96,6 +96,9 @@ enum ItemType {
   // ITEM_TYPE_FLASHCARD — Phase 7: личные карточки пользователя
   // (courses.user_flashcards). item_id = user_flashcards.id.
   ITEM_TYPE_FLASHCARD = 4;
+  // Canonical Vocabulary Bank word. item_id = immutable external_id, e.g.
+  // A1-VOC-001-001; it is deliberately not a personal flashcard.
+  ITEM_TYPE_VOCABULARY_BANK = 5;
 }
 
 // SRSItem — карточка в SRS системе.

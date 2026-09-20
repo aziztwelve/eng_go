@@ -261,6 +261,14 @@ func (c *CourseClient) GetVocabularyBankWord(ctx context.Context, req *coursev1.
 	return c.client.GetVocabularyBankWord(ctx, req)
 }
 
+func (c *CourseClient) GetVocabularyBankProgress(ctx context.Context, req *coursev1.GetVocabularyBankProgressRequest) (*coursev1.GetVocabularyBankProgressResponse, error) {
+	return c.client.GetVocabularyBankProgress(ctx, req)
+}
+
+func (c *CourseClient) RecordVocabularyBankAttempt(ctx context.Context, req *coursev1.RecordVocabularyBankAttemptRequest) (*coursev1.RecordVocabularyBankAttemptResponse, error) {
+	return c.client.RecordVocabularyBankAttempt(ctx, req)
+}
+
 // === Flashcards (Phase 7) ===
 
 func (c *CourseClient) ListFlashcards(ctx context.Context, req *coursev1.ListFlashcardsRequest) (*coursev1.ListFlashcardsResponse, error) {

@@ -116,7 +116,11 @@ func (s *service) RecordReview(ctx context.Context, in RecordReviewInput) (*mode
 	}
 
 	now := s.clock()
-	ApplySM2(item, in.Quality, in.ResponseTimeMs, now)
+	if in.ItemType == model.ItemTypeVocabularyBank {
+		ApplyVocabularyBankSchedule(item, in.Quality, in.ResponseTimeMs, now)
+	} else {
+		ApplySM2(item, in.Quality, in.ResponseTimeMs, now)
+	}
 
 	if err := s.items.Update(ctx, item); err != nil {
 		return nil, nil, fmt.Errorf("update srs item: %w", err)

@@ -27,6 +27,26 @@ func TestItemType_FlashcardValid(t *testing.T) {
 	}
 }
 
+func TestVocabularyBankSchedule(t *testing.T) {
+	if !model.ItemTypeVocabularyBank.IsValid() {
+		t.Fatal("expected vocabulary_bank item type to be valid")
+	}
+	item := newFreshItem()
+	now := time.Date(2026, 9, 20, 12, 0, 0, 0, time.UTC)
+	want := []int32{1, 3, 7, 14, 30, 90, 90}
+	for index, interval := range want {
+		ApplyVocabularyBankSchedule(item, 5, 0, now)
+		if item.IntervalDays != interval {
+			t.Fatalf("review %d: expected %d days, got %d", index+1, interval, item.IntervalDays)
+		}
+		now = item.NextReviewAt
+	}
+	ApplyVocabularyBankSchedule(item, 1, 0, now)
+	if item.Repetitions != 0 || item.IntervalDays != 1 {
+		t.Fatalf("failed review must restart at 1 day, got reps=%d interval=%d", item.Repetitions, item.IntervalDays)
+	}
+}
+
 // TestSM2_FlashcardItem_Polymorphic — SM-2 работает идентично для
 // item_type='flashcard', как и для vocabulary/step (алгоритм
 // type-agnostic).

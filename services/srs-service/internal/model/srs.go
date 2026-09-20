@@ -16,12 +16,14 @@ const (
 	// ItemTypeFlashcard — Phase 7: личные карточки пользователя
 	// (courses.user_flashcards). Добавлено в CHECK миграцией srs 000005.
 	ItemTypeFlashcard ItemType = "flashcard"
+	// ItemTypeVocabularyBank — canonical imported word by immutable external ID.
+	ItemTypeVocabularyBank ItemType = "vocabulary_bank"
 )
 
 // IsValid — допустимый ли тип. Сверяется CHECK constraint миграции.
 func (t ItemType) IsValid() bool {
 	switch t {
-	case ItemTypeVocabulary, ItemTypeStep, ItemTypePhrase, ItemTypeFlashcard:
+	case ItemTypeVocabulary, ItemTypeStep, ItemTypePhrase, ItemTypeFlashcard, ItemTypeVocabularyBank:
 		return true
 	default:
 		return false
@@ -119,7 +121,7 @@ func (t SkillType) IsValid() bool {
 
 // Default decay параметры.
 const (
-	DefaultDecayRate = 0.05  // 20 дней до 0 без практики
+	DefaultDecayRate    = 0.05 // 20 дней до 0 без практики
 	DefaultInitStrength = 1.0
 )
 

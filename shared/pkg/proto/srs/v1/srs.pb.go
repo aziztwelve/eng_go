@@ -34,6 +34,9 @@ const (
 	// ITEM_TYPE_FLASHCARD — Phase 7: личные карточки пользователя
 	// (courses.user_flashcards). item_id = user_flashcards.id.
 	ItemType_ITEM_TYPE_FLASHCARD ItemType = 4
+	// Canonical Vocabulary Bank word. item_id = immutable external_id, e.g.
+	// A1-VOC-001-001; it is deliberately not a personal flashcard.
+	ItemType_ITEM_TYPE_VOCABULARY_BANK ItemType = 5
 )
 
 // Enum value maps for ItemType.
@@ -44,13 +47,15 @@ var (
 		2: "ITEM_TYPE_STEP",
 		3: "ITEM_TYPE_PHRASE",
 		4: "ITEM_TYPE_FLASHCARD",
+		5: "ITEM_TYPE_VOCABULARY_BANK",
 	}
 	ItemType_value = map[string]int32{
-		"ITEM_TYPE_UNSPECIFIED": 0,
-		"ITEM_TYPE_VOCABULARY":  1,
-		"ITEM_TYPE_STEP":        2,
-		"ITEM_TYPE_PHRASE":      3,
-		"ITEM_TYPE_FLASHCARD":   4,
+		"ITEM_TYPE_UNSPECIFIED":     0,
+		"ITEM_TYPE_VOCABULARY":      1,
+		"ITEM_TYPE_STEP":            2,
+		"ITEM_TYPE_PHRASE":          3,
+		"ITEM_TYPE_FLASHCARD":       4,
+		"ITEM_TYPE_VOCABULARY_BANK": 5,
 	}
 )
 
@@ -2552,13 +2557,14 @@ const file_srs_v1_srs_proto_rawDesc = "" +
 	"\x14RunDailyDecayRequest\x12\x17\n" +
 	"\auser_id\x18\x01 \x01(\tR\x06userId\"3\n" +
 	"\x15RunDailyDecayResponse\x12\x1a\n" +
-	"\baffected\x18\x01 \x01(\x05R\baffected*\x82\x01\n" +
+	"\baffected\x18\x01 \x01(\x05R\baffected*\xa1\x01\n" +
 	"\bItemType\x12\x19\n" +
 	"\x15ITEM_TYPE_UNSPECIFIED\x10\x00\x12\x18\n" +
 	"\x14ITEM_TYPE_VOCABULARY\x10\x01\x12\x12\n" +
 	"\x0eITEM_TYPE_STEP\x10\x02\x12\x14\n" +
 	"\x10ITEM_TYPE_PHRASE\x10\x03\x12\x17\n" +
-	"\x13ITEM_TYPE_FLASHCARD\x10\x04*\x85\x01\n" +
+	"\x13ITEM_TYPE_FLASHCARD\x10\x04\x12\x1d\n" +
+	"\x19ITEM_TYPE_VOCABULARY_BANK\x10\x05*\x85\x01\n" +
 	"\x0ePracticeSource\x12\x1f\n" +
 	"\x1bPRACTICE_SOURCE_UNSPECIFIED\x10\x00\x12\x1b\n" +
 	"\x17PRACTICE_SOURCE_OVERDUE\x10\x01\x12\x1b\n" +

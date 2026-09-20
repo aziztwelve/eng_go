@@ -33,3 +33,8 @@ func (n *noopClient) StrengthenSkill(ctx context.Context, ev StrengthenSkillEven
 	)
 	return nil
 }
+
+func (n *noopClient) RecordVocabularyBankReview(ctx context.Context, ev VocabularyBankReviewEvent) error {
+	logger.Debug(ctx, "srs.RecordVocabularyBankReview (noop)", zap.String("user_id", ev.UserID), zap.String("external_id", ev.ExternalID))
+	return nil
+}

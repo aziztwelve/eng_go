@@ -1,32 +1,33 @@
 // Package service — бизнес-логика srs-service.
 //
 // SM-2 — SuperMemo 2 алгоритм. Источник:
-//   https://www.supermemo.com/en/archives1990-2015/english/ol/sm2
+//
+//	https://www.supermemo.com/en/archives1990-2015/english/ol/sm2
 //
 // Алгоритм:
 //
-//   На карточке храним (EF, I, n), где
-//     EF — Easiness Factor (default 2.5, min 1.3)
-//     I  — Interval в днях
-//     n  — счётчик правильных ответов подряд
+//	На карточке храним (EF, I, n), где
+//	  EF — Easiness Factor (default 2.5, min 1.3)
+//	  I  — Interval в днях
+//	  n  — счётчик правильных ответов подряд
 //
-//   Получаем quality q ∈ [0..5]:
-//     5 — perfect, 4 — correct with hesitation, 3 — correct with difficulty,
-//     2/1/0 — incorrect (от лёгкого вспоминания до полного блэкаута).
+//	Получаем quality q ∈ [0..5]:
+//	  5 — perfect, 4 — correct with hesitation, 3 — correct with difficulty,
+//	  2/1/0 — incorrect (от лёгкого вспоминания до полного блэкаута).
 //
-//   Если q >= 3:
-//     n == 0 → I = 1
-//     n == 1 → I = 6
-//     n >= 2 → I = round(I_prev * EF)
-//     n += 1
+//	Если q >= 3:
+//	  n == 0 → I = 1
+//	  n == 1 → I = 6
+//	  n >= 2 → I = round(I_prev * EF)
+//	  n += 1
 //
-//   Если q < 3:
-//     n = 0
-//     I = 1
+//	Если q < 3:
+//	  n = 0
+//	  I = 1
 //
-//   EF (всегда):
-//     EF = EF + (0.1 - (5-q) * (0.08 + (5-q) * 0.02))
-//     EF = max(1.3, EF)
+//	EF (всегда):
+//	  EF = EF + (0.1 - (5-q) * (0.08 + (5-q) * 0.02))
+//	  EF = max(1.3, EF)
 package service
 
 import (
@@ -97,6 +98,44 @@ func ApplySM2(item *model.SRSItem, quality int32, responseTimeMs int32, now time
 	item.Strength = calculateStrength(item)
 }
 
+// ApplyVocabularyBankSchedule keeps the published Word Bank curriculum
+// cadence distinct from generic SM-2: 1/3/7/14/30/90 days. A failed review
+// restarts the learner at day 1. The normal SM-2 algorithm remains unchanged
+// for lessons, legacy vocabulary and personal flashcards.
+func ApplyVocabularyBankSchedule(item *model.SRSItem, quality int32, responseTimeMs int32, now time.Time) {
+	if quality < 0 {
+		quality = 0
+	}
+	if quality > 5 {
+		quality = 5
+	}
+	schedule := []int32{1, 3, 7, 14, 30, 90}
+	if quality >= 3 {
+		index := item.Repetitions
+		if index >= int32(len(schedule)) {
+			index = int32(len(schedule) - 1)
+		}
+		item.IntervalDays = schedule[index]
+		item.Repetitions++
+		item.CorrectReviews++
+	} else {
+		item.Repetitions = 0
+		item.IntervalDays = schedule[0]
+		item.IncorrectReviews++
+	}
+	item.LastReviewedAt = &now
+	item.NextReviewAt = now.AddDate(0, 0, int(item.IntervalDays))
+	item.TotalReviews++
+	if responseTimeMs > 0 {
+		if item.AvgResponseTimeMs == 0 {
+			item.AvgResponseTimeMs = responseTimeMs
+		} else {
+			item.AvgResponseTimeMs += (responseTimeMs - item.AvgResponseTimeMs) / item.TotalReviews
+		}
+	}
+	item.Strength = calculateStrength(item)
+}
+
 // calculateStrength — производная характеристика 0..1.
 // accuracy * min(1, reps/10).
 // Если total_reviews == 0 — strength = 0.
@@ -125,16 +164,16 @@ func calculateStrength(item *model.SRSItem) float64 {
 //
 // Правила:
 //   - !isCorrect:
-//     - attemptIndex == 0 → 1 (первая попытка с ошибкой, сложно вспомнил)
-//     - attemptIndex >= 1 → 0 (не помнит)
+//   - attemptIndex == 0 → 1 (первая попытка с ошибкой, сложно вспомнил)
+//   - attemptIndex >= 1 → 0 (не помнит)
 //   - isCorrect:
-//     - base = 5
-//     - usedHint               → base -= 2
-//     - timeSpentMs > 10000    → base -= 1
-//     - timeSpentMs > 20000    → ещё -= 1
-//     - attemptIndex == 1      → base = min(base, 3) (исправил со 2 раза)
-//     - attemptIndex >= 2      → base = 3
-//     - clamp в [3..5]
+//   - base = 5
+//   - usedHint               → base -= 2
+//   - timeSpentMs > 10000    → base -= 1
+//   - timeSpentMs > 20000    → ещё -= 1
+//   - attemptIndex == 1      → base = min(base, 3) (исправил со 2 раза)
+//   - attemptIndex >= 2      → base = 3
+//   - clamp в [3..5]
 func CalculateQuality(isCorrect bool, timeSpentMs int32, usedHint bool, attemptIndex int32) int32 {
 	if !isCorrect {
 		if attemptIndex == 0 {

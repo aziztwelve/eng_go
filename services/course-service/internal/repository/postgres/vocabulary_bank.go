@@ -2,9 +2,11 @@ package postgres
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"strings"
 
+	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
 
 	"github.com/elearning/course-service/internal/model"
@@ -15,7 +17,7 @@ type vocabularyBankRepository struct {
 	pool *pgxpool.Pool
 }
 
-func NewVocabularyBankRepository(pool *pgxpool.Pool) repository.VocabularyBankRepository {
+func NewVocabularyBankRepository(pool *pgxpool.Pool) *vocabularyBankRepository {
 	return &vocabularyBankRepository{pool: pool}
 }
 
@@ -138,4 +140,60 @@ func scanVocabularyBankSummary(scan func(...any) error) (model.VocabularyBankWor
 	var item model.VocabularyBankWordSummary
 	err := scan(&item.ExternalID, &item.Word, &item.Translation, &item.PartOfSpeech, &item.CEFRLevel, &item.HasAudio)
 	return item, err
+}
+
+func (r *vocabularyBankRepository) GetProgress(ctx context.Context, userID, externalID string) (*model.VocabularyBankProgress, error) {
+	progress := &model.VocabularyBankProgress{ExternalID: externalID, CurrentStep: 1}
+	err := r.pool.QueryRow(ctx, `SELECT p.current_step, p.completed_at, p.last_activity_at
+		FROM user_vocabulary_progress p
+		JOIN vocabulary_bank_words w ON w.id = p.word_id
+		WHERE p.user_id = $1 AND w.external_id = $2`, userID, externalID).
+		Scan(&progress.CurrentStep, &progress.CompletedAt, &progress.LastActivityAt)
+	if err == nil {
+		return progress, nil
+	}
+	if err == pgx.ErrNoRows {
+		return progress, nil
+	}
+	return nil, err
+}
+
+func (r *vocabularyBankRepository) RecordAttempt(ctx context.Context, attempt model.VocabularyBankAttempt) (*model.VocabularyBankProgress, error) {
+	tx, err := r.pool.Begin(ctx)
+	if err != nil {
+		return nil, err
+	}
+	defer func() { _ = tx.Rollback(ctx) }()
+
+	var wordID, activityType string
+	if err := tx.QueryRow(ctx, `SELECT w.id, a.activity_type
+		FROM vocabulary_bank_words w JOIN vocabulary_bank_activities a ON a.word_id = w.id
+		WHERE w.external_id = $1 AND a.step = $2`, attempt.ExternalID, attempt.Step).Scan(&wordID, &activityType); err != nil {
+		return nil, err
+	}
+	answer := attempt.Answer
+	if len(answer) == 0 {
+		answer = json.RawMessage(`{}`)
+	}
+	if _, err := tx.Exec(ctx, `INSERT INTO user_vocabulary_activity_attempts
+		(user_id, word_id, step, activity_type, answer, is_correct, score, time_spent_ms, pronunciation_score)
+		VALUES ($1,$2,$3,$4,$5,$6,$7,$8,NULLIF($9, 0))`, attempt.UserID, wordID, attempt.Step, activityType, answer, attempt.IsCorrect, attempt.Score, attempt.TimeSpentMS, attempt.PronunciationScore); err != nil {
+		return nil, err
+	}
+	var progress model.VocabularyBankProgress
+	progress.ExternalID = attempt.ExternalID
+	if err := tx.QueryRow(ctx, `INSERT INTO user_vocabulary_progress (user_id, word_id, current_step, completed_at, last_activity_at)
+		VALUES ($1, $2, CASE WHEN $3 >= 15 AND $4 THEN 15 ELSE LEAST($3 + 1, 15) END, CASE WHEN $3 >= 15 AND $4 THEN NOW() ELSE NULL END, NOW())
+		ON CONFLICT (user_id, word_id) DO UPDATE SET
+			current_step = CASE WHEN EXCLUDED.completed_at IS NOT NULL THEN 15 WHEN $4 THEN GREATEST(user_vocabulary_progress.current_step, EXCLUDED.current_step) ELSE user_vocabulary_progress.current_step END,
+			completed_at = COALESCE(user_vocabulary_progress.completed_at, EXCLUDED.completed_at),
+			last_activity_at = NOW()
+		RETURNING current_step, completed_at, last_activity_at`, attempt.UserID, wordID, attempt.Step, attempt.IsCorrect).
+		Scan(&progress.CurrentStep, &progress.CompletedAt, &progress.LastActivityAt); err != nil {
+		return nil, err
+	}
+	if err := tx.Commit(ctx); err != nil {
+		return nil, err
+	}
+	return &progress, nil
 }

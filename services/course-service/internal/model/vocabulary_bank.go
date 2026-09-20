@@ -1,6 +1,9 @@
 package model
 
-import "encoding/json"
+import (
+	"encoding/json"
+	"time"
+)
 
 // VocabularyBankWordSummary is the safe, learner-facing projection of a
 // canonical Vocabulary Bank word.
@@ -35,4 +38,22 @@ type VocabularyBankWordDetail struct {
 	Meaning      string
 	QuestionSets []VocabularyBankQuestionSet
 	Activities   []VocabularyBankActivity
+}
+
+type VocabularyBankProgress struct {
+	ExternalID     string
+	CurrentStep    int
+	CompletedAt    *time.Time
+	LastActivityAt time.Time
+}
+
+type VocabularyBankAttempt struct {
+	UserID             string
+	ExternalID         string
+	Step               int
+	Answer             json.RawMessage
+	IsCorrect          bool
+	Score              int
+	TimeSpentMS        int
+	PronunciationScore float64
 }

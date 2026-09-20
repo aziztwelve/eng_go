@@ -128,7 +128,7 @@ func New(ctx context.Context) (*App, error) {
 	enrollmentService := service.NewEnrollmentService(enrollmentRepo)
 	progressService := service.NewProgressService(progressRepo, courseRepo, enrollmentRepo, gamificationClient, srsClient)
 	vocabService := service.NewVocabularyService(vocabRepo)
-	vocabBankService := service.NewVocabularyBankService(vocabBankRepo)
+	vocabBankService := service.NewVocabularyBankService(vocabBankRepo, vocabBankRepo, srsClient)
 	ttsService := service.NewTTSService(ttsRepo)
 	flashcardService := service.NewFlashcardService(flashcardRepo, vocabRepo)
 	trackService := service.NewTrackService(trackRepo, flashcardService, vocabService)

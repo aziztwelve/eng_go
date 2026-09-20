@@ -37,9 +37,17 @@ type StrengthenSkillEvent struct {
 	Amount float64
 }
 
+type VocabularyBankReviewEvent struct {
+	UserID         string
+	ExternalID     string
+	Quality        int32
+	ResponseTimeMS int32
+}
+
 // Client — контракт клиента srs-service.
 // Реализации не должны паниковать; ошибки логируются и не пробрасываются.
 type Client interface {
 	InitSkill(ctx context.Context, event InitSkillEvent) error
 	StrengthenSkill(ctx context.Context, event StrengthenSkillEvent) error
+	RecordVocabularyBankReview(ctx context.Context, event VocabularyBankReviewEvent) error
 }
