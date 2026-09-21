@@ -50,6 +50,21 @@ func (a *api) RecordVocabularyBankAttempt(ctx context.Context, req *coursev1.Rec
 	return &coursev1.RecordVocabularyBankAttemptResponse{Progress: converter.ToVocabularyBankProgressProto(progress)}, nil
 }
 
+func (a *api) ListVocabularyBankFeed(ctx context.Context, req *coursev1.ListVocabularyBankFeedRequest) (*coursev1.ListVocabularyBankFeedResponse, error) {
+	feed, err := a.vocabBankService.ListFeed(ctx, req.UserId, repository.VocabularyBankFeedFilters{CEFRLevel: req.CefrLevel, Locale: req.Locale, NewLimit: int(req.NewLimit), InProgressLimit: int(req.InProgressLimit)})
+	if err != nil {
+		return nil, status.Errorf(codes.InvalidArgument, "list vocabulary bank feed: %v", err)
+	}
+	response := &coursev1.ListVocabularyBankFeedResponse{}
+	for _, entry := range feed.InProgress {
+		response.InProgress = append(response.InProgress, converter.ToVocabularyBankFeedEntryProto(entry))
+	}
+	for _, entry := range feed.NewWords {
+		response.NewWords = append(response.NewWords, converter.ToVocabularyBankFeedEntryProto(entry))
+	}
+	return response, nil
+}
+
 func (a *api) GetVocabularyBankWord(ctx context.Context, req *coursev1.GetVocabularyBankWordRequest) (*coursev1.GetVocabularyBankWordResponse, error) {
 	entry, err := a.vocabBankService.Get(ctx, req.ExternalId, req.Locale)
 	if err != nil {

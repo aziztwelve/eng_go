@@ -163,6 +163,7 @@ func (a *App) initRouter(ctx context.Context) error {
 		protected := v1.Group("")
 		protected.Use(authMiddleware.Handle())
 		{
+			protected.GET("/vocabulary-bank/feed", vocabularyBankHandler.Feed)
 			protected.GET("/vocabulary-bank/:externalId/progress", vocabularyBankHandler.GetProgress)
 			protected.POST("/vocabulary-bank/:externalId/activities/:step/attempts", vocabularyBankHandler.RecordAttempt)
 			// === Onboarding (см. docs/tasks/onboarding-spec.md §3.1) ===

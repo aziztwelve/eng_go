@@ -25,6 +25,14 @@ func ToVocabularyBankProgressProto(progress *model.VocabularyBankProgress) *cour
 	return result
 }
 
+func ToVocabularyBankFeedEntryProto(entry model.VocabularyBankFeedEntry) *coursev1.VocabularyBankFeedEntry {
+	result := &coursev1.VocabularyBankFeedEntry{Word: ToVocabularyBankWordSummaryProto(entry.VocabularyBankWordSummary), Status: entry.Status, CurrentStep: int32(entry.CurrentStep)}
+	if entry.LastActivityAt != nil {
+		result.LastActivityAt = timestamppb.New(*entry.LastActivityAt)
+	}
+	return result
+}
+
 func StructToRawJSONForVocabularyBank(value *structpb.Struct) (json.RawMessage, error) {
 	if value == nil {
 		return json.RawMessage(`{}`), nil

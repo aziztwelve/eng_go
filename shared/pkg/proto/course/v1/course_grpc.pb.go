@@ -66,6 +66,7 @@ const (
 	CourseService_GetVocabularyBankWord_FullMethodName          = "/course.v1.CourseService/GetVocabularyBankWord"
 	CourseService_GetVocabularyBankProgress_FullMethodName      = "/course.v1.CourseService/GetVocabularyBankProgress"
 	CourseService_RecordVocabularyBankAttempt_FullMethodName    = "/course.v1.CourseService/RecordVocabularyBankAttempt"
+	CourseService_ListVocabularyBankFeed_FullMethodName         = "/course.v1.CourseService/ListVocabularyBankFeed"
 	CourseService_SynthesizeTTS_FullMethodName                  = "/course.v1.CourseService/SynthesizeTTS"
 	CourseService_GetTTSByText_FullMethodName                   = "/course.v1.CourseService/GetTTSByText"
 	CourseService_ListFlashcards_FullMethodName                 = "/course.v1.CourseService/ListFlashcards"
@@ -181,6 +182,7 @@ type CourseServiceClient interface {
 	GetVocabularyBankWord(ctx context.Context, in *GetVocabularyBankWordRequest, opts ...grpc.CallOption) (*GetVocabularyBankWordResponse, error)
 	GetVocabularyBankProgress(ctx context.Context, in *GetVocabularyBankProgressRequest, opts ...grpc.CallOption) (*GetVocabularyBankProgressResponse, error)
 	RecordVocabularyBankAttempt(ctx context.Context, in *RecordVocabularyBankAttemptRequest, opts ...grpc.CallOption) (*RecordVocabularyBankAttemptResponse, error)
+	ListVocabularyBankFeed(ctx context.Context, in *ListVocabularyBankFeedRequest, opts ...grpc.CallOption) (*ListVocabularyBankFeedResponse, error)
 	// === TTS (Phase 2 — stub) ===
 	// На phase-2 SynthesizeTTS сохраняет переданный audio_url в кэш
 	// (без вызова TTS-провайдера). GetTTSByText читает из кэша.
@@ -686,6 +688,16 @@ func (c *courseServiceClient) RecordVocabularyBankAttempt(ctx context.Context, i
 	return out, nil
 }
 
+func (c *courseServiceClient) ListVocabularyBankFeed(ctx context.Context, in *ListVocabularyBankFeedRequest, opts ...grpc.CallOption) (*ListVocabularyBankFeedResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ListVocabularyBankFeedResponse)
+	err := c.cc.Invoke(ctx, CourseService_ListVocabularyBankFeed_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *courseServiceClient) SynthesizeTTS(ctx context.Context, in *SynthesizeTTSRequest, opts ...grpc.CallOption) (*SynthesizeTTSResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SynthesizeTTSResponse)
@@ -934,6 +946,7 @@ type CourseServiceServer interface {
 	GetVocabularyBankWord(context.Context, *GetVocabularyBankWordRequest) (*GetVocabularyBankWordResponse, error)
 	GetVocabularyBankProgress(context.Context, *GetVocabularyBankProgressRequest) (*GetVocabularyBankProgressResponse, error)
 	RecordVocabularyBankAttempt(context.Context, *RecordVocabularyBankAttemptRequest) (*RecordVocabularyBankAttemptResponse, error)
+	ListVocabularyBankFeed(context.Context, *ListVocabularyBankFeedRequest) (*ListVocabularyBankFeedResponse, error)
 	// === TTS (Phase 2 — stub) ===
 	// На phase-2 SynthesizeTTS сохраняет переданный audio_url в кэш
 	// (без вызова TTS-провайдера). GetTTSByText читает из кэша.
@@ -1109,6 +1122,9 @@ func (UnimplementedCourseServiceServer) GetVocabularyBankProgress(context.Contex
 }
 func (UnimplementedCourseServiceServer) RecordVocabularyBankAttempt(context.Context, *RecordVocabularyBankAttemptRequest) (*RecordVocabularyBankAttemptResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method RecordVocabularyBankAttempt not implemented")
+}
+func (UnimplementedCourseServiceServer) ListVocabularyBankFeed(context.Context, *ListVocabularyBankFeedRequest) (*ListVocabularyBankFeedResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method ListVocabularyBankFeed not implemented")
 }
 func (UnimplementedCourseServiceServer) SynthesizeTTS(context.Context, *SynthesizeTTSRequest) (*SynthesizeTTSResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method SynthesizeTTS not implemented")
@@ -2022,6 +2038,24 @@ func _CourseService_RecordVocabularyBankAttempt_Handler(srv interface{}, ctx con
 	return interceptor(ctx, in, info, handler)
 }
 
+func _CourseService_ListVocabularyBankFeed_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListVocabularyBankFeedRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CourseServiceServer).ListVocabularyBankFeed(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CourseService_ListVocabularyBankFeed_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CourseServiceServer).ListVocabularyBankFeed(ctx, req.(*ListVocabularyBankFeedRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _CourseService_SynthesizeTTS_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SynthesizeTTSRequest)
 	if err := dec(in); err != nil {
@@ -2486,6 +2520,10 @@ var CourseService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "RecordVocabularyBankAttempt",
 			Handler:    _CourseService_RecordVocabularyBankAttempt_Handler,
+		},
+		{
+			MethodName: "ListVocabularyBankFeed",
+			Handler:    _CourseService_ListVocabularyBankFeed_Handler,
 		},
 		{
 			MethodName: "SynthesizeTTS",

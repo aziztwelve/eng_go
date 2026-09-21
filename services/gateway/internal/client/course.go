@@ -269,6 +269,10 @@ func (c *CourseClient) RecordVocabularyBankAttempt(ctx context.Context, req *cou
 	return c.client.RecordVocabularyBankAttempt(ctx, req)
 }
 
+func (c *CourseClient) ListVocabularyBankFeed(ctx context.Context, req *coursev1.ListVocabularyBankFeedRequest) (*coursev1.ListVocabularyBankFeedResponse, error) {
+	return c.client.ListVocabularyBankFeed(ctx, req)
+}
+
 // === Flashcards (Phase 7) ===
 
 func (c *CourseClient) ListFlashcards(ctx context.Context, req *coursev1.ListFlashcardsRequest) (*coursev1.ListFlashcardsResponse, error) {

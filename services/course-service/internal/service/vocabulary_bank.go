@@ -16,6 +16,7 @@ type VocabularyBankService interface {
 	Get(ctx context.Context, externalID, locale string) (*model.VocabularyBankWordDetail, error)
 	GetProgress(ctx context.Context, userID, externalID string) (*model.VocabularyBankProgress, error)
 	RecordAttempt(ctx context.Context, attempt model.VocabularyBankAttempt) (*model.VocabularyBankProgress, error)
+	ListFeed(ctx context.Context, userID string, filters repository.VocabularyBankFeedFilters) (*model.VocabularyBankFeed, error)
 }
 
 type vocabularyBankService struct {
@@ -67,6 +68,20 @@ func (s *vocabularyBankService) RecordAttempt(ctx context.Context, attempt model
 		_ = s.srs.RecordVocabularyBankReview(ctx, srs.VocabularyBankReviewEvent{UserID: attempt.UserID, ExternalID: attempt.ExternalID, Quality: 5, ResponseTimeMS: int32(attempt.TimeSpentMS)})
 	}
 	return progress, nil
+}
+
+func (s *vocabularyBankService) ListFeed(ctx context.Context, userID string, filters repository.VocabularyBankFeedFilters) (*model.VocabularyBankFeed, error) {
+	if strings.TrimSpace(userID) == "" {
+		return nil, fmt.Errorf("user_id is required")
+	}
+	if filters.NewLimit <= 0 || filters.NewLimit > 50 {
+		filters.NewLimit = 5
+	}
+	if filters.InProgressLimit <= 0 || filters.InProgressLimit > 50 {
+		filters.InProgressLimit = 5
+	}
+	filters.Locale = normalizeVocabularyBankLocale(filters.Locale)
+	return s.progress.ListFeed(ctx, userID, filters)
 }
 
 func (s *vocabularyBankService) List(ctx context.Context, filters repository.VocabularyBankListFilters) ([]model.VocabularyBankWordSummary, int, error) {

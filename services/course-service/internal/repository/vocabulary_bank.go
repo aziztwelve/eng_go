@@ -24,4 +24,12 @@ type VocabularyBankRepository interface {
 type VocabularyBankProgressRepository interface {
 	GetProgress(ctx context.Context, userID, externalID string) (*model.VocabularyBankProgress, error)
 	RecordAttempt(ctx context.Context, attempt model.VocabularyBankAttempt) (*model.VocabularyBankProgress, error)
+	ListFeed(ctx context.Context, userID string, filters VocabularyBankFeedFilters) (*model.VocabularyBankFeed, error)
+}
+
+type VocabularyBankFeedFilters struct {
+	CEFRLevel       string
+	Locale          string
+	NewLimit        int
+	InProgressLimit int
 }

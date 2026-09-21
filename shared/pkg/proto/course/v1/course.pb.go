@@ -7266,6 +7266,202 @@ func (x *RecordVocabularyBankAttemptResponse) GetProgress() *VocabularyBankProgr
 	return nil
 }
 
+type VocabularyBankFeedEntry struct {
+	state          protoimpl.MessageState     `protogen:"open.v1"`
+	Word           *VocabularyBankWordSummary `protobuf:"bytes,1,opt,name=word,proto3" json:"word,omitempty"`
+	Status         string                     `protobuf:"bytes,2,opt,name=status,proto3" json:"status,omitempty"` // in_progress | new
+	CurrentStep    int32                      `protobuf:"varint,3,opt,name=current_step,json=currentStep,proto3" json:"current_step,omitempty"`
+	LastActivityAt *timestamppb.Timestamp     `protobuf:"bytes,4,opt,name=last_activity_at,json=lastActivityAt,proto3" json:"last_activity_at,omitempty"`
+	unknownFields  protoimpl.UnknownFields
+	sizeCache      protoimpl.SizeCache
+}
+
+func (x *VocabularyBankFeedEntry) Reset() {
+	*x = VocabularyBankFeedEntry{}
+	mi := &file_course_v1_course_proto_msgTypes[116]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *VocabularyBankFeedEntry) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*VocabularyBankFeedEntry) ProtoMessage() {}
+
+func (x *VocabularyBankFeedEntry) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[116]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use VocabularyBankFeedEntry.ProtoReflect.Descriptor instead.
+func (*VocabularyBankFeedEntry) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{116}
+}
+
+func (x *VocabularyBankFeedEntry) GetWord() *VocabularyBankWordSummary {
+	if x != nil {
+		return x.Word
+	}
+	return nil
+}
+
+func (x *VocabularyBankFeedEntry) GetStatus() string {
+	if x != nil {
+		return x.Status
+	}
+	return ""
+}
+
+func (x *VocabularyBankFeedEntry) GetCurrentStep() int32 {
+	if x != nil {
+		return x.CurrentStep
+	}
+	return 0
+}
+
+func (x *VocabularyBankFeedEntry) GetLastActivityAt() *timestamppb.Timestamp {
+	if x != nil {
+		return x.LastActivityAt
+	}
+	return nil
+}
+
+type ListVocabularyBankFeedRequest struct {
+	state           protoimpl.MessageState `protogen:"open.v1"`
+	UserId          string                 `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	CefrLevel       string                 `protobuf:"bytes,2,opt,name=cefr_level,json=cefrLevel,proto3" json:"cefr_level,omitempty"`
+	Locale          string                 `protobuf:"bytes,3,opt,name=locale,proto3" json:"locale,omitempty"`
+	NewLimit        int32                  `protobuf:"varint,4,opt,name=new_limit,json=newLimit,proto3" json:"new_limit,omitempty"`
+	InProgressLimit int32                  `protobuf:"varint,5,opt,name=in_progress_limit,json=inProgressLimit,proto3" json:"in_progress_limit,omitempty"`
+	unknownFields   protoimpl.UnknownFields
+	sizeCache       protoimpl.SizeCache
+}
+
+func (x *ListVocabularyBankFeedRequest) Reset() {
+	*x = ListVocabularyBankFeedRequest{}
+	mi := &file_course_v1_course_proto_msgTypes[117]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ListVocabularyBankFeedRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ListVocabularyBankFeedRequest) ProtoMessage() {}
+
+func (x *ListVocabularyBankFeedRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[117]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ListVocabularyBankFeedRequest.ProtoReflect.Descriptor instead.
+func (*ListVocabularyBankFeedRequest) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{117}
+}
+
+func (x *ListVocabularyBankFeedRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *ListVocabularyBankFeedRequest) GetCefrLevel() string {
+	if x != nil {
+		return x.CefrLevel
+	}
+	return ""
+}
+
+func (x *ListVocabularyBankFeedRequest) GetLocale() string {
+	if x != nil {
+		return x.Locale
+	}
+	return ""
+}
+
+func (x *ListVocabularyBankFeedRequest) GetNewLimit() int32 {
+	if x != nil {
+		return x.NewLimit
+	}
+	return 0
+}
+
+func (x *ListVocabularyBankFeedRequest) GetInProgressLimit() int32 {
+	if x != nil {
+		return x.InProgressLimit
+	}
+	return 0
+}
+
+type ListVocabularyBankFeedResponse struct {
+	state         protoimpl.MessageState     `protogen:"open.v1"`
+	InProgress    []*VocabularyBankFeedEntry `protobuf:"bytes,1,rep,name=in_progress,json=inProgress,proto3" json:"in_progress,omitempty"`
+	NewWords      []*VocabularyBankFeedEntry `protobuf:"bytes,2,rep,name=new_words,json=newWords,proto3" json:"new_words,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ListVocabularyBankFeedResponse) Reset() {
+	*x = ListVocabularyBankFeedResponse{}
+	mi := &file_course_v1_course_proto_msgTypes[118]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ListVocabularyBankFeedResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ListVocabularyBankFeedResponse) ProtoMessage() {}
+
+func (x *ListVocabularyBankFeedResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_course_v1_course_proto_msgTypes[118]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ListVocabularyBankFeedResponse.ProtoReflect.Descriptor instead.
+func (*ListVocabularyBankFeedResponse) Descriptor() ([]byte, []int) {
+	return file_course_v1_course_proto_rawDescGZIP(), []int{118}
+}
+
+func (x *ListVocabularyBankFeedResponse) GetInProgress() []*VocabularyBankFeedEntry {
+	if x != nil {
+		return x.InProgress
+	}
+	return nil
+}
+
+func (x *ListVocabularyBankFeedResponse) GetNewWords() []*VocabularyBankFeedEntry {
+	if x != nil {
+		return x.NewWords
+	}
+	return nil
+}
+
 type TTSCacheEntry struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
@@ -7281,7 +7477,7 @@ type TTSCacheEntry struct {
 
 func (x *TTSCacheEntry) Reset() {
 	*x = TTSCacheEntry{}
-	mi := &file_course_v1_course_proto_msgTypes[116]
+	mi := &file_course_v1_course_proto_msgTypes[119]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7293,7 +7489,7 @@ func (x *TTSCacheEntry) String() string {
 func (*TTSCacheEntry) ProtoMessage() {}
 
 func (x *TTSCacheEntry) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[116]
+	mi := &file_course_v1_course_proto_msgTypes[119]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7306,7 +7502,7 @@ func (x *TTSCacheEntry) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TTSCacheEntry.ProtoReflect.Descriptor instead.
 func (*TTSCacheEntry) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{116}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{119}
 }
 
 func (x *TTSCacheEntry) GetId() string {
@@ -7375,7 +7571,7 @@ type SynthesizeTTSRequest struct {
 
 func (x *SynthesizeTTSRequest) Reset() {
 	*x = SynthesizeTTSRequest{}
-	mi := &file_course_v1_course_proto_msgTypes[117]
+	mi := &file_course_v1_course_proto_msgTypes[120]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7387,7 +7583,7 @@ func (x *SynthesizeTTSRequest) String() string {
 func (*SynthesizeTTSRequest) ProtoMessage() {}
 
 func (x *SynthesizeTTSRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[117]
+	mi := &file_course_v1_course_proto_msgTypes[120]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7400,7 +7596,7 @@ func (x *SynthesizeTTSRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SynthesizeTTSRequest.ProtoReflect.Descriptor instead.
 func (*SynthesizeTTSRequest) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{117}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{120}
 }
 
 func (x *SynthesizeTTSRequest) GetText() string {
@@ -7448,7 +7644,7 @@ type SynthesizeTTSResponse struct {
 
 func (x *SynthesizeTTSResponse) Reset() {
 	*x = SynthesizeTTSResponse{}
-	mi := &file_course_v1_course_proto_msgTypes[118]
+	mi := &file_course_v1_course_proto_msgTypes[121]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7460,7 +7656,7 @@ func (x *SynthesizeTTSResponse) String() string {
 func (*SynthesizeTTSResponse) ProtoMessage() {}
 
 func (x *SynthesizeTTSResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[118]
+	mi := &file_course_v1_course_proto_msgTypes[121]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7473,7 +7669,7 @@ func (x *SynthesizeTTSResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SynthesizeTTSResponse.ProtoReflect.Descriptor instead.
 func (*SynthesizeTTSResponse) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{118}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{121}
 }
 
 func (x *SynthesizeTTSResponse) GetEntry() *TTSCacheEntry {
@@ -7501,7 +7697,7 @@ type GetTTSByTextRequest struct {
 
 func (x *GetTTSByTextRequest) Reset() {
 	*x = GetTTSByTextRequest{}
-	mi := &file_course_v1_course_proto_msgTypes[119]
+	mi := &file_course_v1_course_proto_msgTypes[122]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7513,7 +7709,7 @@ func (x *GetTTSByTextRequest) String() string {
 func (*GetTTSByTextRequest) ProtoMessage() {}
 
 func (x *GetTTSByTextRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[119]
+	mi := &file_course_v1_course_proto_msgTypes[122]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7526,7 +7722,7 @@ func (x *GetTTSByTextRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTTSByTextRequest.ProtoReflect.Descriptor instead.
 func (*GetTTSByTextRequest) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{119}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{122}
 }
 
 func (x *GetTTSByTextRequest) GetText() string {
@@ -7559,7 +7755,7 @@ type GetTTSByTextResponse struct {
 
 func (x *GetTTSByTextResponse) Reset() {
 	*x = GetTTSByTextResponse{}
-	mi := &file_course_v1_course_proto_msgTypes[120]
+	mi := &file_course_v1_course_proto_msgTypes[123]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7571,7 +7767,7 @@ func (x *GetTTSByTextResponse) String() string {
 func (*GetTTSByTextResponse) ProtoMessage() {}
 
 func (x *GetTTSByTextResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[120]
+	mi := &file_course_v1_course_proto_msgTypes[123]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7584,7 +7780,7 @@ func (x *GetTTSByTextResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTTSByTextResponse.ProtoReflect.Descriptor instead.
 func (*GetTTSByTextResponse) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{120}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{123}
 }
 
 func (x *GetTTSByTextResponse) GetEntry() *TTSCacheEntry {
@@ -7628,7 +7824,7 @@ type Flashcard struct {
 
 func (x *Flashcard) Reset() {
 	*x = Flashcard{}
-	mi := &file_course_v1_course_proto_msgTypes[121]
+	mi := &file_course_v1_course_proto_msgTypes[124]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7640,7 +7836,7 @@ func (x *Flashcard) String() string {
 func (*Flashcard) ProtoMessage() {}
 
 func (x *Flashcard) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[121]
+	mi := &file_course_v1_course_proto_msgTypes[124]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7653,7 +7849,7 @@ func (x *Flashcard) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Flashcard.ProtoReflect.Descriptor instead.
 func (*Flashcard) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{121}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{124}
 }
 
 func (x *Flashcard) GetId() string {
@@ -7819,7 +8015,7 @@ type ListFlashcardsRequest struct {
 
 func (x *ListFlashcardsRequest) Reset() {
 	*x = ListFlashcardsRequest{}
-	mi := &file_course_v1_course_proto_msgTypes[122]
+	mi := &file_course_v1_course_proto_msgTypes[125]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7831,7 +8027,7 @@ func (x *ListFlashcardsRequest) String() string {
 func (*ListFlashcardsRequest) ProtoMessage() {}
 
 func (x *ListFlashcardsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[122]
+	mi := &file_course_v1_course_proto_msgTypes[125]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7844,7 +8040,7 @@ func (x *ListFlashcardsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ListFlashcardsRequest.ProtoReflect.Descriptor instead.
 func (*ListFlashcardsRequest) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{122}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{125}
 }
 
 func (x *ListFlashcardsRequest) GetUserId() string {
@@ -7913,7 +8109,7 @@ type ListFlashcardsResponse struct {
 
 func (x *ListFlashcardsResponse) Reset() {
 	*x = ListFlashcardsResponse{}
-	mi := &file_course_v1_course_proto_msgTypes[123]
+	mi := &file_course_v1_course_proto_msgTypes[126]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7925,7 +8121,7 @@ func (x *ListFlashcardsResponse) String() string {
 func (*ListFlashcardsResponse) ProtoMessage() {}
 
 func (x *ListFlashcardsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[123]
+	mi := &file_course_v1_course_proto_msgTypes[126]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7938,7 +8134,7 @@ func (x *ListFlashcardsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ListFlashcardsResponse.ProtoReflect.Descriptor instead.
 func (*ListFlashcardsResponse) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{123}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{126}
 }
 
 func (x *ListFlashcardsResponse) GetItems() []*Flashcard {
@@ -7967,7 +8163,7 @@ type GetFlashcardRequest struct {
 
 func (x *GetFlashcardRequest) Reset() {
 	*x = GetFlashcardRequest{}
-	mi := &file_course_v1_course_proto_msgTypes[124]
+	mi := &file_course_v1_course_proto_msgTypes[127]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7979,7 +8175,7 @@ func (x *GetFlashcardRequest) String() string {
 func (*GetFlashcardRequest) ProtoMessage() {}
 
 func (x *GetFlashcardRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[124]
+	mi := &file_course_v1_course_proto_msgTypes[127]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7992,7 +8188,7 @@ func (x *GetFlashcardRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetFlashcardRequest.ProtoReflect.Descriptor instead.
 func (*GetFlashcardRequest) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{124}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{127}
 }
 
 func (x *GetFlashcardRequest) GetUserId() string {
@@ -8025,7 +8221,7 @@ type GetFlashcardResponse struct {
 
 func (x *GetFlashcardResponse) Reset() {
 	*x = GetFlashcardResponse{}
-	mi := &file_course_v1_course_proto_msgTypes[125]
+	mi := &file_course_v1_course_proto_msgTypes[128]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -8037,7 +8233,7 @@ func (x *GetFlashcardResponse) String() string {
 func (*GetFlashcardResponse) ProtoMessage() {}
 
 func (x *GetFlashcardResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[125]
+	mi := &file_course_v1_course_proto_msgTypes[128]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8050,7 +8246,7 @@ func (x *GetFlashcardResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetFlashcardResponse.ProtoReflect.Descriptor instead.
 func (*GetFlashcardResponse) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{125}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{128}
 }
 
 func (x *GetFlashcardResponse) GetFlashcard() *Flashcard {
@@ -8081,7 +8277,7 @@ type CreateFlashcardRequest struct {
 
 func (x *CreateFlashcardRequest) Reset() {
 	*x = CreateFlashcardRequest{}
-	mi := &file_course_v1_course_proto_msgTypes[126]
+	mi := &file_course_v1_course_proto_msgTypes[129]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -8093,7 +8289,7 @@ func (x *CreateFlashcardRequest) String() string {
 func (*CreateFlashcardRequest) ProtoMessage() {}
 
 func (x *CreateFlashcardRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[126]
+	mi := &file_course_v1_course_proto_msgTypes[129]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8106,7 +8302,7 @@ func (x *CreateFlashcardRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateFlashcardRequest.ProtoReflect.Descriptor instead.
 func (*CreateFlashcardRequest) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{126}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{129}
 }
 
 func (x *CreateFlashcardRequest) GetUserId() string {
@@ -8188,7 +8384,7 @@ type CreateFlashcardResponse struct {
 
 func (x *CreateFlashcardResponse) Reset() {
 	*x = CreateFlashcardResponse{}
-	mi := &file_course_v1_course_proto_msgTypes[127]
+	mi := &file_course_v1_course_proto_msgTypes[130]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -8200,7 +8396,7 @@ func (x *CreateFlashcardResponse) String() string {
 func (*CreateFlashcardResponse) ProtoMessage() {}
 
 func (x *CreateFlashcardResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[127]
+	mi := &file_course_v1_course_proto_msgTypes[130]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8213,7 +8409,7 @@ func (x *CreateFlashcardResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateFlashcardResponse.ProtoReflect.Descriptor instead.
 func (*CreateFlashcardResponse) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{127}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{130}
 }
 
 func (x *CreateFlashcardResponse) GetFlashcard() *Flashcard {
@@ -8242,7 +8438,7 @@ type UpdateFlashcardRequest struct {
 
 func (x *UpdateFlashcardRequest) Reset() {
 	*x = UpdateFlashcardRequest{}
-	mi := &file_course_v1_course_proto_msgTypes[128]
+	mi := &file_course_v1_course_proto_msgTypes[131]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -8254,7 +8450,7 @@ func (x *UpdateFlashcardRequest) String() string {
 func (*UpdateFlashcardRequest) ProtoMessage() {}
 
 func (x *UpdateFlashcardRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[128]
+	mi := &file_course_v1_course_proto_msgTypes[131]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8267,7 +8463,7 @@ func (x *UpdateFlashcardRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UpdateFlashcardRequest.ProtoReflect.Descriptor instead.
 func (*UpdateFlashcardRequest) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{128}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{131}
 }
 
 func (x *UpdateFlashcardRequest) GetUserId() string {
@@ -8342,7 +8538,7 @@ type UpdateFlashcardResponse struct {
 
 func (x *UpdateFlashcardResponse) Reset() {
 	*x = UpdateFlashcardResponse{}
-	mi := &file_course_v1_course_proto_msgTypes[129]
+	mi := &file_course_v1_course_proto_msgTypes[132]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -8354,7 +8550,7 @@ func (x *UpdateFlashcardResponse) String() string {
 func (*UpdateFlashcardResponse) ProtoMessage() {}
 
 func (x *UpdateFlashcardResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[129]
+	mi := &file_course_v1_course_proto_msgTypes[132]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8367,7 +8563,7 @@ func (x *UpdateFlashcardResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UpdateFlashcardResponse.ProtoReflect.Descriptor instead.
 func (*UpdateFlashcardResponse) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{129}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{132}
 }
 
 func (x *UpdateFlashcardResponse) GetFlashcard() *Flashcard {
@@ -8389,7 +8585,7 @@ type ArchiveFlashcardRequest struct {
 
 func (x *ArchiveFlashcardRequest) Reset() {
 	*x = ArchiveFlashcardRequest{}
-	mi := &file_course_v1_course_proto_msgTypes[130]
+	mi := &file_course_v1_course_proto_msgTypes[133]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -8401,7 +8597,7 @@ func (x *ArchiveFlashcardRequest) String() string {
 func (*ArchiveFlashcardRequest) ProtoMessage() {}
 
 func (x *ArchiveFlashcardRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[130]
+	mi := &file_course_v1_course_proto_msgTypes[133]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8414,7 +8610,7 @@ func (x *ArchiveFlashcardRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ArchiveFlashcardRequest.ProtoReflect.Descriptor instead.
 func (*ArchiveFlashcardRequest) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{130}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{133}
 }
 
 func (x *ArchiveFlashcardRequest) GetUserId() string {
@@ -8439,7 +8635,7 @@ type ArchiveFlashcardResponse struct {
 
 func (x *ArchiveFlashcardResponse) Reset() {
 	*x = ArchiveFlashcardResponse{}
-	mi := &file_course_v1_course_proto_msgTypes[131]
+	mi := &file_course_v1_course_proto_msgTypes[134]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -8451,7 +8647,7 @@ func (x *ArchiveFlashcardResponse) String() string {
 func (*ArchiveFlashcardResponse) ProtoMessage() {}
 
 func (x *ArchiveFlashcardResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[131]
+	mi := &file_course_v1_course_proto_msgTypes[134]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8464,7 +8660,7 @@ func (x *ArchiveFlashcardResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ArchiveFlashcardResponse.ProtoReflect.Descriptor instead.
 func (*ArchiveFlashcardResponse) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{131}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{134}
 }
 
 // === BulkCreateFlashcards ===
@@ -8479,7 +8675,7 @@ type BulkCreateFlashcardsRequest struct {
 
 func (x *BulkCreateFlashcardsRequest) Reset() {
 	*x = BulkCreateFlashcardsRequest{}
-	mi := &file_course_v1_course_proto_msgTypes[132]
+	mi := &file_course_v1_course_proto_msgTypes[135]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -8491,7 +8687,7 @@ func (x *BulkCreateFlashcardsRequest) String() string {
 func (*BulkCreateFlashcardsRequest) ProtoMessage() {}
 
 func (x *BulkCreateFlashcardsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[132]
+	mi := &file_course_v1_course_proto_msgTypes[135]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8504,7 +8700,7 @@ func (x *BulkCreateFlashcardsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use BulkCreateFlashcardsRequest.ProtoReflect.Descriptor instead.
 func (*BulkCreateFlashcardsRequest) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{132}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{135}
 }
 
 func (x *BulkCreateFlashcardsRequest) GetUserId() string {
@@ -8532,7 +8728,7 @@ type BulkCreateFlashcardsResponse struct {
 
 func (x *BulkCreateFlashcardsResponse) Reset() {
 	*x = BulkCreateFlashcardsResponse{}
-	mi := &file_course_v1_course_proto_msgTypes[133]
+	mi := &file_course_v1_course_proto_msgTypes[136]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -8544,7 +8740,7 @@ func (x *BulkCreateFlashcardsResponse) String() string {
 func (*BulkCreateFlashcardsResponse) ProtoMessage() {}
 
 func (x *BulkCreateFlashcardsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[133]
+	mi := &file_course_v1_course_proto_msgTypes[136]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8557,7 +8753,7 @@ func (x *BulkCreateFlashcardsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use BulkCreateFlashcardsResponse.ProtoReflect.Descriptor instead.
 func (*BulkCreateFlashcardsResponse) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{133}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{136}
 }
 
 func (x *BulkCreateFlashcardsResponse) GetCreatedCount() int32 {
@@ -8596,7 +8792,7 @@ type AddVocabularyAsFlashcardRequest struct {
 
 func (x *AddVocabularyAsFlashcardRequest) Reset() {
 	*x = AddVocabularyAsFlashcardRequest{}
-	mi := &file_course_v1_course_proto_msgTypes[134]
+	mi := &file_course_v1_course_proto_msgTypes[137]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -8608,7 +8804,7 @@ func (x *AddVocabularyAsFlashcardRequest) String() string {
 func (*AddVocabularyAsFlashcardRequest) ProtoMessage() {}
 
 func (x *AddVocabularyAsFlashcardRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[134]
+	mi := &file_course_v1_course_proto_msgTypes[137]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8621,7 +8817,7 @@ func (x *AddVocabularyAsFlashcardRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AddVocabularyAsFlashcardRequest.ProtoReflect.Descriptor instead.
 func (*AddVocabularyAsFlashcardRequest) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{134}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{137}
 }
 
 func (x *AddVocabularyAsFlashcardRequest) GetUserId() string {
@@ -8656,7 +8852,7 @@ type AddVocabularyAsFlashcardResponse struct {
 
 func (x *AddVocabularyAsFlashcardResponse) Reset() {
 	*x = AddVocabularyAsFlashcardResponse{}
-	mi := &file_course_v1_course_proto_msgTypes[135]
+	mi := &file_course_v1_course_proto_msgTypes[138]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -8668,7 +8864,7 @@ func (x *AddVocabularyAsFlashcardResponse) String() string {
 func (*AddVocabularyAsFlashcardResponse) ProtoMessage() {}
 
 func (x *AddVocabularyAsFlashcardResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[135]
+	mi := &file_course_v1_course_proto_msgTypes[138]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8681,7 +8877,7 @@ func (x *AddVocabularyAsFlashcardResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AddVocabularyAsFlashcardResponse.ProtoReflect.Descriptor instead.
 func (*AddVocabularyAsFlashcardResponse) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{135}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{138}
 }
 
 func (x *AddVocabularyAsFlashcardResponse) GetFlashcard() *Flashcard {
@@ -8709,7 +8905,7 @@ type GetFlashcardStatsRequest struct {
 
 func (x *GetFlashcardStatsRequest) Reset() {
 	*x = GetFlashcardStatsRequest{}
-	mi := &file_course_v1_course_proto_msgTypes[136]
+	mi := &file_course_v1_course_proto_msgTypes[139]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -8721,7 +8917,7 @@ func (x *GetFlashcardStatsRequest) String() string {
 func (*GetFlashcardStatsRequest) ProtoMessage() {}
 
 func (x *GetFlashcardStatsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[136]
+	mi := &file_course_v1_course_proto_msgTypes[139]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8734,7 +8930,7 @@ func (x *GetFlashcardStatsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetFlashcardStatsRequest.ProtoReflect.Descriptor instead.
 func (*GetFlashcardStatsRequest) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{136}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{139}
 }
 
 func (x *GetFlashcardStatsRequest) GetUserId() string {
@@ -8762,7 +8958,7 @@ type GetFlashcardStatsResponse struct {
 
 func (x *GetFlashcardStatsResponse) Reset() {
 	*x = GetFlashcardStatsResponse{}
-	mi := &file_course_v1_course_proto_msgTypes[137]
+	mi := &file_course_v1_course_proto_msgTypes[140]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -8774,7 +8970,7 @@ func (x *GetFlashcardStatsResponse) String() string {
 func (*GetFlashcardStatsResponse) ProtoMessage() {}
 
 func (x *GetFlashcardStatsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[137]
+	mi := &file_course_v1_course_proto_msgTypes[140]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8787,7 +8983,7 @@ func (x *GetFlashcardStatsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetFlashcardStatsResponse.ProtoReflect.Descriptor instead.
 func (*GetFlashcardStatsResponse) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{137}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{140}
 }
 
 func (x *GetFlashcardStatsResponse) GetTodayDue() int32 {
@@ -8838,7 +9034,7 @@ type PinForTodayRequest struct {
 
 func (x *PinForTodayRequest) Reset() {
 	*x = PinForTodayRequest{}
-	mi := &file_course_v1_course_proto_msgTypes[138]
+	mi := &file_course_v1_course_proto_msgTypes[141]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -8850,7 +9046,7 @@ func (x *PinForTodayRequest) String() string {
 func (*PinForTodayRequest) ProtoMessage() {}
 
 func (x *PinForTodayRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[138]
+	mi := &file_course_v1_course_proto_msgTypes[141]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8863,7 +9059,7 @@ func (x *PinForTodayRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PinForTodayRequest.ProtoReflect.Descriptor instead.
 func (*PinForTodayRequest) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{138}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{141}
 }
 
 func (x *PinForTodayRequest) GetUserId() string {
@@ -8897,7 +9093,7 @@ type PinForTodayResponse struct {
 
 func (x *PinForTodayResponse) Reset() {
 	*x = PinForTodayResponse{}
-	mi := &file_course_v1_course_proto_msgTypes[139]
+	mi := &file_course_v1_course_proto_msgTypes[142]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -8909,7 +9105,7 @@ func (x *PinForTodayResponse) String() string {
 func (*PinForTodayResponse) ProtoMessage() {}
 
 func (x *PinForTodayResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[139]
+	mi := &file_course_v1_course_proto_msgTypes[142]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8922,7 +9118,7 @@ func (x *PinForTodayResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PinForTodayResponse.ProtoReflect.Descriptor instead.
 func (*PinForTodayResponse) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{139}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{142}
 }
 
 func (x *PinForTodayResponse) GetAddedAt() *timestamppb.Timestamp {
@@ -8943,7 +9139,7 @@ type UnpinFromTodayRequest struct {
 
 func (x *UnpinFromTodayRequest) Reset() {
 	*x = UnpinFromTodayRequest{}
-	mi := &file_course_v1_course_proto_msgTypes[140]
+	mi := &file_course_v1_course_proto_msgTypes[143]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -8955,7 +9151,7 @@ func (x *UnpinFromTodayRequest) String() string {
 func (*UnpinFromTodayRequest) ProtoMessage() {}
 
 func (x *UnpinFromTodayRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[140]
+	mi := &file_course_v1_course_proto_msgTypes[143]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8968,7 +9164,7 @@ func (x *UnpinFromTodayRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UnpinFromTodayRequest.ProtoReflect.Descriptor instead.
 func (*UnpinFromTodayRequest) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{140}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{143}
 }
 
 func (x *UnpinFromTodayRequest) GetUserId() string {
@@ -9000,7 +9196,7 @@ type UnpinFromTodayResponse struct {
 
 func (x *UnpinFromTodayResponse) Reset() {
 	*x = UnpinFromTodayResponse{}
-	mi := &file_course_v1_course_proto_msgTypes[141]
+	mi := &file_course_v1_course_proto_msgTypes[144]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -9012,7 +9208,7 @@ func (x *UnpinFromTodayResponse) String() string {
 func (*UnpinFromTodayResponse) ProtoMessage() {}
 
 func (x *UnpinFromTodayResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[141]
+	mi := &file_course_v1_course_proto_msgTypes[144]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -9025,7 +9221,7 @@ func (x *UnpinFromTodayResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UnpinFromTodayResponse.ProtoReflect.Descriptor instead.
 func (*UnpinFromTodayResponse) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{141}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{144}
 }
 
 type ListTodayQueueRequest struct {
@@ -9040,7 +9236,7 @@ type ListTodayQueueRequest struct {
 
 func (x *ListTodayQueueRequest) Reset() {
 	*x = ListTodayQueueRequest{}
-	mi := &file_course_v1_course_proto_msgTypes[142]
+	mi := &file_course_v1_course_proto_msgTypes[145]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -9052,7 +9248,7 @@ func (x *ListTodayQueueRequest) String() string {
 func (*ListTodayQueueRequest) ProtoMessage() {}
 
 func (x *ListTodayQueueRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[142]
+	mi := &file_course_v1_course_proto_msgTypes[145]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -9065,7 +9261,7 @@ func (x *ListTodayQueueRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ListTodayQueueRequest.ProtoReflect.Descriptor instead.
 func (*ListTodayQueueRequest) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{142}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{145}
 }
 
 func (x *ListTodayQueueRequest) GetUserId() string {
@@ -9100,7 +9296,7 @@ type ListTodayQueueResponse struct {
 
 func (x *ListTodayQueueResponse) Reset() {
 	*x = ListTodayQueueResponse{}
-	mi := &file_course_v1_course_proto_msgTypes[143]
+	mi := &file_course_v1_course_proto_msgTypes[146]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -9112,7 +9308,7 @@ func (x *ListTodayQueueResponse) String() string {
 func (*ListTodayQueueResponse) ProtoMessage() {}
 
 func (x *ListTodayQueueResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[143]
+	mi := &file_course_v1_course_proto_msgTypes[146]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -9125,7 +9321,7 @@ func (x *ListTodayQueueResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ListTodayQueueResponse.ProtoReflect.Descriptor instead.
 func (*ListTodayQueueResponse) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{143}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{146}
 }
 
 func (x *ListTodayQueueResponse) GetItems() []*Flashcard {
@@ -9159,7 +9355,7 @@ type BulkCreateFlashcardsRequest_Item struct {
 
 func (x *BulkCreateFlashcardsRequest_Item) Reset() {
 	*x = BulkCreateFlashcardsRequest_Item{}
-	mi := &file_course_v1_course_proto_msgTypes[144]
+	mi := &file_course_v1_course_proto_msgTypes[147]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -9171,7 +9367,7 @@ func (x *BulkCreateFlashcardsRequest_Item) String() string {
 func (*BulkCreateFlashcardsRequest_Item) ProtoMessage() {}
 
 func (x *BulkCreateFlashcardsRequest_Item) ProtoReflect() protoreflect.Message {
-	mi := &file_course_v1_course_proto_msgTypes[144]
+	mi := &file_course_v1_course_proto_msgTypes[147]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -9184,7 +9380,7 @@ func (x *BulkCreateFlashcardsRequest_Item) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use BulkCreateFlashcardsRequest_Item.ProtoReflect.Descriptor instead.
 func (*BulkCreateFlashcardsRequest_Item) Descriptor() ([]byte, []int) {
-	return file_course_v1_course_proto_rawDescGZIP(), []int{132, 0}
+	return file_course_v1_course_proto_rawDescGZIP(), []int{135, 0}
 }
 
 func (x *BulkCreateFlashcardsRequest_Item) GetWord() string {
@@ -9812,7 +10008,23 @@ const file_course_v1_course_proto_rawDesc = "" +
 	"\rtime_spent_ms\x18\a \x01(\x05R\vtimeSpentMs\x12/\n" +
 	"\x13pronunciation_score\x18\b \x01(\x01R\x12pronunciationScore\"d\n" +
 	"#RecordVocabularyBankAttemptResponse\x12=\n" +
-	"\bprogress\x18\x01 \x01(\v2!.course.v1.VocabularyBankProgressR\bprogress\"\xde\x01\n" +
+	"\bprogress\x18\x01 \x01(\v2!.course.v1.VocabularyBankProgressR\bprogress\"\xd4\x01\n" +
+	"\x17VocabularyBankFeedEntry\x128\n" +
+	"\x04word\x18\x01 \x01(\v2$.course.v1.VocabularyBankWordSummaryR\x04word\x12\x16\n" +
+	"\x06status\x18\x02 \x01(\tR\x06status\x12!\n" +
+	"\fcurrent_step\x18\x03 \x01(\x05R\vcurrentStep\x12D\n" +
+	"\x10last_activity_at\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\x0elastActivityAt\"\xb8\x01\n" +
+	"\x1dListVocabularyBankFeedRequest\x12\x17\n" +
+	"\auser_id\x18\x01 \x01(\tR\x06userId\x12\x1d\n" +
+	"\n" +
+	"cefr_level\x18\x02 \x01(\tR\tcefrLevel\x12\x16\n" +
+	"\x06locale\x18\x03 \x01(\tR\x06locale\x12\x1b\n" +
+	"\tnew_limit\x18\x04 \x01(\x05R\bnewLimit\x12*\n" +
+	"\x11in_progress_limit\x18\x05 \x01(\x05R\x0finProgressLimit\"\xa6\x01\n" +
+	"\x1eListVocabularyBankFeedResponse\x12C\n" +
+	"\vin_progress\x18\x01 \x03(\v2\".course.v1.VocabularyBankFeedEntryR\n" +
+	"inProgress\x12?\n" +
+	"\tnew_words\x18\x02 \x03(\v2\".course.v1.VocabularyBankFeedEntryR\bnewWords\"\xde\x01\n" +
 	"\rTTSCacheEntry\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n" +
 	"\x04text\x18\x02 \x01(\tR\x04text\x12\x1a\n" +
@@ -9976,7 +10188,7 @@ const file_course_v1_course_proto_rawDesc = "" +
 	"includeSrs\"l\n" +
 	"\x16ListTodayQueueResponse\x12*\n" +
 	"\x05items\x18\x01 \x03(\v2\x14.course.v1.FlashcardR\x05items\x12&\n" +
-	"\x0fqueued_for_date\x18\x02 \x01(\tR\rqueuedForDate2\xca+\n" +
+	"\x0fqueued_for_date\x18\x02 \x01(\tR\rqueuedForDate2\xb9,\n" +
 	"\rCourseService\x12L\n" +
 	"\vListCourses\x12\x1d.course.v1.ListCoursesRequest\x1a\x1e.course.v1.ListCoursesResponse\x12F\n" +
 	"\tGetCourse\x12\x1b.course.v1.GetCourseRequest\x1a\x1c.course.v1.GetCourseResponse\x12F\n" +
@@ -10029,7 +10241,8 @@ const file_course_v1_course_proto_rawDesc = "" +
 	"\x17ListVocabularyBankWords\x12).course.v1.ListVocabularyBankWordsRequest\x1a*.course.v1.ListVocabularyBankWordsResponse\x12j\n" +
 	"\x15GetVocabularyBankWord\x12'.course.v1.GetVocabularyBankWordRequest\x1a(.course.v1.GetVocabularyBankWordResponse\x12v\n" +
 	"\x19GetVocabularyBankProgress\x12+.course.v1.GetVocabularyBankProgressRequest\x1a,.course.v1.GetVocabularyBankProgressResponse\x12|\n" +
-	"\x1bRecordVocabularyBankAttempt\x12-.course.v1.RecordVocabularyBankAttemptRequest\x1a..course.v1.RecordVocabularyBankAttemptResponse\x12R\n" +
+	"\x1bRecordVocabularyBankAttempt\x12-.course.v1.RecordVocabularyBankAttemptRequest\x1a..course.v1.RecordVocabularyBankAttemptResponse\x12m\n" +
+	"\x16ListVocabularyBankFeed\x12(.course.v1.ListVocabularyBankFeedRequest\x1a).course.v1.ListVocabularyBankFeedResponse\x12R\n" +
 	"\rSynthesizeTTS\x12\x1f.course.v1.SynthesizeTTSRequest\x1a .course.v1.SynthesizeTTSResponse\x12O\n" +
 	"\fGetTTSByText\x12\x1e.course.v1.GetTTSByTextRequest\x1a\x1f.course.v1.GetTTSByTextResponse\x12U\n" +
 	"\x0eListFlashcards\x12 .course.v1.ListFlashcardsRequest\x1a!.course.v1.ListFlashcardsResponse\x12O\n" +
@@ -10060,7 +10273,7 @@ func file_course_v1_course_proto_rawDescGZIP() []byte {
 	return file_course_v1_course_proto_rawDescData
 }
 
-var file_course_v1_course_proto_msgTypes = make([]protoimpl.MessageInfo, 145)
+var file_course_v1_course_proto_msgTypes = make([]protoimpl.MessageInfo, 148)
 var file_course_v1_course_proto_goTypes = []any{
 	(*Course)(nil),                                 // 0: course.v1.Course
 	(*Module)(nil),                                 // 1: course.v1.Module
@@ -10178,61 +10391,64 @@ var file_course_v1_course_proto_goTypes = []any{
 	(*GetVocabularyBankProgressResponse)(nil),      // 113: course.v1.GetVocabularyBankProgressResponse
 	(*RecordVocabularyBankAttemptRequest)(nil),     // 114: course.v1.RecordVocabularyBankAttemptRequest
 	(*RecordVocabularyBankAttemptResponse)(nil),    // 115: course.v1.RecordVocabularyBankAttemptResponse
-	(*TTSCacheEntry)(nil),                          // 116: course.v1.TTSCacheEntry
-	(*SynthesizeTTSRequest)(nil),                   // 117: course.v1.SynthesizeTTSRequest
-	(*SynthesizeTTSResponse)(nil),                  // 118: course.v1.SynthesizeTTSResponse
-	(*GetTTSByTextRequest)(nil),                    // 119: course.v1.GetTTSByTextRequest
-	(*GetTTSByTextResponse)(nil),                   // 120: course.v1.GetTTSByTextResponse
-	(*Flashcard)(nil),                              // 121: course.v1.Flashcard
-	(*ListFlashcardsRequest)(nil),                  // 122: course.v1.ListFlashcardsRequest
-	(*ListFlashcardsResponse)(nil),                 // 123: course.v1.ListFlashcardsResponse
-	(*GetFlashcardRequest)(nil),                    // 124: course.v1.GetFlashcardRequest
-	(*GetFlashcardResponse)(nil),                   // 125: course.v1.GetFlashcardResponse
-	(*CreateFlashcardRequest)(nil),                 // 126: course.v1.CreateFlashcardRequest
-	(*CreateFlashcardResponse)(nil),                // 127: course.v1.CreateFlashcardResponse
-	(*UpdateFlashcardRequest)(nil),                 // 128: course.v1.UpdateFlashcardRequest
-	(*UpdateFlashcardResponse)(nil),                // 129: course.v1.UpdateFlashcardResponse
-	(*ArchiveFlashcardRequest)(nil),                // 130: course.v1.ArchiveFlashcardRequest
-	(*ArchiveFlashcardResponse)(nil),               // 131: course.v1.ArchiveFlashcardResponse
-	(*BulkCreateFlashcardsRequest)(nil),            // 132: course.v1.BulkCreateFlashcardsRequest
-	(*BulkCreateFlashcardsResponse)(nil),           // 133: course.v1.BulkCreateFlashcardsResponse
-	(*AddVocabularyAsFlashcardRequest)(nil),        // 134: course.v1.AddVocabularyAsFlashcardRequest
-	(*AddVocabularyAsFlashcardResponse)(nil),       // 135: course.v1.AddVocabularyAsFlashcardResponse
-	(*GetFlashcardStatsRequest)(nil),               // 136: course.v1.GetFlashcardStatsRequest
-	(*GetFlashcardStatsResponse)(nil),              // 137: course.v1.GetFlashcardStatsResponse
-	(*PinForTodayRequest)(nil),                     // 138: course.v1.PinForTodayRequest
-	(*PinForTodayResponse)(nil),                    // 139: course.v1.PinForTodayResponse
-	(*UnpinFromTodayRequest)(nil),                  // 140: course.v1.UnpinFromTodayRequest
-	(*UnpinFromTodayResponse)(nil),                 // 141: course.v1.UnpinFromTodayResponse
-	(*ListTodayQueueRequest)(nil),                  // 142: course.v1.ListTodayQueueRequest
-	(*ListTodayQueueResponse)(nil),                 // 143: course.v1.ListTodayQueueResponse
-	(*BulkCreateFlashcardsRequest_Item)(nil),       // 144: course.v1.BulkCreateFlashcardsRequest.Item
-	(*timestamppb.Timestamp)(nil),                  // 145: google.protobuf.Timestamp
-	(*wrapperspb.StringValue)(nil),                 // 146: google.protobuf.StringValue
-	(*wrapperspb.DoubleValue)(nil),                 // 147: google.protobuf.DoubleValue
-	(*wrapperspb.Int32Value)(nil),                  // 148: google.protobuf.Int32Value
-	(*v1.AddXPResponse)(nil),                       // 149: gamification.v1.AddXPResponse
-	(*structpb.Struct)(nil),                        // 150: google.protobuf.Struct
+	(*VocabularyBankFeedEntry)(nil),                // 116: course.v1.VocabularyBankFeedEntry
+	(*ListVocabularyBankFeedRequest)(nil),          // 117: course.v1.ListVocabularyBankFeedRequest
+	(*ListVocabularyBankFeedResponse)(nil),         // 118: course.v1.ListVocabularyBankFeedResponse
+	(*TTSCacheEntry)(nil),                          // 119: course.v1.TTSCacheEntry
+	(*SynthesizeTTSRequest)(nil),                   // 120: course.v1.SynthesizeTTSRequest
+	(*SynthesizeTTSResponse)(nil),                  // 121: course.v1.SynthesizeTTSResponse
+	(*GetTTSByTextRequest)(nil),                    // 122: course.v1.GetTTSByTextRequest
+	(*GetTTSByTextResponse)(nil),                   // 123: course.v1.GetTTSByTextResponse
+	(*Flashcard)(nil),                              // 124: course.v1.Flashcard
+	(*ListFlashcardsRequest)(nil),                  // 125: course.v1.ListFlashcardsRequest
+	(*ListFlashcardsResponse)(nil),                 // 126: course.v1.ListFlashcardsResponse
+	(*GetFlashcardRequest)(nil),                    // 127: course.v1.GetFlashcardRequest
+	(*GetFlashcardResponse)(nil),                   // 128: course.v1.GetFlashcardResponse
+	(*CreateFlashcardRequest)(nil),                 // 129: course.v1.CreateFlashcardRequest
+	(*CreateFlashcardResponse)(nil),                // 130: course.v1.CreateFlashcardResponse
+	(*UpdateFlashcardRequest)(nil),                 // 131: course.v1.UpdateFlashcardRequest
+	(*UpdateFlashcardResponse)(nil),                // 132: course.v1.UpdateFlashcardResponse
+	(*ArchiveFlashcardRequest)(nil),                // 133: course.v1.ArchiveFlashcardRequest
+	(*ArchiveFlashcardResponse)(nil),               // 134: course.v1.ArchiveFlashcardResponse
+	(*BulkCreateFlashcardsRequest)(nil),            // 135: course.v1.BulkCreateFlashcardsRequest
+	(*BulkCreateFlashcardsResponse)(nil),           // 136: course.v1.BulkCreateFlashcardsResponse
+	(*AddVocabularyAsFlashcardRequest)(nil),        // 137: course.v1.AddVocabularyAsFlashcardRequest
+	(*AddVocabularyAsFlashcardResponse)(nil),       // 138: course.v1.AddVocabularyAsFlashcardResponse
+	(*GetFlashcardStatsRequest)(nil),               // 139: course.v1.GetFlashcardStatsRequest
+	(*GetFlashcardStatsResponse)(nil),              // 140: course.v1.GetFlashcardStatsResponse
+	(*PinForTodayRequest)(nil),                     // 141: course.v1.PinForTodayRequest
+	(*PinForTodayResponse)(nil),                    // 142: course.v1.PinForTodayResponse
+	(*UnpinFromTodayRequest)(nil),                  // 143: course.v1.UnpinFromTodayRequest
+	(*UnpinFromTodayResponse)(nil),                 // 144: course.v1.UnpinFromTodayResponse
+	(*ListTodayQueueRequest)(nil),                  // 145: course.v1.ListTodayQueueRequest
+	(*ListTodayQueueResponse)(nil),                 // 146: course.v1.ListTodayQueueResponse
+	(*BulkCreateFlashcardsRequest_Item)(nil),       // 147: course.v1.BulkCreateFlashcardsRequest.Item
+	(*timestamppb.Timestamp)(nil),                  // 148: google.protobuf.Timestamp
+	(*wrapperspb.StringValue)(nil),                 // 149: google.protobuf.StringValue
+	(*wrapperspb.DoubleValue)(nil),                 // 150: google.protobuf.DoubleValue
+	(*wrapperspb.Int32Value)(nil),                  // 151: google.protobuf.Int32Value
+	(*v1.AddXPResponse)(nil),                       // 152: gamification.v1.AddXPResponse
+	(*structpb.Struct)(nil),                        // 153: google.protobuf.Struct
 }
 var file_course_v1_course_proto_depIdxs = []int32{
-	145, // 0: course.v1.Course.created_at:type_name -> google.protobuf.Timestamp
-	145, // 1: course.v1.Course.updated_at:type_name -> google.protobuf.Timestamp
-	145, // 2: course.v1.Module.created_at:type_name -> google.protobuf.Timestamp
-	145, // 3: course.v1.Module.updated_at:type_name -> google.protobuf.Timestamp
-	145, // 4: course.v1.Lesson.created_at:type_name -> google.protobuf.Timestamp
-	145, // 5: course.v1.Lesson.updated_at:type_name -> google.protobuf.Timestamp
-	145, // 6: course.v1.Step.created_at:type_name -> google.protobuf.Timestamp
-	145, // 7: course.v1.Step.updated_at:type_name -> google.protobuf.Timestamp
-	145, // 8: course.v1.Enrollment.enrolled_at:type_name -> google.protobuf.Timestamp
-	145, // 9: course.v1.Enrollment.access_until:type_name -> google.protobuf.Timestamp
+	148, // 0: course.v1.Course.created_at:type_name -> google.protobuf.Timestamp
+	148, // 1: course.v1.Course.updated_at:type_name -> google.protobuf.Timestamp
+	148, // 2: course.v1.Module.created_at:type_name -> google.protobuf.Timestamp
+	148, // 3: course.v1.Module.updated_at:type_name -> google.protobuf.Timestamp
+	148, // 4: course.v1.Lesson.created_at:type_name -> google.protobuf.Timestamp
+	148, // 5: course.v1.Lesson.updated_at:type_name -> google.protobuf.Timestamp
+	148, // 6: course.v1.Step.created_at:type_name -> google.protobuf.Timestamp
+	148, // 7: course.v1.Step.updated_at:type_name -> google.protobuf.Timestamp
+	148, // 8: course.v1.Enrollment.enrolled_at:type_name -> google.protobuf.Timestamp
+	148, // 9: course.v1.Enrollment.access_until:type_name -> google.protobuf.Timestamp
 	1,   // 10: course.v1.ModuleWithLessons.module:type_name -> course.v1.Module
 	6,   // 11: course.v1.ModuleWithLessons.lessons:type_name -> course.v1.LessonWithSteps
 	2,   // 12: course.v1.LessonWithSteps.lesson:type_name -> course.v1.Lesson
 	3,   // 13: course.v1.LessonWithSteps.steps:type_name -> course.v1.Step
-	146, // 14: course.v1.ListCoursesRequest.language:type_name -> google.protobuf.StringValue
-	146, // 15: course.v1.ListCoursesRequest.level:type_name -> google.protobuf.StringValue
-	147, // 16: course.v1.ListCoursesRequest.min_price:type_name -> google.protobuf.DoubleValue
-	147, // 17: course.v1.ListCoursesRequest.max_price:type_name -> google.protobuf.DoubleValue
+	149, // 14: course.v1.ListCoursesRequest.language:type_name -> google.protobuf.StringValue
+	149, // 15: course.v1.ListCoursesRequest.level:type_name -> google.protobuf.StringValue
+	150, // 16: course.v1.ListCoursesRequest.min_price:type_name -> google.protobuf.DoubleValue
+	150, // 17: course.v1.ListCoursesRequest.max_price:type_name -> google.protobuf.DoubleValue
 	0,   // 18: course.v1.ListCoursesResponse.courses:type_name -> course.v1.Course
 	0,   // 19: course.v1.GetCourseResponse.course:type_name -> course.v1.Course
 	5,   // 20: course.v1.GetCourseResponse.modules:type_name -> course.v1.ModuleWithLessons
@@ -10241,255 +10457,261 @@ var file_course_v1_course_proto_depIdxs = []int32{
 	3,   // 23: course.v1.GetStepContentResponse.step:type_name -> course.v1.Step
 	4,   // 24: course.v1.EnrollUserResponse.enrollment:type_name -> course.v1.Enrollment
 	0,   // 25: course.v1.CreateCourseResponse.course:type_name -> course.v1.Course
-	146, // 26: course.v1.UpdateCourseRequest.title:type_name -> google.protobuf.StringValue
-	146, // 27: course.v1.UpdateCourseRequest.description:type_name -> google.protobuf.StringValue
-	147, // 28: course.v1.UpdateCourseRequest.price:type_name -> google.protobuf.DoubleValue
-	146, // 29: course.v1.UpdateCourseRequest.level:type_name -> google.protobuf.StringValue
-	146, // 30: course.v1.UpdateCourseRequest.language:type_name -> google.protobuf.StringValue
-	146, // 31: course.v1.UpdateCourseRequest.thumbnail_url:type_name -> google.protobuf.StringValue
+	149, // 26: course.v1.UpdateCourseRequest.title:type_name -> google.protobuf.StringValue
+	149, // 27: course.v1.UpdateCourseRequest.description:type_name -> google.protobuf.StringValue
+	150, // 28: course.v1.UpdateCourseRequest.price:type_name -> google.protobuf.DoubleValue
+	149, // 29: course.v1.UpdateCourseRequest.level:type_name -> google.protobuf.StringValue
+	149, // 30: course.v1.UpdateCourseRequest.language:type_name -> google.protobuf.StringValue
+	149, // 31: course.v1.UpdateCourseRequest.thumbnail_url:type_name -> google.protobuf.StringValue
 	0,   // 32: course.v1.UpdateCourseResponse.course:type_name -> course.v1.Course
 	0,   // 33: course.v1.PublishCourseResponse.course:type_name -> course.v1.Course
 	1,   // 34: course.v1.CreateModuleResponse.module:type_name -> course.v1.Module
-	146, // 35: course.v1.UpdateModuleRequest.title:type_name -> google.protobuf.StringValue
-	146, // 36: course.v1.UpdateModuleRequest.description:type_name -> google.protobuf.StringValue
-	148, // 37: course.v1.UpdateModuleRequest.order_index:type_name -> google.protobuf.Int32Value
+	149, // 35: course.v1.UpdateModuleRequest.title:type_name -> google.protobuf.StringValue
+	149, // 36: course.v1.UpdateModuleRequest.description:type_name -> google.protobuf.StringValue
+	151, // 37: course.v1.UpdateModuleRequest.order_index:type_name -> google.protobuf.Int32Value
 	1,   // 38: course.v1.UpdateModuleResponse.module:type_name -> course.v1.Module
 	2,   // 39: course.v1.CreateLessonResponse.lesson:type_name -> course.v1.Lesson
-	146, // 40: course.v1.UpdateLessonRequest.title:type_name -> google.protobuf.StringValue
-	146, // 41: course.v1.UpdateLessonRequest.description:type_name -> google.protobuf.StringValue
-	148, // 42: course.v1.UpdateLessonRequest.order_index:type_name -> google.protobuf.Int32Value
+	149, // 40: course.v1.UpdateLessonRequest.title:type_name -> google.protobuf.StringValue
+	149, // 41: course.v1.UpdateLessonRequest.description:type_name -> google.protobuf.StringValue
+	151, // 42: course.v1.UpdateLessonRequest.order_index:type_name -> google.protobuf.Int32Value
 	2,   // 43: course.v1.UpdateLessonResponse.lesson:type_name -> course.v1.Lesson
 	3,   // 44: course.v1.CreateStepResponse.step:type_name -> course.v1.Step
-	146, // 45: course.v1.UpdateStepRequest.type:type_name -> google.protobuf.StringValue
-	146, // 46: course.v1.UpdateStepRequest.title:type_name -> google.protobuf.StringValue
-	146, // 47: course.v1.UpdateStepRequest.content:type_name -> google.protobuf.StringValue
-	148, // 48: course.v1.UpdateStepRequest.order_index:type_name -> google.protobuf.Int32Value
+	149, // 45: course.v1.UpdateStepRequest.type:type_name -> google.protobuf.StringValue
+	149, // 46: course.v1.UpdateStepRequest.title:type_name -> google.protobuf.StringValue
+	149, // 47: course.v1.UpdateStepRequest.content:type_name -> google.protobuf.StringValue
+	151, // 48: course.v1.UpdateStepRequest.order_index:type_name -> google.protobuf.Int32Value
 	3,   // 49: course.v1.UpdateStepResponse.step:type_name -> course.v1.Step
-	145, // 50: course.v1.StepProgress.completed_at:type_name -> google.protobuf.Timestamp
-	145, // 51: course.v1.StepProgress.created_at:type_name -> google.protobuf.Timestamp
-	145, // 52: course.v1.StepProgress.updated_at:type_name -> google.protobuf.Timestamp
-	145, // 53: course.v1.LessonProgress.started_at:type_name -> google.protobuf.Timestamp
-	145, // 54: course.v1.LessonProgress.last_activity_at:type_name -> google.protobuf.Timestamp
-	145, // 55: course.v1.LessonProgress.completed_at:type_name -> google.protobuf.Timestamp
-	148, // 56: course.v1.MarkStepCompleteRequest.attempts:type_name -> google.protobuf.Int32Value
-	147, // 57: course.v1.MarkStepCompleteRequest.score:type_name -> google.protobuf.DoubleValue
+	148, // 50: course.v1.StepProgress.completed_at:type_name -> google.protobuf.Timestamp
+	148, // 51: course.v1.StepProgress.created_at:type_name -> google.protobuf.Timestamp
+	148, // 52: course.v1.StepProgress.updated_at:type_name -> google.protobuf.Timestamp
+	148, // 53: course.v1.LessonProgress.started_at:type_name -> google.protobuf.Timestamp
+	148, // 54: course.v1.LessonProgress.last_activity_at:type_name -> google.protobuf.Timestamp
+	148, // 55: course.v1.LessonProgress.completed_at:type_name -> google.protobuf.Timestamp
+	151, // 56: course.v1.MarkStepCompleteRequest.attempts:type_name -> google.protobuf.Int32Value
+	150, // 57: course.v1.MarkStepCompleteRequest.score:type_name -> google.protobuf.DoubleValue
 	45,  // 58: course.v1.MarkStepCompleteResponse.step_progress:type_name -> course.v1.StepProgress
 	46,  // 59: course.v1.MarkStepCompleteResponse.lesson_progress:type_name -> course.v1.LessonProgress
-	149, // 60: course.v1.MarkStepCompleteResponse.gamification:type_name -> gamification.v1.AddXPResponse
+	152, // 60: course.v1.MarkStepCompleteResponse.gamification:type_name -> gamification.v1.AddXPResponse
 	45,  // 61: course.v1.GetStepProgressResponse.progress:type_name -> course.v1.StepProgress
 	46,  // 62: course.v1.GetLessonProgressResponse.progress:type_name -> course.v1.LessonProgress
 	45,  // 63: course.v1.GetLessonProgressResponse.step_progresses:type_name -> course.v1.StepProgress
 	46,  // 64: course.v1.GetCourseProgressResponse.lesson_progresses:type_name -> course.v1.LessonProgress
-	145, // 65: course.v1.Track.created_at:type_name -> google.protobuf.Timestamp
-	145, // 66: course.v1.Track.updated_at:type_name -> google.protobuf.Timestamp
+	148, // 65: course.v1.Track.created_at:type_name -> google.protobuf.Timestamp
+	148, // 66: course.v1.Track.updated_at:type_name -> google.protobuf.Timestamp
 	55,  // 67: course.v1.TrackWithLessons.track:type_name -> course.v1.Track
 	2,   // 68: course.v1.TrackWithLessons.lessons:type_name -> course.v1.Lesson
-	146, // 69: course.v1.ListTracksRequest.language:type_name -> google.protobuf.StringValue
-	146, // 70: course.v1.ListTracksRequest.level:type_name -> google.protobuf.StringValue
-	146, // 71: course.v1.ListTracksRequest.track_type:type_name -> google.protobuf.StringValue
+	149, // 69: course.v1.ListTracksRequest.language:type_name -> google.protobuf.StringValue
+	149, // 70: course.v1.ListTracksRequest.level:type_name -> google.protobuf.StringValue
+	149, // 71: course.v1.ListTracksRequest.track_type:type_name -> google.protobuf.StringValue
 	55,  // 72: course.v1.ListTracksResponse.tracks:type_name -> course.v1.Track
 	55,  // 73: course.v1.GetTrackResponse.track:type_name -> course.v1.Track
 	2,   // 74: course.v1.GetTrackResponse.lessons:type_name -> course.v1.Lesson
 	55,  // 75: course.v1.CreateTrackResponse.track:type_name -> course.v1.Track
-	146, // 76: course.v1.UpdateTrackRequest.title:type_name -> google.protobuf.StringValue
-	146, // 77: course.v1.UpdateTrackRequest.description:type_name -> google.protobuf.StringValue
-	146, // 78: course.v1.UpdateTrackRequest.icon_url:type_name -> google.protobuf.StringValue
-	146, // 79: course.v1.UpdateTrackRequest.language:type_name -> google.protobuf.StringValue
-	146, // 80: course.v1.UpdateTrackRequest.level:type_name -> google.protobuf.StringValue
-	146, // 81: course.v1.UpdateTrackRequest.track_type:type_name -> google.protobuf.StringValue
-	148, // 82: course.v1.UpdateTrackRequest.sort_order:type_name -> google.protobuf.Int32Value
+	149, // 76: course.v1.UpdateTrackRequest.title:type_name -> google.protobuf.StringValue
+	149, // 77: course.v1.UpdateTrackRequest.description:type_name -> google.protobuf.StringValue
+	149, // 78: course.v1.UpdateTrackRequest.icon_url:type_name -> google.protobuf.StringValue
+	149, // 79: course.v1.UpdateTrackRequest.language:type_name -> google.protobuf.StringValue
+	149, // 80: course.v1.UpdateTrackRequest.level:type_name -> google.protobuf.StringValue
+	149, // 81: course.v1.UpdateTrackRequest.track_type:type_name -> google.protobuf.StringValue
+	151, // 82: course.v1.UpdateTrackRequest.sort_order:type_name -> google.protobuf.Int32Value
 	55,  // 83: course.v1.UpdateTrackResponse.track:type_name -> course.v1.Track
 	55,  // 84: course.v1.PublishTrackResponse.track:type_name -> course.v1.Track
 	55,  // 85: course.v1.UserTrack.track:type_name -> course.v1.Track
-	145, // 86: course.v1.UserTrack.added_at:type_name -> google.protobuf.Timestamp
+	148, // 86: course.v1.UserTrack.added_at:type_name -> google.protobuf.Timestamp
 	76,  // 87: course.v1.GetUserTracksResponse.tracks:type_name -> course.v1.UserTrack
-	145, // 88: course.v1.VocabularyEntry.created_at:type_name -> google.protobuf.Timestamp
-	145, // 89: course.v1.VocabularyEntry.updated_at:type_name -> google.protobuf.Timestamp
+	148, // 88: course.v1.VocabularyEntry.created_at:type_name -> google.protobuf.Timestamp
+	148, // 89: course.v1.VocabularyEntry.updated_at:type_name -> google.protobuf.Timestamp
 	85,  // 90: course.v1.TrackVocabularyEntry.vocabulary:type_name -> course.v1.VocabularyEntry
-	121, // 91: course.v1.TrackVocabularyEntry.flashcard:type_name -> course.v1.Flashcard
+	124, // 91: course.v1.TrackVocabularyEntry.flashcard:type_name -> course.v1.Flashcard
 	86,  // 92: course.v1.ListTrackVocabularyResponse.entries:type_name -> course.v1.TrackVocabularyEntry
-	121, // 93: course.v1.AddTrackVocabularyAsFlashcardsResponse.flashcards:type_name -> course.v1.Flashcard
-	146, // 94: course.v1.ListVocabularyRequest.language:type_name -> google.protobuf.StringValue
-	146, // 95: course.v1.ListVocabularyRequest.target_language:type_name -> google.protobuf.StringValue
-	146, // 96: course.v1.ListVocabularyRequest.level:type_name -> google.protobuf.StringValue
-	146, // 97: course.v1.ListVocabularyRequest.pos:type_name -> google.protobuf.StringValue
+	124, // 93: course.v1.AddTrackVocabularyAsFlashcardsResponse.flashcards:type_name -> course.v1.Flashcard
+	149, // 94: course.v1.ListVocabularyRequest.language:type_name -> google.protobuf.StringValue
+	149, // 95: course.v1.ListVocabularyRequest.target_language:type_name -> google.protobuf.StringValue
+	149, // 96: course.v1.ListVocabularyRequest.level:type_name -> google.protobuf.StringValue
+	149, // 97: course.v1.ListVocabularyRequest.pos:type_name -> google.protobuf.StringValue
 	85,  // 98: course.v1.ListVocabularyResponse.entries:type_name -> course.v1.VocabularyEntry
 	85,  // 99: course.v1.GetVocabularyEntryResponse.entry:type_name -> course.v1.VocabularyEntry
 	85,  // 100: course.v1.CreateVocabularyEntryResponse.entry:type_name -> course.v1.VocabularyEntry
-	146, // 101: course.v1.UpdateVocabularyEntryRequest.word:type_name -> google.protobuf.StringValue
-	146, // 102: course.v1.UpdateVocabularyEntryRequest.translation:type_name -> google.protobuf.StringValue
-	146, // 103: course.v1.UpdateVocabularyEntryRequest.audio_url:type_name -> google.protobuf.StringValue
-	146, // 104: course.v1.UpdateVocabularyEntryRequest.image_url:type_name -> google.protobuf.StringValue
-	146, // 105: course.v1.UpdateVocabularyEntryRequest.level:type_name -> google.protobuf.StringValue
-	146, // 106: course.v1.UpdateVocabularyEntryRequest.pos:type_name -> google.protobuf.StringValue
-	146, // 107: course.v1.UpdateVocabularyEntryRequest.transcription:type_name -> google.protobuf.StringValue
+	149, // 101: course.v1.UpdateVocabularyEntryRequest.word:type_name -> google.protobuf.StringValue
+	149, // 102: course.v1.UpdateVocabularyEntryRequest.translation:type_name -> google.protobuf.StringValue
+	149, // 103: course.v1.UpdateVocabularyEntryRequest.audio_url:type_name -> google.protobuf.StringValue
+	149, // 104: course.v1.UpdateVocabularyEntryRequest.image_url:type_name -> google.protobuf.StringValue
+	149, // 105: course.v1.UpdateVocabularyEntryRequest.level:type_name -> google.protobuf.StringValue
+	149, // 106: course.v1.UpdateVocabularyEntryRequest.pos:type_name -> google.protobuf.StringValue
+	149, // 107: course.v1.UpdateVocabularyEntryRequest.transcription:type_name -> google.protobuf.StringValue
 	85,  // 108: course.v1.UpdateVocabularyEntryResponse.entry:type_name -> course.v1.VocabularyEntry
 	95,  // 109: course.v1.BulkCreateVocabularyRequest.entries:type_name -> course.v1.CreateVocabularyEntryRequest
-	150, // 110: course.v1.VocabularyBankQuestionSet.positive_answer:type_name -> google.protobuf.Struct
-	150, // 111: course.v1.VocabularyBankQuestionSet.negative_answer:type_name -> google.protobuf.Struct
-	150, // 112: course.v1.VocabularyBankActivity.payload:type_name -> google.protobuf.Struct
+	153, // 110: course.v1.VocabularyBankQuestionSet.positive_answer:type_name -> google.protobuf.Struct
+	153, // 111: course.v1.VocabularyBankQuestionSet.negative_answer:type_name -> google.protobuf.Struct
+	153, // 112: course.v1.VocabularyBankActivity.payload:type_name -> google.protobuf.Struct
 	103, // 113: course.v1.VocabularyBankWordDetail.word:type_name -> course.v1.VocabularyBankWordSummary
 	104, // 114: course.v1.VocabularyBankWordDetail.question_sets:type_name -> course.v1.VocabularyBankQuestionSet
 	105, // 115: course.v1.VocabularyBankWordDetail.activities:type_name -> course.v1.VocabularyBankActivity
 	103, // 116: course.v1.ListVocabularyBankWordsResponse.entries:type_name -> course.v1.VocabularyBankWordSummary
 	106, // 117: course.v1.GetVocabularyBankWordResponse.entry:type_name -> course.v1.VocabularyBankWordDetail
-	145, // 118: course.v1.VocabularyBankProgress.completed_at:type_name -> google.protobuf.Timestamp
-	145, // 119: course.v1.VocabularyBankProgress.last_activity_at:type_name -> google.protobuf.Timestamp
+	148, // 118: course.v1.VocabularyBankProgress.completed_at:type_name -> google.protobuf.Timestamp
+	148, // 119: course.v1.VocabularyBankProgress.last_activity_at:type_name -> google.protobuf.Timestamp
 	111, // 120: course.v1.GetVocabularyBankProgressResponse.progress:type_name -> course.v1.VocabularyBankProgress
-	150, // 121: course.v1.RecordVocabularyBankAttemptRequest.answer:type_name -> google.protobuf.Struct
+	153, // 121: course.v1.RecordVocabularyBankAttemptRequest.answer:type_name -> google.protobuf.Struct
 	111, // 122: course.v1.RecordVocabularyBankAttemptResponse.progress:type_name -> course.v1.VocabularyBankProgress
-	145, // 123: course.v1.TTSCacheEntry.created_at:type_name -> google.protobuf.Timestamp
-	116, // 124: course.v1.SynthesizeTTSResponse.entry:type_name -> course.v1.TTSCacheEntry
-	116, // 125: course.v1.GetTTSByTextResponse.entry:type_name -> course.v1.TTSCacheEntry
-	145, // 126: course.v1.Flashcard.archived_at:type_name -> google.protobuf.Timestamp
-	145, // 127: course.v1.Flashcard.created_at:type_name -> google.protobuf.Timestamp
-	145, // 128: course.v1.Flashcard.updated_at:type_name -> google.protobuf.Timestamp
-	145, // 129: course.v1.Flashcard.next_review_at:type_name -> google.protobuf.Timestamp
-	121, // 130: course.v1.ListFlashcardsResponse.items:type_name -> course.v1.Flashcard
-	121, // 131: course.v1.GetFlashcardResponse.flashcard:type_name -> course.v1.Flashcard
-	121, // 132: course.v1.CreateFlashcardResponse.flashcard:type_name -> course.v1.Flashcard
-	146, // 133: course.v1.UpdateFlashcardRequest.word:type_name -> google.protobuf.StringValue
-	146, // 134: course.v1.UpdateFlashcardRequest.translation:type_name -> google.protobuf.StringValue
-	146, // 135: course.v1.UpdateFlashcardRequest.definition:type_name -> google.protobuf.StringValue
-	146, // 136: course.v1.UpdateFlashcardRequest.example_sentence:type_name -> google.protobuf.StringValue
-	146, // 137: course.v1.UpdateFlashcardRequest.audio_url:type_name -> google.protobuf.StringValue
-	146, // 138: course.v1.UpdateFlashcardRequest.image_url:type_name -> google.protobuf.StringValue
-	146, // 139: course.v1.UpdateFlashcardRequest.transcription:type_name -> google.protobuf.StringValue
-	121, // 140: course.v1.UpdateFlashcardResponse.flashcard:type_name -> course.v1.Flashcard
-	144, // 141: course.v1.BulkCreateFlashcardsRequest.items:type_name -> course.v1.BulkCreateFlashcardsRequest.Item
-	121, // 142: course.v1.BulkCreateFlashcardsResponse.items:type_name -> course.v1.Flashcard
-	121, // 143: course.v1.AddVocabularyAsFlashcardResponse.flashcard:type_name -> course.v1.Flashcard
-	145, // 144: course.v1.PinForTodayResponse.added_at:type_name -> google.protobuf.Timestamp
-	121, // 145: course.v1.ListTodayQueueResponse.items:type_name -> course.v1.Flashcard
-	7,   // 146: course.v1.CourseService.ListCourses:input_type -> course.v1.ListCoursesRequest
-	9,   // 147: course.v1.CourseService.GetCourse:input_type -> course.v1.GetCourseRequest
-	11,  // 148: course.v1.CourseService.GetLesson:input_type -> course.v1.GetLessonRequest
-	13,  // 149: course.v1.CourseService.GetStepContent:input_type -> course.v1.GetStepContentRequest
-	15,  // 150: course.v1.CourseService.EnrollUser:input_type -> course.v1.EnrollUserRequest
-	17,  // 151: course.v1.CourseService.CheckAccess:input_type -> course.v1.CheckAccessRequest
-	19,  // 152: course.v1.CourseService.CreateCourse:input_type -> course.v1.CreateCourseRequest
-	21,  // 153: course.v1.CourseService.UpdateCourse:input_type -> course.v1.UpdateCourseRequest
-	23,  // 154: course.v1.CourseService.DeleteCourse:input_type -> course.v1.DeleteCourseRequest
-	25,  // 155: course.v1.CourseService.PublishCourse:input_type -> course.v1.PublishCourseRequest
-	27,  // 156: course.v1.CourseService.CreateModule:input_type -> course.v1.CreateModuleRequest
-	29,  // 157: course.v1.CourseService.UpdateModule:input_type -> course.v1.UpdateModuleRequest
-	31,  // 158: course.v1.CourseService.DeleteModule:input_type -> course.v1.DeleteModuleRequest
-	33,  // 159: course.v1.CourseService.CreateLesson:input_type -> course.v1.CreateLessonRequest
-	35,  // 160: course.v1.CourseService.UpdateLesson:input_type -> course.v1.UpdateLessonRequest
-	37,  // 161: course.v1.CourseService.DeleteLesson:input_type -> course.v1.DeleteLessonRequest
-	39,  // 162: course.v1.CourseService.CreateStep:input_type -> course.v1.CreateStepRequest
-	41,  // 163: course.v1.CourseService.UpdateStep:input_type -> course.v1.UpdateStepRequest
-	43,  // 164: course.v1.CourseService.DeleteStep:input_type -> course.v1.DeleteStepRequest
-	47,  // 165: course.v1.CourseService.MarkStepComplete:input_type -> course.v1.MarkStepCompleteRequest
-	49,  // 166: course.v1.CourseService.GetStepProgress:input_type -> course.v1.GetStepProgressRequest
-	51,  // 167: course.v1.CourseService.GetLessonProgress:input_type -> course.v1.GetLessonProgressRequest
-	53,  // 168: course.v1.CourseService.GetCourseProgress:input_type -> course.v1.GetCourseProgressRequest
-	57,  // 169: course.v1.CourseService.ListTracks:input_type -> course.v1.ListTracksRequest
-	59,  // 170: course.v1.CourseService.GetTrack:input_type -> course.v1.GetTrackRequest
-	60,  // 171: course.v1.CourseService.GetTrackByCode:input_type -> course.v1.GetTrackByCodeRequest
-	62,  // 172: course.v1.CourseService.CreateTrack:input_type -> course.v1.CreateTrackRequest
-	64,  // 173: course.v1.CourseService.UpdateTrack:input_type -> course.v1.UpdateTrackRequest
-	66,  // 174: course.v1.CourseService.DeleteTrack:input_type -> course.v1.DeleteTrackRequest
-	68,  // 175: course.v1.CourseService.PublishTrack:input_type -> course.v1.PublishTrackRequest
-	70,  // 176: course.v1.CourseService.AddLessonToTrack:input_type -> course.v1.AddLessonToTrackRequest
-	72,  // 177: course.v1.CourseService.RemoveLessonFromTrack:input_type -> course.v1.RemoveLessonFromTrackRequest
-	74,  // 178: course.v1.CourseService.ReorderTrackLessons:input_type -> course.v1.ReorderTrackLessonsRequest
-	77,  // 179: course.v1.CourseService.GenerateUserPlan:input_type -> course.v1.GenerateUserPlanRequest
-	79,  // 180: course.v1.CourseService.GetUserTracks:input_type -> course.v1.GetUserTracksRequest
-	81,  // 181: course.v1.CourseService.AddUserTrack:input_type -> course.v1.AddUserTrackRequest
-	83,  // 182: course.v1.CourseService.RemoveUserTrack:input_type -> course.v1.RemoveUserTrackRequest
-	91,  // 183: course.v1.CourseService.ListVocabulary:input_type -> course.v1.ListVocabularyRequest
-	93,  // 184: course.v1.CourseService.GetVocabularyEntry:input_type -> course.v1.GetVocabularyEntryRequest
-	95,  // 185: course.v1.CourseService.CreateVocabularyEntry:input_type -> course.v1.CreateVocabularyEntryRequest
-	97,  // 186: course.v1.CourseService.UpdateVocabularyEntry:input_type -> course.v1.UpdateVocabularyEntryRequest
-	99,  // 187: course.v1.CourseService.DeleteVocabularyEntry:input_type -> course.v1.DeleteVocabularyEntryRequest
-	101, // 188: course.v1.CourseService.BulkCreateVocabulary:input_type -> course.v1.BulkCreateVocabularyRequest
-	107, // 189: course.v1.CourseService.ListVocabularyBankWords:input_type -> course.v1.ListVocabularyBankWordsRequest
-	109, // 190: course.v1.CourseService.GetVocabularyBankWord:input_type -> course.v1.GetVocabularyBankWordRequest
-	112, // 191: course.v1.CourseService.GetVocabularyBankProgress:input_type -> course.v1.GetVocabularyBankProgressRequest
-	114, // 192: course.v1.CourseService.RecordVocabularyBankAttempt:input_type -> course.v1.RecordVocabularyBankAttemptRequest
-	117, // 193: course.v1.CourseService.SynthesizeTTS:input_type -> course.v1.SynthesizeTTSRequest
-	119, // 194: course.v1.CourseService.GetTTSByText:input_type -> course.v1.GetTTSByTextRequest
-	122, // 195: course.v1.CourseService.ListFlashcards:input_type -> course.v1.ListFlashcardsRequest
-	124, // 196: course.v1.CourseService.GetFlashcard:input_type -> course.v1.GetFlashcardRequest
-	126, // 197: course.v1.CourseService.CreateFlashcard:input_type -> course.v1.CreateFlashcardRequest
-	128, // 198: course.v1.CourseService.UpdateFlashcard:input_type -> course.v1.UpdateFlashcardRequest
-	130, // 199: course.v1.CourseService.ArchiveFlashcard:input_type -> course.v1.ArchiveFlashcardRequest
-	132, // 200: course.v1.CourseService.BulkCreateFlashcards:input_type -> course.v1.BulkCreateFlashcardsRequest
-	134, // 201: course.v1.CourseService.AddVocabularyAsFlashcard:input_type -> course.v1.AddVocabularyAsFlashcardRequest
-	136, // 202: course.v1.CourseService.GetFlashcardStats:input_type -> course.v1.GetFlashcardStatsRequest
-	138, // 203: course.v1.CourseService.PinForToday:input_type -> course.v1.PinForTodayRequest
-	140, // 204: course.v1.CourseService.UnpinFromToday:input_type -> course.v1.UnpinFromTodayRequest
-	142, // 205: course.v1.CourseService.ListTodayQueue:input_type -> course.v1.ListTodayQueueRequest
-	87,  // 206: course.v1.CourseService.ListTrackVocabulary:input_type -> course.v1.ListTrackVocabularyRequest
-	89,  // 207: course.v1.CourseService.AddTrackVocabularyAsFlashcards:input_type -> course.v1.AddTrackVocabularyAsFlashcardsRequest
-	8,   // 208: course.v1.CourseService.ListCourses:output_type -> course.v1.ListCoursesResponse
-	10,  // 209: course.v1.CourseService.GetCourse:output_type -> course.v1.GetCourseResponse
-	12,  // 210: course.v1.CourseService.GetLesson:output_type -> course.v1.GetLessonResponse
-	14,  // 211: course.v1.CourseService.GetStepContent:output_type -> course.v1.GetStepContentResponse
-	16,  // 212: course.v1.CourseService.EnrollUser:output_type -> course.v1.EnrollUserResponse
-	18,  // 213: course.v1.CourseService.CheckAccess:output_type -> course.v1.CheckAccessResponse
-	20,  // 214: course.v1.CourseService.CreateCourse:output_type -> course.v1.CreateCourseResponse
-	22,  // 215: course.v1.CourseService.UpdateCourse:output_type -> course.v1.UpdateCourseResponse
-	24,  // 216: course.v1.CourseService.DeleteCourse:output_type -> course.v1.DeleteCourseResponse
-	26,  // 217: course.v1.CourseService.PublishCourse:output_type -> course.v1.PublishCourseResponse
-	28,  // 218: course.v1.CourseService.CreateModule:output_type -> course.v1.CreateModuleResponse
-	30,  // 219: course.v1.CourseService.UpdateModule:output_type -> course.v1.UpdateModuleResponse
-	32,  // 220: course.v1.CourseService.DeleteModule:output_type -> course.v1.DeleteModuleResponse
-	34,  // 221: course.v1.CourseService.CreateLesson:output_type -> course.v1.CreateLessonResponse
-	36,  // 222: course.v1.CourseService.UpdateLesson:output_type -> course.v1.UpdateLessonResponse
-	38,  // 223: course.v1.CourseService.DeleteLesson:output_type -> course.v1.DeleteLessonResponse
-	40,  // 224: course.v1.CourseService.CreateStep:output_type -> course.v1.CreateStepResponse
-	42,  // 225: course.v1.CourseService.UpdateStep:output_type -> course.v1.UpdateStepResponse
-	44,  // 226: course.v1.CourseService.DeleteStep:output_type -> course.v1.DeleteStepResponse
-	48,  // 227: course.v1.CourseService.MarkStepComplete:output_type -> course.v1.MarkStepCompleteResponse
-	50,  // 228: course.v1.CourseService.GetStepProgress:output_type -> course.v1.GetStepProgressResponse
-	52,  // 229: course.v1.CourseService.GetLessonProgress:output_type -> course.v1.GetLessonProgressResponse
-	54,  // 230: course.v1.CourseService.GetCourseProgress:output_type -> course.v1.GetCourseProgressResponse
-	58,  // 231: course.v1.CourseService.ListTracks:output_type -> course.v1.ListTracksResponse
-	61,  // 232: course.v1.CourseService.GetTrack:output_type -> course.v1.GetTrackResponse
-	61,  // 233: course.v1.CourseService.GetTrackByCode:output_type -> course.v1.GetTrackResponse
-	63,  // 234: course.v1.CourseService.CreateTrack:output_type -> course.v1.CreateTrackResponse
-	65,  // 235: course.v1.CourseService.UpdateTrack:output_type -> course.v1.UpdateTrackResponse
-	67,  // 236: course.v1.CourseService.DeleteTrack:output_type -> course.v1.DeleteTrackResponse
-	69,  // 237: course.v1.CourseService.PublishTrack:output_type -> course.v1.PublishTrackResponse
-	71,  // 238: course.v1.CourseService.AddLessonToTrack:output_type -> course.v1.AddLessonToTrackResponse
-	73,  // 239: course.v1.CourseService.RemoveLessonFromTrack:output_type -> course.v1.RemoveLessonFromTrackResponse
-	75,  // 240: course.v1.CourseService.ReorderTrackLessons:output_type -> course.v1.ReorderTrackLessonsResponse
-	78,  // 241: course.v1.CourseService.GenerateUserPlan:output_type -> course.v1.GenerateUserPlanResponse
-	80,  // 242: course.v1.CourseService.GetUserTracks:output_type -> course.v1.GetUserTracksResponse
-	82,  // 243: course.v1.CourseService.AddUserTrack:output_type -> course.v1.AddUserTrackResponse
-	84,  // 244: course.v1.CourseService.RemoveUserTrack:output_type -> course.v1.RemoveUserTrackResponse
-	92,  // 245: course.v1.CourseService.ListVocabulary:output_type -> course.v1.ListVocabularyResponse
-	94,  // 246: course.v1.CourseService.GetVocabularyEntry:output_type -> course.v1.GetVocabularyEntryResponse
-	96,  // 247: course.v1.CourseService.CreateVocabularyEntry:output_type -> course.v1.CreateVocabularyEntryResponse
-	98,  // 248: course.v1.CourseService.UpdateVocabularyEntry:output_type -> course.v1.UpdateVocabularyEntryResponse
-	100, // 249: course.v1.CourseService.DeleteVocabularyEntry:output_type -> course.v1.DeleteVocabularyEntryResponse
-	102, // 250: course.v1.CourseService.BulkCreateVocabulary:output_type -> course.v1.BulkCreateVocabularyResponse
-	108, // 251: course.v1.CourseService.ListVocabularyBankWords:output_type -> course.v1.ListVocabularyBankWordsResponse
-	110, // 252: course.v1.CourseService.GetVocabularyBankWord:output_type -> course.v1.GetVocabularyBankWordResponse
-	113, // 253: course.v1.CourseService.GetVocabularyBankProgress:output_type -> course.v1.GetVocabularyBankProgressResponse
-	115, // 254: course.v1.CourseService.RecordVocabularyBankAttempt:output_type -> course.v1.RecordVocabularyBankAttemptResponse
-	118, // 255: course.v1.CourseService.SynthesizeTTS:output_type -> course.v1.SynthesizeTTSResponse
-	120, // 256: course.v1.CourseService.GetTTSByText:output_type -> course.v1.GetTTSByTextResponse
-	123, // 257: course.v1.CourseService.ListFlashcards:output_type -> course.v1.ListFlashcardsResponse
-	125, // 258: course.v1.CourseService.GetFlashcard:output_type -> course.v1.GetFlashcardResponse
-	127, // 259: course.v1.CourseService.CreateFlashcard:output_type -> course.v1.CreateFlashcardResponse
-	129, // 260: course.v1.CourseService.UpdateFlashcard:output_type -> course.v1.UpdateFlashcardResponse
-	131, // 261: course.v1.CourseService.ArchiveFlashcard:output_type -> course.v1.ArchiveFlashcardResponse
-	133, // 262: course.v1.CourseService.BulkCreateFlashcards:output_type -> course.v1.BulkCreateFlashcardsResponse
-	135, // 263: course.v1.CourseService.AddVocabularyAsFlashcard:output_type -> course.v1.AddVocabularyAsFlashcardResponse
-	137, // 264: course.v1.CourseService.GetFlashcardStats:output_type -> course.v1.GetFlashcardStatsResponse
-	139, // 265: course.v1.CourseService.PinForToday:output_type -> course.v1.PinForTodayResponse
-	141, // 266: course.v1.CourseService.UnpinFromToday:output_type -> course.v1.UnpinFromTodayResponse
-	143, // 267: course.v1.CourseService.ListTodayQueue:output_type -> course.v1.ListTodayQueueResponse
-	88,  // 268: course.v1.CourseService.ListTrackVocabulary:output_type -> course.v1.ListTrackVocabularyResponse
-	90,  // 269: course.v1.CourseService.AddTrackVocabularyAsFlashcards:output_type -> course.v1.AddTrackVocabularyAsFlashcardsResponse
-	208, // [208:270] is the sub-list for method output_type
-	146, // [146:208] is the sub-list for method input_type
-	146, // [146:146] is the sub-list for extension type_name
-	146, // [146:146] is the sub-list for extension extendee
-	0,   // [0:146] is the sub-list for field type_name
+	103, // 123: course.v1.VocabularyBankFeedEntry.word:type_name -> course.v1.VocabularyBankWordSummary
+	148, // 124: course.v1.VocabularyBankFeedEntry.last_activity_at:type_name -> google.protobuf.Timestamp
+	116, // 125: course.v1.ListVocabularyBankFeedResponse.in_progress:type_name -> course.v1.VocabularyBankFeedEntry
+	116, // 126: course.v1.ListVocabularyBankFeedResponse.new_words:type_name -> course.v1.VocabularyBankFeedEntry
+	148, // 127: course.v1.TTSCacheEntry.created_at:type_name -> google.protobuf.Timestamp
+	119, // 128: course.v1.SynthesizeTTSResponse.entry:type_name -> course.v1.TTSCacheEntry
+	119, // 129: course.v1.GetTTSByTextResponse.entry:type_name -> course.v1.TTSCacheEntry
+	148, // 130: course.v1.Flashcard.archived_at:type_name -> google.protobuf.Timestamp
+	148, // 131: course.v1.Flashcard.created_at:type_name -> google.protobuf.Timestamp
+	148, // 132: course.v1.Flashcard.updated_at:type_name -> google.protobuf.Timestamp
+	148, // 133: course.v1.Flashcard.next_review_at:type_name -> google.protobuf.Timestamp
+	124, // 134: course.v1.ListFlashcardsResponse.items:type_name -> course.v1.Flashcard
+	124, // 135: course.v1.GetFlashcardResponse.flashcard:type_name -> course.v1.Flashcard
+	124, // 136: course.v1.CreateFlashcardResponse.flashcard:type_name -> course.v1.Flashcard
+	149, // 137: course.v1.UpdateFlashcardRequest.word:type_name -> google.protobuf.StringValue
+	149, // 138: course.v1.UpdateFlashcardRequest.translation:type_name -> google.protobuf.StringValue
+	149, // 139: course.v1.UpdateFlashcardRequest.definition:type_name -> google.protobuf.StringValue
+	149, // 140: course.v1.UpdateFlashcardRequest.example_sentence:type_name -> google.protobuf.StringValue
+	149, // 141: course.v1.UpdateFlashcardRequest.audio_url:type_name -> google.protobuf.StringValue
+	149, // 142: course.v1.UpdateFlashcardRequest.image_url:type_name -> google.protobuf.StringValue
+	149, // 143: course.v1.UpdateFlashcardRequest.transcription:type_name -> google.protobuf.StringValue
+	124, // 144: course.v1.UpdateFlashcardResponse.flashcard:type_name -> course.v1.Flashcard
+	147, // 145: course.v1.BulkCreateFlashcardsRequest.items:type_name -> course.v1.BulkCreateFlashcardsRequest.Item
+	124, // 146: course.v1.BulkCreateFlashcardsResponse.items:type_name -> course.v1.Flashcard
+	124, // 147: course.v1.AddVocabularyAsFlashcardResponse.flashcard:type_name -> course.v1.Flashcard
+	148, // 148: course.v1.PinForTodayResponse.added_at:type_name -> google.protobuf.Timestamp
+	124, // 149: course.v1.ListTodayQueueResponse.items:type_name -> course.v1.Flashcard
+	7,   // 150: course.v1.CourseService.ListCourses:input_type -> course.v1.ListCoursesRequest
+	9,   // 151: course.v1.CourseService.GetCourse:input_type -> course.v1.GetCourseRequest
+	11,  // 152: course.v1.CourseService.GetLesson:input_type -> course.v1.GetLessonRequest
+	13,  // 153: course.v1.CourseService.GetStepContent:input_type -> course.v1.GetStepContentRequest
+	15,  // 154: course.v1.CourseService.EnrollUser:input_type -> course.v1.EnrollUserRequest
+	17,  // 155: course.v1.CourseService.CheckAccess:input_type -> course.v1.CheckAccessRequest
+	19,  // 156: course.v1.CourseService.CreateCourse:input_type -> course.v1.CreateCourseRequest
+	21,  // 157: course.v1.CourseService.UpdateCourse:input_type -> course.v1.UpdateCourseRequest
+	23,  // 158: course.v1.CourseService.DeleteCourse:input_type -> course.v1.DeleteCourseRequest
+	25,  // 159: course.v1.CourseService.PublishCourse:input_type -> course.v1.PublishCourseRequest
+	27,  // 160: course.v1.CourseService.CreateModule:input_type -> course.v1.CreateModuleRequest
+	29,  // 161: course.v1.CourseService.UpdateModule:input_type -> course.v1.UpdateModuleRequest
+	31,  // 162: course.v1.CourseService.DeleteModule:input_type -> course.v1.DeleteModuleRequest
+	33,  // 163: course.v1.CourseService.CreateLesson:input_type -> course.v1.CreateLessonRequest
+	35,  // 164: course.v1.CourseService.UpdateLesson:input_type -> course.v1.UpdateLessonRequest
+	37,  // 165: course.v1.CourseService.DeleteLesson:input_type -> course.v1.DeleteLessonRequest
+	39,  // 166: course.v1.CourseService.CreateStep:input_type -> course.v1.CreateStepRequest
+	41,  // 167: course.v1.CourseService.UpdateStep:input_type -> course.v1.UpdateStepRequest
+	43,  // 168: course.v1.CourseService.DeleteStep:input_type -> course.v1.DeleteStepRequest
+	47,  // 169: course.v1.CourseService.MarkStepComplete:input_type -> course.v1.MarkStepCompleteRequest
+	49,  // 170: course.v1.CourseService.GetStepProgress:input_type -> course.v1.GetStepProgressRequest
+	51,  // 171: course.v1.CourseService.GetLessonProgress:input_type -> course.v1.GetLessonProgressRequest
+	53,  // 172: course.v1.CourseService.GetCourseProgress:input_type -> course.v1.GetCourseProgressRequest
+	57,  // 173: course.v1.CourseService.ListTracks:input_type -> course.v1.ListTracksRequest
+	59,  // 174: course.v1.CourseService.GetTrack:input_type -> course.v1.GetTrackRequest
+	60,  // 175: course.v1.CourseService.GetTrackByCode:input_type -> course.v1.GetTrackByCodeRequest
+	62,  // 176: course.v1.CourseService.CreateTrack:input_type -> course.v1.CreateTrackRequest
+	64,  // 177: course.v1.CourseService.UpdateTrack:input_type -> course.v1.UpdateTrackRequest
+	66,  // 178: course.v1.CourseService.DeleteTrack:input_type -> course.v1.DeleteTrackRequest
+	68,  // 179: course.v1.CourseService.PublishTrack:input_type -> course.v1.PublishTrackRequest
+	70,  // 180: course.v1.CourseService.AddLessonToTrack:input_type -> course.v1.AddLessonToTrackRequest
+	72,  // 181: course.v1.CourseService.RemoveLessonFromTrack:input_type -> course.v1.RemoveLessonFromTrackRequest
+	74,  // 182: course.v1.CourseService.ReorderTrackLessons:input_type -> course.v1.ReorderTrackLessonsRequest
+	77,  // 183: course.v1.CourseService.GenerateUserPlan:input_type -> course.v1.GenerateUserPlanRequest
+	79,  // 184: course.v1.CourseService.GetUserTracks:input_type -> course.v1.GetUserTracksRequest
+	81,  // 185: course.v1.CourseService.AddUserTrack:input_type -> course.v1.AddUserTrackRequest
+	83,  // 186: course.v1.CourseService.RemoveUserTrack:input_type -> course.v1.RemoveUserTrackRequest
+	91,  // 187: course.v1.CourseService.ListVocabulary:input_type -> course.v1.ListVocabularyRequest
+	93,  // 188: course.v1.CourseService.GetVocabularyEntry:input_type -> course.v1.GetVocabularyEntryRequest
+	95,  // 189: course.v1.CourseService.CreateVocabularyEntry:input_type -> course.v1.CreateVocabularyEntryRequest
+	97,  // 190: course.v1.CourseService.UpdateVocabularyEntry:input_type -> course.v1.UpdateVocabularyEntryRequest
+	99,  // 191: course.v1.CourseService.DeleteVocabularyEntry:input_type -> course.v1.DeleteVocabularyEntryRequest
+	101, // 192: course.v1.CourseService.BulkCreateVocabulary:input_type -> course.v1.BulkCreateVocabularyRequest
+	107, // 193: course.v1.CourseService.ListVocabularyBankWords:input_type -> course.v1.ListVocabularyBankWordsRequest
+	109, // 194: course.v1.CourseService.GetVocabularyBankWord:input_type -> course.v1.GetVocabularyBankWordRequest
+	112, // 195: course.v1.CourseService.GetVocabularyBankProgress:input_type -> course.v1.GetVocabularyBankProgressRequest
+	114, // 196: course.v1.CourseService.RecordVocabularyBankAttempt:input_type -> course.v1.RecordVocabularyBankAttemptRequest
+	117, // 197: course.v1.CourseService.ListVocabularyBankFeed:input_type -> course.v1.ListVocabularyBankFeedRequest
+	120, // 198: course.v1.CourseService.SynthesizeTTS:input_type -> course.v1.SynthesizeTTSRequest
+	122, // 199: course.v1.CourseService.GetTTSByText:input_type -> course.v1.GetTTSByTextRequest
+	125, // 200: course.v1.CourseService.ListFlashcards:input_type -> course.v1.ListFlashcardsRequest
+	127, // 201: course.v1.CourseService.GetFlashcard:input_type -> course.v1.GetFlashcardRequest
+	129, // 202: course.v1.CourseService.CreateFlashcard:input_type -> course.v1.CreateFlashcardRequest
+	131, // 203: course.v1.CourseService.UpdateFlashcard:input_type -> course.v1.UpdateFlashcardRequest
+	133, // 204: course.v1.CourseService.ArchiveFlashcard:input_type -> course.v1.ArchiveFlashcardRequest
+	135, // 205: course.v1.CourseService.BulkCreateFlashcards:input_type -> course.v1.BulkCreateFlashcardsRequest
+	137, // 206: course.v1.CourseService.AddVocabularyAsFlashcard:input_type -> course.v1.AddVocabularyAsFlashcardRequest
+	139, // 207: course.v1.CourseService.GetFlashcardStats:input_type -> course.v1.GetFlashcardStatsRequest
+	141, // 208: course.v1.CourseService.PinForToday:input_type -> course.v1.PinForTodayRequest
+	143, // 209: course.v1.CourseService.UnpinFromToday:input_type -> course.v1.UnpinFromTodayRequest
+	145, // 210: course.v1.CourseService.ListTodayQueue:input_type -> course.v1.ListTodayQueueRequest
+	87,  // 211: course.v1.CourseService.ListTrackVocabulary:input_type -> course.v1.ListTrackVocabularyRequest
+	89,  // 212: course.v1.CourseService.AddTrackVocabularyAsFlashcards:input_type -> course.v1.AddTrackVocabularyAsFlashcardsRequest
+	8,   // 213: course.v1.CourseService.ListCourses:output_type -> course.v1.ListCoursesResponse
+	10,  // 214: course.v1.CourseService.GetCourse:output_type -> course.v1.GetCourseResponse
+	12,  // 215: course.v1.CourseService.GetLesson:output_type -> course.v1.GetLessonResponse
+	14,  // 216: course.v1.CourseService.GetStepContent:output_type -> course.v1.GetStepContentResponse
+	16,  // 217: course.v1.CourseService.EnrollUser:output_type -> course.v1.EnrollUserResponse
+	18,  // 218: course.v1.CourseService.CheckAccess:output_type -> course.v1.CheckAccessResponse
+	20,  // 219: course.v1.CourseService.CreateCourse:output_type -> course.v1.CreateCourseResponse
+	22,  // 220: course.v1.CourseService.UpdateCourse:output_type -> course.v1.UpdateCourseResponse
+	24,  // 221: course.v1.CourseService.DeleteCourse:output_type -> course.v1.DeleteCourseResponse
+	26,  // 222: course.v1.CourseService.PublishCourse:output_type -> course.v1.PublishCourseResponse
+	28,  // 223: course.v1.CourseService.CreateModule:output_type -> course.v1.CreateModuleResponse
+	30,  // 224: course.v1.CourseService.UpdateModule:output_type -> course.v1.UpdateModuleResponse
+	32,  // 225: course.v1.CourseService.DeleteModule:output_type -> course.v1.DeleteModuleResponse
+	34,  // 226: course.v1.CourseService.CreateLesson:output_type -> course.v1.CreateLessonResponse
+	36,  // 227: course.v1.CourseService.UpdateLesson:output_type -> course.v1.UpdateLessonResponse
+	38,  // 228: course.v1.CourseService.DeleteLesson:output_type -> course.v1.DeleteLessonResponse
+	40,  // 229: course.v1.CourseService.CreateStep:output_type -> course.v1.CreateStepResponse
+	42,  // 230: course.v1.CourseService.UpdateStep:output_type -> course.v1.UpdateStepResponse
+	44,  // 231: course.v1.CourseService.DeleteStep:output_type -> course.v1.DeleteStepResponse
+	48,  // 232: course.v1.CourseService.MarkStepComplete:output_type -> course.v1.MarkStepCompleteResponse
+	50,  // 233: course.v1.CourseService.GetStepProgress:output_type -> course.v1.GetStepProgressResponse
+	52,  // 234: course.v1.CourseService.GetLessonProgress:output_type -> course.v1.GetLessonProgressResponse
+	54,  // 235: course.v1.CourseService.GetCourseProgress:output_type -> course.v1.GetCourseProgressResponse
+	58,  // 236: course.v1.CourseService.ListTracks:output_type -> course.v1.ListTracksResponse
+	61,  // 237: course.v1.CourseService.GetTrack:output_type -> course.v1.GetTrackResponse
+	61,  // 238: course.v1.CourseService.GetTrackByCode:output_type -> course.v1.GetTrackResponse
+	63,  // 239: course.v1.CourseService.CreateTrack:output_type -> course.v1.CreateTrackResponse
+	65,  // 240: course.v1.CourseService.UpdateTrack:output_type -> course.v1.UpdateTrackResponse
+	67,  // 241: course.v1.CourseService.DeleteTrack:output_type -> course.v1.DeleteTrackResponse
+	69,  // 242: course.v1.CourseService.PublishTrack:output_type -> course.v1.PublishTrackResponse
+	71,  // 243: course.v1.CourseService.AddLessonToTrack:output_type -> course.v1.AddLessonToTrackResponse
+	73,  // 244: course.v1.CourseService.RemoveLessonFromTrack:output_type -> course.v1.RemoveLessonFromTrackResponse
+	75,  // 245: course.v1.CourseService.ReorderTrackLessons:output_type -> course.v1.ReorderTrackLessonsResponse
+	78,  // 246: course.v1.CourseService.GenerateUserPlan:output_type -> course.v1.GenerateUserPlanResponse
+	80,  // 247: course.v1.CourseService.GetUserTracks:output_type -> course.v1.GetUserTracksResponse
+	82,  // 248: course.v1.CourseService.AddUserTrack:output_type -> course.v1.AddUserTrackResponse
+	84,  // 249: course.v1.CourseService.RemoveUserTrack:output_type -> course.v1.RemoveUserTrackResponse
+	92,  // 250: course.v1.CourseService.ListVocabulary:output_type -> course.v1.ListVocabularyResponse
+	94,  // 251: course.v1.CourseService.GetVocabularyEntry:output_type -> course.v1.GetVocabularyEntryResponse
+	96,  // 252: course.v1.CourseService.CreateVocabularyEntry:output_type -> course.v1.CreateVocabularyEntryResponse
+	98,  // 253: course.v1.CourseService.UpdateVocabularyEntry:output_type -> course.v1.UpdateVocabularyEntryResponse
+	100, // 254: course.v1.CourseService.DeleteVocabularyEntry:output_type -> course.v1.DeleteVocabularyEntryResponse
+	102, // 255: course.v1.CourseService.BulkCreateVocabulary:output_type -> course.v1.BulkCreateVocabularyResponse
+	108, // 256: course.v1.CourseService.ListVocabularyBankWords:output_type -> course.v1.ListVocabularyBankWordsResponse
+	110, // 257: course.v1.CourseService.GetVocabularyBankWord:output_type -> course.v1.GetVocabularyBankWordResponse
+	113, // 258: course.v1.CourseService.GetVocabularyBankProgress:output_type -> course.v1.GetVocabularyBankProgressResponse
+	115, // 259: course.v1.CourseService.RecordVocabularyBankAttempt:output_type -> course.v1.RecordVocabularyBankAttemptResponse
+	118, // 260: course.v1.CourseService.ListVocabularyBankFeed:output_type -> course.v1.ListVocabularyBankFeedResponse
+	121, // 261: course.v1.CourseService.SynthesizeTTS:output_type -> course.v1.SynthesizeTTSResponse
+	123, // 262: course.v1.CourseService.GetTTSByText:output_type -> course.v1.GetTTSByTextResponse
+	126, // 263: course.v1.CourseService.ListFlashcards:output_type -> course.v1.ListFlashcardsResponse
+	128, // 264: course.v1.CourseService.GetFlashcard:output_type -> course.v1.GetFlashcardResponse
+	130, // 265: course.v1.CourseService.CreateFlashcard:output_type -> course.v1.CreateFlashcardResponse
+	132, // 266: course.v1.CourseService.UpdateFlashcard:output_type -> course.v1.UpdateFlashcardResponse
+	134, // 267: course.v1.CourseService.ArchiveFlashcard:output_type -> course.v1.ArchiveFlashcardResponse
+	136, // 268: course.v1.CourseService.BulkCreateFlashcards:output_type -> course.v1.BulkCreateFlashcardsResponse
+	138, // 269: course.v1.CourseService.AddVocabularyAsFlashcard:output_type -> course.v1.AddVocabularyAsFlashcardResponse
+	140, // 270: course.v1.CourseService.GetFlashcardStats:output_type -> course.v1.GetFlashcardStatsResponse
+	142, // 271: course.v1.CourseService.PinForToday:output_type -> course.v1.PinForTodayResponse
+	144, // 272: course.v1.CourseService.UnpinFromToday:output_type -> course.v1.UnpinFromTodayResponse
+	146, // 273: course.v1.CourseService.ListTodayQueue:output_type -> course.v1.ListTodayQueueResponse
+	88,  // 274: course.v1.CourseService.ListTrackVocabulary:output_type -> course.v1.ListTrackVocabularyResponse
+	90,  // 275: course.v1.CourseService.AddTrackVocabularyAsFlashcards:output_type -> course.v1.AddTrackVocabularyAsFlashcardsResponse
+	213, // [213:276] is the sub-list for method output_type
+	150, // [150:213] is the sub-list for method input_type
+	150, // [150:150] is the sub-list for extension type_name
+	150, // [150:150] is the sub-list for extension extendee
+	0,   // [0:150] is the sub-list for field type_name
 }
 
 func init() { file_course_v1_course_proto_init() }
@@ -10497,14 +10719,14 @@ func file_course_v1_course_proto_init() {
 	if File_course_v1_course_proto != nil {
 		return
 	}
-	file_course_v1_course_proto_msgTypes[121].OneofWrappers = []any{}
+	file_course_v1_course_proto_msgTypes[124].OneofWrappers = []any{}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_course_v1_course_proto_rawDesc), len(file_course_v1_course_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   145,
+			NumMessages:   148,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

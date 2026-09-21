@@ -197,3 +197,59 @@ func (r *vocabularyBankRepository) RecordAttempt(ctx context.Context, attempt mo
 	}
 	return &progress, nil
 }
+
+func (r *vocabularyBankRepository) ListFeed(ctx context.Context, userID string, f repository.VocabularyBankFeedFilters) (*model.VocabularyBankFeed, error) {
+	feed := &model.VocabularyBankFeed{}
+	levelClause := ""
+	argsBase := []any{userID, f.Locale}
+	limitPlaceholder := "$3"
+	if f.CEFRLevel != "" {
+		levelClause = " AND w.cefr_level = $3"
+		argsBase = append(argsBase, f.CEFRLevel)
+		limitPlaceholder = "$4"
+	}
+	query := `SELECT w.external_id, w.word, COALESCE(NULLIF(t.text, ''), w.meaning), w.part_of_speech, w.cefr_level, (w.audio <> '{}'::jsonb), p.current_step, p.last_activity_at
+		FROM vocabulary_bank_words w
+		LEFT JOIN vocabulary_bank_translations t ON t.word_id = w.id AND t.locale = $2
+		JOIN user_vocabulary_progress p ON p.word_id = w.id AND p.user_id = $1
+		WHERE p.completed_at IS NULL AND p.current_step > 1` + levelClause + ` ORDER BY p.last_activity_at DESC LIMIT ` + limitPlaceholder
+	args := append(argsBase, f.InProgressLimit)
+	rows, err := r.pool.Query(ctx, query, args...)
+	if err != nil {
+		return nil, err
+	}
+	for rows.Next() {
+		var entry model.VocabularyBankFeedEntry
+		if err := rows.Scan(&entry.ExternalID, &entry.Word, &entry.Translation, &entry.PartOfSpeech, &entry.CEFRLevel, &entry.HasAudio, &entry.CurrentStep, &entry.LastActivityAt); err != nil {
+			rows.Close()
+			return nil, err
+		}
+		entry.Status = "in_progress"
+		feed.InProgress = append(feed.InProgress, entry)
+	}
+	if err := rows.Err(); err != nil {
+		rows.Close()
+		return nil, err
+	}
+	rows.Close()
+
+	newQuery := `SELECT w.external_id, w.word, COALESCE(NULLIF(t.text, ''), w.meaning), w.part_of_speech, w.cefr_level, (w.audio <> '{}'::jsonb)
+		FROM vocabulary_bank_words w
+		LEFT JOIN vocabulary_bank_translations t ON t.word_id = w.id AND t.locale = $2
+		LEFT JOIN user_vocabulary_progress p ON p.word_id = w.id AND p.user_id = $1
+		WHERE p.word_id IS NULL` + levelClause + ` ORDER BY w.cefr_level, w.word LIMIT ` + limitPlaceholder
+	rows, err = r.pool.Query(ctx, newQuery, args...)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	for rows.Next() {
+		var entry model.VocabularyBankFeedEntry
+		if err := rows.Scan(&entry.ExternalID, &entry.Word, &entry.Translation, &entry.PartOfSpeech, &entry.CEFRLevel, &entry.HasAudio); err != nil {
+			return nil, err
+		}
+		entry.Status, entry.CurrentStep = "new", 1
+		feed.NewWords = append(feed.NewWords, entry)
+	}
+	return feed, rows.Err()
+}

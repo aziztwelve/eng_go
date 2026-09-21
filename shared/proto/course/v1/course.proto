@@ -138,6 +138,7 @@ service CourseService {
   rpc GetVocabularyBankWord(GetVocabularyBankWordRequest) returns (GetVocabularyBankWordResponse);
   rpc GetVocabularyBankProgress(GetVocabularyBankProgressRequest) returns (GetVocabularyBankProgressResponse);
   rpc RecordVocabularyBankAttempt(RecordVocabularyBankAttemptRequest) returns (RecordVocabularyBankAttemptResponse);
+  rpc ListVocabularyBankFeed(ListVocabularyBankFeedRequest) returns (ListVocabularyBankFeedResponse);
 
   // === TTS (Phase 2 — stub) ===
   // На phase-2 SynthesizeTTS сохраняет переданный audio_url в кэш
@@ -970,6 +971,26 @@ message RecordVocabularyBankAttemptRequest {
 
 message RecordVocabularyBankAttemptResponse {
   VocabularyBankProgress progress = 1;
+}
+
+message VocabularyBankFeedEntry {
+  VocabularyBankWordSummary word = 1;
+  string status = 2; // in_progress | new
+  int32 current_step = 3;
+  google.protobuf.Timestamp last_activity_at = 4;
+}
+
+message ListVocabularyBankFeedRequest {
+  string user_id = 1;
+  string cefr_level = 2;
+  string locale = 3;
+  int32 new_limit = 4;
+  int32 in_progress_limit = 5;
+}
+
+message ListVocabularyBankFeedResponse {
+  repeated VocabularyBankFeedEntry in_progress = 1;
+  repeated VocabularyBankFeedEntry new_words = 2;
 }
 
 // === TTS Cache (Phase 2 stub) ===

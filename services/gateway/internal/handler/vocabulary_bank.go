@@ -3,6 +3,7 @@ package handler
 import (
 	"fmt"
 	"net/http"
+	"strconv"
 
 	"github.com/gin-gonic/gin"
 	"google.golang.org/protobuf/types/known/structpb"
@@ -95,6 +96,21 @@ func (h *VocabularyBankHandler) RecordAttempt(c *gin.Context) {
 		return
 	}
 	response, err := h.course.RecordVocabularyBankAttempt(c.Request.Context(), &coursev1.RecordVocabularyBankAttemptRequest{UserId: userID, ExternalId: c.Param("externalId"), Step: step, Answer: answer, IsCorrect: body.IsCorrect, Score: body.Score, TimeSpentMs: body.TimeSpentMS, PronunciationScore: body.PronunciationScore})
+	if err != nil {
+		errors.HandleGRPCError(c, err)
+		return
+	}
+	c.JSON(http.StatusOK, response)
+}
+
+func (h *VocabularyBankHandler) Feed(c *gin.Context) {
+	userID, ok := userIDFromCtx(c)
+	if !ok {
+		return
+	}
+	newLimit, _ := strconv.Atoi(c.DefaultQuery("new_limit", "5"))
+	inProgressLimit, _ := strconv.Atoi(c.DefaultQuery("in_progress_limit", "5"))
+	response, err := h.course.ListVocabularyBankFeed(c.Request.Context(), &coursev1.ListVocabularyBankFeedRequest{UserId: userID, CefrLevel: c.Query("cefr_level"), Locale: c.DefaultQuery("locale", "ru"), NewLimit: int32(newLimit), InProgressLimit: int32(inProgressLimit)})
 	if err != nil {
 		errors.HandleGRPCError(c, err)
 		return

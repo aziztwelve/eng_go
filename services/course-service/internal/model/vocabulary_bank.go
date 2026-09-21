@@ -57,3 +57,15 @@ type VocabularyBankAttempt struct {
 	TimeSpentMS        int
 	PronunciationScore float64
 }
+
+type VocabularyBankFeedEntry struct {
+	VocabularyBankWordSummary
+	Status         string
+	CurrentStep    int
+	LastActivityAt *time.Time
+}
+
+type VocabularyBankFeed struct {
+	InProgress []VocabularyBankFeedEntry
+	NewWords   []VocabularyBankFeedEntry
+}
