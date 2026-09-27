@@ -113,8 +113,11 @@ func (h *VocabularyBankHandler) RecordAttempt(c *gin.Context) {
 	}
 	// Word-completed bonus. The attempt itself is already persisted, so an
 	// AddXP failure must not fail the request — we log and omit the xp block.
+	// source_id stays empty: xp_transactions.source_id is UUID-typed while the
+	// word's public id (A1-VOC-…) is deliberately not a UUID; the reason
+	// identifies the origin.
 	if response.JustCompleted && h.gamification != nil {
-		xp, xpErr := h.gamification.AddXP(c.Request.Context(), userID, 25, gamificationv1.XPReason_XP_REASON_VOCABULARY_WORD, c.Param("externalId"))
+		xp, xpErr := h.gamification.AddXP(c.Request.Context(), userID, 25, gamificationv1.XPReason_XP_REASON_VOCABULARY_WORD, "")
 		if xpErr != nil {
 			logger.Error(c.Request.Context(), "vocabulary bank: add word-completion XP failed", zap.Error(xpErr))
 		} else {
