@@ -38,19 +38,14 @@ func vocabularyBankStatus(completed bool, currentStep int) string {
 }
 
 func (r *vocabularyBankRepository) List(ctx context.Context, f repository.VocabularyBankListFilters) ([]model.VocabularyBankWordSummary, int, error) {
+	// Main query: $1 is always the translations locale.
 	var conditions []string
 	args := []any{f.Locale}
 	position := 2
-	var countConditions []string
-	var countArgs []any
-	countPosition := 1
 	if f.CEFRLevel != "" {
 		conditions = append(conditions, fmt.Sprintf("w.cefr_level = $%d", position))
 		args = append(args, f.CEFRLevel)
 		position++
-		countConditions = append(countConditions, fmt.Sprintf("w.cefr_level = $%d", countPosition))
-		countArgs = append(countArgs, f.CEFRLevel)
-		countPosition++
 	}
 	if f.Search != "" {
 		// Search covers English fields AND the localized translation, so a
@@ -58,21 +53,34 @@ func (r *vocabularyBankRepository) List(ctx context.Context, f repository.Vocabu
 		conditions = append(conditions, fmt.Sprintf("(w.word ILIKE $%d OR w.lemma ILIKE $%d OR w.meaning ILIKE $%d OR t.text ILIKE $%d)", position, position, position, position))
 		args = append(args, "%"+f.Search+"%")
 		position++
-		countConditions = append(countConditions, fmt.Sprintf("(w.word ILIKE $%d OR w.lemma ILIKE $%d OR w.meaning ILIKE $%d OR t.text ILIKE $%d)", countPosition, countPosition, countPosition, countPosition))
-		countArgs = append(countArgs, "%"+f.Search+"%")
-		countPosition++
-	}
-	translationJoin := ""
-	if f.Search != "" {
-		// The count query below has no translations join by default; it is
-		// required to keep total consistent when searching by translation.
-		translationJoin = " LEFT JOIN vocabulary_bank_translations t ON t.word_id = w.id AND t.locale = $1"
 	}
 	where := ""
 	if len(conditions) > 0 {
 		where = " WHERE " + strings.Join(conditions, " AND ")
 	}
 
+	// Count query: the translations join (and its $1 locale binding) is only
+	// needed for search — placeholders shift accordingly.
+	var countConditions []string
+	var countArgs []any
+	countPosition := 1
+	if f.Search != "" {
+		countArgs = append(countArgs, f.Locale)
+		countPosition = 2
+	}
+	if f.CEFRLevel != "" {
+		countConditions = append(countConditions, fmt.Sprintf("w.cefr_level = $%d", countPosition))
+		countArgs = append(countArgs, f.CEFRLevel)
+		countPosition++
+	}
+	if f.Search != "" {
+		countConditions = append(countConditions, fmt.Sprintf("(w.word ILIKE $%d OR w.lemma ILIKE $%d OR w.meaning ILIKE $%d OR t.text ILIKE $%d)", countPosition, countPosition, countPosition, countPosition))
+		countArgs = append(countArgs, "%"+f.Search+"%")
+	}
+	translationJoin := ""
+	if f.Search != "" {
+		translationJoin = " LEFT JOIN vocabulary_bank_translations t ON t.word_id = w.id AND t.locale = $1"
+	}
 	countWhere := ""
 	if len(countConditions) > 0 {
 		countWhere = " WHERE " + strings.Join(countConditions, " AND ")
