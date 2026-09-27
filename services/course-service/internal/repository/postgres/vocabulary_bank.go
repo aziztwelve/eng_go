@@ -86,16 +86,16 @@ func (r *vocabularyBankRepository) List(ctx context.Context, f repository.Vocabu
 		limit = 50
 	}
 
-	// Per-user annotation: LEFT JOIN keeps anonymous listing working.
+	// Per-user annotation: LEFT JOIN keeps anonymous listing working. The
+	// two extra columns are always selected and scanned (constant stubs for
+	// anonymous calls) so the row shape stays uniform.
 	userJoin := ""
-	userColumns := "'' AS status, 0 AS current_step"
-	scanStatus := false
+	userColumns := "'' AS user_completed, 0 AS current_step"
 	if f.UserID != "" {
 		userJoin = fmt.Sprintf(" LEFT JOIN user_vocabulary_progress p ON p.word_id = w.id AND p.user_id = $%d", position)
 		args = append(args, f.UserID)
 		position++
-		userColumns = "(p.completed_at IS NOT NULL) AS completed, COALESCE(p.current_step, 0) AS current_step"
-		scanStatus = true
+		userColumns = "(p.completed_at IS NOT NULL) AS user_completed, COALESCE(p.current_step, 0) AS current_step"
 	}
 
 	// Sorting: with a level filter `word` alone is already alphabetical within
@@ -113,7 +113,7 @@ func (r *vocabularyBankRepository) List(ctx context.Context, f repository.Vocabu
 
 	entries := make([]model.VocabularyBankWordSummary, 0, limit)
 	for rows.Next() {
-		entry, err := scanVocabularyBankSummary(rows.Scan, scanStatus)
+		entry, err := scanVocabularyBankSummary(rows.Scan, f.UserID != "")
 		if err != nil {
 			return nil, 0, err
 		}
@@ -171,16 +171,15 @@ func (r *vocabularyBankRepository) GetByExternalID(ctx context.Context, external
 
 func scanVocabularyBankSummary(scan func(...any) error, withStatus bool) (model.VocabularyBankWordSummary, error) {
 	var item model.VocabularyBankWordSummary
-	if withStatus {
-		var completed bool
-		if err := scan(&item.ExternalID, &item.Word, &item.Translation, &item.PartOfSpeech, &item.CEFRLevel, &item.HasAudio, &completed, &item.CurrentStep); err != nil {
-			return item, err
-		}
-		item.Status = vocabularyBankStatus(completed, item.CurrentStep)
-		return item, nil
+	var completed bool
+	if err := scan(&item.ExternalID, &item.Word, &item.Translation, &item.PartOfSpeech, &item.CEFRLevel, &item.HasAudio, &completed, &item.CurrentStep); err != nil {
+		return item, err
 	}
-	err := scan(&item.ExternalID, &item.Word, &item.Translation, &item.PartOfSpeech, &item.CEFRLevel, &item.HasAudio)
-	return item, err
+	// Anonymous listing scans the constant stubs; status stays empty then.
+	if withStatus {
+		item.Status = vocabularyBankStatus(completed, item.CurrentStep)
+	}
+	return item, nil
 }
 
 func (r *vocabularyBankRepository) GetProgress(ctx context.Context, userID, externalID string) (*model.VocabularyBankProgress, error) {
