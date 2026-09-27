@@ -14,6 +14,7 @@ func ToVocabularyBankWordSummaryProto(word model.VocabularyBankWordSummary) *cou
 	return &coursev1.VocabularyBankWordSummary{
 		ExternalId: word.ExternalID, Word: word.Word, Translation: word.Translation,
 		PartOfSpeech: word.PartOfSpeech, CefrLevel: word.CEFRLevel, HasAudio: word.HasAudio,
+		Status: word.Status, CurrentStep: int32(word.CurrentStep),
 	}
 }
 

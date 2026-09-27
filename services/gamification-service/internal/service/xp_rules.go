@@ -41,6 +41,14 @@ func XPForCourseBonus() int {
 	return 100
 }
 
+// XPForVocabularyWord — плоский бонус за завершение 15-шагового урока слова
+// из Vocabulary Bank. Между lesson bonus (10) и course bonus (100): слово —
+// это больше урока, но меньше курса. Per-step XP не начисляется (см.
+// docs/tasks/vocabulary-bank-improvements.md §4).
+func XPForVocabularyWord() int {
+	return 25
+}
+
 // XPForQuizCompleted — XP за прохождение квиза. Базово 15, на perfect-результат
 // дополнительные 25 (итого 40). Возвращается tuple (xp, isPerfect): isPerfect
 // влияет на reason (perfect_quizzes vs quiz_completed), а величина XP всегда

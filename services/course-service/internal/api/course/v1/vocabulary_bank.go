@@ -15,7 +15,7 @@ import (
 func (a *api) ListVocabularyBankWords(ctx context.Context, req *coursev1.ListVocabularyBankWordsRequest) (*coursev1.ListVocabularyBankWordsResponse, error) {
 	entries, total, err := a.vocabBankService.List(ctx, repository.VocabularyBankListFilters{
 		CEFRLevel: req.CefrLevel, Search: req.Search, Locale: req.Locale,
-		Limit: int(req.Limit), Offset: int(req.Offset),
+		Limit: int(req.Limit), Offset: int(req.Offset), UserID: req.UserId,
 	})
 	if err != nil {
 		return nil, status.Errorf(codes.InvalidArgument, "list vocabulary bank: %v", err)
@@ -47,7 +47,7 @@ func (a *api) RecordVocabularyBankAttempt(ctx context.Context, req *coursev1.Rec
 	if err != nil {
 		return nil, status.Errorf(codes.InvalidArgument, "record vocabulary bank attempt: %v", err)
 	}
-	return &coursev1.RecordVocabularyBankAttemptResponse{Progress: converter.ToVocabularyBankProgressProto(progress)}, nil
+	return &coursev1.RecordVocabularyBankAttemptResponse{Progress: converter.ToVocabularyBankProgressProto(progress), JustCompleted: progress.JustCompleted}, nil
 }
 
 func (a *api) ListVocabularyBankFeed(ctx context.Context, req *coursev1.ListVocabularyBankFeedRequest) (*coursev1.ListVocabularyBankFeedResponse, error) {

@@ -25,6 +25,18 @@ const vocabularyBankSummaryColumns = `w.external_id, w.word,
 	COALESCE(NULLIF(t.text, ''), w.meaning), w.part_of_speech, w.cefr_level,
 	(w.audio <> '{}'::jsonb)`
 
+// vocabularyBankStatus computes the per-user status from progress columns.
+func vocabularyBankStatus(completed bool, currentStep int) string {
+	switch {
+	case completed:
+		return "completed"
+	case currentStep > 1:
+		return "in_progress"
+	default:
+		return "new"
+	}
+}
+
 func (r *vocabularyBankRepository) List(ctx context.Context, f repository.VocabularyBankListFilters) ([]model.VocabularyBankWordSummary, int, error) {
 	var conditions []string
 	args := []any{f.Locale}
@@ -41,12 +53,20 @@ func (r *vocabularyBankRepository) List(ctx context.Context, f repository.Vocabu
 		countPosition++
 	}
 	if f.Search != "" {
-		conditions = append(conditions, fmt.Sprintf("(w.word ILIKE $%d OR w.lemma ILIKE $%d OR w.meaning ILIKE $%d)", position, position, position))
+		// Search covers English fields AND the localized translation, so a
+		// native-language query («актер») finds the word (ACTOR).
+		conditions = append(conditions, fmt.Sprintf("(w.word ILIKE $%d OR w.lemma ILIKE $%d OR w.meaning ILIKE $%d OR t.text ILIKE $%d)", position, position, position, position))
 		args = append(args, "%"+f.Search+"%")
 		position++
-		countConditions = append(countConditions, fmt.Sprintf("(w.word ILIKE $%d OR w.lemma ILIKE $%d OR w.meaning ILIKE $%d)", countPosition, countPosition, countPosition))
+		countConditions = append(countConditions, fmt.Sprintf("(w.word ILIKE $%d OR w.lemma ILIKE $%d OR w.meaning ILIKE $%d OR t.text ILIKE $%d)", countPosition, countPosition, countPosition, countPosition))
 		countArgs = append(countArgs, "%"+f.Search+"%")
 		countPosition++
+	}
+	translationJoin := ""
+	if f.Search != "" {
+		// The count query below has no translations join by default; it is
+		// required to keep total consistent when searching by translation.
+		translationJoin = " LEFT JOIN vocabulary_bank_translations t ON t.word_id = w.id AND t.locale = $1"
 	}
 	where := ""
 	if len(conditions) > 0 {
@@ -58,16 +78,32 @@ func (r *vocabularyBankRepository) List(ctx context.Context, f repository.Vocabu
 		countWhere = " WHERE " + strings.Join(countConditions, " AND ")
 	}
 	var total int
-	if err := r.pool.QueryRow(ctx, "SELECT COUNT(*) FROM vocabulary_bank_words w"+countWhere, countArgs...).Scan(&total); err != nil {
+	if err := r.pool.QueryRow(ctx, "SELECT COUNT(*) FROM vocabulary_bank_words w"+translationJoin+countWhere, countArgs...).Scan(&total); err != nil {
 		return nil, 0, err
 	}
 	limit := f.Limit
 	if limit <= 0 || limit > 100 {
 		limit = 50
 	}
-	query := fmt.Sprintf(`SELECT %s FROM vocabulary_bank_words w
-		LEFT JOIN vocabulary_bank_translations t ON t.word_id = w.id AND t.locale = $1%s
-		ORDER BY w.cefr_level, w.word LIMIT $%d OFFSET $%d`, vocabularyBankSummaryColumns, where, position, position+1)
+
+	// Per-user annotation: LEFT JOIN keeps anonymous listing working.
+	userJoin := ""
+	userColumns := "'' AS status, 0 AS current_step"
+	scanStatus := false
+	if f.UserID != "" {
+		userJoin = fmt.Sprintf(" LEFT JOIN user_vocabulary_progress p ON p.word_id = w.id AND p.user_id = $%d", position)
+		args = append(args, f.UserID)
+		position++
+		userColumns = "(p.completed_at IS NOT NULL) AS completed, COALESCE(p.current_step, 0) AS current_step"
+		scanStatus = true
+	}
+
+	// Sorting: with a level filter `word` alone is already alphabetical within
+	// the level; without it we still sort by word so the client's letter
+	// grouping does not interleave A1..C1 buckets of the same letter.
+	query := fmt.Sprintf(`SELECT %s, %s FROM vocabulary_bank_words w
+		LEFT JOIN vocabulary_bank_translations t ON t.word_id = w.id AND t.locale = $1%s%s
+		ORDER BY w.word LIMIT $%d OFFSET $%d`, vocabularyBankSummaryColumns, userColumns, where, userJoin, position, position+1)
 	args = append(args, limit, max(f.Offset, 0))
 	rows, err := r.pool.Query(ctx, query, args...)
 	if err != nil {
@@ -75,9 +111,9 @@ func (r *vocabularyBankRepository) List(ctx context.Context, f repository.Vocabu
 	}
 	defer rows.Close()
 
-	entries := make([]model.VocabularyBankWordSummary, 0)
+	entries := make([]model.VocabularyBankWordSummary, 0, limit)
 	for rows.Next() {
-		entry, err := scanVocabularyBankSummary(rows.Scan)
+		entry, err := scanVocabularyBankSummary(rows.Scan, scanStatus)
 		if err != nil {
 			return nil, 0, err
 		}
@@ -88,18 +124,15 @@ func (r *vocabularyBankRepository) List(ctx context.Context, f repository.Vocabu
 
 func (r *vocabularyBankRepository) GetByExternalID(ctx context.Context, externalID, locale string) (*model.VocabularyBankWordDetail, error) {
 	detail := &model.VocabularyBankWordDetail{}
-	query := `SELECT ` + vocabularyBankSummaryColumns + `, w.lemma, w.meaning
+	query := `SELECT ` + vocabularyBankSummaryColumns + `, w.lemma, w.meaning, w.id
 		FROM vocabulary_bank_words w
 		LEFT JOIN vocabulary_bank_translations t ON t.word_id = w.id AND t.locale = $1
 		WHERE w.external_id = $2`
 	var wordID string
 	if err := r.pool.QueryRow(ctx, query, locale, externalID).Scan(
 		&detail.ExternalID, &detail.Word, &detail.Translation, &detail.PartOfSpeech,
-		&detail.CEFRLevel, &detail.HasAudio, &detail.Lemma, &detail.Meaning,
+		&detail.CEFRLevel, &detail.HasAudio, &detail.Lemma, &detail.Meaning, &wordID,
 	); err != nil {
-		return nil, err
-	}
-	if err := r.pool.QueryRow(ctx, `SELECT id FROM vocabulary_bank_words WHERE external_id = $1`, externalID).Scan(&wordID); err != nil {
 		return nil, err
 	}
 
@@ -136,8 +169,16 @@ func (r *vocabularyBankRepository) GetByExternalID(ctx context.Context, external
 	return detail, activities.Err()
 }
 
-func scanVocabularyBankSummary(scan func(...any) error) (model.VocabularyBankWordSummary, error) {
+func scanVocabularyBankSummary(scan func(...any) error, withStatus bool) (model.VocabularyBankWordSummary, error) {
 	var item model.VocabularyBankWordSummary
+	if withStatus {
+		var completed bool
+		if err := scan(&item.ExternalID, &item.Word, &item.Translation, &item.PartOfSpeech, &item.CEFRLevel, &item.HasAudio, &completed, &item.CurrentStep); err != nil {
+			return item, err
+		}
+		item.Status = vocabularyBankStatus(completed, item.CurrentStep)
+		return item, nil
+	}
 	err := scan(&item.ExternalID, &item.Word, &item.Translation, &item.PartOfSpeech, &item.CEFRLevel, &item.HasAudio)
 	return item, err
 }
@@ -180,6 +221,12 @@ func (r *vocabularyBankRepository) RecordAttempt(ctx context.Context, attempt mo
 		VALUES ($1,$2,$3,$4,$5,$6,$7,$8,NULLIF($9, 0))`, attempt.UserID, wordID, attempt.Step, activityType, answer, attempt.IsCorrect, attempt.Score, attempt.TimeSpentMS, attempt.PronunciationScore); err != nil {
 		return nil, err
 	}
+	// completed_at of the row before the upsert — the XP hook must fire only
+	// on the transition NULL → set, never on a repeated step-15 attempt.
+	var completedBefore any
+	if err := tx.QueryRow(ctx, `SELECT completed_at FROM user_vocabulary_progress WHERE user_id = $1 AND word_id = $2`, attempt.UserID, wordID).Scan(&completedBefore); err != nil && err != pgx.ErrNoRows {
+		return nil, err
+	}
 	var progress model.VocabularyBankProgress
 	progress.ExternalID = attempt.ExternalID
 	if err := tx.QueryRow(ctx, `INSERT INTO user_vocabulary_progress (user_id, word_id, current_step, completed_at, last_activity_at)
@@ -195,6 +242,7 @@ func (r *vocabularyBankRepository) RecordAttempt(ctx context.Context, attempt mo
 	if err := tx.Commit(ctx); err != nil {
 		return nil, err
 	}
+	progress.JustCompleted = progress.CompletedAt != nil && completedBefore == nil
 	return &progress, nil
 }
 
@@ -237,7 +285,7 @@ func (r *vocabularyBankRepository) ListFeed(ctx context.Context, userID string, 
 		FROM vocabulary_bank_words w
 		LEFT JOIN vocabulary_bank_translations t ON t.word_id = w.id AND t.locale = $2
 		LEFT JOIN user_vocabulary_progress p ON p.word_id = w.id AND p.user_id = $1
-		WHERE p.word_id IS NULL` + levelClause + ` ORDER BY w.cefr_level, w.word LIMIT ` + limitPlaceholder
+		WHERE p.word_id IS NULL` + levelClause + ` ORDER BY random() LIMIT ` + limitPlaceholder
 	rows, err = r.pool.Query(ctx, newQuery, args...)
 	if err != nil {
 		return nil, err

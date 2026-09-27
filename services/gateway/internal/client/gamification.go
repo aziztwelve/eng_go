@@ -97,3 +97,11 @@ func (c *GamificationClient) GetXPHistory(ctx context.Context, userID string, li
 		UserId: userID, Limit: limit, Offset: offset,
 	})
 }
+
+// AddXP начисляет XP с указанной причиной; source_id связывает транзакцию
+// с сущностью (для Vocabulary Bank — external_id слова).
+func (c *GamificationClient) AddXP(ctx context.Context, userID string, amount int32, reason gamificationv1.XPReason, sourceID string) (*gamificationv1.AddXPResponse, error) {
+	return c.client.AddXP(ctx, &gamificationv1.AddXPRequest{
+		UserId: userID, Amount: amount, Reason: reason, SourceId: sourceID,
+	})
+}

@@ -78,3 +78,32 @@ func (m *AuthMiddleware) Handle() gin.HandlerFunc {
 		c.Next()
 	}
 }
+
+// HandleOptional — вариант auth-middleware для публичных эндпоинтов с
+// персонализацией: без токена или с невалидным токеном запрос продолжает
+// выполняться анонимно (user_id в контексте нет).
+func (m *AuthMiddleware) HandleOptional() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		authHeader := c.GetHeader("Authorization")
+		parts := strings.Split(authHeader, " ")
+		if len(parts) != 2 || parts[0] != "Bearer" {
+			c.Next()
+			return
+		}
+
+		resp, err := m.authClient.ValidateToken(c.Request.Context(), &authv1.ValidateTokenRequest{
+			Token: parts[1],
+		})
+		if err != nil {
+			logger.Warn(c.Request.Context(), "Optional auth: token validation failed", zap.Error(err))
+			c.Next()
+			return
+		}
+
+		if resp.Valid {
+			c.Set("user_id", resp.UserId)
+			c.Set("user_role", resp.Role)
+		}
+		c.Next()
+	}
+}

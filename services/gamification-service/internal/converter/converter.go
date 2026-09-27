@@ -107,6 +107,8 @@ func xpReasonToProto(r model.XPReason) gamificationv1.XPReason {
 		return gamificationv1.XPReason_XP_REASON_STREAK_BONUS
 	case model.XPReasonPractice:
 		return gamificationv1.XPReason_XP_REASON_PRACTICE
+	case model.XPReasonVocabularyWord:
+		return gamificationv1.XPReason_XP_REASON_VOCABULARY_WORD
 	default:
 		return gamificationv1.XPReason_XP_REASON_UNSPECIFIED
 	}
@@ -127,6 +129,8 @@ func XPReasonFromProto(r gamificationv1.XPReason) model.XPReason {
 		return model.XPReasonStreakBonus
 	case gamificationv1.XPReason_XP_REASON_PRACTICE:
 		return model.XPReasonPractice
+	case gamificationv1.XPReason_XP_REASON_VOCABULARY_WORD:
+		return model.XPReasonVocabularyWord
 	default:
 		return ""
 	}

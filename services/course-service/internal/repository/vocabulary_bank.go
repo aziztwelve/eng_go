@@ -12,6 +12,9 @@ type VocabularyBankListFilters struct {
 	Locale    string
 	Limit     int
 	Offset    int
+	// UserID is optional; when set the list is annotated with per-user
+	// status (new | in_progress | completed) and current_step.
+	UserID string
 }
 
 // VocabularyBankRepository reads shared imported content only; it owns no

@@ -14,6 +14,10 @@ type VocabularyBankWordSummary struct {
 	PartOfSpeech string
 	CEFRLevel    string
 	HasAudio     bool
+	// Status filled only for user-scoped list requests:
+	// "new" | "in_progress" | "completed"; empty for anonymous calls.
+	Status     string
+	CurrentStep int
 }
 
 type VocabularyBankQuestionSet struct {
@@ -45,6 +49,9 @@ type VocabularyBankProgress struct {
 	CurrentStep    int
 	CompletedAt    *time.Time
 	LastActivityAt time.Time
+	// JustCompleted is true only when the recorded attempt moved the word
+	// into completed state (prevents duplicate XP on repeated step 15).
+	JustCompleted bool
 }
 
 type VocabularyBankAttempt struct {

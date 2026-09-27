@@ -6,17 +6,23 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
+	"go.uber.org/zap"
 	"google.golang.org/protobuf/types/known/structpb"
 
 	"github.com/elearning/gateway/internal/client"
 	"github.com/elearning/gateway/internal/errors"
+	"github.com/elearning/platform/pkg/logger"
 	coursev1 "github.com/elearning/shared/pkg/proto/course/v1"
+	gamificationv1 "github.com/elearning/shared/pkg/proto/gamification/v1"
 )
 
 // VocabularyBankHandler exposes the learner-facing canonical word bank. It is
 // intentionally separate from legacy /vocabulary routes.
 type VocabularyBankHandler struct {
 	course *client.CourseClient
+	// gamification is optional (nil when GAMIFICATION_SERVICE_ADDR unset):
+	// word-completion XP is skipped then, attempts still succeed.
+	gamification *client.GamificationClient
 }
 
 type vocabularyBankAttemptRequest struct {
@@ -27,19 +33,24 @@ type vocabularyBankAttemptRequest struct {
 	PronunciationScore float64        `json:"pronunciation_score"`
 }
 
-func NewVocabularyBankHandler(course *client.CourseClient) *VocabularyBankHandler {
-	return &VocabularyBankHandler{course: course}
+func NewVocabularyBankHandler(course *client.CourseClient, gamification *client.GamificationClient) *VocabularyBankHandler {
+	return &VocabularyBankHandler{course: course, gamification: gamification}
 }
 
 // List GET /api/v1/vocabulary-bank?cefr_level=A1&search=...&locale=ru&limit=...&offset=...
+// Route runs under optional auth: with a valid token entries are annotated
+// with the user's status (new | in_progress | completed).
 func (h *VocabularyBankHandler) List(c *gin.Context) {
 	limit, offset := parsePagination(c)
+	userID, _ := c.Get("user_id")
+	userIDStr, _ := userID.(string)
 	response, err := h.course.ListVocabularyBankWords(c.Request.Context(), &coursev1.ListVocabularyBankWordsRequest{
 		CefrLevel: c.Query("cefr_level"),
 		Search:    c.Query("search"),
 		Locale:    c.Query("locale"),
 		Limit:     int32(limit),
 		Offset:    int32(offset),
+		UserId:    userIDStr,
 	})
 	if err != nil {
 		errors.HandleGRPCError(c, err)
@@ -99,6 +110,18 @@ func (h *VocabularyBankHandler) RecordAttempt(c *gin.Context) {
 	if err != nil {
 		errors.HandleGRPCError(c, err)
 		return
+	}
+	// Word-completed bonus. The attempt itself is already persisted, so an
+	// AddXP failure must not fail the request — we log and omit the xp block.
+	if response.JustCompleted && h.gamification != nil {
+		xp, xpErr := h.gamification.AddXP(c.Request.Context(), userID, 25, gamificationv1.XPReason_XP_REASON_VOCABULARY_WORD, c.Param("externalId"))
+		if xpErr != nil {
+			logger.Error(c.Request.Context(), "vocabulary bank: add word-completion XP failed", zap.Error(xpErr))
+		} else {
+			response.Xp = &coursev1.VocabularyBankXPAward{
+				Amount: xp.Transaction.GetAmount(), LeveledUp: xp.LeveledUp, NewLevel: xp.NewLevel,
+			}
+		}
 	}
 	c.JSON(http.StatusOK, response)
 }

@@ -891,6 +891,10 @@ message VocabularyBankWordSummary {
   string part_of_speech = 4;
   string cefr_level = 5;
   bool has_audio = 6;
+  // Статус для текущего пользователя: new | in_progress | completed.
+  // Пустая строка = запрос без user_id (публичный контекст).
+  string status = 7;
+  int32 current_step = 8;
 }
 
 message VocabularyBankQuestionSet {
@@ -923,6 +927,8 @@ message ListVocabularyBankWordsRequest {
   string locale = 3;
   int32 limit = 4;
   int32 offset = 5;
+  // Опционально: заполнить status/current_step для пользователя.
+  string user_id = 6;
 }
 
 message ListVocabularyBankWordsResponse {
@@ -971,6 +977,16 @@ message RecordVocabularyBankAttemptRequest {
 
 message RecordVocabularyBankAttemptResponse {
   VocabularyBankProgress progress = 1;
+  // true только если THIS attempt перевела слово в completed (для XP-хука).
+  bool just_completed = 2;
+  // Начисленный за завершение слова XP (заполняет gateway при just_completed).
+  VocabularyBankXPAward xp = 3;
+}
+
+message VocabularyBankXPAward {
+  int32 amount = 1;
+  bool leveled_up = 2;
+  int32 new_level = 3;
 }
 
 message VocabularyBankFeedEntry {

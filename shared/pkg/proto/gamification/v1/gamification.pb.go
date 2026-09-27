@@ -32,6 +32,7 @@ const (
 	XPReason_XP_REASON_ACHIEVEMENT      XPReason = 4
 	XPReason_XP_REASON_STREAK_BONUS     XPReason = 5
 	XPReason_XP_REASON_PRACTICE         XPReason = 6
+	XPReason_XP_REASON_VOCABULARY_WORD  XPReason = 7
 )
 
 // Enum value maps for XPReason.
@@ -44,6 +45,7 @@ var (
 		4: "XP_REASON_ACHIEVEMENT",
 		5: "XP_REASON_STREAK_BONUS",
 		6: "XP_REASON_PRACTICE",
+		7: "XP_REASON_VOCABULARY_WORD",
 	}
 	XPReason_value = map[string]int32{
 		"XP_REASON_UNSPECIFIED":      0,
@@ -53,6 +55,7 @@ var (
 		"XP_REASON_ACHIEVEMENT":      4,
 		"XP_REASON_STREAK_BONUS":     5,
 		"XP_REASON_PRACTICE":         6,
+		"XP_REASON_VOCABULARY_WORD":  7,
 	}
 )
 
@@ -2812,7 +2815,7 @@ const file_gamification_v1_gamification_proto_rawDesc = "" +
 	"\x10score_percentage\x18\x03 \x01(\x01R\x0fscorePercentage\x12\x1b\n" +
 	"\tis_passed\x18\x04 \x01(\bR\bisPassed\"I\n" +
 	"\x17OnQuizCompletedResponse\x12.\n" +
-	"\x02xp\x18\x01 \x01(\v2\x1e.gamification.v1.AddXPResponseR\x02xp*\xcc\x01\n" +
+	"\x02xp\x18\x01 \x01(\v2\x1e.gamification.v1.AddXPResponseR\x02xp*\xeb\x01\n" +
 	"\bXPReason\x12\x19\n" +
 	"\x15XP_REASON_UNSPECIFIED\x10\x00\x12\x1c\n" +
 	"\x18XP_REASON_STEP_COMPLETED\x10\x01\x12\x1e\n" +
@@ -2820,7 +2823,8 @@ const file_gamification_v1_gamification_proto_rawDesc = "" +
 	"\x14XP_REASON_DAILY_GOAL\x10\x03\x12\x19\n" +
 	"\x15XP_REASON_ACHIEVEMENT\x10\x04\x12\x1a\n" +
 	"\x16XP_REASON_STREAK_BONUS\x10\x05\x12\x16\n" +
-	"\x12XP_REASON_PRACTICE\x10\x06*\x95\x01\n" +
+	"\x12XP_REASON_PRACTICE\x10\x06\x12\x1d\n" +
+	"\x19XP_REASON_VOCABULARY_WORD\x10\a*\x95\x01\n" +
 	"\fRefillReason\x12\x1d\n" +
 	"\x19REFILL_REASON_UNSPECIFIED\x10\x00\x12\x1a\n" +
 	"\x16REFILL_REASON_PRACTICE\x10\x01\x12\x16\n" +

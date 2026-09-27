@@ -20,6 +20,9 @@ const (
 	XPReasonAchievement XPReason = "achievement"
 	XPReasonStreakBonus XPReason = "streak_bonus"
 	XPReasonPractice    XPReason = "practice"
+	// XPReasonVocabularyWord — завершено слово из Vocabulary Bank
+	// (15-шаговый урок слова пройден до конца).
+	XPReasonVocabularyWord XPReason = "vocabulary_word"
 )
 
 // XPTransaction — одна запись в журнале XP.

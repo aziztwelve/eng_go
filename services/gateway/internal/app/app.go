@@ -155,9 +155,12 @@ func (a *App) initRouter(ctx context.Context) error {
 		ttsHandler := handler.NewTTSHandler(a.diContainer.CourseClient(ctx))
 		v1.GET("/vocabulary", vocabHandler.List)
 		v1.GET("/vocabulary/:id", vocabHandler.Get)
-		vocabularyBankHandler := handler.NewVocabularyBankHandler(a.diContainer.CourseClient(ctx))
-		v1.GET("/vocabulary-bank", vocabularyBankHandler.List)
-		v1.GET("/vocabulary-bank/:externalId", vocabularyBankHandler.Get)
+		vocabularyBankHandler := handler.NewVocabularyBankHandler(
+			a.diContainer.CourseClient(ctx), a.diContainer.GamificationClient(ctx))
+		// Контент банка публичен, но при валидном токене список обогащается
+		// персональными статусами слов (new/in_progress/completed).
+		v1.GET("/vocabulary-bank", authMiddleware.HandleOptional(), vocabularyBankHandler.List)
+		v1.GET("/vocabulary-bank/:externalId", authMiddleware.HandleOptional(), vocabularyBankHandler.Get)
 		v1.GET("/tts/by-text", ttsHandler.GetByText)
 
 		protected := v1.Group("")
