@@ -90,7 +90,7 @@ func (r *vocabularyBankRepository) List(ctx context.Context, f repository.Vocabu
 	// two extra columns are always selected and scanned (constant stubs for
 	// anonymous calls) so the row shape stays uniform.
 	userJoin := ""
-	userColumns := "'' AS user_completed, 0 AS current_step"
+	userColumns := "FALSE AS user_completed, 0 AS current_step"
 	if f.UserID != "" {
 		userJoin = fmt.Sprintf(" LEFT JOIN user_vocabulary_progress p ON p.word_id = w.id AND p.user_id = $%d", position)
 		args = append(args, f.UserID)
