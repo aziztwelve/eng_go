@@ -111,7 +111,7 @@ func (r *vocabularyBankRepository) List(ctx context.Context, f repository.Vocabu
 	// grouping does not interleave A1..C1 buckets of the same letter.
 	query := fmt.Sprintf(`SELECT %s, %s FROM vocabulary_bank_words w
 		LEFT JOIN vocabulary_bank_translations t ON t.word_id = w.id AND t.locale = $1%s%s
-		ORDER BY w.word LIMIT $%d OFFSET $%d`, vocabularyBankSummaryColumns, userColumns, where, userJoin, position, position+1)
+		ORDER BY w.word LIMIT $%d OFFSET $%d`, vocabularyBankSummaryColumns, userColumns, userJoin, where, position, position+1)
 	args = append(args, limit, max(f.Offset, 0))
 	rows, err := r.pool.Query(ctx, query, args...)
 	if err != nil {
