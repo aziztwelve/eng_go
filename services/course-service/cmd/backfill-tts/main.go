@@ -335,6 +335,9 @@ func fillMissingAudioURLs(ctx context.Context, value any, language, voice string
 				var err error
 				url, err = synthesize(ctx, strings.TrimSpace(text), language, voice)
 				if err != nil || url == "" {
+					if err != nil {
+						fmt.Printf("  ✗ TTS %q: %v\n", strings.TrimSpace(text), err)
+					}
 					failures++
 				} else {
 					cache[key] = url
