@@ -273,6 +273,15 @@ func backfillStepAudio(ctx context.Context, pool *pgxpool.Pool, ai aiv1.AIServic
 			fmt.Printf("  ✗ decode step %s: %v\n", r.id, err)
 			continue
 		}
+		if dryRun {
+			missing := countMissingAudioURLs(content)
+			snippets += missing
+			if missing > 0 {
+				fmt.Printf("  [dry] step %s: %d audio_url update(s)\n", r.id, missing)
+				ok += missing
+			}
+			continue
+		}
 
 		changed, attempted, failures := fillMissingAudioURLs(ctx, content, "en", voice, cache,
 			func(ctx context.Context, text, language, voice string) (string, error) {
@@ -285,11 +294,6 @@ func backfillStepAudio(ctx context.Context, pool *pgxpool.Pool, ai aiv1.AIServic
 			fmt.Printf("  ✗ step %s: %d audio fragment(s) not synthesized\n", r.id, failures)
 		}
 		if !changed {
-			continue
-		}
-		if dryRun {
-			fmt.Printf("  [dry] step %s: %d audio_url update(s)\n", r.id, attempted-failures)
-			ok += attempted - failures
 			continue
 		}
 
@@ -361,6 +365,29 @@ func fillMissingAudioURLs(ctx context.Context, value any, language, voice string
 func emptyAudioURL(value any) bool {
 	url, ok := value.(string)
 	return !ok || strings.TrimSpace(url) == ""
+}
+
+// countMissingAudioURLs mirrors the discovery rules of fillMissingAudioURLs
+// without calling a provider. It keeps --dry-run a zero-cost, read-only plan.
+func countMissingAudioURLs(value any) int {
+	switch node := value.(type) {
+	case map[string]any:
+		count := 0
+		if text, ok := node["audio_text"].(string); ok && strings.TrimSpace(text) != "" && emptyAudioURL(node["audio_url"]) {
+			count++
+		}
+		for _, child := range node {
+			count += countMissingAudioURLs(child)
+		}
+		return count
+	case []any:
+		count := 0
+		for _, child := range node {
+			count += countMissingAudioURLs(child)
+		}
+		return count
+	}
+	return 0
 }
 
 // queryRows — общий SELECT с опциональным LIMIT.

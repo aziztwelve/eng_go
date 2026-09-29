@@ -78,3 +78,17 @@ func TestFillMissingAudioURLsContinuesAfterAFailure(t *testing.T) {
 		t.Fatalf("successful sibling was not backfilled: %v", got)
 	}
 }
+
+func TestCountMissingAudioURLsDoesNotNeedSynthesis(t *testing.T) {
+	content := map[string]any{
+		"audio_text": "sentence",
+		"options": []any{
+			map[string]any{"audio_text": "choice"},
+			map[string]any{"audio_text": "ready", "audio_url": "https://cdn.example/ready.mp3"},
+		},
+	}
+
+	if got := countMissingAudioURLs(content); got != 2 {
+		t.Fatalf("missing audio count=%d, want 2", got)
+	}
+}
