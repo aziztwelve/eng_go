@@ -1,16 +1,16 @@
 // Command backfill-tts — разовый бэкафилл озвучки.
 //
-// Проходит по system-словарю (vocabulary) и личным карточкам
-// (user_flashcards), у которых пустой audio_url, синтезирует аудио через
-// ai-service RPC AIService.SynthesizeTTS (с пустым user_id → без расхода
-// квоты) и проставляет полученный публичный URL в БД.
+// Проходит по system-словарю (vocabulary), личным карточкам
+// (user_flashcards) и content учебных шагов, у которых отсутствует
+// audio_url. Синтезирует аудио через ai-service RPC AIService.SynthesizeTTS
+// (с пустым user_id → без расхода квоты) и сохраняет публичный URL в БД.
 //
 // Запуск (из services/course-service):
 //
 //	go run ./cmd/backfill-tts \
 //	    --env ../../deploy/env/.env \
 //	    --ai-addr localhost:50063 \
-//	    --target all \
+//	    --target steps \
 //	    --dry-run
 //
 // Флаги:
@@ -19,16 +19,18 @@
 //	--dsn       полный DSN (переопределяет --env / POSTGRES_*)
 //	--ai-addr   адрес gRPC ai-service (default env AI_SERVICE_ADDR или localhost:50063)
 //	--voice     TTS-голос (пусто → провайдерский default)
-//	--target    vocab | flashcards | all (default all)
+//	--target    vocab | flashcards | steps | all (default all)
 //	--limit     максимум синтезов на каждую группу (0 = без лимита)
 //	--dry-run   ничего не синтезировать/писать, только показать план
 package main
 
 import (
 	"context"
+	"encoding/json"
 	"flag"
 	"fmt"
 	"os"
+	"strings"
 	"time"
 
 	"github.com/jackc/pgx/v5/pgxpool"
@@ -41,13 +43,13 @@ import (
 
 func main() {
 	var (
-		envPath  = flag.String("env", "", "path to .env with POSTGRES_* (optional)")
-		dsn      = flag.String("dsn", "", "full Postgres DSN (overrides --env/POSTGRES_*)")
-		aiAddr   = flag.String("ai-addr", "", "ai-service gRPC addr (default $AI_SERVICE_ADDR or localhost:50063)")
-		voice    = flag.String("voice", "", "TTS voice (empty → provider default)")
-		target   = flag.String("target", "all", "vocab | flashcards | all")
-		limit    = flag.Int("limit", 0, "max syntheses per group (0 = no limit)")
-		dryRun   = flag.Bool("dry-run", false, "plan only, no synth/writes")
+		envPath = flag.String("env", "", "path to .env with POSTGRES_* (optional)")
+		dsn     = flag.String("dsn", "", "full Postgres DSN (overrides --env/POSTGRES_*)")
+		aiAddr  = flag.String("ai-addr", "", "ai-service gRPC addr (default $AI_SERVICE_ADDR or localhost:50063)")
+		voice   = flag.String("voice", "", "TTS voice (empty → provider default)")
+		target  = flag.String("target", "all", "vocab | flashcards | steps | all")
+		limit   = flag.Int("limit", 0, "max syntheses per group (0 = no limit)")
+		dryRun  = flag.Bool("dry-run", false, "plan only, no synth/writes")
 	)
 	flag.Parse()
 
@@ -76,6 +78,9 @@ func run(envPath, dsn, aiAddr, voice, target string, limit int, dryRun bool) err
 	if aiAddr == "" {
 		aiAddr = "localhost:50063"
 	}
+	if target != "all" && target != "vocab" && target != "flashcards" && target != "steps" {
+		return fmt.Errorf("invalid target %q (expected vocab, flashcards, steps, or all)", target)
+	}
 
 	// --- DB ---
 	pool, err := pgxpool.New(ctx, dsn)
@@ -100,6 +105,7 @@ func run(envPath, dsn, aiAddr, voice, target string, limit int, dryRun bool) err
 
 	doVocab := target == "all" || target == "vocab"
 	doCards := target == "all" || target == "flashcards"
+	doSteps := target == "all" || target == "steps"
 
 	if doVocab {
 		if err := backfillVocabulary(ctx, pool, ai, voice, limit, dryRun); err != nil {
@@ -109,6 +115,11 @@ func run(envPath, dsn, aiAddr, voice, target string, limit int, dryRun bool) err
 	if doCards {
 		if err := backfillFlashcards(ctx, pool, ai, voice, limit, dryRun); err != nil {
 			return fmt.Errorf("flashcards: %w", err)
+		}
+	}
+	if doSteps {
+		if err := backfillStepAudio(ctx, pool, ai, voice, limit, dryRun); err != nil {
+			return fmt.Errorf("steps: %w", err)
 		}
 	}
 
@@ -134,7 +145,10 @@ func synth(ctx context.Context, ai aiv1.AIServiceClient, word, language, voice s
 	if err != nil {
 		return "", err
 	}
-	return resp.GetAudioUrl(), nil
+	if url := strings.TrimSpace(resp.GetAudioUrl()); url != "" {
+		return url, nil
+	}
+	return "", fmt.Errorf("TTS returned no public audio_url; configure persistent audio storage before backfilling")
 }
 
 func backfillVocabulary(ctx context.Context, pool *pgxpool.Pool, ai aiv1.AIServiceClient, voice string, limit int, dryRun bool) error {
@@ -232,6 +246,123 @@ func backfillFlashcards(ctx context.Context, pool *pgxpool.Pool, ai aiv1.AIServi
 	return nil
 }
 
+// stepRow is a course step whose JSONB content may contain audio_text fields.
+// We deliberately keep it generic: new audio exercise types can add nested
+// audio_text values without requiring another migration of this command.
+type stepRow struct {
+	id      string
+	content []byte
+}
+
+// backfillStepAudio persists audio_url next to every non-empty audio_text in
+// a step's JSONB content. It covers top-level listening/tap_words payloads
+// and nested listen_choose_word options / match_pairs_voice pairs alike.
+func backfillStepAudio(ctx context.Context, pool *pgxpool.Pool, ai aiv1.AIServiceClient, voice string, limit int, dryRun bool) error {
+	rows, err := queryStepRows(ctx, pool, limit)
+	if err != nil {
+		return err
+	}
+	fmt.Printf("• steps: %d шагов с audio_text\n", len(rows))
+
+	ok, fail, snippets := 0, 0, 0
+	cache := make(map[string]string)
+	for _, r := range rows {
+		var content map[string]any
+		if err := json.Unmarshal(r.content, &content); err != nil {
+			fail++
+			fmt.Printf("  ✗ decode step %s: %v\n", r.id, err)
+			continue
+		}
+
+		changed, attempted, failures := fillMissingAudioURLs(ctx, content, "en", voice, cache,
+			func(ctx context.Context, text, language, voice string) (string, error) {
+				return synth(ctx, ai, text, language, voice)
+			},
+		)
+		snippets += attempted
+		if failures > 0 {
+			fail += failures
+			fmt.Printf("  ✗ step %s: %d audio fragment(s) not synthesized\n", r.id, failures)
+		}
+		if !changed {
+			continue
+		}
+		if dryRun {
+			fmt.Printf("  [dry] step %s: %d audio_url update(s)\n", r.id, attempted-failures)
+			ok += attempted - failures
+			continue
+		}
+
+		updated, err := json.Marshal(content)
+		if err != nil {
+			fail++
+			fmt.Printf("  ✗ encode step %s: %v\n", r.id, err)
+			continue
+		}
+		if _, err := pool.Exec(ctx,
+			`UPDATE steps SET content = $1::jsonb, updated_at = NOW() WHERE id = $2`,
+			updated, r.id); err != nil {
+			fail++
+			fmt.Printf("  ✗ update step %s: %v\n", r.id, err)
+			continue
+		}
+		ok += attempted - failures
+	}
+	fmt.Printf("• steps: audio fragments=%d ok=%d fail=%d\n", snippets, ok, fail)
+	return nil
+}
+
+type synthFunc func(ctx context.Context, text, language, voice string) (string, error)
+
+// fillMissingAudioURLs walks arbitrary JSON objects and adds audio_url to a
+// map whenever that same map has an audio_text string. Existing URLs remain
+// untouched, making the command safe to run repeatedly.
+func fillMissingAudioURLs(ctx context.Context, value any, language, voice string, cache map[string]string, synthesize synthFunc) (changed bool, attempted, failures int) {
+	switch node := value.(type) {
+	case map[string]any:
+		if declared, ok := node["language"].(string); ok && strings.TrimSpace(declared) != "" {
+			language = strings.TrimSpace(declared)
+		}
+		if text, ok := node["audio_text"].(string); ok && strings.TrimSpace(text) != "" && emptyAudioURL(node["audio_url"]) {
+			attempted++
+			key := strings.ToLower(strings.TrimSpace(language)) + "\x00" + strings.TrimSpace(voice) + "\x00" + strings.TrimSpace(text)
+			url := cache[key]
+			if url == "" {
+				var err error
+				url, err = synthesize(ctx, strings.TrimSpace(text), language, voice)
+				if err != nil || url == "" {
+					failures++
+				} else {
+					cache[key] = url
+				}
+			}
+			if url != "" {
+				node["audio_url"] = url
+				changed = true
+			}
+		}
+		for _, child := range node {
+			childChanged, childAttempted, childFailures := fillMissingAudioURLs(ctx, child, language, voice, cache, synthesize)
+			changed = changed || childChanged
+			attempted += childAttempted
+			failures += childFailures
+		}
+	case []any:
+		for _, child := range node {
+			childChanged, childAttempted, childFailures := fillMissingAudioURLs(ctx, child, language, voice, cache, synthesize)
+			changed = changed || childChanged
+			attempted += childAttempted
+			failures += childFailures
+		}
+	}
+	return changed, attempted, failures
+}
+
+func emptyAudioURL(value any) bool {
+	url, ok := value.(string)
+	return !ok || strings.TrimSpace(url) == ""
+}
+
 // queryRows — общий SELECT с опциональным LIMIT.
 func queryRows(ctx context.Context, pool *pgxpool.Pool, q string, limit int) ([]row, error) {
 	if limit > 0 {
@@ -249,6 +380,33 @@ func queryRows(ctx context.Context, pool *pgxpool.Pool, q string, limit int) ([]
 	for rs.Next() {
 		var r row
 		if err := rs.Scan(&r.id, &r.word, &r.language); err != nil {
+			return nil, err
+		}
+		out = append(out, r)
+	}
+	return out, rs.Err()
+}
+
+func queryStepRows(ctx context.Context, pool *pgxpool.Pool, limit int) ([]stepRow, error) {
+	q := `SELECT id, content
+	      FROM steps
+	      WHERE content::text LIKE '%"audio_text"%'
+	      ORDER BY id`
+	if limit > 0 {
+		q = fmt.Sprintf("%s LIMIT %d", q, limit)
+	}
+	qctx, cancel := context.WithTimeout(ctx, 30*time.Second)
+	defer cancel()
+	rs, err := pool.Query(qctx, q)
+	if err != nil {
+		return nil, err
+	}
+	defer rs.Close()
+
+	var out []stepRow
+	for rs.Next() {
+		var r stepRow
+		if err := rs.Scan(&r.id, &r.content); err != nil {
 			return nil, err
 		}
 		out = append(out, r)
