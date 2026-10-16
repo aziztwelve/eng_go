@@ -66,13 +66,13 @@ func (r *fakeVocabBankProgressRepo) RecordAttempt(_ context.Context, attempt mod
 		r.progress[key] = existing
 	}
 	// Имитация SQL-логики: завершение на шаге 15 при is_correct.
-	if attempt.Step >= 15 && attempt.IsCorrect && existing.CompletedAt == nil {
+	if attempt.Step >= 15 && (attempt.IsCorrect || attempt.CanAdvance) && existing.CompletedAt == nil {
 		now := time.Now()
 		existing.CompletedAt = &now
 		existing.JustCompleted = true
 	} else {
 		existing.JustCompleted = false
-		if attempt.Step < 15 && attempt.Step >= existing.CurrentStep {
+		if (attempt.IsCorrect || attempt.CanAdvance) && attempt.Step < 15 && attempt.Step >= existing.CurrentStep {
 			existing.CurrentStep = attempt.Step + 1
 		}
 	}

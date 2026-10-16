@@ -30,7 +30,7 @@ func vocabularyBankStatus(completed bool, currentStep int) string {
 	switch {
 	case completed:
 		return "completed"
-	case currentStep > 1:
+	case currentStep > 0:
 		return "in_progress"
 	default:
 		return "new"
@@ -206,50 +206,81 @@ func (r *vocabularyBankRepository) GetProgress(ctx context.Context, userID, exte
 	return nil, err
 }
 
+// vocabularyBankNextStep keeps errors on the same step and prevents new clients
+// from completing an unopened lesson by submitting step 15 directly.
+func vocabularyBankNextStep(current, submitted int, correct, strict, completed bool) (int, error) {
+	if strict && !completed && submitted > current {
+		return current, fmt.Errorf("complete step %d first", current)
+	}
+	if !correct || completed {
+		return current, nil
+	}
+	return max(current, min(submitted+1, 15)), nil
+}
+
 func (r *vocabularyBankRepository) RecordAttempt(ctx context.Context, attempt model.VocabularyBankAttempt) (*model.VocabularyBankProgress, error) {
 	tx, err := r.pool.Begin(ctx)
 	if err != nil {
 		return nil, err
 	}
 	defer func() { _ = tx.Rollback(ctx) }()
-
 	var wordID, activityType string
 	if err := tx.QueryRow(ctx, `SELECT w.id, a.activity_type
-		FROM vocabulary_bank_words w JOIN vocabulary_bank_activities a ON a.word_id = w.id
-		WHERE w.external_id = $1 AND a.step = $2`, attempt.ExternalID, attempt.Step).Scan(&wordID, &activityType); err != nil {
+  FROM vocabulary_bank_words w JOIN vocabulary_bank_activities a ON a.word_id=w.id
+  WHERE w.external_id=$1 AND a.step=$2`, attempt.ExternalID, attempt.Step).Scan(&wordID, &activityType); err != nil {
+		return nil, err
+	}
+	// Serializes concurrent submissions, including the very first attempt.
+	if _, err := tx.Exec(ctx, `SELECT pg_advisory_xact_lock(hashtextextended($1, 0))`, attempt.UserID+"|"+wordID); err != nil {
+		return nil, err
+	}
+	if _, err := tx.Exec(ctx, `INSERT INTO user_vocabulary_progress(user_id,word_id) VALUES($1,$2) ON CONFLICT DO NOTHING`, attempt.UserID, wordID); err != nil {
+		return nil, err
+	}
+	progress := model.VocabularyBankProgress{ExternalID: attempt.ExternalID}
+	if err := tx.QueryRow(ctx, `SELECT current_step,completed_at,last_activity_at FROM user_vocabulary_progress WHERE user_id=$1 AND word_id=$2 FOR UPDATE`, attempt.UserID, wordID).Scan(&progress.CurrentStep, &progress.CompletedAt, &progress.LastActivityAt); err != nil {
 		return nil, err
 	}
 	answer := attempt.Answer
 	if len(answer) == 0 {
 		answer = json.RawMessage(`{}`)
 	}
+	if attempt.ClientAttemptID != "" {
+		var same bool
+		err := tx.QueryRow(ctx, `SELECT word_id=$3::uuid AND step=$4 AND answer=$5::jsonb,is_correct,score,assessment_mode FROM user_vocabulary_activity_attempts WHERE user_id=$1 AND client_attempt_id=$2::uuid`, attempt.UserID, attempt.ClientAttemptID, wordID, attempt.Step, answer).Scan(&same, &progress.IsCorrect, &progress.Score, &progress.AssessmentMode)
+		if err == nil {
+			if !same {
+				return nil, fmt.Errorf("attempt_id reused with different answer")
+			}
+			// The original commit succeeded: acknowledge retry without inserting,
+			// advancing, sending a review, or awarding XP a second time.
+			progress.Replayed = true
+			progress.CanAdvance = progress.IsCorrect || progress.AssessmentMode == "practice"
+			return &progress, tx.Commit(ctx)
+		}
+		if err != pgx.ErrNoRows {
+			return nil, err
+		}
+	}
+	next, err := vocabularyBankNextStep(progress.CurrentStep, attempt.Step, attempt.IsCorrect || attempt.CanAdvance, attempt.ClientAttemptID != "", progress.CompletedAt != nil)
+	if err != nil {
+		return nil, err
+	}
 	if _, err := tx.Exec(ctx, `INSERT INTO user_vocabulary_activity_attempts
-		(user_id, word_id, step, activity_type, answer, is_correct, score, time_spent_ms, pronunciation_score)
-		VALUES ($1,$2,$3,$4,$5,$6,$7,$8,NULLIF($9, 0))`, attempt.UserID, wordID, attempt.Step, activityType, answer, attempt.IsCorrect, attempt.Score, attempt.TimeSpentMS, attempt.PronunciationScore); err != nil {
+  (user_id,word_id,step,activity_type,answer,is_correct,score,time_spent_ms,pronunciation_score,client_attempt_id,assessment_mode)
+  VALUES($1,$2,$3,$4,$5,$6,$7,$8,NULLIF($9,0),NULLIF($10,'')::uuid,COALESCE(NULLIF($11,''),'legacy'))`, attempt.UserID, wordID, attempt.Step, activityType, answer, attempt.IsCorrect, attempt.Score, attempt.TimeSpentMS, attempt.PronunciationScore, attempt.ClientAttemptID, attempt.AssessmentMode); err != nil {
 		return nil, err
 	}
-	// completed_at of the row before the upsert — the XP hook must fire only
-	// on the transition NULL → set, never on a repeated step-15 attempt.
-	var completedBefore any
-	if err := tx.QueryRow(ctx, `SELECT completed_at FROM user_vocabulary_progress WHERE user_id = $1 AND word_id = $2`, attempt.UserID, wordID).Scan(&completedBefore); err != nil && err != pgx.ErrNoRows {
-		return nil, err
-	}
-	var progress model.VocabularyBankProgress
-	progress.ExternalID = attempt.ExternalID
-	if err := tx.QueryRow(ctx, `INSERT INTO user_vocabulary_progress (user_id, word_id, current_step, completed_at, last_activity_at)
-		VALUES ($1, $2, CASE WHEN $3 >= 15 AND $4 THEN 15 ELSE LEAST($3 + 1, 15) END, CASE WHEN $3 >= 15 AND $4 THEN NOW() ELSE NULL END, NOW())
-		ON CONFLICT (user_id, word_id) DO UPDATE SET
-			current_step = CASE WHEN EXCLUDED.completed_at IS NOT NULL THEN 15 WHEN $4 THEN GREATEST(user_vocabulary_progress.current_step, EXCLUDED.current_step) ELSE user_vocabulary_progress.current_step END,
-			completed_at = COALESCE(user_vocabulary_progress.completed_at, EXCLUDED.completed_at),
-			last_activity_at = NOW()
-		RETURNING current_step, completed_at, last_activity_at`, attempt.UserID, wordID, attempt.Step, attempt.IsCorrect).
-		Scan(&progress.CurrentStep, &progress.CompletedAt, &progress.LastActivityAt); err != nil {
+	completing := progress.CompletedAt == nil && attempt.Step == 15 && (attempt.IsCorrect || attempt.CanAdvance)
+	if err := tx.QueryRow(ctx, `UPDATE user_vocabulary_progress SET current_step=$3,
+  completed_at=CASE WHEN $4 THEN NOW() ELSE completed_at END,last_activity_at=NOW()
+  WHERE user_id=$1 AND word_id=$2 RETURNING current_step,completed_at,last_activity_at`, attempt.UserID, wordID, next, completing).Scan(&progress.CurrentStep, &progress.CompletedAt, &progress.LastActivityAt); err != nil {
 		return nil, err
 	}
 	if err := tx.Commit(ctx); err != nil {
 		return nil, err
 	}
-	progress.JustCompleted = progress.CompletedAt != nil && completedBefore == nil
+	progress.JustCompleted = completing
 	return &progress, nil
 }
 
@@ -267,7 +298,7 @@ func (r *vocabularyBankRepository) ListFeed(ctx context.Context, userID string, 
 		FROM vocabulary_bank_words w
 		LEFT JOIN vocabulary_bank_translations t ON t.word_id = w.id AND t.locale = $2
 		JOIN user_vocabulary_progress p ON p.word_id = w.id AND p.user_id = $1
-		WHERE p.completed_at IS NULL AND p.current_step > 1` + levelClause + ` ORDER BY p.last_activity_at DESC LIMIT ` + limitPlaceholder
+		WHERE p.completed_at IS NULL AND p.current_step >= 1` + levelClause + ` ORDER BY p.last_activity_at DESC LIMIT ` + limitPlaceholder
 	args := append(argsBase, f.InProgressLimit)
 	rows, err := r.pool.Query(ctx, query, args...)
 	if err != nil {

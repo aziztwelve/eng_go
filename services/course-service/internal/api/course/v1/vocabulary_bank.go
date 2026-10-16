@@ -47,7 +47,7 @@ func (a *api) RecordVocabularyBankAttempt(ctx context.Context, req *coursev1.Rec
 	if err != nil {
 		return nil, status.Errorf(codes.InvalidArgument, "record vocabulary bank attempt: %v", err)
 	}
-	return &coursev1.RecordVocabularyBankAttemptResponse{Progress: converter.ToVocabularyBankProgressProto(progress), JustCompleted: progress.JustCompleted}, nil
+	return &coursev1.RecordVocabularyBankAttemptResponse{Progress: converter.ToVocabularyBankProgressProto(progress), JustCompleted: progress.JustCompleted, IsCorrect: progress.IsCorrect, CanAdvance: progress.CanAdvance, Score: int32(progress.Score), AssessmentMode: progress.AssessmentMode}, nil
 }
 
 func (a *api) ListVocabularyBankFeed(ctx context.Context, req *coursev1.ListVocabularyBankFeedRequest) (*coursev1.ListVocabularyBankFeedResponse, error) {

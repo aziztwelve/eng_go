@@ -981,6 +981,10 @@ message RecordVocabularyBankAttemptResponse {
   bool just_completed = 2;
   // Начисленный за завершение слова XP (заполняет gateway при just_completed).
   VocabularyBankXPAward xp = 3;
+  bool is_correct = 4;
+  int32 score = 5;
+  bool can_advance = 7; // accepted practice or correctly answered exercise
+  string assessment_mode = 6; // checked | practice (completion without correctness assessment)
 }
 
 message VocabularyBankXPAward {

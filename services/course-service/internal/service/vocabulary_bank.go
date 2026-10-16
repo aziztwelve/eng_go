@@ -58,14 +58,60 @@ func (s *vocabularyBankService) RecordAttempt(ctx context.Context, attempt model
 	if attempt.TimeSpentMS < 0 {
 		return nil, fmt.Errorf("time_spent_ms must not be negative")
 	}
+	correct, score, mode, clientID := attempt.IsCorrect, attempt.Score, "legacy", ""
+	var protocol struct {
+		Version       int    `json:"validation_version"`
+		SessionUserID string `json:"session_user_id"`
+	}
+	if len(attempt.Answer) > 0 {
+		if err := json.Unmarshal(attempt.Answer, &protocol); err != nil {
+			return nil, fmt.Errorf("invalid answer")
+		}
+	}
+	// Expand/contract compatibility: existing APKs submit only client scores.
+	// TODO remove legacy path after all supported APKs send validation_version=2.
+	if protocol.Version != 0 && protocol.Version != 2 {
+		return nil, fmt.Errorf("unsupported validation_version")
+	}
+	if protocol.Version == 2 {
+		if protocol.SessionUserID != attempt.UserID {
+			return nil, fmt.Errorf("answer belongs to another session")
+		}
+		detail, err := s.repo.GetByExternalID(ctx, attempt.ExternalID, "en")
+		if err != nil {
+			return nil, err
+		}
+		var activity *model.VocabularyBankActivity
+		for i := range detail.Activities {
+			if detail.Activities[i].Step == attempt.Step {
+				activity = &detail.Activities[i]
+				break
+			}
+		}
+		if activity == nil {
+			return nil, fmt.Errorf("activity not found")
+		}
+		correct, score, mode, clientID, err = evaluateVocabularyAnswer(*activity, attempt.Answer)
+		if err != nil {
+			return nil, err
+		}
+		attempt.IsCorrect, attempt.Score, attempt.ClientAttemptID = correct && mode != "practice", score, clientID
+		// Pronunciation supplied by the caller is not a verified server assessment.
+		attempt.PronunciationScore = 0
+	}
+	attempt.AssessmentMode, attempt.CanAdvance = mode, correct
 	progress, err := s.progress.RecordAttempt(ctx, attempt)
 	if err != nil {
 		return nil, err
 	}
-	if attempt.Step == 15 && attempt.IsCorrect {
+	if !progress.Replayed {
+		progress.IsCorrect, progress.Score, progress.AssessmentMode = correct && mode != "practice", score, mode
+		progress.CanAdvance = correct
+	}
+	if progress.JustCompleted {
 		// SRS is intentionally non-fatal: a completed vocabulary lesson is
 		// retained even if the review service is temporarily unavailable.
-		_ = s.srs.RecordVocabularyBankReview(ctx, srs.VocabularyBankReviewEvent{UserID: attempt.UserID, ExternalID: attempt.ExternalID, Quality: 5, ResponseTimeMS: int32(attempt.TimeSpentMS)})
+		_ = s.srs.RecordVocabularyBankReview(ctx, srs.VocabularyBankReviewEvent{UserID: attempt.UserID, ExternalID: attempt.ExternalID, Quality: 3, ResponseTimeMS: int32(attempt.TimeSpentMS)})
 	}
 	return progress, nil
 }

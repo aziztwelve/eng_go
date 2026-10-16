@@ -16,7 +16,7 @@ type VocabularyBankWordSummary struct {
 	HasAudio     bool
 	// Status filled only for user-scoped list requests:
 	// "new" | "in_progress" | "completed"; empty for anonymous calls.
-	Status     string
+	Status      string
 	CurrentStep int
 }
 
@@ -49,12 +49,21 @@ type VocabularyBankProgress struct {
 	CurrentStep    int
 	CompletedAt    *time.Time
 	LastActivityAt time.Time
+	// Replayed identifies a retry acknowledged from stored results.
+	Replayed bool
 	// JustCompleted is true only when the recorded attempt moved the word
 	// into completed state (prevents duplicate XP on repeated step 15).
-	JustCompleted bool
+	JustCompleted  bool
+	IsCorrect      bool
+	Score          int
+	AssessmentMode string
+	CanAdvance     bool
 }
 
 type VocabularyBankAttempt struct {
+	CanAdvance         bool
+	AssessmentMode     string
+	ClientAttemptID    string
 	UserID             string
 	ExternalID         string
 	Step               int

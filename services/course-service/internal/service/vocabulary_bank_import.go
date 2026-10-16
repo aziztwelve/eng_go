@@ -31,19 +31,19 @@ type VocabularyBankBatch struct {
 }
 
 type VocabularyBankImportWord struct {
-	ExternalID      string                `json:"id"`
-	Word            string                `json:"word"`
-	Lemma           string                `json:"lemma"`
-	Meaning         string                `json:"meaning"`
-	PartOfSpeech    string                `json:"part_of_speech"`
-	CEFRLevel       string                `json:"cefr_level"`
-	TranslationKey  string                `json:"translation_key"`
-	GrammarTargets  json.RawMessage       `json:"grammar_targets"`
-	ContextID       string                `json:"context_id"`
-	Audio           json.RawMessage       `json:"audio"`
-	ImagePrompt     json.RawMessage       `json:"image_prompt"`
-	QuestionSets    []VocabularyQuestion  `json:"question_sets"`
-	Activities      []VocabularyActivity  `json:"activities"`
+	ExternalID     string               `json:"id"`
+	Word           string               `json:"word"`
+	Lemma          string               `json:"lemma"`
+	Meaning        string               `json:"meaning"`
+	PartOfSpeech   string               `json:"part_of_speech"`
+	CEFRLevel      string               `json:"cefr_level"`
+	TranslationKey string               `json:"translation_key"`
+	GrammarTargets json.RawMessage      `json:"grammar_targets"`
+	ContextID      string               `json:"context_id"`
+	Audio          json.RawMessage      `json:"audio"`
+	ImagePrompt    json.RawMessage      `json:"image_prompt"`
+	QuestionSets   []VocabularyQuestion `json:"question_sets"`
+	Activities     []VocabularyActivity `json:"activities"`
 }
 
 type VocabularyQuestion struct {
@@ -145,10 +145,14 @@ func validateVocabularyBankWord(word *VocabularyBankImportWord, batchLevel strin
 		"cefr_level": word.CEFRLevel, "translation_key": word.TranslationKey,
 	}
 	keys := make([]string, 0, len(required))
-	for key := range required { keys = append(keys, key) }
+	for key := range required {
+		keys = append(keys, key)
+	}
 	sort.Strings(keys)
 	for _, key := range keys {
-		if strings.TrimSpace(required[key]) == "" { return fmt.Errorf("%s is required", key) }
+		if strings.TrimSpace(required[key]) == "" {
+			return fmt.Errorf("%s is required", key)
+		}
 	}
 	if word.CEFRLevel != batchLevel {
 		return fmt.Errorf("cefr_level %q does not match batch level %q", word.CEFRLevel, batchLevel)
@@ -162,8 +166,10 @@ func validateVocabularyBankWord(word *VocabularyBankImportWord, batchLevel strin
 	if err := validateJSONObject("image_prompt", word.ImagePrompt); err != nil {
 		return err
 	}
-	if err := validateJSONArray("grammar_targets", word.GrammarTargets); err != nil {
-		return err
+	if len(word.GrammarTargets) > 0 {
+		if err := validateJSONArray("grammar_targets", word.GrammarTargets); err != nil {
+			return err
+		}
 	}
 	for index, question := range word.QuestionSets {
 		if err := validateVocabularyQuestion(question); err != nil {
@@ -184,11 +190,15 @@ func validateVocabularyBankWord(word *VocabularyBankImportWord, batchLevel strin
 		if err := validateJSONObject("activity payload", activity.Payload); err != nil {
 			return fmt.Errorf("activity %d: %w", activity.Step, err)
 		}
-		if _, exists := steps[activity.Step]; exists { return fmt.Errorf("duplicate activity step %d", activity.Step) }
+		if _, exists := steps[activity.Step]; exists {
+			return fmt.Errorf("duplicate activity step %d", activity.Step)
+		}
 		steps[activity.Step] = struct{}{}
 	}
 	for step := 1; step <= vocabularyBankActivityCount; step++ {
-		if _, exists := steps[step]; !exists { return fmt.Errorf("missing activity step %d", step) }
+		if _, exists := steps[step]; !exists {
+			return fmt.Errorf("missing activity step %d", step)
+		}
 	}
 	return nil
 }
