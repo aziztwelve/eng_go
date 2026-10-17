@@ -179,14 +179,6 @@ func (a *App) initRouter(ctx context.Context) error {
 
 			protected.POST("/courses/:id/enroll", courseHandler.EnrollCourse)
 
-			// === Персональный план треков (Phase 8) ===
-			me := protected.Group("/me")
-			{
-				me.GET("/tracks", trackHandler.GetMyTracks)
-				me.POST("/tracks/:id", trackHandler.AddMyTrack)
-				me.DELETE("/tracks/:id", trackHandler.RemoveMyTrack)
-			}
-
 			// Progress endpoints
 			progress := protected.Group("/progress")
 			{
