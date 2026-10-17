@@ -131,7 +131,7 @@ func (a *api) BulkCreateFlashcards(ctx context.Context, req *coursev1.BulkCreate
 }
 
 // AddVocabularyAsFlashcard — идемпотентный add из system-vocabulary
-// (lesson auto-add / mistake / ai_suggestion). Резолвит inline-поля из
+// (lesson/bank explicit selection). Резолвит inline-поля из
 // vocabulary repo и делегирует в сервис.
 func (a *api) AddVocabularyAsFlashcard(ctx context.Context, req *coursev1.AddVocabularyAsFlashcardRequest) (*coursev1.AddVocabularyAsFlashcardResponse, error) {
 	if req.UserId == "" || req.VocabularyId == "" {

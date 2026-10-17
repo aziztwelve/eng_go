@@ -36,19 +36,6 @@ func TestFlashcardHandler_Create_InvalidBody(t *testing.T) {
 	}
 }
 
-func TestFlashcardHandler_Suggestions_NoAI(t *testing.T) {
-	gin.SetMode(gin.TestMode)
-	h := &FlashcardHandler{ai: nil}
-	w := httptest.NewRecorder()
-	c, _ := gin.CreateTestContext(w)
-	c.Set("user_id", "u1")
-	c.Request = httptest.NewRequest("GET", "/api/v1/ai/flashcard-suggestions", nil)
-	h.Suggestions(c)
-	if w.Code != http.StatusServiceUnavailable {
-		t.Fatalf("expected 503, got %d", w.Code)
-	}
-}
-
 func TestFlashcardHandler_Update_InvalidJSON(t *testing.T) {
 	gin.SetMode(gin.TestMode)
 	h := &FlashcardHandler{}
@@ -190,18 +177,6 @@ func TestFlashcardHandler_ListToday_NoAuth(t *testing.T) {
 	c, _ := gin.CreateTestContext(w)
 	c.Request = httptest.NewRequest("GET", "/api/v1/flashcards/today", nil)
 	h.ListToday(c)
-	if w.Code != http.StatusUnauthorized {
-		t.Fatalf("expected 401, got %d", w.Code)
-	}
-}
-
-func TestFlashcardHandler_Suggestions_NoAuth(t *testing.T) {
-	gin.SetMode(gin.TestMode)
-	h := &FlashcardHandler{ai: nil}
-	w := httptest.NewRecorder()
-	c, _ := gin.CreateTestContext(w)
-	c.Request = httptest.NewRequest("GET", "/api/v1/ai/flashcard-suggestions", nil)
-	h.Suggestions(c)
 	if w.Code != http.StatusUnauthorized {
 		t.Fatalf("expected 401, got %d", w.Code)
 	}

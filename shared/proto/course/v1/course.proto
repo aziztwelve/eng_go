@@ -1060,7 +1060,7 @@ message GetTTSByTextResponse {
 message Flashcard {
   string id              = 1;
   string user_id         = 2;
-  // 'manual' | 'lesson' | 'mistake' | 'ai_suggestion'
+  // 'manual' | 'lesson' | 'bank'
   string source          = 3;
   // Optional: NULL для чисто manual карточек.
   string vocabulary_id   = 4;
@@ -1088,7 +1088,7 @@ message Flashcard {
 // === ListFlashcards ===
 message ListFlashcardsRequest {
   string user_id      = 1;
-  // Фильтр по source: 'manual' | 'lesson' | 'mistake' | 'ai_suggestion'.
+  // Фильтр по source: 'manual' | 'lesson' | 'bank'.
   // Empty = all sources.
   string source       = 2;
   // Если true — только запинанные на сегодня.
@@ -1196,7 +1196,7 @@ message BulkCreateFlashcardsResponse {
 message AddVocabularyAsFlashcardRequest {
   string user_id       = 1;
   string vocabulary_id = 2;
-  // 'lesson' | 'mistake' | 'ai_suggestion' (не 'manual', т.к. ref на vocab).
+  // 'lesson' | 'bank' (не 'manual', т.к. ref на vocab).
   string source        = 3;
 }
 

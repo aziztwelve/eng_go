@@ -2,7 +2,7 @@
 //
 // Реплицирует логику gateway SeedStarter, но для произвольного user_id
 // (admin-операция): берёт N слов из system-словаря, добавляет их как
-// user_flashcards (source=ai_suggestion, идемпотентно) и пинит на сегодня
+// user_flashcards (source=bank, идемпотентно) и пинит на сегодня
 // (flashcard_today_queue). Ходит в course-service по gRPC — никаких прямых
 // SQL-инсертов, вся бизнес-логика и SRS-интеграция остаются на сервисе.
 //
@@ -28,10 +28,10 @@ import (
 
 func main() {
 	var (
-		user        = flag.String("user", "", "user_id (uuid) — обязателен")
-		language    = flag.String("language", "en", "язык слов (target language юзера)")
-		count       = flag.Int("count", 20, "сколько слов выдать")
-		courseAddr  = flag.String("course-addr", "localhost:50053", "course-service gRPC addr")
+		user       = flag.String("user", "", "user_id (uuid) — обязателен")
+		language   = flag.String("language", "en", "язык слов (target language юзера)")
+		count      = flag.Int("count", 20, "сколько слов выдать")
+		courseAddr = flag.String("course-addr", "localhost:50053", "course-service gRPC addr")
 	)
 	flag.Parse()
 
@@ -72,7 +72,7 @@ func run(userID, language string, count int, courseAddr string) error {
 		addResp, err := c.AddVocabularyAsFlashcard(ctx, &coursev1.AddVocabularyAsFlashcardRequest{
 			UserId:       userID,
 			VocabularyId: v.GetId(),
-			Source:       "ai_suggestion",
+			Source:       "bank",
 		})
 		if err != nil {
 			skipped++

@@ -128,7 +128,6 @@ func (a *App) initRouter(ctx context.Context) error {
 		{
 			tracks.GET("", trackHandler.ListTracks)
 			tracks.GET("/:id/dictionary", authMiddleware.Handle(), trackHandler.GetTrackDictionary)
-			tracks.POST("/:id/dictionary/add", authMiddleware.Handle(), trackHandler.AddTrackDictionary)
 			tracks.GET("/:id", trackHandler.GetTrack)
 		}
 
@@ -206,10 +205,8 @@ func (a *App) initRouter(ctx context.Context) error {
 			protected.GET("/attempts/:attemptId", quizHandler.GetAttempt)
 
 			// === Phase 7: flashcards (повтор слов) + today queue ===
-			// AI suggestions подключаются только если ai-service настроен.
 			flashcardHandler := handler.NewFlashcardHandler(
 				a.diContainer.CourseClient(ctx),
-				a.diContainer.AIClient(ctx),
 				a.diContainer.SRSClient(ctx),
 			)
 			flashcards := protected.Group("/flashcards")
@@ -231,10 +228,6 @@ func (a *App) initRouter(ctx context.Context) error {
 				flashcards.DELETE("/:id", flashcardHandler.Archive)
 				flashcards.POST("/:id/review", flashcardHandler.Review)
 			}
-			// AI flashcard-suggestions (отдельно от /flashcards чтобы
-			// сгруппировать с прочими /ai эндпоинтами).
-			protected.GET("/ai/flashcard-suggestions", flashcardHandler.Suggestions)
-
 			// === Phase 2: step submit (только если step-validation-service настроен) ===
 			if svc := a.diContainer.StepValidationClient(ctx); svc != nil {
 				sh := handler.NewStepSubmitHandler(svc)

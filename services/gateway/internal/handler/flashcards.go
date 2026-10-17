@@ -4,29 +4,25 @@ package handler
 
 import (
 	"net/http"
-	"strconv"
 
 	"github.com/gin-gonic/gin"
 	"google.golang.org/protobuf/types/known/wrapperspb"
 
 	"github.com/elearning/gateway/internal/client"
 	"github.com/elearning/gateway/internal/errors"
-	aiv1 "github.com/elearning/shared/pkg/proto/ai/v1"
 	coursev1 "github.com/elearning/shared/pkg/proto/course/v1"
 	srsv1 "github.com/elearning/shared/pkg/proto/srs/v1"
 )
 
-// FlashcardHandler — личные карточки + today queue + AI suggestions.
+// FlashcardHandler — личные карточки + today queue.
 type FlashcardHandler struct {
 	course *client.CourseClient
-	ai     *client.AIClient  // может быть nil → suggestions недоступны
 	srs    *client.SRSClient // может быть nil → review недоступен
 }
 
-// NewFlashcardHandler — для DI. ai опционален (nil → /suggestions = 503),
-// srs опционален (nil → /:id/review = 503).
-func NewFlashcardHandler(course *client.CourseClient, ai *client.AIClient, srs *client.SRSClient) *FlashcardHandler {
-	return &FlashcardHandler{course: course, ai: ai, srs: srs}
+// NewFlashcardHandler — для DI. srs опционален (nil → /:id/review = 503).
+func NewFlashcardHandler(course *client.CourseClient, srs *client.SRSClient) *FlashcardHandler {
+	return &FlashcardHandler{course: course, srs: srs}
 }
 
 // List GET /api/v1/flashcards?source=&pinned_today=&search=&include_archived=&include_srs=&limit=&offset=
@@ -198,7 +194,7 @@ type flashcardBulkRequest struct {
 	} `json:"items" binding:"required,dive"`
 }
 
-// BulkCreate POST /api/v1/flashcards/bulk (accept-all from suggestions).
+// BulkCreate POST /api/v1/flashcards/bulk (explicit selection from lesson/bank).
 func (h *FlashcardHandler) BulkCreate(c *gin.Context) {
 	userID, ok := getUserID(c)
 	if !ok {
@@ -300,7 +296,7 @@ func (h *FlashcardHandler) SeedStarter(c *gin.Context) {
 		addResp, aerr := h.course.AddVocabularyAsFlashcard(ctx, &coursev1.AddVocabularyAsFlashcardRequest{
 			UserId:       userID,
 			VocabularyId: v.Id,
-			Source:       "ai_suggestion",
+			Source:       "bank",
 		})
 		if aerr != nil || addResp.Flashcard == nil {
 			continue
@@ -438,42 +434,6 @@ func (h *FlashcardHandler) ListToday(c *gin.Context) {
 		UserId:        userID,
 		QueuedForDate: c.Query("queued_for_date"),
 		IncludeSrs:    c.Query("include_srs") == "true",
-	})
-	if err != nil {
-		errors.HandleGRPCError(c, err)
-		return
-	}
-	c.JSON(http.StatusOK, resp)
-}
-
-// === AI suggestions ===
-
-// Suggestions GET /api/v1/ai/flashcard-suggestions
-//
-//	?level=&goal=&pain_point=&target_language=&native_language=&count=&exclude_words=a,b
-func (h *FlashcardHandler) Suggestions(c *gin.Context) {
-	userID, ok := getUserID(c)
-	if !ok {
-		return
-	}
-	if h.ai == nil {
-		c.JSON(http.StatusServiceUnavailable, gin.H{"error": "ai-service not configured"})
-		return
-	}
-	count, _ := strconv.Atoi(c.DefaultQuery("count", "5"))
-	var exclude []string
-	if ew := c.QueryArray("exclude_words"); len(ew) > 0 {
-		exclude = ew
-	}
-	resp, err := h.ai.SuggestFlashcards(c.Request.Context(), &aiv1.SuggestFlashcardsRequest{
-		UserId:         userID,
-		Level:          c.Query("level"),
-		Goal:           c.Query("goal"),
-		PainPoint:      c.Query("pain_point"),
-		TargetLanguage: c.Query("target_language"),
-		NativeLanguage: c.Query("native_language"),
-		Count:          int32(count),
-		ExcludeWords:   exclude,
 	})
 	if err != nil {
 		errors.HandleGRPCError(c, err)

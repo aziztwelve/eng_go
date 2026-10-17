@@ -10,13 +10,12 @@ gateway REST) — done. Phase 3 web frontend (`/practice/*`,
 Phase 7 — Word Flashcards (повтор слов) — done:
   - course-service: `user_flashcards` + `flashcard_today_queue` таблицы,
     11 gRPC RPC (CRUD + bulk + from-vocabulary + today queue + stats).
-  - ai-service: `SuggestFlashcards` (mock pool по level×goal).
-  - step-validation-service: auto-add hook (extract vocabulary_id из
-    match_pairs/fill_blank/translate/listening → AddVocabularyAsFlashcard).
+  - explicit selection flow: words are added after the lesson / bank finish
+    step or through manual input; no silent auto-add.
   - srs-service: `item_type='flashcard'` в CHECK constraint.
   - Gateway REST: 12 endpoints (flashcards CRUD + today queue + AI suggestions).
   - Mobile UI: library, flashcard practice (3D flip), results, add sheet,
-    suggestions widget, TTS auto-play, skip/undo (5-card stack).
+    explicit word-selection step, TTS auto-play, skip/undo (5-card stack).
   - Unit tests: 65+ (course-service 17, ai-service 7, step-validation 9,
     gateway 32).
 

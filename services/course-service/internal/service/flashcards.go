@@ -22,11 +22,11 @@ type FlashcardService interface {
 	Archive(ctx context.Context, userID, flashcardID string) error
 	List(ctx context.Context, filters repository.FlashcardListFilters) ([]*model.Flashcard, int, error)
 
-	// BulkCreate — accept-all from AI suggestions / batch import.
+	// BulkCreate — explicit batch selection from a lesson or the word bank.
 	BulkCreate(ctx context.Context, items []*model.Flashcard) (created, skipped int, err error)
 
-	// AddVocabularyAsFlashcard — идемпотентный side-effect для step-validation
-	// (auto-add из урока), либо из catalog-выбора. Если карточка с такой же
+	// AddVocabularyAsFlashcard — идемпотентное добавление после явного выбора
+	// (explicit lesson/bank selection), либо из catalog-выбора. Если карточка с такой же
 	// vocabulary_id уже существует → возвращает её, created=false.
 	//
 	// vocab — system vocabulary entry, который уже найден caller'ом
@@ -166,7 +166,7 @@ func (s *flashcardService) AddVocabularyAsFlashcard(
 	}
 	// manual здесь запрещён — для manual клиент использует Create.
 	if source == "" || source == model.FlashcardSourceManual {
-		return nil, false, errors.New("flashcard: source must be lesson/mistake/ai_suggestion for AddVocabularyAsFlashcard")
+		return nil, false, errors.New("flashcard: source must be lesson or bank for AddVocabularyAsFlashcard")
 	}
 	if !model.IsValidFlashcardSource(source) {
 		return nil, false, fmt.Errorf("flashcard: invalid source %q", source)
@@ -182,16 +182,16 @@ func (s *flashcardService) AddVocabularyAsFlashcard(
 	}
 
 	card := &model.Flashcard{
-		UserID:          userID,
-		Source:          source,
-		VocabularyID:    vocab.ID,
-		Word:            vocab.Word,
-		Translation:     vocab.Translation,
-		Language:        vocab.Language,
-		TargetLanguage:  vocab.TargetLanguage,
-		Transcription:   vocab.Transcription,
-		AudioURL:        vocab.AudioURL,
-		ImageURL:        vocab.ImageURL,
+		UserID:         userID,
+		Source:         source,
+		VocabularyID:   vocab.ID,
+		Word:           vocab.Word,
+		Translation:    vocab.Translation,
+		Language:       vocab.Language,
+		TargetLanguage: vocab.TargetLanguage,
+		Transcription:  vocab.Transcription,
+		AudioURL:       vocab.AudioURL,
+		ImageURL:       vocab.ImageURL,
 	}
 	if err := validateFlashcard(card); err != nil {
 		return nil, false, err

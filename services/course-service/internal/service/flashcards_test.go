@@ -13,9 +13,9 @@ import (
 
 // fakeFlashcardRepo — in-memory реализация repository.FlashcardRepository.
 type fakeFlashcardRepo struct {
-	items   map[string]*model.Flashcard // id → card
-	byVocab map[string]string           // userID|vocabID → id
-	seq     int
+	items    map[string]*model.Flashcard // id → card
+	byVocab  map[string]string           // userID|vocabID → id
+	seq      int
 	failNext error
 }
 
@@ -201,13 +201,13 @@ func TestCreate_Valid(t *testing.T) {
 func TestCreate_ValidationErrors(t *testing.T) {
 	_, svc := newFlashcardSvc()
 	cases := map[string]func(*model.Flashcard){
-		"empty user":      func(f *model.Flashcard) { f.UserID = "" },
-		"empty word":      func(f *model.Flashcard) { f.Word = "" },
-		"empty trans":     func(f *model.Flashcard) { f.Translation = "" },
-		"empty lang":      func(f *model.Flashcard) { f.Language = "" },
-		"empty target":    func(f *model.Flashcard) { f.TargetLanguage = "" },
-		"same lang":       func(f *model.Flashcard) { f.TargetLanguage = "en" },
-		"invalid source":  func(f *model.Flashcard) { f.Source = "bogus" },
+		"empty user":     func(f *model.Flashcard) { f.UserID = "" },
+		"empty word":     func(f *model.Flashcard) { f.Word = "" },
+		"empty trans":    func(f *model.Flashcard) { f.Translation = "" },
+		"empty lang":     func(f *model.Flashcard) { f.Language = "" },
+		"empty target":   func(f *model.Flashcard) { f.TargetLanguage = "" },
+		"same lang":      func(f *model.Flashcard) { f.TargetLanguage = "en" },
+		"invalid source": func(f *model.Flashcard) { f.Source = "bogus" },
 	}
 	for name, mut := range cases {
 		t.Run(name, func(t *testing.T) {
@@ -280,7 +280,7 @@ func TestBulkCreate_SkipsDuplicateVocab(t *testing.T) {
 	_, svc := newFlashcardSvc()
 	mk := func() *model.Flashcard {
 		c := validCard()
-		c.Source = model.FlashcardSourceAISuggestion
+		c.Source = model.FlashcardSourceBank
 		c.VocabularyID = "v1"
 		return c
 	}
