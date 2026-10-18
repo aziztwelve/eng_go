@@ -508,109 +508,13 @@ func (h *TrackHandler) SetActiveTrack(c *gin.Context) {
 		return
 	}
 	if _, err := h.courseClient.AddUserTrack(c.Request.Context(), &coursev1.AddUserTrackRequest{
-		UserId: userID,
+		UserId:  userID,
 		TrackId: req.TrackID,
 	}); err != nil {
 		writeGRPCError(c, err)
 		return
 	}
 	c.JSON(http.StatusOK, gin.H{"track_id": req.TrackID, "active": true})
-}
-
-// --- Legacy implementation retained internally for migration compatibility.
-
-// GetMyTracks GET /api/v1/me/tracks — персональный план треков юзера.
-// Если план пуст — лениво генерирует его по профилю (level + language + goal).
-func (h *TrackHandler) GetMyTracks(c *gin.Context) {
-	userID := getUserIDFromCtx(c)
-	if userID == "" {
-		c.JSON(http.StatusUnauthorized, gin.H{"error": "unauthorized"})
-		return
-	}
-	ctx := withContentLang(c)
-
-	resp, err := h.courseClient.GetUserTracks(ctx, &coursev1.GetUserTracksRequest{UserId: userID})
-	if err != nil {
-		writeGRPCError(c, err)
-		return
-	}
-
-	// Ленивая генерация: если плана ещё нет — создаём по профилю.
-	if len(resp.GetTracks()) == 0 {
-		lang, level, goal := h.profileForPlan(ctx, userID)
-		if _, gerr := h.courseClient.GenerateUserPlan(ctx, &coursev1.GenerateUserPlanRequest{
-			UserId: userID, Language: lang, Level: level, Goal: goal,
-		}); gerr == nil {
-			if resp, err = h.courseClient.GetUserTracks(ctx, &coursev1.GetUserTracksRequest{UserId: userID}); err != nil {
-				writeGRPCError(c, err)
-				return
-			}
-		}
-	}
-
-	out := make([]gin.H, 0, len(resp.GetTracks()))
-	for _, ut := range resp.GetTracks() {
-		j := trackToJSON(ut.GetTrack())
-		j["order_index"] = ut.GetOrderIndex()
-		j["status"] = ut.GetStatus()
-		j["source"] = ut.GetSource()
-		out = append(out, j)
-	}
-	c.JSON(http.StatusOK, gin.H{"tracks": out})
-}
-
-// profileForPlan достаёт language/level/goal из онбординга юзера (best-effort).
-func (h *TrackHandler) profileForPlan(ctx context.Context, userID string) (lang, level, goal string) {
-	if h.userClient == nil {
-		return
-	}
-	ob, err := h.userClient.GetOnboardingState(ctx, &userv1.GetOnboardingStateRequest{UserId: userID})
-	if err != nil || ob.GetState() == nil {
-		return
-	}
-	st := ob.GetState()
-	if tl := st.GetTargetLanguage(); tl != nil {
-		lang = tl.GetValue()
-	}
-	if pl := st.GetProficiencyLevel(); pl != nil {
-		level = pl.GetValue()
-	}
-	if m := st.GetMotivation(); len(m) > 0 {
-		goal = m[0] // одна главная цель
-	}
-	return
-}
-
-// AddMyTrack POST /api/v1/me/tracks/:id — добавить трек в план вручную.
-func (h *TrackHandler) AddMyTrack(c *gin.Context) {
-	userID := getUserIDFromCtx(c)
-	if userID == "" {
-		c.JSON(http.StatusUnauthorized, gin.H{"error": "unauthorized"})
-		return
-	}
-	if _, err := h.courseClient.AddUserTrack(c.Request.Context(), &coursev1.AddUserTrackRequest{
-		UserId: userID, TrackId: c.Param("id"),
-	}); err != nil {
-		writeGRPCError(c, err)
-		return
-	}
-	c.JSON(http.StatusOK, gin.H{"success": true})
-}
-
-// RemoveMyTrack DELETE /api/v1/me/tracks/:id — убрать трек из плана.
-func (h *TrackHandler) RemoveMyTrack(c *gin.Context) {
-	userID := getUserIDFromCtx(c)
-	if userID == "" {
-		c.JSON(http.StatusUnauthorized, gin.H{"error": "unauthorized"})
-		return
-	}
-	if _, err := h.courseClient.RemoveUserTrack(c.Request.Context(), &coursev1.RemoveUserTrackRequest{
-		UserId: userID, TrackId: c.Param("id"),
-	}); err != nil {
-		writeGRPCError(c, err)
-		return
-	}
-	c.JSON(http.StatusOK, gin.H{"success": true})
 }
 
 func trackToJSON(t *coursev1.Track) gin.H {

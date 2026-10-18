@@ -32,54 +32,6 @@ type RefreshTokenResponse struct {
 	ExpiresAt    string `json:"expires_at"`
 }
 
-// === Guest mode (onboarding §3.2) ===
-
-// GuestSessionRequest — клиент передаёт стабильный device_id (UUID v4).
-type GuestSessionRequest struct {
-	DeviceID string `json:"device_id" binding:"required"`
-}
-
-// GuestSessionResponse — JWT для гостя + user_id.
-type GuestSessionResponse struct {
-	UserID       string `json:"user_id"`
-	AccessToken  string `json:"access_token"`
-	RefreshToken string `json:"refresh_token"`
-	ExpiresAt    string `json:"expires_at"`
-	Created      bool   `json:"created"`
-}
-
-// ClaimGuestRequest — гость становится registered user.
-// guest_user_id берётся из JWT (middleware).
-type ClaimGuestRequest struct {
-	Email    string `json:"email" binding:"required,email"`
-	Password string `json:"password" binding:"required,min=8"`
-	Username string `json:"username" binding:"required,min=3"`
-}
-
-// ClaimGuestResponse — обновлённые токены (user_id сохраняется).
-type ClaimGuestResponse struct {
-	UserID       string `json:"user_id"`
-	AccessToken  string `json:"access_token"`
-	RefreshToken string `json:"refresh_token"`
-	ExpiresAt    string `json:"expires_at"`
-}
-
-// ClaimGuestOAuthRequest — гость claim'ится через OAuth (Google / Apple).
-// guest_user_id берётся из JWT (middleware).
-//
-// provider:
-//   'google' / 'apple' — реальные OAuth-провайдеры (Sprint 2 — JWKS verify).
-//   'guest_fake' — Sprint 1 stub, принимает любой id_token.
-//
-// email и display_name — fallback'и. Для guest_fake — обязательны.
-// См. docs/tasks/mob/onboarding-v3-oki-style.md §2.4.
-type ClaimGuestOAuthRequest struct {
-	Provider    string `json:"provider"     binding:"required,oneof=google apple guest_fake"`
-	IDToken     string `json:"id_token"     binding:"required"`
-	Email       string `json:"email"        binding:"required,email"`
-	DisplayName string `json:"display_name,omitempty"`
-}
-
 // MeResponse содержит полную информацию о текущем пользователе
 type MeResponse struct {
 	// Из auth-service

@@ -364,7 +364,6 @@ func (a *App) initRouter(ctx context.Context) error {
 
 			// Auth admin: ручной trigger cleanup'а гостей. Штатно работает
 			// суточный cron в auth-service.
-			admin.POST("/auth/cleanup-guests", authHandler.CleanupGuests)
 
 			// User management
 			users := admin.Group("/users")
