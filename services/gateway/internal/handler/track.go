@@ -463,7 +463,61 @@ func (h *TrackHandler) ReorderTrackLessons(c *gin.Context) {
 
 // --- helpers ---
 
-// --- Персональный план (Phase 8): /api/v1/me/tracks ---
+// --- Active track: /api/v1/me/active-track ---
+
+// GetActiveTrack returns the user's selected track without exposing the old
+// generated My Tracks plan API.
+func (h *TrackHandler) GetActiveTrack(c *gin.Context) {
+	userID := getUserIDFromCtx(c)
+	if userID == "" {
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "unauthorized"})
+		return
+	}
+	resp, err := h.courseClient.GetUserTracks(c.Request.Context(), &coursev1.GetUserTracksRequest{UserId: userID})
+	if err != nil {
+		writeGRPCError(c, err)
+		return
+	}
+	for _, item := range resp.GetTracks() {
+		if item.GetStatus() != "active" {
+			continue
+		}
+		track := trackToJSON(item.GetTrack())
+		track["status"] = item.GetStatus()
+		c.JSON(http.StatusOK, gin.H{"track": track})
+		return
+	}
+	c.JSON(http.StatusNotFound, gin.H{"error": "active track not selected"})
+}
+
+type setActiveTrackRequest struct {
+	TrackID string `json:"track_id" binding:"required"`
+}
+
+// SetActiveTrack validates the public track and stores it as the user's
+// selected active track through the existing course-service relation.
+func (h *TrackHandler) SetActiveTrack(c *gin.Context) {
+	userID := getUserIDFromCtx(c)
+	if userID == "" {
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "unauthorized"})
+		return
+	}
+	var req setActiveTrackRequest
+	if err := c.ShouldBindJSON(&req); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+	if _, err := h.courseClient.AddUserTrack(c.Request.Context(), &coursev1.AddUserTrackRequest{
+		UserId: userID,
+		TrackId: req.TrackID,
+	}); err != nil {
+		writeGRPCError(c, err)
+		return
+	}
+	c.JSON(http.StatusOK, gin.H{"track_id": req.TrackID, "active": true})
+}
+
+// --- Legacy implementation retained internally for migration compatibility.
 
 // GetMyTracks GET /api/v1/me/tracks — персональный план треков юзера.
 // Если план пуст — лениво генерирует его по профилю (level + language + goal).

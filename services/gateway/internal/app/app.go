@@ -171,6 +171,12 @@ func (a *App) initRouter(ctx context.Context) error {
 
 			protected.POST("/courses/:id/enroll", courseHandler.EnrollCourse)
 
+			me := protected.Group("/me")
+			{
+				me.GET("/active-track", trackHandler.GetActiveTrack)
+				me.POST("/active-track", trackHandler.SetActiveTrack)
+			}
+
 			// Progress endpoints
 			progress := protected.Group("/progress")
 			{
