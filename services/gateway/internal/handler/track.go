@@ -507,14 +507,28 @@ func (h *TrackHandler) SetActiveTrack(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
+	trackID := req.TrackID
+	track, err := h.courseClient.GetTrack(c.Request.Context(), &coursev1.GetTrackRequest{TrackId: trackID})
+	if err != nil {
+		track, err = h.courseClient.GetTrackByCode(c.Request.Context(), &coursev1.GetTrackByCodeRequest{Code: trackID})
+	}
+	if err != nil || track.GetTrack() == nil {
+		if err != nil {
+			writeGRPCError(c, err)
+		} else {
+			c.JSON(http.StatusNotFound, gin.H{"error": "track not found"})
+		}
+		return
+	}
+	trackID = track.GetTrack().GetId()
 	if _, err := h.courseClient.AddUserTrack(c.Request.Context(), &coursev1.AddUserTrackRequest{
 		UserId:  userID,
-		TrackId: req.TrackID,
+		TrackId: trackID,
 	}); err != nil {
 		writeGRPCError(c, err)
 		return
 	}
-	c.JSON(http.StatusOK, gin.H{"track_id": req.TrackID, "active": true})
+	c.JSON(http.StatusOK, gin.H{"track_id": trackID, "active": true})
 }
 
 func trackToJSON(t *coursev1.Track) gin.H {
