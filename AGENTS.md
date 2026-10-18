@@ -69,7 +69,12 @@ for s in services/*/; do (cd "$s" && go build ./... && go test ./...); done
 # Seed onboarding (1110 синтетических юзеров: L1 fixtures / L2 grid / L3 random):
 python3 scripts/gen_seed_onboarding.py    # регенерация SQL-файлов (детерминизм seed=42)
 ./bin/seed.sh                             # накат всех seeds (auth → user → course →
-                                          # gamification → social → srs)
+                                           # gamification → social → srs)
+
+# Только для staging/local test DB: preview по умолчанию, --apply требует
+# ALLOW_SEED_CLEANUP=YES. Удаляются только UUID-префиксы aaaa/bbbb/cccc.
+./scripts/cleanup_seed_accounts.sh
+ALLOW_SEED_CLEANUP=YES ./scripts/cleanup_seed_accounts.sh --apply
 ```
 
 ## Onboarding seed (`scripts/gen_seed_onboarding.py`)

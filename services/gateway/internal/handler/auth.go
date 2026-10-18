@@ -163,6 +163,31 @@ func (h *AuthHandler) GetMe(c *gin.Context) {
 	c.JSON(http.StatusOK, response)
 }
 
+// DeleteMe удаляет аккаунт текущего пользователя.
+//
+// Вызов защищён AuthMiddleware и никогда не принимает user_id из тела или
+// query-параметров: идентификатор берётся только из проверенного JWT.
+func (h *AuthHandler) DeleteMe(c *gin.Context) {
+	userID, exists := c.Get("user_id")
+	if !exists {
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "User ID not found in context"})
+		return
+	}
+
+	userIDStr, ok := userID.(string)
+	if !ok || userIDStr == "" {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Invalid user ID format"})
+		return
+	}
+
+	if _, err := h.authClient.DeleteUser(c.Request.Context(), &authv1.DeleteUserRequest{UserId: userIDStr}); err != nil {
+		errors.HandleGRPCError(c, err)
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{"deleted": true})
+}
+
 // getStringValue извлекает значение из StringValue wrapper
 func getStringValue(wrapper interface{ GetValue() string }) *string {
 	if wrapper == nil {

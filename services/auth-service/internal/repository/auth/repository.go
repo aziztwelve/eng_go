@@ -151,14 +151,13 @@ func (r *repository) SearchByUsername(ctx context.Context, query string, limit i
 
 // DeleteUser удаляет пользователя (admin)
 func (r *repository) DeleteUser(ctx context.Context, userID string) error {
-	query := `DELETE FROM public.users WHERE id = $1`
-
-	result, err := r.pool.Exec(ctx, query, userID)
+	var deleted bool
+	err := r.pool.QueryRow(ctx, `SELECT public.delete_account_cascade($1::uuid)`, userID).Scan(&deleted)
 	if err != nil {
 		return err
 	}
 
-	if result.RowsAffected() == 0 {
+	if !deleted {
 		return model.ErrUserNotFound
 	}
 

@@ -1,6 +1,6 @@
 # Lock Screen Words — слова на экране блокировки
 
-**Статус:** 📝 Planning
+**Статус:** ✅ Done (eng_mob commit `1c93f9b`; tsc/lint clean; ручной чек-лист на устройстве — см. секцию 5)
 **Сложность:** Средняя
 **Затрагивает:** `eng_mob` (backend — 0 изменений в MVP; серверная опция — Future)
 **Зависимости:** Phase 3 (push infrastructure, `expo-notifications`), Phase 7

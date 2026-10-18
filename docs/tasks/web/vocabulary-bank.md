@@ -1,6 +1,6 @@
 # Vocabulary Bank — data foundation and learner interface
 
-**Status:** Step 1 complete
+**Status:** Steps 1–3 implemented; production content import and release are pending.
 **Owner:** Mobile + backend
 **Source data:** LingoIQ Vocabulary System, 15-stage programmer package, and CEFR A1–C1 JSON batches.
 
@@ -109,27 +109,39 @@ full build passed; dry-run accepted a real 500-entry B2 batch. The migration was
 applied on the server; all five Vocabulary Bank tables were verified and the
 public health check passed.
 
+**Pilot import:** 2026-09-20 — first 10 entries from
+`lingoiq_a1_vocabulary_batch_001.json` were imported to production as a scoped
+pilot (`A1-VOC-001-001` … `A1-VOC-001-010`). The audit report, 150 activities
+and the public A1 catalogue response were verified. The original 500-entry
+batch remains eligible for its later full import.
+
 ### Step 2 — Backend learner APIs and translations
 
-- [ ] Expose paginated search and CEFR filters for the Vocabulary Bank.
-- [ ] Expose a single enriched vocabulary entry by `external_id`.
-- [ ] Import/resolve translations by `translation_key`; fall back to the
+- [x] Expose paginated search and CEFR filters for the Vocabulary Bank.
+- [x] Expose a single enriched vocabulary entry by `external_id`.
+- [x] Import/resolve translations by `translation_key`; fall back to the
   English meaning when a translation is absent.
-- [ ] Keep technical IDs, translation keys and image prompts out of learner API
+- [x] Keep technical IDs, translation keys and image prompts out of learner API
   responses where they are not required.
 
-**Completion record:** _not started_
+**Completion record:** 2026-09-20, implementation present in the working tree
+(awaiting commit/deploy) — course-service and gateway test suites pass. The
+public endpoints are `GET /api/v1/vocabulary-bank` and
+`GET /api/v1/vocabulary-bank/:externalId`.
 
 ### Step 3 — Mobile Vocabulary Bank
 
-- [ ] Add the **Vocabulary Bank** tab to mobile Lessons.
-- [ ] Show level selector, debounced search, loading/error/empty states and
+- [x] Add the **Vocabulary Bank** tab to mobile Lessons.
+- [x] Show level selector, debounced search, loading/error/empty states and
   paginated word cards.
-- [ ] Show only learner-facing data: word, translation, part of speech, level
+- [x] Show only learner-facing data: word, translation, part of speech, level
   and available audio.
-- [ ] Open a word detail/lesson preview from a card.
+- [x] Open a word detail/lesson preview from a card.
 
-**Completion record:** _not started_
+**Completion record:** 2026-09-20, implementation present in the working tree
+(awaiting commit/deploy) — `npx tsc --noEmit` passes. The tab scrolls on narrow
+screens so all categories remain reachable; the word list loads further pages
+on demand.
 
 ### Step 4 — Mobile 15-step word lesson
 
