@@ -105,6 +105,8 @@ func (a *App) initRouter(ctx context.Context) error {
 		{
 			auth.POST("/register", authHandler.Register)
 			auth.POST("/login", authHandler.Login)
+			auth.POST("/social/:provider/challenge", authHandler.SocialChallenge)
+			auth.POST("/social/:provider", authHandler.SocialLogin)
 			auth.POST("/refresh", authHandler.RefreshToken)
 			auth.GET("/me", authMiddleware.Handle(), authHandler.GetMe)
 

@@ -8,6 +8,8 @@ import (
 
 // AuthService определяет интерфейс для бизнес-логики аутентификации
 type AuthService interface {
+	SocialChallenge(context.Context, string) (string, string, error)
+	SocialLogin(context.Context, string, string, string, string, string) (model.TokenPair, bool, error)
 	Register(ctx context.Context, email, password, username string) (string, error)
 	Login(ctx context.Context, email, password string) (model.TokenPair, error)
 

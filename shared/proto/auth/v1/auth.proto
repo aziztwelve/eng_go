@@ -8,6 +8,9 @@ import "google/protobuf/timestamp.proto";
 
 // AuthService предоставляет методы для аутентификации и авторизации
 service AuthService {
+  rpc SocialChallenge(SocialChallengeRequest) returns (SocialChallengeResponse);
+  rpc SocialLogin(SocialLoginRequest) returns (SocialLoginResponse);
+
   // Register регистрирует нового пользователя
   rpc Register(RegisterRequest) returns (RegisterResponse);
   
@@ -258,4 +261,19 @@ message CleanupExpiredGuestsRequest {
 // CleanupExpiredGuestsResponse — сколько гостей удалено.
 message CleanupExpiredGuestsResponse {
   int32 deleted_count = 1;
+}
+
+// Native provider authentication. No client-supplied email is trusted.
+message SocialChallengeRequest { string provider = 1; }
+message SocialChallengeResponse { string challenge_id = 1; string nonce = 2; int32 expires_in = 3; }
+message SocialLoginRequest {
+  string provider = 1;
+  string challenge_id = 2;
+  string authorization_code = 3;
+  string identity_token = 4;
+  string display_name = 5;
+}
+message SocialLoginResponse {
+  LoginResponse tokens = 1;
+  bool created = 2;
 }

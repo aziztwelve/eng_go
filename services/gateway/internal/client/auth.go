@@ -80,3 +80,10 @@ func (c *AuthClient) UpdateUserRole(ctx context.Context, req *authv1.UpdateUserR
 func (c *AuthClient) DeleteUser(ctx context.Context, req *authv1.DeleteUserRequest) (*authv1.DeleteUserResponse, error) {
 	return c.client.DeleteUser(ctx, req)
 }
+
+func (c *AuthClient) SocialChallenge(ctx context.Context, req *authv1.SocialChallengeRequest) (*authv1.SocialChallengeResponse, error) {
+	return c.client.SocialChallenge(ctx, req)
+}
+func (c *AuthClient) SocialLogin(ctx context.Context, req *authv1.SocialLoginRequest) (*authv1.SocialLoginResponse, error) {
+	return c.client.SocialLogin(ctx, req)
+}
