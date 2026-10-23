@@ -81,4 +81,33 @@ Do not automatically erase existing duplicate cards or unknown-account local dat
   conflicts, old requests without retry IDs, canonical word references and rollback
   when history persistence fails. It never targets production.
 
-Deployment and device smoke results are recorded after rollout below.
+## Deployment verification
+
+- Code deployed to `167.233.103.233`: learning fixes `e012e45`, gateway shutdown
+  `ef8e670`, and outage authentication mapping `ade4413` (all pushed to dev).
+- PostgreSQL backup saved before schema changes:
+  `/root/backups/elearning-before-words-20261023-042323.sql.gz`.
+- SRS migrations 7/8 and course migration 37 committed together; course migration
+  ledger is 37/clean. Old UUID strings are preserved.
+- The first restart exposed an old gateway lifecycle defect: SIGTERM closed its
+  gRPC clients but left the HTTP listener alive. The obsolete process was removed.
+  A real SIGTERM of the corrected gateway then exited and released the port;
+  a new process started successfully. Health alone was not treated as readiness.
+- Public API smoke using `X-App-Version: 1.0` passed on the deployed code:
+  legacy authored-ID bulk payload, duplicate retry, old review without attempt ID,
+  idempotent review retry, conflicting-payload rejection, real SRS counts and
+  schedule fields, preserved pinned queue, legacy word practice, new protocol and
+  rejected unopened-step skipping. Diagnostic cards were archived afterward.
+- Gateway dependency failures now return 503 rather than a misleading 401.
+  Tests cover Unavailable/Canceled/Internal/DeadlineExceeded and actual invalid
+  credentials. Mobile additionally retains tokens on network/5xx refresh failures.
+- TypeScript passed; 13 mobile persistence/auth regressions passed. Full mobile
+  lint passed with 39 existing warnings and no errors; edited screens have no new
+  warnings. Gateway full tests/build and graceful-shutdown regression passed.
+- Device QA uses Redmi 8A `ee7d96f90606`, Metro PC port 8091, phone USB port 8090.
+  Other project ports 8081/8090 on the PC were preserved. A 512 MiB heap cap caused
+  a confirmed Metro OOM. At the user's explicit request the manual Node heap cap
+  was removed, retaining one worker and Node's own default limit.
+- Physical iOS testing was not available; compatibility was checked at the shared
+  API boundary with legacy payloads. Existing distribution binaries receive the
+  backend fixes immediately; mobile-only changes still require their normal update.
