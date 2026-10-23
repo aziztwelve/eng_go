@@ -1213,9 +1213,9 @@ message GetFlashcardStatsRequest {
 }
 
 message GetFlashcardStatsResponse {
-  // Карточек, у которых next_review_at <= now() OR pinned_today.
+  // Выбранные на сегодня карточки, включая уже повторённые (legacy contract).
   int32 today_due       = 1;
-  // Из today_due — сколько уже отревьювлено сегодня.
+  // Все активные личные карточки, повторённые сегодня, включая вне подборки.
   int32 today_completed = 2;
   // Карточек reps>0 && strength<0.8.
   int32 learning_count  = 3;
@@ -1223,6 +1223,8 @@ message GetFlashcardStatsResponse {
   int32 mastered_count  = 4;
   // Total non-archived карточек.
   int32 total_count     = 5;
+  // Выбранные на сегодня карточки, которые ещё не повторялись сегодня.
+  optional int32 today_remaining = 6;
 }
 
 // === Today Queue ===

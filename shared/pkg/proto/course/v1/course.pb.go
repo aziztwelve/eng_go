@@ -7932,7 +7932,7 @@ type Flashcard struct {
 	state  protoimpl.MessageState `protogen:"open.v1"`
 	Id     string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	UserId string                 `protobuf:"bytes,2,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
-	// 'manual' | 'lesson' | 'mistake' | 'ai_suggestion'
+	// 'manual' | 'lesson' | 'bank'
 	Source string `protobuf:"bytes,3,opt,name=source,proto3" json:"source,omitempty"`
 	// Optional: NULL для чисто manual карточек.
 	VocabularyId    string                 `protobuf:"bytes,4,opt,name=vocabulary_id,json=vocabularyId,proto3" json:"vocabulary_id,omitempty"`
@@ -8133,7 +8133,7 @@ func (x *Flashcard) GetTranscription() string {
 type ListFlashcardsRequest struct {
 	state  protoimpl.MessageState `protogen:"open.v1"`
 	UserId string                 `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
-	// Фильтр по source: 'manual' | 'lesson' | 'mistake' | 'ai_suggestion'.
+	// Фильтр по source: 'manual' | 'lesson' | 'bank'.
 	// Empty = all sources.
 	Source string `protobuf:"bytes,2,opt,name=source,proto3" json:"source,omitempty"`
 	// Если true — только запинанные на сегодня.
@@ -8921,7 +8921,7 @@ type AddVocabularyAsFlashcardRequest struct {
 	state        protoimpl.MessageState `protogen:"open.v1"`
 	UserId       string                 `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
 	VocabularyId string                 `protobuf:"bytes,2,opt,name=vocabulary_id,json=vocabularyId,proto3" json:"vocabulary_id,omitempty"`
-	// 'lesson' | 'mistake' | 'ai_suggestion' (не 'manual', т.к. ref на vocab).
+	// 'lesson' | 'bank' (не 'manual', т.к. ref на vocab).
 	Source        string `protobuf:"bytes,3,opt,name=source,proto3" json:"source,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -9079,18 +9079,20 @@ func (x *GetFlashcardStatsRequest) GetUserId() string {
 
 type GetFlashcardStatsResponse struct {
 	state protoimpl.MessageState `protogen:"open.v1"`
-	// Карточек, у которых next_review_at <= now() OR pinned_today.
+	// Выбранные на сегодня карточки, включая уже повторённые (legacy contract).
 	TodayDue int32 `protobuf:"varint,1,opt,name=today_due,json=todayDue,proto3" json:"today_due,omitempty"`
-	// Из today_due — сколько уже отревьювлено сегодня.
+	// Все активные личные карточки, повторённые сегодня, включая вне подборки.
 	TodayCompleted int32 `protobuf:"varint,2,opt,name=today_completed,json=todayCompleted,proto3" json:"today_completed,omitempty"`
 	// Карточек reps>0 && strength<0.8.
 	LearningCount int32 `protobuf:"varint,3,opt,name=learning_count,json=learningCount,proto3" json:"learning_count,omitempty"`
 	// Карточек strength>=0.8.
 	MasteredCount int32 `protobuf:"varint,4,opt,name=mastered_count,json=masteredCount,proto3" json:"mastered_count,omitempty"`
 	// Total non-archived карточек.
-	TotalCount    int32 `protobuf:"varint,5,opt,name=total_count,json=totalCount,proto3" json:"total_count,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
+	TotalCount int32 `protobuf:"varint,5,opt,name=total_count,json=totalCount,proto3" json:"total_count,omitempty"`
+	// Выбранные на сегодня карточки, которые ещё не повторялись сегодня.
+	TodayRemaining *int32 `protobuf:"varint,6,opt,name=today_remaining,json=todayRemaining,proto3,oneof" json:"today_remaining,omitempty"`
+	unknownFields  protoimpl.UnknownFields
+	sizeCache      protoimpl.SizeCache
 }
 
 func (x *GetFlashcardStatsResponse) Reset() {
@@ -9154,6 +9156,13 @@ func (x *GetFlashcardStatsResponse) GetMasteredCount() int32 {
 func (x *GetFlashcardStatsResponse) GetTotalCount() int32 {
 	if x != nil {
 		return x.TotalCount
+	}
+	return 0
+}
+
+func (x *GetFlashcardStatsResponse) GetTodayRemaining() int32 {
+	if x != nil && x.TodayRemaining != nil {
+		return *x.TodayRemaining
 	}
 	return 0
 }
@@ -10315,14 +10324,16 @@ const file_course_v1_course_proto_rawDesc = "" +
 	"\tflashcard\x18\x01 \x01(\v2\x14.course.v1.FlashcardR\tflashcard\x12\x18\n" +
 	"\acreated\x18\x02 \x01(\bR\acreated\"3\n" +
 	"\x18GetFlashcardStatsRequest\x12\x17\n" +
-	"\auser_id\x18\x01 \x01(\tR\x06userId\"\xd0\x01\n" +
+	"\auser_id\x18\x01 \x01(\tR\x06userId\"\x92\x02\n" +
 	"\x19GetFlashcardStatsResponse\x12\x1b\n" +
 	"\ttoday_due\x18\x01 \x01(\x05R\btodayDue\x12'\n" +
 	"\x0ftoday_completed\x18\x02 \x01(\x05R\x0etodayCompleted\x12%\n" +
 	"\x0elearning_count\x18\x03 \x01(\x05R\rlearningCount\x12%\n" +
 	"\x0emastered_count\x18\x04 \x01(\x05R\rmasteredCount\x12\x1f\n" +
 	"\vtotal_count\x18\x05 \x01(\x05R\n" +
-	"totalCount\"x\n" +
+	"totalCount\x12,\n" +
+	"\x0ftoday_remaining\x18\x06 \x01(\x05H\x00R\x0etodayRemaining\x88\x01\x01B\x12\n" +
+	"\x10_today_remaining\"x\n" +
 	"\x12PinForTodayRequest\x12\x17\n" +
 	"\auser_id\x18\x01 \x01(\tR\x06userId\x12!\n" +
 	"\fflashcard_id\x18\x02 \x01(\tR\vflashcardId\x12&\n" +
@@ -10873,6 +10884,7 @@ func file_course_v1_course_proto_init() {
 		return
 	}
 	file_course_v1_course_proto_msgTypes[125].OneofWrappers = []any{}
+	file_course_v1_course_proto_msgTypes[141].OneofWrappers = []any{}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{

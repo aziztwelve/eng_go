@@ -16,13 +16,13 @@ var ErrFlashcardConflict = errors.New("flashcard already exists for this vocabul
 
 // FlashcardListFilters — фильтры для list-запроса.
 type FlashcardListFilters struct {
-	UserID           string
-	Source           string // "" = все
-	OnlyPinnedToday  bool   // если true, JOIN'им flashcard_today_queue
-	IncludeArchived  bool
-	Search           string // lower-case substring search по word
-	Limit            int
-	Offset           int
+	UserID          string
+	Source          string // "" = все
+	OnlyPinnedToday bool   // если true, JOIN'им flashcard_today_queue
+	IncludeArchived bool
+	Search          string // lower-case substring search по word
+	Limit           int
+	Offset          int
 }
 
 // FlashcardRepository — CRUD для user_flashcards.
@@ -45,9 +45,10 @@ type FlashcardRepository interface {
 
 // FlashcardStats — агрегат для UI tile блока в Library.
 type FlashcardStats struct {
-	TotalCount      int32
-	LearningCount   int32 // reps>0 && strength<0.8 (опционально, требует SRS)
-	MasteredCount   int32 // strength>=0.8
-	TodayDue        int32 // pinned_today + due-by-srs
-	TodayCompleted  int32 // отревьювлено сегодня (из srs_review_history)
+	TotalCount     int32
+	LearningCount  int32 // reps>0 && strength<0.8 (опционально, требует SRS)
+	MasteredCount  int32 // strength>=0.8
+	TodayDue       int32 // selected for today, including reviewed cards (legacy)
+	TodayCompleted int32 // active cards reviewed today, including outside selection
+	TodayRemaining int32 // selected today and not yet reviewed today
 }

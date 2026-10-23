@@ -167,5 +167,6 @@ func (a *api) GetFlashcardStats(ctx context.Context, req *coursev1.GetFlashcardS
 		MasteredCount:  stats.MasteredCount,
 		TodayDue:       stats.TodayDue,
 		TodayCompleted: stats.TodayCompleted,
+		TodayRemaining: &stats.TodayRemaining,
 	}, nil
 }

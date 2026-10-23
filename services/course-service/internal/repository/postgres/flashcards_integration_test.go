@@ -103,8 +103,23 @@ func TestFlashcardDatabaseConcurrencyAndProjection(t *testing.T) {
 		t.Fatalf("SRS projection missing: %+v %v", loaded, err)
 	}
 	stats, err := repo.Stats(ctx, owner)
-	if err != nil || stats.TotalCount != 3 || stats.MasteredCount != 1 || stats.TodayCompleted != 1 || stats.TodayDue != 1 {
+	if err != nil || stats.TotalCount != 3 || stats.MasteredCount != 1 || stats.TodayCompleted != 1 || stats.TodayDue != 1 || stats.TodayRemaining != 0 {
 		t.Fatalf("bad stats: %+v %v", stats, err)
+	}
+	// A selected unreviewed card remains due even after reviewing another card.
+	var unreviewedID string
+	if err := pool.QueryRow(ctx, `SELECT id FROM courses.user_flashcards WHERE user_id=$1 AND word='park' AND COALESCE(definition,'')=''`, owner).Scan(&unreviewedID); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := queue.Pin(ctx, owner, unreviewedID, day); err != nil {
+		t.Fatal(err)
+	}
+	stats, err = repo.Stats(ctx, owner)
+	if err != nil || stats.TodayDue != 2 || stats.TodayCompleted != 1 || stats.TodayRemaining != 1 {
+		t.Fatalf("selected/reviewed intersection wrong: %+v %v", stats, err)
+	}
+	if _, err := queue.Unpin(ctx, owner, unreviewedID, day); err != nil {
+		t.Fatal(err)
 	}
 	pinned, err := queue.ListForDate(ctx, owner, day)
 	if err != nil || len(pinned) != 1 || pinned[0].NextReviewAt == nil {

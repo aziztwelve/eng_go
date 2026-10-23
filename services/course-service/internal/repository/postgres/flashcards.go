@@ -421,8 +421,10 @@ func (r *flashcardRepository) Stats(ctx context.Context, userID string) (reposit
  COUNT(*) FILTER(WHERE s.last_reviewed_at IS NOT NULL AND s.strength<0.8),
  COUNT(*) FILTER(WHERE s.strength>=0.8),
  COUNT(*) FILTER(WHERE EXISTS(SELECT 1 FROM flashcard_today_queue q WHERE q.user_id=f.user_id AND q.flashcard_id=f.id AND q.queued_for_date=(NOW() AT TIME ZONE 'UTC')::date)),
- COUNT(*) FILTER(WHERE (s.last_reviewed_at AT TIME ZONE 'UTC')::date=(NOW() AT TIME ZONE 'UTC')::date)
+ COUNT(*) FILTER(WHERE (s.last_reviewed_at AT TIME ZONE 'UTC')::date=(NOW() AT TIME ZONE 'UTC')::date),
+ COUNT(*) FILTER(WHERE EXISTS(SELECT 1 FROM flashcard_today_queue q WHERE q.user_id=f.user_id AND q.flashcard_id=f.id AND q.queued_for_date=(NOW() AT TIME ZONE 'UTC')::date)
+ AND ((s.last_reviewed_at AT TIME ZONE 'UTC')::date IS DISTINCT FROM (NOW() AT TIME ZONE 'UTC')::date))
  FROM user_flashcards f LEFT JOIN flashcard_srs_state s ON s.user_id=f.user_id AND s.flashcard_id=f.id
- WHERE f.user_id=$1 AND f.archived_at IS NULL`, userID).Scan(&stats.TotalCount, &stats.LearningCount, &stats.MasteredCount, &stats.TodayDue, &stats.TodayCompleted)
+ WHERE f.user_id=$1 AND f.archived_at IS NULL`, userID).Scan(&stats.TotalCount, &stats.LearningCount, &stats.MasteredCount, &stats.TodayDue, &stats.TodayCompleted, &stats.TodayRemaining)
 	return stats, err
 }

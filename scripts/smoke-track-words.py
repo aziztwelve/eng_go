@@ -34,12 +34,15 @@ try:
     assert new['item']['total_reviews']==2 and retry['history']['id']==new['history']['id']
     call('POST',f'/flashcards/{card}/review',{**payload,'remembered':False},expected=(400,))
     print('PASS idempotent review and changed-answer conflict',flush=True)
-    stats=call('GET','/flashcards/stats');assert stats.get('today_completed')==1 and stats.get('learning_count')==1,stats
+    stats=call('GET','/flashcards/stats');assert stats.get('today_completed')==1 and stats.get('learning_count')==1 and stats.get('today_remaining')==0 and stats.get('today_due')==1,stats
     queue=call('GET','/flashcards/today?include_srs=true');selected=next(x for x in queue['items'] if x['id']==card)
     assert selected.get('repetitions')==2 and selected.get('next_review_at')
     print('PASS real SRS counters, schedule projection and pinned queue',flush=True)
     mono={**item,'word':'monolingual '+suffix,'source':'bank','target_language':'en','translation':'an English definition','vocabulary_id':'A1-VOC-001-001'}
     result=call('POST','/flashcards/bulk',{'items':[mono]});created.extend(result.get('items',[]));assert result.get('created_count')==1
+    call('POST','/flashcards/today/'+result['items'][0]['id'],{})
+    daily=call('GET','/flashcards/stats');assert daily.get('today_remaining')==1 and daily.get('today_due')==2 and daily.get('today_completed')==1,daily
+    print('PASS additive remaining counter without changing legacy selected count',flush=True)
     words=call('GET','/vocabulary-bank?cefr_level=A1&locale=en&limit=1');external=words['entries'][0]['external_id']
     path=f'/vocabulary-bank/{external}/activities'
     call('POST',path+'/15/attempts',{'is_correct':True,'score':100,'time_spent_ms':50},expected=(400,))
