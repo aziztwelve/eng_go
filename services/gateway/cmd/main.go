@@ -27,7 +27,7 @@ func main() {
 	defer appCancel()
 	defer gracefulShutdown()
 
-	closer.Configure(syscall.SIGINT, syscall.SIGTERM)
+	// NotifyContext stops HTTP first; deferred cleanup then closes gRPC clients.
 
 	a, err := app.New(appCtx)
 	if err != nil {

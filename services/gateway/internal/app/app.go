@@ -2,8 +2,11 @@ package app
 
 import (
 	"context"
+	"errors"
 	"fmt"
+	"net"
 	"net/http"
+	"time"
 
 	"github.com/gin-gonic/gin"
 
@@ -30,7 +33,39 @@ func New(ctx context.Context) (*App, error) {
 func (a *App) Run(ctx context.Context) error {
 	addr := config.AppConfig().HTTP.Address()
 	logger.Info(ctx, fmt.Sprintf("🚀 API Gateway listening on %s", addr))
-	return a.router.Run(addr)
+	listener, err := net.Listen("tcp", addr)
+	if err != nil {
+		return err
+	}
+	return serveHTTP(ctx, listener, a.router)
+}
+
+// Drain HTTP requests before main closes gRPC clients. A canceled process must
+// release its port instead of serving with already closed dependencies.
+func serveHTTP(ctx context.Context, listener net.Listener, handler http.Handler) error {
+	server := &http.Server{Handler: handler, ReadHeaderTimeout: 10 * time.Second}
+	done := make(chan error, 1)
+	go func() { done <- server.Serve(listener) }()
+	select {
+	case err := <-done:
+		if errors.Is(err, http.ErrServerClosed) {
+			return nil
+		}
+		return err
+	case <-ctx.Done():
+		shutdown, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+		defer cancel()
+		if err := server.Shutdown(shutdown); err != nil {
+			_ = server.Close()
+			<-done
+			return err
+		}
+		err := <-done
+		if errors.Is(err, http.ErrServerClosed) {
+			return nil
+		}
+		return err
+	}
 }
 
 func (a *App) initDeps(ctx context.Context) error {
