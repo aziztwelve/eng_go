@@ -33,6 +33,7 @@ type StatsRepository interface {
 
 // XPRepository — журнал XP-транзакций.
 type XPRepository interface {
+	DailyByUser(ctx context.Context, userID string, start, end time.Time, timezone string) (map[string]int, error)
 	Insert(ctx context.Context, tx *model.XPTransaction) error
 	ListByUser(ctx context.Context, userID string, limit, offset int) ([]*model.XPTransaction, int, error)
 }

@@ -3,7 +3,7 @@ package user
 const (
 	queryGetProfile = `
 		SELECT id, user_id, first_name, last_name, native_lang, target_lang, 
-		       bio, avatar_url, date_of_birth, timezone, created_at, updated_at
+		       bio, avatar_url, date_of_birth, timezone, gender, created_at, updated_at
 		FROM profiles
 		WHERE user_id = $1
 	`
@@ -11,8 +11,9 @@ const (
 	queryCreateProfile = `
 		INSERT INTO profiles (id, user_id, created_at, updated_at)
 		VALUES ($1, $2, NOW(), NOW())
+        ON CONFLICT (user_id) DO UPDATE SET user_id = EXCLUDED.user_id
 		RETURNING id, user_id, first_name, last_name, native_lang, target_lang,
-		          bio, avatar_url, date_of_birth, timezone, created_at, updated_at
+		          bio, avatar_url, date_of_birth, timezone, gender, created_at, updated_at
 	`
 
 	queryUpdateProfile = `
@@ -23,11 +24,12 @@ const (
 		    target_lang = COALESCE($5, target_lang),
 		    bio = COALESCE($6, bio),
 		    avatar_url = COALESCE($7, avatar_url),
-		    date_of_birth = COALESCE($8, date_of_birth),
-		    timezone = COALESCE($9, timezone)
+		    date_of_birth = CASE WHEN $11 THEN $8 ELSE date_of_birth END,
+		    timezone = COALESCE($9, timezone),
+            gender = COALESCE($10, gender), updated_at = NOW()
 		WHERE user_id = $1
 		RETURNING id, user_id, first_name, last_name, native_lang, target_lang,
-		          bio, avatar_url, date_of_birth, timezone, created_at, updated_at
+		          bio, avatar_url, date_of_birth, timezone, gender, created_at, updated_at
 	`
 
 	queryGetUserLanguages = `
@@ -38,7 +40,7 @@ const (
 
 	queryBatchGetProfiles = `
 		SELECT id, user_id, first_name, last_name, native_lang, target_lang,
-		       bio, avatar_url, date_of_birth, timezone, created_at, updated_at
+		       bio, avatar_url, date_of_birth, timezone, gender, created_at, updated_at
 		FROM profiles
 		WHERE user_id = ANY($1)
 	`

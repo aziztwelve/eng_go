@@ -105,3 +105,7 @@ func (c *GamificationClient) AddXP(ctx context.Context, userID string, amount in
 		UserId: userID, Amount: amount, Reason: reason, SourceId: sourceID,
 	})
 }
+
+func (c *GamificationClient) GetXPDaily(ctx context.Context, userID string, days int32) (*gamificationv1.XPHistoryResponse, error) {
+	return c.client.GetXPHistory(ctx, &gamificationv1.GetXPHistoryRequest{UserId: userID, Days: days})
+}

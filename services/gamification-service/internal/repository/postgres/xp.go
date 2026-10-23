@@ -4,6 +4,7 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
+	"time"
 
 	"github.com/jackc/pgx/v5/pgxpool"
 
@@ -73,4 +74,24 @@ func (r *xpRepository) ListByUser(ctx context.Context, userID string, limit, off
 		return nil, 0, fmt.Errorf("count xp: %w", err)
 	}
 	return out, total, nil
+}
+
+// Aggregate every transaction in the requested local-day window, independent of pagination.
+func (r *xpRepository) DailyByUser(ctx context.Context, userID string, start, end time.Time, timezone string) (map[string]int, error) {
+	rows, err := r.pool.Query(ctx, `SELECT to_char(created_at AT TIME ZONE $4, 'YYYY-MM-DD'), SUM(amount)
+ FROM xp_transactions WHERE user_id=$1 AND created_at >= $2 AND created_at < $3 GROUP BY 1`, userID, start, end, timezone)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	out := map[string]int{}
+	for rows.Next() {
+		var day string
+		var amount int
+		if err := rows.Scan(&day, &amount); err != nil {
+			return nil, err
+		}
+		out[day] = amount
+	}
+	return out, rows.Err()
 }

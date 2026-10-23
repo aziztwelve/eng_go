@@ -401,3 +401,19 @@ func randSuffix() string {
 	}
 	return string(b)
 }
+
+func (r *fakeXP) DailyByUser(_ context.Context, userID string, start, end time.Time, timezone string) (map[string]int, error) {
+	r.mu.Lock()
+	defer r.mu.Unlock()
+	loc, err := time.LoadLocation(timezone)
+	if err != nil {
+		return nil, err
+	}
+	out := map[string]int{}
+	for _, tx := range r.all {
+		if tx.UserID == userID && !tx.CreatedAt.Before(start) && tx.CreatedAt.Before(end) {
+			out[tx.CreatedAt.In(loc).Format("2006-01-02")] += tx.Amount
+		}
+	}
+	return out, nil
+}

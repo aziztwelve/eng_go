@@ -126,11 +126,16 @@ message GetXPHistoryRequest {
   string user_id = 1;
   int32 limit = 2;                  // default 50
   int32 offset = 3;
+  int32 days = 4; // optional daily aggregation, 1..90; zero preserves history API
 }
+
+message XPDay { string date = 1; int32 xp = 2; }
 
 message XPHistoryResponse {
   repeated XPTransaction transactions = 1;
   int32 total = 2;
+  repeated XPDay days = 3;
+  string timezone = 4;
 }
 
 // ============================================================================
@@ -218,6 +223,8 @@ message StreakDay {
 message StreakHistory {
   string user_id = 1;
   repeated StreakDay days = 2;
+  string today = 3; // current calendar date in the account time zone
+  string timezone = 4;
 }
 
 message UpdateStreakRequest {

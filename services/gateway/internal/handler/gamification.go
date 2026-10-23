@@ -243,3 +243,30 @@ func (h *GamificationHandler) GetXPHistory(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, resp)
 }
+
+func (h *GamificationHandler) GetXPDaily(c *gin.Context) {
+	id, ok := getUserID(c)
+	if !ok {
+		return
+	}
+	days := 14
+	if raw := c.Query("days"); raw != "" {
+		n, err := strconv.Atoi(raw)
+		if err != nil || n < 1 || n > 90 {
+			c.JSON(http.StatusBadRequest, gin.H{"error": "days must be 1..90"})
+			return
+		}
+		days = n
+	}
+	response, err := h.gam.GetXPDaily(c.Request.Context(), id, int32(days))
+	if err != nil {
+		errors.HandleGRPCError(c, err)
+		return
+	}
+	// Stable REST numbers, including zero days omitted by proto json defaults.
+	out := make([]gin.H, 0, len(response.Days))
+	for _, d := range response.Days {
+		out = append(out, gin.H{"date": d.Date, "xp": d.Xp})
+	}
+	c.JSON(http.StatusOK, gin.H{"days": out, "timezone": response.Timezone})
+}

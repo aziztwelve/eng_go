@@ -48,6 +48,9 @@ func ToProfileFromRepo(repo repoModel.Profile) model.Profile {
 		profile.Timezone = &repo.Timezone.String
 	}
 
+	if repo.Gender.Valid {
+		profile.Gender = &repo.Gender.String
+	}
 	return profile
 }
 

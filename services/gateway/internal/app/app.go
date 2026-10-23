@@ -195,6 +195,8 @@ func (a *App) initRouter(ctx context.Context) error {
 		protected.Use(authMiddleware.Handle())
 		{
 			protected.DELETE("/users/me", authHandler.DeleteMe)
+			protected.GET("/users/me/profile", authHandler.GetProfile)
+			protected.PATCH("/users/me/profile", authHandler.PatchProfile)
 
 			protected.GET("/vocabulary-bank/feed", vocabularyBankHandler.Feed)
 			protected.GET("/vocabulary-bank/:externalId/progress", vocabularyBankHandler.GetProgress)
@@ -330,6 +332,7 @@ func (a *App) initRouter(ctx context.Context) error {
 					g.GET("/achievements", gh.ListAchievements)
 					g.GET("/achievements/mine", gh.GetMyAchievements)
 					g.GET("/xp/history", gh.GetXPHistory)
+					g.GET("/xp/daily", gh.GetXPDaily)
 				}
 			}
 

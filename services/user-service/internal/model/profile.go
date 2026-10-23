@@ -14,6 +14,7 @@ type Profile struct {
 	AvatarURL   *string
 	DateOfBirth *time.Time
 	Timezone    *string
+	Gender      *string
 	CreatedAt   time.Time
 	UpdatedAt   time.Time
 }
@@ -28,4 +29,5 @@ type UpdateProfileData struct {
 	AvatarURL   *string
 	DateOfBirth *string // ISO 8601 format: "1990-01-15"
 	Timezone    *string
+	Gender      *string
 }

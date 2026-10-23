@@ -49,6 +49,9 @@ func ToProtoProfile(profile model.Profile) *userv1.Profile {
 		protoProfile.Timezone = wrapperspb.String(*profile.Timezone)
 	}
 
+	if profile.Gender != nil {
+		protoProfile.Gender = wrapperspb.String(*profile.Gender)
+	}
 	return protoProfile
 }
 
@@ -96,5 +99,9 @@ func ToUpdateProfileData(req *userv1.UpdateProfileRequest) model.UpdateProfileDa
 		data.Timezone = &val
 	}
 
+	if req.Gender != nil {
+		v := req.Gender.GetValue()
+		data.Gender = &v
+	}
 	return data
 }

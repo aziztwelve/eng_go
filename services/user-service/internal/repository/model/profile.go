@@ -17,6 +17,7 @@ type Profile struct {
 	AvatarURL   sql.NullString
 	DateOfBirth sql.NullTime
 	Timezone    sql.NullString
+	Gender      sql.NullString
 	CreatedAt   time.Time
 	UpdatedAt   time.Time
 

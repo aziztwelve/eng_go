@@ -39,6 +39,7 @@ func (r *repo) GetProfile(ctx context.Context, userID string) (model.Profile, er
 		&profile.AvatarURL,
 		&profile.DateOfBirth,
 		&profile.Timezone,
+		&profile.Gender,
 		&profile.CreatedAt,
 		&profile.UpdatedAt,
 	)
@@ -67,6 +68,7 @@ func (r *repo) CreateProfile(ctx context.Context, profile model.Profile) error {
 		&created.AvatarURL,
 		&created.DateOfBirth,
 		&created.Timezone,
+		&created.Gender,
 		&created.CreatedAt,
 		&created.UpdatedAt,
 	)
@@ -98,6 +100,7 @@ func (r *repo) UpdateProfile(ctx context.Context, userID string, data model.Upda
 		toNullString(data.AvatarURL),
 		dateOfBirth,
 		toNullString(data.Timezone),
+		toNullString(data.Gender), data.DateOfBirth != nil,
 	).Scan(
 		&profile.ID,
 		&profile.UserID,
@@ -109,6 +112,7 @@ func (r *repo) UpdateProfile(ctx context.Context, userID string, data model.Upda
 		&profile.AvatarURL,
 		&profile.DateOfBirth,
 		&profile.Timezone,
+		&profile.Gender,
 		&profile.CreatedAt,
 		&profile.UpdatedAt,
 	)
@@ -140,7 +144,7 @@ func (r *repo) BatchGetProfiles(ctx context.Context, userIDs []string) (map[stri
 		if err := rows.Scan(
 			&p.ID, &p.UserID, &p.FirstName, &p.LastName,
 			&p.NativeLang, &p.TargetLang, &p.Bio, &p.AvatarURL,
-			&p.DateOfBirth, &p.Timezone, &p.CreatedAt, &p.UpdatedAt,
+			&p.DateOfBirth, &p.Timezone, &p.Gender, &p.CreatedAt, &p.UpdatedAt,
 		); err != nil {
 			return nil, err
 		}
@@ -162,12 +166,8 @@ func (r *repo) GetUserLanguages(ctx context.Context, userID string) (nativeLang,
 }
 
 func toNullString(s *string) sql.NullString {
-	if s == nil || *s == "" {
+	if s == nil {
 		return sql.NullString{}
 	}
 	return sql.NullString{String: *s, Valid: true}
 }
-
-
-
-

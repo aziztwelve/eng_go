@@ -47,6 +47,7 @@ type MeResponse struct {
 
 // ProfileData содержит данные профиля пользователя
 type ProfileData struct {
+	Gender      *string `json:"gender,omitempty"`
 	FirstName   *string `json:"first_name,omitempty"`
 	LastName    *string `json:"last_name,omitempty"`
 	AvatarURL   *string `json:"avatar_url,omitempty"`

@@ -76,6 +76,20 @@ func (a *API) GetXPHistory(ctx context.Context, req *gamificationv1.GetXPHistory
 	if req.GetUserId() == "" {
 		return nil, status.Error(codes.InvalidArgument, "user_id is required")
 	}
+	if req.GetDays() > 0 {
+		if req.GetDays() > 90 {
+			return nil, status.Error(codes.InvalidArgument, "days must be at most 90")
+		}
+		days, tz, err := a.svc.GetXPDaily(ctx, req.UserId, int(req.Days))
+		if err != nil {
+			return nil, toGRPCError(err)
+		}
+		out := &gamificationv1.XPHistoryResponse{Timezone: tz, Days: make([]*gamificationv1.XPDay, 0, len(days))}
+		for _, day := range days {
+			out.Days = append(out.Days, &gamificationv1.XPDay{Date: day.Date, Xp: int32(day.XP)})
+		}
+		return out, nil
+	}
 	txs, total, err := a.svc.GetXPHistory(ctx, req.UserId, int(req.GetLimit()), int(req.GetOffset()))
 	if err != nil {
 		return nil, toGRPCError(err)
@@ -168,8 +182,10 @@ func (a *API) GetStreakHistory(ctx context.Context, req *gamificationv1.GetStrea
 		return nil, toGRPCError(err)
 	}
 	return &gamificationv1.StreakHistory{
-		UserId: req.UserId,
-		Days:   converter.StreakDaysToProto(days),
+		UserId:   req.UserId,
+		Days:     converter.StreakDaysToProto(days),
+		Today:    a.svc.UserToday(ctx, req.UserId),
+		Timezone: a.svc.UserLocation(ctx, req.UserId).String(),
 	}, nil
 }
 

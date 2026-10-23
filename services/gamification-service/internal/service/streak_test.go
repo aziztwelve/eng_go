@@ -9,9 +9,9 @@ import (
 // helper: фиксированное "сейчас" с возможностью двигать.
 type clock struct{ now time.Time }
 
-func (c *clock) get() time.Time           { return c.now }
-func (c *clock) advance(d time.Duration)  { c.now = c.now.Add(d) }
-func (c *clock) setTo(t time.Time)        { c.now = t }
+func (c *clock) get() time.Time          { return c.now }
+func (c *clock) advance(d time.Duration) { c.now = c.now.Add(d) }
+func (c *clock) setTo(t time.Time)       { c.now = t }
 
 func TestStreak_FirstDay(t *testing.T) {
 	c := &clock{now: time.Date(2026, 5, 12, 10, 0, 0, 0, time.UTC)}
@@ -92,5 +92,18 @@ func TestStreak_FreezeSavesGap(t *testing.T) {
 	}
 	if stats.StreakFreezes != 0 {
 		t.Fatalf("freeze should be consumed, got %d", stats.StreakFreezes)
+	}
+}
+
+func TestLegacyFreezeActivationCannotMintItems(t *testing.T) {
+	svc, _, _, _, _, _ := buildService(nil)
+	for i := 0; i < 5; i++ {
+		stats, err := svc.UseStreakFreeze(context.Background(), "no-free-items")
+		if err != nil {
+			t.Fatal(err)
+		}
+		if stats.StreakFreezes != 0 {
+			t.Fatalf("activation minted %d freezes", stats.StreakFreezes)
+		}
 	}
 }

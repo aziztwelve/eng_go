@@ -150,6 +150,7 @@ func (h *AuthHandler) GetMe(c *gin.Context) {
 		profile := profileResp.Profile
 		response.Profile = &dto.ProfileData{
 			FirstName:   getStringValue(profile.FirstName),
+			Gender:      getStringValue(profile.Gender),
 			LastName:    getStringValue(profile.LastName),
 			AvatarURL:   getStringValue(profile.AvatarUrl),
 			Bio:         getStringValue(profile.Bio),

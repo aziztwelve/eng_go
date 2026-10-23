@@ -81,20 +81,12 @@ func (s *Service) GetStreakHistory(ctx context.Context, userID string, days int)
 	return s.streak.ListLast(ctx, userID, days)
 }
 
-// UseStreakFreeze — превентивная активация заморозки (например, юзер знает, что не сможет).
-// На уровне MVP — просто проверка достаточности и логирование, реальный спасательный механизм
-// уже встроен в UpdateStreak. Здесь возвращаем актуальные stats.
+// Freezes are already applied automatically in UpdateStreak. Keep this legacy
+// endpoint idempotent: it must never mint a free item on each button tap.
 func (s *Service) UseStreakFreeze(ctx context.Context, userID string) (*model.UserStats, error) {
-	stats, err := s.ensureStats(ctx, userID)
-	if err != nil {
-		return nil, err
-	}
-	if stats.StreakFreezes >= s.cfg.StreakFreezeMax {
-		return stats, fmt.Errorf("max freezes already")
-	}
-	stats.StreakFreezes++
-	if err := s.stats.Update(ctx, stats); err != nil {
-		return nil, err
-	}
-	return stats, nil
+	return s.ensureStats(ctx, userID)
+}
+
+func (s *Service) UserToday(ctx context.Context, userID string) string {
+	return s.todayInTZ(ctx, userID).Format("2006-01-02")
 }
