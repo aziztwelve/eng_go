@@ -1,6 +1,9 @@
 package middleware
 
 import (
+	"context"
+	"google.golang.org/grpc/codes"
+	"google.golang.org/grpc/status"
 	"net/http"
 	"strings"
 
@@ -13,8 +16,11 @@ import (
 )
 
 // AuthMiddleware middleware для аутентификации через Auth Service
+type tokenValidator interface {
+	ValidateToken(context.Context, *authv1.ValidateTokenRequest) (*authv1.ValidateTokenResponse, error)
+}
 type AuthMiddleware struct {
-	authClient *client.AuthClient
+	authClient tokenValidator
 }
 
 // NewAuthMiddleware создает новый экземпляр Auth middleware
@@ -56,9 +62,15 @@ func (m *AuthMiddleware) Handle() gin.HandlerFunc {
 
 		if err != nil {
 			logger.Error(c.Request.Context(), "Token validation failed", zap.Error(err))
-			c.JSON(http.StatusUnauthorized, gin.H{
-				"error": "Invalid token",
-			})
+			code := status.Code(err)
+			if code != codes.Unauthenticated && code != codes.PermissionDenied && code != codes.InvalidArgument {
+				// Existing APKs interpret 401 as a revoked session. A dependency
+				// outage must not log users out on Android or iOS.
+				c.Header("Retry-After", "2")
+				c.JSON(http.StatusServiceUnavailable, gin.H{"error": "Authentication temporarily unavailable"})
+			} else {
+				c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid token"})
+			}
 			c.Abort()
 			return
 		}
