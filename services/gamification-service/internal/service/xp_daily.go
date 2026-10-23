@@ -2,6 +2,7 @@ package service
 
 import (
 	"context"
+	userclient "github.com/elearning/gamification-service/internal/client/user"
 	"time"
 )
 
@@ -14,7 +15,7 @@ func (s *Service) GetXPDaily(ctx context.Context, userID string, days int) ([]XP
 	if days < 1 || days > 90 {
 		days = 14
 	}
-	loc := s.UserLocation(ctx, userID)
+	loc := s.UserLocation(userclient.FreshProfileContext(ctx), userID)
 	now := s.now().In(loc)
 	today := time.Date(now.Year(), now.Month(), now.Day(), 0, 0, 0, 0, loc)
 	start := today.AddDate(0, 0, -days+1)

@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	userclient "github.com/elearning/gamification-service/internal/client/user"
 
 	"github.com/elearning/gamification-service/internal/model"
 	"github.com/elearning/gamification-service/internal/repository"
@@ -88,5 +89,5 @@ func (s *Service) UseStreakFreeze(ctx context.Context, userID string) (*model.Us
 }
 
 func (s *Service) UserToday(ctx context.Context, userID string) string {
-	return s.todayInTZ(ctx, userID).Format("2006-01-02")
+	return s.todayInTZ(userclient.FreshProfileContext(ctx), userID).Format("2006-01-02")
 }

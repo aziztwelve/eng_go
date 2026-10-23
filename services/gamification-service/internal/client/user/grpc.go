@@ -21,6 +21,13 @@ import (
 // чтобы изменение профиля пользователем стало видимым в пределах минут.
 const profileCacheTTL = 5 * time.Minute
 
+type freshProfileKey struct{}
+
+// FreshProfileContext bypasses the cross-request cache for profile-sensitive reads.
+func FreshProfileContext(ctx context.Context) context.Context {
+	return context.WithValue(ctx, freshProfileKey{}, true)
+}
+
 type profileSnapshot struct {
 	dobMMDD  string
 	timezone string
@@ -36,8 +43,8 @@ type grpcClient struct {
 	conn   *grpc.ClientConn
 	client userv1.UserServiceClient
 
-	mu      sync.Mutex
-	cache   map[string]profileSnapshot
+	mu       sync.Mutex
+	cache    map[string]profileSnapshot
 	onbCache map[string]onboardingSnapshot
 }
 
@@ -67,7 +74,7 @@ func NewGRPCClient(ctx context.Context, addr string) (Client, func() error, erro
 // должен трактовать их как "значение неизвестно".
 func (c *grpcClient) getSnapshot(ctx context.Context, userID string) profileSnapshot {
 	c.mu.Lock()
-	if cached, ok := c.cache[userID]; ok && time.Now().Before(cached.expires) {
+	if cached, ok := c.cache[userID]; ok && time.Now().Before(cached.expires) && ctx.Value(freshProfileKey{}) != true {
 		c.mu.Unlock()
 		return cached
 	}

@@ -33,7 +33,7 @@ try:
  cleared=call('GET','/users/me/profile',token=a);assert not cleared.get('gender') and not cleared.get('date_of_birth')
  print('PASS profile persists, partial updates, clears, validation and account isolation',flush=True)
  daily=call('GET','/gamification/xp/daily?days=14',token=a)
- assert len(daily['days'])==14 and daily['timezone']=='Asia/Dushanbe' and all(day['xp']==0 for day in daily['days'])
+ assert len(daily['days'])==14 and daily['timezone']=='Asia/Dushanbe' and all(day['xp']==0 for day in daily['days']), {'days':len(daily['days']),'timezone':daily['timezone'],'xp':sum(day['xp'] for day in daily['days'])}
  call('GET','/gamification/xp/daily?days=999',token=a,expected=(400,))
  history=call('GET','/gamification/xp/history?limit=20&offset=0',token=a);assert not history.get('transactions')
  streak=call('GET','/gamification/streak/history?days=30',token=a);assert len(streak['today'])==10 and streak['timezone']=='Asia/Dushanbe'
