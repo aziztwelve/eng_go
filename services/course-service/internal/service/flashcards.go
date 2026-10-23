@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"github.com/google/uuid"
 	"strings"
 
 	"github.com/elearning/course-service/internal/model"
@@ -12,9 +13,7 @@ import (
 
 // FlashcardService — бизнес-логика личных карточек пользователя (Phase 7).
 //
-// Cross-svc integration с SRS (strength/repetitions/next_review_at,
-// today_completed) — TODO в следующем sprint'е. Сейчас возвращаем CRUD-данные
-// без SM-2 проекции.
+// Schedule and counters use a read-only SRS projection.
 type FlashcardService interface {
 	Create(ctx context.Context, f *model.Flashcard) (*model.Flashcard, error)
 	Get(ctx context.Context, userID, flashcardID string) (*model.Flashcard, error)
@@ -80,7 +79,7 @@ func validateFlashcard(f *model.Flashcard) error {
 		return errors.New("flashcard: language is required")
 	case f.TargetLanguage == "":
 		return errors.New("flashcard: target_language is required")
-	case f.Language == f.TargetLanguage:
+	case f.Language == f.TargetLanguage && f.Source != model.FlashcardSourceBank:
 		return errors.New("flashcard: language and target_language must differ")
 	}
 
@@ -145,6 +144,11 @@ func (s *flashcardService) BulkCreate(ctx context.Context, items []*model.Flashc
 		return 0, 0, errors.New("flashcard: items are required")
 	}
 	for i, f := range items {
+		if f.VocabularyID != "" && (f.Source == model.FlashcardSourceLesson || f.Source == model.FlashcardSourceBank) {
+			if _, err := uuid.Parse(f.VocabularyID); err != nil {
+				f.VocabularyID = ""
+			}
+		}
 		if err := validateFlashcard(f); err != nil {
 			return 0, 0, fmt.Errorf("items[%d]: %w", i, err)
 		}

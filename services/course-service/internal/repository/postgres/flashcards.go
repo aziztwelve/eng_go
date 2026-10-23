@@ -146,7 +146,7 @@ func (r *flashcardRepository) GetByID(ctx context.Context, userID, flashcardID s
 		}
 		return nil, err
 	}
-	return flashcard, nil
+	return flashcard, hydrateFlashcardSRS(ctx, r.pool, []*model.Flashcard{flashcard})
 }
 
 func (r *flashcardRepository) GetByVocabulary(ctx context.Context, userID, vocabularyID string) (*model.Flashcard, error) {
@@ -171,7 +171,7 @@ func (r *flashcardRepository) GetByVocabulary(ctx context.Context, userID, vocab
 		}
 		return nil, err
 	}
-	return flashcard, nil
+	return flashcard, hydrateFlashcardSRS(ctx, r.pool, []*model.Flashcard{flashcard})
 }
 
 func (r *flashcardRepository) Update(ctx context.Context, f *model.Flashcard) error {
@@ -302,7 +302,14 @@ func (r *flashcardRepository) List(ctx context.Context, f repository.FlashcardLi
 		}
 		items = append(items, fc)
 	}
-	return items, total, rows.Err()
+	if err := rows.Err(); err != nil {
+		return nil, 0, err
+	}
+	rows.Close()
+	if err := hydrateFlashcardSRS(ctx, r.pool, items); err != nil {
+		return nil, 0, err
+	}
+	return items, total, nil
 }
 
 // BulkCreate — best-effort batch insert. Дубликаты по uniq (user_id,
@@ -316,6 +323,12 @@ func (r *flashcardRepository) BulkCreate(ctx context.Context, items []*model.Fla
 		return 0, 0, err
 	}
 	defer func() { _ = tx.Rollback(ctx) }()
+	if len(items) > 0 {
+		// Serialize batches for this owner, including old clients without vocabulary UUIDs.
+		if _, err := tx.Exec(ctx, `SELECT pg_advisory_xact_lock(hashtextextended($1, 0))`, "flashcards|"+items[0].UserID); err != nil {
+			return 0, 0, err
+		}
+	}
 
 	for i, f := range items {
 		if f.ID == "" {
@@ -344,6 +357,20 @@ func (r *flashcardRepository) BulkCreate(ctx context.Context, items []*model.Fla
 			}
 		}
 
+		if f.VocabularyID == "" && f.Source != model.FlashcardSourceManual {
+			var exists bool
+			if err := tx.QueryRow(ctx, `SELECT EXISTS(SELECT 1 FROM user_flashcards
+                WHERE user_id=$1 AND archived_at IS NULL AND source IN ('lesson','bank')
+                AND lower(btrim(word))=lower(btrim($2)) AND translation=$3
+                AND language=$4 AND target_language=$5 AND COALESCE(definition,'')=$6)`,
+				f.UserID, f.Word, f.Translation, f.Language, f.TargetLanguage, f.Definition).Scan(&exists); err != nil {
+				return 0, 0, err
+			}
+			if exists {
+				skipped++
+				continue
+			}
+		}
 		err := tx.QueryRow(ctx, `
 			INSERT INTO user_flashcards
 				(id, user_id, source, vocabulary_id,
@@ -351,6 +378,7 @@ func (r *flashcardRepository) BulkCreate(ctx context.Context, items []*model.Fla
 				 definition, example_sentence, audio_url, image_url,
 				 transcription)
 			VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
+            ON CONFLICT DO NOTHING
 			RETURNING created_at, updated_at`,
 			f.ID,
 			f.UserID,
@@ -370,12 +398,11 @@ func (r *flashcardRepository) BulkCreate(ctx context.Context, items []*model.Fla
 		case err == nil:
 			created++
 		default:
-			var pgErr *pgconn.PgError
-			if errors.As(err, &pgErr) && pgErr.Code == "23505" {
-				// Гонка: между dedup-SELECT и INSERT успели вставить.
+			if errors.Is(err, pgx.ErrNoRows) {
 				skipped++
 				continue
 			}
+
 			return 0, 0, fmt.Errorf("bulk flashcards[%d] insert: %w", i, err)
 		}
 	}
@@ -386,29 +413,16 @@ func (r *flashcardRepository) BulkCreate(ctx context.Context, items []*model.Fla
 	return created, skipped, nil
 }
 
-// Stats — агрегаты по non-archived карточкам юзера. SRS-зависимые поля
-// (learning_count / mastered_count / today_completed) пока возвращают 0:
-// требуют JOIN с srs.user_srs_items и srs.review_history. Заполнение —
-// в следующем sprint'е (расширение srs.Client). TotalCount и TodayDue
-// (pinned for today) — считаем сейчас.
+// Stats counts only active personal cards; dates use the same UTC day as today queue.
 func (r *flashcardRepository) Stats(ctx context.Context, userID string) (repository.FlashcardStats, error) {
-	var s repository.FlashcardStats
+	var stats repository.FlashcardStats
 	err := r.pool.QueryRow(ctx, `
-		SELECT
-			COUNT(*) FILTER (WHERE archived_at IS NULL) AS total,
-			COUNT(*) FILTER (WHERE archived_at IS NULL AND EXISTS(
-				SELECT 1 FROM flashcard_today_queue q
-				WHERE q.user_id = f.user_id
-				  AND q.flashcard_id = f.id
-				  AND q.queued_for_date = CURRENT_DATE
-			)) AS today_due
-		FROM user_flashcards f
-		WHERE f.user_id = $1`,
-		userID,
-	).Scan(&s.TotalCount, &s.TodayDue)
-	if err != nil {
-		return s, err
-	}
-	// learning_count / mastered_count / today_completed → 0 до SRS integration.
-	return s, nil
+ SELECT COUNT(*),
+ COUNT(*) FILTER(WHERE s.last_reviewed_at IS NOT NULL AND s.strength<0.8),
+ COUNT(*) FILTER(WHERE s.strength>=0.8),
+ COUNT(*) FILTER(WHERE EXISTS(SELECT 1 FROM flashcard_today_queue q WHERE q.user_id=f.user_id AND q.flashcard_id=f.id AND q.queued_for_date=(NOW() AT TIME ZONE 'UTC')::date)),
+ COUNT(*) FILTER(WHERE (s.last_reviewed_at AT TIME ZONE 'UTC')::date=(NOW() AT TIME ZONE 'UTC')::date)
+ FROM user_flashcards f LEFT JOIN flashcard_srs_state s ON s.user_id=f.user_id AND s.flashcard_id=f.id
+ WHERE f.user_id=$1 AND f.archived_at IS NULL`, userID).Scan(&stats.TotalCount, &stats.LearningCount, &stats.MasteredCount, &stats.TodayDue, &stats.TodayCompleted)
+	return stats, err
 }

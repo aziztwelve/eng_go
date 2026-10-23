@@ -41,12 +41,12 @@ var ErrAlreadyExists = errors.New("already exists")
 
 // SRSStats — агрегаты для GetStats RPC.
 type SRSStats struct {
-	Total          int32
-	DueNow         int32
-	Mastered       int32
-	Learning       int32
-	Fresh          int32
-	ReviewedToday  int32
+	Total         int32
+	DueNow        int32
+	Mastered      int32
+	Learning      int32
+	Fresh         int32
+	ReviewedToday int32
 }
 
 // ReviewHistoryRepository — журнал ревью.
@@ -85,3 +85,20 @@ type MistakeRepository interface {
 	// List — список ошибок. resolvedFilter: -1=all, 0=unresolved, 1=resolved.
 	List(ctx context.Context, userID string, resolvedFilter int, limit, offset int) ([]*model.Mistake, int, error)
 }
+
+// AtomicReviewRepository commits the schedule, history and retry receipt together.
+// Kept separate so non-database implementations can still implement the basic store.
+type ReviewOperation struct {
+	UserID         string
+	ItemType       model.ItemType
+	ItemID         string
+	AttemptID      string
+	Quality        int32
+	ResponseTimeMs int32
+	UsedHint       bool
+}
+type AtomicReviewRepository interface {
+	RecordReviewAtomic(context.Context, ReviewOperation, func(*model.SRSItem) *model.ReviewHistory) (*model.SRSItem, *model.ReviewHistory, error)
+}
+
+var ErrReviewConflict = errors.New("attempt_id reused with a different review")

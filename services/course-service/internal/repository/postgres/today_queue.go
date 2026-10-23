@@ -72,7 +72,7 @@ func (r *todayQueueRepository) ListForDate(ctx context.Context, userID string, d
 	// архивированные даже если они были запиннуты ранее.
 	query := `SELECT ` + flashcardSelectCols + `, TRUE AS pinned_today
 		FROM flashcard_today_queue q
-		JOIN user_flashcards f ON f.id = q.flashcard_id
+		JOIN user_flashcards f ON f.id = q.flashcard_id AND f.user_id=q.user_id
 		WHERE q.user_id = $1
 		  AND q.queued_for_date = $2
 		  AND f.archived_at IS NULL
@@ -95,5 +95,9 @@ func (r *todayQueueRepository) ListForDate(ctx context.Context, userID string, d
 		}
 		items = append(items, fc)
 	}
-	return items, rows.Err()
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	rows.Close()
+	return items, hydrateFlashcardSRS(ctx, r.pool, items)
 }

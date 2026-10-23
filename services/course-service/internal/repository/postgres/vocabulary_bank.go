@@ -262,7 +262,7 @@ func (r *vocabularyBankRepository) RecordAttempt(ctx context.Context, attempt mo
 			return nil, err
 		}
 	}
-	next, err := vocabularyBankNextStep(progress.CurrentStep, attempt.Step, attempt.IsCorrect || attempt.CanAdvance, attempt.ClientAttemptID != "", progress.CompletedAt != nil)
+	next, err := vocabularyBankNextStep(progress.CurrentStep, attempt.Step, attempt.IsCorrect || attempt.CanAdvance, true, progress.CompletedAt != nil)
 	if err != nil {
 		return nil, err
 	}

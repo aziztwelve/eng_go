@@ -281,7 +281,7 @@ func TestBulkCreate_SkipsDuplicateVocab(t *testing.T) {
 	mk := func() *model.Flashcard {
 		c := validCard()
 		c.Source = model.FlashcardSourceBank
-		c.VocabularyID = "v1"
+		c.VocabularyID = "11111111-1111-4111-8111-111111111111"
 		return c
 	}
 	created, skipped, err := svc.BulkCreate(context.Background(), []*model.Flashcard{mk(), mk()})
@@ -344,5 +344,26 @@ func TestStats_CountsNonArchived(t *testing.T) {
 	}
 	if stats.TotalCount != 1 {
 		t.Fatalf("expected 1 non-archived, got %d", stats.TotalCount)
+	}
+}
+
+func TestBulkCreateLegacyLessonSelectionKey(t *testing.T) {
+	repo, svc := newFlashcardSvc()
+	_ = repo
+	card := validCard()
+	card.Source = model.FlashcardSourceLesson
+	card.VocabularyID = "WAH_L2_MP_P1"
+	created, _, err := svc.BulkCreate(context.Background(), []*model.Flashcard{card})
+	if err != nil || created != 1 || card.VocabularyID != "" {
+		t.Fatalf("legacy selection failed: %d %v %q", created, err, card.VocabularyID)
+	}
+}
+func TestBankAllowsMonolingualDefinition(t *testing.T) {
+	_, svc := newFlashcardSvc()
+	card := validCard()
+	card.Source = model.FlashcardSourceBank
+	card.TargetLanguage = card.Language
+	if _, err := svc.Create(context.Background(), card); err != nil {
+		t.Fatal(err)
 	}
 }

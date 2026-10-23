@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/google/uuid"
 	"sort"
 	"time"
 
@@ -55,6 +56,7 @@ type RecordReviewInput struct {
 	Quality        int32
 	ResponseTimeMs int32
 	UsedHint       bool
+	AttemptID      string
 }
 
 type service struct {
@@ -109,6 +111,28 @@ func (s *service) RecordReview(ctx context.Context, in RecordReviewInput) (*mode
 		return nil, nil, ErrInvalidQuality
 	}
 
+	if in.ResponseTimeMs < 0 {
+		return nil, nil, ErrInvalidArgument
+	}
+	if in.AttemptID != "" {
+		if _, err := uuid.Parse(in.AttemptID); err != nil {
+			return nil, nil, ErrInvalidArgument
+		}
+	}
+	if atomic, ok := s.items.(repository.AtomicReviewRepository); ok {
+		return atomic.RecordReviewAtomic(ctx, repository.ReviewOperation{UserID: in.UserID, ItemType: in.ItemType, ItemID: in.ItemID, AttemptID: in.AttemptID, Quality: in.Quality, ResponseTimeMs: in.ResponseTimeMs, UsedHint: in.UsedHint}, func(item *model.SRSItem) *model.ReviewHistory {
+			now := s.clock()
+			if in.ItemType == model.ItemTypeVocabularyBank {
+				ApplyVocabularyBankSchedule(item, in.Quality, in.ResponseTimeMs, now)
+			} else {
+				ApplySM2(item, in.Quality, in.ResponseTimeMs, now)
+			}
+			return &model.ReviewHistory{SRSItemID: item.ID, UserID: in.UserID, Quality: in.Quality, ResponseTimeMs: in.ResponseTimeMs, UsedHint: in.UsedHint, NewIntervalDays: item.IntervalDays, NewEasinessFactor: item.EasinessFactor, NewRepetitions: item.Repetitions}
+		})
+	}
+	if in.AttemptID != "" {
+		return nil, nil, fmt.Errorf("atomic review storage is required for attempt_id")
+	}
 	// Лениво создаём карточку.
 	item, _, err := s.EnsureItem(ctx, in.UserID, in.ItemType, in.ItemID)
 	if err != nil {

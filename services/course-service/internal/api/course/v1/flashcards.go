@@ -28,7 +28,7 @@ func mapFlashcardErr(err error, defaultCode codes.Code) error {
 }
 
 // ListFlashcards — page + filter по карточкам юзера.
-// include_srs — TODO (требует srs.Client расширения).
+// Schedule fields are populated from the read-only SRS projection.
 func (a *api) ListFlashcards(ctx context.Context, req *coursev1.ListFlashcardsRequest) (*coursev1.ListFlashcardsResponse, error) {
 	if req.UserId == "" {
 		return nil, status.Error(codes.InvalidArgument, "user_id is required")
@@ -152,8 +152,7 @@ func (a *api) AddVocabularyAsFlashcard(ctx context.Context, req *coursev1.AddVoc
 }
 
 // GetFlashcardStats — агрегаты для UI tile блока Library.
-// SRS-зависимые поля (learning / mastered / today_completed) пока 0
-// (TODO: cross-svc вызов в srs-service).
+// SRS counters are populated from the read-only projection.
 func (a *api) GetFlashcardStats(ctx context.Context, req *coursev1.GetFlashcardStatsRequest) (*coursev1.GetFlashcardStatsResponse, error) {
 	if req.UserId == "" {
 		return nil, status.Error(codes.InvalidArgument, "user_id is required")

@@ -333,8 +333,9 @@ type flashcardReviewRequest struct {
 	// Remembered — бинарная самооценка «помню/забыл». Маппится в SM-2
 	// quality на бэке: true → 5 (perfect recall), false → 2 (incorrect,
 	// сброс интервала). Клиент не знает про SM-2-шкалу.
-	Remembered     bool  `json:"remembered"`
-	ResponseTimeMs int32 `json:"response_time_ms"`
+	AttemptID      string `json:"attempt_id"`
+	Remembered     bool   `json:"remembered"`
+	ResponseTimeMs int32  `json:"response_time_ms"`
 }
 
 // Review POST /api/v1/flashcards/:id/review
@@ -361,6 +362,15 @@ func (h *FlashcardHandler) Review(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
+	card, err := h.course.GetFlashcard(c.Request.Context(), &coursev1.GetFlashcardRequest{UserId: userID, FlashcardId: flashcardID})
+	if err != nil {
+		errors.HandleGRPCError(c, err)
+		return
+	}
+	if card.Flashcard == nil || card.Flashcard.ArchivedAt != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "flashcard not found"})
+		return
+	}
 	// Бинарная самооценка → SM-2 quality.
 	quality := int32(2)
 	if req.Remembered {
@@ -371,6 +381,7 @@ func (h *FlashcardHandler) Review(c *gin.Context) {
 		ItemType:       srsv1.ItemType_ITEM_TYPE_FLASHCARD,
 		ItemId:         flashcardID,
 		Quality:        quality,
+		AttemptId:      req.AttemptID,
 		ResponseTimeMs: req.ResponseTimeMs,
 	})
 	if err != nil {

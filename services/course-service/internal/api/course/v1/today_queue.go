@@ -35,7 +35,7 @@ func (a *api) UnpinFromToday(ctx context.Context, req *coursev1.UnpinFromTodayRe
 }
 
 // ListTodayQueue — карточки в очереди "сегодня" (или указанную дату).
-// include_srs — TODO (SM-2 проекция).
+// Schedule fields are populated from the read-only SRS projection.
 func (a *api) ListTodayQueue(ctx context.Context, req *coursev1.ListTodayQueueRequest) (*coursev1.ListTodayQueueResponse, error) {
 	if req.UserId == "" {
 		return nil, status.Error(codes.InvalidArgument, "user_id is required")

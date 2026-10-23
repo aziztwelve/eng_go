@@ -97,3 +97,26 @@ func TestVocabularyRejectsAnotherSessionsQueuedAnswer(t *testing.T) {
 		t.Fatal("another account's queued answer was accepted")
 	}
 }
+
+func TestLegacyActualAnswerIsCheckedByServer(t *testing.T) {
+	repo := newFakeVocabBankProgressRepo()
+	svc := newVocabBankSvc(&validatingVocabRepo{}, repo)
+	result, err := svc.RecordAttempt(context.Background(), model.VocabularyBankAttempt{UserID: "u1", ExternalID: "w1", Step: 5, IsCorrect: true, Score: 100, Answer: json.RawMessage(`{"value":"WRONG"}`)})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if result.CanAdvance || result.IsCorrect || repo.recorded[0].Score != 0 {
+		t.Fatal("trusted legacy client grade")
+	}
+}
+func TestLegacyScoreOnlyIsExposureNotVerifiedGrade(t *testing.T) {
+	repo := newFakeVocabBankProgressRepo()
+	svc := newVocabBankSvc(&validatingVocabRepo{}, repo)
+	result, err := svc.RecordAttempt(context.Background(), model.VocabularyBankAttempt{UserID: "u1", ExternalID: "w1", Step: 5, IsCorrect: true, Score: 100})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !result.CanAdvance || !result.IsCorrect || result.AssessmentMode != "practice" || repo.recorded[0].IsCorrect || repo.recorded[0].Score != 0 {
+		t.Fatal("old APK compatibility must not fabricate a grade")
+	}
+}

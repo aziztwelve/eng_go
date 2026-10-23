@@ -29,7 +29,11 @@ func (r *fakeVocabBankListRepo) List(_ context.Context, f repository.VocabularyB
 }
 
 func (r *fakeVocabBankListRepo) GetByExternalID(_ context.Context, _, _ string) (*model.VocabularyBankWordDetail, error) {
-	return &model.VocabularyBankWordDetail{}, nil
+	activities := make([]model.VocabularyBankActivity, 15)
+	for i := range activities {
+		activities[i] = model.VocabularyBankActivity{Step: i + 1, Type: "listen", Payload: []byte(`{}`)}
+	}
+	return &model.VocabularyBankWordDetail{Activities: activities}, nil
 }
 
 // fakeVocabBankProgressRepo — in-memory VocabularyBankProgressRepository.

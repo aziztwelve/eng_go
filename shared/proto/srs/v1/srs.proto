@@ -176,6 +176,7 @@ message RecordReviewRequest {
   int32 quality = 4;             // 0..5
   int32 response_time_ms = 5;
   bool used_hint = 6;
+  string attempt_id = 7; // optional retry key; old clients may omit it
 }
 
 message RecordReviewResponse {

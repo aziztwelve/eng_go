@@ -11,6 +11,7 @@ import (
 
 	srsv1 "github.com/elearning/shared/pkg/proto/srs/v1"
 	"github.com/elearning/srs-service/internal/converter"
+	"github.com/elearning/srs-service/internal/repository"
 	"github.com/elearning/srs-service/internal/service"
 )
 
@@ -60,6 +61,7 @@ func (a *api) RecordReview(ctx context.Context, req *srsv1.RecordReviewRequest) 
 		Quality:        req.Quality,
 		ResponseTimeMs: req.ResponseTimeMs,
 		UsedHint:       req.UsedHint,
+		AttemptID:      req.AttemptId,
 	})
 	if err != nil {
 		return nil, mapServiceError(err)
@@ -314,6 +316,8 @@ func (a *api) RunDailyDecay(ctx context.Context, req *srsv1.RunDailyDecayRequest
 
 func mapServiceError(err error) error {
 	switch {
+	case errors.Is(err, repository.ErrReviewConflict):
+		return status.Error(codes.InvalidArgument, err.Error())
 	case errors.Is(err, service.ErrInvalidArgument),
 		errors.Is(err, service.ErrInvalidItemType),
 		errors.Is(err, service.ErrInvalidQuality):

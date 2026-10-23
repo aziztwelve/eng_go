@@ -83,6 +83,9 @@ func TestVocabularyBankDatabase(t *testing.T) {
 	if _, err := repo.RecordAttempt(ctx, attempt(15, true, uuid.NewString())); err == nil {
 		t.Fatal("skipped steps accepted")
 	}
+	if _, err := repo.RecordAttempt(ctx, attempt(15, true, "")); err == nil {
+		t.Fatal("legacy client skipped unopened steps")
+	}
 	// Many identical retries must produce exactly one attempt and one transition.
 	first := attempt(1, true, uuid.NewString())
 	var wg sync.WaitGroup

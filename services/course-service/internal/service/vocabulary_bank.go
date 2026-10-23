@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/google/uuid"
 	"strings"
 
 	"github.com/elearning/course-service/internal/client/srs"
@@ -68,37 +69,63 @@ func (s *vocabularyBankService) RecordAttempt(ctx context.Context, attempt model
 			return nil, fmt.Errorf("invalid answer")
 		}
 	}
-	// Expand/contract compatibility: existing APKs submit only client scores.
-	// TODO remove legacy path after all supported APKs send validation_version=2.
+	// Keep old APKs on the same endpoint. Only the answer envelope differs;
+	// neither protocol is allowed to choose its own correctness or score.
 	if protocol.Version != 0 && protocol.Version != 2 {
 		return nil, fmt.Errorf("unsupported validation_version")
 	}
-	if protocol.Version == 2 {
-		if protocol.SessionUserID != attempt.UserID {
-			return nil, fmt.Errorf("answer belongs to another session")
+	if protocol.Version == 2 && protocol.SessionUserID != attempt.UserID {
+		return nil, fmt.Errorf("answer belongs to another session")
+	}
+	detail, err := s.repo.GetByExternalID(ctx, attempt.ExternalID, "en")
+	if err != nil {
+		return nil, err
+	}
+	var activity *model.VocabularyBankActivity
+	for i := range detail.Activities {
+		if detail.Activities[i].Step == attempt.Step {
+			activity = &detail.Activities[i]
+			break
 		}
-		detail, err := s.repo.GetByExternalID(ctx, attempt.ExternalID, "en")
-		if err != nil {
-			return nil, err
+	}
+	if activity == nil {
+		return nil, fmt.Errorf("activity not found")
+	}
+	raw := attempt.Answer
+	if protocol.Version == 0 {
+		var legacy struct {
+			Value     string `json:"value"`
+			Completed bool   `json:"completed"`
+			Answer    string `json:"answer"`
 		}
-		var activity *model.VocabularyBankActivity
-		for i := range detail.Activities {
-			if detail.Activities[i].Step == attempt.Step {
-				activity = &detail.Activities[i]
-				break
+		if len(raw) > 0 {
+			if err := json.Unmarshal(raw, &legacy); err != nil {
+				return nil, fmt.Errorf("invalid answer")
 			}
 		}
-		if activity == nil {
-			return nil, fmt.Errorf("activity not found")
+		if legacy.Value == "" {
+			legacy.Value = legacy.Answer
 		}
-		correct, score, mode, clientID, err = evaluateVocabularyAnswer(*activity, attempt.Answer)
+		if strings.TrimSpace(legacy.Value) == "" {
+			// Old score-only clients can acknowledge exposure, never a verified grade.
+			// Ordering is still enforced by the repository for every protocol.
+			correct, score, mode = attempt.IsCorrect || legacy.Completed, 0, "practice"
+		} else {
+			raw, _ = json.Marshal(map[string]any{"value": legacy.Value, "completed": true, "attempt_id": uuid.NewString()})
+			correct, score, mode, _, err = evaluateVocabularyAnswer(*activity, raw)
+			if err != nil {
+				return nil, err
+			}
+		}
+	} else {
+		correct, score, mode, clientID, err = evaluateVocabularyAnswer(*activity, raw)
 		if err != nil {
 			return nil, err
 		}
-		attempt.IsCorrect, attempt.Score, attempt.ClientAttemptID = correct && mode != "practice", score, clientID
-		// Pronunciation supplied by the caller is not a verified server assessment.
-		attempt.PronunciationScore = 0
 	}
+	attempt.IsCorrect, attempt.Score, attempt.ClientAttemptID = correct && mode != "practice", score, clientID
+	attempt.PronunciationScore = 0
+
 	attempt.AssessmentMode, attempt.CanAdvance = mode, correct
 	progress, err := s.progress.RecordAttempt(ctx, attempt)
 	if err != nil {
@@ -106,6 +133,11 @@ func (s *vocabularyBankService) RecordAttempt(ctx context.Context, attempt model
 	}
 	if !progress.Replayed {
 		progress.IsCorrect, progress.Score, progress.AssessmentMode = correct && mode != "practice", score, mode
+		// Preserve the old UI completion signal for score-only APKs. Persisted
+		// correctness remains false and assessment_mode explicitly says practice.
+		if protocol.Version == 0 && mode == "practice" {
+			progress.IsCorrect = correct
+		}
 		progress.CanAdvance = correct
 	}
 	if progress.JustCompleted {
