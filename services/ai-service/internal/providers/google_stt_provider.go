@@ -98,6 +98,18 @@ func (p *GoogleSTTProvider) Transcribe(ctx context.Context, audio []byte, opts S
 		return "", 0, fmt.Errorf("google stt: api key not configured")
 	}
 
+	// Google STT v1 cannot decode the AAC/M4A recordings produced by iOS.
+	// Convert their actual audio samples, rather than just changing the MIME label.
+	if needsSTTConversion(opts.MimeType) {
+		pcm, err := decodeSTTAudio(ctx, audio)
+		if err != nil {
+			return "", 0, fmt.Errorf("google stt: decode recording: %w", err)
+		}
+		audio = pcm
+		opts.Encoding = "LINEAR16"
+		opts.SampleRateHertz = 16000
+	}
+
 	var body googleSTTRequest
 	body.Config.LanguageCode = sttLanguageCode(opts.Language)
 	body.Config.Model = p.model
