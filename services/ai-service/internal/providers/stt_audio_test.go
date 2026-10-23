@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"encoding/base64"
+	"encoding/binary"
 	"encoding/json"
 	"io"
 	"net/http"
@@ -37,6 +38,12 @@ func TestGoogleSTTIOSRecording(t *testing.T) {
 		pcm, err := base64.StdEncoding.DecodeString(body.Audio.Content)
 		if err != nil || len(pcm) < 32000 || len(pcm) > 34000 || bytes.Equal(pcm, audio) {
 			t.Fatalf("expected approximately one second of mono PCM, got %d bytes: %v", len(pcm), err)
+		}
+		if string(pcm[:4]) != "RIFF" || string(pcm[8:12]) != "WAVE" ||
+			binary.LittleEndian.Uint32(pcm[40:44]) != uint32(len(pcm)-44) ||
+			binary.LittleEndian.Uint32(pcm[24:28]) != 16000 ||
+			binary.LittleEndian.Uint16(pcm[22:24]) != 1 {
+			t.Fatal("missing or inconsistent WAV metadata")
 		}
 		return &http.Response{StatusCode: 200, Body: io.NopCloser(strings.NewReader(`{"results":[{"alternatives":[{"transcript":"hello","confidence":0.9}]}]}`)), Header: make(http.Header)}, nil
 	})}

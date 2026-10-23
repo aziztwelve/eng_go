@@ -3,6 +3,7 @@ package providers
 import (
 	"bytes"
 	"context"
+	"encoding/binary"
 	"fmt"
 	"mime"
 	"os"
@@ -58,5 +59,23 @@ func decodeSTTAudio(ctx context.Context, audio []byte) ([]byte, error) {
 	if output.Len() == 0 {
 		return nil, fmt.Errorf("recording contains no audio samples")
 	}
-	return output.Bytes(), nil
+	// Give the recognizer an explicit WAV header, including the actual length.
+	// FFmpeg's pipe WAV output uses an unknown data size; construct the header
+	// after decoding so Google receives the same format as a finalized WAV file.
+	pcm := output.Bytes()
+	wav := make([]byte, 44+len(pcm))
+	copy(wav, "RIFF")
+	binary.LittleEndian.PutUint32(wav[4:8], uint32(36+len(pcm)))
+	copy(wav[8:], "WAVEfmt ")
+	binary.LittleEndian.PutUint32(wav[16:20], 16)
+	binary.LittleEndian.PutUint16(wav[20:22], 1) // PCM
+	binary.LittleEndian.PutUint16(wav[22:24], 1) // mono
+	binary.LittleEndian.PutUint32(wav[24:28], 16000)
+	binary.LittleEndian.PutUint32(wav[28:32], 32000)
+	binary.LittleEndian.PutUint16(wav[32:34], 2)
+	binary.LittleEndian.PutUint16(wav[34:36], 16)
+	copy(wav[36:], "data")
+	binary.LittleEndian.PutUint32(wav[40:44], uint32(len(pcm)))
+	copy(wav[44:], pcm)
+	return wav, nil
 }

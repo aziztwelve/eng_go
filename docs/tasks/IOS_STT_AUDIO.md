@@ -2,7 +2,7 @@
 
 Google Speech-to-Text v1 rejects Expo's iOS HIGH_QUALITY M4A/AAC input with `Invalid recognition 'config': bad encoding`. Historical gateway logs contained HTTP 500 responses for this format.
 
-`GoogleSTTProvider` now decodes audio/m4a, audio/x-m4a, audio/mp4, video/mp4 and AAC inputs to mono 16 kHz signed 16-bit little-endian PCM, then requests LINEAR16 recognition at 16000 Hz. Other formats, including Android 3GP/AMR, keep their existing path. Both pronunciation checks and voice transcription use this provider.
+`GoogleSTTProvider` now decodes audio/m4a, audio/x-m4a, audio/mp4, video/mp4 and AAC inputs to mono 16 kHz signed 16-bit little-endian PCM in a finalized WAV container, then requests LINEAR16 recognition at 16000 Hz. The WAV header includes the actual data length, sample rate and channel count. Other formats, including Android 3GP/AMR, keep their existing path. Both pronunciation checks and voice transcription use this provider.
 
 ## Runtime prerequisite
 
