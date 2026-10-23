@@ -25,4 +25,14 @@ go build ./...
 
 `internal/providers/testdata/ios-aac.m4a` is a synthetic one-second, 44.1 kHz stereo tone generated with FFmpeg, not a user's recording. Tests decode it and inspect the Google request's actual PCM bytes, encoding and sample rate. They also check temporary-file cleanup on success/failure, cancellation, and MIME routing for existing Android/web formats.
 
-For a deployment smoke test, synthesize a short English sentence, encode it as M4A/AAC, and send it to `/api/v1/ai/pronunciation/check`. Confirm HTTP 200 and a nonempty transcript. This checks the iPhone audio format end to end; recording on the physical iPhone is a separate device check.
+For a deployment smoke test, encode a known speech recording as M4A/AAC and send it to `/api/v1/ai/pronunciation/check`. Confirm HTTP 200 and a nonempty transcript. Do not use HTTP 200 alone as proof of recognition: silence or synthetic speech may produce an empty transcript.
+
+## Deployment verification, 2026-10-23
+
+- Installed FFmpeg on the server, deployed the provider changes, and restarted only ai-service.
+- Before deployment, synthetic M4A input reproduced HTTP 500 from the public pronunciation endpoint.
+- After deployment, the real recording supplied during phone diagnosis, re-encoded as 44.1 kHz stereo M4A/AAC, returned HTTP 200 with a nonempty transcript and a score of approximately 0.5867.
+- The original Android 3GP recording returned the same transcript and score through the unchanged AMR path.
+- Public API health returned `status: ok`. Full ai-service tests/build passed locally; full tests and a subsequent focused provider test passed on the server.
+
+This validates iPhone-format audio end to end through the public API. A new microphone capture on a physical iPhone was not performed. User recordings, tokens and diagnostic accounts' credentials are not included in repository fixtures.
