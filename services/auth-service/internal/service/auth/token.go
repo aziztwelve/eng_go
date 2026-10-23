@@ -2,6 +2,7 @@ package auth
 
 import (
 	"context"
+	"errors"
 	"time"
 
 	"github.com/golang-jwt/jwt/v5"
@@ -31,7 +32,7 @@ type refreshTokenClaims struct {
 func (s *service) ValidateToken(ctx context.Context, tokenString string) (string, string, bool, error) {
 	token, err := jwt.ParseWithClaims(tokenString, &accessTokenClaims{}, func(token *jwt.Token) (interface{}, error) {
 		return []byte(s.jwtSecret), nil
-	})
+	}, jwt.WithValidMethods([]string{"HS256"}), jwt.WithExpirationRequired())
 
 	if err != nil {
 		return "", "", false, model.ErrInvalidToken
@@ -43,11 +44,18 @@ func (s *service) ValidateToken(ctx context.Context, tokenString string) (string
 	}
 
 	// Проверяем срок действия
-	if claims.ExpiresAt.Before(time.Now()) {
+	if claims.ExpiresAt == nil || claims.ExpiresAt.Before(time.Now()) {
 		return "", "", false, model.ErrTokenExpired
 	}
 
-	return claims.UserID, claims.Role, claims.IsGuest, nil
+	user, err := s.authRepository.GetByID(ctx, claims.UserID)
+	if errors.Is(err, model.ErrUserNotFound) {
+		return "", "", false, model.ErrInvalidToken
+	}
+	if err != nil {
+		return "", "", false, err
+	}
+	return user.ID, user.Role, user.IsGuest, nil
 }
 
 func (s *service) RefreshToken(ctx context.Context, refreshTokenString string) (model.TokenPair, error) {
