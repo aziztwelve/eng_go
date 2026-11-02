@@ -212,6 +212,13 @@ func (s *Service) SendMessage(ctx context.Context, in SendMessageInput) (*model.
 	// Парсим JSON-ответ.
 	reply, translation, corrections := parseConversationReply(chatResp.Content)
 
+	// Same rule as the streaming path: a blank model answer must not be saved
+	// as an assistant message (it would show up as an empty bubble and poison
+	// the history sent to the model on the next turn).
+	if strings.TrimSpace(reply) == "" {
+		return nil, nil, fmt.Errorf("%w: empty reply", ErrProviderFailed)
+	}
+
 	assistantMsg := &model.Message{
 		ConversationID: conv.ID,
 		Role:           model.RoleAssistant,

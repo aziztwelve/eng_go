@@ -169,6 +169,37 @@ func TestSendMessage_QuotaExceeded(t *testing.T) {
 	}
 }
 
+func TestSendMessage_EmptyProviderReply_NotSaved(t *testing.T) {
+	for name, content := range map[string]string{
+		"empty content":    "",
+		"blank content":    "   \n",
+		"json blank reply": `{"reply":"  ","translation":"","corrections":[]}`,
+	} {
+		t.Run(name, func(t *testing.T) {
+			h := newHarness()
+			conv, _, err := h.svc.StartConversation(context.Background(), StartConversationInput{
+				UserID: "u1", Scenario: "free_chat",
+			})
+			if err != nil {
+				t.Fatalf("start: %v", err)
+			}
+			h.provider.chat = func(_ []providers.PromptMessage, _ providers.ChatOptions) (*providers.ChatResponse, error) {
+				return &providers.ChatResponse{Content: content}, nil
+			}
+
+			_, assistant, err := h.svc.SendMessage(context.Background(), SendMessageInput{
+				UserID: "u1", ConversationID: conv.ID, Content: "hello",
+			})
+			if !errors.Is(err, ErrProviderFailed) {
+				t.Fatalf("expected ErrProviderFailed, got %v", err)
+			}
+			if assistant != nil {
+				t.Errorf("assistant message must not be returned, got %+v", assistant)
+			}
+		})
+	}
+}
+
 func TestSendMessage_ForbiddenForOtherUser(t *testing.T) {
 	h := newHarness()
 	conv, _, _ := h.svc.StartConversation(context.Background(), StartConversationInput{
