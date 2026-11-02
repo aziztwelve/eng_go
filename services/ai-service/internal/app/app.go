@@ -109,7 +109,13 @@ func New(ctx context.Context) (*App, error) {
 	// GOOGLE_TTS_API_KEY, on-demand озвучка (флешкарты) идёт через него и
 	// возвращает mp3-байты в ответе, минуя MinIO. Чат остаётся на provider.
 	var ttsSynth providers.TTSSynthesizer
-	if cfg.GoogleTTSAPIKey != "" {
+	switch {
+	case cfg.TTSProvider == "openai" && cfg.OpenAIAPIKey != "":
+		// AI_TTS_PROVIDER=openai: inline mp3 from OpenAI /audio/speech (no
+		// storage hop), model = AI_TTS_MODEL, default voice = AI_TTS_VOICE.
+		ttsSynth = providers.NewOpenAITTSProvider(cfg.OpenAIAPIKey, cfg.OpenAIBaseURL, cfg.TTSModel, cfg.TTSVoice)
+		logger.Info(ctx, "✅ OpenAI TTS synthesizer initialized", zap.String("name", ttsSynth.Name()), zap.String("model", cfg.TTSModel))
+	case cfg.GoogleTTSAPIKey != "":
 		ttsSynth = providers.NewGoogleTTSProvider(cfg.GoogleTTSAPIKey, cfg.GoogleTTSVoice)
 		logger.Info(ctx, "✅ Google TTS synthesizer initialized", zap.String("name", ttsSynth.Name()))
 	}
@@ -117,7 +123,13 @@ func New(ctx context.Context) (*App, error) {
 	// Optional STT (Google Speech-to-Text) — голосовой ввод в чат. Тот же
 	// Google API-ключ (должен быть разрешён и для Speech-to-Text API).
 	var sttTranscriber providers.STTTranscriber
-	if cfg.GoogleSTTAPIKey != "" {
+	switch {
+	case cfg.STTProvider == "openai":
+		// AI_STT_PROVIDER=openai: voice input goes through the AI provider
+		// (Whisper / gpt-4o-transcribe, model = AI_WHISPER_MODEL).
+		sttTranscriber = providers.NewProviderSTT(provider)
+		logger.Info(ctx, "✅ OpenAI STT transcriber initialized", zap.String("name", sttTranscriber.Name()), zap.String("model", cfg.WhisperModel))
+	case cfg.GoogleSTTAPIKey != "":
 		sttTranscriber = providers.NewGoogleSTTProvider(cfg.GoogleSTTAPIKey, cfg.GoogleSTTModel)
 		logger.Info(ctx, "✅ Google STT transcriber initialized", zap.String("name", sttTranscriber.Name()))
 	}

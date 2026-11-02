@@ -6,6 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"strconv"
+	"strings"
 
 	"github.com/joho/godotenv"
 )
@@ -60,6 +61,13 @@ type Config struct {
 	// API, а сам API — включён в проекте).
 	GoogleSTTAPIKey string
 	GoogleSTTModel  string // напр. "latest_short" | "default"
+	// STTProvider — кто распознаёт голос в чате: "google" (по умолчанию) или
+	// "openai" (Whisper / gpt-4o-transcribe через provider; модель — WhisperModel).
+	STTProvider string
+	// TTSProvider — кто озвучивает on-demand (чат, флешкарты): "google" (по умолчанию,
+	// если задан GOOGLE_TTS_API_KEY) или "openai" (inline mp3 через /audio/speech,
+	// модель — TTSModel, голос — TTSVoice, ключ и base URL — как у чата).
+	TTSProvider string
 
 	// Audio storage. Если AudioStorage="minio" — используется реальный
 	// MinIO/S3 uploader. Иначе — NoopAudioUploader (placeholder URLs).
@@ -186,6 +194,8 @@ func Get() *Config {
 		// STT key по умолчанию = TTS key (один Google API-ключ на оба API).
 		GoogleSTTAPIKey: getEnv("GOOGLE_STT_API_KEY", getEnv("GOOGLE_TTS_API_KEY", "")),
 		GoogleSTTModel:  getEnv("GOOGLE_STT_MODEL", "latest_short"),
+		STTProvider:     strings.ToLower(getEnv("AI_STT_PROVIDER", "google")),
+		TTSProvider:     strings.ToLower(getEnv("AI_TTS_PROVIDER", "google")),
 
 		AudioStorage:         getEnv("AI_AUDIO_STORAGE", "noop"),
 		MinIOEndpoint:        getEnv("AI_MINIO_ENDPOINT", ""),
