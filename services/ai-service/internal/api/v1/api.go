@@ -78,10 +78,11 @@ func (a *api) SendMessage(ctx context.Context, req *aiv1.SendMessageRequest) (*a
 func (a *api) SendMessageStream(req *aiv1.SendMessageRequest, stream aiv1.AIService_SendMessageStreamServer) error {
 	ctx := stream.Context()
 	events, err := a.svc.SendMessageStream(ctx, service.SendMessageInput{
-		UserID:         req.GetUserId(),
-		ConversationID: req.GetConversationId(),
-		Content:        req.GetContent(),
-		WantAudio:      req.GetWantAudio(),
+		UserID:               req.GetUserId(),
+		ConversationID:       req.GetConversationId(),
+		Content:              req.GetContent(),
+		WantAudio:            req.GetWantAudio(),
+		IncludeAvatarEmotion: req.GetIncludeAvatarEmotion(),
 	})
 	if err != nil {
 		return mapServiceError(err)
@@ -107,6 +108,11 @@ func (a *api) SendMessageStream(req *aiv1.SendMessageRequest, stream aiv1.AIServ
 			if err := stream.Send(&aiv1.SendMessageStreamChunk{
 				Kind: &aiv1.SendMessageStreamChunk_UserMessage{UserMessage: userMsgProto},
 			}); err != nil {
+				return err
+			}
+
+		case ev.AvatarEmotion != "":
+			if err := stream.Send(&aiv1.SendMessageStreamChunk{Kind: &aiv1.SendMessageStreamChunk_AvatarEmotion{AvatarEmotion: ev.AvatarEmotion}}); err != nil {
 				return err
 			}
 
@@ -358,11 +364,11 @@ func (a *api) CheckPronunciation(ctx context.Context, req *aiv1.CheckPronunciati
 		return nil, mapServiceError(err)
 	}
 	out := &aiv1.CheckPronunciationResponse{
-		AttemptId:        attempt.ID,
-		TranscribedText:  attempt.TranscribedText,
-		AccuracyScore:    attempt.AccuracyScore,
-		Feedback:         attempt.Feedback,
-		AudioUrl:         attempt.AudioURL,
+		AttemptId:       attempt.ID,
+		TranscribedText: attempt.TranscribedText,
+		AccuracyScore:   attempt.AccuracyScore,
+		Feedback:        attempt.Feedback,
+		AudioUrl:        attempt.AudioURL,
 	}
 	for _, w := range attempt.WordScores {
 		out.WordScores = append(out.WordScores, converter.ToWordScoreProto(w))

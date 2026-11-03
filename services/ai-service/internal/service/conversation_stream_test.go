@@ -169,3 +169,39 @@ func TestSendMessageStream_InvalidInputs(t *testing.T) {
 		t.Errorf("expected ErrNotFound for unknown conversation, got %v", err)
 	}
 }
+
+func TestSendMessageStream_OptInEmotionIsMetadata(t *testing.T) {
+	h := newHarness()
+	ctx := context.Background()
+	h.provider.chat = func(messages []providers.PromptMessage, _ providers.ChatOptions) (*providers.ChatResponse, error) {
+		if !strings.Contains(messages[0].Content, "[[emotion:neutral]]") {
+			t.Error("missing opted-in prompt")
+		}
+		return &providers.ChatResponse{Content: "[[emotion:happy]] Great job!", TokensUsed: 8}, nil
+	}
+	conv, _, err := h.svc.StartConversation(ctx, StartConversationInput{UserID: "u1", Scenario: model.ScenarioFreeChat})
+	if err != nil {
+		t.Fatal(err)
+	}
+	events, err := h.svc.SendMessageStream(ctx, SendMessageInput{UserID: "u1", ConversationID: conv.ID, Content: "Hi", IncludeAvatarEmotion: true})
+	if err != nil {
+		t.Fatal(err)
+	}
+	var emotion, deltas string
+	var saved *model.Message
+	for ev := range events {
+		if ev.Err != nil {
+			t.Fatal(ev.Err)
+		}
+		if ev.AvatarEmotion != "" {
+			emotion = ev.AvatarEmotion
+		}
+		deltas += ev.Delta
+		if ev.AssistantMessage != nil {
+			saved = ev.AssistantMessage
+		}
+	}
+	if emotion != "happy" || strings.TrimSpace(deltas) != "Great job!" || saved == nil || saved.Content != deltas {
+		t.Fatalf("emotion=%q deltas=%q saved=%+v", emotion, deltas, saved)
+	}
+}

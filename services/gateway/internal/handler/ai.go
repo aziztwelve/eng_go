@@ -78,8 +78,9 @@ func (h *AIHandler) StartConversation(c *gin.Context) {
 
 // sendMessageRequest — POST /api/v1/ai/conversations/:id/messages.
 type sendMessageRequest struct {
-	Content   string `json:"content"    binding:"required"`
-	WantAudio bool   `json:"want_audio"`
+	Content              string `json:"content"    binding:"required"`
+	WantAudio            bool   `json:"want_audio"`
+	IncludeAvatarEmotion bool   `json:"include_avatar_emotion"`
 }
 
 func (h *AIHandler) SendMessage(c *gin.Context) {
@@ -154,10 +155,11 @@ func (h *AIHandler) SendMessageStream(c *gin.Context) {
 	defer grpcCancel()
 
 	stream, err := h.ai.SendMessageStream(grpcCtx, &aiv1.SendMessageRequest{
-		UserId:         userID,
-		ConversationId: convID,
-		Content:        req.Content,
-		WantAudio:      req.WantAudio,
+		UserId:               userID,
+		ConversationId:       convID,
+		Content:              req.Content,
+		WantAudio:            req.WantAudio,
+		IncludeAvatarEmotion: req.IncludeAvatarEmotion,
 	})
 	if err != nil {
 		errors.HandleGRPCError(c, err)
@@ -206,6 +208,9 @@ func (h *AIHandler) SendMessageStream(c *gin.Context) {
 		case *aiv1.SendMessageStreamChunk_Delta:
 			payload, _ := json.Marshal(gin.H{"delta": k.Delta})
 			writeErr = bp.writeSSE("delta", payload)
+		case *aiv1.SendMessageStreamChunk_AvatarEmotion:
+			payload, _ := json.Marshal(gin.H{"emotion": k.AvatarEmotion})
+			writeErr = bp.writeSSE("avatar_emotion", payload)
 		case *aiv1.SendMessageStreamChunk_Done:
 			payload, _ := marshal.Marshal(k.Done)
 			_ = bp.writeSSE("done", payload)

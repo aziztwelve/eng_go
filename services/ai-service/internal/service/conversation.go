@@ -106,10 +106,11 @@ func (s *Service) StartConversation(ctx context.Context, in StartConversationInp
 
 // SendMessageInput — параметры отправки сообщения.
 type SendMessageInput struct {
-	UserID         string
-	ConversationID string
-	Content        string
-	WantAudio      bool
+	UserID               string
+	ConversationID       string
+	Content              string
+	WantAudio            bool
+	IncludeAvatarEmotion bool
 }
 
 // SendMessage — пишет user-message, генерит assistant reply через provider,

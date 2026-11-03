@@ -21,13 +21,14 @@ const streamEmulationChunkSize = 6
 // StreamEvent — типизированное событие потока ответов SendMessageStream.
 //
 // Контракт упорядочивания:
-//   1. Ровно один UserMessage event (первым).
-//   2. Ноль или больше Delta event'ов.
-//   3. Ровно один из: AssistantMessage event (success) или Err event (failure).
-//   После terminal-event канал закрывается.
+//  1. Ровно один UserMessage event (первым).
+//  2. Ноль или больше Delta event'ов.
+//  3. Ровно один из: AssistantMessage event (success) или Err event (failure).
+//     После terminal-event канал закрывается.
 type StreamEvent struct {
 	UserMessage      *model.Message
 	Delta            string
+	AvatarEmotion    string
 	AssistantMessage *model.Message
 	Err              error
 }
@@ -40,7 +41,7 @@ type StreamEvent struct {
 //   - user-message сохраняется до первого emit'а; первый event — копия
 //     этого сообщения для UI echo.
 //   - провайдер вызывается через ChatStream если умеет; иначе — Chat()
-//     + EmulateStream (типрайтер-эффект).
+//   - EmulateStream (типрайтер-эффект).
 //   - в streaming-режиме prompt НЕ требует JSON-output; reply = чистый
 //     text. Translation/corrections в этом режиме не возвращаются —
 //     для полного формата клиент использует обычный SendMessage.
@@ -107,6 +108,12 @@ func (s *Service) SendMessageStream(ctx context.Context, in SendMessageInput) (<
 		ScenarioCtx:    scenarioCtx,
 		VocabFocus:     vocabFocus,
 	})
+	// In streaming mode the reply is plain text, so the "Response format
+	// (JSON only…)" block of the shared prompt must go: it makes the model
+	// answer with {"reply": …} and the raw JSON reaches the user.
+	if i := strings.Index(systemPrompt, "\nResponse format (JSON only"); i >= 0 {
+		systemPrompt = systemPrompt[:i]
+	}
 	// A/B (Phase 5.X): chat_prompt → дописать суффикс в system-prompt.
 	if suffix := s.chatPromptSuffixFor(in.UserID); suffix != "" {
 		systemPrompt += "\n\n" + suffix
@@ -114,6 +121,12 @@ func (s *Service) SendMessageStream(ctx context.Context, in SendMessageInput) (<
 	// В streaming-режиме просим plain text reply (без JSON-обвязки):
 	// streaming JSON неудобно парсить пo-чанково.
 	systemPrompt += "\n\nIMPORTANT: respond with plain text reply only, no JSON wrapping."
+	// The reply is spoken sentence by sentence: a very short first sentence
+	// lets the audio start sooner.
+	systemPrompt += " Start with a very short first sentence (3-6 words), then continue naturally."
+	if in.IncludeAvatarEmotion {
+		systemPrompt += " Begin the response with exactly one private tag: [[emotion:neutral]], [[emotion:happy]], or [[emotion:thinking]]. Choose the emotion that best matches the meaning and tone of your response. Then write the spoken response. Do not mention the tag."
+	}
 
 	promptMessages := []providers.PromptMessage{
 		{Role: "system", Content: systemPrompt},
@@ -126,7 +139,7 @@ func (s *Service) SendMessageStream(ctx context.Context, in SendMessageInput) (<
 	}
 
 	out := make(chan StreamEvent, 32)
-	go s.runStream(ctx, conv, userMsg, promptMessages, in.UserID, out)
+	go s.runStream(ctx, conv, userMsg, promptMessages, in.UserID, in.IncludeAvatarEmotion, out)
 	return out, nil
 }
 
@@ -142,6 +155,7 @@ func (s *Service) runStream(
 	userMsg *model.Message,
 	promptMessages []providers.PromptMessage,
 	userID string,
+	includeAvatarEmotion bool,
 	out chan<- StreamEvent,
 ) {
 	defer close(out)
@@ -165,7 +179,29 @@ func (s *Service) runStream(
 		replyBuilder strings.Builder
 		tokensUsed   int32
 		costUSD      float64
+		prefix       emotionPrefix
 	)
+	if !includeAvatarEmotion {
+		prefix.decided = true
+	}
+	emit := func(emotion, text string) bool {
+		if emotion != "" {
+			select {
+			case out <- StreamEvent{AvatarEmotion: emotion}:
+			case <-ctx.Done():
+				return false
+			}
+		}
+		if text != "" {
+			replyBuilder.WriteString(text)
+			select {
+			case out <- StreamEvent{Delta: text}:
+			case <-ctx.Done():
+				return false
+			}
+		}
+		return true
+	}
 
 	for chunk := range stream {
 		if chunk.Err != nil {
@@ -180,13 +216,15 @@ func (s *Service) runStream(
 		if chunk.Delta == "" {
 			continue
 		}
-		replyBuilder.WriteString(chunk.Delta)
-		select {
-		case out <- StreamEvent{Delta: chunk.Delta}:
-		case <-ctx.Done():
-			out <- StreamEvent{Err: ctx.Err()}
+		emotion, text := prefix.feed(chunk.Delta, false)
+		if !emit(emotion, text) {
 			return
 		}
+	}
+
+	emotion, tail := prefix.feed("", true)
+	if !emit(emotion, tail) {
+		return
 	}
 
 	// При native-streaming провайдер обычно НЕ даёт точный token count; если

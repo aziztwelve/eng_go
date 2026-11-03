@@ -285,6 +285,7 @@ message SendMessageRequest {
   string conversation_id = 2;
   string content = 3;
   bool want_audio = 4;            // если true — assistant-reply будет с audio_url
+  bool include_avatar_emotion = 5; // optional Free Talk metadata; plain text remains unchanged
 }
 
 message SendMessageResponse {
@@ -310,6 +311,8 @@ message SendMessageStreamChunk {
     // error_message — fatal error mid-stream (например, provider failure
     // после старта), stream закрывается без done.
     string error_message = 4;
+    // Optional, sent only to clients requesting avatar emotion.
+    string avatar_emotion = 5;
   }
 }
 
