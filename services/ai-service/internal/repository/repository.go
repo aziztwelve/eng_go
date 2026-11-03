@@ -99,3 +99,9 @@ type QuotaRepository interface {
 	// для cleanup старых счётчиков (по умолчанию >90 дней).
 	DeleteOlderThan(ctx context.Context, before time.Time) (int64, error)
 }
+
+// FreeTalkSessionRepository persists one short free session per day.
+type FreeTalkSessionRepository interface {
+	Reserve(context.Context, string, string) (string, time.Time, error)
+	Active(context.Context, string, string) (bool, error)
+}

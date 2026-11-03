@@ -56,6 +56,10 @@ func (c *AIClient) SendMessageStream(ctx context.Context, req *aiv1.SendMessageR
 	return c.client.SendMessageStream(ctx, req)
 }
 
+func (c *AIClient) ReserveFreeTalk(ctx context.Context, req *aiv1.ReserveFreeTalkRequest) (*aiv1.ReserveFreeTalkResponse, error) {
+	return c.client.ReserveFreeTalk(ctx, req)
+}
+
 func (c *AIClient) ListConversations(ctx context.Context, req *aiv1.ListConversationsRequest) (*aiv1.ListConversationsResponse, error) {
 	return c.client.ListConversations(ctx, req)
 }

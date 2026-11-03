@@ -69,6 +69,11 @@ func (s *Service) SendMessageStream(ctx context.Context, in SendMessageInput) (<
 		return nil, fmt.Errorf("%w: conversation ended", ErrInvalidArgument)
 	}
 
+	if in.FreeTalkSession {
+		if err := s.CheckFreeTalk(ctx, in.UserID, in.ConversationID); err != nil {
+			return nil, err
+		}
+	}
 	if err := s.CheckQuota(ctx, in.UserID, model.QuotaKindChat, 1); err != nil {
 		return nil, err
 	}

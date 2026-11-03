@@ -111,6 +111,7 @@ type SendMessageInput struct {
 	Content              string
 	WantAudio            bool
 	IncludeAvatarEmotion bool
+	FreeTalkSession      bool
 }
 
 // SendMessage — пишет user-message, генерит assistant reply через provider,

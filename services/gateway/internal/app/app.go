@@ -350,6 +350,7 @@ func (a *App) initRouter(ctx context.Context) error {
 					ai.POST("/conversations/:id/messages", ah.SendMessage)
 					// Phase 5.27: SSE streaming для chat UX (typewriter эффект).
 					ai.POST("/conversations/:id/stream", ah.SendMessageStream)
+					ai.POST("/conversations/:id/free-talk-session", ah.ReserveFreeTalk)
 					ai.GET("/scenarios", ah.ListScenarios)
 
 					// Single-shot endpoints.

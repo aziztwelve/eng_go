@@ -45,13 +45,14 @@ type Service struct {
 	abExposures    repository.ABExposureRepository
 	user           user.Client
 
-	conversations repository.ConversationRepository
-	messages      repository.MessageRepository
-	explanations  repository.ExplanationRepository
-	writing       repository.WritingRepository
-	pronunciation repository.PronunciationRepository
-	quotas        repository.QuotaRepository
-	feedback      repository.FeedbackRepository
+	conversations    repository.ConversationRepository
+	messages         repository.MessageRepository
+	explanations     repository.ExplanationRepository
+	writing          repository.WritingRepository
+	pronunciation    repository.PronunciationRepository
+	quotas           repository.QuotaRepository
+	feedback         repository.FeedbackRepository
+	freeTalkSessions repository.FreeTalkSessionRepository
 }
 
 // Deps — все зависимости для сборки Service.
@@ -84,12 +85,13 @@ type Deps struct {
 	ABExposures repository.ABExposureRepository
 	User        user.Client
 
-	Conversations repository.ConversationRepository
-	Messages      repository.MessageRepository
-	Explanations  repository.ExplanationRepository
-	Writing       repository.WritingRepository
-	Pronunciation repository.PronunciationRepository
-	Quotas        repository.QuotaRepository
+	Conversations    repository.ConversationRepository
+	Messages         repository.MessageRepository
+	Explanations     repository.ExplanationRepository
+	Writing          repository.WritingRepository
+	Pronunciation    repository.PronunciationRepository
+	Quotas           repository.QuotaRepository
+	FreeTalkSessions repository.FreeTalkSessionRepository
 	// Feedback — Phase 5.X: thumbs up/down оценки assistant-сообщений.
 	// Опционален: если nil — Submit/Delete/Get вернут InvalidArgument /
 	// NotFound, остальные фичи работают как раньше.
@@ -117,23 +119,24 @@ func New(cfg Config, d Deps) *Service {
 		abReg = abtest.EmptyRegistry()
 	}
 	return &Service{
-		cfg:            cfg,
-		provider:       d.Provider,
-		moderator:      mod,
-		ttsSynth:       d.TTSSynth,
-		audioUploader:  d.AudioUploader,
-		sttTranscriber: d.STTTranscriber,
-		sanitize:       san,
-		pii:            d.PIIOpts,
-		abtests:        abReg,
-		abExposures:    d.ABExposures,
-		user:           d.User,
-		conversations:  d.Conversations,
-		messages:       d.Messages,
-		explanations:   d.Explanations,
-		writing:        d.Writing,
-		pronunciation:  d.Pronunciation,
-		quotas:         d.Quotas,
-		feedback:       d.Feedback,
+		cfg:              cfg,
+		provider:         d.Provider,
+		moderator:        mod,
+		ttsSynth:         d.TTSSynth,
+		audioUploader:    d.AudioUploader,
+		sttTranscriber:   d.STTTranscriber,
+		sanitize:         san,
+		pii:              d.PIIOpts,
+		abtests:          abReg,
+		abExposures:      d.ABExposures,
+		user:             d.User,
+		conversations:    d.Conversations,
+		messages:         d.Messages,
+		explanations:     d.Explanations,
+		writing:          d.Writing,
+		pronunciation:    d.Pronunciation,
+		quotas:           d.Quotas,
+		freeTalkSessions: d.FreeTalkSessions,
+		feedback:         d.Feedback,
 	}
 }

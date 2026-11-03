@@ -4,6 +4,7 @@ package v1
 import (
 	"context"
 	"errors"
+	"time"
 
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -83,6 +84,7 @@ func (a *api) SendMessageStream(req *aiv1.SendMessageRequest, stream aiv1.AIServ
 		Content:              req.GetContent(),
 		WantAudio:            req.GetWantAudio(),
 		IncludeAvatarEmotion: req.GetIncludeAvatarEmotion(),
+		FreeTalkSession:      req.GetFreeTalkSession(),
 	})
 	if err != nil {
 		return mapServiceError(err)
@@ -136,6 +138,18 @@ func (a *api) SendMessageStream(req *aiv1.SendMessageRequest, stream aiv1.AIServ
 		}
 	}
 	return nil
+}
+
+func (a *api) ReserveFreeTalk(ctx context.Context, req *aiv1.ReserveFreeTalkRequest) (*aiv1.ReserveFreeTalkResponse, error) {
+	session, err := a.svc.ReserveFreeTalk(ctx, req.GetUserId(), req.GetConversationId())
+	if err != nil {
+		return nil, mapServiceError(err)
+	}
+	out := &aiv1.ReserveFreeTalkResponse{Allowed: session.Allowed, Unlimited: session.Unlimited, ResetsAtMs: session.ResetsAt.UnixMilli(), ServerNowMs: time.Now().UnixMilli()}
+	if !session.ExpiresAt.IsZero() {
+		out.ExpiresAtMs = session.ExpiresAt.UnixMilli()
+	}
+	return out, nil
 }
 
 func (a *api) ListConversations(ctx context.Context, req *aiv1.ListConversationsRequest) (*aiv1.ListConversationsResponse, error) {

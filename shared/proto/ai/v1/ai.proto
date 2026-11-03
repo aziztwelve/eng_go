@@ -44,6 +44,7 @@ service AIService {
   // Для streaming-режима translation/corrections не возвращаются (plain
   // text reply); за полным форматом — обычный SendMessage.
   rpc SendMessageStream(SendMessageRequest) returns (stream SendMessageStreamChunk);
+  rpc ReserveFreeTalk(ReserveFreeTalkRequest) returns (ReserveFreeTalkResponse);
 
   // ListConversations — конверсации текущего юзера, отсортированы
   // по started_at DESC. Без сообщений (lightweight).
@@ -286,7 +287,11 @@ message SendMessageRequest {
   string content = 3;
   bool want_audio = 4;            // если true — assistant-reply будет с audio_url
   bool include_avatar_emotion = 5; // optional Free Talk metadata; plain text remains unchanged
+  bool free_talk_session = 6; // enforce an explicitly started Free Talk session
 }
+
+message ReserveFreeTalkRequest { string user_id = 1; string conversation_id = 2; }
+message ReserveFreeTalkResponse { bool allowed = 1; bool unlimited = 2; int64 expires_at_ms = 3; int64 resets_at_ms = 4; int64 server_now_ms = 5; }
 
 message SendMessageResponse {
   Message user_message = 1;

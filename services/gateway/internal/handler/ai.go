@@ -81,6 +81,20 @@ type sendMessageRequest struct {
 	Content              string `json:"content"    binding:"required"`
 	WantAudio            bool   `json:"want_audio"`
 	IncludeAvatarEmotion bool   `json:"include_avatar_emotion"`
+	FreeTalkSession      bool   `json:"free_talk_session"`
+}
+
+func (h *AIHandler) ReserveFreeTalk(c *gin.Context) {
+	userID, ok := getUserID(c)
+	if !ok {
+		return
+	}
+	resp, err := h.ai.ReserveFreeTalk(c.Request.Context(), &aiv1.ReserveFreeTalkRequest{UserId: userID, ConversationId: c.Param("id")})
+	if err != nil {
+		errors.HandleGRPCError(c, err)
+		return
+	}
+	c.JSON(http.StatusOK, resp)
 }
 
 func (h *AIHandler) SendMessage(c *gin.Context) {
@@ -160,6 +174,7 @@ func (h *AIHandler) SendMessageStream(c *gin.Context) {
 		Content:              req.Content,
 		WantAudio:            req.WantAudio,
 		IncludeAvatarEmotion: req.IncludeAvatarEmotion,
+		FreeTalkSession:      req.FreeTalkSession,
 	})
 	if err != nil {
 		errors.HandleGRPCError(c, err)
