@@ -93,7 +93,7 @@ func (s *ExpoPushSender) Send(ctx context.Context, dev *model.DeviceToken, msg M
 	}
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("Accept", "application/json")
-	req.Header.Set("Accept-Encoding", "gzip, deflate")
+	// Let Go's transport negotiate and transparently decode gzip responses.
 
 	resp, err := s.httpClient.Do(req)
 	if err != nil {

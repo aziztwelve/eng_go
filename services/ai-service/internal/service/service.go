@@ -12,9 +12,10 @@ type Config struct {
 	DefaultModelChat  string
 	DefaultModelHeavy string
 
-	FreeChatLimit         int32
-	FreeVoiceMinutesLimit float64
-	FreeWritingLimit      int32
+	FreeChatLimit            int32
+	FreeVoiceMinutesLimit    float64
+	FreeWritingLimit         int32
+	FreeTalkUnlimitedUserIDs string
 
 	PremiumChatLimit         int32
 	PremiumVoiceMinutesLimit float64

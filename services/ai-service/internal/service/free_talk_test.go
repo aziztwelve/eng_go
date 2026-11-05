@@ -74,3 +74,26 @@ func TestFreeTalk_PremiumDoesNotReserveFreeSession(t *testing.T) {
 		t.Fatalf("premium: %+v %v", got, err)
 	}
 }
+
+func TestFreeTalk_AccountExceptionDoesNotAffectOthers(t *testing.T) {
+	ctx := context.Background()
+	h := newHarness()
+	h.svc.cfg.FreeTalkUnlimitedUserIDs = "  u1 , u3 "
+	h.svc.freeTalkSessions = &memoryFreeTalk{}
+	_ = h.convs.Create(ctx, &model.Conversation{ID: "one", UserID: "u1", Scenario: model.ScenarioFreeChat})
+	_ = h.convs.Create(ctx, &model.Conversation{ID: "two", UserID: "u2", Scenario: model.ScenarioFreeChat})
+	got, err := h.svc.ReserveFreeTalk(ctx, "u1", "one")
+	if err != nil || !got.Allowed || !got.Unlimited {
+		t.Fatalf("exception: %+v %v", got, err)
+	}
+	if err := h.svc.CheckFreeTalk(ctx, "u1", "one"); err != nil {
+		t.Fatal(err)
+	}
+	if err := h.svc.CheckFreeTalk(ctx, "u2", "one"); !errors.Is(err, ErrForbidden) {
+		t.Fatalf("ownership: %v", err)
+	}
+	got, err = h.svc.ReserveFreeTalk(ctx, "u2", "two")
+	if err != nil || !got.Allowed || got.Unlimited {
+		t.Fatalf("other account: %+v %v", got, err)
+	}
+}

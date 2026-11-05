@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"strings"
 	"time"
 
 	"github.com/elearning/ai-service/internal/model"
@@ -13,6 +14,18 @@ import (
 type FreeTalkSession struct {
 	Allowed, Unlimited  bool
 	ExpiresAt, ResetsAt time.Time
+}
+
+func (s *Service) unlimitedFreeTalk(userID string) bool {
+	if userID == "" {
+		return false
+	}
+	for _, id := range strings.Split(s.cfg.FreeTalkUnlimitedUserIDs, ",") {
+		if strings.TrimSpace(id) == userID {
+			return true
+		}
+	}
+	return false
 }
 
 func (s *Service) freeTalkConversation(ctx context.Context, userID, conversationID string) error {
@@ -39,7 +52,7 @@ func (s *Service) ReserveFreeTalk(ctx context.Context, userID, conversationID st
 		return nil, err
 	}
 	limits := s.limitsFor(ctx, userID)
-	if limits.Plan == model.PlanPremium {
+	if limits.Plan == model.PlanPremium || s.unlimitedFreeTalk(userID) {
 		return &FreeTalkSession{Allowed: true, Unlimited: true, ResetsAt: limits.ResetsAt}, nil
 	}
 	if s.freeTalkSessions == nil {
@@ -55,7 +68,7 @@ func (s *Service) CheckFreeTalk(ctx context.Context, userID, conversationID stri
 	if err := s.freeTalkConversation(ctx, userID, conversationID); err != nil {
 		return err
 	}
-	if s.limitsFor(ctx, userID).Plan == model.PlanPremium {
+	if s.limitsFor(ctx, userID).Plan == model.PlanPremium || s.unlimitedFreeTalk(userID) {
 		return nil
 	}
 	if s.freeTalkSessions == nil {

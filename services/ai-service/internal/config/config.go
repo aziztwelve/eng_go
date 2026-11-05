@@ -101,9 +101,10 @@ type Config struct {
 	QuotaRetentionDays int    // Default 90. <=0 → no-op.
 
 	// Quota free-плана (per day).
-	FreeChatLimit         int
-	FreeVoiceMinutesLimit float64
-	FreeWritingLimit      int
+	FreeChatLimit            int
+	FreeVoiceMinutesLimit    float64
+	FreeWritingLimit         int
+	FreeTalkUnlimitedUserIDs string // Comma-separated account IDs; bypasses only the Free Talk session limit.
 
 	// Premium — -1 значит unlimited.
 	PremiumChatLimit         int
@@ -218,9 +219,10 @@ func Get() *Config {
 		CronDailyAt:        getEnv("CRON_DAILY_AT", "02:00"),
 		QuotaRetentionDays: getEnvInt("AI_QUOTA_RETENTION_DAYS", 90),
 
-		FreeChatLimit:         getEnvInt("AI_FREE_CHAT_LIMIT", 5),
-		FreeVoiceMinutesLimit: getEnvFloat("AI_FREE_VOICE_MINUTES_LIMIT", 2),
-		FreeWritingLimit:      getEnvInt("AI_FREE_WRITING_LIMIT", 3),
+		FreeChatLimit:            getEnvInt("AI_FREE_CHAT_LIMIT", 5),
+		FreeTalkUnlimitedUserIDs: os.Getenv("AI_FREE_TALK_UNLIMITED_USER_IDS"),
+		FreeVoiceMinutesLimit:    getEnvFloat("AI_FREE_VOICE_MINUTES_LIMIT", 2),
+		FreeWritingLimit:         getEnvInt("AI_FREE_WRITING_LIMIT", 3),
 
 		PremiumChatLimit:         getEnvInt("AI_PREMIUM_CHAT_LIMIT", -1),
 		PremiumVoiceMinutesLimit: getEnvFloat("AI_PREMIUM_VOICE_MINUTES_LIMIT", 60),

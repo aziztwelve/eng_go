@@ -162,6 +162,7 @@ func New(ctx context.Context) (*App, error) {
 
 	// Service layer.
 	svc := service.New(service.Config{
+		FreeTalkUnlimitedUserIDs: cfg.FreeTalkUnlimitedUserIDs,
 		DefaultModelChat:         cfg.DefaultModelChat,
 		DefaultModelHeavy:        cfg.DefaultModelHeavy,
 		FreeChatLimit:            int32(cfg.FreeChatLimit),
